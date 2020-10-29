@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R language on R in Class</title>
+    <link>/rlang.html</link>
+    <description>Recent content in R language on R in Class</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/rlang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Requirement</title>
+      <link>/rlang/requirement.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/requirement.html</guid>
+      <description>安裝軟體部份軟體列表另外於linux 安裝 tidyverse時需要:
+sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-devinstall.packages()
+# sudo visudo# 然後加入# username ALL = NOPASSWD: /fullpath/to/command, /fullpath/to/othercommand# 下面這個system 需要上面兩行system(&amp;#39;sudo apt update;sudo apt upgrade;sudo apt-get install curl&amp;#39;)system(&amp;#39;sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev&amp;#39;)install.packages(&amp;#39;devtools&amp;#39;)install.packages(&amp;#39;bookdown&amp;#39;)install.packages(&amp;#39;rlang&amp;#39;)install.packages(&amp;#39;tidyr&amp;#39;)install.packages(&amp;#39;babynames&amp;#39;)install.packages(&amp;#39;ggplot2&amp;#39;)install.packages(&amp;#39;sm&amp;#39;)install.packages(&amp;#39;bindrcpp&amp;#39;)install.packages(&amp;#39;tidyverse&amp;#39;)install.packages(&amp;#39;codetools&amp;#39;)install.packages(&amp;#39;moments&amp;#39;)library(&amp;#39;devtools&amp;#39;)install_github(&amp;quot;Hadley/emo&amp;quot;)##options(repos = c(CRAN = &amp;quot;https://cran.revolutionanalytics.com&amp;quot;))自動update packageupdate.packages(ask=FALSE) 也可以？
+all.packages &amp;lt;- installed.</description>
+    </item>
+    
+    <item>
+      <title>data explorer 1</title>
+      <link>/rlang/data_explorer_1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/data_explorer_1.html</guid>
+      <description>資料探索常用函數MeanMedianQuartilePercentileRangeInterquartile RangeBox PlotVarianceStandard DeviationCovarianceCorrelation CoefficientCentral MomentSkewnessKurtosismean(mtcars$mpg)[1] 20.1median(mtcars$mpg)[1] 19.2min(mtcars$mpg)[1] 10.4max(mtcars$mpg)[1] 33.9quantile(mtcars$mpg) 0% 25% 50% 75% 100% 10.4 15.4 19.2 22.8 33.9 quantile(mtcars$mpg,c(0.2)) 20% 15.2 require(moments)Loading required package: momentsskewness(mtcars$mpg)[1] 0.64kurtosis(mtcars$mpg)[1] 2.8x &amp;lt;- rnorm(100)quantile(x, probs = c(0, 0.</description>
+    </item>
+    
+    <item>
+      <title>data explorer 2</title>
+      <link>/rlang/data_explorer_2.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/data_explorer_2.html</guid>
+      <description>age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group)分組列出summary:利用函數age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group)mygroup&amp;lt;-function(df,g,idx){ft&amp;lt;-factor(df$g)gf&amp;lt;-ft==levels(ft)[idx] # 第一組g1&amp;lt;-df[gf,]return(g1) }x&amp;lt;-mygroup(dframe,&amp;quot;group&amp;quot;,1)問題：現在把某個欄位依據分組畫出boxplotA:ageB:group(1,2)不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na，最後boxplot(mtx)</description>
+    </item>
+    
+    <item>
+      <title>Quick view 1</title>
+      <link>/rlang/quickview1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/quickview1.html</guid>
+      <description>quick view快速指令
+目前有哪些資料集可以測試data()attach()一般是
+library(sample)data(&amp;quot;mydata&amp;quot;)attach(&#34;mydata&#34;) 就不用打入mydata$欄位名稱
+幾個常用的統計量:x&amp;lt;-c(1,2,3)median(x)mean(x)min(x)sd(x)range(x)diff(x)資料型態和內容可以先看看資料描述 ?mtcars
+mtcars mpg cyl disp hp drat wt qsec vs am gear carbMazda RX4 21.0 6 160.0 110 3.90 2.62 16.5 0 1 4 4Mazda RX4 Wag 21.0 6 160.0 110 3.90 2.88 17.0 0 1 4 4Datsun 710 22.</description>
+    </item>
+    
+    <item>
+      <title>Regular expression syntax</title>
+      <link>/rlang/regular_expression.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/regular_expression.html</guid>
+      <description>Regular expression syntax利用一些特殊字元，例如 $ * + . ? [ ] ^ { } | ( ) \構成Regular expressions，用來在文字中表達某些搜尋樣式的語法。 這裡只是簡短的介紹
+Functions which work with regular expression patternsstrsplit: split string into substrings at occurances of regexpgrep: search for a regular expression within a stringsub: search and then replace an occurance of a regular expression in a strnggsub: global search and replace all occurances of a regular expression in a stringEscape sequences正規表達式中.</description>
+    </item>
+    
+    <item>
+      <title>type basic</title>
+      <link>/rlang/type_basic.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_basic.html</guid>
+      <description>data type基本操作指派雖然也可以用=但是，R的設計是使用&amp;lt;-。
+a &amp;lt;- 3a&amp;lt;-3是一個指派的敘述句,不會回饋資訊到螢幕上。如果要知道a的內容是甚麼,就打入a 或者(a&amp;lt;-3)
+ a[1] 3(a&amp;lt;-3)[1] 3b &amp;lt;- sqrt(a * a + 5)b[1] 3.74在session中的如果要列出已經定義過的變數,可以利用ls
+ls()[1] &amp;quot;a&amp;quot; &amp;quot;b&amp;quot;按照R的說明,等號只能用在top level,或是函數參數的指定。參考
+‹function_name›(‹argname› = ‹value›, …)‹function_name›(‹args›, ‹argname› = ‹value›, …)運算四則運算LogicalAnother important data type is the logical type. There are two predefined variables, TRUE and FALSE:
+a = TRUEtypeof(a)[1] &amp;quot;logical&amp;quot;b = FALSEtypeof(b)[1] &amp;quot;logical&amp;quot;R語言常用邏輯運算子operator說明&amp;lt;less than&amp;gt;great than&amp;lt;=less than or equal&amp;gt;=greater than or equal==equal to!</description>
+    </item>
+    
+    <item>
+      <title>type list</title>
+      <link>/rlang/type_list.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_list.html</guid>
+      <description>ListLists 是一個R物件。其元素內容可以是不同型態,例如 numbers, strings, vectors,matrix 或者是另一個 list，甚至是函數。。
+建立 List函數list() 可以建立list.
+包含多種type的List: strings, numbers, vectors and a logical values.
+list_data &amp;lt;- list(&amp;quot;Red&amp;quot;, &amp;quot;Green&amp;quot;, c(21,32,11), TRUE, 51.23, 119.1)print(list_data)[[1]][1] &amp;quot;Red&amp;quot;[[2]][1] &amp;quot;Green&amp;quot;[[3]][1] 21 32 11[[4]][1] TRUE[[5]][1] 51.2[[6]][1] 119　### Naming List Elements
+The list elements can be given names and they can be accessed using these names.</description>
+    </item>
+    
+    <item>
+      <title>type matrix</title>
+      <link>/rlang/type_matrix.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_matrix.html</guid>
+      <description>matrix矩陣的建立有多種方式,其中一種是利用向量轉填矩陣，填入的方式預設是以coumn為主要方向。
+matrix(c(1,2,3,4,5,6),2,3) [,1] [,2] [,3][1,] 1 3 5[2,] 2 4 6問題: 怎樣產生
+1 2 3
+4 5 6
+的矩陣
+diag(1, nrow = 5) [,1] [,2] [,3] [,4] [,5][1,] 1 0 0 0 0[2,] 0 1 0 0 0[3,] 0 0 1 0 0[4,] 0 0 0 1 0[5,] 0 0 0 0 1matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, byrow = TRUE, dimnames = list(c(&amp;quot;r1&amp;quot;, &amp;quot;r2&amp;quot;, &amp;quot;r3&amp;quot;), c(&amp;quot;c1&amp;quot;, &amp;quot;c2&amp;quot;, &amp;quot;c3&amp;quot;))) c1 c2 c3r1 1 2 3r2 4 5 6r3 7 8 9m1 &amp;lt;- matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), ncol = 3)rownames(m1) &amp;lt;- c(&amp;quot;r1&amp;quot;, &amp;quot;r2&amp;quot;, &amp;quot;r3&amp;quot;)colnames(m1) &amp;lt;- c(&amp;quot;c1&amp;quot;, &amp;quot;c2&amp;quot;, &amp;quot;c3&amp;quot;)m1 c1 c2 c3r1 1 4 7r2 2 5 8r3 3 6 9 B = matrix( c(2, 4, 3, 1, 5, 7), nrow=3, ncol=2) B [,1] [,2][1,] 2 1[2,] 4 5[3,] 3 7Transposet(B) [,1] [,2] [,3][1,] 2 4 3[2,] 1 5 7合併矩陣利用函數cbind() 可以合併同樣橫行數目的兩個矩陣,例如這裡C也是3個橫行:</description>
+    </item>
+    
+    <item>
+      <title>type more</title>
+      <link>/rlang/type_more.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_more.html</guid>
+      <description>FactorsR也能把資料存為factor(store data is as a factor)。在大部分實驗中,某些解釋變數經常有不同程度的測試。大意如下：
+&amp;gt;… includes trials for different levels of some explanatory variable.&amp;gt;The different levels are also called factors.
+探索一下factorsfert = c(10,20,20,50,10,20,10,50,20)fert = factor(fert,levels=c(10,20,50),ordered=TRUE)levels()可以顯示factor的標籤
+levels(fert)[1] &amp;quot;10&amp;quot; &amp;quot;20&amp;quot; &amp;quot;50&amp;quot;fert 的內容，如果忽略標籤本身，其實已經是數字。
+fert[1] 10 20 20 50 10 20 10 50 20Levels: 10 &amp;lt; 20 &amp;lt; 50計算平均
+mean(fert)Warning in mean.default(fert): argument is not numeric or logical: returning NA[1] NAmean(as.</description>
+    </item>
+    
+    <item>
+      <title>type post</title>
+      <link>/rlang/type_post.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_post.html</guid>
+      <description>相關操作practice1.R
+問題:想要知道有甚麼資料庫可以用?例如， 想要知道資料庫裏面有沒有’mtcars’
+hint:grep(‘pattern’,target)
+l&amp;lt;-list(&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;)grep(&amp;#39;a&amp;#39;,l)[1] 1利用指令data()可以列出內建資料：
+xx&amp;lt;-data()xx 是甚麼?直接打入xx並沒有像其他變數一樣，在console顯示內容：
+xxstr(xx)List of 4$ title : chr &amp;quot;Data sets&amp;quot;$ header : NULL$ results: chr [1:104, 1:4] &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; .....- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2.. ..$ : NULL.. ..$ : chr [1:4] &amp;quot;Package&amp;quot; &amp;quot;LibPath&amp;quot; &amp;quot;Item&amp;quot; &amp;quot;Title&amp;quot;$ footer : chr &amp;quot;Use &amp;#39;data(package = .packages(all.available = TRUE))&amp;#39;\nto list the data sets in all *available* packages.</description>
+    </item>
+    
+    <item>
+      <title>File System</title>
+      <link>/rlang/filesystem.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/filesystem.html</guid>
+      <description>File System暫時子目錄
+函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。
+mydirname &amp;lt;- tempfile(pattern = &amp;quot;mydir&amp;quot;)mydirname[1] &#34;C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD
+Exploring file systemfunction file.exists() 可以用來知道檔案是否存在,function dir() 用來知道目前檔案位置的內容.
+file.exists(mydirname)dir(tempdir())character(0) # Empty character vector::: sidebara &amp;lt;- character(0)identical(a, character(0)) # returns TRUE
+identical(a, &#34;&#34;) # returns FALSEidentical(a, numeric(0)) # returns also FALSEhint: 利用length:::
+Creating of a directorydir.create 建立子目錄
+dir.create(mydirname) file.exists(mydirname) # 上面指令建立的子目錄是否存在dir(tempdir(), full.</description>
+    </item>
+    
+    <item>
+      <title>object_basic</title>
+      <link>/rlang/objectbasic.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/objectbasic.html</guid>
+      <description>物件attributeoth the names and the dimensions of matrices and arrays are stored in R as attributes of the object. These attributes can be seen as labeled values you can attach to any object.
+They form one of the mechanisms R uses to define specific object types like dates, time series, and so on. They can include any kind of information, and you can use them yourself to add information to any object.</description>
+    </item>
+    
+    <item>
+      <title>Programming 1</title>
+      <link>/rlang/programming_1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/programming_1.html</guid>
+      <description>programming in R條件指令if一般來講，通用寫法如下：
+if(判斷式){成功}else{失敗}例如# 多行寫法
+if(4 &amp;gt; 3){TRUE}else{FALSE}另外，如果區塊內只有一行
+if(4 &amp;gt; 3) TRUE else FALSE
+ifelse的寫法ifelse(&#39;判斷式&#39;,&#39;成功&#39;,&#39;失敗&#39;)
+例如，ifelse(4 &amp;gt; 3, T, F)
+switch的寫法switch(‘判斷式’,‘動作1’,‘動作2’,…)** 指定第幾行 **
+switch(2, 1, 2, #因為判斷式為2，因此，執行動作23) ** 也可以利用字串**
+switch(&amp;quot;a&amp;quot;, a = 1, b = 2, c = &amp;quot;why&amp;quot;)[1] 1這個switch 並不是一個語法，而是一個函數，原理大概是第1個參數以後的東西，會被變成是一個named list。例如上面的例子中</description>
+    </item>
+    
+    <item>
+      <title>Function</title>
+      <link>/rlang/r_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/r_function.html</guid>
+      <description>3個逗點 (dots)3個逗點可以利用?dots查詢。
+範例
+f &amp;lt;- function(x, ...){dots &amp;lt;- list(...) #1if(length(dots) == 0) return(NULL) cat(&amp;quot;The arguments in ... are\n&amp;quot;)print(dots)f(...) #2}f(1,2,3,&amp;quot;a&amp;quot;, list(&amp;quot;monkey&amp;quot;))operator &amp;lt;&amp;lt;-example
+power &amp;lt;- function(exponent) {function(x) x ^ exponent}square &amp;lt;- power(2)square(2) # -&amp;gt; [1] 4square(4) # -&amp;gt; [1] 16cube &amp;lt;- power(3)cube(2) # -&amp;gt; [1] 8cube(4) # -&amp;gt; [1] 64make.</description>
+    </item>
+    
+    <item>
+      <title>function - apply family</title>
+      <link>/rlang/apply_family.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/apply_family.html</guid>
+      <description>apply family其他參考apply可以處理的對象包括 矩陣、資料集、陣列(二維、多維)，可以指定直行、橫行。
+函數定義：
+apply(X, MARGIN, FUN, ...)參數列表：- X : 矩陣matrix、資料集dataframe 、陣列 array- MARGIN : 1表示橫行，2表示直行- FUN : the function to be applied
+- … : optional arguments to FUN
+範例1
+x&amp;lt;-matrix(1,ncol=4,nrow=3);x [,1] [,2] [,3] [,4][1,] 1 1 1 1[2,] 1 1 1 1[3,] 1 1 1 1apply(x,1,sum)[1] 4 4 4範例：</description>
+    </item>
+    
+    <item>
+      <title>R Package</title>
+      <link>/rlang/rpackages.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/rpackages.html</guid>
+      <description>R Packages基本套件在哪裡R package and Github建立R套件note: 可以DOS指令tree .列出目錄樹結構
+R.home()[1] &amp;quot;C:/PROGRA~1/R/R-4.0.2&amp;quot;system.file()[1] &amp;quot;C:/PROGRA~1/R/R-4.0.2/library/base&amp;quot;如果要知道安裝的套件在電腦的哪個地方:
+.libPaths()如果要自己預設指定安裝套件位置，可以在使用者文件夾上找到.Rprofile 然後寫上這一行:
+.libPaths(&#34;C:/myRlibary&#34;)
+套件的安裝
+範例:install.packages(‘Rcpp’, dependencies = TRUE)第2個參數,可以讓依存的檔案自動安裝。
+搜尋套件中的檔案system.file(“help”, “AnIndex”, package = “splines”)
+結果:[1] “C:/PROGRA1/MICROS4/RCLIEN~1/R_SERVER/library/splines/help/AnIndex”
+解釋：在套件splines 中的根目錄中搜尋子目錄help，找出名稱為AnIndex的檔案，並傳回路徑名稱。
+練習：
+例如,套件epuRate的安裝目錄為D:\RSTUDIO\RMD\RPACK\EPURATE-MASTER\INST，目錄結構如下：
+D:\RSTUDIO\RMD\RPACK\EPURATE-MASTER\INST└─rmarkdown└─templates├─basic│ └─skeleton├─epurate│ ├─resources│ └─skeleton└─PCTG├─resources└─skeleton參考上面的目錄結構，則下面程式執行的結果css,header, template 分別是什麼?
+ css &amp;lt;- system.</description>
+    </item>
+    
+    <item>
+      <title>Plot 01</title>
+      <link>/rlang/plot01.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/plot01.html</guid>
+      <description>基本繪圖referenceQuric R
+一般視窗作業系統的繪圖，會有一個抽象物件device在這個device上，有一個抽象物件canvas，和繪圖工具例如，水彩筆之類的抽象物件可以指定顏色，線條粗細等等。
+basic基本繪圖函數，plot(),hist()
+㊙️ 怎樣快速查詢？
+??draw?plot : 參考其中的plot.default 查看圖形選項plot可能最常用的繪圖函數就是plot(),而這個函數比較常用的選項有：* type: 僅分佈點（預設）是否連線等基本模板。* lty: 線條樣式line style* lwd: 線條寬度line width* col:* pch: mark
+typedescriptionppointsllineso重合的點和線段b, cb(both) 點+線,不重合 (如果是“c” 則沒有點)s, Sstair stepshhistogram-like vertical linesndoes not produce any points or lines資料點 符號</description>
+    </item>
+    
+    <item>
+      <title>TidyBasic01</title>
+      <link>/rlang/tidybasic01.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/tidybasic01.html</guid>
+      <description>需要安裝babynames,ggplot2Tidy Basic 01require(tidyr)require(dplyr) # data_frameFrom http://stackoverflow.com/questions/1181060
+require(tidyr)Loading required package: tidyrWarning: package &amp;#39;tidyr&amp;#39; was built under R version 4.0.3require(dplyr) # data_frameLoading required package: dplyrWarning: package &amp;#39;dplyr&amp;#39; was built under R version 4.0.3Attaching package: &amp;#39;dplyr&amp;#39;The following objects are masked from &amp;#39;package:stats&amp;#39;:filter, lagThe following objects are masked from &amp;#39;package:base&amp;#39;:intersect, setdiff, setequal, unionstocks &amp;lt;- data_frame(time = as.</description>
+    </item>
+    
+    <item>
+      <title>更多繪圖</title>
+      <link>/rlang/plot02.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/plot02.html</guid>
+      <description>更多繪圖Add texts within the graphThe text() function can be used to draw text inside the plotting area. A simplified format of the function is :
+text(x, y, labels)
+x and y: 文字座標;
+labels: 例如 “a label”
+pos: 下左上右，1234
+cex: 放大倍數，例如，0.65。
+範例 :
+d&amp;lt;-head(mtcars)plot(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], main=&amp;quot;Milage vs. Car Weight\n~~~~~~~~~~~~~~~~~~~&amp;quot;,xlab=&amp;quot;Weight&amp;quot;, ylab=&amp;quot;Miles/(US) gallon&amp;quot;,pch=19, col=&amp;quot;darkgreen&amp;quot;)text(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], row.names(d), cex=1,pos=3,col=&amp;quot;red&amp;quot;) Add text in the margins of the graph在圖形周圍給文字:</description>
+    </item>
+    
+    <item>
+      <title>sampling</title>
+      <link>/rlang/sampling.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/sampling.html</guid>
+      <description>Sample and Distribution 01N&amp;lt;-100pop&amp;lt;-rnorm(N,5,2)rndno&amp;lt;-as.integer(runif(N)*N)+1smp&amp;lt;-pop[rndno]ss&amp;lt;-summary(smp)s1&amp;lt;-hist(smp)s2&amp;lt;-hist(pop)plot(s1)lines(s1)##　內建隨機抽樣函數sample(x,n,replace=FALSE ).其中x為要抽取的向量, n為樣本容量. replace 預設為false
+no replacement, 等機率:例如從52張撲克牌中抽取5張:
+sample(1:52, 5)[1] 6 51 49 24 40replacement:例如拋一枚均勻的硬幣10次 sample(c(&amp;quot;H&amp;quot;, &amp;quot;T&amp;quot;), 10, replace=T) [1] &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot;練習:一棵骰子擲10次可表示為:
+不等可能的隨機抽樣:sample(x, n, replace=TRUE, prob=y)prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機取出成功的概率為0.6, 那麼10次的試驗為:sample(c(&amp;quot;sucess&amp;quot;, &amp;quot;fail&amp;quot;), 10, replace=T, prob=c(0.</description>
+    </item>
+    
+    <item>
+      <title>Econometrics</title>
+      <link>/rlang/eco_01_intro.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/eco_01_intro.html</guid>
+      <description>package recommendedpackage foreign 可以用來導入外部資料例如，* stata 的資料 dta,* SPSS* SAS* Systat* Mini tab . mtp
+利用foreign讀入stata 的資料檔：
+require(foreign)Loading required package: foreignaffairs&amp;lt;- read.dta(&amp;quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&amp;quot;)save(affairs,file=&amp;#39;./resources/affairs.RData&amp;#39;)測試
+rm(affairs)load(&amp;#39;./resources/affairs.RData&amp;#39;)head(affairs) id male age yrsmarr kids relig educ occup ratemarr naffairs affair vryhap1 4 1 37 10.0 0 3 18 7 4 0 0 02 5 0 27 4.0 0 4 14 6 4 0 0 03 6 1 27 1.</description>
+    </item>
+    
+    <item>
+      <title>simulation 1</title>
+      <link>/rlang/sim_1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/sim_1.html</guid>
+      <description>simulate 1身高女生男生10平均180170標準差1010fn_num&amp;lt;-100fh&amp;lt;-rnorm(fn_num,180,10)fm&amp;lt;-rnorm(200-fn_num,170,10)height&amp;lt;-c(fh,fm)sex&amp;lt;-c(rep(1,fn_num),rep(0,200-fn_num))r1&amp;lt;-tapply(height, sex,mean)r1 0 1 171 181 fn_num_set&amp;lt;-sample(1:199,1000,replace=T) #先抽出female的個數rst&amp;lt;-matrix(rep(0,2000),ncol=2) #每一次抽樣男生/女生的平均值for(idx in 1:1000){fn_num &amp;lt;-fn_num_set[idx]fh&amp;lt;-rnorm(fn_num,180,10)fm&amp;lt;-rnorm(200-fn_num,170,10)height&amp;lt;-c(fh,fm)sex&amp;lt;-c(rep(1,fn_num),rep(0,200-fn_num))r1&amp;lt;-tapply(height, sex,mean)rst[idx,1]=r1[1]rst[idx,2]=r1[2]}summary(rst) V1 V2 Min. :151 Min. :165 1st Qu.:169 1st Qu.</description>
+    </item>
+    
+    <item>
+      <title>Environment</title>
+      <link>/rlang/environments.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/environments.html</guid>
+      <description>Environments參考https://holtzy.github.io/Pimp-my-rmd/
+IntroductionThe environment is the data structure that powers scoping. 相關概念:lexical scoping, namespaces, and R6 classes。
+這個文件需要
+devtools::install_github(&amp;quot;tidyverse/rlang&amp;quot;)QuizIf you can answer the following questions correctly, you already know the most important topics in this chapter. You can find the answers at the end of the chapter in answers.
+List at least three ways that an environment is different to a list.
+What is the parent of the global environment?</description>
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>/rlang/function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/function.html</guid>
+      <description>FunctionsIntroduction簡單測試### Quiz {-}
+Answer the following questions to see if you can safely skip this chapter. You can find the answers in ??.
+What are the three components of a function?
+What does the following code return?
+x &amp;lt;- 10f1 &amp;lt;- function(x) {function() {x + 10}}f1(1)()How would you usually write this code?
+`+`(1, `*`(2, 3))How could you make this call easier to read?</description>
+    </item>
+    
+    <item>
+      <title>topic data frame</title>
+      <link>/rlang/topic_dataframe.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/topic_dataframe.html</guid>
+      <description>Bootstrap method for mixed-model
+b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取樣boot.data &amp;lt;-dataset[, .SD[sample(.N, min(.N,200), replace = FALSE)],by = list(ZONE8, Year)]# 用boot.data來跑GLMMboot.logit &amp;lt;-glmer(Count.F ~ Year.s + (0 + Year.s|ZONE8),data = boot.data,family = poisson)# 輸出斜率與截距，輸出到 b.coef 裡面b.coef[[i]] &amp;lt;- fixef(boot.logit)}b.coef &amp;lt;- do.call(rbind, b.coef) %&amp;gt;% data.tableL3 &amp;lt;- LETTERS[1:3]fac &amp;lt;- sample(L3, 10, replace = TRUE)(d &amp;lt;- data.</description>
+    </item>
+    
+    <item>
+      <title>type string</title>
+      <link>/rlang/type_string_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_string_function.html</guid>
+      <description>字串函數asic character string functions provided by R:nchar: string length
+paste: concatenate stringssubstr: substringtoupper: convert entire string to uppercasetolower: convert entire string to lowercasechartr: character map replacement (like “tr”)strtrim：trunates stringnchar, substr, toupper, tolower will accept string vectors as arguments and return vector results.
+strtrim accepts both a vector of strings and a vector of truncation positions.
+\&#39;: 等同於 &#34;</description>
+    </item>
+    
+    <item>
+      <title>type vector</title>
+      <link>/rlang/type_vector.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_vector.html</guid>
+      <description>vector 函數範例cbind,rbindx&amp;lt;-runif(5)y&amp;lt;-runif(6)cbind(x,y)Warning in cbind(x, y): number of rows of result is not a multiple of vectorlength (arg 1) x y[1,] 0.0808 0.466[2,] 0.8343 0.498[3,] 0.6008 0.290[4,] 0.1572 0.733[5,] 0.0074 0.773[6,] 0.0808 0.875函數diffArguments
+* x: a numeric vector or matrix containing the values to be differenced.
+* lag: an integer indicating which lag to use.</description>
+    </item>
+    
+  </channel>
+</rss>

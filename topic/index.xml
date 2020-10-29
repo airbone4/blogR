@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topics on R in Class</title>
+    <link>/topic.html</link>
+    <description>Recent content in Topics on R in Class</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/topic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git book note</title>
+      <link>/topic/rmd/git-book-note.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/git-book-note.html</guid>
+      <description>gitbook introduction3個地方需要注意:_output.yml_bookdown.ymlindex.rmd
+_output.yml:bookdown::gitbook:css: style.csssplit_by: chapterconfig:toc:collapse: subsectionbefore: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;after: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;bookdown::pdf_book:includes:in_header: preamble.texlatex_engine: xelatexcitation_package: natbibbookdown::epub_book:stylesheet: style.css上面要修改的部分只有書名(title of book)
+_bookdown.yml:book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp;quot;Chapter &amp;quot;repo: https://github.com/seankross/bookdown-startoutput_dir: docsrmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;]clean: [packages.bib, bookdown.bbl]new_session: yes欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.</description>
+    </item>
+    
+    <item>
+      <title>git-note</title>
+      <link>/topic/sitetecnote/git-note.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/sitetecnote/git-note.html</guid>
+      <description>git note在ubuntu 中，git push 要避免一直輸入帳號密碼的方式為：1.
+git config --global credential.helper &amp;#39;store --file ~/.my-credentials&amp;#39;然後在git push 的時候，輸入帳號和密碼（只要一次，就會被紀錄在上面指定的檔案，這裡的例子是,`.my-credentials’。</description>
+    </item>
+    
+    <item>
+      <title>interesting</title>
+      <link>/topic/interesting.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/interesting.html</guid>
+      <description>seems interesting自動化</description>
+    </item>
+    
+    <item>
+      <title>Rmd basic</title>
+      <link>/topic/rmd/rmd_basic.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/rmd_basic.html</guid>
+      <description>rbook 提要markdown 可以使用用一般的文字編輯器,在文字中插入MD指令,用來翻譯成HTML,PDF,WORD等文件格式。
+在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)。
+相關指令和流程可以參考這裡
+如果有共用的yaml ,可以參考這裡
+程式員會比較想知道相關的的流程:
+The script is converted to Rmd through knitr::spin(); then rmarkdown::render() will render the Rmd。也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。
+Convert Rmd to R script`knitr::purl(“03-purl.Rmd”)’ # output: 03-purl.R
+資料探索和RMD範例:
+mtcars 中的資料筆數有 32。
+我比較常用的格式這裡稍微解釋一下RMD文件表頭中的yaml:
+---title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;29 十月, 2020, 12:25&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
+    </item>
+    
+    <item>
+      <title>Rmd pdf</title>
+      <link>/topic/rmd/rmd_pdf.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/rmd_pdf.html</guid>
+      <description>產生PDF 文件** 中文字型問題 ** 參考
+update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update()中文：不要管那麼多網路上講的，就
+devtools::install_github(c(&amp;#39;rstudio/rmarkdown&amp;#39;, &amp;#39;yihui/tinytex&amp;#39;))tinytex::install_tinytex()大部分問題都是中文自行沒有安裝或指定錯誤的問題：在RMD檔案開頭指定
+---title: &amp;quot;xxx&amp;quot;author: &amp;quot;xxx&amp;quot;date: &amp;quot;2020年8月10日&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yesdf_print: pagedword_document:toc: yespdf_document: latex_engine: xelatex toc: yes---Overview參考
+整個轉換過程如下：Rmarkdown -&amp;gt; markdown -&amp;gt;pandoc-&amp;gt;pdf,html
+meta data 上的pdf 設定,常見版本---title: &amp;quot;Habits&amp;quot;author: lendjwjcen date: 3/1/2017output: pdf_document---加入目錄---title: &amp;quot;Habits&amp;quot;output:pdf_document:toc: truetoc_depth: 2---TOC深度預設是3。yaml的註解符號是# 。</description>
+    </item>
+    
+    <item>
+      <title>rmd topic 1</title>
+      <link>/topic/rmd/rmd_topic_1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/rmd_topic_1.html</guid>
+      <description>討論hook
+Verbatim Chunks in R Markdow
+HTML widgets
+R Notebook HTML FOrmat
+Render optionhook example
+more
+dynamic book
+TOC 問題
+publish to githubtutorial
+在chunk中，顯示RMD語法讓inline code 不作用inline 讓內籤R程式碼不作用:方法是兩邊打上“``空白”。例如:
+inline(&amp;quot;dd&amp;quot;) ===&amp;gt; `r dd` 
+測試執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
+```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;}cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;))# 我想要前後加上```,但是顯示的結果不換行# txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)# cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;)))```留著測試
+有意思的程式片段只編譯一個RMD文件使用套件中的內部函數,為:::,例如 blogdown:::build_rmds()。所以如果要編譯單一的RMD文件,可以blogdown:::build_rmds(&#39;content/foo.</description>
+    </item>
+    
+  </channel>
+</rss>
