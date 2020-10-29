@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>/rlang/topic_dataframe.html</loc>
+  </url>
+  
+  <url>
     <loc>/rlang/type_basic.html</loc>
   </url>
   
@@ -40,6 +44,14 @@
   
   <url>
     <loc>/rlang/type_post.html</loc>
+  </url>
+  
+  <url>
+    <loc>/rlang/type_string_function.html</loc>
+  </url>
+  
+  <url>
+    <loc>/rlang/type_vector.html</loc>
   </url>
   
   <url>
@@ -79,6 +91,10 @@
   </url>
   
   <url>
+    <loc>/rlang/environments.html</loc>
+  </url>
+  
+  <url>
     <loc>/rlang/sampling.html</loc>
   </url>
   
@@ -101,10 +117,6 @@
   
   <url>
     <loc>/topic/test/emo_test.html</loc>
-  </url>
-  
-  <url>
-    <loc>/rlang/environments.html</loc>
   </url>
   
   <url>
@@ -148,19 +160,7 @@
   </url>
   
   <url>
-    <loc>/rlang/topic_dataframe.html</loc>
-  </url>
-  
-  <url>
     <loc>/topic.html</loc>
-  </url>
-  
-  <url>
-    <loc>/rlang/type_string_function.html</loc>
-  </url>
-  
-  <url>
-    <loc>/rlang/type_vector.html</loc>
   </url>
   
   <url>

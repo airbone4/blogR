@@ -61,6 +61,16 @@ Functions which work with regular expression patternsstrsplit: split string in
     </item>
     
     <item>
+      <title>topic data frame</title>
+      <link>/rlang/topic_dataframe.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/topic_dataframe.html</guid>
+      <description>Bootstrap method for mixed-model
+b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取樣boot.data &amp;lt;-dataset[, .SD[sample(.N, min(.N,200), replace = FALSE)],by = list(ZONE8, Year)]# 用boot.data來跑GLMMboot.logit &amp;lt;-glmer(Count.F ~ Year.s + (0 + Year.s|ZONE8),data = boot.data,family = poisson)# 輸出斜率與截距，輸出到 b.coef 裡面b.coef[[i]] &amp;lt;- fixef(boot.logit)}b.coef &amp;lt;- do.call(rbind, b.coef) %&amp;gt;% data.tableL3 &amp;lt;- LETTERS[1:3]fac &amp;lt;- sample(L3, 10, replace = TRUE)(d &amp;lt;- data.</description>
+    </item>
+    
+    <item>
       <title>type basic</title>
       <link>/rlang/type_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -127,6 +137,29 @@ hint:grep(‘pattern’,target)
 l&amp;lt;-list(&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;)grep(&amp;#39;a&amp;#39;,l)[1] 1利用指令data()可以列出內建資料：
 xx&amp;lt;-data()xx 是甚麼?直接打入xx並沒有像其他變數一樣，在console顯示內容：
 xxstr(xx)List of 4$ title : chr &amp;quot;Data sets&amp;quot;$ header : NULL$ results: chr [1:104, 1:4] &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; .....- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2.. ..$ : NULL.. ..$ : chr [1:4] &amp;quot;Package&amp;quot; &amp;quot;LibPath&amp;quot; &amp;quot;Item&amp;quot; &amp;quot;Title&amp;quot;$ footer : chr &amp;quot;Use &amp;#39;data(package = .packages(all.available = TRUE))&amp;#39;\nto list the data sets in all *available* packages.</description>
+    </item>
+    
+    <item>
+      <title>type string</title>
+      <link>/rlang/type_string_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_string_function.html</guid>
+      <description>字串函數asic character string functions provided by R:nchar: string length
+paste: concatenate stringssubstr: substringtoupper: convert entire string to uppercasetolower: convert entire string to lowercasechartr: character map replacement (like “tr”)strtrim：trunates stringnchar, substr, toupper, tolower will accept string vectors as arguments and return vector results.
+strtrim accepts both a vector of strings and a vector of truncation positions.
+\&#39;: 等同於 &#34;</description>
+    </item>
+    
+    <item>
+      <title>type vector</title>
+      <link>/rlang/type_vector.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/type_vector.html</guid>
+      <description>vector 函數範例cbind,rbindx&amp;lt;-runif(5)y&amp;lt;-runif(6)cbind(x,y)Warning in cbind(x, y): number of rows of result is not a multiple of vectorlength (arg 1) x y[1,] 0.0808 0.466[2,] 0.8343 0.498[3,] 0.6008 0.290[4,] 0.1572 0.733[5,] 0.0074 0.773[6,] 0.0808 0.875函數diffArguments
+* x: a numeric vector or matrix containing the values to be differenced.
+* lag: an integer indicating which lag to use.</description>
     </item>
     
     <item>
@@ -260,6 +293,20 @@ d&amp;lt;-head(mtcars)plot(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;],
     </item>
     
     <item>
+      <title>Environment</title>
+      <link>/rlang/environments.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/environments.html</guid>
+      <description>Environments參考https://holtzy.github.io/Pimp-my-rmd/
+IntroductionThe environment is the data structure that powers scoping. 相關概念:lexical scoping, namespaces, and R6 classes。
+這個文件需要
+devtools::install_github(&amp;quot;tidyverse/rlang&amp;quot;)QuizIf you can answer the following questions correctly, you already know the most important topics in this chapter. You can find the answers at the end of the chapter in answers.
+List at least three ways that an environment is different to a list.
+What is the parent of the global environment?</description>
+    </item>
+    
+    <item>
       <title>sampling</title>
       <link>/rlang/sampling.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -302,20 +349,6 @@ rm(affairs)load(&amp;#39;./resources/affairs.RData&amp;#39;)head(affairs) id 
 emo::ji(&amp;quot;poop&amp;quot;)&amp;lt;U+0001F4A9&amp;gt; Or by a keyword. Keywords are not unique so emo::ji will pick one for you at random.
 emo::ji(&amp;quot;face&amp;quot;)&amp;lt;U+0001F635&amp;gt; emo::ji(&amp;quot;face&amp;quot;)&amp;lt;U+0001F486&amp;gt;&amp;lt;U+200D&amp;gt;♀&amp;lt;U+FE0F&amp;gt; emo::ji(&amp;quot;face&amp;quot;)&amp;lt;U+0001F981&amp;gt; Often you’ll use inline like `r emo::ji(&#34;smile&#34;)` 😄
 KeywordsThese are all keywords with more than one emoji associated with them.</description>
-    </item>
-    
-    <item>
-      <title>Environment</title>
-      <link>/rlang/environments.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/environments.html</guid>
-      <description>Environments參考https://holtzy.github.io/Pimp-my-rmd/
-IntroductionThe environment is the data structure that powers scoping. 相關概念:lexical scoping, namespaces, and R6 classes。
-這個文件需要
-devtools::install_github(&amp;quot;tidyverse/rlang&amp;quot;)QuizIf you can answer the following questions correctly, you already know the most important topics in this chapter. You can find the answers at the end of the chapter in answers.
-List at least three ways that an environment is different to a list.
-What is the parent of the global environment?</description>
     </item>
     
     <item>
@@ -378,7 +411,7 @@ The script is converted to Rmd through knitr::spin(); then rmarkdown::render() w
 資料探索和RMD範例:
 mtcars 中的資料筆數有 32。
 我比較常用的格式這裡稍微解釋一下RMD文件表頭中的yaml:
----title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;29 十月, 2020, 12:25&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
+---title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;29 十月, 2020, 12:50&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
     </item>
     
     <item>
@@ -425,39 +458,6 @@ inline(&amp;quot;dd&amp;quot;) ===&amp;gt; `r dd`
       <guid>/topic/test/testpage.html</guid>
       <description>By default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.
 </description>
-    </item>
-    
-    <item>
-      <title>topic data frame</title>
-      <link>/rlang/topic_dataframe.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/topic_dataframe.html</guid>
-      <description>Bootstrap method for mixed-model
-b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取樣boot.data &amp;lt;-dataset[, .SD[sample(.N, min(.N,200), replace = FALSE)],by = list(ZONE8, Year)]# 用boot.data來跑GLMMboot.logit &amp;lt;-glmer(Count.F ~ Year.s + (0 + Year.s|ZONE8),data = boot.data,family = poisson)# 輸出斜率與截距，輸出到 b.coef 裡面b.coef[[i]] &amp;lt;- fixef(boot.logit)}b.coef &amp;lt;- do.call(rbind, b.coef) %&amp;gt;% data.tableL3 &amp;lt;- LETTERS[1:3]fac &amp;lt;- sample(L3, 10, replace = TRUE)(d &amp;lt;- data.</description>
-    </item>
-    
-    <item>
-      <title>type string</title>
-      <link>/rlang/type_string_function.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/type_string_function.html</guid>
-      <description>字串函數asic character string functions provided by R:nchar: string length
-paste: concatenate stringssubstr: substringtoupper: convert entire string to uppercasetolower: convert entire string to lowercasechartr: character map replacement (like “tr”)strtrim：trunates stringnchar, substr, toupper, tolower will accept string vectors as arguments and return vector results.
-strtrim accepts both a vector of strings and a vector of truncation positions.
-\&#39;: 等同於 &#34;</description>
-    </item>
-    
-    <item>
-      <title>type vector</title>
-      <link>/rlang/type_vector.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/type_vector.html</guid>
-      <description>vector 函數範例cbind,rbindx&amp;lt;-runif(5)y&amp;lt;-runif(6)cbind(x,y)Warning in cbind(x, y): number of rows of result is not a multiple of vectorlength (arg 1) x y[1,] 0.0808 0.466[2,] 0.8343 0.498[3,] 0.6008 0.290[4,] 0.1572 0.733[5,] 0.0074 0.773[6,] 0.0808 0.875函數diffArguments
-* x: a numeric vector or matrix containing the values to be differenced.
-* lag: an integer indicating which lag to use.</description>
     </item>
     
   </channel>

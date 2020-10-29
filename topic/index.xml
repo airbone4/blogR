@@ -52,7 +52,7 @@ The script is converted to Rmd through knitr::spin(); then rmarkdown::render() w
 資料探索和RMD範例:
 mtcars 中的資料筆數有 32。
 我比較常用的格式這裡稍微解釋一下RMD文件表頭中的yaml:
----title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;29 十月, 2020, 12:25&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
+---title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;29 十月, 2020, 12:50&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
     </item>
     
     <item>
