@@ -6,7 +6,7 @@
     <description>Recent content in test for class on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Requirement</title>
       <link>/rlang/requirement.html</link>
@@ -17,6 +17,47 @@
 sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-devinstall.packages()
 # sudo visudo# 然後加入# username ALL = NOPASSWD: /fullpath/to/command, /fullpath/to/othercommand# 下面這個system 需要上面兩行system(&amp;#39;sudo apt update;sudo apt upgrade;sudo apt-get install curl&amp;#39;)system(&amp;#39;sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev&amp;#39;)install.packages(&amp;#39;devtools&amp;#39;)install.packages(&amp;#39;bookdown&amp;#39;)install.packages(&amp;#39;rlang&amp;#39;)install.packages(&amp;#39;tidyr&amp;#39;)install.packages(&amp;#39;babynames&amp;#39;)install.packages(&amp;#39;ggplot2&amp;#39;)install.packages(&amp;#39;sm&amp;#39;)install.packages(&amp;#39;bindrcpp&amp;#39;)install.packages(&amp;#39;tidyverse&amp;#39;)install.packages(&amp;#39;codetools&amp;#39;)install.packages(&amp;#39;moments&amp;#39;)library(&amp;#39;devtools&amp;#39;)install_github(&amp;quot;Hadley/emo&amp;quot;)##options(repos = c(CRAN = &amp;quot;https://cran.revolutionanalytics.com&amp;quot;))自動update packageupdate.packages(ask=FALSE) 也可以？
 all.packages &amp;lt;- installed.</description>
+    </item>
+    
+    <item>
+      <title>Rmd basic</title>
+      <link>/topic/rmd/rmd_basic.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/rmd_basic.html</guid>
+      <description>rbook 提要markdown 可以使用用一般的文字編輯器,在文字中插入MD指令,用來翻譯成HTML,PDF,WORD等文件格式。
+在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)。
+相關指令和流程可以參考這裡
+如果有共用的yaml ,可以參考這裡
+程式員會比較想知道相關的的流程:
+The script is converted to Rmd through knitr::spin(); then rmarkdown::render() will render the Rmd。也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。
+Convert Rmd to R script`knitr::purl(“03-purl.Rmd”)’ # output: 03-purl.R
+資料探索和RMD範例:
+mtcars 中的資料筆數有 32。
+我比較常用的格式這裡稍微解釋一下RMD文件表頭中的yaml:
+---title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;05 十一月, 2020, 10:01&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
+    </item>
+    
+    <item>
+      <title>rmd topic 1</title>
+      <link>/topic/rmd/rmd_topic_1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/rmd_topic_1.html</guid>
+      <description>討論hook
+Verbatim Chunks in R Markdow
+HTML widgets
+R Notebook HTML FOrmat
+Render optionhook example
+more
+dynamic book
+TOC 問題
+publish to githubtutorial
+在chunk中，顯示RMD語法讓inline code 不作用inline 讓內籤R程式碼不作用:方法是兩邊打上“``空白”。例如:
+inline(&amp;quot;dd&amp;quot;) ===&amp;gt; `r dd` 
+測試執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
+```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;}cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;))# 我想要前後加上```,但是顯示的結果不換行# txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)# cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;)))```留著測試
+有意思的程式片段只編譯一個RMD文件使用套件中的內部函數,為:::,例如 blogdown:::build_rmds()。所以如果要編譯單一的RMD文件,可以blogdown:::build_rmds(&#39;content/foo.</description>
     </item>
     
     <item>
@@ -267,6 +308,31 @@ D:\RSTUDIO\RMD\RPACK\EPURATE-MASTER\INST└─rmarkdown└─templates├─b
     </item>
     
     <item>
+      <title>git book note</title>
+      <link>/topic/rmd/git-book-note.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/git-book-note.html</guid>
+      <description>gitbook introduction3個地方需要注意:_output.yml_bookdown.ymlindex.rmd
+_output.yml:bookdown::gitbook:css: style.csssplit_by: chapterconfig:toc:collapse: subsectionbefore: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;after: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;bookdown::pdf_book:includes:in_header: preamble.texlatex_engine: xelatexcitation_package: natbibbookdown::epub_book:stylesheet: style.css上面要修改的部分只有書名(title of book)
+_bookdown.yml:book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp;quot;Chapter &amp;quot;repo: https://github.com/seankross/bookdown-startoutput_dir: docsrmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;]clean: [packages.bib, bookdown.bbl]new_session: yes欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.</description>
+    </item>
+    
+    <item>
+      <title>Rmd pdf</title>
+      <link>/topic/rmd/rmd_pdf.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/rmd_pdf.html</guid>
+      <description>產生PDF 文件** 中文字型問題 ** 參考
+update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update()中文：不要管那麼多網路上講的，就
+devtools::install_github(c(&amp;#39;rstudio/rmarkdown&amp;#39;, &amp;#39;yihui/tinytex&amp;#39;))tinytex::install_tinytex()大部分問題都是中文自行沒有安裝或指定錯誤的問題：在RMD檔案開頭指定
+---title: &amp;quot;xxx&amp;quot;author: &amp;quot;xxx&amp;quot;date: &amp;quot;2020年8月10日&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yesdf_print: pagedword_document:toc: yespdf_document: latex_engine: xelatex toc: yes---Overview參考
+整個轉換過程如下：Rmarkdown -&amp;gt; markdown -&amp;gt;pandoc-&amp;gt;pdf,html
+meta data 上的pdf 設定,常見版本---title: &amp;quot;Habits&amp;quot;author: lendjwjcen date: 3/1/2017output: pdf_document---加入目錄---title: &amp;quot;Habits&amp;quot;output:pdf_document:toc: truetoc_depth: 2---TOC深度預設是3。yaml的註解符號是# 。</description>
+    </item>
+    
+    <item>
       <title>TidyBasic01</title>
       <link>/rlang/tidybasic01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -282,14 +348,17 @@ require(tidyr)Loading required package: tidyrWarning: package &amp;#39;tidyr&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/plot02.html</guid>
-      <description>更多繪圖Add texts within the graphThe text() function can be used to draw text inside the plotting area. A simplified format of the function is :
+      <description>更多繪圖繪圖區中的字串函數 text() 在繪圖區填入字串,簡化的指令如下:
 text(x, y, labels)
 x and y: 文字座標;
 labels: 例如 “a label”
 pos: 下左上右，1234
 cex: 放大倍數，例如，0.65。
 範例 :
-d&amp;lt;-head(mtcars)plot(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], main=&amp;quot;Milage vs. Car Weight\n~~~~~~~~~~~~~~~~~~~&amp;quot;,xlab=&amp;quot;Weight&amp;quot;, ylab=&amp;quot;Miles/(US) gallon&amp;quot;,pch=19, col=&amp;quot;darkgreen&amp;quot;)text(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], row.names(d), cex=1,pos=3,col=&amp;quot;red&amp;quot;) Add text in the margins of the graph在圖形周圍給文字:</description>
+d&amp;lt;-head(mtcars)plot(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], main=&amp;quot;Milage vs. Car Weight\n~~~~~~~~~~~~~~~~~~~&amp;quot;,xlab=&amp;quot;Weight&amp;quot;, ylab=&amp;quot;Miles/(US) gallon&amp;quot;,pch=19, col=&amp;quot;darkgreen&amp;quot;)text(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], row.names(d), cex=1,pos=3,col=&amp;quot;red&amp;quot;) 在圖形margin中填入文字mtext(text, side=3)text : 例如“a label”side : 哪一側 :
+順時針1: 下2: 左3: 上4: 又
+範例 :
+plot(1:10, 1:10, main=&amp;quot;mtext(...) examples\n~~~~~~~~~~~&amp;quot;)mtext(&amp;quot;Magic function&amp;quot;, side=3)Add mathematical annotation to a plotplot(1:10, 1:10, main=&amp;quot;text(.</description>
     </item>
     
     <item>
@@ -312,10 +381,10 @@ List at least three ways that an environment is different to a list.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/sampling.html</guid>
-      <description>Sample and Distribution 01N&amp;lt;-100pop&amp;lt;-rnorm(N,5,2)rndno&amp;lt;-as.integer(runif(N)*N)+1smp&amp;lt;-pop[rndno]ss&amp;lt;-summary(smp)s1&amp;lt;-hist(smp)s2&amp;lt;-hist(pop)plot(s1)lines(s1)##　內建隨機抽樣函數sample(x,n,replace=FALSE ).其中x為要抽取的向量, n為樣本容量. replace 預設為false
+      <description>Sample and Distribution 01N&amp;lt;-100pop&amp;lt;-rnorm(N,5,2)rndno&amp;lt;-as.integer(runif(N)*N)+1smp&amp;lt;-pop[rndno]ss&amp;lt;-summary(smp)s1&amp;lt;-hist(smp)rug(quantile(smp), col=2, lwd=2.5)plot(s1$mids,s1$density,type=&amp;quot;s&amp;quot;) #quiz:barplot??s2&amp;lt;-hist(pop)plot(s1,col=&amp;quot;red&amp;quot;)lines(s2,col=&amp;quot;blue&amp;quot;) ##　內建隨機抽樣函數sample(x,n,replace=FALSE ).其中x為要抽取的向量, n為樣本容量. replace 預設為false
 no replacement, 等機率:例如從52張撲克牌中抽取5張:
 sample(1:52, 5)[1] 6 51 49 24 40replacement:例如拋一枚均勻的硬幣10次 sample(c(&amp;quot;H&amp;quot;, &amp;quot;T&amp;quot;), 10, replace=T) [1] &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot;練習:一棵骰子擲10次可表示為:
-不等可能的隨機抽樣:sample(x, n, replace=TRUE, prob=y)prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機取出成功的概率為0.6, 那麼10次的試驗為:sample(c(&amp;quot;sucess&amp;quot;, &amp;quot;fail&amp;quot;), 10, replace=T, prob=c(0.</description>
+不等可能的隨機抽樣:sample(x, n, replace=TRUE, prob=y)prob=y指定x中元素出現的概率, 向量y與x等長度.</description>
     </item>
     
     <item>
@@ -366,17 +435,6 @@ x &amp;lt;- 10f1 &amp;lt;- function(x) {function() {x + 10}}f1(1)()How wo
     </item>
     
     <item>
-      <title>git book note</title>
-      <link>/topic/rmd/git-book-note.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/topic/rmd/git-book-note.html</guid>
-      <description>gitbook introduction3個地方需要注意:_output.yml_bookdown.ymlindex.rmd
-_output.yml:bookdown::gitbook:css: style.csssplit_by: chapterconfig:toc:collapse: subsectionbefore: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;after: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;bookdown::pdf_book:includes:in_header: preamble.texlatex_engine: xelatexcitation_package: natbibbookdown::epub_book:stylesheet: style.css上面要修改的部分只有書名(title of book)
-_bookdown.yml:book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp;quot;Chapter &amp;quot;repo: https://github.com/seankross/bookdown-startoutput_dir: docsrmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;]clean: [packages.bib, bookdown.bbl]new_session: yes欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.</description>
-    </item>
-    
-    <item>
       <title>git-note</title>
       <link>/topic/sitetecnote/git-note.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -396,61 +454,6 @@ git config --global credential.helper &amp;#39;store --file ~/.my-credentials&am
     </item>
     
     <item>
-      <title>Rmd basic</title>
-      <link>/topic/rmd/rmd_basic.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/topic/rmd/rmd_basic.html</guid>
-      <description>rbook 提要markdown 可以使用用一般的文字編輯器,在文字中插入MD指令,用來翻譯成HTML,PDF,WORD等文件格式。
-在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)。
-相關指令和流程可以參考這裡
-如果有共用的yaml ,可以參考這裡
-程式員會比較想知道相關的的流程:
-The script is converted to Rmd through knitr::spin(); then rmarkdown::render() will render the Rmd。也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。
-Convert Rmd to R script`knitr::purl(“03-purl.Rmd”)’ # output: 03-purl.R
-資料探索和RMD範例:
-mtcars 中的資料筆數有 32。
-我比較常用的格式這裡稍微解釋一下RMD文件表頭中的yaml:
----title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;29 十月, 2020, 12:50&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
-    </item>
-    
-    <item>
-      <title>Rmd pdf</title>
-      <link>/topic/rmd/rmd_pdf.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/topic/rmd/rmd_pdf.html</guid>
-      <description>產生PDF 文件** 中文字型問題 ** 參考
-update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update()中文：不要管那麼多網路上講的，就
-devtools::install_github(c(&amp;#39;rstudio/rmarkdown&amp;#39;, &amp;#39;yihui/tinytex&amp;#39;))tinytex::install_tinytex()大部分問題都是中文自行沒有安裝或指定錯誤的問題：在RMD檔案開頭指定
----title: &amp;quot;xxx&amp;quot;author: &amp;quot;xxx&amp;quot;date: &amp;quot;2020年8月10日&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yesdf_print: pagedword_document:toc: yespdf_document: latex_engine: xelatex toc: yes---Overview參考
-整個轉換過程如下：Rmarkdown -&amp;gt; markdown -&amp;gt;pandoc-&amp;gt;pdf,html
-meta data 上的pdf 設定,常見版本---title: &amp;quot;Habits&amp;quot;author: lendjwjcen date: 3/1/2017output: pdf_document---加入目錄---title: &amp;quot;Habits&amp;quot;output:pdf_document:toc: truetoc_depth: 2---TOC深度預設是3。yaml的註解符號是# 。</description>
-    </item>
-    
-    <item>
-      <title>rmd topic 1</title>
-      <link>/topic/rmd/rmd_topic_1.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/topic/rmd/rmd_topic_1.html</guid>
-      <description>討論hook
-Verbatim Chunks in R Markdow
-HTML widgets
-R Notebook HTML FOrmat
-Render optionhook example
-more
-dynamic book
-TOC 問題
-publish to githubtutorial
-在chunk中，顯示RMD語法讓inline code 不作用inline 讓內籤R程式碼不作用:方法是兩邊打上“``空白”。例如:
-inline(&amp;quot;dd&amp;quot;) ===&amp;gt; `r dd` 
-測試執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
-```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;}cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;))# 我想要前後加上```,但是顯示的結果不換行# txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)# cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;)))```留著測試
-有意思的程式片段只編譯一個RMD文件使用套件中的內部函數,為:::,例如 blogdown:::build_rmds()。所以如果要編譯單一的RMD文件,可以blogdown:::build_rmds(&#39;content/foo.</description>
-    </item>
-    
-    <item>
       <title>testpage</title>
       <link>/topic/test/testpage.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -458,6 +461,20 @@ inline(&amp;quot;dd&amp;quot;) ===&amp;gt; `r dd`
       <guid>/topic/test/testpage.html</guid>
       <description>By default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.
 </description>
+    </item>
+    
+    <item>
+      <title>中央</title>
+      <link>/topic/experiment/central.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/experiment/central.html</guid>
+      <description>R Markdown員工的薪水分配，嚴重懷疑不是常態分配
+100: -&amp;gt;/mu&amp;lt;-100/sd()&amp;lt;-100/se(stander error) &amp;lt;- /sd/sqrt(100)
+1.96
+-1.96/se , /mu , 1.96 /se
+boot strapping把我們得到的100個樣本，重複抽1000，(每次必須抽100個)然後得到1000個平均mu,sdpercentile(2.5) , mu, percentile(97.5)
+N&amp;lt;-10metasample&amp;lt;-rnorm(N,5,2)bmu&amp;lt;-numeric(1000)for(i in 1:1000){rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno]bmu[i]&amp;lt;-mean(smp)}p&amp;lt;-density(bmu)plot(p)qq&amp;lt;-quantile(bmu)rug(qq,col=&amp;quot;red&amp;quot;)qq 0% 25% 50% 75% 100% 1.97 3.64 4.10 4.55 6.35 N&amp;lt;-100metasample&amp;lt;-rnorm(N,5,2)bmu&amp;lt;-numeric(1000)for(i in 1:1000){rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno]bmu[i]&amp;lt;-mean(smp)}p&amp;lt;-density(bmu)plot(p)qq&amp;lt;-quantile(bmu)rug(qq,col=&amp;quot;red&amp;quot;)qq 0% 25% 50% 75% 100% 4.</description>
     </item>
     
   </channel>

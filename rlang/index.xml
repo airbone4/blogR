@@ -281,14 +281,17 @@ require(tidyr)Loading required package: tidyrWarning: package &amp;#39;tidyr&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/plot02.html</guid>
-      <description>更多繪圖Add texts within the graphThe text() function can be used to draw text inside the plotting area. A simplified format of the function is :
+      <description>更多繪圖繪圖區中的字串函數 text() 在繪圖區填入字串,簡化的指令如下:
 text(x, y, labels)
 x and y: 文字座標;
 labels: 例如 “a label”
 pos: 下左上右，1234
 cex: 放大倍數，例如，0.65。
 範例 :
-d&amp;lt;-head(mtcars)plot(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], main=&amp;quot;Milage vs. Car Weight\n~~~~~~~~~~~~~~~~~~~&amp;quot;,xlab=&amp;quot;Weight&amp;quot;, ylab=&amp;quot;Miles/(US) gallon&amp;quot;,pch=19, col=&amp;quot;darkgreen&amp;quot;)text(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], row.names(d), cex=1,pos=3,col=&amp;quot;red&amp;quot;) Add text in the margins of the graph在圖形周圍給文字:</description>
+d&amp;lt;-head(mtcars)plot(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], main=&amp;quot;Milage vs. Car Weight\n~~~~~~~~~~~~~~~~~~~&amp;quot;,xlab=&amp;quot;Weight&amp;quot;, ylab=&amp;quot;Miles/(US) gallon&amp;quot;,pch=19, col=&amp;quot;darkgreen&amp;quot;)text(d[,&amp;#39;wt&amp;#39;], d[,&amp;#39;mpg&amp;#39;], row.names(d), cex=1,pos=3,col=&amp;quot;red&amp;quot;) 在圖形margin中填入文字mtext(text, side=3)text : 例如“a label”side : 哪一側 :
+順時針1: 下2: 左3: 上4: 又
+範例 :
+plot(1:10, 1:10, main=&amp;quot;mtext(...) examples\n~~~~~~~~~~~&amp;quot;)mtext(&amp;quot;Magic function&amp;quot;, side=3)Add mathematical annotation to a plotplot(1:10, 1:10, main=&amp;quot;text(.</description>
     </item>
     
     <item>
@@ -311,10 +314,10 @@ List at least three ways that an environment is different to a list.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/sampling.html</guid>
-      <description>Sample and Distribution 01N&amp;lt;-100pop&amp;lt;-rnorm(N,5,2)rndno&amp;lt;-as.integer(runif(N)*N)+1smp&amp;lt;-pop[rndno]ss&amp;lt;-summary(smp)s1&amp;lt;-hist(smp)s2&amp;lt;-hist(pop)plot(s1)lines(s1)##　內建隨機抽樣函數sample(x,n,replace=FALSE ).其中x為要抽取的向量, n為樣本容量. replace 預設為false
+      <description>Sample and Distribution 01N&amp;lt;-100pop&amp;lt;-rnorm(N,5,2)rndno&amp;lt;-as.integer(runif(N)*N)+1smp&amp;lt;-pop[rndno]ss&amp;lt;-summary(smp)s1&amp;lt;-hist(smp)rug(quantile(smp), col=2, lwd=2.5)plot(s1$mids,s1$density,type=&amp;quot;s&amp;quot;) #quiz:barplot??s2&amp;lt;-hist(pop)plot(s1,col=&amp;quot;red&amp;quot;)lines(s2,col=&amp;quot;blue&amp;quot;) ##　內建隨機抽樣函數sample(x,n,replace=FALSE ).其中x為要抽取的向量, n為樣本容量. replace 預設為false
 no replacement, 等機率:例如從52張撲克牌中抽取5張:
 sample(1:52, 5)[1] 6 51 49 24 40replacement:例如拋一枚均勻的硬幣10次 sample(c(&amp;quot;H&amp;quot;, &amp;quot;T&amp;quot;), 10, replace=T) [1] &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot;練習:一棵骰子擲10次可表示為:
-不等可能的隨機抽樣:sample(x, n, replace=TRUE, prob=y)prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機取出成功的概率為0.6, 那麼10次的試驗為:sample(c(&amp;quot;sucess&amp;quot;, &amp;quot;fail&amp;quot;), 10, replace=T, prob=c(0.</description>
+不等可能的隨機抽樣:sample(x, n, replace=TRUE, prob=y)prob=y指定x中元素出現的概率, 向量y與x等長度.</description>
     </item>
     
     <item>

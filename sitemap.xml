@@ -7,6 +7,14 @@
   </url>
   
   <url>
+    <loc>/topic/rmd/rmd_basic.html</loc>
+  </url>
+  
+  <url>
+    <loc>/topic/rmd/rmd_topic_1.html</loc>
+  </url>
+  
+  <url>
     <loc>/rlang/data_explorer_1.html</loc>
   </url>
   
@@ -83,6 +91,14 @@
   </url>
   
   <url>
+    <loc>/topic/rmd/git-book-note.html</loc>
+  </url>
+  
+  <url>
+    <loc>/topic/rmd/rmd_pdf.html</loc>
+  </url>
+  
+  <url>
     <loc>/rlang/tidybasic01.html</loc>
   </url>
   
@@ -108,7 +124,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -124,10 +140,6 @@
   </url>
   
   <url>
-    <loc>/topic/rmd/git-book-note.html</loc>
-  </url>
-  
-  <url>
     <loc>/topic/sitetecnote/git-note.html</loc>
   </url>
   
@@ -140,18 +152,6 @@
   </url>
   
   <url>
-    <loc>/topic/rmd/rmd_basic.html</loc>
-  </url>
-  
-  <url>
-    <loc>/topic/rmd/rmd_pdf.html</loc>
-  </url>
-  
-  <url>
-    <loc>/topic/rmd/rmd_topic_1.html</loc>
-  </url>
-  
-  <url>
     <loc>/tags.html</loc>
   </url>
   
@@ -161,6 +161,14 @@
   
   <url>
     <loc>/topic.html</loc>
+  </url>
+  
+  <url>
+    <loc>/topic/experiment/central.html</loc>
+  </url>
+  
+  <url>
+    <loc>/topic/experiment.html</loc>
   </url>
   
   <url>
