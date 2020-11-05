@@ -75,11 +75,15 @@
   </url>
   
   <url>
-    <loc>/rlang/r_function.html</loc>
+    <loc>/rlang/apply_family.html</loc>
   </url>
   
   <url>
-    <loc>/rlang/apply_family.html</loc>
+    <loc>/rlang/function_1.html</loc>
+  </url>
+  
+  <url>
+    <loc>/rlang/function_2.html</loc>
   </url>
   
   <url>
@@ -95,15 +99,15 @@
   </url>
   
   <url>
+    <loc>/rlang/plot02.html</loc>
+  </url>
+  
+  <url>
     <loc>/topic/rmd/rmd_pdf.html</loc>
   </url>
   
   <url>
     <loc>/rlang/tidybasic01.html</loc>
-  </url>
-  
-  <url>
-    <loc>/rlang/plot02.html</loc>
   </url>
   
   <url>
@@ -125,6 +129,10 @@
   <url>
     <loc>/</loc>
     <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/rlang/hw/assignment-1.html</loc>
   </url>
   
   <url>

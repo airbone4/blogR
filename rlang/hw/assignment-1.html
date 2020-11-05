@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.76.5" />
-    <meta name="description" content="基本語法">
+    <meta name="description" content="assignment">
 
 
     <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="../../images/favicon.png" type="image/x-icon" />
 
-    <title>Rmd basic - R in Class</title>
+    <title>assignment-1 - R in Class</title>
 
     
     <link href="../../css/nucleus.css?1604554379" rel="stylesheet">
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../topic/rmd/rmd_basic.html">
+  <body class="" data-url="../../rlang/hw/assignment-1.html">
 
     <nav id="sidebar" class="">
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/rlang.html" title="R language" class="dd-item
-        
+        parent
         
         
         ">
@@ -669,7 +669,7 @@
  
   
     
-      <li data-nav-id="/rlang/hw/assignment-1.html" title="assignment-1" class="dd-item ">
+      <li data-nav-id="/rlang/hw/assignment-1.html" title="assignment-1" class="dd-item active">
         <a href="../../rlang/hw/assignment-1.html">
         assignment-1
         
@@ -701,7 +701,7 @@
   
     
     <li data-nav-id="/topic.html" title="Topics" class="dd-item
-        parent
+        
         
         
         ">
@@ -729,7 +729,7 @@
  
   
     
-      <li data-nav-id="/topic/rmd/rmd_basic.html" title="Rmd basic" class="dd-item active">
+      <li data-nav-id="/topic/rmd/rmd_basic.html" title="Rmd basic" class="dd-item ">
         <a href="../../topic/rmd/rmd_basic.html">
         Rmd basic
         
@@ -1038,7 +1038,7 @@
             
           
           
-            <a href='../../'>test for class</a> > <a href='../../topic.html'>Topics</a> > Rmd basic
+            <a href='../../'>test for class</a> > <a href='../../rlang.html'>R language</a> > assignment-1
           
         
           
@@ -1067,7 +1067,7 @@
           
             <h1>
               
-              Rmd basic
+              assignment-1
 
             </h1>
 			
@@ -1082,261 +1082,72 @@
 <script src="../../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
-<div id="rbook-提要" class="section level1">
-<h1>rbook 提要</h1>
-<p>markdown 可以使用用一般的文字編輯器,在文字中插入MD指令,用來翻譯成HTML,PDF,WORD等文件格式。</p>
-<p>在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)。</p>
-<p>相關指令和流程可以參考<a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-knit.html">這裡</a></p>
-<p>如果有共用的yaml ,可以參考<a href="https://stackoverflow.com/questions/39885363/importing-common-yaml-in-rstudio-knitr-document">這裡</a></p>
-<blockquote>
-<p>程式員會比較想知道相關的的流程:<br />
-The script is converted to Rmd through <code>knitr::spin()</code>; then <code>rmarkdown::render()</code> will render the Rmd。
-也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。</p>
-</blockquote>
-<blockquote>
-<p>Convert Rmd to R script
-`knitr::purl(“03-purl.Rmd”)’ # output: 03-purl.R</p>
-</blockquote>
-<div id="資料探索和rmd" class="section level2">
-<h2>資料探索和RMD</h2>
-<p>範例:</p>
-<blockquote>
-<p>mtcars 中的資料筆數有 32。</p>
-</blockquote>
-<div id="我比較常用的格式" class="section level3">
-<h3>我比較常用的格式</h3>
-<div class="sidebar">
-<p>這裡稍微解釋一下RMD文件表頭中的yaml:</p>
-<pre class="yaml"><code>---
-title: &quot;處理2003(92R)變數AB v1&quot;
-author: &quot;lin&quot;
-date: &quot;05 十一月, 2020, 13:32&quot;
-header-includes:
-- \usepackage{xeCJK}
-- \setCJKmainfont{標楷體}
-output:
-  html_document:  
-    toc: yes
-    toc_float:
-      collapsed: false
-#     smooth_scroll: true        
-#    df_print: paged
-    highlight: tango  
-    css: [&quot;adv-r.css&quot;,&quot;mystyle.css&quot;]  
-  word_document:
-    toc: yes
-  pdf_document: 
-    latex_engine: xelatex 
-    toc: yes
-knit:   myknit 
----</code></pre>
-<ul>
-<li>上面的word_document,其實對應 <code>rmarkdown::word_document()</code></li>
-<li>而下面的 toc: yes 是要傳入上面函數的參數.可以對照?rmarkdown::word_document()</li>
-</ul>
-</div>
-<p>例如,如果我想要把我比較常用的word 模板,當成RMD 產生WORD文件的模板,可以
-步驟1:先利用RMarkdown產生word 文件,然後在yml的參數中指定:</p>
-<pre class="yaml"><code>---
-...
-word_document:
-  reference_docx: myword.docx
----</code></pre>
-</div>
-<div id="提取程式碼" class="section level3">
-<h3>提取程式碼</h3>
-<p><a href="https://yihui.org/en/2018/09/code-appendix/">參考</a></p>
-</div>
-<div id="比較詳細的介紹" class="section level3">
-<h3>比較詳細的介紹:</h3>
-<p>topic:<br />
-<a href="https://bookdown.org/yihui/rmarkdown-cookbook/include-html.html">如何內含其他外部HTML文件(👍r markdown cookbook)</a></p>
-<pre class="md"><code>````{=html}
-```{r, echo=FALSE, results=&#39;asis&#39;}
-xfun::file_string(&#39;file.html&#39;)
-```
-````</code></pre>
-<p>👍<a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p>
-<p>指令 <code>rmarkdown::render_site()</code> 用來建立網站。這個指令需要,一個檔案 <code>_site.yml</code>,內容如下:</p>
-<pre class="yaml"><code>name: &quot;my-website&quot;
-navbar:
-  title: &quot;My Website&quot;
-  left:
-    - text: &quot;Home&quot;
-      href: index.html
-    - text: &quot;About&quot;
-      href: about.html</code></pre>
-<p>同時檔案<code>index.html</code> 是第一個網站的入門網頁。</p>
-</div>
-</div>
-<div id="book" class="section level2">
-<h2>book</h2>
-<p>指令 <code>bookdown::render_book()</code> 需要的檔案有<code>_bookdown.yml'</code>_output.yml’。</p>
-<div id="bookdown.yml" class="section level3">
-<h3><code>_bookdown.yml</code></h3>
-<p>The <code>_bookdown.yml</code> 那些檔案要被包含進來。</p>
-<pre class="yaml"><code>rmd_files: [&quot;index.Rmd&quot;, &quot;02-literature.Rmd&quot;, &quot;01-intro.Rmd&quot;]</code></pre>
-</div>
-<div id="output.yml" class="section level3">
-<h3><code>_output.yml</code></h3>
-<p>The <code>_output.yml</code> 用來指定如何輸出,例如HTML和PDF的格式。範例:</p>
-<pre class="yaml"><code>bookdown::gitbook:
-  lib_dir: assets
-  split_by: section
-  config:
-    toolbar:
-      position: static
-bookdown::pdf_book:
-  keep_tex: yes
-bookdown::html_book:
-  css: toc.css</code></pre>
-<p>splitby: 後面可以是RMD,每個RMD一個HTML檔案。</p>
-</div>
-<div id="index.rmd" class="section level3">
-<h3>index.Rmd</h3>
-<p>通常是一系列文章裡面的第一個文件。其他rmd文件的yml 頭部都可以統一放在這裡。</p>
-<p>下面是一些選項,可以自行添加到上面:</p>
-<pre class="yml"><code>bibliography: [book.bib, packages.bib]
-biblio-style: apalike
-link-citations: yes
-github-repo: rstudio/bookdown-demo</code></pre>
-<p>bibliography 暫時沒有參考文件檔,所以我沒有放.</p>
-<p>參考位置:<br />
-* <a href="https://rmarkdown.rstudio.com/r_notebook_format.html">HTML Format</a> 來自<a href="https://github.com/rstudio/rmarkdown">rmarkdown from rstudio</a>
-* <a href="http://conjugateprior.org/2012/12/r-markdown-to-other-document-formats/">pandox</a></p>
-</div>
-</div>
-<div id="更多_output.yml-範例" class="section level2">
-<h2>更多<code>_output.yml</code> 範例</h2>
-<p>簡單講,_output.yml放的是輸出到哪裡?gitbook? pdf? 或者是簡單html格式。</p>
-<div id="output.yml-範例" class="section level3">
-<h3>_output.yml 範例</h3>
-<pre class="yml"><code>bookdown::gitbook:
-  css: style.css
-  config:
-    toc:
-      before: |
-        &lt;li&gt;&lt;a href=&quot;./&quot;&gt;A Minimal Book Example&lt;/a&gt;&lt;/li&gt;
-      after: |
-        &lt;li&gt;&lt;a href=&quot;https://github.com/rstudio/bookdown&quot; target=&quot;blank&quot;&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;
-    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
-    download: [&quot;pdf&quot;, &quot;epub&quot;]
-
-# bookdown::pdf_book:
-#   latex_engine: &quot;xelatex&quot;
-#   keep_tex: true
-#   includes:
-#     in_header: header.tex
-
- bookdown::pdf_book:
-   includes:
-     in_header: latex/preamble.tex
-     before_body: latex/before_body.tex
-     after_body: latex/after_body.tex
-   keep_tex: true
-   dev: &quot;cairo_pdf&quot;
-   latex_engine: xelatex
-   citation_package: natbib
-   pandoc_args: [&quot;--top-level-division=chapter&quot;, &quot;--lua-filter=latex/sidebar.lua&quot;]
-   template: null
-   quote_footer: null
-   toc_unnumbered: false
-   number_sections: true    </code></pre>
-<pre class="yml"><code>---
-output: 
-  html_document: 
-    highlight: tango
-    number_sections: yes
-    toc: yes
----</code></pre>
-<p>上面這段YML會被解譯到下面的R程式碼。
-猜測:html_document對應rmarkdown::html_document<br />
-例如,
-number_sections: yes 會被當成<code>html_document()</code>的參數轉譯:</p>
-<p>highlight: tango 對應到參數(沒有在下面)</p>
-<pre class="r"><code>rmarkdown::html_document( theme= &quot;lumen&quot;,
-                               template= template,
-                               css= css,
-                               toc= toc,
-                               toc_float= TRUE,
-                               toc_depth= 2,
-                               number_sections= number_sections,
-                               df_print = &quot;paged&quot;,
-                               code_folding = code_folding,
-                               includes = includes(before_body = header)
-                            )
-}
+<div id="part-1" class="section level2">
+<h2>part 1</h2>
+<div id="basic" class="section level3">
+<h3>basic</h3>
+<ol style="list-style-type: decimal">
+<li>參考程式碼,數學上,e既然是純量,那就是1X1的矩陣。在R中,如果 <code>e&lt;-3</code>那麼在R中判斷e是不是相量,是不是矩陣?</li>
+</ol>
+<pre class="r"><code>e&lt;-3
+length(e)</code></pre>
+<pre class="rchunk output"><code>[1] 1</code></pre>
+<pre class="r"><code>is.vector(e) # q1: true or false</code></pre>
+<pre class="rchunk output"><code>[1] TRUE</code></pre>
+<pre class="r"><code>is.matrix(e) # q2: true or false</code></pre>
+<pre class="rchunk output"><code>[1] FALSE</code></pre>
+<pre class="r"><code># 指定沒有任何資料的向量
+e1&lt;-numeric(0)
+length(e1)</code></pre>
+<pre class="rchunk output"><code>[1] 0</code></pre>
+<pre class="r"><code>is.vector(e) # q3: true or false</code></pre>
+<pre class="rchunk output"><code>[1] TRUE</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>建立向量e21,e22,e23 解釋出現的訊息</li>
+</ol>
+<pre class="r"><code>e21&lt;-1:3 # 向量,內容為[1,2,3] 也可以e2&lt;-seq(1,3),e2&lt;-c(1,2,3)
+e22&lt;-1:4
+e23&lt;-1:6
+e21==e23</code></pre>
+<pre class="rchunk output"><code>[1]  TRUE  TRUE  TRUE FALSE FALSE FALSE</code></pre>
+<pre class="r"><code>e21==e22</code></pre>
+<pre><code>Warning in e21 == e22: 較長的物件長度並非較短物件長度的倍數</code></pre>
+<pre class="rchunk output"><code>[1]  TRUE  TRUE  TRUE FALSE</code></pre>
+<pre><code>&gt; e21==e23
+[1]  TRUE  TRUE  TRUE FALSE FALSE FALSE
+&gt; e21==e22
+[1]  TRUE  TRUE  TRUE FALSE
+Warning message:
+In e21 == e22 : 較長的物件長度並非較短物件長度的倍數</code></pre>
+<p>3.解釋第2行alpha的長度,如果只要保持前3個元素?</p>
+<pre class="r"><code>alpha&lt;-1:10
+alpha &lt;- alpha[2 * 1:5]</code></pre>
+<p>hint: 也可以<code>length(alpha)&lt;-3</code> 但是不建議。</p>
+<ol start="3" style="list-style-type: decimal">
+<li>合併成矩陣
+利用前述的e21,e22,e23 ,分別解釋下面兩行</li>
+</ol>
+<pre class="r"><code>c(e21,e22)</code></pre>
+<pre class="rchunk output"><code>[1] 1 2 3 1 2 3 4</code></pre>
+<pre class="r"><code>cbind(e21,e22)</code></pre>
+<pre><code>Warning in cbind(e21, e22): number of rows of result is not a multiple of vector
+length (arg 1)</code></pre>
+<pre class="rchunk output"><code>     e21 e22
+[1,]   1   1
+[2,]   2   2
+[3,]   3   3
+[4,]   1   4</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li><p>產生5x20的亂數矩陣</p></li>
+<li><p>為甚麼有a[“x1”]? 這題的用意只是記住甚麼是<code>c()</code>函數。</p></li>
+</ol>
+<pre class="r"><code>a&lt;-c(x=1:2,y=3:4)
+a[&quot;x1&quot;] # 不是a[x1]</code></pre>
+<p>❓ 回答x2 是甚麼型態</p>
+<pre><code>x1&lt;-list(3,4,5)
+x2&lt;-c(1,2,x1) 
 </code></pre>
-</div>
-</div>
-<div id="travis.yml" class="section level2">
-<h2>.travis.yml</h2>
-<blockquote>
-<p><a href="http://www.goring.org/resources/Adding_CI_To_RMarkdown.html">rmarkdown and travis</a></p>
-</blockquote>
-<p>應該是用來指導怎麼建立專案的一個yml。
-已知的部分有:
-directories : 可以指定子目錄,用來放暫存檔案(一些翻譯過程產生的中間黨),否則每個RMD都會產生一個組目錄。</p>
-<pre class="yml"><code>language: R
-sudo: false
-cache:
-  packages: true
-  directories:
-  - _bookdown_files
-  - $HOME/.npm
-
-pandoc_version: 2.1.1</code></pre>
-</div>
-<div id="紀錄" class="section level2">
-<h2>紀錄</h2>
-<p>before_chapter_script: “common.R”
-前面要有兩個空白</p>
-<p>if(FALSE) {
-’
-兩個地方可以放,
-1) 一個是在_bookdown.yml中的最後一行:
-before_chapter_script: “common.R”
-2)一個是在每個RMD的第一個chunk執行
-source(“common.R”)</p>
-<p>’
-}</p>
-<div id="knitr-hook" class="section level3">
-<h3>knitr hook</h3>
-<div id="顏色" class="section level4">
-<h4>顏色</h4>
-<p>設定警告訊息為紅色</p>
-<pre class="r"><code>knitr::knit_hooks$set(error = function(x, options) {
-  paste0(&quot;&lt;pre style=\&quot;color: red;\&quot;&gt;&lt;code&gt;&quot;, x, &quot;&lt;/code&gt;&lt;/pre&gt;&quot;)
-})</code></pre>
-<p>其他範例</p>
-<pre class="r"><code>#Color Format
-colFmt = function(x,color){
-  outputFormat = opts_knit$get(&quot;rmarkdown.pandoc.to&quot;)
-  if(outputFormat == &#39;latex&#39;)
-    paste(&quot;\\textcolor{&quot;,color,&quot;}{&quot;,x,&quot;}&quot;,sep=&quot;&quot;)
-  else if(outputFormat == &#39;html&#39;)
-    paste(&quot;&lt;font color=&#39;&quot;,color,&quot;&#39;&gt;&quot;,x,&quot;&lt;/font&gt;&quot;,sep=&quot;&quot;)
-  else
-    x
-}</code></pre>
-<p>有關hook 的設定,參考 <a href="https://yihui.name/knitr/hooks/#output-hooks">knitr hook</a></p>
-</div>
-</div>
-<div id="terminal-output" class="section level3">
-<h3>terminal output</h3>
-<p>問題:如果以要看檔案內容,而不想被無關的輸出符號干擾,例如[1],那麼如果再R SCRIPT中可以使用 <code>system("cat 檔案名稱")</code> ,但是在R Markdown中(如下)不會顯示出結果:</p>
-<p>🔖 <a href="../../rlang/resources/wh.csv">wh.csv</a></p>
-<pre class="r"><code>rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&quot;#&quot;,na.string=&#39;.&#39;)
-write.csv(rst, file = &quot;MyData.csv&quot;,row.names=FALSE, na=&quot;&quot;)
-system(&quot;cat MyData.csv&quot;)</code></pre>
-<p>You can use either</p>
-<p>{r, engine=‘bash’, comment=’‘}
-cat ’resources/hw.csv’</p>
-<p>or</p>
-<pre class="md"><code>```{r comment=&#39;&#39;}
-cat(readLines(&#39;resources/wh.csv&#39;), sep = &#39;\n&#39;)
-```</code></pre>
-</div>
+<p>❓ 怎樣把list,e.g.x2, 轉vector ?</p>
 </div>
 </div>
 
@@ -1348,7 +1159,7 @@ cat(readLines(&#39;resources/wh.csv&#39;), sep = &#39;\n&#39;)
         
         </div>
         
-topic\rmd\rmd_basic.html
+rlang\hw\assignment-1.html
       </div>
 
     <div id="navigation">
@@ -1813,45 +1624,6 @@ topic\rmd\rmd_basic.html
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1867,10 +1639,49 @@ topic\rmd\rmd_basic.html
                         
             
             
+        
+                    
+            
+        
+                    
+                        
+            
+            
                 
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2039,10 +1850,10 @@ topic\rmd\rmd_basic.html
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../topic.html" title="Topics"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../rlang/sim_1.html" title="simulation 1"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../topic/rmd/rmd_topic_1.html" title="rmd topic 1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../topic.html" title="Topics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

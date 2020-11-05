@@ -4,28 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.76.5" />
-    <meta name="description" content="簡單函數">
+    <meta name="description" content="更多R函數">
 
 
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
 
-    <title>Functions - R in Class</title>
+    <title>Function more - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1604554379" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1604554379" rel="stylesheet">
-    <link href="../css/hybrid.css?1604554379" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1604554379" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1604554379" rel="stylesheet">
-    <link href="../css/auto-complete.css?1604554379" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1604554379" rel="stylesheet">
-    <link href="../css/theme.css?1604554379" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1604554379" rel="stylesheet">
+    <link href="../css/nucleus.css?1604554378" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1604554378" rel="stylesheet">
+    <link href="../css/hybrid.css?1604554378" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1604554378" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1604554378" rel="stylesheet">
+    <link href="../css/auto-complete.css?1604554378" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1604554378" rel="stylesheet">
+    <link href="../css/theme.css?1604554378" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1604554378" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1604554379" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1604554379" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1604554379" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1604554378" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1604554378" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1604554378" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1604554379"></script>
+    <script src="../js/jquery-3.3.1.min.js?1604554378"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../rlang/function.html">
+  <body class="" data-url="../rlang/function_2.html">
 
     <nav id="sidebar" class="">
 
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1604554379"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1604554379"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1604554378"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1604554378"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1604554379"></script>
+<script type="text/javascript" src="../js/search.js?1604554378"></script>
 
     
   </div>
@@ -498,7 +498,7 @@
  
   
     
-      <li data-nav-id="/rlang/function_2.html" title="Function more" class="dd-item ">
+      <li data-nav-id="/rlang/function_2.html" title="Function more" class="dd-item active">
         <a href="../rlang/function_2.html">
         Function more
         
@@ -1038,7 +1038,7 @@
             
           
           
-            <a href='../'>test for class</a> > <a href='../rlang.html'>R language</a> > Functions
+            <a href='../'>test for class</a> > <a href='../rlang.html'>R language</a> > Function more
           
         
           
@@ -1067,7 +1067,7 @@
           
             <h1>
               
-              Functions
+              Function more
 
             </h1>
 			
@@ -1118,20 +1118,12 @@ exits?</p></li>
 <div id="outline" class="section level3 unnumbered">
 <h3>Outline</h3>
 <ul>
-<li><p>Section <a href="#function-fundamentals"><strong>??</strong></a> describes the basics of creating a
-function, the three main components of a function, and the exception
-to many function rules: primitive functions (which are implemented in C, not
-R).</p></li>
-<li><p>Section <a href="#lexical-scoping"><strong>??</strong></a> shows you how R finds the value associated
-with a given name, i.e. the rules of lexical scoping.</p></li>
-<li><p>Section <a href="#lazy-evaluation"><strong>??</strong></a> is devoted to an important property of
-function arguments: they are only evaluated when used for the first time.</p></li>
-<li><p>Section <a href="#exiting-a-function"><strong>??</strong></a> discusses the two primary ways that a
-function can exit, and how to define an exit handler, code that is run on
-exit, regardless of what triggers it.</p></li>
-<li><p>Section <a href="#function-forms"><strong>??</strong></a> shows you the various ways in which R
-disguises ordinary function calls, and how you can use the standard prefix
-form to better understand what’s going on.</p></li>
+<li><p>Section ? describes the basics of creating a
+function, the three main components of a function, and the exception to many function rules: primitive functions (which are implemented in C, not R).</p></li>
+<li><p>Section <a href="#lexical-scoping"><strong>??</strong></a> shows you how R finds the value associated with a given name, i.e. the rules of lexical scoping.</p></li>
+<li><p>Section <a href="#lazy-evaluation"><strong>??</strong></a> is devoted to an important property of function arguments: they are only evaluated when used for the first time.</p></li>
+<li><p>Section <a href="#exiting-a-function"><strong>??</strong></a> discusses the two primary ways that a function can exit, and how to define an exit handler, code that is run on exit, regardless of what triggers it.</p></li>
+<li><p>Section <a href="#function-forms"><strong>??</strong></a> shows you the various ways in which R disguises ordinary function calls, and how you can use the standard prefix form to better understand what’s going on.</p></li>
 </ul>
 </div>
 </div>
@@ -1139,8 +1131,8 @@ form to better understand what’s going on.</p></li>
 <h2>Function fundamentals</h2>
 <p>幾個重要觀念</p>
 <ul>
-<li><p>函數也是物件,就像是vectors 也是物件。</p></li>
-<li><p>由三個部份組成: arguments, body, and environment.</p></li>
+<li>函數也是物件,就像是vectors 也是物件。</li>
+<li>由三個部份組成: arguments, body, and environment.</li>
 </ul>
 <p>There are exceptions to every rule, and in this case, there is a small selection of “primitive” base functions that are implemented purely in C.</p>
 <div id="first-class-functions" class="section level3">
@@ -1667,7 +1659,7 @@ code worked).</p></li>
 }
 capture.output2(cat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, sep = &quot;\n&quot;))</code></pre>
 <pre><code>Warning in file.remove(temp): 無法移除檔案 &#39;C:
-\Users\linchao\AppData\Local\Temp\RtmpoD2hMJ\file25b44670170e&#39; ，原因是
+\Users\linchao\AppData\Local\Temp\RtmpkjHVXz\file1ab479be50ba&#39; ，原因是
 &#39;Permission denied&#39;</code></pre>
 <pre class="rchunk output"><code>[1] &quot;a&quot; &quot;b&quot; &quot;c&quot;</code></pre>
 <p>Compare <code>capture.output()</code> to <code>capture.output2()</code>. How do the functions
@@ -1949,7 +1941,7 @@ so it’s never evaluated.</p></li>
         
         </div>
         
-rlang\function.html
+rlang\function_2.html
       </div>
 
     <div id="navigation">
@@ -2281,6 +2273,7 @@ rlang\function.html
             
                 
                     
+                    
                 
                 
 
@@ -2296,6 +2289,9 @@ rlang\function.html
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2636,8 +2632,10 @@ rlang\function.html
 	 
 	 
 		
+			<a class="nav nav-prev" href="../rlang/function_1.html" title="Function basic"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="../rlang.html" title="R language" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="../rlang/rpackages.html" title="R Package" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -13,19 +13,19 @@
     <title>Environment - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1604543915" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1604543915" rel="stylesheet">
-    <link href="../css/hybrid.css?1604543915" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1604543915" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1604543915" rel="stylesheet">
-    <link href="../css/auto-complete.css?1604543915" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1604543915" rel="stylesheet">
-    <link href="../css/theme.css?1604543915" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1604543915" rel="stylesheet">
+    <link href="../css/nucleus.css?1604554378" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1604554378" rel="stylesheet">
+    <link href="../css/hybrid.css?1604554378" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1604554378" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1604554378" rel="stylesheet">
+    <link href="../css/auto-complete.css?1604554378" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1604554378" rel="stylesheet">
+    <link href="../css/theme.css?1604554378" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1604554378" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1604543915" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1604543915" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1604543915" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1604554378" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1604554378" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1604554378" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1604543915"></script>
+    <script src="../js/jquery-3.3.1.min.js?1604554378"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1604543915"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1604543915"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1604554378"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1604554378"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1604543915"></script>
+<script type="text/javascript" src="../js/search.js?1604554378"></script>
 
     
   </div>
@@ -456,9 +456,9 @@
  
   
     
-      <li data-nav-id="/rlang/r_function.html" title="Function" class="dd-item ">
-        <a href="../rlang/r_function.html">
-        Function
+      <li data-nav-id="/rlang/apply_family.html" title="function - apply family" class="dd-item ">
+        <a href="../rlang/apply_family.html">
+        function - apply family
         
         </a>
     </li>
@@ -477,9 +477,30 @@
  
   
     
-      <li data-nav-id="/rlang/apply_family.html" title="function - apply family" class="dd-item ">
-        <a href="../rlang/apply_family.html">
-        function - apply family
+      <li data-nav-id="/rlang/function_1.html" title="Function basic" class="dd-item ">
+        <a href="../rlang/function_1.html">
+        Function basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/function_2.html" title="Function more" class="dd-item ">
+        <a href="../rlang/function_2.html">
+        Function more
         
         </a>
     </li>
@@ -540,9 +561,9 @@
  
   
     
-      <li data-nav-id="/rlang/tidybasic01.html" title="TidyBasic01" class="dd-item ">
-        <a href="../rlang/tidybasic01.html">
-        TidyBasic01
+      <li data-nav-id="/rlang/plot02.html" title="Plot more" class="dd-item ">
+        <a href="../rlang/plot02.html">
+        Plot more
         
         </a>
     </li>
@@ -553,24 +574,6 @@
             
           
             
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/plot02.html" title="更多繪圖" class="dd-item ">
-        <a href="../rlang/plot02.html">
-        更多繪圖
-        
-        </a>
-    </li>
-     
-  
- 
-
             
           
             
@@ -666,9 +669,9 @@
  
   
     
-      <li data-nav-id="/rlang/function.html" title="Functions" class="dd-item ">
-        <a href="../rlang/function.html">
-        Functions
+      <li data-nav-id="/rlang/hw/assignment-1.html" title="assignment-1" class="dd-item ">
+        <a href="../rlang/hw/assignment-1.html">
+        assignment-1
         
         </a>
     </li>
@@ -676,6 +679,9 @@
   
  
 
+            
+          
+            
             
           
         
@@ -1163,10 +1169,10 @@ e1 &lt;- env( ** a &lt;- FALSE ** ) # error
 <p><img src="diagrams/environments/loop.png" style="display:inline-block;width:80%" /></p>
 <p>沒有指派的環境變數,只會顯示記憶體位址:</p>
 <pre class="r"><code>e1</code></pre>
-<pre class="rchunk output"><code>&lt;environment: 0x00000000165f64a8&gt;</code></pre>
+<pre class="rchunk output"><code>&lt;environment: 0x0000000016606a08&gt;</code></pre>
 <p>要知道內容可以使用 <code>env_print()</code> :</p>
 <pre class="r"><code>env_print(e1)</code></pre>
-<pre class="rchunk output"><code>&lt;environment: 00000000165F64A8&gt;
+<pre class="rchunk output"><code>&lt;environment: 0000000016606A08&gt;
 parent: &lt;environment: global&gt;
 bindings:
  * a: &lt;lgl&gt;
@@ -1215,7 +1221,7 @@ e2b &lt;- env(e2a, a = 1, b = 2, c = 3)</code></pre>
 <p><img src="diagrams/environments/parents.png" style="display:inline-block;width:80%" /></p>
 <p>函數 <code>env_parent()</code>可以用來找出某個環境物件的parent:</p>
 <pre class="r"><code>env_parent(e2b)</code></pre>
-<pre class="rchunk output"><code>&lt;environment: 0x000000001588cad0&gt;</code></pre>
+<pre class="rchunk output"><code>&lt;environment: 0x000000001589ca98&gt;</code></pre>
 <pre class="r"><code>env_parent(e2a)</code></pre>
 <pre class="rchunk output"><code>&lt;environment: R_GlobalEnv&gt;</code></pre>
 <div class="base">
@@ -1233,10 +1239,10 @@ e2d &lt;- env(e2c, a = 1, b = 2, c = 3)</code></pre>
 <pre><code>Error: The empty environment has no parent</code></pre>
 <p>函數 <code>env_parents()</code>可以找出目前環境物件的所有祖先:這個函數會繼續直到遇上global environment 或是空環境物件。上述過程可以利用<code>last</code>環境物件控制。</p>
 <pre class="r"><code>env_parents(e2b)</code></pre>
-<pre class="rchunk output"><code>[[1]]   &lt;env: 000000001588CAD0&gt;
+<pre class="rchunk output"><code>[[1]]   &lt;env: 000000001589CA98&gt;
 [[2]] $ &lt;env: global&gt;</code></pre>
 <pre class="r"><code>env_parents(e2d)</code></pre>
-<pre class="rchunk output"><code>[[1]]   &lt;env: 000000001475CBC0&gt;
+<pre class="rchunk output"><code>[[1]]   &lt;env: 000000001476CB88&gt;
 [[2]] $ &lt;env: empty&gt;</code></pre>
 <div class="base">
 <p>可以利用Use <code>parent.env()</code> 找到環境的parent，但是base中沒有可以找出所有祖先的函數。</p>
@@ -1525,7 +1531,7 @@ e$g &lt;- function() 1</code></pre>
 <pre class="rchunk output"><code>function (x, na.rm = FALSE) 
 sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
     na.rm = na.rm))
-&lt;bytecode: 0x000000001392f7d0&gt;
+&lt;bytecode: 0x000000001392f7b0&gt;
 &lt;environment: namespace:stats&gt;</code></pre>
 <p><code>sd()</code> 必須使用函數 <code>var()</code>, 因此這個<code>var()</code>到底來自 global environment,還是其他接入(attached)的套件的這種問題必須避免。 R avoids this problem by taking advantage of the function vs. binding environment described above.</p>
 <p>每個套件中的函數和一對環境物件有關:套件環境(之前學到的)還有<em>namespace</em>環境物件。</p>
@@ -1590,7 +1596,7 @@ y &lt;- h(1) # 3.</code></pre>
 
 e &lt;- h2(x = 10)
 env_print(e)</code></pre>
-<pre class="rchunk output"><code>&lt;environment: 000000001CCAE4E0&gt;
+<pre class="rchunk output"><code>&lt;environment: 000000001DCD5580&gt;
 parent: &lt;environment: global&gt;
 bindings:
  * a: &lt;dbl&gt;
@@ -1606,7 +1612,7 @@ bindings:
 plus_one &lt;- plus(1)
 plus_one</code></pre>
 <pre class="rchunk output"><code>function(y) x + y
-&lt;environment: 0x000000001d012868&gt;</code></pre>
+&lt;environment: 0x000000001e039908&gt;</code></pre>
 <p><img src="diagrams/environments/closure.png" style="display:inline-block;width:80%" /></p>
 <p>What happens when we call <code>plus_one()</code>? Its execution environment will have the captured execution environment of <code>plus()</code> as its parent:</p>
 <pre class="r"><code>plus_one(2)</code></pre>
@@ -2230,6 +2236,11 @@ rlang\Environments.html
                         
             
             
+        
+                    
+                        
+            
+            
                 
                     
                     
@@ -2308,6 +2319,11 @@ rlang\Environments.html
                     
 
                     
+            
+        
+                    
+                        
+            
             
         
                     
@@ -2517,7 +2533,7 @@ rlang\Environments.html
 	 
 	 
 		
-			<a class="nav nav-prev" href="../rlang/plot02.html" title="更多繪圖"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../rlang/plot02.html" title="Plot more"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="../rlang/sampling.html" title="sampling" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -2530,19 +2546,19 @@ rlang\Environments.html
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1604543915"></script>
-    <script src="../js/perfect-scrollbar.min.js?1604543915"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1604543915"></script>
-    <script src="../js/jquery.sticky.js?1604543915"></script>
-    <script src="../js/featherlight.min.js?1604543915"></script>
-    <script src="../js/highlight.pack.js?1604543915"></script>
+    <script src="../js/clipboard.min.js?1604554378"></script>
+    <script src="../js/perfect-scrollbar.min.js?1604554378"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1604554378"></script>
+    <script src="../js/jquery.sticky.js?1604554378"></script>
+    <script src="../js/featherlight.min.js?1604554378"></script>
+    <script src="../js/highlight.pack.js?1604554378"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1604543915"></script>
-    <script src="../js/learn.js?1604543915"></script>
-    <script src="../js/hugo-learn.js?1604543915"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1604554378"></script>
+    <script src="../js/learn.js?1604554378"></script>
+    <script src="../js/hugo-learn.js?1604554378"></script>
     
         
-            <script src="../mermaid/mermaid.js?1604543915"></script>
+            <script src="../mermaid/mermaid.js?1604554378"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
