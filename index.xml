@@ -525,7 +525,7 @@ rm(affairs) load(&amp;#39;./resources/affairs.RData&amp;#39;) head(affairs) #&am
 pnorm : CDF
 qnorm : inverse CDF
 rnorm : random
-simulate 1    身高 女生 男生      1 0   平均 180 170   標準差 10 10    fn_num&amp;lt;-100 fh&amp;lt;-rnorm(fn_num,180,10) fm&amp;lt;-rnorm(200-fn_num,170,10) height&amp;lt;-c(fh,fm) sex&amp;lt;-c(rep(1,fn_num),rep(0,200-fn_num)) r1&amp;lt;-tapply(height, sex,mean) r1 #&amp;gt; 0 1  #&amp;gt; 169.2693 180.3127fn_num_set&amp;lt;-sample(1:199,1000,replace=T) #先抽出female的個數 rst&amp;lt;-matrix(rep(0,2000),ncol=2) #每一次抽樣男生/女生的平均值 for(idx in 1:1000) { fn_num &amp;lt;-fn_num_set[idx] fh&amp;lt;-rnorm(fn_num,180,10) fm&amp;lt;-rnorm(200-fn_num,170,10) height&amp;lt;-c(fh,fm) sex&amp;lt;-c(rep(1,fn_num),rep(0,200-fn_num)) r1&amp;lt;-tapply(height, sex,mean) rst[idx,1]=r1[1] rst[idx,2]=r1[2] } summary(rst) #&amp;gt; V1 V2  #&amp;gt; Min.</description>
+z_scores &amp;lt;- seq(-3, 3, by = .1) pvalues &amp;lt;- pnorm(z_scores) # Now we&amp;#39;ll plot these values plot(pvalues, # Plot where y = values and x = index of the value in the vector xaxt = &amp;#34;n&amp;#34;, # Don&amp;#39;t label the x-axis type = &amp;#34;l&amp;#34;, # Make it a line plot main = &amp;#34;cdf of the Standard Normal&amp;#34;, xlab= &amp;#34;Quantiles&amp;#34;, ylab=&amp;#34;Probability Density&amp;#34;) # These commands label the x-axis axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2)) axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2)) axis(1, at=which(pvalues == pnorm(0)), labels=c(.</description>
     </item>
     
     <item>

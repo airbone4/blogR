@@ -13,19 +13,19 @@
     <title>simulation 1 - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1605157005" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1605157005" rel="stylesheet">
-    <link href="../css/hybrid.css?1605157005" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1605157005" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1605157005" rel="stylesheet">
-    <link href="../css/auto-complete.css?1605157005" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1605157005" rel="stylesheet">
-    <link href="../css/theme.css?1605157005" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1605157005" rel="stylesheet">
+    <link href="../css/nucleus.css?1605158920" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1605158920" rel="stylesheet">
+    <link href="../css/hybrid.css?1605158920" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1605158920" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1605158920" rel="stylesheet">
+    <link href="../css/auto-complete.css?1605158920" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1605158920" rel="stylesheet">
+    <link href="../css/theme.css?1605158920" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1605158920" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1605157005" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605157005" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605157005" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1605158920" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605158920" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605158920" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1605157005"></script>
+    <script src="../js/jquery-3.3.1.min.js?1605158920"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1605157005"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1605157005"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1605158920"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1605158920"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1605157005"></script>
+<script type="text/javascript" src="../js/search.js?1605158920"></script>
 
     
   </div>
@@ -1117,6 +1117,82 @@
 <code>pnorm</code> : CDF<br />
 <code>qnorm</code> : inverse CDF<br />
 <code>rnorm</code> : random</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">z_scores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-3</span>, <span style="color:#ae81ff">3</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.1</span>)
+pvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">pnorm</span>(z_scores)
+
+<span style="color:#75715e"># Now we&#39;ll plot these values</span>
+<span style="color:#a6e22e">plot</span>(pvalues, <span style="color:#75715e"># Plot where y = values and x = index of the value in the vector</span>
+     xaxt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#75715e"># Don&#39;t label the x-axis</span>
+     type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;l&#34;</span>, <span style="color:#75715e"># Make it a line plot</span>
+     main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cdf of the Standard Normal&#34;</span>,
+     xlab<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Quantiles&#34;</span>,
+     ylab<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Probability Density&#34;</span>) 
+
+<span style="color:#75715e"># These commands label the x-axis</span>
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-2</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-2</span>), <span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-1</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-1</span>), <span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">0</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">.5</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">1</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">2</span>))</code></pre></div>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">z_scores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-3</span>, <span style="color:#ae81ff">3</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.1</span>)
+dvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dnorm</span>(z_scores)
+<span style="color:#a6e22e">plot</span>(dvalues, <span style="color:#75715e"># Plot where y = values and x = index of the value in the vector</span>
+     xaxt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#75715e"># Don&#39;t label the x-axis</span>
+     type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;l&#34;</span>, <span style="color:#75715e"># Make it a line plot</span>
+     main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;pdf of the Standard Normal&#34;</span>,
+     xlab<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Z-score&#34;</span>) 
+
+<span style="color:#75715e"># These commands label the x-axis</span>
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(dvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">dnorm</span>(<span style="color:#ae81ff">0</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(dvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">dnorm</span>(<span style="color:#ae81ff">1</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-1</span>, <span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(dvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">dnorm</span>(<span style="color:#ae81ff">2</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-2</span>, <span style="color:#ae81ff">2</span>))</code></pre></div>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2" /></p>
+
+<p>👍<br />
+<code>axis</code>下左上又(1,2,3,4)<br />
+第2個參數用的是真假值,對樣每個樣本點。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>) <span style="color:#75715e">## [1] 0.9772499</span>
+<span style="color:#75715e">#&gt; [1] 0.9772499</span>
+<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#75715e">## [1] 0.1586553</span>
+<span style="color:#75715e">#&gt; [1] 0.1586553</span>
+<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, lower.tail <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+<span style="color:#75715e">#&gt; [1] 0.8413447</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">oldpar <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">par</span>()
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+z_scores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-3</span>, <span style="color:#ae81ff">3</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.1</span>)
+pvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">pnorm</span>(z_scores)
+quantiles <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.05</span>)
+qvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qnorm</span>(quantiles)
+<span style="color:#75715e"># Plot the z_scores</span>
+<span style="color:#a6e22e">plot</span>(qvalues,
+     type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;l&#34;</span>, <span style="color:#75715e"># We want a line graph</span>
+     xaxt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#75715e"># No x-axis</span>
+     xlab<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Probability Density&#34;</span>,
+     ylab<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Z-scores&#34;</span>)
+
+<span style="color:#75715e"># Same pnorm plot from before</span>
+<span style="color:#a6e22e">plot</span>(pvalues, <span style="color:#75715e"># Plot where y = values and x = index of the value in the vector</span>
+     xaxt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;n&#34;</span>, <span style="color:#75715e"># Don&#39;t label the x-axis</span>
+     type <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;l&#34;</span>, <span style="color:#75715e"># Make it a line plot</span>
+     main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cdf of the Standard Normal&#34;</span>,
+     xlab<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Quantiles&#34;</span>,
+     ylab<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Probability Density&#34;</span>) 
+
+<span style="color:#75715e"># These commands label the x-axis</span>
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-2</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-2</span>), <span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-1</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">-1</span>), <span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">0</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">.5</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">1</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">2</span>))</code></pre></div>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4" /></p>
+
+
+<div class="notices quiz" ><ol>
+<li>qnorm(0.95) ?<br /></li>
+<li>一個標準差占了佔了多少百分比?<br /></li>
+</ol>
+</div>
+
 
 <h1 id="simulate-1">simulate 1</h1>
 
@@ -1190,7 +1266,7 @@ unknown reason !!</p>
     <span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(dinfo)) {
         <span style="color:#a6e22e">lines</span>(dinfo[[i]], xlim <span style="color:#f92672">=</span> rx, ylim <span style="color:#f92672">=</span> ry, col <span style="color:#f92672">=</span> i)
     }  </code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3" /></p>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7" /></p>
 
 <p><em>轉函數</em></p>
 
@@ -1219,7 +1295,7 @@ unknown reason !!</p>
 <p>應用自己的函數</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">alist<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">list</span>(rst[,<span style="color:#ae81ff">1</span>],rst[,<span style="color:#ae81ff">2</span>])
 <span style="color:#a6e22e">plot.multi.density</span>(alist)</code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-6-1.png" alt="plot of chunk unnamed-chunk-6" /><br />
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10" /><br />
 上面的函數，預設參數是傳入使用者指定的list，裡面有使用者指定的組別<br />
 但是如果因為需要，發現傳入矩陣比較方便（例如每一個欄位代表每一組的模擬結果，那樣怎樣避免hard coding?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">elist<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">vector</span>(<span style="color:#e6db74">&#34;list&#34;</span>,<span style="color:#a6e22e">ncol</span>(rst))<span style="color:#75715e">#指定大小的list,如果空集合elist&lt;-list()</span>
@@ -1241,13 +1317,13 @@ unknown reason !!</p>
 rstdf<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">data.frame</span>(rst)
 <span style="color:#a6e22e">colnames</span>(rstdf)<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;male&#34;</span>,<span style="color:#e6db74">&#34;female&#34;</span>)
 <span style="color:#a6e22e">sm.density.compare</span>(rstdf<span style="color:#f92672">$</span>male, rstdf<span style="color:#f92672">$</span>female)</code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8" /></p>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-12-1.png" alt="plot of chunk unnamed-chunk-12" /></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Add a legend (the color numbers start from 2 and go up)</span>
 <span style="color:#75715e">#legend(&#34;topright&#34;, levels(data$cond), fill=2+(0:nlevels(data$cond)))</span></code></pre></div>
 <h3 id="sm-範例">sm 範例</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">sm.density.compare</span>(iris<span style="color:#f92672">$</span>Sepal.Length, iris<span style="color:#f92672">$</span>Species, xlab<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Species&#34;</span>)
 <span style="color:#a6e22e">title</span>(main<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Distributions of Species&#34;</span>)</code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(from <span style="color:#f92672">=</span> <span style="color:#ae81ff">110</span>, to <span style="color:#f92672">=</span> <span style="color:#ae81ff">174</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>)
 y1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dnorm</span>(x, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">145</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>)
 y2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dnorm</span>(x, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">138</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>)
@@ -1268,7 +1344,7 @@ y<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span 
 <span style="color:#a6e22e">text</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">120</span>, y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.04</span>, <span style="color:#e6db74">&#34; - Post-Treatment BP&#34;</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;firebrick3&#34;</span>, cex <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9</span>)
 <span style="color:#a6e22e">points</span>(<span style="color:#ae81ff">109</span>, <span style="color:#ae81ff">0.0445</span>, pch <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;dodgerblue4&#34;</span>)
 <span style="color:#a6e22e">points</span>(<span style="color:#ae81ff">109</span>, <span style="color:#ae81ff">0.0395</span>, pch <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;firebrick3&#34;</span>)</code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10" /></p>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-14-1.png" alt="plot of chunk unnamed-chunk-14" /></p>
 
 <p>其他測試</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x  <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0.05</span>)
@@ -1276,15 +1352,15 @@ y1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">pnorm</s
 y2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">pnorm</span>(x,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)
 <span style="color:#a6e22e">plot</span>(x,y1,type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;l&#34;</span>,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>)
 <span style="color:#a6e22e">lines</span>(x,y2,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span>)</code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-15-1.png" alt="plot of chunk unnamed-chunk-15" /></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">plot</span>( x, y1, type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;l&#34;</span>, col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> )
 <span style="color:#a6e22e">par</span>(new<span style="color:#f92672">=</span><span style="color:#66d9ef">TRUE</span>)
 <span style="color:#a6e22e">plot</span>( x, y2, type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;l&#34;</span>, col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> )</code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-12-1.png" alt="plot of chunk unnamed-chunk-12" /><br />
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-16-1.png" alt="plot of chunk unnamed-chunk-16" /><br />
 note: add=TRUE 有時候不作用，例如plot</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">hist</span>( y1 ,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>  )
 <span style="color:#a6e22e">hist</span>( y2, add<span style="color:#f92672">=</span><span style="color:#66d9ef">TRUE</span>,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>  )</code></pre></div>
-<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
+<p><img src="../post/sim_1_files/figure-html/unnamed-chunk-17-1.png" alt="plot of chunk unnamed-chunk-17" /></p>
 
 
 <footer class="footline">
@@ -2009,19 +2085,19 @@ rlang\sim_1.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1605157005"></script>
-    <script src="../js/perfect-scrollbar.min.js?1605157005"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1605157005"></script>
-    <script src="../js/jquery.sticky.js?1605157005"></script>
-    <script src="../js/featherlight.min.js?1605157005"></script>
-    <script src="../js/highlight.pack.js?1605157005"></script>
+    <script src="../js/clipboard.min.js?1605158920"></script>
+    <script src="../js/perfect-scrollbar.min.js?1605158920"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1605158920"></script>
+    <script src="../js/jquery.sticky.js?1605158920"></script>
+    <script src="../js/featherlight.min.js?1605158920"></script>
+    <script src="../js/highlight.pack.js?1605158920"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1605157005"></script>
-    <script src="../js/learn.js?1605157005"></script>
-    <script src="../js/hugo-learn.js?1605157005"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1605158920"></script>
+    <script src="../js/learn.js?1605158920"></script>
+    <script src="../js/hugo-learn.js?1605158920"></script>
     
         
-            <script src="../mermaid/mermaid.js?1605157005"></script>
+            <script src="../mermaid/mermaid.js?1605158920"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

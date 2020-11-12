@@ -13,19 +13,19 @@
     <title>Quick view 1 - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1605157005" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1605157005" rel="stylesheet">
-    <link href="../css/hybrid.css?1605157005" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1605157005" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1605157005" rel="stylesheet">
-    <link href="../css/auto-complete.css?1605157005" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1605157005" rel="stylesheet">
-    <link href="../css/theme.css?1605157005" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1605157005" rel="stylesheet">
+    <link href="../css/nucleus.css?1605158920" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1605158920" rel="stylesheet">
+    <link href="../css/hybrid.css?1605158920" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1605158920" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1605158920" rel="stylesheet">
+    <link href="../css/auto-complete.css?1605158920" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1605158920" rel="stylesheet">
+    <link href="../css/theme.css?1605158920" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1605158920" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1605157005" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605157005" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605157005" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1605158920" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605158920" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605158920" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1605157005"></script>
+    <script src="../js/jquery-3.3.1.min.js?1605158920"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1605157005"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1605157005"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1605158920"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1605158920"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1605157005"></script>
+<script type="text/javascript" src="../js/search.js?1605158920"></script>
 
     
   </div>
@@ -1087,7 +1087,6 @@
 <li><a href="#個別欄位">個別欄位</a></li>
 <li><a href="#質性數據的分析">質性數據的分析</a></li>
 </ul></li>
-<li><a href="#assignment">assignment</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1202,12 +1201,6 @@ tail 後幾筆資料</p>
 
 <p>如果要顯示個別欄位,一般可以是<code>mtcars$mpg</code>,但是如果要直接使用<code>mpg</code>欄位,可以利用<code>attach()</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">attach</span>(mtcars)
-<span style="color:#75715e">#&gt; The following objects are masked from mtcars (pos = 3):</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</span>
-<span style="color:#75715e">#&gt; The following objects are masked from mtcars (pos = 4):</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</span>
 mpg
 <span style="color:#75715e">#&gt;  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4</span>
 <span style="color:#75715e">#&gt; [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7</span>
@@ -1221,13 +1214,10 @@ mpg
 <span style="color:#75715e">#&gt; 11  7 14</span></code></pre></div>
 <p>頻率圖</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl))</code></pre></div>
-<dl>
-<dt><img src="../post/quickview1_files/figure-html/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5" /><br />
-<br /></dt>
-</dl>
+<p><img src="../post/quickview1_files/figure-html/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5" /></p>
 
-<p>::: sidebar<br />
-解釋下面兩個圖為甚麼不一樣?</p>
+
+<div class="notices sidebar" ><p>解釋下面兩個圖為甚麼不一樣?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">v<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">as.vector</span>(<span style="color:#a6e22e">table</span>(mtcars<span style="color:#f92672">$</span>cyl))
 <span style="color:#a6e22e">barplot</span>(v)</code></pre></div>
 <p><img src="../post/quickview1_files/figure-html/unnamed-chunk-6-1.png" alt="plot of chunk unnamed-chunk-6" /></p>
@@ -1257,7 +1247,7 @@ x
 3 
 
  </code></pre>
-<p>:::</p>
+<p>{{/%notice %}}</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>))</code></pre></div>
 <p><img src="../post/quickview1_files/figure-html/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8" /></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">barplot</span>(mtcars<span style="color:#f92672">$</span>mpg)</code></pre></div>
@@ -1274,6 +1264,7 @@ x
 <li><p>&lt;&lt;- 這個是全域賦值 ，跟變數的作用域有關，開發自己的套件(package)的時候,常用。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">##Delete x (if it exists)</span>
 <span style="color:#a6e22e">rm</span>(x)
+<span style="color:#75715e">#&gt; Warning in rm(x): 找不到物件 &#39;x&#39;</span>
 <span style="color:#a6e22e">mean</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>) <span style="color:#75715e">#[1] 5.5</span>
 <span style="color:#75715e">#&gt; [1] 5.5</span>
 x <span style="color:#75715e">#Error: object &#39;x&#39; not found</span>
@@ -1369,7 +1360,7 @@ a
 ncol
 <span style="color:#75715e">#&gt; function (x) </span>
 <span style="color:#75715e">#&gt; dim(x)[2L]</span>
-<span style="color:#75715e">#&gt; &lt;bytecode: 0x000000001467f698&gt;</span>
+<span style="color:#75715e">#&gt; &lt;bytecode: 0x000000001467f5c8&gt;</span>
 <span style="color:#75715e">#&gt; &lt;environment: namespace:base&gt;</span></code></pre></div>
 <p>產生5X4矩陣。如果</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">matrix</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">20</span>, ncol <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">4</span>)
@@ -1388,117 +1379,18 @@ ncol
 <span style="color:#75715e">#rm(list = ls())</span>
 <span style="color:#a6e22e">rm</span>(x)
 <span style="color:#a6e22e">ls</span>()
-<span style="color:#75715e">#&gt;   [1] &#34;%-%&#34;              &#34;% %&#34;              &#34;%/\\%&#34;           </span>
-<span style="color:#75715e">#&gt;   [4] &#34;%+%&#34;              &#34;a&#34;                &#34;add&#34;             </span>
-<span style="color:#75715e">#&gt;   [7] &#34;affairs&#34;          &#34;age&#34;              &#34;alist&#34;           </span>
-<span style="color:#75715e">#&gt;  [10] &#34;alpha&#34;            &#34;alpha.one.tailed&#34; &#34;args&#34;            </span>
-<span style="color:#75715e">#&gt;  [13] &#34;attributes_list&#34;  &#34;audit&#34;            &#34;avgCh&#34;           </span>
-<span style="color:#75715e">#&gt;  [16] &#34;avgy&#34;             &#34;b&#34;                &#34;base_name&#34;       </span>
-<span style="color:#75715e">#&gt;  [19] &#34;c&#34;                &#34;capture.output2&#34;  &#34;capture1&#34;        </span>
-<span style="color:#75715e">#&gt;  [22] &#34;capture2&#34;         &#34;cars&#34;             &#34;ceosal1&#34;         </span>
-<span style="color:#75715e">#&gt;  [25] &#34;Change&#34;           &#34;cleanup&#34;          &#34;countstab&#34;       </span>
-<span style="color:#75715e">#&gt;  [28] &#34;CV&#34;               &#34;d&#34;                &#34;d1&#34;              </span>
-<span style="color:#75715e">#&gt;  [31] &#34;d2&#34;               &#34;dd&#34;               &#34;dd2&#34;             </span>
-<span style="color:#75715e">#&gt;  [34] &#34;dd3&#34;              &#34;def.par&#34;          &#34;dframe&#34;          </span>
-<span style="color:#75715e">#&gt;  [37] &#34;e&#34;                &#34;e1&#34;               &#34;e21&#34;             </span>
-<span style="color:#75715e">#&gt;  [40] &#34;e22&#34;              &#34;e23&#34;              &#34;e2a&#34;             </span>
-<span style="color:#75715e">#&gt;  [43] &#34;e2b&#34;              &#34;e2c&#34;              &#34;e2d&#34;             </span>
-<span style="color:#75715e">#&gt;  [46] &#34;e3&#34;               &#34;e4a&#34;              &#34;e4b&#34;             </span>
-<span style="color:#75715e">#&gt;  [49] &#34;eq&#34;               &#34;f&#34;                &#34;f01&#34;             </span>
-<span style="color:#75715e">#&gt;  [52] &#34;f02&#34;              &#34;f1&#34;               &#34;f2&#34;              </span>
-<span style="color:#75715e">#&gt;  [55] &#34;ft&#34;               &#34;funs&#34;             &#34;g&#34;               </span>
-<span style="color:#75715e">#&gt;  [58] &#34;g01&#34;              &#34;g02&#34;              &#34;g03&#34;             </span>
-<span style="color:#75715e">#&gt;  [61] &#34;g04&#34;              &#34;g05&#34;              &#34;g06&#34;             </span>
-<span style="color:#75715e">#&gt;  [64] &#34;g07&#34;              &#34;g08&#34;              &#34;g09&#34;             </span>
-<span style="color:#75715e">#&gt;  [67] &#34;g1&#34;               &#34;g10&#34;              &#34;g11&#34;             </span>
-<span style="color:#75715e">#&gt;  [70] &#34;g12&#34;              &#34;g2&#34;               &#34;get_a&#34;           </span>
-<span style="color:#75715e">#&gt;  [73] &#34;gf&#34;               &#34;gi&#34;               &#34;gn&#34;              </span>
-<span style="color:#75715e">#&gt;  [76] &#34;group&#34;            &#34;h&#34;                &#34;h01&#34;             </span>
-<span style="color:#75715e">#&gt;  [79] &#34;h02&#34;              &#34;h03&#34;              &#34;h04&#34;             </span>
-<span style="color:#75715e">#&gt;  [82] &#34;h05&#34;              &#34;h06&#34;              &#34;h07&#34;             </span>
-<span style="color:#75715e">#&gt;  [85] &#34;h09&#34;              &#34;h2&#34;               &#34;haskids&#34;         </span>
-<span style="color:#75715e">#&gt;  [88] &#34;heading&#34;          &#34;i&#34;                &#34;j01&#34;             </span>
-<span style="color:#75715e">#&gt;  [91] &#34;j02&#34;              &#34;j03&#34;              &#34;j04&#34;             </span>
-<span style="color:#75715e">#&gt;  [94] &#34;j05&#34;              &#34;j06&#34;              &#34;just_vector&#34;     </span>
-<span style="color:#75715e">#&gt;  [97] &#34;k01&#34;              &#34;local&#34;            &#34;m&#34;               </span>
-<span style="color:#75715e">#&gt; [100] &#34;make.accumulator&#34; &#34;marriage&#34;         &#34;md_files&#34;        </span>
-<span style="color:#75715e">#&gt; [103] &#34;mlab&#34;             &#34;mlen&#34;             &#34;modify&lt;-&#34;        </span>
-<span style="color:#75715e">#&gt; [106] &#34;mrst&#34;             &#34;mtx&#34;              &#34;my_env&#34;          </span>
-<span style="color:#75715e">#&gt; [109] &#34;mygroup&#34;          &#34;n&#34;                &#34;ncol&#34;            </span>
-<span style="color:#75715e">#&gt; [112] &#34;needs_knitted&#34;    &#34;nrst&#34;             &#34;objs&#34;            </span>
-<span style="color:#75715e">#&gt; [115] &#34;opts&#34;             &#34;plus&#34;             &#34;plus_one&#34;        </span>
-<span style="color:#75715e">#&gt; [118] &#34;pollution&#34;        &#34;polyred&#34;          &#34;rebind&#34;          </span>
-<span style="color:#75715e">#&gt; [121] &#34;rmd&#34;              &#34;Rmd_files&#34;        &#34;rst&#34;             </span>
-<span style="color:#75715e">#&gt; [124] &#34;rstm&#34;             &#34;s.e&#34;              &#34;s.s&#34;             </span>
-<span style="color:#75715e">#&gt; [127] &#34;sdCh&#34;             &#34;sdy&#34;              &#34;se&#34;              </span>
-<span style="color:#75715e">#&gt; [130] &#34;search_envs&#34;      &#34;second&lt;-&#34;         &#34;set_a&#34;           </span>
-<span style="color:#75715e">#&gt; [133] &#34;SR87&#34;             &#34;SR88&#34;             &#34;t&#34;               </span>
-<span style="color:#75715e">#&gt; [136] &#34;test1&#34;            &#34;test2&#34;            &#34;v&#34;               </span>
-<span style="color:#75715e">#&gt; [139] &#34;v.mean&#34;           &#34;v.n&#34;              &#34;v.se&#34;            </span>
-<span style="color:#75715e">#&gt; [142] &#34;v.std&#34;            &#34;v1&#34;               &#34;v2&#34;              </span>
-<span style="color:#75715e">#&gt; [145] &#34;vec&#34;              &#34;vec_dim&#34;          &#34;vl&#34;              </span>
-<span style="color:#75715e">#&gt; [148] &#34;where&#34;            &#34;with_dir&#34;         &#34;xfit&#34;            </span>
-<span style="color:#75715e">#&gt; [151] &#34;xmax&#34;             &#34;xmin&#34;             &#34;y&#34;               </span>
-<span style="color:#75715e">#&gt; [154] &#34;year&#34;             &#34;yfit&#34;             &#34;z&#34;               </span>
-<span style="color:#75715e">#&gt; [157] &#34;z1&#34;               &#34;z2&#34;               &#34;zeros&#34;</span>
+<span style="color:#75715e">#&gt;  [1] &#34;a&#34;             &#34;base_name&#34;     &#34;f&#34;             &#34;local&#34;        </span>
+<span style="color:#75715e">#&gt;  [5] &#34;m&#34;             &#34;md_files&#34;      &#34;ncol&#34;          &#34;needs_knitted&#34;</span>
+<span style="color:#75715e">#&gt;  [9] &#34;rmd&#34;           &#34;Rmd_files&#34;     &#34;v&#34;</span>
 (x <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>)
 <span style="color:#75715e">#&gt; [1] 3</span>
 <span style="color:#a6e22e">ls</span>()
-<span style="color:#75715e">#&gt;   [1] &#34;%-%&#34;              &#34;% %&#34;              &#34;%/\\%&#34;           </span>
-<span style="color:#75715e">#&gt;   [4] &#34;%+%&#34;              &#34;a&#34;                &#34;add&#34;             </span>
-<span style="color:#75715e">#&gt;   [7] &#34;affairs&#34;          &#34;age&#34;              &#34;alist&#34;           </span>
-<span style="color:#75715e">#&gt;  [10] &#34;alpha&#34;            &#34;alpha.one.tailed&#34; &#34;args&#34;            </span>
-<span style="color:#75715e">#&gt;  [13] &#34;attributes_list&#34;  &#34;audit&#34;            &#34;avgCh&#34;           </span>
-<span style="color:#75715e">#&gt;  [16] &#34;avgy&#34;             &#34;b&#34;                &#34;base_name&#34;       </span>
-<span style="color:#75715e">#&gt;  [19] &#34;c&#34;                &#34;capture.output2&#34;  &#34;capture1&#34;        </span>
-<span style="color:#75715e">#&gt;  [22] &#34;capture2&#34;         &#34;cars&#34;             &#34;ceosal1&#34;         </span>
-<span style="color:#75715e">#&gt;  [25] &#34;Change&#34;           &#34;cleanup&#34;          &#34;countstab&#34;       </span>
-<span style="color:#75715e">#&gt;  [28] &#34;CV&#34;               &#34;d&#34;                &#34;d1&#34;              </span>
-<span style="color:#75715e">#&gt;  [31] &#34;d2&#34;               &#34;dd&#34;               &#34;dd2&#34;             </span>
-<span style="color:#75715e">#&gt;  [34] &#34;dd3&#34;              &#34;def.par&#34;          &#34;dframe&#34;          </span>
-<span style="color:#75715e">#&gt;  [37] &#34;e&#34;                &#34;e1&#34;               &#34;e21&#34;             </span>
-<span style="color:#75715e">#&gt;  [40] &#34;e22&#34;              &#34;e23&#34;              &#34;e2a&#34;             </span>
-<span style="color:#75715e">#&gt;  [43] &#34;e2b&#34;              &#34;e2c&#34;              &#34;e2d&#34;             </span>
-<span style="color:#75715e">#&gt;  [46] &#34;e3&#34;               &#34;e4a&#34;              &#34;e4b&#34;             </span>
-<span style="color:#75715e">#&gt;  [49] &#34;eq&#34;               &#34;f&#34;                &#34;f01&#34;             </span>
-<span style="color:#75715e">#&gt;  [52] &#34;f02&#34;              &#34;f1&#34;               &#34;f2&#34;              </span>
-<span style="color:#75715e">#&gt;  [55] &#34;ft&#34;               &#34;funs&#34;             &#34;g&#34;               </span>
-<span style="color:#75715e">#&gt;  [58] &#34;g01&#34;              &#34;g02&#34;              &#34;g03&#34;             </span>
-<span style="color:#75715e">#&gt;  [61] &#34;g04&#34;              &#34;g05&#34;              &#34;g06&#34;             </span>
-<span style="color:#75715e">#&gt;  [64] &#34;g07&#34;              &#34;g08&#34;              &#34;g09&#34;             </span>
-<span style="color:#75715e">#&gt;  [67] &#34;g1&#34;               &#34;g10&#34;              &#34;g11&#34;             </span>
-<span style="color:#75715e">#&gt;  [70] &#34;g12&#34;              &#34;g2&#34;               &#34;get_a&#34;           </span>
-<span style="color:#75715e">#&gt;  [73] &#34;gf&#34;               &#34;gi&#34;               &#34;gn&#34;              </span>
-<span style="color:#75715e">#&gt;  [76] &#34;group&#34;            &#34;h&#34;                &#34;h01&#34;             </span>
-<span style="color:#75715e">#&gt;  [79] &#34;h02&#34;              &#34;h03&#34;              &#34;h04&#34;             </span>
-<span style="color:#75715e">#&gt;  [82] &#34;h05&#34;              &#34;h06&#34;              &#34;h07&#34;             </span>
-<span style="color:#75715e">#&gt;  [85] &#34;h09&#34;              &#34;h2&#34;               &#34;haskids&#34;         </span>
-<span style="color:#75715e">#&gt;  [88] &#34;heading&#34;          &#34;i&#34;                &#34;j01&#34;             </span>
-<span style="color:#75715e">#&gt;  [91] &#34;j02&#34;              &#34;j03&#34;              &#34;j04&#34;             </span>
-<span style="color:#75715e">#&gt;  [94] &#34;j05&#34;              &#34;j06&#34;              &#34;just_vector&#34;     </span>
-<span style="color:#75715e">#&gt;  [97] &#34;k01&#34;              &#34;local&#34;            &#34;m&#34;               </span>
-<span style="color:#75715e">#&gt; [100] &#34;make.accumulator&#34; &#34;marriage&#34;         &#34;md_files&#34;        </span>
-<span style="color:#75715e">#&gt; [103] &#34;mlab&#34;             &#34;mlen&#34;             &#34;modify&lt;-&#34;        </span>
-<span style="color:#75715e">#&gt; [106] &#34;mrst&#34;             &#34;mtx&#34;              &#34;my_env&#34;          </span>
-<span style="color:#75715e">#&gt; [109] &#34;mygroup&#34;          &#34;n&#34;                &#34;ncol&#34;            </span>
-<span style="color:#75715e">#&gt; [112] &#34;needs_knitted&#34;    &#34;nrst&#34;             &#34;objs&#34;            </span>
-<span style="color:#75715e">#&gt; [115] &#34;opts&#34;             &#34;plus&#34;             &#34;plus_one&#34;        </span>
-<span style="color:#75715e">#&gt; [118] &#34;pollution&#34;        &#34;polyred&#34;          &#34;rebind&#34;          </span>
-<span style="color:#75715e">#&gt; [121] &#34;rmd&#34;              &#34;Rmd_files&#34;        &#34;rst&#34;             </span>
-<span style="color:#75715e">#&gt; [124] &#34;rstm&#34;             &#34;s.e&#34;              &#34;s.s&#34;             </span>
-<span style="color:#75715e">#&gt; [127] &#34;sdCh&#34;             &#34;sdy&#34;              &#34;se&#34;              </span>
-<span style="color:#75715e">#&gt; [130] &#34;search_envs&#34;      &#34;second&lt;-&#34;         &#34;set_a&#34;           </span>
-<span style="color:#75715e">#&gt; [133] &#34;SR87&#34;             &#34;SR88&#34;             &#34;t&#34;               </span>
-<span style="color:#75715e">#&gt; [136] &#34;test1&#34;            &#34;test2&#34;            &#34;v&#34;               </span>
-<span style="color:#75715e">#&gt; [139] &#34;v.mean&#34;           &#34;v.n&#34;              &#34;v.se&#34;            </span>
-<span style="color:#75715e">#&gt; [142] &#34;v.std&#34;            &#34;v1&#34;               &#34;v2&#34;              </span>
-<span style="color:#75715e">#&gt; [145] &#34;vec&#34;              &#34;vec_dim&#34;          &#34;vl&#34;              </span>
-<span style="color:#75715e">#&gt; [148] &#34;where&#34;            &#34;with_dir&#34;         &#34;x&#34;               </span>
-<span style="color:#75715e">#&gt; [151] &#34;xfit&#34;             &#34;xmax&#34;             &#34;xmin&#34;            </span>
-<span style="color:#75715e">#&gt; [154] &#34;y&#34;                &#34;year&#34;             &#34;yfit&#34;            </span>
-<span style="color:#75715e">#&gt; [157] &#34;z&#34;                &#34;z1&#34;               &#34;z2&#34;              </span>
-<span style="color:#75715e">#&gt; [160] &#34;zeros&#34;</span></code></pre></div>
+<span style="color:#75715e">#&gt;  [1] &#34;a&#34;             &#34;base_name&#34;     &#34;f&#34;             &#34;local&#34;        </span>
+<span style="color:#75715e">#&gt;  [5] &#34;m&#34;             &#34;md_files&#34;      &#34;ncol&#34;          &#34;needs_knitted&#34;</span>
+<span style="color:#75715e">#&gt;  [9] &#34;rmd&#34;           &#34;Rmd_files&#34;     &#34;v&#34;             &#34;x&#34;</span></code></pre></div>
 <p>因為x是參數名稱不是變數,看mean help</p>
+</div>
+
 
 
 <footer class="footline">
@@ -2223,19 +2115,19 @@ rlang\quickview1.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1605157005"></script>
-    <script src="../js/perfect-scrollbar.min.js?1605157005"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1605157005"></script>
-    <script src="../js/jquery.sticky.js?1605157005"></script>
-    <script src="../js/featherlight.min.js?1605157005"></script>
-    <script src="../js/highlight.pack.js?1605157005"></script>
+    <script src="../js/clipboard.min.js?1605158920"></script>
+    <script src="../js/perfect-scrollbar.min.js?1605158920"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1605158920"></script>
+    <script src="../js/jquery.sticky.js?1605158920"></script>
+    <script src="../js/featherlight.min.js?1605158920"></script>
+    <script src="../js/highlight.pack.js?1605158920"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1605157005"></script>
-    <script src="../js/learn.js?1605157005"></script>
-    <script src="../js/hugo-learn.js?1605157005"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1605158920"></script>
+    <script src="../js/learn.js?1605158920"></script>
+    <script src="../js/hugo-learn.js?1605158920"></script>
     
         
-            <script src="../mermaid/mermaid.js?1605157005"></script>
+            <script src="../mermaid/mermaid.js?1605158920"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
