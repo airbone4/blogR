@@ -1,4 +1,15 @@
-#body .rchunk.output {
-border-left: 3px solid rgba(92, 184, 92, 0.8);
+#body-inner .rchunk.output {
+border-left: 5px solid rgba(92, 184, 92, 0.8);
 background:none;
 }
+
+
+
+pre {
+	margin:2px;
+	padding:0em;
+}	
+
+#body-inner img {
+	width:80%;
+}	

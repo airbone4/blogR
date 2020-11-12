@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.76.5" />
+    <meta name="description" content="選項和程式勾結">
+
+
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="../../images/favicon.png" type="image/x-icon" />
+
+    <title>Rmd hook - R in Class</title>
+
+    
+    <link href="../../css/nucleus.css?1605157005" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1605157005" rel="stylesheet">
+    <link href="../../css/hybrid.css?1605157005" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1605157005" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1605157005" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1605157005" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1605157005" rel="stylesheet">
+    <link href="../../css/theme.css?1605157005" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1605157005" rel="stylesheet">
+    
+    <link href="../../extra_theme/css/mystyle.css?1605157005" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1605157005" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1605157005" rel="stylesheet">
+
+    <script src="../../js/jquery-3.3.1.min.js?1605157005"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="../../topic/rmd/rmd_hook.html">
+
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://airbon5.github.io/xx/">
+  <img src=../../extra_theme/images/rmi.png>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1605157005"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1605157005"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1605157005"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='../../'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang.html" title="R language" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../rlang.html">
+          R language
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/requirement.html" title="Requirement" class="dd-item ">
+        <a href="../../rlang/requirement.html">
+        Requirement
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/data_explorer_1.html" title="data explorer 1" class="dd-item ">
+        <a href="../../rlang/data_explorer_1.html">
+        data explorer 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/data_explorer_2.html" title="data explorer 2" class="dd-item ">
+        <a href="../../rlang/data_explorer_2.html">
+        data explorer 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/quickview1.html" title="Quick view 1" class="dd-item ">
+        <a href="../../rlang/quickview1.html">
+        Quick view 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/regular_expression.html" title="Regular expression syntax" class="dd-item ">
+        <a href="../../rlang/regular_expression.html">
+        Regular expression syntax
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/topic_dataframe.html" title="topic data frame" class="dd-item ">
+        <a href="../../rlang/topic_dataframe.html">
+        topic data frame
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_basic.html" title="type basic" class="dd-item ">
+        <a href="../../rlang/type_basic.html">
+        type basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_list.html" title="type list" class="dd-item ">
+        <a href="../../rlang/type_list.html">
+        type list
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_matrix.html" title="type matrix" class="dd-item ">
+        <a href="../../rlang/type_matrix.html">
+        type matrix
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_more.html" title="type more" class="dd-item ">
+        <a href="../../rlang/type_more.html">
+        type more
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_post.html" title="type post" class="dd-item ">
+        <a href="../../rlang/type_post.html">
+        type post
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_string_function.html" title="type string" class="dd-item ">
+        <a href="../../rlang/type_string_function.html">
+        type string
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_vector.html" title="type vector" class="dd-item ">
+        <a href="../../rlang/type_vector.html">
+        type vector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/filesystem.html" title="File System" class="dd-item ">
+        <a href="../../rlang/filesystem.html">
+        File System
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/objectbasic.html" title="object_basic" class="dd-item ">
+        <a href="../../rlang/objectbasic.html">
+        object_basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/programming_1.html" title="Programming 1" class="dd-item ">
+        <a href="../../rlang/programming_1.html">
+        Programming 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/apply_family.html" title="function - apply family" class="dd-item ">
+        <a href="../../rlang/apply_family.html">
+        function - apply family
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/function_1.html" title="Function basic" class="dd-item ">
+        <a href="../../rlang/function_1.html">
+        Function basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/function_2.html" title="Function more" class="dd-item ">
+        <a href="../../rlang/function_2.html">
+        Function more
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/rpackages.html" title="R Package" class="dd-item ">
+        <a href="../../rlang/rpackages.html">
+        R Package
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/plot01.html" title="Plot 01" class="dd-item ">
+        <a href="../../rlang/plot01.html">
+        Plot 01
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/plot02.html" title="Plot more" class="dd-item ">
+        <a href="../../rlang/plot02.html">
+        Plot more
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/environments.html" title="Environment" class="dd-item ">
+        <a href="../../rlang/environments.html">
+        Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/sampling.html" title="sampling" class="dd-item ">
+        <a href="../../rlang/sampling.html">
+        sampling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/eco_01_intro.html" title="Econometrics" class="dd-item ">
+        <a href="../../rlang/eco_01_intro.html">
+        Econometrics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/sim_1.html" title="simulation 1" class="dd-item ">
+        <a href="../../rlang/sim_1.html">
+        simulation 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/assignment-1.html" title="assignment-1" class="dd-item ">
+        <a href="../../rlang/hw/assignment-1.html">
+        assignment-1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/topic.html" title="Topics" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../topic.html">
+          Topics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_basic.html" title="Rmd basic" class="dd-item ">
+        <a href="../../topic/rmd/rmd_basic.html">
+        Rmd basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_hook.html" title="Rmd hook" class="dd-item active">
+        <a href="../../topic/rmd/rmd_hook.html">
+        Rmd hook
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_pdf.html" title="Rmd pdf" class="dd-item ">
+        <a href="../../topic/rmd/rmd_pdf.html">
+        Rmd pdf
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_topic_1.html" title="rmd topic 1" class="dd-item ">
+        <a href="../../topic/rmd/rmd_topic_1.html">
+        rmd topic 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/git-book-note.html" title="git book note" class="dd-item ">
+        <a href="../../topic/rmd/git-book-note.html">
+        git book note
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/interesting.html" title="interesting" class="dd-item ">
+        <a href="../../topic/interesting.html">
+        interesting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/topic/experiment.html" title="實驗" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../topic/experiment.html">
+          實驗
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/experiment/central.html" title="中央" class="dd-item ">
+        <a href="../../topic/experiment/central.html">
+        中央
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/sitetecnote/site-note.html" title="網站日誌" class="dd-item ">
+        <a href="../../topic/sitetecnote/site-note.html">
+        網站日誌
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/topic/test.html" title="網頁測試" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../topic/test.html">
+          網頁測試
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/test/emo_test.html" title="emoji_test" class="dd-item ">
+        <a href="../../topic/test/emo_test.html">
+        emoji_test
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/test/testpage.html" title="testpage" class="dd-item ">
+        <a href="../../topic/test/testpage.html">
+        testpage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>class log</a> > <a href='../../topic.html'>Topics</a> > Rmd hook
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#技術性比較詳細的介紹">技術性比較詳細的介紹</a>
+<ul>
+<li><a href="#提取程式碼">提取程式碼</a></li>
+<li><a href="#knitr-hook">knitr hook</a>
+<ul>
+<li><a href="#插塊-chunk-顏色">插塊(chunk)顏色</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#引擎">引擎</a>
+<ul>
+<li>
+<ul>
+<li><a href="#terminal-output">terminal output</a></li>
+</ul></li>
+<li><a href="#包含html-文件">包含html 文件</a></li>
+</ul></li>
+<li><a href="#如何使用chunk-option">如何使用chunk option</a>
+<ul>
+<li><a href="#demo">demo</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Rmd hook
+
+            </h1>
+			
+          
+
+        
+
+
+
+
+<h1 id="技術性比較詳細的介紹">技術性比較詳細的介紹</h1>
+
+<h2 id="提取程式碼">提取程式碼</h2>
+
+<p><a href="https://yihui.org/en/2018/09/code-appendix/">參考</a></p>
+
+<h2 id="knitr-hook">knitr hook</h2>
+
+<h3 id="插塊-chunk-顏色">插塊(chunk)顏色</h3>
+
+<p>有關hook 的設定,參考 <a href="https://yihui.name/knitr/hooks/#output-hooks">knitr hook</a></p>
+
+<p>設定警告訊息為紅色</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">knitr<span style="color:#f92672">::</span>knit_hooks<span style="color:#f92672">$</span><span style="color:#a6e22e">set</span>(error <span style="color:#f92672">=</span> <span style="color:#a6e22e">function</span>(x, options) {
+  <span style="color:#a6e22e">paste0</span>(<span style="color:#e6db74">&#34;&lt;pre style=\&#34;color: red;\&#34;&gt;&lt;code&gt;&#34;</span>, x, <span style="color:#e6db74">&#34;&lt;/code&gt;&lt;/pre&gt;&#34;</span>)
+})</code></pre></div>
+<h1 id="引擎">引擎</h1>
+
+<p>其他範例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#Color Format</span>
+colFmt <span style="color:#f92672">=</span> <span style="color:#a6e22e">function</span>(x,color){
+  outputFormat <span style="color:#f92672">=</span> opts_knit<span style="color:#f92672">$</span><span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;rmarkdown.pandoc.to&#34;</span>)
+  <span style="color:#a6e22e">if</span>(outputFormat <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;latex&#39;</span>)
+    <span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34;\\textcolor{&#34;</span>,color,<span style="color:#e6db74">&#34;}{&#34;</span>,x,<span style="color:#e6db74">&#34;}&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+  else <span style="color:#a6e22e">if</span>(outputFormat <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;html&#39;</span>)
+    <span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34;&lt;font color=&#39;&#34;</span>,color,<span style="color:#e6db74">&#34;&#39;&gt;&#34;</span>,x,<span style="color:#e6db74">&#34;&lt;/font&gt;&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+  else
+    x
+}</code></pre></div>
+<h3 id="terminal-output">terminal output</h3>
+
+<p>問題:如果以要看檔案內容,而不想被無關的輸出符號干擾,例如[1],那麼如果再R SCRIPT中可以使用 <code>system(&quot;cat 檔案名稱&quot;)</code> ,但是在R Markdown中(如下)不會顯示出結果:</p>
+
+<p>🔖 <a href="../../rlang/resources/wh.csv">wh.csv</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)
+<span style="color:#a6e22e">write.csv</span>(rst, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyData.csv&#34;</span>,row.names<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>, na<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+<span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#34;cat MyData.csv&#34;</span>)</code></pre></div>
+<p>You can use either</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">```{r, engine=&#39;bash&#39;, comment=&#39;&#39;}
+cat &#39;resources/hw.csv&#39;</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">```{r comment=&#39;&#39;}
+cat(readLines(&#39;resources/wh.csv&#39;), sep = &#39;\n&#39;)
+```</code></pre></div>
+<h2 id="包含html-文件">包含html 文件</h2>
+
+<p>topic:<br />
+<a href="https://bookdown.org/yihui/rmarkdown-cookbook/include-html.html">如何內含其他外部HTML文件👍 r markdown cookbook)</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">````{=html}
+```{r, echo=FALSE, results=&#39;asis&#39;}
+xfun::file_string(&#39;file.html&#39;)
+```
+````</code></pre></div>
+<h1 id="如何使用chunk-option">如何使用chunk option</h1>
+
+<p>來自<a href="https://github.com/yihui/rmarkdown-cookbook/blob/master/12-output-hooks.Rmd">https://github.com/yihui/rmarkdown-cookbook/blob/master/12-output-hooks.Rmd</a></p>
+
+<h2 id="demo">demo</h2>
+
+<p>下面來自yihui的範例,重新設定output這個鉤子。新的函數要從使用者的插塊選項拿到參數<code>out.lines</code><br />
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># save the built-in output hook</span>
+hook_output <span style="color:#f92672">=</span> knitr<span style="color:#f92672">::</span>knit_hooks<span style="color:#f92672">$</span><span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;output&#34;</span>)
+<span style="color:#75715e"># set a new output hook to truncate text output</span>
+knitr<span style="color:#f92672">::</span>knit_hooks<span style="color:#f92672">$</span><span style="color:#a6e22e">set</span>(output <span style="color:#f92672">=</span> <span style="color:#a6e22e">function</span>(x, options) {
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#a6e22e">if </span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.null</span>(n <span style="color:#f92672">&lt;-</span> options<span style="color:#f92672">$</span>out.lines)) {
+</span>    x <span style="color:#f92672">=</span> xfun<span style="color:#f92672">::</span><span style="color:#a6e22e">split_lines</span>(x)
+    <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">length</span>(x) <span style="color:#f92672">&gt;</span> n) {
+      <span style="color:#75715e"># truncate the output</span>
+      x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#a6e22e">head</span>(x, n), <span style="color:#e6db74">&#39;....\n&#39;</span>)
+    }
+    x <span style="color:#f92672">=</span> <span style="color:#a6e22e">paste</span>(x, collapse <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\n&#39;</span>)
+  }
+  <span style="color:#a6e22e">hook_output</span>(x, options)
+})</code></pre></td></tr></table>
+</div>
+</div></p>
+
+<p>
+<div class="notices tip" ><p>插塊選項中,設定<code>out.lines</code>=4 注意,這裡只要設定我們自己函數需要的參數(上面第5行),不用再記其他複雜的東西。</p>
+
+<p>我們的勾結函數需要的參數: <code>options$out.lines</code></p>
+</div>
+<br />
+使用方法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">```{r, out.lines=4}
+print(cars)
+```</code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+topic\rmd\rmd_hook.md
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../topic/rmd/rmd_basic.html" title="Rmd basic"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../topic/rmd/rmd_pdf.html" title="Rmd pdf" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1605157005"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1605157005"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1605157005"></script>
+    <script src="../../js/jquery.sticky.js?1605157005"></script>
+    <script src="../../js/featherlight.min.js?1605157005"></script>
+    <script src="../../js/highlight.pack.js?1605157005"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1605157005"></script>
+    <script src="../../js/learn.js?1605157005"></script>
+    <script src="../../js/hugo-learn.js?1605157005"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1605157005"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+
+
+  </body>
+</html>
+

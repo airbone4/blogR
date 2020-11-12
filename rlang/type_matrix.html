@@ -13,19 +13,19 @@
     <title>type matrix - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1604554379" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1604554379" rel="stylesheet">
-    <link href="../css/hybrid.css?1604554379" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1604554379" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1604554379" rel="stylesheet">
-    <link href="../css/auto-complete.css?1604554379" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1604554379" rel="stylesheet">
-    <link href="../css/theme.css?1604554379" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1604554379" rel="stylesheet">
+    <link href="../css/nucleus.css?1605157005" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1605157005" rel="stylesheet">
+    <link href="../css/hybrid.css?1605157005" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1605157005" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1605157005" rel="stylesheet">
+    <link href="../css/auto-complete.css?1605157005" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1605157005" rel="stylesheet">
+    <link href="../css/theme.css?1605157005" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1605157005" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1604554379" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1604554379" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1604554379" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1605157005" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605157005" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605157005" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1604554379"></script>
+    <script src="../js/jquery-3.3.1.min.js?1605157005"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1604554379"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1604554379"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1605157005"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1605157005"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1604554379"></script>
+<script type="text/javascript" src="../js/search.js?1605157005"></script>
 
     
   </div>
@@ -681,9 +681,6 @@
 
             
           
-            
-            
-          
         
         </ul>
       
@@ -750,30 +747,9 @@
  
   
     
-      <li data-nav-id="/topic/rmd/rmd_topic_1.html" title="rmd topic 1" class="dd-item ">
-        <a href="../topic/rmd/rmd_topic_1.html">
-        rmd topic 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/git-book-note.html" title="git book note" class="dd-item ">
-        <a href="../topic/rmd/git-book-note.html">
-        git book note
+      <li data-nav-id="/topic/rmd/rmd_hook.html" title="Rmd hook" class="dd-item ">
+        <a href="../topic/rmd/rmd_hook.html">
+        Rmd hook
         
         </a>
     </li>
@@ -813,9 +789,30 @@
  
   
     
-      <li data-nav-id="/topic/sitetecnote/git-note.html" title="git-note" class="dd-item ">
-        <a href="../topic/sitetecnote/git-note.html">
-        git-note
+      <li data-nav-id="/topic/rmd/rmd_topic_1.html" title="rmd topic 1" class="dd-item ">
+        <a href="../topic/rmd/rmd_topic_1.html">
+        rmd topic 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/git-book-note.html" title="git book note" class="dd-item ">
+        <a href="../topic/rmd/git-book-note.html">
+        git book note
         
         </a>
     </li>
@@ -898,6 +895,27 @@
         </ul>
       
     </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/sitetecnote/site-note.html" title="網站日誌" class="dd-item ">
+        <a href="../topic/sitetecnote/site-note.html">
+        網站日誌
+        
+        </a>
+    </li>
+     
   
  
 
@@ -1038,7 +1056,7 @@
             
           
           
-            <a href='../'>test for class</a> > <a href='../rlang.html'>R language</a> > type matrix
+            <a href='../'>class log</a> > <a href='../rlang.html'>R language</a> > type matrix
           
         
           
@@ -1051,7 +1069,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#matrix">matrix</a>
+<ul>
+<li><a href="#transpose">Transpose</a></li>
+<li><a href="#合併矩陣">合併矩陣</a></li>
+</ul></li>
+<li><a href="#solve">solve</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1077,96 +1107,88 @@
 
 
 
-<script src="../rmarkdown-libs/header-attrs/header-attrs.js"></script>
-<link href="../rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="../rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
+<h2 id="matrix">matrix</h2>
 
-<div id="matrix" class="section level2">
-<h2>matrix</h2>
 <p>矩陣的建立有多種方式,其中一種是利用向量轉填矩陣，填入的方式預設是以coumn為主要方向。</p>
-<pre class="r"><code>matrix(c(1,2,3,4,5,6),2,3)</code></pre>
-<pre class="rchunk output"><code>     [,1] [,2] [,3]
-[1,]    1    3    5
-[2,]    2    4    6</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>),<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+<span style="color:#75715e">#&gt;      [,1] [,2] [,3]</span>
+<span style="color:#75715e">#&gt; [1,]    1    3    5</span>
+<span style="color:#75715e">#&gt; [2,]    2    4    6</span></code></pre></div>
 <p>問題: 怎樣產生<br />
 1 2 3<br />
 4 5 6<br />
 的矩陣</p>
-<pre class="r"><code>diag(1, nrow = 5)</code></pre>
-<pre class="rchunk output"><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]    1    0    0    0    0
-[2,]    0    1    0    0    0
-[3,]    0    0    1    0    0
-[4,]    0    0    0    1    0
-[5,]    0    0    0    0    1</code></pre>
-<pre class="r"><code>matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, byrow = TRUE, dimnames = list(c(&quot;r1&quot;, &quot;r2&quot;, &quot;r3&quot;), c(&quot;c1&quot;, &quot;c2&quot;, &quot;c3&quot;)))</code></pre>
-<pre class="rchunk output"><code>   c1 c2 c3
-r1  1  2  3
-r2  4  5  6
-r3  7  8  9</code></pre>
-<pre class="r"><code>m1 &lt;- matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), ncol = 3)
-rownames(m1) &lt;- c(&quot;r1&quot;, &quot;r2&quot;, &quot;r3&quot;)
-colnames(m1) &lt;- c(&quot;c1&quot;, &quot;c2&quot;, &quot;c3&quot;)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">diag</span>(<span style="color:#ae81ff">1</span>, nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>)
+<span style="color:#75715e">#&gt;      [,1] [,2] [,3] [,4] [,5]</span>
+<span style="color:#75715e">#&gt; [1,]    1    0    0    0    0</span>
+<span style="color:#75715e">#&gt; [2,]    0    1    0    0    0</span>
+<span style="color:#75715e">#&gt; [3,]    0    0    1    0    0</span>
+<span style="color:#75715e">#&gt; [4,]    0    0    0    1    0</span>
+<span style="color:#75715e">#&gt; [5,]    0    0    0    0    1</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>), nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, byrow <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>, dimnames <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;r1&#34;</span>, <span style="color:#e6db74">&#34;r2&#34;</span>, <span style="color:#e6db74">&#34;r3&#34;</span>), <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;c1&#34;</span>, <span style="color:#e6db74">&#34;c2&#34;</span>, <span style="color:#e6db74">&#34;c3&#34;</span>)))
+<span style="color:#75715e">#&gt;    c1 c2 c3</span>
+<span style="color:#75715e">#&gt; r1  1  2  3</span>
+<span style="color:#75715e">#&gt; r2  4  5  6</span>
+<span style="color:#75715e">#&gt; r3  7  8  9</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">m1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>), ncol <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>)
+<span style="color:#a6e22e">rownames</span>(m1) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;r1&#34;</span>, <span style="color:#e6db74">&#34;r2&#34;</span>, <span style="color:#e6db74">&#34;r3&#34;</span>)
+<span style="color:#a6e22e">colnames</span>(m1) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;c1&#34;</span>, <span style="color:#e6db74">&#34;c2&#34;</span>, <span style="color:#e6db74">&#34;c3&#34;</span>)
 
-m1</code></pre>
-<pre class="rchunk output"><code>   c1 c2 c3
-r1  1  4  7
-r2  2  5  8
-r3  3  6  9</code></pre>
-<pre class="r"><code> B = matrix( 
-    c(2, 4, 3, 1, 5, 7), 
-    nrow=3, 
-    ncol=2) 
-B</code></pre>
-<pre class="rchunk output"><code>     [,1] [,2]
-[1,]    2    1
-[2,]    4    5
-[3,]    3    7</code></pre>
-<div id="transpose" class="section level3">
-<h3>Transpose</h3>
-<pre class="r"><code>t(B)</code></pre>
-<pre class="rchunk output"><code>     [,1] [,2] [,3]
-[1,]    2    4    3
-[2,]    1    5    7</code></pre>
-</div>
-<div id="合併矩陣" class="section level3">
-<h3>合併矩陣</h3>
+m1
+<span style="color:#75715e">#&gt;    c1 c2 c3</span>
+<span style="color:#75715e">#&gt; r1  1  4  7</span>
+<span style="color:#75715e">#&gt; r2  2  5  8</span>
+<span style="color:#75715e">#&gt; r3  3  6  9</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"> B <span style="color:#f92672">=</span> <span style="color:#a6e22e">matrix</span>( 
+    <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>), 
+    nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, 
+    ncol<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>) 
+B
+<span style="color:#75715e">#&gt;      [,1] [,2]</span>
+<span style="color:#75715e">#&gt; [1,]    2    1</span>
+<span style="color:#75715e">#&gt; [2,]    4    5</span>
+<span style="color:#75715e">#&gt; [3,]    3    7</span></code></pre></div>
+<h3 id="transpose">Transpose</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">t</span>(B)
+<span style="color:#75715e">#&gt;      [,1] [,2] [,3]</span>
+<span style="color:#75715e">#&gt; [1,]    2    4    3</span>
+<span style="color:#75715e">#&gt; [2,]    1    5    7</span></code></pre></div>
+<h3 id="合併矩陣">合併矩陣</h3>
+
 <p>利用函數<code>cbind()</code> 可以合併同樣橫行數目的兩個矩陣,例如這裡C也是3個橫行:</p>
-<pre class="r"><code>C = matrix( 
-   c(7, 4, 2), 
-   nrow=3, 
-   ncol=1) 
-C</code></pre>
-<pre class="rchunk output"><code>     [,1]
-[1,]    7
-[2,]    4
-[3,]    2</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">C <span style="color:#f92672">=</span> <span style="color:#a6e22e">matrix</span>( 
+   <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>), 
+   nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, 
+   ncol<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) 
+C
+<span style="color:#75715e">#&gt;      [,1]</span>
+<span style="color:#75715e">#&gt; [1,]    7</span>
+<span style="color:#75715e">#&gt; [2,]    4</span>
+<span style="color:#75715e">#&gt; [3,]    2</span></code></pre></div>
 <p>和B合併</p>
-<pre class="r"><code>cbind(B, C) </code></pre>
-<pre class="rchunk output"><code>     [,1] [,2] [,3]
-[1,]    2    1    7
-[2,]    4    5    4
-[3,]    3    7    2</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">cbind</span>(B, C) 
+<span style="color:#75715e">#&gt;      [,1] [,2] [,3]</span>
+<span style="color:#75715e">#&gt; [1,]    2    1    7</span>
+<span style="color:#75715e">#&gt; [2,]    4    5    4</span>
+<span style="color:#75715e">#&gt; [3,]    3    7    2</span></code></pre></div>
 <p>同樣的,<code>rbind()</code> 也可以合併直行數目相同的兩個矩陣:</p>
-<pre class="r"><code> D = matrix( 
-   c(6, 2), 
-   nrow=1, 
-   ncol=2) 
-D</code></pre>
-<pre class="rchunk output"><code>     [,1] [,2]
-[1,]    6    2</code></pre>
-<pre class="r"><code>rbind(B, D) </code></pre>
-<pre class="rchunk output"><code>     [,1] [,2]
-[1,]    2    1
-[2,]    4    5
-[3,]    3    7
-[4,]    6    2</code></pre>
-<p>將矩陣解構回向量:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"> D <span style="color:#f92672">=</span> <span style="color:#a6e22e">matrix</span>( 
+   <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>), 
+   nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, 
+   ncol<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>) 
+D
+<span style="color:#75715e">#&gt;      [,1] [,2]</span>
+<span style="color:#75715e">#&gt; [1,]    6    2</span>
+<span style="color:#a6e22e">rbind</span>(B, D) 
+<span style="color:#75715e">#&gt;      [,1] [,2]</span>
+<span style="color:#75715e">#&gt; [1,]    2    1</span>
+<span style="color:#75715e">#&gt; [2,]    4    5</span>
+<span style="color:#75715e">#&gt; [3,]    3    7</span>
+<span style="color:#75715e">#&gt; [4,]    6    2</span></code></pre></div>
+<p>將矩陣解構回向量:<br />
 可以利用<code>c()</code> 會把矩陣所有的直行都合併成一個直行.</p>
-<pre class="r"><code>c(B) </code></pre>
-<pre class="rchunk output"><code>[1] 2 4 3 1 5 7</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">c</span>(B) 
+<span style="color:#75715e">#&gt; [1] 2 4 3 1 5 7</span></code></pre></div>
 <p>unlist ?</p>
+
 <p><strong>練習:利用上面的m1 回答下面的問題:</strong></p>
 <pre><code>m1[1, 2]
 
@@ -1184,7 +1206,7 @@ m1[-1,]
 m1[,-2]
 
 
-m1[c(&quot;r1&quot;, &quot;r3&quot;), c(&quot;c1&quot;, &quot;c3&quot;)]
+m1[c(&#34;r1&#34;, &#34;r3&#34;), c(&#34;c1&#34;, &#34;c3&#34;)]
 
 
 m1[1]
@@ -1206,25 +1228,19 @@ m1 ^ 2
 m1 %*% m1
 
 t(m1)</code></pre>
-</div>
-</div>
-<div id="solve" class="section level2">
-<h2>solve</h2>
-<pre class="r"><code>m2&lt;-cbind(c(14,32),c(32,77))
-b&lt;-c(1,1)
-sm2&lt;-solve(m2)
-sm2</code></pre>
-<pre class="rchunk output"><code>       [,1]   [,2]
-[1,]  1.426 -0.593
-[2,] -0.593  0.259</code></pre>
-<pre class="r"><code>solve(m2,b)</code></pre>
-<pre class="rchunk output"><code>[1]  0.833 -0.333</code></pre>
-<pre class="r"><code>m2 %*% sm2</code></pre>
-<pre class="rchunk output"><code>     [,1] [,2]
-[1,]    1    0
-[2,]    0    1</code></pre>
-</div>
-
+<h2 id="solve">solve</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">m2<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">cbind</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">32</span>),<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">77</span>))
+b<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)
+sm2<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">solve</span>(m2)
+sm2
+<span style="color:#75715e">#&gt;            [,1]       [,2]</span>
+<span style="color:#75715e">#&gt; [1,]  1.4259259 -0.5925926</span>
+<span style="color:#75715e">#&gt; [2,] -0.5925926  0.2592593</span>
+<span style="color:#a6e22e">solve</span>(m2,b)
+<span style="color:#75715e">#&gt; [1]  0.8333333 -0.3333333</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">m2 <span style="color:#f92672">%*%</span> sm2
+<span style="color:#75715e">#&gt;      [,1] [,2]</span>
+<span style="color:#75715e">#&gt; [1,]    1    0</span>
+<span style="color:#75715e">#&gt; [2,]    0    1</span></code></pre></div>
 
 <footer class="footline">
 	
@@ -1233,7 +1249,7 @@ sm2</code></pre>
         
         </div>
         
-rlang\type_matrix.html
+rlang\type_matrix.md
       </div>
 
     <div id="navigation">
@@ -1713,11 +1729,6 @@ rlang\type_matrix.html
             
         
                     
-                        
-            
-            
-        
-                    
             
         
                     
@@ -1860,6 +1871,22 @@ rlang\type_matrix.html
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -1937,19 +1964,19 @@ rlang\type_matrix.html
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1604554379"></script>
-    <script src="../js/perfect-scrollbar.min.js?1604554379"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1604554379"></script>
-    <script src="../js/jquery.sticky.js?1604554379"></script>
-    <script src="../js/featherlight.min.js?1604554379"></script>
-    <script src="../js/highlight.pack.js?1604554379"></script>
+    <script src="../js/clipboard.min.js?1605157005"></script>
+    <script src="../js/perfect-scrollbar.min.js?1605157005"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1605157005"></script>
+    <script src="../js/jquery.sticky.js?1605157005"></script>
+    <script src="../js/featherlight.min.js?1605157005"></script>
+    <script src="../js/highlight.pack.js?1605157005"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1604554379"></script>
-    <script src="../js/learn.js?1604554379"></script>
-    <script src="../js/hugo-learn.js?1604554379"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1605157005"></script>
+    <script src="../js/learn.js?1605157005"></script>
+    <script src="../js/hugo-learn.js?1605157005"></script>
     
         
-            <script src="../mermaid/mermaid.js?1604554379"></script>
+            <script src="../mermaid/mermaid.js?1605157005"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

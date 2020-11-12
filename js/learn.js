@@ -1,3 +1,4 @@
+/*
 // Scrollbar Width function
 function getScrollBarWidth() {
     var inner = document.createElement('p');
@@ -24,7 +25,7 @@ function getScrollBarWidth() {
 
     return (w1 - w2);
 };
-
+*/
 function setMenuHeight() {
     $('#sidebar .highlightable').height($('#sidebar').innerHeight() - $('#header-wrapper').height() - 40);
     $('#sidebar .highlightable').perfectScrollbar('update');

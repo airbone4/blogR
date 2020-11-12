@@ -4,11 +4,6 @@
     padding: 0rem;
 }
 
-pre {
-	margin:0px;
-	padding:0px;
-}	
-
 
 #body-inner  ul {
   list-style: none;
@@ -57,13 +52,7 @@ li >p:first-child {
 a {
     color: inherit;
 }
-code {
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 4px
-}
+
 
 
 a[href$=".docx"]:before {
@@ -86,8 +75,15 @@ a[href$=".pdf"]:before {
 #body-inner * {
 	font-size:2rem;
 }	
+開啟sidebar 顯示
+#sidebar-toggle-span {
+	display:inline-block;
+}
+
 */
 
-#body img {
-	width:80%;
-}	
+#body-inner pre code.hljs {
+    padding: 2px 4px;
+    /*font-size: 90%; */
+    border-radius: 0px 
+}
