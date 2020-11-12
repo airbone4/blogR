@@ -13,19 +13,19 @@
     <title>simulation 1 - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1605158920" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1605158920" rel="stylesheet">
-    <link href="../css/hybrid.css?1605158920" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1605158920" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1605158920" rel="stylesheet">
-    <link href="../css/auto-complete.css?1605158920" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1605158920" rel="stylesheet">
-    <link href="../css/theme.css?1605158920" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1605158920" rel="stylesheet">
+    <link href="../css/nucleus.css?1605169616" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1605169616" rel="stylesheet">
+    <link href="../css/hybrid.css?1605169616" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1605169616" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1605169616" rel="stylesheet">
+    <link href="../css/auto-complete.css?1605169616" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1605169616" rel="stylesheet">
+    <link href="../css/theme.css?1605169616" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1605169616" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1605158920" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605158920" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605158920" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1605169616" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605169616" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605169616" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1605158920"></script>
+    <script src="../js/jquery-3.3.1.min.js?1605169616"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1605158920"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1605158920"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1605169616"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1605169616"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1605158920"></script>
+<script type="text/javascript" src="../js/search.js?1605169616"></script>
 
     
   </div>
@@ -1073,7 +1073,13 @@
 <ul>
 <li>
 <ul>
-<li><a href="#basic">basic</a></li>
+<li><a href="#basic">basic</a>
+<ul>
+<li><a href="#cdf">cdf</a></li>
+<li><a href="#pdf">pdf</a></li>
+<li><a href="#pnorm">pnorm</a></li>
+<li><a href="#compare">compare</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#simulate-1">simulate 1</a>
 <ul>
@@ -1117,6 +1123,8 @@
 <code>pnorm</code> : CDF<br />
 <code>qnorm</code> : inverse CDF<br />
 <code>rnorm</code> : random</p>
+
+<h3 id="cdf">cdf</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">z_scores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-3</span>, <span style="color:#ae81ff">3</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.1</span>)
 pvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">pnorm</span>(z_scores)
 
@@ -1135,6 +1143,13 @@ pvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">pno
 <span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">1</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">2</span>))
 <span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(pvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">2</span>))</code></pre></div>
 <p><img src="../post/sim_1_files/figure-html/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
+
+<p>👍<br />
+<code>axis</code>下左上又(1,2,3,4)<br />
+第2個參數用的是要顯示的號碼值,對樣每個樣本點。<br />
+如果是x,y plot這個axis()無作用,這裡只用到Y。</p>
+
+<h3 id="pdf">pdf</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">z_scores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-3</span>, <span style="color:#ae81ff">3</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.1</span>)
 dvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dnorm</span>(z_scores)
 <span style="color:#a6e22e">plot</span>(dvalues, <span style="color:#75715e"># Plot where y = values and x = index of the value in the vector</span>
@@ -1149,15 +1164,15 @@ dvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dno
 <span style="color:#a6e22e">axis</span>(<span style="color:#ae81ff">1</span>, at<span style="color:#f92672">=</span><span style="color:#a6e22e">which</span>(dvalues <span style="color:#f92672">==</span> <span style="color:#a6e22e">dnorm</span>(<span style="color:#ae81ff">2</span>)), labels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">-2</span>, <span style="color:#ae81ff">2</span>))</code></pre></div>
 <p><img src="../post/sim_1_files/figure-html/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2" /></p>
 
-<p>👍<br />
-<code>axis</code>下左上又(1,2,3,4)<br />
-第2個參數用的是真假值,對樣每個樣本點。</p>
+<h3 id="pnorm">pnorm</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>) <span style="color:#75715e">## [1] 0.9772499</span>
 <span style="color:#75715e">#&gt; [1] 0.9772499</span>
 <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>) <span style="color:#75715e">## [1] 0.1586553</span>
 <span style="color:#75715e">#&gt; [1] 0.1586553</span>
 <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">2</span>, mean <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, sd <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, lower.tail <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
-<span style="color:#75715e">#&gt; [1] 0.8413447</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">oldpar <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">par</span>()
+<span style="color:#75715e">#&gt; [1] 0.8413447</span></code></pre></div>
+<h3 id="compare">compare</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">oldpar <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">par</span>()
 <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
 z_scores <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-3</span>, <span style="color:#ae81ff">3</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">.1</span>)
 pvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">pnorm</span>(z_scores)
@@ -1193,6 +1208,25 @@ qvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qno
 </ol>
 </div>
 
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        hint
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+       
+1. zscore of 95 percent 
+1. percent<-pnorm(1)-pnorm(-1)
+
+    </div>
+</div>
+ 
 
 <h1 id="simulate-1">simulate 1</h1>
 
@@ -2085,19 +2119,19 @@ rlang\sim_1.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1605158920"></script>
-    <script src="../js/perfect-scrollbar.min.js?1605158920"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1605158920"></script>
-    <script src="../js/jquery.sticky.js?1605158920"></script>
-    <script src="../js/featherlight.min.js?1605158920"></script>
-    <script src="../js/highlight.pack.js?1605158920"></script>
+    <script src="../js/clipboard.min.js?1605169616"></script>
+    <script src="../js/perfect-scrollbar.min.js?1605169616"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1605169616"></script>
+    <script src="../js/jquery.sticky.js?1605169616"></script>
+    <script src="../js/featherlight.min.js?1605169616"></script>
+    <script src="../js/highlight.pack.js?1605169616"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1605158920"></script>
-    <script src="../js/learn.js?1605158920"></script>
-    <script src="../js/hugo-learn.js?1605158920"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1605169616"></script>
+    <script src="../js/learn.js?1605169616"></script>
+    <script src="../js/hugo-learn.js?1605169616"></script>
     
         
-            <script src="../mermaid/mermaid.js?1605158920"></script>
+            <script src="../mermaid/mermaid.js?1605169616"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

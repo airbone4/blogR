@@ -432,7 +432,7 @@ rm(affairs) load(&amp;#39;./resources/affairs.RData&amp;#39;) head(affairs) #&am
 pnorm : CDF
 qnorm : inverse CDF
 rnorm : random
-z_scores &amp;lt;- seq(-3, 3, by = .1) pvalues &amp;lt;- pnorm(z_scores) # Now we&amp;#39;ll plot these values plot(pvalues, # Plot where y = values and x = index of the value in the vector xaxt = &amp;#34;n&amp;#34;, # Don&amp;#39;t label the x-axis type = &amp;#34;l&amp;#34;, # Make it a line plot main = &amp;#34;cdf of the Standard Normal&amp;#34;, xlab= &amp;#34;Quantiles&amp;#34;, ylab=&amp;#34;Probability Density&amp;#34;) # These commands label the x-axis axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2)) axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2)) axis(1, at=which(pvalues == pnorm(0)), labels=c(.</description>
+cdf z_scores &amp;lt;- seq(-3, 3, by = .1) pvalues &amp;lt;- pnorm(z_scores) # Now we&amp;#39;ll plot these values plot(pvalues, # Plot where y = values and x = index of the value in the vector xaxt = &amp;#34;n&amp;#34;, # Don&amp;#39;t label the x-axis type = &amp;#34;l&amp;#34;, # Make it a line plot main = &amp;#34;cdf of the Standard Normal&amp;#34;, xlab= &amp;#34;Quantiles&amp;#34;, ylab=&amp;#34;Probability Density&amp;#34;) # These commands label the x-axis axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2)) axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2)) axis(1, at=which(pvalues == pnorm(0)), labels=c(.</description>
     </item>
     
     <item>
