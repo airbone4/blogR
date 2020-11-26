@@ -13,19 +13,19 @@
     <title>File System - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1605169616" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1605169616" rel="stylesheet">
-    <link href="../css/hybrid.css?1605169616" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1605169616" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1605169616" rel="stylesheet">
-    <link href="../css/auto-complete.css?1605169616" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1605169616" rel="stylesheet">
-    <link href="../css/theme.css?1605169616" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1605169616" rel="stylesheet">
+    <link href="../css/nucleus.css?1606367336" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606367336" rel="stylesheet">
+    <link href="../css/hybrid.css?1606367336" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606367336" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606367336" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606367336" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606367336" rel="stylesheet">
+    <link href="../css/theme.css?1606367336" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606367336" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1605169616" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605169616" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605169616" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606367336" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606367336" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606367336" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1605169616"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606367336"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1605169616"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1605169616"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606367336"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606367336"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1605169616"></script>
+<script type="text/javascript" src="../js/search.js?1606367336"></script>
 
     
   </div>
@@ -217,24 +217,6 @@
             
           
             
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/topic_dataframe.html" title="topic data frame" class="dd-item ">
-        <a href="../rlang/topic_dataframe.html">
-        topic data frame
-        
-        </a>
-    </li>
-     
-  
- 
-
             
           
             
@@ -406,24 +388,6 @@
             
           
             
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/objectbasic.html" title="object_basic" class="dd-item ">
-        <a href="../rlang/objectbasic.html">
-        object_basic
-        
-        </a>
-    </li>
-     
-  
- 
-
             
           
             
@@ -669,9 +633,30 @@
  
   
     
-      <li data-nav-id="/rlang/hw/assignment-1.html" title="assignment-1" class="dd-item ">
-        <a href="../rlang/hw/assignment-1.html">
+      <li data-nav-id="/rlang/hw/hw_basic.html" title="assignment-1" class="dd-item ">
+        <a href="../rlang/hw/hw_basic.html">
         assignment-1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/hw_regexp.html" title="regexpr" class="dd-item ">
+        <a href="../rlang/hw/hw_regexp.html">
+        regexpr
         
         </a>
     </li>
@@ -909,27 +894,6 @@
  
   
     
-      <li data-nav-id="/topic/sitetecnote/site-note.html" title="網站日誌" class="dd-item ">
-        <a href="../topic/sitetecnote/site-note.html">
-        網站日誌
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
     <li data-nav-id="/topic/test.html" title="網頁測試" class="dd-item
         
         
@@ -1071,18 +1035,23 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#file-system">File System</a>
 <ul>
+<li><a href="#暫時子目錄">暫時子目錄</a></li>
+</ul></li>
 <li><a href="#exploring-file-system">Exploring file system</a></li>
 <li><a href="#creating-of-a-directory">Creating of a directory</a></li>
 <li><a href="#r系統檔案列表">R系統檔案列表</a></li>
-<li><a href="#在r中建立檔案名稱">在R中建立檔案名稱</a>
+<li><a href="#在r中建立路徑-檔案-名稱">在R中建立路徑(檔案)名稱</a>
 <ul>
 <li><a href="#note-about-windows">Note about Windows</a></li>
-<li><a href="#和工作區相關的指令">和工作區相關的指令</a>
+<li><a href="#相關的指令">相關的指令</a></li>
+</ul></li>
+<li><a href="#應用範例">應用範例</a>
 <ul>
 <li><a href="#列出目前工作目錄上的檔案">列出目前工作目錄上的檔案</a></li>
-</ul></li>
 </ul></li>
 <li><a href="#讀檔">讀檔</a>
 <ul>
@@ -1130,33 +1099,22 @@
 
 
 
-<h1 id="file-system">File System</h1>
+<h2 id="file-system">File System</h2>
 
-<p>暫時子目錄</p>
+<h3 id="暫時子目錄">暫時子目錄</h3>
 
 <p>函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">mydirname <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tempfile</span>(pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mydir&#34;</span>)</code></pre></div>
-<p>mydirname<br />
-[1] &ldquo;C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">mydirname <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tempfile</span>(pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mydir&#34;</span>)
+mydirname
+<span style="color:#75715e">#&gt; [1] &#34;C:\\Users\\linchao\\AppData\\Local\\Temp\\Rtmpu0qrDn\\mydir10d47589228f&#34;</span></code></pre></div>
+<p>在視窗系統中:<br />
+mydirname<br />
+C:\Users\使用者名稱\AppData\Local\Temp\RtmpSg2qRA\mydir326845a02140</p>
 
 <h2 id="exploring-file-system">Exploring file system</h2>
 
-<p>function file.exists() 可以用來知道檔案是否存在,<br />
-function dir() 用來知道目前檔案位置的內容.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">file.exists</span>(mydirname)</code></pre></div>
-<p>dir(tempdir())<br />
-character(0) # Empty character vector<br />
-
-<div class="notices sidebar" ><p>a &lt;- character(0)<br />
-identical(a, character(0))  # returns TRUE</p>
-
-<p>identical(a, &ldquo;&rdquo;)           # returns FALSE<br />
-identical(a, numeric(0))   # returns also FALSE<br />
-hint:<br />
-- 利用length<br />
-- identical 比較內容和型態,例如整數1和實數1比較結果是F</p>
-</div>
-</p>
+<p>function <code>file.exists()</code> 可以用來知道檔案是否存在,<br />
+function <code>dir()</code> 用來知道目前檔案位置的內容,例如<code>dir(tempdir())</code></p>
 
 <h2 id="creating-of-a-directory">Creating of a directory</h2>
 
@@ -1166,9 +1124,9 @@ hint:<br />
 <span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">tempdir</span>(), full.names <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>) <span style="color:#75715e">#列出目前子目錄內容(全名)</span>
 <span style="color:#a6e22e">file.mtime</span>(mydirname) <span style="color:#75715e">#子目錄建立時間,make time</span></code></pre></div>
 <p>[1] TRUE<br />
-[1] &ldquo;C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/file87e8755a1876&rdquo;<br />
-[2] &ldquo;C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/mydir87e86b51384d&rdquo;<br />
-[3] &ldquo;C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/rs-graphics-0f3f81af-32b7-49c4-a272-ad1a859f222f&rdquo;<br />
+[1] &ldquo;C:\Users\xxx\AppData\Local\Temp\RtmpIp3ZiD/file87e8755a1876&rdquo;<br />
+[2] &ldquo;C:\Users\xxx\AppData\Local\Temp\RtmpIp3ZiD/mydir87e86b51384d&rdquo;<br />
+[3] &ldquo;C:\Users\xxx\AppData\Local\Temp\RtmpIp3ZiD/rs-graphics-0f3f81af-32b7-49c4-a272-ad1a859f222f&rdquo;<br />
 [1] &ldquo;2018-10-25 23:42:51 CST&rdquo;</p>
 
 <h2 id="r系統檔案列表">R系統檔案列表</h2>
@@ -1178,7 +1136,7 @@ hint:<br />
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">system.file</span>(package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stats&#34;</span>)</code></pre></div>
 <p>[1] &ldquo;C:/PROGRA~1/R/R-3.5.1/library/stats&rdquo;</p>
 
-<p>列出套件stats中,所有的檔案</p>
+<p>上面的結果是一個目錄,因此可以利用<code>dir()</code>列出套件stats中,所有的檔案</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">system.file</span>(package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stats&#34;</span>))</code></pre></div>
 <p>[1] &ldquo;COPYRIGHTS.modreg&rdquo; &ldquo;demo&rdquo;              &ldquo;DESCRIPTION&rdquo;<br />
  [4] &ldquo;help&rdquo;              &ldquo;html&rdquo;              &ldquo;INDEX&rdquo;<br />
@@ -1189,16 +1147,16 @@ hint:<br />
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">system.file</span>(<span style="color:#e6db74">&#34;demo&#34;</span>, package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stats&#34;</span>))</code></pre></div>
 <p>[1] &ldquo;glm.vr.R&rdquo; &ldquo;lm.glm.R&rdquo; &ldquo;nlm.R&rdquo;    &ldquo;smooth.R&rdquo;</p>
 
-<p>如果要看全路徑，可以:</p>
+<p>上面只有檔案名稱,如果要看全路徑，可以利用參數<code>full.names</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">system.file</span>(<span style="color:#e6db74">&#34;demo&#34;</span>, package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;stats&#34;</span>), full.names <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)</code></pre></div>
 <p>[1] &ldquo;/usr/lib64/R/library/stats/demo/glm.vr.R&rdquo;<br />
 [2] &ldquo;/usr/lib64/R/library/stats/demo/lm.glm.R&rdquo;<br />
 [3] &ldquo;/usr/lib64/R/library/stats/demo/nlm.R&rdquo;<br />
 [4] &ldquo;/usr/lib64/R/library/stats/demo/smooth.R&rdquo;</p>
 
-<h2 id="在r中建立檔案名稱">在R中建立檔案名稱</h2>
+<h2 id="在r中建立路徑-檔案-名稱">在R中建立路徑(檔案)名稱</h2>
 
-<p>甚麼是檔案名稱?不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
+<p>甚麼是路徑名稱?不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">workingdir <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;projects&#34;</span>
 projectdir <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;warandpeace&#34;</span>
 datadir    <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;data&#34;</span>
@@ -1212,18 +1170,29 @@ datadir    <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">
 
 <p>利用函數 <code>file.path()</code>列出的檔案路徑分隔是斜線,而不是反斜線  (例如for example <code>C:\Program Files\R\R-3.5.1</code>)?</p>
 
-<p>求助文件說:</p>
-
-<p>The components are by default separated by ‘/’ (not ‘\’) on Windows.<br />
+<blockquote>
+<p>求助文件說:<br />
+The components are by default separated by ‘/’ (not ‘\’) on Windows.<br />
 Note: DOS 和 Windows 也支援斜線.</p>
+</blockquote>
 
-<h3 id="和工作區相關的指令">和工作區相關的指令</h3>
+<h3 id="相關的指令">相關的指令</h3>
 
-<p>dir(), list.files, list.dirs</p>
+<ul>
+<li><code>dir()</code>:包括資料夾、檔案名稱<br /></li>
+<li><code>list.files</code> : 僅檔案<br /></li>
+<li><code>list.dirs</code>:僅資料夾<br /></li>
+<li>工作區相關<br />
 
-<p>getwd()<br />
-setwd()</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">list.files</span>(<span style="color:#a6e22e">R.home</span>())
+<ul>
+<li><code>getwd()</code><br /></li>
+<li><code>setwd()</code><br />
+<br /></li>
+</ul></li>
+</ul>
+
+<p>範例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">list.files</span>(<span style="color:#a6e22e">R.home</span>()) <span style="color:#75715e">#🔑 libPaths() 可以列出安裝套件的位置</span>
 <span style="color:#75715e">## Only files starting with a-l or r</span>
 <span style="color:#75715e">## Note that a-l is locale-dependent, but using case-insensitive</span>
 <span style="color:#75715e">## matching makes it unambiguous in English locales</span>
@@ -1231,16 +1200,27 @@ setwd()</p>
 
 <span style="color:#a6e22e">list.dirs</span>(<span style="color:#a6e22e">R.home</span>(<span style="color:#e6db74">&#34;doc&#34;</span>))
 <span style="color:#a6e22e">list.dirs</span>(<span style="color:#a6e22e">R.home</span>(<span style="color:#e6db74">&#34;doc&#34;</span>), full.names <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)</code></pre></div>
-<p>###應用範例</p>
+<h2 id="應用範例">應用範例</h2>
 
-<h4 id="列出目前工作目錄上的檔案">列出目前工作目錄上的檔案</h4>
+<h3 id="列出目前工作目錄上的檔案">列出目前工作目錄上的檔案</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dir</span>()
 <span style="color:#a6e22e">for </span>(item in x) {
-    <span style="color:#a6e22e">show</span>(item) <span style="color:#75715e">#print(item)</span>
+    <span style="color:#a6e22e">print</span>(item) <span style="color:#75715e"># show(item) </span>
 }</code></pre></div>
 <p>或者,僅列出前幾個檔案</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">dir</span>()
 <span style="color:#a6e22e">head</span>(x)</code></pre></div>
+
+<div class="notices warnning" ><p>檢查在目前的工作目錄下,是否存在使用者傳遞進來的目錄?<br />
+例如<br />
+```r<br />
+folderlist&lt;-c(&ldquo;a&rdquo;,&ldquo;b&rdquo;,&ldquo;c&rdquo;)<br />
+checkdir(folderlist)</p>
+
+<p>📝 利用<code>file.exists()</code></p>
+</div>
+
+
 <h2 id="讀檔">讀檔</h2>
 
 <h4 id="僅僅查看檔案內容">僅僅查看檔案內容</h4>
@@ -1356,6 +1336,9 @@ setwd()</p>
 <span style="color:#75715e">#&gt; 4    180     NA   f</span></code></pre></div>
 <h2 id="write-csv">write csv</h2>
 
+<p><a href="resources/wh.csv">wh.csv</a><br />
+<a href="resources/wh_chinese.csv">wh_cgubese.csv</a></p>
+
 <h3 id="data-frame-to-csv">data.frame to CSV</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)
 <span style="color:#a6e22e">write.csv</span>(rst, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyData.csv&#34;</span>)
@@ -1434,6 +1417,12 @@ height,weight,sex
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">save</span>(v1,v2,...file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myfile.RData&#34;</span>)
 <span style="color:#66d9ef">...</span>
 <span style="color:#a6e22e">load</span>(file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myfie.RData&#34;</span>)</code></pre></div>
+<hr />
+
+<p>📝 解答</p>
+<pre><code>userfolder&lt;-??
+allfolder&lt;-list.dir()
+okfolder&lt;-allfolder[dir.exists(userfolder)]</code></pre>
 
 <footer class="footline">
 	
@@ -1564,17 +1553,6 @@ rlang\FileSystem.md
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
         
                     
                         
@@ -1709,6 +1687,11 @@ rlang\FileSystem.md
                         
             
             
+        
+                    
+                        
+            
+            
                 
                     
                         
@@ -1824,21 +1807,21 @@ rlang\FileSystem.md
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
         
                     
                         
             
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -2064,22 +2047,6 @@ rlang\FileSystem.md
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -2147,7 +2114,7 @@ rlang\FileSystem.md
 			<a class="nav nav-prev" href="../rlang/type_vector.html" title="type vector"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../rlang/objectbasic.html" title="object_basic" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../rlang/programming_1.html" title="Programming 1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2157,19 +2124,19 @@ rlang\FileSystem.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1605169616"></script>
-    <script src="../js/perfect-scrollbar.min.js?1605169616"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1605169616"></script>
-    <script src="../js/jquery.sticky.js?1605169616"></script>
-    <script src="../js/featherlight.min.js?1605169616"></script>
-    <script src="../js/highlight.pack.js?1605169616"></script>
+    <script src="../js/clipboard.min.js?1606367336"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606367336"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606367336"></script>
+    <script src="../js/jquery.sticky.js?1606367336"></script>
+    <script src="../js/featherlight.min.js?1606367336"></script>
+    <script src="../js/highlight.pack.js?1606367336"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1605169616"></script>
-    <script src="../js/learn.js?1605169616"></script>
-    <script src="../js/hugo-learn.js?1605169616"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606367336"></script>
+    <script src="../js/learn.js?1606367336"></script>
+    <script src="../js/hugo-learn.js?1606367336"></script>
     
         
-            <script src="../mermaid/mermaid.js?1605169616"></script>
+            <script src="../mermaid/mermaid.js?1606367336"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

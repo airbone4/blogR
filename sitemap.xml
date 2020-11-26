@@ -131,7 +131,7 @@
   </url>
   
   <url>
-    <loc>/rlang/hw/assignment-1.html</loc>
+    <loc>/rlang/hw/hw_basic.html</loc>
   </url>
   
   <url>
@@ -155,6 +155,10 @@
   </url>
   
   <url>
+    <loc>/rlang/hw/hw_regexp.html</loc>
+  </url>
+  
+  <url>
     <loc>/tags.html</loc>
   </url>
   
@@ -172,10 +176,6 @@
   
   <url>
     <loc>/topic/experiment.html</loc>
-  </url>
-  
-  <url>
-    <loc>/topic/sitetecnote/site-note.html</loc>
   </url>
   
   <url>

@@ -13,19 +13,19 @@
     <title>type list - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1605169616" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1605169616" rel="stylesheet">
-    <link href="../css/hybrid.css?1605169616" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1605169616" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1605169616" rel="stylesheet">
-    <link href="../css/auto-complete.css?1605169616" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1605169616" rel="stylesheet">
-    <link href="../css/theme.css?1605169616" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1605169616" rel="stylesheet">
+    <link href="../css/nucleus.css?1606367337" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606367337" rel="stylesheet">
+    <link href="../css/hybrid.css?1606367337" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606367337" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606367337" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606367337" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606367337" rel="stylesheet">
+    <link href="../css/theme.css?1606367337" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606367337" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1605169616" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1605169616" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1605169616" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606367337" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606367337" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606367337" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1605169616"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606367337"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1605169616"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1605169616"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606367337"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606367337"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1605169616"></script>
+<script type="text/javascript" src="../js/search.js?1606367337"></script>
 
     
   </div>
@@ -217,24 +217,6 @@
             
           
             
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/topic_dataframe.html" title="topic data frame" class="dd-item ">
-        <a href="../rlang/topic_dataframe.html">
-        topic data frame
-        
-        </a>
-    </li>
-     
-  
- 
-
             
           
             
@@ -406,24 +388,6 @@
             
           
             
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/objectbasic.html" title="object_basic" class="dd-item ">
-        <a href="../rlang/objectbasic.html">
-        object_basic
-        
-        </a>
-    </li>
-     
-  
- 
-
             
           
             
@@ -669,9 +633,30 @@
  
   
     
-      <li data-nav-id="/rlang/hw/assignment-1.html" title="assignment-1" class="dd-item ">
-        <a href="../rlang/hw/assignment-1.html">
+      <li data-nav-id="/rlang/hw/hw_basic.html" title="assignment-1" class="dd-item ">
+        <a href="../rlang/hw/hw_basic.html">
         assignment-1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/hw_regexp.html" title="regexpr" class="dd-item ">
+        <a href="../rlang/hw/hw_regexp.html">
+        regexpr
         
         </a>
     </li>
@@ -909,27 +894,6 @@
  
   
     
-      <li data-nav-id="/topic/sitetecnote/site-note.html" title="網站日誌" class="dd-item ">
-        <a href="../topic/sitetecnote/site-note.html">
-        網站日誌
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
     <li data-nav-id="/topic/test.html" title="網頁測試" class="dd-item
         
         
@@ -1078,7 +1042,7 @@
 <li><a href="#建立-list">建立 List</a></li>
 <li><a href="#naming-list-elements">Naming List Elements</a></li>
 <li><a href="#存取-list-元素">存取 List 元素</a></li>
-<li><a href="#manipulating-list-elements">Manipulating List Elements</a></li>
+<li><a href="#處理list-元素">處理list 元素</a></li>
 <li><a href="#merging-lists">Merging Lists</a></li>
 <li><a href="#list-轉-vector">List 轉 Vector</a></li>
 <li><a href="#比較vector-list中-字串的問題">比較vector, list中,字串的問題</a></li>
@@ -1087,7 +1051,7 @@
 <ul>
 <li><a href="#list-of-pre-loaded-data">List of pre-loaded data</a></li>
 </ul></li>
-<li><a href="#primer-to-access-element">primer to access element</a></li>
+<li><a href="#primer-to-access-element">❌ primer to access element</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1178,13 +1142,20 @@ list_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">l
 x
 <span style="color:#75715e">#&gt; a b c </span>
 <span style="color:#75715e">#&gt; 1 2 3</span></code></pre></div>
-<p>::: sidebar<br />
-這裡討論一下為甚麼在R語言堅持<code>&lt;-</code>而不是<code>=</code>的一個原因</p>
+<ul>
+<li><br />
+
+<div class="notices sidebar" ><p>這裡討論一下為甚麼在R語言堅持<code>&lt;-</code>而不是<code>=</code>的一個原因</p>
 
 <p>一般的程式語言,不會用到這種文法,例如,在其他程式語言中,直覺上應該是有一個<code>names()</code>,然後用法如下:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">names(x,c(<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;b&#39;</span>,<span style="color:#e6db74">&#39;c&#39;</span>) )</code></pre></div>
-<p>👿 因此<code>&lt;-</code>不類似指派,而是類似流向某個物件的屬性。<br />
-但如果是matrix,被命名的就是欄位?答案是:<strong>NO</strong>。而是紀錄名稱?答案也是<strong>NO</strong>.而是給每個元素命名。</p>
+<p>👿 因此<code>&lt;-</code>不類似指派,而是類似流向某個物件的屬性。</p>
+</div>
+<br />
+<br /></li>
+</ul>
+
+<p>但如果是matrix,被命名的就是欄位?答案是:<strong>NO</strong>。而是紀錄名稱?答案也是<strong>NO</strong>.而是給每個元素命名。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">runif</span>(<span style="color:#ae81ff">9</span>),nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
 <span style="color:#a6e22e">names</span>(x)<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;b&#39;</span>,<span style="color:#e6db74">&#39;c&#39;</span>)
 x
@@ -1201,9 +1172,11 @@ x
 <span style="color:#75715e">#&gt; z 0.7375637 0.44774443 0.8826798</span>
 <span style="color:#75715e">#&gt; attr(,&#34;names&#34;)</span>
 <span style="color:#75715e">#&gt; [1] &#34;a&#34; &#34;b&#34; &#34;c&#34; NA  NA  NA  NA  NA  NA</span></code></pre></div>
-<p>問:在上面的例子中x是一個矩陣,x[&ldquo;a&rdquo;]會傳回甚麼?<br />
-:::<br />
-但是在data.frame的結構中,names()&lt;- 給定的是欄位名稱</p>
+<p>❓問:在上面的例子中x是一個矩陣,x[&ldquo;a&rdquo;]會傳回甚麼?</p>
+
+<p>📝 必須是x[[&ldquo;a&rdquo;]]傳回的才是純量,否則仍然是一個<code>list</code></p>
+
+<p>但是在data.frame的結構中,names()&lt;- 給定的是欄位名稱</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">xd<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">data.frame</span>(x)
 <span style="color:#a6e22e">names</span>(xd)<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;a&#39;</span>,<span style="color:#e6db74">&#39;b&#39;</span>,<span style="color:#e6db74">&#39;c&#39;</span>)
 xd
@@ -1213,8 +1186,9 @@ xd
 <span style="color:#75715e">#&gt; z 0.7375637 0.44774443 0.8826798</span></code></pre></div>
 <h3 id="存取-list-元素">存取 List 元素</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># 3個元素,分別是list, matrix, list</span>
-list_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">list</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Jan&#34;</span>,<span style="color:#e6db74">&#34;Feb&#34;</span>,<span style="color:#e6db74">&#34;Mar&#34;</span>), <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">-2</span>,<span style="color:#ae81ff">8</span>), nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>),
-   <span style="color:#a6e22e">list</span>(<span style="color:#e6db74">&#34;green&#34;</span>,<span style="color:#ae81ff">12.3</span>))
+list_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">list</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Jan&#34;</span>,<span style="color:#e6db74">&#34;Feb&#34;</span>,<span style="color:#e6db74">&#34;Mar&#34;</span>), 
+                  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">-2</span>,<span style="color:#ae81ff">8</span>), nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>),
+                  <span style="color:#a6e22e">list</span>(<span style="color:#e6db74">&#34;green&#34;</span>,<span style="color:#ae81ff">12.3</span>))
 
 <span style="color:#75715e"># 給名稱</span>
 <span style="color:#a6e22e">names</span>(list_data) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;1st Quarter&#34;</span>, <span style="color:#e6db74">&#34;A_Matrix&#34;</span>, <span style="color:#e6db74">&#34;A Inner list&#34;</span>)
@@ -1238,9 +1212,16 @@ list_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">l
 <span style="color:#75715e">#&gt;      [,1] [,2] [,3]</span>
 <span style="color:#75715e">#&gt; [1,]    3    5   -2</span>
 <span style="color:#75715e">#&gt; [2,]    9    1    8</span></code></pre></div>
-<h3 id="manipulating-list-elements">Manipulating List Elements</h3>
+<p>list 元素的存取可以是<code>[[]]</code> 或 <code>$</code> 例如x[[&ldquo;a&rdquo;]], x$a。</p>
 
-<p>We can add, delete and update list elements as shown below. We can add and delete elements only at the end of a list. But we can update any element.</p>
+
+<div class="notices tips" ><p>一個主要分別是,list中的號碼索引,也是名稱,例如,向量矩陣都可以是x[1]拿到純量,但是list x[1]拿到的仍然是list。</p>
+</div>
+
+
+<h3 id="處理list-元素">處理list 元素</h3>
+
+<p>list的加入和刪除,只能在尾端，但是更改資料不受限制。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Create a list containing a vector, a matrix and a list.</span>
 list_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">list</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Jan&#34;</span>,<span style="color:#e6db74">&#34;Feb&#34;</span>,<span style="color:#e6db74">&#34;Mar&#34;</span>), <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">-2</span>,<span style="color:#ae81ff">8</span>), nrow <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>),
    <span style="color:#a6e22e">list</span>(<span style="color:#e6db74">&#34;green&#34;</span>,<span style="color:#ae81ff">12.3</span>))
@@ -1248,13 +1229,13 @@ list_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">l
 <span style="color:#75715e"># Give names to the elements in the list.</span>
 <span style="color:#a6e22e">names</span>(list_data) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;1st Quarter&#34;</span>, <span style="color:#e6db74">&#34;A_Matrix&#34;</span>, <span style="color:#e6db74">&#34;A Inner list&#34;</span>)
 
-<span style="color:#75715e"># Add element at the end of the list.</span>
+<span style="color:#75715e"># 加入元素</span>
 list_data[4] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;New element&#34;</span>
 <span style="color:#a6e22e">print</span>(list_data[4])
 <span style="color:#75715e">#&gt; [[1]]</span>
 <span style="color:#75715e">#&gt; [1] &#34;New element&#34;</span>
 
-<span style="color:#75715e"># Remove the last element.</span>
+<span style="color:#75715e"># 🔑移除最後一個元素</span>
 list_data[4] <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>
 
 <span style="color:#75715e"># Print the 4th Element.</span>
@@ -1296,106 +1277,37 @@ merged.list <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e"
 <span style="color:#75715e">#&gt; </span>
 <span style="color:#75715e">#&gt; [[6]]</span>
 <span style="color:#75715e">#&gt; [1] &#34;Tue&#34;</span></code></pre></div>
-<p>::: quiz<br />
-❓ 我們說 在R語言中,向量的意思,只要元素同型態就行。上面的程式碼中,利用c將兩個list 合併成向量,元素都是相同型態(都是list),那就是2個元素，但是現在是6個,為甚麼?</p>
 
-<p>👍  我們說函數<code>c()</code>是一個處理向量的函數,參數中兩個元素都是list,會先被轉成向量,所以3+3,但是但是這裡的list裡面有多個型態,所以美個元素都是list(證明:list),所以是6個。</p>
+<div class="notices quiz" ><p>❓ 在大部分程式語言中,向量的意思,只要元素同型態就行。又，我們已經知道,函數<code>c</code>可以產生向量。上面的程式碼中,利用c將兩個list 合併,我們按照大部分程式語言的觀念知道,既然元素都是相同型態(都是list),那就是2個元素，但是現在是6個,為甚麼?</p>
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
+<p>👍 函數<code>c()</code>是一個多型函數(物件語言中的講法就是根據參數的不同,而有不同的結果)。這裡的結果是6個元素。每個元素都是list(證明:list)。</p>
+</div>
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
+<div class="notices quiz" ><ul>
+<li>❓如果要2個?<br />
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
+<ul>
+<li>📝 那就是<code>merged.list2&lt;-list(list1,list2)</code>。<br /></li>
+</ul></li>
+<li>❓ <code>merge.list&lt;-c(x,y)</code> 中的merge是不是物件的意思?<br />
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
+<ul>
+<li>👍  不是。只是個合法的變數。<br /></li>
+</ul></li>
+</ul>
+</div>
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
 
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<dl>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<dl>
-<dt>👍  不是。只是個合法的變數。<br />
-<br /></dt>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<dl>
-<dt>👍  不是。只是個合法的變數。<br />
-<br /></dt>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<dl>
-<dt>�的變數。<br />
-<br /></dt>
-<dt>:::<br />
-<br /></dt>
-</dl>
-
-<p>::: sidebar<br />
-❓ 寫一個函數,合併兩個list,但是要求兩個list中有同名的元素必須是第2個中的名稱。例如 list(a=1,b=2,c=3), list(b=4) 合併後變成 a=1,b=4,c=3。</p>
-
-<p>👍</p>
+<div class="notices sidebar" ><p>❓ 寫一個函數,合併兩個list,但是要求兩個list中有同名的元素必須是第2個中的名稱。例如 list(a=1,b=2,c=3), list(b=4) 合併後變成 a=1,b=4,c=3。<br />
+📝</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">merge_list <span style="color:#f92672">=</span> <span style="color:#a6e22e">function</span>(x, y) {
   x<span style="color:#a6e22e">[names</span>(y)] <span style="color:#f92672">=</span> y
   x
-}</code></pre></div>
-<p>:::</p>
+}</code></pre></div></div>
+
 
 <h3 id="list-轉-vector">List 轉 Vector</h3>
 
@@ -1429,15 +1341,15 @@ result <span style="color:#f92672">&lt;-</span> v1<span style="color:#f92672">+<
 <ol>
 <li><p>Q length()函數可以知道vector,list 的長度,但是為甚麼length(&ldquo;hello&rdquo;)的長度是1?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">a<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;hello&#34;</span>,<span style="color:#e6db74">&#34;r&#34;</span>)
-<span style="color:#a6e22e">length</span>(a)
+<span style="color:#a6e22e">length</span>(a) <span style="color:#75715e">#💡</span>
 <span style="color:#75715e">#&gt; [1] 2</span>
-<span style="color:#a6e22e">length</span>(a[1])
+<span style="color:#a6e22e">length</span>(a[1]) <span style="color:#75715e">#💡</span>
 <span style="color:#75715e">#&gt; [1] 1</span>
-<span style="color:#a6e22e">length</span>(a[[1]])
+<span style="color:#a6e22e">length</span>(a[[1]]) <span style="color:#75715e">#💡</span>
 <span style="color:#75715e">#&gt; [1] 1</span>
-<span style="color:#a6e22e">nchar</span>(a[1])
+<span style="color:#a6e22e">nchar</span>(a[1]) <span style="color:#75715e">#🔑</span>
 <span style="color:#75715e">#&gt; [1] 5</span>
-<span style="color:#a6e22e">length</span>(<span style="color:#e6db74">&#34;hello&#34;</span>)
+<span style="color:#a6e22e">length</span>(<span style="color:#e6db74">&#34;hello&#34;</span>) <span style="color:#75715e">#❓</span>
 <span style="color:#75715e">#&gt; [1] 1</span></code></pre></div></li>
 
 <li><p>Q</p>
@@ -1447,14 +1359,21 @@ result <span style="color:#f92672">&lt;-</span> v1<span style="color:#f92672">+<
 <span style="color:#a6e22e">length</span>(a[1])
 <span style="color:#75715e">#&gt; [1] 1</span>
 <span style="color:#a6e22e">length</span>(a[[1]])
-<span style="color:#75715e">#&gt; [1] 1</span></code></pre></div></li>
+<span style="color:#75715e">#&gt; [1] 1</span>
+<span style="color:#a6e22e">typeof</span>(<span style="color:#e6db74">&#34;xxx&#34;</span>) <span style="color:#75715e">#💡</span>
+<span style="color:#75715e">#&gt; [1] &#34;character&#34;</span>
+<span style="color:#a6e22e">typeof</span>(<span style="color:#ae81ff">1</span>) <span style="color:#75715e">#💡</span>
+<span style="color:#75715e">#&gt; [1] &#34;double&#34;</span>
+<span style="color:#a6e22e">typeof</span>(<span style="color:#ae81ff">1L</span>) <span style="color:#75715e">#💡</span>
+<span style="color:#75715e">#&gt; [1] &#34;integer&#34;</span></code></pre></div></li>
 </ol>
 
 <p>上面兩個答案的問題,和R怎樣建立字串有關<br />
- 我猜是<br />
- &ldquo;hello&rdquo; 的記憶體結構是 list(ptr) ,ptr-&gt;&ldquo;hello&rdquo;<br />
+ 我猜是</p>
+
+<p>&ldquo;hello&rdquo; 的記憶體結構是 list(ptr) ,ptr-&gt;&ldquo;hello&rdquo;<br />
 也就是說紀錄在list中,當我問說length(&ldquo;hello&rdquo;)的時候,list的長度都是1。<br />
-總之,字串長度函數<code>nchar()</code>。</p>
+總之,字串長度函數🔑<code>nchar()</code>。</p>
 
 <h2 id="data-set-build-in">data set build in</h2>
 
@@ -1465,7 +1384,7 @@ result <span style="color:#f92672">&lt;-</span> v1<span style="color:#f92672">+<
 <span style="color:#75715e">#&gt; [1] 32</span>
 <span style="color:#a6e22e">ncol</span>(mtcars)
 <span style="color:#75715e">#&gt; [1] 11</span></code></pre></div>
-<h2 id="primer-to-access-element">primer to access element</h2>
+<h2 id="primer-to-access-element">❌ primer to access element</h2>
 
 <p>?&rdquo;[&rdquo; pretty much covers the various ways of accessing elements of things.</p>
 
@@ -1627,17 +1546,6 @@ rlang\type_list.md
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
         
                     
                         
@@ -1775,17 +1683,6 @@ rlang\type_list.md
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
         
                     
                         
@@ -1902,6 +1799,22 @@ rlang\type_list.md
                     
                         
             
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -2127,22 +2040,6 @@ rlang\type_list.md
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -2220,19 +2117,19 @@ rlang\type_list.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1605169616"></script>
-    <script src="../js/perfect-scrollbar.min.js?1605169616"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1605169616"></script>
-    <script src="../js/jquery.sticky.js?1605169616"></script>
-    <script src="../js/featherlight.min.js?1605169616"></script>
-    <script src="../js/highlight.pack.js?1605169616"></script>
+    <script src="../js/clipboard.min.js?1606367337"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606367337"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606367337"></script>
+    <script src="../js/jquery.sticky.js?1606367337"></script>
+    <script src="../js/featherlight.min.js?1606367337"></script>
+    <script src="../js/highlight.pack.js?1606367337"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1605169616"></script>
-    <script src="../js/learn.js?1605169616"></script>
-    <script src="../js/hugo-learn.js?1605169616"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606367337"></script>
+    <script src="../js/learn.js?1606367337"></script>
+    <script src="../js/hugo-learn.js?1606367337"></script>
     
         
-            <script src="../mermaid/mermaid.js?1605169616"></script>
+            <script src="../mermaid/mermaid.js?1606367337"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
