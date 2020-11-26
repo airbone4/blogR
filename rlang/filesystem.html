@@ -13,19 +13,19 @@
     <title>File System - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1606367336" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1606367336" rel="stylesheet">
-    <link href="../css/hybrid.css?1606367336" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1606367336" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1606367336" rel="stylesheet">
-    <link href="../css/auto-complete.css?1606367336" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1606367336" rel="stylesheet">
-    <link href="../css/theme.css?1606367336" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1606367336" rel="stylesheet">
+    <link href="../css/nucleus.css?1606368037" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606368037" rel="stylesheet">
+    <link href="../css/hybrid.css?1606368037" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606368037" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606368037" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606368037" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606368037" rel="stylesheet">
+    <link href="../css/theme.css?1606368037" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606368037" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1606367336" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606367336" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606367336" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606368037" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606368037" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606368037" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1606367336"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606368037"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1606367336"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1606367336"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606368037"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606368037"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1606367336"></script>
+<script type="text/javascript" src="../js/search.js?1606368037"></script>
 
     
   </div>
@@ -1044,7 +1044,7 @@
 <li><a href="#exploring-file-system">Exploring file system</a></li>
 <li><a href="#creating-of-a-directory">Creating of a directory</a></li>
 <li><a href="#r系統檔案列表">R系統檔案列表</a></li>
-<li><a href="#在r中建立路徑-檔案-名稱">在R中建立路徑(檔案)名稱</a>
+<li><a href="#分解合成路徑-檔案-名稱">分解合成路徑(檔案)名稱</a>
 <ul>
 <li><a href="#note-about-windows">Note about Windows</a></li>
 <li><a href="#相關的指令">相關的指令</a></li>
@@ -1106,7 +1106,7 @@
 <p>函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">mydirname <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tempfile</span>(pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mydir&#34;</span>)
 mydirname
-<span style="color:#75715e">#&gt; [1] &#34;C:\\Users\\linchao\\AppData\\Local\\Temp\\Rtmpu0qrDn\\mydir10d47589228f&#34;</span></code></pre></div>
+<span style="color:#75715e">#&gt; [1] &#34;C:\\Users\\linchao\\AppData\\Local\\Temp\\RtmpIft4FJ\\mydir127417221adb&#34;</span></code></pre></div>
 <p>在視窗系統中:<br />
 mydirname<br />
 C:\Users\使用者名稱\AppData\Local\Temp\RtmpSg2qRA\mydir326845a02140</p>
@@ -1154,7 +1154,7 @@ function <code>dir()</code> 用來知道目前檔案位置的內容,例如<code>
 [3] &ldquo;/usr/lib64/R/library/stats/demo/nlm.R&rdquo;<br />
 [4] &ldquo;/usr/lib64/R/library/stats/demo/smooth.R&rdquo;</p>
 
-<h2 id="在r中建立路徑-檔案-名稱">在R中建立路徑(檔案)名稱</h2>
+<h2 id="分解合成路徑-檔案-名稱">分解合成路徑(檔案)名稱</h2>
 
 <p>甚麼是路徑名稱?不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">workingdir <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;projects&#34;</span>
@@ -1182,6 +1182,8 @@ Note: DOS 和 Windows 也支援斜線.</p>
 <li><code>dir()</code>:包括資料夾、檔案名稱<br /></li>
 <li><code>list.files</code> : 僅檔案<br /></li>
 <li><code>list.dirs</code>:僅資料夾<br /></li>
+<li><code>dirname()</code><br /></li>
+<li><code>basename()</code><br /></li>
 <li>工作區相關<br />
 
 <ul>
@@ -1225,8 +1227,16 @@ checkdir(folderlist)</p>
 
 <h4 id="僅僅查看檔案內容">僅僅查看檔案內容</h4>
 
-<p><a href="resources/wh_chinese.csv">測試中文的檔案</a><br />
-<a href="resources/wh.csv">測試檔案</a></p>
+<ul>
+<li><a href="resources/wh_chinese.csv">測試中文的檔案</a><br />
+
+<ul>
+<li><code>readLines(logf, encoding=&quot;UTF-8&quot;)</code><br /></li>
+<li><code>writeLines(字串, 檔案名稱, useBytes=T)</code><br /></li>
+</ul></li>
+<li><a href="resources/wh.csv">測試檔案</a><br />
+<br /></li>
+</ul>
 
 <p>注意檔案內容第一行不是資料。</p>
 
@@ -2124,19 +2134,19 @@ rlang\FileSystem.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1606367336"></script>
-    <script src="../js/perfect-scrollbar.min.js?1606367336"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1606367336"></script>
-    <script src="../js/jquery.sticky.js?1606367336"></script>
-    <script src="../js/featherlight.min.js?1606367336"></script>
-    <script src="../js/highlight.pack.js?1606367336"></script>
+    <script src="../js/clipboard.min.js?1606368037"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606368037"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606368037"></script>
+    <script src="../js/jquery.sticky.js?1606368037"></script>
+    <script src="../js/featherlight.min.js?1606368037"></script>
+    <script src="../js/highlight.pack.js?1606368037"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1606367336"></script>
-    <script src="../js/learn.js?1606367336"></script>
-    <script src="../js/hugo-learn.js?1606367336"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606368037"></script>
+    <script src="../js/learn.js?1606368037"></script>
+    <script src="../js/hugo-learn.js?1606368037"></script>
     
         
-            <script src="../mermaid/mermaid.js?1606367336"></script>
+            <script src="../mermaid/mermaid.js?1606368037"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
