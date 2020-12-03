@@ -13,19 +13,19 @@
     <title>Environment - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1606964214" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1606964214" rel="stylesheet">
-    <link href="../css/hybrid.css?1606964214" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1606964214" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1606964214" rel="stylesheet">
-    <link href="../css/auto-complete.css?1606964214" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1606964214" rel="stylesheet">
-    <link href="../css/theme.css?1606964214" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1606964214" rel="stylesheet">
+    <link href="../css/nucleus.css?1606972963" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606972963" rel="stylesheet">
+    <link href="../css/hybrid.css?1606972963" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606972963" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606972963" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606972963" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606972963" rel="stylesheet">
+    <link href="../css/theme.css?1606972963" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606972963" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606964214" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606972963" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606972963" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606972963" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1606964214"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606972963"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1606964214"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1606964214"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606972963"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606972963"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1606964214"></script>
+<script type="text/javascript" src="../js/search.js?1606972963"></script>
 
     
   </div>
@@ -1179,18 +1179,19 @@ environments are useful data structures for solving other problems.</p></li>
 <p>在<code>rlang</code>套件中,<code>env_</code>函數是設計用來和pipe一起工作的,這裡不深入。</p>
 
 
-<div class="notices sidebar" ><p><code>global_env()</code>和<code>globalenv()</code>的執行結果一樣。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">  .GlobalEnv
-  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span>
-  <span style="color:#a6e22e">globalenv</span>()
-  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span>
-  <span style="color:#a6e22e">global_env</span>()
-  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span>
-  
-  .BaseNamespaceEnv
-  <span style="color:#75715e">#&gt; &lt;environment: namespace:base&gt;</span>
-  <span style="color:#a6e22e">current_env</span>() <span style="color:#75715e">#</span>
-  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span></code></pre></div></div>
+<div class="notices sidebar" ><p><p><code>global_env()</code>和<code>globalenv()</code>的執行結果一樣。</p><br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">  .GlobalEnv<br />
+  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span><br />
+  <span style="color:#a6e22e">globalenv</span>()<br />
+  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span><br />
+  <span style="color:#a6e22e">global_env</span>()<br />
+  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span></p>
+
+<p>.BaseNamespaceEnv<br />
+  <span style="color:#75715e">#&gt; &lt;environment: namespace:base&gt;</span><br />
+  <span style="color:#a6e22e">current_env</span>() <span style="color:#75715e">#</span><br />
+  <span style="color:#75715e">#&gt; &lt;environment: R_GlobalEnv&gt;</span></code></pre></div></p>
+</div>
 
 
 <h2 id="env-basics">Environment basics</h2>
@@ -1549,19 +1550,20 @@ and throws an error.</p></li>
 
 <div class="notices sidebar" ><h3 id="iteration-vs-recursion">Iteration vs recursion {-}</h3>
 
-<p>也可以用迭代的方式</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">f2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(<span style="color:#66d9ef">...</span>, env <span style="color:#f92672">=</span> <span style="color:#a6e22e">caller_env</span>()) {
-  <span style="color:#a6e22e">while </span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">identical</span>(env, <span style="color:#a6e22e">empty_env</span>())) {
-    <span style="color:#a6e22e">if </span>(success) {
-      <span style="color:#75715e"># success case</span>
-      <span style="color:#a6e22e">return</span>()
-    }
-    <span style="color:#75715e"># inspect parent</span>
-    env <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">env_parent</span>(env)
-  }
+<p><p>也可以用迭代的方式</p><br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">f2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(<span style="color:#66d9ef">&hellip;</span>, env <span style="color:#f92672">=</span> <span style="color:#a6e22e">caller_env</span>()) {<br />
+  <span style="color:#a6e22e">while </span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">identical</span>(env, <span style="color:#a6e22e">empty_env</span>())) {<br />
+    <span style="color:#a6e22e">if </span>(success) {<br />
+      <span style="color:#75715e"># success case</span><br />
+      <span style="color:#a6e22e">return</span>()<br />
+    }<br />
+    <span style="color:#75715e"># inspect parent</span><br />
+    env <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">env_parent</span>(env)<br />
+  }</p>
 
-  <span style="color:#75715e"># base case</span>
-}</code></pre></div></div>
+<p><span style="color:#75715e"># base case</span><br />
+}</code></pre></div></p>
+</div>
 
 
 <h3 id="exercises-1">Exercises</h3>
@@ -1590,16 +1592,17 @@ the parents or only looks in one environment.</p></li>
 <p>每個套件經由<code>library()</code> 或 <code>require()</code> 接入成為<a href="#global-environment">總體環境</a>的parent。而最後一個<a href="#attach">接入</a>的套件,則是總體環境的第一個parent:</p>
 
 
-<div class="notices sidebar" ><p>load 和 attach不一樣，當我們使用library的時候,我們做的是<sup class="footnote-ref" id="fnref:attach"><a href="#fn:attach">1</a></sup> 在環境串列中加入我們利用library載入的物件..</p>
-<div class="footnotes">
+<div class="notices sidebar" ><p><p>load 和 attach不一樣，當我們使用library的時候,我們做的是<sup class="footnote-ref" id="fnref:attach"><a href="#fn:attach">1</a></sup> 在環境串列中加入我們利用library載入的物件..</p><br />
+<div class="footnotes"></p>
 
 <hr />
 
-<ol>
-<li id="fn:attach">Note the difference between attached and loaded. A package is loaded automatically if you access one of its functions using <code>::</code>; it is only <strong>attached</strong> to the search path by <code>library()</code> or <code>require()</code>.<br />
- <a class="footnote-return" href="#fnref:attach"><sup>[return]</sup></a></li>
-</ol>
-</div>
+<p><ol><br />
+<li id="fn:attach">Note the difference between attached and loaded. A package is loaded automatically if you access one of its functions using <code>::</code>; it is only <strong>attached</strong> to the search path by <code>library()</code> or <code>require()</code>.<br />
+<br /><br />
+ <a class="footnote-return" href="#fnref:attach"><sup>[return]</sup></a></li><br />
+</ol><br />
+</div></p>
 </div>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">env_parent</span>(<span style="color:#a6e22e">global_env</span>())
@@ -1705,8 +1708,7 @@ e<span style="color:#f92672">$</span>g <span style="color:#f92672">&lt;-</span> 
 </ul>
 
 
-<div class="notices sidebar" ><p>The base namespace contains the same bindings as the base environment, but it has different parent.</p>
-</div>
+<div class="notices sidebar" >The base namespace contains the same bindings as the base environment, but it has different parent.</div>
 
 
 <ul>
@@ -2732,19 +2734,19 @@ rlang\Environments.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1606964214"></script>
-    <script src="../js/jquery.sticky.js?1606964214"></script>
-    <script src="../js/featherlight.min.js?1606964214"></script>
-    <script src="../js/highlight.pack.js?1606964214"></script>
+    <script src="../js/clipboard.min.js?1606972963"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606972963"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606972963"></script>
+    <script src="../js/jquery.sticky.js?1606972963"></script>
+    <script src="../js/featherlight.min.js?1606972963"></script>
+    <script src="../js/highlight.pack.js?1606972963"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1606964214"></script>
-    <script src="../js/learn.js?1606964214"></script>
-    <script src="../js/hugo-learn.js?1606964214"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606972963"></script>
+    <script src="../js/learn.js?1606972963"></script>
+    <script src="../js/hugo-learn.js?1606972963"></script>
     
         
-            <script src="../mermaid/mermaid.js?1606964214"></script>
+            <script src="../mermaid/mermaid.js?1606972963"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

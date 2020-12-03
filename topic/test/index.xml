@@ -25,8 +25,7 @@ Keywords These are all keywords with more than one emoji associated with them.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/test/testpage.html</guid>
-      <description>By default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.
-</description>
+      <description>By default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.</description>
     </item>
     
   </channel>

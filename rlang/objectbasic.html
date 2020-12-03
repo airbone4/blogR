@@ -13,19 +13,19 @@
     <title>object_basic - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1606964214" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1606964214" rel="stylesheet">
-    <link href="../css/hybrid.css?1606964214" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1606964214" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1606964214" rel="stylesheet">
-    <link href="../css/auto-complete.css?1606964214" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1606964214" rel="stylesheet">
-    <link href="../css/theme.css?1606964214" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1606964214" rel="stylesheet">
+    <link href="../css/nucleus.css?1606972963" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606972963" rel="stylesheet">
+    <link href="../css/hybrid.css?1606972963" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606972963" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606972963" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606972963" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606972963" rel="stylesheet">
+    <link href="../css/theme.css?1606972963" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606972963" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606964214" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606972963" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606972963" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606972963" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1606964214"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606972963"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1606964214"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1606964214"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606972963"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606972963"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1606964214"></script>
+<script type="text/javascript" src="../js/search.js?1606972963"></script>
 
     
   </div>
@@ -1059,6 +1059,12 @@
 <li><a href="#in-one-go">In one go</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#oop">OOP</a>
+<ul>
+<li><a href="#base-objects-vs-oo-objects">Base objects vs OO objects</a></li>
+<li><a href="#變數屬性查詢函數">變數屬性查詢函數</a></li>
+</ul></li>
+<li><a href="#operator">operator %&gt;%</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1145,18 +1151,19 @@ You can delete attributes again by setting their value to NULL, like this:</p>
 <span style="color:#a6e22e">attr</span>(x <span style="color:#f92672">=</span> cars, which <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;names&#34;</span>) 
 <span style="color:#75715e">#&gt; [1] &#34;speed&#34; &#34;dist&#34;</span></code></pre></div>
 
-<div class="notices sidebar" ><p>也可以寫成</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">attr</span>(cars,<span style="color:#e6db74">&#34;names&#34;</span>)
-<span style="color:#75715e">#&gt; [1] &#34;speed&#34; &#34;dist&#34;</span></code></pre></div>
-<p>比較一下names,可以發現,names 只是一個data.frame中的attribute</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"> <span style="color:#a6e22e">class</span>(cars)
-<span style="color:#75715e">#&gt; [1] &#34;data.frame&#34;</span>
- <span style="color:#a6e22e">str</span>(cars)
-<span style="color:#75715e">#&gt; &#39;data.frame&#39;:	50 obs. of  2 variables:</span>
-<span style="color:#75715e">#&gt;  $ speed: num  4 4 7 7 8 9 10 10 10 11 ...</span>
-<span style="color:#75715e">#&gt;  $ dist : num  2 10 4 22 16 10 18 26 34 17 ...</span>
- <span style="color:#a6e22e">names</span>(cars)
-<span style="color:#75715e">#&gt; [1] &#34;speed&#34; &#34;dist&#34;</span></code></pre></div></div>
+<div class="notices sidebar" ><p><p>也可以寫成</p><br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">attr</span>(cars,<span style="color:#e6db74">&#34;names&#34;</span>)<br />
+<span style="color:#75715e">#&gt; [1] &#34;speed&#34; &#34;dist&#34;</span></code></pre></div><br />
+<p>比較一下names,可以發現,names 只是一個data.frame中的attribute</p><br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"> <span style="color:#a6e22e">class</span>(cars)<br />
+<span style="color:#75715e">#&gt; [1] &#34;data.frame&#34;</span><br />
+ <span style="color:#a6e22e">str</span>(cars)<br />
+<span style="color:#75715e">#&gt; &#39;data.frame&#39;: 50 obs. of  2 variables:</span><br />
+<span style="color:#75715e">#&gt;  $ speed: num  4 4 7 7 8 9 10 10 10 11 &hellip;</span><br />
+<span style="color:#75715e">#&gt;  $ dist : num  2 10 4 22 16 10 18 26 34 17 &hellip;</span><br />
+ <span style="color:#a6e22e">names</span>(cars)<br />
+<span style="color:#75715e">#&gt; [1] &#34;speed&#34; &#34;dist&#34;</span></code></pre></div></p>
+</div>
 
 
 <h3 id="assign-new-attributes-with-the-attributes-r-function">Assign New Attributes with the attributes() R Function</h3>
@@ -1290,6 +1297,108 @@ dd3
 <span style="color:#75715e">#&gt; [1] &#34;Ordered YearO for categorical analysis and other variables&#34;</span>
 <span style="color:#a6e22e">attr</span>(dd3, which<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;comment&#34;</span>)
 <span style="color:#75715e">#&gt; [1] &#34;Ordered YearO for categorical analysis and other variables&#34;</span></code></pre></div>
+<h2 id="oop">OOP</h2>
+
+<p><a href="https://adv-r.hadley.nz/base-types.html">advance R</a></p>
+
+<h3 id="base-objects-vs-oo-objects">Base objects vs OO objects</h3>
+
+<p>辨別變數是基礎型別或是物件型別，可以簡單利用函數： <code>is.object()</code>:</p>
+
+<p>基礎物件base object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">is.object</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
+<span style="color:#75715e">#&gt; [1] FALSE</span></code></pre></div>
+<p>[1] FALSE</p>
+
+<p>物件導向物件 OO object</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">is.object</span>(mtcars)
+<span style="color:#75715e">#&gt; [1] TRUE</span></code></pre></div>
+<p>[1] TRUE</p>
+
+<p>主要的區別在於基本物件沒有class 這個attribute</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">attr</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;class&#34;</span>) <span style="color:#75715e">#  NULL</span>
+<span style="color:#75715e">#&gt; NULL</span>
+<span style="color:#a6e22e">attr</span>(mtcars, <span style="color:#e6db74">&#34;class&#34;</span>) <span style="color:#75715e"># [1] &#34;data.frame&#34;</span>
+<span style="color:#75715e">#&gt; [1] &#34;data.frame&#34;</span></code></pre></div>
+<p>class()這個函數,不見得總是會和attr()的結果一致,因為，對基本物件而言,傳回的是後面討論,而不是 NULL。</p>
+
+<h3 id="變數屬性查詢函數">變數屬性查詢函數</h3>
+
+<p>names()<br />
+dimnames()<br />
+length()<br />
+dim(): 各維度長度<br />
+class() : 變數類別<br />
+table()：各類資料計數<br />
+str()：變數的資料結構(其實是一個list)</p>
+
+<p>透過names()函數，可取得各種list元素的名稱,但是如果是data.frame則是顯示欄位名稱<br />
+islands是內建資料</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(islands)
+<span style="color:#75715e">#&gt;  Named num [1:48] 11506 5500 16988 2968 16 ...</span>
+<span style="color:#75715e">#&gt;  - attr(*, &#34;names&#34;)= chr [1:48] &#34;Africa&#34; &#34;Antarctica&#34; &#34;Asia&#34; &#34;Australia&#34; ...</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">names</span>(islands)) 
+<span style="color:#75715e">#&gt; [1] &#34;Africa&#34;       &#34;Antarctica&#34;   &#34;Asia&#34;         &#34;Australia&#34;    &#34;Axel Heiberg&#34;</span>
+<span style="color:#75715e">#&gt; [6] &#34;Baffin&#34;</span></code></pre></div>
+<p>方形資料（例如，矩陣，table, data.frame)，可以透過dimnames()函數可顯示data.frame 橫行和直行的名稱 先橫行，然後直行。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dimnames</span>(USArrests) 
+<span style="color:#75715e">#&gt; [[1]]</span>
+<span style="color:#75715e">#&gt;  [1] &#34;Alabama&#34;        &#34;Alaska&#34;         &#34;Arizona&#34;        &#34;Arkansas&#34;      </span>
+<span style="color:#75715e">#&gt;  [5] &#34;California&#34;     &#34;Colorado&#34;       &#34;Connecticut&#34;    &#34;Delaware&#34;      </span>
+<span style="color:#75715e">#&gt;  [9] &#34;Florida&#34;        &#34;Georgia&#34;        &#34;Hawaii&#34;         &#34;Idaho&#34;         </span>
+<span style="color:#75715e">#&gt; [13] &#34;Illinois&#34;       &#34;Indiana&#34;        &#34;Iowa&#34;           &#34;Kansas&#34;        </span>
+<span style="color:#75715e">#&gt; [17] &#34;Kentucky&#34;       &#34;Louisiana&#34;      &#34;Maine&#34;          &#34;Maryland&#34;      </span>
+<span style="color:#75715e">#&gt; [21] &#34;Massachusetts&#34;  &#34;Michigan&#34;       &#34;Minnesota&#34;      &#34;Mississippi&#34;   </span>
+<span style="color:#75715e">#&gt; [25] &#34;Missouri&#34;       &#34;Montana&#34;        &#34;Nebraska&#34;       &#34;Nevada&#34;        </span>
+<span style="color:#75715e">#&gt; [29] &#34;New Hampshire&#34;  &#34;New Jersey&#34;     &#34;New Mexico&#34;     &#34;New York&#34;      </span>
+<span style="color:#75715e">#&gt; [33] &#34;North Carolina&#34; &#34;North Dakota&#34;   &#34;Ohio&#34;           &#34;Oklahoma&#34;      </span>
+<span style="color:#75715e">#&gt; [37] &#34;Oregon&#34;         &#34;Pennsylvania&#34;   &#34;Rhode Island&#34;   &#34;South Carolina&#34;</span>
+<span style="color:#75715e">#&gt; [41] &#34;South Dakota&#34;   &#34;Tennessee&#34;      &#34;Texas&#34;          &#34;Utah&#34;          </span>
+<span style="color:#75715e">#&gt; [45] &#34;Vermont&#34;        &#34;Virginia&#34;       &#34;Washington&#34;     &#34;West Virginia&#34; </span>
+<span style="color:#75715e">#&gt; [49] &#34;Wisconsin&#34;      &#34;Wyoming&#34;       </span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; [[2]]</span>
+<span style="color:#75715e">#&gt; [1] &#34;Murder&#34;   &#34;Assault&#34;  &#34;UrbanPop&#34; &#34;Rape&#34;</span></code></pre></div>
+<p>方形資料，可以透過length()函數可顯示資料長度，但是如果是data.frame則顯示欄位數。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">length</span>(islands) 
+<span style="color:#75715e">#&gt; [1] 48</span></code></pre></div>
+<p>透過dim() 顯示方形資料的「資料筆數」和「欄位數目」，先「橫行」，後「直行」</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dim</span>(USArrests) 
+<span style="color:#75715e">#&gt; [1] 50  4</span></code></pre></div>
+<p>使用class()函數可知道變數類別</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">class</span>(<span style="color:#66d9ef">pi</span>)
+<span style="color:#75715e">#&gt; [1] &#34;numeric&#34;</span>
+<span style="color:#a6e22e">class</span>(<span style="color:#a6e22e">Sys.Date</span>())
+<span style="color:#75715e">#&gt; [1] &#34;Date&#34;</span></code></pre></div>
+<p>使用table()函數可知道向量中每個值出現幾次</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">table</span>(iris<span style="color:#f92672">$</span>Species) <span style="color:#75715e">##統計結果</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;     setosa versicolor  virginica </span>
+<span style="color:#75715e">#&gt;         50         50         50</span></code></pre></div>
+<h2 id="operator">operator %&gt;%</h2>
+
+<p>%&gt;% 不是R基礎套件<br />
+而是定義再套件 magrittr (CRAN) 且常跟 dplyr (CRAN)搭配。</p>
+
+<p>意思是把左邊(LHS)當成右邊(RHS)的參數。<br />
+例如下面的例子: 資料框iris 用來當 head()的參數:<br />
+也就是說 iris %&gt;% head() 相當於 head(iris).</p>
+
+<p>library(magrittr)<br />
+iris %&gt;% head()<br />
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species<br />
+1          5.1         3.5          1.4         0.2  setosa<br />
+2          4.9         3.0          1.4         0.2  setosa<br />
+3          4.7         3.2          1.3         0.2  setosa<br />
+4          4.6         3.1          1.5         0.2  setosa<br />
+5          5.0         3.6          1.4         0.2  setosa<br />
+6          5.4         3.9          1.7         0.4  setosa</p>
+
+<p>為甚麼需要這樣用,下面是一個例子</p>
+
+<p>iris %&gt;% head() %&gt;% summary()<br />
+類似的觀念, iris %&gt;% head() %&gt;% summary() 等同於summary(head(iris)).<br />
+也就是說,避免了使用巢狀呼叫。</p>
+
 
 <footer class="footline">
 	
@@ -1992,19 +2101,19 @@ rlang\objectBasic.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1606964214"></script>
-    <script src="../js/jquery.sticky.js?1606964214"></script>
-    <script src="../js/featherlight.min.js?1606964214"></script>
-    <script src="../js/highlight.pack.js?1606964214"></script>
+    <script src="../js/clipboard.min.js?1606972963"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606972963"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606972963"></script>
+    <script src="../js/jquery.sticky.js?1606972963"></script>
+    <script src="../js/featherlight.min.js?1606972963"></script>
+    <script src="../js/highlight.pack.js?1606972963"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1606964214"></script>
-    <script src="../js/learn.js?1606964214"></script>
-    <script src="../js/hugo-learn.js?1606964214"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606972963"></script>
+    <script src="../js/learn.js?1606972963"></script>
+    <script src="../js/hugo-learn.js?1606972963"></script>
     
         
-            <script src="../mermaid/mermaid.js?1606964214"></script>
+            <script src="../mermaid/mermaid.js?1606972963"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

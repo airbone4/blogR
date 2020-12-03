@@ -77,12 +77,11 @@ dynamic book
  TOC 問題
   publish to github tutorial
 在chunk中，顯示RMD語法 讓inline code 不作用 inline 讓內籤R程式碼不作用:方法是兩邊打上&amp;rdquo;``空白&amp;rdquo;。例如:
-inline(&amp;#34;dd&amp;#34;) ===&amp;gt; `` `r dd` ``測試
+inline(&amp;#34;dd&amp;#34;) ===&amp;gt; `` `r dd` `` 測試
 執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
 ```{r, comment = &amp;#34;&amp;#34;,result=&amp;#34;asis&amp;#34;} cat(readr::read_file(&amp;#34;rmd_topic_1.Rmd&amp;#34;)) # 我想要前後加上```,但是顯示的結果不換行 # txt&amp;lt;-readr::read_file(&amp;#34;rmd_topic_1.Rmd&amp;#34;) # cat(paste0(c(&amp;#34;```rmd&amp;#34;,txt,&amp;#34;```&amp;#34;,collapse=&amp;#34;\n&amp;#34;))) ``` 留著測試
 有意思的程式片段 只編譯一個RMD文件 使用套件中的內部函數,為:::,例如 blogdown:::build_rmds()。
-所以如果要編譯單一的RMD文件,可以
-blogdown:::build_rmds(&#39;content/foo.Rmd&#39;)</description>
+所以如果要編譯單一的RMD文件,可以</description>
     </item>
     
     <item>

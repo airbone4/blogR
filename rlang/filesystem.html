@@ -13,19 +13,19 @@
     <title>File System - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1606964214" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1606964214" rel="stylesheet">
-    <link href="../css/hybrid.css?1606964214" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1606964214" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1606964214" rel="stylesheet">
-    <link href="../css/auto-complete.css?1606964214" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1606964214" rel="stylesheet">
-    <link href="../css/theme.css?1606964214" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1606964214" rel="stylesheet">
+    <link href="../css/nucleus.css?1606972963" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606972963" rel="stylesheet">
+    <link href="../css/hybrid.css?1606972963" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606972963" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606972963" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606972963" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606972963" rel="stylesheet">
+    <link href="../css/theme.css?1606972963" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606972963" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606964214" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606972963" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606972963" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606972963" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1606964214"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606972963"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1606964214"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1606964214"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606972963"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606972963"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1606964214"></script>
+<script type="text/javascript" src="../js/search.js?1606972963"></script>
 
     
   </div>
@@ -1560,13 +1560,13 @@ checkdir(folderlist)</p>
 <span style="color:#a6e22e">readLines</span>(<span style="color:#e6db74">&#34;MyData.csv&#34;</span>,n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) 
 <span style="color:#75715e">#&gt; [1] &#34;\&#34;height\&#34;,\&#34;weight\&#34;,\&#34;sex\&#34;&#34; &#34;156,56,\&#34; m\&#34;&#34;                </span>
 <span style="color:#75715e">#&gt; [3] &#34;167,NA,\&#34; f\&#34;&#34;</span></code></pre></div>
-<div class="notices sidebar" ><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)
-<span style="color:#a6e22e">write.csv</span>(rst, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyData.csv&#34;</span>,row.names<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>)
-<span style="color:#a6e22e">readLines</span>(<span style="color:#e6db74">&#34;MyData.csv&#34;</span>,n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) </code></pre></div>
-<p>輸出是:<br />
-[1] &ldquo;\&ldquo;height\&ldquo;,\&ldquo;weight\&ldquo;,\&ldquo;sex\&ldquo;&rdquo;<br />
-[2] &ldquo;156,56,\&rdquo; m\&ldquo;&rdquo;<br />
-[3] &ldquo;167,NA,\&rdquo; f\&ldquo;&rdquo;</p>
+<div class="notices sidebar" ><p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)<br />
+<span style="color:#a6e22e">write.csv</span>(rst, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyData.csv&#34;</span>,row.names<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>)<br />
+<span style="color:#a6e22e">readLines</span>(<span style="color:#e6db74">&#34;MyData.csv&#34;</span>,n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) </code></pre></div><br />
+<p>輸出是:<br /><br />
+[1] &ldquo;&amp;ldquo;height&amp;ldquo;,&amp;ldquo;weight&amp;ldquo;,&amp;ldquo;sex&amp;ldquo;&rdquo;<br /><br />
+[2] &ldquo;156,56,&amp;rdquo; m&amp;ldquo;&rdquo;<br /><br />
+[3] &ldquo;167,NA,&amp;rdquo; f&amp;ldquo;&rdquo;</p></p>
 
 <p>可以看出來每一行都有雙引號表示字串。<br />
 對照文字檔(mData.csv)</p>
@@ -1594,8 +1594,7 @@ checkdir(folderlist)</p>
 <span style="color:#ae81ff">180</span>,,<span style="color:#e6db74">&#34; f&#34;</span></code></pre></div>
 <p>Note: 參考rmarkdown 提要</p>
 
-<div class="notices todo" ><p><a href="doc:rmarkdown01#terminal-out">cat</a></p>
-</div>
+<div class="notices todo" ><a href="doc:rmarkdown01#terminal-out">cat</a></div>
 
 <p>如果輸出時,字串不要雙引號,則可以用<code>quote=FALSE</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)
@@ -2339,19 +2338,19 @@ rlang\FileSystem.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1606964214"></script>
-    <script src="../js/jquery.sticky.js?1606964214"></script>
-    <script src="../js/featherlight.min.js?1606964214"></script>
-    <script src="../js/highlight.pack.js?1606964214"></script>
+    <script src="../js/clipboard.min.js?1606972963"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606972963"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606972963"></script>
+    <script src="../js/jquery.sticky.js?1606972963"></script>
+    <script src="../js/featherlight.min.js?1606972963"></script>
+    <script src="../js/highlight.pack.js?1606972963"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1606964214"></script>
-    <script src="../js/learn.js?1606964214"></script>
-    <script src="../js/hugo-learn.js?1606964214"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606972963"></script>
+    <script src="../js/learn.js?1606972963"></script>
+    <script src="../js/hugo-learn.js?1606972963"></script>
     
         
-            <script src="../mermaid/mermaid.js?1606964214"></script>
+            <script src="../mermaid/mermaid.js?1606972963"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

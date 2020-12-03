@@ -13,19 +13,19 @@
     <title>type more - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1606964214" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1606964214" rel="stylesheet">
-    <link href="../css/hybrid.css?1606964214" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1606964214" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1606964214" rel="stylesheet">
-    <link href="../css/auto-complete.css?1606964214" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1606964214" rel="stylesheet">
-    <link href="../css/theme.css?1606964214" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1606964214" rel="stylesheet">
+    <link href="../css/nucleus.css?1606972964" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606972964" rel="stylesheet">
+    <link href="../css/hybrid.css?1606972964" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606972964" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606972964" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606972964" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606972964" rel="stylesheet">
+    <link href="../css/theme.css?1606972964" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606972964" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606964214" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606972964" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606972964" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606972964" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1606964214"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606972964"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1606964214"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1606964214"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606972964"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606972964"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1606964214"></script>
+<script type="text/javascript" src="../js/search.js?1606972964"></script>
 
     
   </div>
@@ -1050,7 +1050,8 @@
 <li><a href="#factors">Factors</a>
 <ul>
 <li><a href="#探索一下factors">探索一下factors</a></li>
-<li><a href="#探索一下factor">探索一下factor</a></li>
+<li><a href="#探索">探索</a></li>
+<li><a href="#hw">hw</a></li>
 <li><a href="#factor-和函數read-csv">factor 和函數read.csv()</a></li>
 <li><a href="#factor-和函數summary">factor 和函數summary()</a></li>
 </ul></li>
@@ -1064,12 +1065,6 @@
 <li><a href="#one-way-tables">One Way Tables</a></li>
 <li><a href="#two-way-tables">Two Way Tables</a></li>
 </ul></li>
-<li><a href="#oop">OOP</a>
-<ul>
-<li><a href="#base-objects-vs-oo-objects">Base objects vs OO objects</a></li>
-<li><a href="#變數屬性查詢函數">變數屬性查詢函數</a></li>
-</ul></li>
-<li><a href="#operator">operator %&gt;%</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1101,40 +1096,52 @@
 
 <h2 id="factors">Factors</h2>
 
-<p>R也能把資料存為factor(store data is as a factor)。<br />
+<p>R也能把資料存為factor。<br />
 在大部分實驗中,某些解釋變數經常有不同程度的測試。<br />
-大意如下：<br />
-&gt;&hellip; includes trials for different levels of some explanatory variable.<br />
-&gt;The different levels are also called factors.</p>
+大意如下：</p>
+
+<blockquote>
+<p>&hellip; includes trials for different levels of some explanatory variable.<br />
+The different levels are also called factors.</p>
+</blockquote>
 
 <h3 id="探索一下factors">探索一下factors</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">fert <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">20</span>)
 fert <span style="color:#f92672">=</span> <span style="color:#a6e22e">factor</span>(fert,levels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">50</span>),ordered<span style="color:#f92672">=</span><span style="color:#66d9ef">TRUE</span>)</code></pre></div>
-<p>levels()可以顯示factor的標籤</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">levels</span>(fert)
-<span style="color:#75715e">#&gt; [1] &#34;10&#34; &#34;20&#34; &#34;50&#34;</span></code></pre></div>
-<p>fert 的內容，如果忽略標籤本身，其實已經是數字。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">fert
-<span style="color:#75715e">#&gt; [1] 10 20 20 50 10 20 10 50 20</span>
-<span style="color:#75715e">#&gt; Levels: 10 &lt; 20 &lt; 50</span></code></pre></div>
-<p>計算平均</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">mean</span>(fert)
-<span style="color:#75715e">#&gt; Warning in mean.default(fert): argument is not numeric or logical: returning NA</span>
-<span style="color:#75715e">#&gt; [1] NA</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">mean</span>(<span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">levels</span>(fert)[fert]))
-<span style="color:#75715e">#&gt; [1] 23.33333</span></code></pre></div>
-<p>解釋：<br />
+<p>levels()可以顯示factor的標籤<br />
+
+<div class="notices sidebar" ><p>解釋：<br />
 levels(fert) 產生一個「字串向量」，內容為10, 20, 50，如下可證：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(<span style="color:#a6e22e">levels</span>(fert))
-<span style="color:#75715e">#&gt;  chr [1:3] &#34;10&#34; &#34;20&#34; &#34;50&#34;</span></code></pre></div>
-<p>然後如果把fert想程式數字內容，例如(1,2,1) 則，這是索引。就像這樣<br />
-c(&ldquo;a&rdquo;,&ldquo;b&rdquo;,&ldquo;c&rdquo;)[c(1,1,2,3,2)]  ==&gt; a,a,b,c,b 。</p>
+<span style="color:#75715e">#&gt;  chr [1:3] &#34;10&#34; &#34;20&#34; &#34;50&#34;</span></code></pre></div></div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">levels</span>(fert) 
+<span style="color:#75715e">#&gt; [1] &#34;10&#34; &#34;20&#34; &#34;50&#34;</span></code></pre></div>
+<p>fert 的內容，如果忽略標籤本身，其實已經是數字,也就是:typeof(fert)=。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">fert
+<span style="color:#75715e">#&gt; [1] 10 20 20 50 10 20 10 50 20</span>
+<span style="color:#75715e">#&gt; Levels: 10 &lt; 20 &lt; 50</span>
+<span style="color:#a6e22e">typeof</span>(fert)
+<span style="color:#75715e">#&gt; [1] &#34;integer&#34;</span></code></pre></div>
+<p>💡 因此, attr(x,&ldquo;levels&rdquo;)=levels(x)。</p>
 
-<p>上面的問題，可以簡化為：找回原來還沒被factor的向量。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>,<span style="color:#e6db74">&#34;c&#34;</span>)
-x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">factor</span>(x) <span style="color:#75715e"># 現在x是一個factor</span>
-
-x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">levels</span>(x)[x] <span style="color:#75715e">#現在又被轉回原來的x</span></code></pre></div>
-<h3 id="探索一下factor">探索一下factor</h3>
+<p>上面的<code>typeof(fert)</code>說是數字,但是如果真的把它當成數字向量,又無法利用函數<code>mean</code>計算平均💣</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">mean</span>(fert)
+<span style="color:#75715e">#&gt; Warning in mean.default(fert): argument is not numeric or logical: returning NA</span>
+<span style="color:#75715e">#&gt; [1] NA</span></code></pre></div>
+<p>必須轉換:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">mean</span>(<span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">levels</span>(fert)[fert]))
+<span style="color:#75715e">#&gt; [1] 23.33333</span></code></pre></div>
+<p>那麼最小值呢?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">min</span>(fert)
+<span style="color:#75715e">#&gt; [1] 10</span>
+<span style="color:#75715e">#&gt; Levels: 10 &lt; 20 &lt; 50</span></code></pre></div>
+<p>❓ 為甚麼上面的求最小可以,這裡又不行?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">fert <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">20</span>)
+fert <span style="color:#f92672">=</span> <span style="color:#a6e22e">factor</span>(fert,levels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">50</span>) )
+<span style="color:#a6e22e">min</span>(fert)
+<span style="color:#75715e">#&gt; Error in Summary.factor(structure(c(1L, 2L, 2L, 3L, 1L, 2L, 1L, 3L, 2L: &#39;min&#39; not meaningful for factors</span></code></pre></div>
+<h3 id="探索">探索</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">a <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">factor</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>, <span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>, <span style="color:#e6db74">&#34;B&#34;</span>, <span style="color:#e6db74">&#34;C&#34;</span>, <span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;C&#34;</span>))</code></pre></div>
 <p>預期答案是factor,ok。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">class</span>(a)
@@ -1172,7 +1179,16 @@ x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">levels</spa
 [1] &ldquo;factor&rdquo;</p>
 
 <p></code></pre><br />
-又有新的問題了，到底table(a),summary(a)的資料結構是什麼？</p>
+常用來和table配合</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">table</span>(a)
+<span style="color:#75715e">#&gt; a</span>
+<span style="color:#75715e">#&gt; A B C </span>
+<span style="color:#75715e">#&gt; 4 3 2</span></code></pre></div>
+<p>利用summary函數的時候,這裡不再列出5個統計量:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(a)
+<span style="color:#75715e">#&gt; A B C </span>
+<span style="color:#75715e">#&gt; 4 3 2</span></code></pre></div>
+<p>又有新的問題了，到底table(a),summary(a)的資料結構是什麼？</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(<span style="color:#a6e22e">table</span>(a))
 <span style="color:#75715e">#&gt;  &#39;table&#39; int [1:3(1d)] 4 3 2</span>
 <span style="color:#75715e">#&gt;  - attr(*, &#34;dimnames&#34;)=List of 1</span>
@@ -1185,11 +1201,48 @@ x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">levels</spa
 <span style="color:#75715e">#&gt; [1] &#34;integer&#34;</span></code></pre></div>
 <p>又來一個讓人無言的地方，輸出樣子看起來很像，但是結構一個是類別<code>table</code>一個是「整數向量」，然後每個元素都是因子的發生次數，帶有因子名字，這裡是&rdquo;A&rdquo;,&ldquo;B&rdquo;,&ldquo;C&rdquo;。</p>
 
+<h3 id="hw">hw</h3>
+
+
+<div class="notices quiz" ><p>❓找回原來還沒被factor的向量。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>,<span style="color:#e6db74">&#34;c&#34;</span>)   
+fx<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">factor</span>(x) <span style="color:#75715e"># 現在x是一個factor   </span></code></pre></div>
+<p>現在假定,我們只有fx,要找回x的內容。</p>
+</div>
+
+
+<p>💡就像這樣:<code>c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;)[c(1,1,2,3,2)]  ==&gt; a,a,b,c,b</code> 。</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Expand me...
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+       
+
+```r
+x<-c("a","b","c")
+fx<-factor(x) # 現在x是一個factor
+#💡
+x<-levels(fx)[fx] #現在又被轉回原來的x
+```
+
+    </div>
+</div>
+
 <h3 id="factor-和函數read-csv">factor 和函數read.csv()</h3>
 
 <p>read.csv() 通常產生一個data.frame的類別。但是在讀檔的時候，如果遇到字串欄位，會將字串欄位預設轉為factor欄位。</p>
 
-<p>觀察carbon dioxide 對樹木的生長速率 trees91.csv [1^]:</p>
+<p>觀察carbon dioxide 對樹木的生長速率 trees91.csv [1^]</p>
+
+<p><a href="./resources/trees91.csv">附件</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">tree <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#34;./resources/trees91.csv&#34;</span>, header <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>, sep <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;,&#34;</span>);
 <span style="color:#a6e22e">attributes</span>(tree)
 <span style="color:#75715e">#&gt; $names</span>
@@ -1214,17 +1267,19 @@ x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">levels</spa
 A description of the data file is located at <a href="http://cdiac.ornl.gov/ftp/ndp061a/ndp061a.txt">http://cdiac.ornl.gov/ftp/ndp061a/ndp061a.txt</a> .</p>
 
 <h3 id="factor-和函數summary">factor 和函數summary()</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(tree<span style="color:#f92672">$</span>CHBR)
-<span style="color:#75715e">#&gt;    Length     Class      Mode </span>
-<span style="color:#75715e">#&gt;        54 character character</span></code></pre></div>
+
 <p>在CHBR這個欄位中,因為不全都是數字,因此R自動假定這是一個factor。<br />
 因此針對這個欄位<code>summary()</code>函數不會列出5個統計量,而是列出次數表。因為，一旦向量轉為一組factors, 5個基本統計量不再有意義。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(tree<span style="color:#f92672">$</span>CHBR)
+<span style="color:#75715e">#&gt;    Length     Class      Mode </span>
+<span style="color:#75715e">#&gt;        54 character character</span>
+<span style="color:#75715e">#<span style="background: rgb(255 255 255 / 27%); margin: 0;   padding: 0;"> 在CHBR這個欄位中,因為不全都是數字,因此R自動假定這是一個factor。</span></span></code></pre></div>
 <p>但有些欄位例如C,也是一個factor。但是,R認定為數字,這時必須手動處理。<br />
 以下將 tree$C 轉為 factor:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">tree<span style="color:#f92672">$</span>C
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">tree<span style="color:#f92672">$</span>C <span style="color:#75715e">#<span style="background: rgb(255 255 255 / 27%); margin: 0;   padding: 0;">這是1個factor,但是轉進來的時候,被認定為數字</span></span>
 <span style="color:#75715e">#&gt;  [1] 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3</span>
 <span style="color:#75715e">#&gt; [39] 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4</span>
+
 <span style="color:#a6e22e">summary</span>(tree<span style="color:#f92672">$</span>C)
 <span style="color:#75715e">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
 <span style="color:#75715e">#&gt;   1.000   2.000   2.000   2.519   3.000   4.000</span>
@@ -1239,6 +1294,8 @@ tree<span style="color:#f92672">$</span>C
 <span style="color:#a6e22e">levels</span>(tree<span style="color:#f92672">$</span>C)
 <span style="color:#75715e">#&gt; [1] &#34;1&#34; &#34;2&#34; &#34;3&#34; &#34;4&#34;</span></code></pre></div>
 <p>node: <code>summary()</code> 函數，參考table一節。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(tree<span style="color:#f92672">$</span>C))</code></pre></div>
+<p><img src="../post/type_more_files/figure-html/unnamed-chunk-24-1.png" alt="plot of chunk unnamed-chunk-24" /></p>
 
 <h2 id="data-frames">Data Frames</h2>
 
@@ -1474,108 +1531,6 @@ sexsmoke
 <span style="color:#75715e">#&gt;        smoke nosmoke</span>
 <span style="color:#75715e">#&gt; male      70     120</span>
 <span style="color:#75715e">#&gt; female    65     140</span></code></pre></div>
-<h2 id="oop">OOP</h2>
-
-<p><a href="https://adv-r.hadley.nz/base-types.html">advance R</a></p>
-
-<h3 id="base-objects-vs-oo-objects">Base objects vs OO objects</h3>
-
-<p>辨別變數是基礎型別或是物件型別，可以簡單利用函數： <code>is.object()</code>:</p>
-
-<p>基礎物件base object:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">is.object</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>)
-<span style="color:#75715e">#&gt; [1] FALSE</span></code></pre></div>
-<p>[1] FALSE</p>
-
-<p>物件導向物件 OO object</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">is.object</span>(mtcars)
-<span style="color:#75715e">#&gt; [1] TRUE</span></code></pre></div>
-<p>[1] TRUE</p>
-
-<p>主要的區別在於基本物件沒有class 這個attribute</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">attr</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#34;class&#34;</span>) <span style="color:#75715e">#  NULL</span>
-<span style="color:#75715e">#&gt; NULL</span>
-<span style="color:#a6e22e">attr</span>(mtcars, <span style="color:#e6db74">&#34;class&#34;</span>) <span style="color:#75715e"># [1] &#34;data.frame&#34;</span>
-<span style="color:#75715e">#&gt; [1] &#34;data.frame&#34;</span></code></pre></div>
-<p>class()這個函數,不見得總是會和attr()的結果一致,因為，對基本物件而言,傳回的是後面討論,而不是 NULL。</p>
-
-<h3 id="變數屬性查詢函數">變數屬性查詢函數</h3>
-
-<p>names()<br />
-dimnames()<br />
-length()<br />
-dim(): 各維度長度<br />
-class() : 變數類別<br />
-table()：各類資料計數<br />
-str()：變數的資料結構(其實是一個list)</p>
-
-<p>透過names()函數，可取得各種list元素的名稱,但是如果是data.frame則是顯示欄位名稱<br />
-islands是內建資料</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(islands)
-<span style="color:#75715e">#&gt;  Named num [1:48] 11506 5500 16988 2968 16 ...</span>
-<span style="color:#75715e">#&gt;  - attr(*, &#34;names&#34;)= chr [1:48] &#34;Africa&#34; &#34;Antarctica&#34; &#34;Asia&#34; &#34;Australia&#34; ...</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">names</span>(islands)) 
-<span style="color:#75715e">#&gt; [1] &#34;Africa&#34;       &#34;Antarctica&#34;   &#34;Asia&#34;         &#34;Australia&#34;    &#34;Axel Heiberg&#34;</span>
-<span style="color:#75715e">#&gt; [6] &#34;Baffin&#34;</span></code></pre></div>
-<p>方形資料（例如，矩陣，table, data.frame)，可以透過dimnames()函數可顯示data.frame 橫行和直行的名稱 先橫行，然後直行。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dimnames</span>(USArrests) 
-<span style="color:#75715e">#&gt; [[1]]</span>
-<span style="color:#75715e">#&gt;  [1] &#34;Alabama&#34;        &#34;Alaska&#34;         &#34;Arizona&#34;        &#34;Arkansas&#34;      </span>
-<span style="color:#75715e">#&gt;  [5] &#34;California&#34;     &#34;Colorado&#34;       &#34;Connecticut&#34;    &#34;Delaware&#34;      </span>
-<span style="color:#75715e">#&gt;  [9] &#34;Florida&#34;        &#34;Georgia&#34;        &#34;Hawaii&#34;         &#34;Idaho&#34;         </span>
-<span style="color:#75715e">#&gt; [13] &#34;Illinois&#34;       &#34;Indiana&#34;        &#34;Iowa&#34;           &#34;Kansas&#34;        </span>
-<span style="color:#75715e">#&gt; [17] &#34;Kentucky&#34;       &#34;Louisiana&#34;      &#34;Maine&#34;          &#34;Maryland&#34;      </span>
-<span style="color:#75715e">#&gt; [21] &#34;Massachusetts&#34;  &#34;Michigan&#34;       &#34;Minnesota&#34;      &#34;Mississippi&#34;   </span>
-<span style="color:#75715e">#&gt; [25] &#34;Missouri&#34;       &#34;Montana&#34;        &#34;Nebraska&#34;       &#34;Nevada&#34;        </span>
-<span style="color:#75715e">#&gt; [29] &#34;New Hampshire&#34;  &#34;New Jersey&#34;     &#34;New Mexico&#34;     &#34;New York&#34;      </span>
-<span style="color:#75715e">#&gt; [33] &#34;North Carolina&#34; &#34;North Dakota&#34;   &#34;Ohio&#34;           &#34;Oklahoma&#34;      </span>
-<span style="color:#75715e">#&gt; [37] &#34;Oregon&#34;         &#34;Pennsylvania&#34;   &#34;Rhode Island&#34;   &#34;South Carolina&#34;</span>
-<span style="color:#75715e">#&gt; [41] &#34;South Dakota&#34;   &#34;Tennessee&#34;      &#34;Texas&#34;          &#34;Utah&#34;          </span>
-<span style="color:#75715e">#&gt; [45] &#34;Vermont&#34;        &#34;Virginia&#34;       &#34;Washington&#34;     &#34;West Virginia&#34; </span>
-<span style="color:#75715e">#&gt; [49] &#34;Wisconsin&#34;      &#34;Wyoming&#34;       </span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; [[2]]</span>
-<span style="color:#75715e">#&gt; [1] &#34;Murder&#34;   &#34;Assault&#34;  &#34;UrbanPop&#34; &#34;Rape&#34;</span></code></pre></div>
-<p>方形資料，可以透過length()函數可顯示資料長度，但是如果是data.frame則顯示欄位數。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">length</span>(islands) 
-<span style="color:#75715e">#&gt; [1] 48</span></code></pre></div>
-<p>透過dim() 顯示方形資料的「資料筆數」和「欄位數目」，先「橫行」，後「直行」</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dim</span>(USArrests) 
-<span style="color:#75715e">#&gt; [1] 50  4</span></code></pre></div>
-<p>使用class()函數可知道變數類別</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">class</span>(<span style="color:#66d9ef">pi</span>)
-<span style="color:#75715e">#&gt; [1] &#34;numeric&#34;</span>
-<span style="color:#a6e22e">class</span>(<span style="color:#a6e22e">Sys.Date</span>())
-<span style="color:#75715e">#&gt; [1] &#34;Date&#34;</span></code></pre></div>
-<p>使用table()函數可知道向量中每個值出現幾次</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">table</span>(iris<span style="color:#f92672">$</span>Species) <span style="color:#75715e">##統計結果</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt;     setosa versicolor  virginica </span>
-<span style="color:#75715e">#&gt;         50         50         50</span></code></pre></div>
-<h2 id="operator">operator %&gt;%</h2>
-
-<p>%&gt;% 不是R基礎套件<br />
-而是定義再套件 magrittr (CRAN) 且常跟 dplyr (CRAN)搭配。</p>
-
-<p>意思是把左邊(LHS)當成右邊(RHS)的參數。<br />
-例如下面的例子: 資料框iris 用來當 head()的參數:<br />
-也就是說 iris %&gt;% head() 相當於 head(iris).</p>
-
-<p>library(magrittr)<br />
-iris %&gt;% head()<br />
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species<br />
-1          5.1         3.5          1.4         0.2  setosa<br />
-2          4.9         3.0          1.4         0.2  setosa<br />
-3          4.7         3.2          1.3         0.2  setosa<br />
-4          4.6         3.1          1.5         0.2  setosa<br />
-5          5.0         3.6          1.4         0.2  setosa<br />
-6          5.4         3.9          1.7         0.4  setosa</p>
-
-<p>為甚麼需要這樣用,下面是一個例子</p>
-
-<p>iris %&gt;% head() %&gt;% summary()<br />
-類似的觀念, iris %&gt;% head() %&gt;% summary() 等同於summary(head(iris)).<br />
-也就是說,避免了使用巢狀呼叫。</p>
-
 
 <footer class="footline">
 	
@@ -2284,19 +2239,19 @@ rlang\type_more.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.min.js?1606964214"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1606964214"></script>
-    <script src="../js/jquery.sticky.js?1606964214"></script>
-    <script src="../js/featherlight.min.js?1606964214"></script>
-    <script src="../js/highlight.pack.js?1606964214"></script>
+    <script src="../js/clipboard.min.js?1606972964"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606972964"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606972964"></script>
+    <script src="../js/jquery.sticky.js?1606972964"></script>
+    <script src="../js/featherlight.min.js?1606972964"></script>
+    <script src="../js/highlight.pack.js?1606972964"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1606964214"></script>
-    <script src="../js/learn.js?1606964214"></script>
-    <script src="../js/hugo-learn.js?1606964214"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606972964"></script>
+    <script src="../js/learn.js?1606972964"></script>
+    <script src="../js/hugo-learn.js?1606972964"></script>
     
         
-            <script src="../mermaid/mermaid.js?1606964214"></script>
+            <script src="../mermaid/mermaid.js?1606972964"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

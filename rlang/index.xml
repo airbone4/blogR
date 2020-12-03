@@ -135,15 +135,16 @@ diag(1, nrow = 5) #&amp;gt; [,1] [,2] [,3] [,4] [,5] #&amp;gt; [1,] 1 0 0 0 0 #&
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/type_more.html</guid>
-      <description>Factors R也能把資料存為factor(store data is as a factor)。
+      <description>Factors R也能把資料存為factor。
 在大部分實驗中,某些解釋變數經常有不同程度的測試。
 大意如下：
-&amp;gt;&amp;hellip; includes trials for different levels of some explanatory variable.
-&amp;gt;The different levels are also called factors.
-探索一下factors fert = c(10,20,20,50,10,20,10,50,20) fert = factor(fert,levels=c(10,20,50),ordered=TRUE) levels()可以顯示factor的標籤
-levels(fert) #&amp;gt; [1] &amp;#34;10&amp;#34; &amp;#34;20&amp;#34; &amp;#34;50&amp;#34; fert 的內容，如果忽略標籤本身，其實已經是數字。
-fert #&amp;gt; [1] 10 20 20 50 10 20 10 50 20 #&amp;gt; Levels: 10 &amp;lt; 20 &amp;lt; 50 計算平均
-mean(fert) #&amp;gt; Warning in mean.default(fert): argument is not numeric or logical: returning NA #&amp;gt; [1] NAmean(as.</description>
+ &amp;hellip; includes trials for different levels of some explanatory variable.
+The different levels are also called factors.
+ 探索一下factors fert = c(10,20,20,50,10,20,10,50,20) fert = factor(fert,levels=c(10,20,50),ordered=TRUE) levels()可以顯示factor的標籤
+解釋：
+levels(fert) 產生一個「字串向量」，內容為10, 20, 50，如下可證：
+str(levels(fert)) #&amp;gt; chr [1:3] &amp;#34;10&amp;#34; &amp;#34;20&amp;#34; &amp;#34;50&amp;#34;levels(fert) #&amp;gt; [1] &amp;#34;10&amp;#34; &amp;#34;20&amp;#34; &amp;#34;50&amp;#34; fert 的內容，如果忽略標籤本身，其實已經是數字,也就是:typeof(fert)=。
+fert #&amp;gt; [1] 10 20 20 50 10 20 10 50 20 #&amp;gt; Levels: 10 &amp;lt; 20 &amp;lt; 50 typeof(fert) #&amp;gt; [1] &amp;#34;integer&amp;#34; 💡 因此, attr(x,&amp;ldquo;levels&amp;rdquo;)=levels(x)。</description>
     </item>
     
     <item>
@@ -272,8 +273,7 @@ x&amp;lt;-matrix(1,ncol=4,nrow=3);x #&amp;gt; [,1] [,2] [,3] [,4] #&amp;gt; [1,]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/function_1.html</guid>
-      <description>普通函數範例 fivenum function (x, na.rm = TRUE) { xna &amp;lt;- is.na(x) if (any(xna)) { if (na.rm) x &amp;lt;- x[!xna] else return(rep.int(NA, 5)) } x &amp;lt;- sort(x) n &amp;lt;- length(x) if (n == 0) rep.int(NA, 5) else { n4 &amp;lt;- floor((n + 3)/2)/2 d &amp;lt;- c(1, n4, (n + 1)/2, n + 1 - n4, n) 0.5 * (x[floor(d)] + x[ceiling(d)]) } } 自己寫一個類似which()的函數。
-3個逗點 (dots) 3個逗點可以利用?dots查詢。
+      <description>普通函數範例 fivenum function (x, na.rm = TRUE) { xna &amp;lt;- is.na(x) if (any(xna)) { if (na.rm) x &amp;lt;- x[!xna] else return(rep.int(NA, 5)) } x &amp;lt;- sort(x) n &amp;lt;- length(x) if (n == 0) rep.int(NA, 5) else { n4 &amp;lt;- floor((n + 3)/2)/2 d &amp;lt;- c(1, n4, (n + 1)/2, n + 1 - n4, n) 0.5 * (x[floor(d)] + x[ceiling(d)]) } } 自己寫一個類似which()的函數。3個逗點 (dots) 3個逗點可以利用?dots查詢。
 範例
 f &amp;lt;- function(x, .</description>
     </item>
