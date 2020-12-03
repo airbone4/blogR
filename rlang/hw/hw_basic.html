@@ -13,19 +13,19 @@
     <title>assignment-1 - R in Class</title>
 
     
-    <link href="../../css/nucleus.css?1606368037" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1606368037" rel="stylesheet">
-    <link href="../../css/hybrid.css?1606368037" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1606368037" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1606368037" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1606368037" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1606368037" rel="stylesheet">
-    <link href="../../css/theme.css?1606368037" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1606368037" rel="stylesheet">
+    <link href="../../css/nucleus.css?1606964214" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1606964214" rel="stylesheet">
+    <link href="../../css/hybrid.css?1606964214" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1606964214" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1606964214" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1606964214" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1606964214" rel="stylesheet">
+    <link href="../../css/theme.css?1606964214" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1606964214" rel="stylesheet">
     
-    <link href="../../extra_theme/css/mystyle.css?1606368037" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1606368037" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1606368037" rel="stylesheet">
+    <link href="../../extra_theme/css/mystyle.css?1606964214" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1606964214" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1606964214" rel="stylesheet">
 
-    <script src="../../js/jquery-3.3.1.min.js?1606368037"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1606964214"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1606368037"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1606368037"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1606964214"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1606964214"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1606368037"></script>
+<script type="text/javascript" src="../../js/search.js?1606964214"></script>
 
     
   </div>
@@ -106,6 +106,8 @@
       
         <ul>
           
+          
+            
           
           
 
@@ -455,24 +457,6 @@
           
             
             
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/function_2.html" title="Function more" class="dd-item ">
-        <a href="../../rlang/function_2.html">
-        Function more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
           
             
             
@@ -619,6 +603,32 @@
         </a>
     </li>
      
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../rlang/resources.html">
+          練習相關檔案
+          
+      </a>
+      
+      
+    </li>
   
  
 
@@ -1041,6 +1051,7 @@
 <ul>
 <li><a href="#basic">basic</a></li>
 </ul></li>
+<li><a href="#function">function</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1159,6 +1170,22 @@ x[x %% 2 == 0]
     </div>
 </div>
 
+<h2 id="function">function</h2>
+
+<p>寫一個matlab 的矩陣函數</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">mm<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">function</span>(rcnt,ccnt,value){
+total<span style="color:#f92672">&lt;-</span>rcnt<span style="color:#f92672">*</span>ccnt
+v<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">double</span>(total)
+v[1<span style="color:#f92672">:</span>total]<span style="color:#f92672">&lt;-</span>value
+<span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">matrix</span>(v,rcnt,ccnt))
+
+}</code></pre></div>
+<p>寫一個函數,判斷目前的資料夾中,有沒有檔案mm.R</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">isExists<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">function</span>(afile){
+all<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">dir</span>()
+rst<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">length</span>(all[all<span style="color:#f92672">==</span>afile])
+<span style="color:#a6e22e">return </span>(rst)
+}</code></pre></div>
 
 <footer class="footline">
 	
@@ -1203,6 +1230,8 @@ rlang\hw\hw_basic.md
 
                     
                     
+                        
+                    
                     
 
                     
@@ -1475,17 +1504,6 @@ rlang\hw\hw_basic.md
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
         
                     
                         
@@ -1538,6 +1556,22 @@ rlang\hw\hw_basic.md
                     
                         
             
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1847,7 +1881,7 @@ rlang\hw\hw_basic.md
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../rlang/sim_1.html" title="simulation 1"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../rlang/resources.html" title="練習相關檔案"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="../../rlang/hw/hw_regexp.html" title="regexpr" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1860,19 +1894,19 @@ rlang\hw\hw_basic.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1606368037"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1606368037"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1606368037"></script>
-    <script src="../../js/jquery.sticky.js?1606368037"></script>
-    <script src="../../js/featherlight.min.js?1606368037"></script>
-    <script src="../../js/highlight.pack.js?1606368037"></script>
+    <script src="../../js/clipboard.min.js?1606964214"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1606964214"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1606964214"></script>
+    <script src="../../js/jquery.sticky.js?1606964214"></script>
+    <script src="../../js/featherlight.min.js?1606964214"></script>
+    <script src="../../js/highlight.pack.js?1606964214"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1606368037"></script>
-    <script src="../../js/learn.js?1606368037"></script>
-    <script src="../../js/hugo-learn.js?1606368037"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1606964214"></script>
+    <script src="../../js/learn.js?1606964214"></script>
+    <script src="../../js/hugo-learn.js?1606964214"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1606368037"></script>
+            <script src="../../mermaid/mermaid.js?1606964214"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

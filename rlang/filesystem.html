@@ -13,19 +13,19 @@
     <title>File System - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1606368037" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1606368037" rel="stylesheet">
-    <link href="../css/hybrid.css?1606368037" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1606368037" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1606368037" rel="stylesheet">
-    <link href="../css/auto-complete.css?1606368037" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1606368037" rel="stylesheet">
-    <link href="../css/theme.css?1606368037" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1606368037" rel="stylesheet">
+    <link href="../css/nucleus.css?1606964214" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1606964214" rel="stylesheet">
+    <link href="../css/hybrid.css?1606964214" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1606964214" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1606964214" rel="stylesheet">
+    <link href="../css/auto-complete.css?1606964214" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1606964214" rel="stylesheet">
+    <link href="../css/theme.css?1606964214" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1606964214" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1606368037" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606368037" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606368037" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606964214" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606964214" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1606368037"></script>
+    <script src="../js/jquery-3.3.1.min.js?1606964214"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1606368037"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1606368037"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1606964214"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1606964214"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1606368037"></script>
+<script type="text/javascript" src="../js/search.js?1606964214"></script>
 
     
   </div>
@@ -106,6 +106,8 @@
       
         <ul>
           
+          
+            
           
           
 
@@ -455,24 +457,6 @@
           
             
             
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/function_2.html" title="Function more" class="dd-item ">
-        <a href="../rlang/function_2.html">
-        Function more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
           
             
             
@@ -619,6 +603,32 @@
         </a>
     </li>
      
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
+        
+        
+        
+        ">
+      <a href="../rlang/resources.html">
+          練習相關檔案
+          
+      </a>
+      
+      
+    </li>
   
  
 
@@ -1058,18 +1068,8 @@
 <li>
 <ul>
 <li><a href="#僅僅查看檔案內容">僅僅查看檔案內容</a></li>
-<li><a href="#csv-範例">csv 範例</a></li>
-</ul></li>
-<li><a href="#一般的開檔-關檔過程">一般的開檔/關檔過程</a>
-<ul>
-<li><a href="#csv">csv</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#write-csv">write csv</a>
-<ul>
-<li><a href="#data-frame-to-csv">data.frame to CSV</a></li>
-</ul></li>
-<li><a href="#r語言的檔案格式">R語言的檔案格式</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1106,7 +1106,7 @@
 <p>函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">mydirname <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tempfile</span>(pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mydir&#34;</span>)
 mydirname
-<span style="color:#75715e">#&gt; [1] &#34;C:\\Users\\linchao\\AppData\\Local\\Temp\\RtmpIft4FJ\\mydir127417221adb&#34;</span></code></pre></div>
+<span style="color:#75715e">#&gt; [1] &#34;C:\\Users\\linchao\\AppData\\Local\\Temp\\Rtmpmsbdg8\\mydir30f458f85d42&#34;</span></code></pre></div>
 <p>在視窗系統中:<br />
 mydirname<br />
 C:\Users\使用者名稱\AppData\Local\Temp\RtmpSg2qRA\mydir326845a02140</p>
@@ -1228,17 +1228,216 @@ checkdir(folderlist)</p>
 <h4 id="僅僅查看檔案內容">僅僅查看檔案內容</h4>
 
 <ul>
-<li><a href="resources/wh_chinese.csv">測試中文的檔案</a><br />
+<li><a href="resources/wh_chinese.csv">測試中文檔案的指令</a><br />
 
 <ul>
-<li><code>readLines(logf, encoding=&quot;UTF-8&quot;)</code><br /></li>
-<li><code>writeLines(字串, 檔案名稱, useBytes=T)</code><br /></li>
-</ul></li>
-<li><a href="resources/wh.csv">測試檔案</a><br />
+<li><code>hureadLines(logf, encoding=&quot;UTF-8&quot;)</code><br /></li>
+<li><code>writeLines(字串, 檔案名稱, useBytes=T)</code><br />
+<br />
 <br /></li>
+</ul></li>
 </ul>
 
-<p>注意檔案內容第一行不是資料。</p>
+
+<section class="attachments ">
+	<label>
+		<i class="fas fa-paperclip" aria-hidden="true"></i>
+		可以用來練習的文字檔
+	</label>
+	
+	
+	  
+	
+	<div class="attachments-files">
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/sample1.csv" >
+						sample1.csv
+					</a>
+					(1 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/sample2.csv" >
+						sample2.csv
+					</a>
+					(0 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/sample3.csv" >
+						sample3.csv
+					</a>
+					(0 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/simple.csv" >
+						simple.csv
+					</a>
+					(0 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/smoker.csv" >
+						smoker.csv
+					</a>
+					(4 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/trees91.csv" >
+						trees91.csv
+					</a>
+					(6 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/wh.csv" >
+						wh.csv
+					</a>
+					(0 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+				<li>
+					<a href="../rlang/resources/wh_chinese.csv" >
+						wh_chinese.csv
+					</a>
+					(0 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	</div>
+	<p>注意檔案內容第一行不是資料。</p>
 
 <p><code>file.show(&quot;resources/wh.csv&quot;)</code>會打開excel<br />
 也可以利用殼層指令:<br />
@@ -1361,7 +1560,6 @@ checkdir(folderlist)</p>
 <span style="color:#a6e22e">readLines</span>(<span style="color:#e6db74">&#34;MyData.csv&#34;</span>,n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) 
 <span style="color:#75715e">#&gt; [1] &#34;\&#34;height\&#34;,\&#34;weight\&#34;,\&#34;sex\&#34;&#34; &#34;156,56,\&#34; m\&#34;&#34;                </span>
 <span style="color:#75715e">#&gt; [3] &#34;167,NA,\&#34; f\&#34;&#34;</span></code></pre></div>
-
 <div class="notices sidebar" ><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)
 <span style="color:#a6e22e">write.csv</span>(rst, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MyData.csv&#34;</span>,row.names<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>)
 <span style="color:#a6e22e">readLines</span>(<span style="color:#e6db74">&#34;MyData.csv&#34;</span>,n<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) </code></pre></div>
@@ -1380,13 +1578,10 @@ checkdir(folderlist)</p>
 180,NA,&rdquo; f&rdquo;</p>
 </div>
 
-
-
 <div class="notices quiz" ><ol>
 <li>上面sidebar中,顯示的的sex欄位,可以看見&rdquo; m&rdquo; 也就是有空白,問利用<code>read.csv</code> 讀入時,會是甚麼情況?<br /></li>
 </ol>
 </div>
-
 
 <p>如果要指定NA的值,可以利用欄位=””,否則預定是<code>NA</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)
@@ -1397,11 +1592,10 @@ checkdir(folderlist)</p>
 <span style="color:#ae81ff">167</span>,,<span style="color:#e6db74">&#34; f&#34;</span>
 <span style="color:#ae81ff">189</span>,<span style="color:#ae81ff">70</span>,<span style="color:#e6db74">&#34; m&#34;</span>
 <span style="color:#ae81ff">180</span>,,<span style="color:#e6db74">&#34; f&#34;</span></code></pre></div>
-<p>Note: 參考rmarkdown 提要<br />
+<p>Note: 參考rmarkdown 提要</p>
 
 <div class="notices todo" ><p><a href="doc:rmarkdown01#terminal-out">cat</a></p>
 </div>
-</p>
 
 <p>如果輸出時,字串不要雙引號,則可以用<code>quote=FALSE</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#39;resources/wh.csv&#39;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span>,na.string<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>)
@@ -1433,6 +1627,10 @@ height,weight,sex
 <pre><code>userfolder&lt;-??
 allfolder&lt;-list.dir()
 okfolder&lt;-allfolder[dir.exists(userfolder)]</code></pre>
+</section>
+
+
+
 
 <footer class="footline">
 	
@@ -1477,6 +1675,8 @@ rlang\FileSystem.md
 
                     
                     
+                        
+                    
                     
 
                     
@@ -1753,17 +1953,6 @@ rlang\FileSystem.md
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
         
                     
                         
@@ -1816,6 +2005,22 @@ rlang\FileSystem.md
                     
                         
             
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -2134,19 +2339,19 @@ rlang\FileSystem.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1606368037"></script>
-    <script src="../js/perfect-scrollbar.min.js?1606368037"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1606368037"></script>
-    <script src="../js/jquery.sticky.js?1606368037"></script>
-    <script src="../js/featherlight.min.js?1606368037"></script>
-    <script src="../js/highlight.pack.js?1606368037"></script>
+    <script src="../js/clipboard.min.js?1606964214"></script>
+    <script src="../js/perfect-scrollbar.min.js?1606964214"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1606964214"></script>
+    <script src="../js/jquery.sticky.js?1606964214"></script>
+    <script src="../js/featherlight.min.js?1606964214"></script>
+    <script src="../js/highlight.pack.js?1606964214"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1606368037"></script>
-    <script src="../js/learn.js?1606368037"></script>
-    <script src="../js/hugo-learn.js?1606368037"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1606964214"></script>
+    <script src="../js/learn.js?1606964214"></script>
+    <script src="../js/hugo-learn.js?1606964214"></script>
     
         
-            <script src="../mermaid/mermaid.js?1606368037"></script>
+            <script src="../mermaid/mermaid.js?1606964214"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -233,7 +233,7 @@ strtrim accepts both a vector of strings and a vector of truncation positions.</
       
       <guid>/rlang/filesystem.html</guid>
       <description>File System 暫時子目錄 函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。
-mydirname &amp;lt;- tempfile(pattern = &amp;#34;mydir&amp;#34;) mydirname #&amp;gt; [1] &amp;#34;C:\\Users\\linchao\\AppData\\Local\\Temp\\RtmpIft4FJ\\mydir127417221adb&amp;#34; 在視窗系統中:
+mydirname &amp;lt;- tempfile(pattern = &amp;#34;mydir&amp;#34;) mydirname #&amp;gt; [1] &amp;#34;C:\\Users\\linchao\\AppData\\Local\\Temp\\Rtmpmsbdg8\\mydir30f458f85d42&amp;#34; 在視窗系統中:
 mydirname
 C:\Users\使用者名稱\AppData\Local\Temp\RtmpSg2qRA\mydir326845a02140
 Exploring file system function file.exists() 可以用來知道檔案是否存在,
