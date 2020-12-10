@@ -437,29 +437,5 @@ rnorm : random
 cdf z_scores &amp;lt;- seq(-3, 3, by = .1) pvalues &amp;lt;- pnorm(z_scores) # Now we&amp;#39;ll plot these values plot(pvalues, # Plot where y = values and x = index of the value in the vector xaxt = &amp;#34;n&amp;#34;, # Don&amp;#39;t label the x-axis type = &amp;#34;l&amp;#34;, # Make it a line plot main = &amp;#34;cdf of the Standard Normal&amp;#34;, xlab= &amp;#34;Quantiles&amp;#34;, ylab=&amp;#34;Probability Density&amp;#34;) # These commands label the x-axis axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2)) axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2)) axis(1, at=which(pvalues == pnorm(0)), labels=c(.</description>
     </item>
     
-    <item>
-      <title>assignment-1</title>
-      <link>/rlang/hw/hw_basic.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/hw/hw_basic.html</guid>
-      <description>part 1 basic  參考程式碼,數學上,e既然是純量,那就是1X1的矩陣。在R中,如果 e&amp;lt;-3那麼在R中判斷e是不是相量,是不是矩陣?
-e&amp;lt;-3 length(e) #&amp;gt; [1] 1 is.vector(e) # q1: true or false #&amp;gt; [1] TRUE is.matrix(e) # q2: true or false #&amp;gt; [1] FALSE # 指定沒有任何資料的向量 e1&amp;lt;-numeric(0) length(e1) #&amp;gt; [1] 0 is.vector(e) # q3: true or false #&amp;gt; [1] TRUE 建立向量e21,e22,e23 解釋出現的訊息
-e21&amp;lt;-1:3 # 向量,內容為[1,2,3] 也可以e2&amp;lt;-seq(1,3),e2&amp;lt;-c(1,2,3) e22&amp;lt;-1:4 e23&amp;lt;-1:6 e21==e23 #&amp;gt; [1] TRUE TRUE TRUE FALSE FALSE FALSE e21==e22 #&amp;gt; Warning in e21 == e22: 較長的物件長度並非較短物件長度的倍數 #&amp;gt; [1] TRUE TRUE TRUE FALSE&amp;gt; e21==e23 [1] TRUE TRUE TRUE FALSE FALSE FALSE &amp;gt; e21==e22 [1] TRUE TRUE TRUE FALSE Warning message: In e21 == e22 : 較長的物件長度並非較短物件長度的倍數  3.</description>
-    </item>
-    
-    <item>
-      <title>regexpr</title>
-      <link>/rlang/hw/hw_regexp.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/hw/hw_regexp.html</guid>
-      <description>reference cheatsheet
-抽取字組 看看是不是#開頭的字串,如果是的話要置換,例如
-&amp;rdquo;# hello&amp;rdquo; -&amp;gt;&amp;ldquo;# hello &amp;ldquo;
-str&amp;lt;-&amp;#34;# hello&amp;#34; if(grepl(&amp;#34;^[#]* &amp;#34;,str)) { x&amp;lt;-sub(&amp;#34;(^[#]* )(.*$)&amp;#34;,&amp;#34;\\1 &amp;lt;font color=&amp;#39;red&amp;#39;&amp;gt; \\2 &amp;lt;/font&amp;gt;&amp;#34;,str, perl=TRUE) print(x) } #&amp;gt; [1] &amp;#34;# &amp;lt;font color=&amp;#39;red&amp;#39;&amp;gt; hello &amp;lt;/font&amp;gt;&amp;#34; 類似上題 divtitle&amp;lt;-function (str){ if(grepl(&amp;#34;^[#]* &amp;#34;,str)) { rst&amp;lt;-sub(&amp;#34;(^[#]* )(.*$)&amp;#34;,&amp;#34;\\1 &amp;lt;div class=&amp;#39;outposix&amp;#39;&amp;gt; \\2 &amp;lt;/div&amp;gt;&amp;#34;,str, perl=TRUE) }else{ rst&amp;lt;-paste0(&amp;#34;&amp;lt;div class=&amp;#39;outposix&amp;#39;&amp;gt;&amp;#34;,str,&amp;#34;&amp;lt;/div&amp;gt;&amp;#34;) } } 測試what1 pattern&amp;lt;-&amp;#34;out&amp;#34; ext&amp;lt;-&amp;#34;oo&amp;#34; list&amp;lt;-list(&amp;#34;out_中文_1.oo&amp;#34;,&amp;#34;out_1.oo&amp;#34;,&amp;#34;out_xx_1.oo&amp;#34;) what&amp;lt;-paste0(&amp;#34;(?&amp;lt;=&amp;#34;,pattern,&amp;#34;_).*&amp;#34;,&amp;#34;(?=\\.&amp;#34;,ext,&amp;#34;)&amp;#34;); idxlist&amp;lt;-as.integer(stringr::str_extract(list,what)); #&amp;gt; Warning: 強制變更過程中產生了 NA idxlist #&amp;gt; [1] NA 1 NA 執行結果
-#&amp;gt; Warning: 強制變更過程中產生了 NA idxlist #&amp;gt; [1] NA 1 NA  解釋 NA, 和</description>
-    </item>
-    
   </channel>
 </rss>

@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.76.5" />
-    <meta name="description" content="R Language for class">
+    <meta name="description" content="log">
 
 
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
 
-    <title>Tags - R in Class</title>
+    <title>hugo shortcode log - R in Class</title>
 
     
     <link href="./css/nucleus.css?1607578097" rel="stylesheet">
@@ -39,7 +39,7 @@
     </style>
     
   </head>
-  <body class="" data-url="./tags.html">
+  <body class="" data-url="./hugo_shortcode.html">
 
     <nav id="sidebar" class="">
 
@@ -751,7 +751,7 @@
     
     <li data-nav-id="/topic.html" title="Topics" class="dd-item
         
-        active
+        
         
         ">
       <a href="./topic.html">
@@ -1083,7 +1083,7 @@
             
           
           
-            <a href='./'>class log</a> > Tags
+            <a href='./'>class log</a> > hugo shortcode log
           
         
           
@@ -1094,7 +1094,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#句點">句點</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1110,9 +1117,7 @@
           
             <h1>
               
-                tag ::
-              
-              Tags
+              hugo shortcode log
 
             </h1>
 			
@@ -1123,25 +1128,30 @@
 
 
 
-  
+<h2 id="句點">句點</h2>
 
-
-
-<hr/>
-<h2>章節列表<small>Tags</small></h2>
 <ul>
-  
-  
+<li><p>shortcode:attach<br />
+短碼的程式,利用<code>with</code> 配合逗點<code>.</code></p>
+<pre><code>{{with .Get &#34;folder&#34; }} xx{{. }}xx {{ end }}</code></pre></li>
+
+<li><p>在md上的呼叫</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{&lt; <span style="color:#a6e22e">attach</span> <span style="color:#a6e22e">folder</span>=<span style="color:#e6db74">&#34;./resources/&#34;</span>  &gt;}}
+</code></pre></div></li>
+
+<li><p>結果(html):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">xx./resources/xx</code></pre></div></li>
 </ul>
 
-<footer class=" footline" >
+
+<footer class="footline">
 	
 </footer>
 
         
         </div>
         
-{0xc0008bbbf0}
+hugo_shortcode.md
       </div>
 
     <div id="navigation">
@@ -1891,3 +1901,4 @@
 
   </body>
 </html>
+

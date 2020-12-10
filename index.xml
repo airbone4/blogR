@@ -530,6 +530,39 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1) pvalues &amp;lt;- pnorm(z_scores) # N
     </item>
     
     <item>
+      <title>hugo shortcode log</title>
+      <link>/hugo_shortcode.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/hugo_shortcode.html</guid>
+      <description> 句點  shortcode:attach
+短碼的程式,利用with 配合逗點.
+{{with .Get &amp;#34;folder&amp;#34; }} xx{{. }}xx {{ end }} 在md上的呼叫
+{{&amp;lt; attach folder=&amp;#34;./resources/&amp;#34; &amp;gt;}}  結果(html):
+xx./resources/xx  </description>
+    </item>
+    
+    <item>
+      <title>資料集</title>
+      <link>/rlang/hw/dataset_class.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/hw/dataset_class.html</guid>
+      <description>❓
+1. 要知道目前有哪些資料集
+- 📝data()可以列出目前有甚麼資料可以用,也可以放入參數,只列出某個package的資料集。
+1. 寫個函數,判斷目前我們要的資料集是不是存在
+❓
+1. 要知道資料集cars的欄位
+1. 列出前10筆資料
+- normal
+- pretty: 📝 安裝DT: install.pacakges(&amp;ldquo;DT&amp;rdquo;),參考 💣 會缺失各種程式庫
+hint  data()
+ names(cars)
+List of 4 ## 👍跟我們說這是list ,有4個元素 $ title : chr &amp;#34;Data sets&amp;#34; $ header : NULL $ results: chr [1:104, 1:4] ## (這是一個字串矩陣,可以大致資料在這裡) &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; ... ..- attr(*, &amp;#34;dimnames&amp;#34;)=List of 2 ## (2維度的名稱,這裡可以看到沒有ROW名稱,但是有欄位名稱)  .. ..$ : NULL .. ..$ : chr [1:4] &amp;#34;Package&amp;#34; &amp;#34;LibPath&amp;#34; &amp;#34;Item&amp;#34; &amp;#34;Title&amp;#34; $ footer : chr &amp;#34;Use ‘data(package = .</description>
+    </item>
+    
+    <item>
       <title>assignment-1</title>
       <link>/rlang/hw/hw_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

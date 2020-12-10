@@ -13,19 +13,19 @@
     <title>type string - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1606973554" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1606973554" rel="stylesheet">
-    <link href="../css/hybrid.css?1606973554" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1606973554" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1606973554" rel="stylesheet">
-    <link href="../css/auto-complete.css?1606973554" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1606973554" rel="stylesheet">
-    <link href="../css/theme.css?1606973554" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1606973554" rel="stylesheet">
+    <link href="../css/nucleus.css?1607578097" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1607578097" rel="stylesheet">
+    <link href="../css/hybrid.css?1607578097" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1607578097" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1607578097" rel="stylesheet">
+    <link href="../css/auto-complete.css?1607578097" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1607578097" rel="stylesheet">
+    <link href="../css/theme.css?1607578097" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1607578097" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1606973554" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1606973554" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1606973554" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1607578097" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1607578097" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1607578097" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1606973554"></script>
+    <script src="../js/jquery-3.3.1.min.js?1607578097"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1606973554"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1606973554"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1607578097"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1607578097"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1606973554"></script>
+<script type="text/javascript" src="../js/search.js?1607578097"></script>
 
     
   </div>
@@ -617,18 +617,40 @@
  
   
     
-    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
+    <li data-nav-id="/rlang/hw.html" title="練習用" class="dd-item
         
         
         
         ">
-      <a href="../rlang/resources.html">
-          練習相關檔案
+      <a href="../rlang/hw.html">
+          練習用
           
       </a>
       
       
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/dataset_class.html" title="資料集" class="dd-item ">
+        <a href="../rlang/hw/dataset_class.html">
+        資料集
+        
+        </a>
     </li>
+     
   
  
 
@@ -671,6 +693,41 @@
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
+        
+        
+        
+        ">
+      <a href="../rlang/resources.html">
+          練習相關檔案
+          
+      </a>
+      
+      
+    </li>
   
  
 
@@ -1127,6 +1184,22 @@
 1. 解釋paste0(c(1,2),c(3,4),collapse=&ldquo;)<br />
 2. 怎樣得到&rdquo;1234&rdquo;</p>
 
+<p>💡 <code>paste0()</code>是<code>paste()</code>的簡化版。基本上就是字串相連,這時用的是<code>separator</code>,例如,&ldquo;a&rdquo;+<code>sep</code>+&ldquo;b&rdquo;,paste0中的<code>sep</code>=&ldquo;&rdquo;,因此<code>paste0()</code>的結果為&rdquo;ab&rdquo;,如果連完以後是向量,但是想要變成一個字串,就必須用到<code>collapse</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">rst<span style="color:#f92672">=</span><span style="color:#a6e22e">paste0</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+rst
+<span style="color:#75715e">#&gt; [1] &#34;1&#34; &#34;2&#34;</span>
+<span style="color:#a6e22e">length</span>(rst)
+<span style="color:#75715e">#&gt; [1] 2</span>
+rst<span style="color:#f92672">=</span><span style="color:#a6e22e">paste0</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>),<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>),collapse<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*&#34;</span>)
+rst
+<span style="color:#75715e">#&gt; [1] &#34;13*24&#34;</span>
+<span style="color:#a6e22e">length</span>(rst)
+<span style="color:#75715e">#&gt; [1] 1</span>
+rst<span style="color:#f92672">=</span><span style="color:#a6e22e">paste</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>),<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>),collapse<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*&#34;</span>)
+rst
+<span style="color:#75715e">#&gt; [1] &#34;1 3*2 4&#34;</span>
+<span style="color:#a6e22e">length</span>(rst)
+<span style="color:#75715e">#&gt; [1] 1</span></code></pre></div>
 <h3 id="應用範例macro">應用範例macro</h3>
 
 <p><strong>version 1</strong></p>
@@ -1626,6 +1699,19 @@ rlang\type_string_function.md
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1641,6 +1727,25 @@ rlang\type_string_function.md
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -1880,19 +1985,19 @@ rlang\type_string_function.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1606973554"></script>
-    <script src="../js/perfect-scrollbar.min.js?1606973554"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1606973554"></script>
-    <script src="../js/jquery.sticky.js?1606973554"></script>
-    <script src="../js/featherlight.min.js?1606973554"></script>
-    <script src="../js/highlight.pack.js?1606973554"></script>
+    <script src="../js/clipboard.min.js?1607578097"></script>
+    <script src="../js/perfect-scrollbar.min.js?1607578097"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1607578097"></script>
+    <script src="../js/jquery.sticky.js?1607578097"></script>
+    <script src="../js/featherlight.min.js?1607578097"></script>
+    <script src="../js/highlight.pack.js?1607578097"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1606973554"></script>
-    <script src="../js/learn.js?1606973554"></script>
-    <script src="../js/hugo-learn.js?1606973554"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1607578097"></script>
+    <script src="../js/learn.js?1607578097"></script>
+    <script src="../js/hugo-learn.js?1607578097"></script>
     
         
-            <script src="../mermaid/mermaid.js?1606973554"></script>
+            <script src="../mermaid/mermaid.js?1607578097"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
