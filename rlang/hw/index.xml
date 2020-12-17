@@ -23,7 +23,24 @@
 - pretty: 📝 安裝DT: install.pacakges(&amp;ldquo;DT&amp;rdquo;),參考 💣 會缺失各種程式庫
 hint  data()
  names(cars)
-List of 4 ## 👍跟我們說這是list ,有4個元素 $ title : chr &amp;#34;Data sets&amp;#34; $ header : NULL $ results: chr [1:104, 1:4] ## (這是一個字串矩陣,可以大致資料在這裡) &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; ... ..- attr(*, &amp;#34;dimnames&amp;#34;)=List of 2 ## (2維度的名稱,這裡可以看到沒有ROW名稱,但是有欄位名稱)  .. ..$ : NULL .. ..$ : chr [1:4] &amp;#34;Package&amp;#34; &amp;#34;LibPath&amp;#34; &amp;#34;Item&amp;#34; &amp;#34;Title&amp;#34; $ footer : chr &amp;#34;Use ‘data(package = .</description>
+List of 4 #📝👍跟我們說這是list ,有4個元素 $ title : chr &amp;#34;Data sets&amp;#34; $ header : NULL $ results: chr [1:104, 1:4] # 📝(這是一個字串矩陣,可以大致資料在這裡) &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; &amp;#34;datasets&amp;#34; ... ..- attr(*, &amp;#34;dimnames&amp;#34;)=List of 2 ## 📝(2維度的名稱,這裡可以看到沒有ROW名稱,但是有欄位名稱)  .. ..$ : NULL .. ..$ : chr [1:4] #📝(這裡可以看出是一個矩陣) &amp;#34;Package&amp;#34; &amp;#34;LibPath&amp;#34; &amp;#34;Item&amp;#34; &amp;#34;Title&amp;#34; $ footer : chr &amp;#34;Use ‘data(package = .</description>
+    </item>
+    
+    <item>
+      <title>檔案系統</title>
+      <link>/rlang/hw/hw_filesystem.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/hw/hw_filesystem.html</guid>
+      <description>❓ 1  要知道目前有哪些套件
+ View
+ 列表(datatable)
+ 寫入檔案(3個欄位,套件名稱、套件路徑和套件版本,按照名稱排序)
+ 如果不要row.names,而且欄位名稱是中文。
+  分析
+ 主要版本第2版的有幾個,有哪些?
+ 平均每個套件有幾個檔案?
+pkgs&amp;lt;-installed.packages() str(pkgs) #&amp;gt; chr [1:169, 1:16] &amp;#34;addinStataFast&amp;#34; &amp;#34;askpass&amp;#34; &amp;#34;assertthat&amp;#34; &amp;#34;babynames&amp;#34; ... #&amp;gt; - attr(*, &amp;#34;dimnames&amp;#34;)=List of 2 #&amp;gt; ..$ : chr [1:169] &amp;#34;addinStataFast&amp;#34; &amp;#34;askpass&amp;#34; &amp;#34;assertthat&amp;#34; &amp;#34;babynames&amp;#34; ... #&amp;gt; ..$ : chr [1:16] &amp;#34;Package&amp;#34; &amp;#34;LibPath&amp;#34; &amp;#34;Version&amp;#34; &amp;#34;Priority&amp;#34; ... # 📝上面可以知道是matrix head(rownames(pkgs),5) #&amp;gt; [1] &amp;#34;addinStataFast&amp;#34; &amp;#34;askpass&amp;#34; &amp;#34;assertthat&amp;#34; &amp;#34;babynames&amp;#34;  #&amp;gt; [5] &amp;#34;backports&amp;#34; head(colnames(pkgs),5) #&amp;gt; [1] &amp;#34;Package&amp;#34; &amp;#34;LibPath&amp;#34; &amp;#34;Version&amp;#34; &amp;#34;Priority&amp;#34; &amp;#34;Depends&amp;#34;library(DT) #&amp;gt; Warning: package &amp;#39;DT&amp;#39; was built under R version 4.</description>
     </item>
     
     <item>

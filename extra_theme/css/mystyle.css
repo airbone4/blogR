@@ -87,3 +87,30 @@ a[href$=".pdf"]:before {
     /*font-size: 90%; */
     border-radius: 0px 
 }
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext  {
+  visibility: hidden;
+  width: 400px;
+  /*width: fit-content;*/
+  background-color: black !important;
+  color: #fff !important;
+  font-weight: bold;
+  text-align: left;
+  border-radius: 6px;
+  padding: 2px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

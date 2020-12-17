@@ -13,19 +13,19 @@
     <title>type more - R in Class</title>
 
     
-    <link href="../css/nucleus.css?1607578097" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1607578097" rel="stylesheet">
-    <link href="../css/hybrid.css?1607578097" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1607578097" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1607578097" rel="stylesheet">
-    <link href="../css/auto-complete.css?1607578097" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1607578097" rel="stylesheet">
-    <link href="../css/theme.css?1607578097" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1607578097" rel="stylesheet">
+    <link href="../css/nucleus.css?1608182905" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1608182905" rel="stylesheet">
+    <link href="../css/hybrid.css?1608182905" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1608182905" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1608182905" rel="stylesheet">
+    <link href="../css/auto-complete.css?1608182905" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1608182905" rel="stylesheet">
+    <link href="../css/theme.css?1608182905" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1608182905" rel="stylesheet">
     
-    <link href="../extra_theme/css/mystyle.css?1607578097" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1607578097" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1607578097" rel="stylesheet">
+    <link href="../extra_theme/css/mystyle.css?1608182905" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1608182905" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1608182905" rel="stylesheet">
 
-    <script src="../js/jquery-3.3.1.min.js?1607578097"></script>
+    <script src="../js/jquery-3.3.1.min.js?1608182905"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1607578097"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1607578097"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1608182905"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1608182905"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1607578097"></script>
+<script type="text/javascript" src="../js/search.js?1608182905"></script>
 
     
   </div>
@@ -647,6 +647,27 @@
       <li data-nav-id="/rlang/hw/dataset_class.html" title="資料集" class="dd-item ">
         <a href="../rlang/hw/dataset_class.html">
         資料集
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/hw_filesystem.html" title="檔案系統" class="dd-item ">
+        <a href="../rlang/hw/hw_filesystem.html">
+        檔案系統
         
         </a>
     </li>
@@ -1280,10 +1301,12 @@ fx<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">factor</sp
         
         </span>
     </div>
-    <div class="expand-content" style="display: none;"><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>,<span style="color:#e6db74">&#34;c&#34;</span>)
+    <div class="expand-content" style="display: none;">
+       <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;b&#34;</span>,<span style="color:#e6db74">&#34;c&#34;</span>)
 fx<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">factor</span>(x) <span style="color:#75715e"># 現在x是一個factor</span>
 <span style="color:#75715e">#💡</span>
-x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">levels</span>(fx)[fx] <span style="color:#75715e">#現在又被轉回原來的x</span></code></pre></div></div>
+x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">levels</span>(fx)[fx] <span style="color:#75715e">#現在又被轉回原來的x</span></code></pre></div>
+    </div>
 </div>
 
 <h3 id="factor-和函數read-csv">factor 和函數read.csv()</h3>
@@ -1528,10 +1551,10 @@ A description of the data file is located at <a href="http://cdiac.ornl.gov/ftp/
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(tree<span style="color:#f92672">$</span>CHBR)
 <span style="color:#75715e">#&gt;    Length     Class      Mode </span>
 <span style="color:#75715e">#&gt;        54 character character</span>
-<span style="color:#75715e">#<span style="background: rgb(255 255 255 / 27%); margin: 0;   padding: 0;border:solid red;"> 在CHBR這個欄位中,因為不全都是數字,因此R自動假定這是一個factor。</span></span></code></pre></div>
+<span style="color:#75715e">#<div class="tooltip">📝<span class="tooltiptext" style="background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;"> 在CHBR這個欄位中,因為不全都是數字,因此R自動假定這是一個factor。</span></div></span></code></pre></div>
 <p>但有些欄位例如C,也是一個factor。但是,R認定為數字,這時必須手動處理。<br />
 以下將 tree$C 轉為 factor:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">tree<span style="color:#f92672">$</span>C <span style="color:#75715e">#<span style="background: rgb(255 255 255 / 27%); margin: 0;   padding: 0;border:solid red;">這是1個factor,但是轉進來的時候,被認定為數字</span></span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">tree<span style="color:#f92672">$</span>C <span style="color:#75715e">#<div class="tooltip">📝<span class="tooltiptext" style="background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;">這是1個factor,但是轉進來的時候,被認定為數字</span></div></span>
 <span style="color:#75715e">#&gt;  [1] 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3</span>
 <span style="color:#75715e">#&gt; [39] 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4</span>
 
@@ -2288,6 +2311,22 @@ rlang\type_more.md
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2526,19 +2565,19 @@ rlang\type_more.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1607578097"></script>
-    <script src="../js/perfect-scrollbar.min.js?1607578097"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1607578097"></script>
-    <script src="../js/jquery.sticky.js?1607578097"></script>
-    <script src="../js/featherlight.min.js?1607578097"></script>
-    <script src="../js/highlight.pack.js?1607578097"></script>
+    <script src="../js/clipboard.min.js?1608182905"></script>
+    <script src="../js/perfect-scrollbar.min.js?1608182905"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1608182905"></script>
+    <script src="../js/jquery.sticky.js?1608182905"></script>
+    <script src="../js/featherlight.min.js?1608182905"></script>
+    <script src="../js/highlight.pack.js?1608182905"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1607578097"></script>
-    <script src="../js/learn.js?1607578097"></script>
-    <script src="../js/hugo-learn.js?1607578097"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1608182905"></script>
+    <script src="../js/learn.js?1608182905"></script>
+    <script src="../js/hugo-learn.js?1608182905"></script>
     
         
-            <script src="../mermaid/mermaid.js?1607578097"></script>
+            <script src="../mermaid/mermaid.js?1608182905"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
