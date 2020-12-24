@@ -28,7 +28,7 @@ initial options(prompt = &amp;ldquo;R&amp;gt; &amp;ldquo;, continue = &amp;ldquo
 digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE)
 library(&amp;ldquo;AER&amp;rdquo;)
 set.seed(1071)
-data(&amp;#34;Journals&amp;#34;, package = &amp;#34;AER&amp;#34;) #View(Journals) journals &amp;lt;- Journals[, c(&amp;#34;subs&amp;#34;, &amp;#34;price&amp;#34;)] journals$citeprice &amp;lt;- Journals$price/Journals$citations summary(journals) #&amp;gt; subs price citeprice  #&amp;gt; Min. : 2.0 Min. : 20.0 Min. : 0.005223  #&amp;gt; 1st Qu.</description>
+library(&amp;#34;AER&amp;#34;) #&amp;gt; Warning: package &amp;#39;AER&amp;#39; was built under R version 4.0.3 #&amp;gt; Loading required package: car #&amp;gt; Warning: package &amp;#39;car&amp;#39; was built under R version 4.0.3 #&amp;gt; Loading required package: carData #&amp;gt; Warning: package &amp;#39;carData&amp;#39; was built under R version 4.</description>
     </item>
     
   </channel>

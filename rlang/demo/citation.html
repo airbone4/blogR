@@ -13,19 +13,19 @@
     <title>引用 - R in Class</title>
 
     
-    <link href="../../css/nucleus.css?1608785934" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1608785934" rel="stylesheet">
-    <link href="../../css/hybrid.css?1608785934" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1608785934" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1608785934" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1608785934" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1608785934" rel="stylesheet">
-    <link href="../../css/theme.css?1608785934" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1608785934" rel="stylesheet">
+    <link href="../../css/nucleus.css?1608787830" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1608787830" rel="stylesheet">
+    <link href="../../css/hybrid.css?1608787830" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1608787830" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1608787830" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1608787830" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1608787830" rel="stylesheet">
+    <link href="../../css/theme.css?1608787830" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1608787830" rel="stylesheet">
     
-    <link href="../../extra_theme/css/mystyle.css?1608785934" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1608785934" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1608785934" rel="stylesheet">
+    <link href="../../extra_theme/css/mystyle.css?1608787830" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1608787830" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1608787830" rel="stylesheet">
 
-    <script src="../../js/jquery-3.3.1.min.js?1608785934"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1608787830"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1608785934"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1608785934"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1608787830"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1608787830"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1608785934"></script>
+<script type="text/javascript" src="../../js/search.js?1608787830"></script>
 
     
   </div>
@@ -1195,7 +1195,7 @@
 <li><a href="#initial">initial</a>
 <ul>
 <li><a href="#最簡單的報告產生函數">最簡單的報告產生函數</a></li>
-<li><a href="#code-chunk-number-13-journals-predict-plot1">code chunk number 13: journals-predict-plot1</a></li>
+<li><a href="#參數為模型類別的plot">參數為模型類別的plot()</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1236,7 +1236,26 @@
   digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE)<br />
 library(&ldquo;AER&rdquo;)<br />
 set.seed(1071)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">data</span>(<span style="color:#e6db74">&#34;Journals&#34;</span>, package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;AER&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(<span style="color:#e6db74">&#34;AER&#34;</span>)
+<span style="color:#75715e">#&gt; Warning: package &#39;AER&#39; was built under R version 4.0.3</span>
+<span style="color:#75715e">#&gt; Loading required package: car</span>
+<span style="color:#75715e">#&gt; Warning: package &#39;car&#39; was built under R version 4.0.3</span>
+<span style="color:#75715e">#&gt; Loading required package: carData</span>
+<span style="color:#75715e">#&gt; Warning: package &#39;carData&#39; was built under R version 4.0.3</span>
+<span style="color:#75715e">#&gt; Loading required package: lmtest</span>
+<span style="color:#75715e">#&gt; Warning: package &#39;lmtest&#39; was built under R version 4.0.3</span>
+<span style="color:#75715e">#&gt; Loading required package: zoo</span>
+<span style="color:#75715e">#&gt; Warning: package &#39;zoo&#39; was built under R version 4.0.3</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; Attaching package: &#39;zoo&#39;</span>
+<span style="color:#75715e">#&gt; The following objects are masked from &#39;package:base&#39;:</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;     as.Date, as.Date.numeric</span>
+<span style="color:#75715e">#&gt; Loading required package: sandwich</span>
+<span style="color:#75715e">#&gt; Warning: package &#39;sandwich&#39; was built under R version 4.0.3</span>
+<span style="color:#75715e">#&gt; Loading required package: survival</span>
+<span style="color:#75715e">#&gt; Warning: package &#39;survival&#39; was built under R version 4.0.3</span>
+<span style="color:#a6e22e">data</span>(<span style="color:#e6db74">&#34;Journals&#34;</span>, package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;AER&#34;</span>)
 <span style="color:#75715e">#View(Journals)</span>
 journals <span style="color:#f92672">&lt;-</span> Journals[, <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;subs&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>)]
 journals<span style="color:#f92672">$</span>citeprice <span style="color:#f92672">&lt;-</span> Journals<span style="color:#f92672">$</span>price<span style="color:#f92672">/</span>Journals<span style="color:#f92672">$</span>citations
@@ -1375,9 +1394,13 @@ jour_slm<span style="color:#f92672">$</span>coefficients
 <span style="color:#75715e">#&gt; log(citeprice)   1 125.93 125.934  224.04 &lt; 2.2e-16 ***</span>
 <span style="color:#75715e">#&gt; Residuals      178 100.06   0.562                      </span>
 <span style="color:#75715e">#&gt; ---</span>
-<span style="color:#75715e">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">coef</span>(jour_lm)
+<span style="color:#75715e">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+ 
+<span style="color:#a6e22e">coef</span>(jour_lm)
 <span style="color:#75715e">#&gt;    (Intercept) log(citeprice) </span>
-<span style="color:#75715e">#&gt;      4.7662121     -0.5330535</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">confint</span>(jour_lm, level <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span>)
+<span style="color:#75715e">#&gt;      4.7662121     -0.5330535</span>
+ 
+<span style="color:#a6e22e">confint</span>(jour_lm, level <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span>)
 <span style="color:#75715e">#&gt;                     2.5 %     97.5 %</span>
 <span style="color:#75715e">#&gt; (Intercept)     4.6558822  4.8765420</span>
 <span style="color:#75715e">#&gt; log(citeprice) -0.6033319 -0.4627751</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">predict</span>(jour_lm, newdata <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(citeprice <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.11</span>),
@@ -1387,16 +1410,51 @@ jour_slm<span style="color:#f92672">$</span>coefficients
 <span style="color:#a6e22e">predict</span>(jour_lm, newdata <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(citeprice <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.11</span>), 
   interval <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;prediction&#34;</span>)
 <span style="color:#75715e">#&gt;        fit      lwr      upr</span>
-<span style="color:#75715e">#&gt; 1 4.368188 2.883746 5.852629</span></code></pre></div>
-<h3 id="code-chunk-number-13-journals-predict-plot1">code chunk number 13: journals-predict-plot1</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">lciteprice <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(from <span style="color:#f92672">=</span> <span style="color:#ae81ff">-6</span>, to <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.25</span>)
+<span style="color:#75715e">#&gt; 1 4.368188 2.883746 5.852629</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">lciteprice <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(from <span style="color:#f92672">=</span> <span style="color:#ae81ff">-6</span>, to <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.25</span>)
 jour_pred <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">predict</span>(jour_lm, interval <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;prediction&#34;</span>,
   newdata <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(citeprice <span style="color:#f92672">=</span> <span style="color:#a6e22e">exp</span>(lciteprice)))  
 <span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">log</span>(subs) <span style="color:#f92672">~</span> <span style="color:#a6e22e">log</span>(citeprice), data <span style="color:#f92672">=</span> journals)
 <span style="color:#a6e22e">lines</span>(jour_pred[, <span style="color:#ae81ff">1</span>] <span style="color:#f92672">~</span> lciteprice, col <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)    
 <span style="color:#a6e22e">lines</span>(jour_pred[, <span style="color:#ae81ff">2</span>] <span style="color:#f92672">~</span> lciteprice, col <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, lty <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)
 <span style="color:#a6e22e">lines</span>(jour_pred[, <span style="color:#ae81ff">3</span>] <span style="color:#f92672">~</span> lciteprice, col <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, lty <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)</code></pre></div>
-<p><img src="../../post/citation_files/figure-html/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
+<p><img src="../../post/citation_files/figure-html/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
+
+<h3 id="參數為模型類別的plot">參數為模型類別的plot()</h3>
+
+<p>產生6種,預設4種</p>
+
+<ul>
+<li>residuals versus fitted values,<br /></li>
+<li>QQ plot for normality,<br /></li>
+<li>scale-location plot,<br /></li>
+<li>standardized residuals versus leverages.<br />
+<br /></li>
+</ul>
+
+<p>個別的圖:例如QQ plot:　<code>plot(jour_lm, which = 2)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">plot</span>(jour_lm)</code></pre></div>
+<p><img src="../../post/citation_files/figure-html/unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+
+<span style="color:#a6e22e">linearHypothesis</span>(jour_lm, <span style="color:#e6db74">&#34;log(citeprice) = -0.5&#34;</span>)
+<span style="color:#75715e">#&gt; Linear hypothesis test</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; Hypothesis:</span>
+<span style="color:#75715e">#&gt; log(citeprice) = - 0.5</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; Model 1: restricted model</span>
+<span style="color:#75715e">#&gt; Model 2: log(subs) ~ log(citeprice)</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   Res.Df    RSS Df Sum of Sq      F Pr(&gt;F)</span>
+<span style="color:#75715e">#&gt; 1    179 100.54                           </span>
+<span style="color:#75715e">#&gt; 2    178 100.06  1   0.48421 0.8614 0.3546</span></code></pre></div>
+<p>❓ 利用資料集 <code>cars</code> : <code>dist ~ speed</code></p>
+
+<ul>
+<li>分別給出 speed=12,19,24 的信賴區間和預測區間<br /></li>
+<li>畫圖<br /></li>
+</ul>
 
 
 <footer class="footline">
@@ -2191,19 +2249,19 @@ rlang\demo\citation.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1608785934"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1608785934"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1608785934"></script>
-    <script src="../../js/jquery.sticky.js?1608785934"></script>
-    <script src="../../js/featherlight.min.js?1608785934"></script>
-    <script src="../../js/highlight.pack.js?1608785934"></script>
+    <script src="../../js/clipboard.min.js?1608787830"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1608787830"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1608787830"></script>
+    <script src="../../js/jquery.sticky.js?1608787830"></script>
+    <script src="../../js/featherlight.min.js?1608787830"></script>
+    <script src="../../js/highlight.pack.js?1608787830"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1608785934"></script>
-    <script src="../../js/learn.js?1608785934"></script>
-    <script src="../../js/hugo-learn.js?1608785934"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1608787830"></script>
+    <script src="../../js/learn.js?1608787830"></script>
+    <script src="../../js/hugo-learn.js?1608787830"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1608785934"></script>
+            <script src="../../mermaid/mermaid.js?1608787830"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
