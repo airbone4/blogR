@@ -151,6 +151,18 @@
   </url>
   
   <url>
+    <loc>/rlang/demo.html</loc>
+  </url>
+  
+  <url>
+    <loc>/rlang/demo/car.html</loc>
+  </url>
+  
+  <url>
+    <loc>/rlang/demo/citation.html</loc>
+  </url>
+  
+  <url>
     <loc>/rlang/hw/hw_basic.html</loc>
   </url>
   

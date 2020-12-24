@@ -580,6 +580,31 @@ pkgs&amp;lt;-installed.packages() str(pkgs) #&amp;gt; chr [1:169, 1:16] &amp;#34
     </item>
     
     <item>
+      <title>predict</title>
+      <link>/rlang/demo/car.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/demo/car.html</guid>
+      <description>Build a linear regression data(&amp;#34;cars&amp;#34;, package = &amp;#34;datasets&amp;#34;) model &amp;lt;- lm(dist ~ speed, data = cars) model #&amp;gt;  #&amp;gt; Call: #&amp;gt; lm(formula = dist ~ speed, data = cars) #&amp;gt;  #&amp;gt; Coefficients: #&amp;gt; (Intercept) speed  #&amp;gt; -17.579 3.932 回歸式可以寫成: dist = -17.579 + 3.932*speed.
+新資料的預測:distance 分別是:12,19,24
+new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) ) predict(model, newdata = new.speeds) #&amp;gt; 1 2 3  #&amp;gt; 29.60981 57.</description>
+    </item>
+    
+    <item>
+      <title>引用</title>
+      <link>/rlang/demo/citation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/demo/citation.html</guid>
+      <description>introduction Goal: Estimate the effect of the price per citation on the number of library subscriptions
+initial options(prompt = &amp;ldquo;R&amp;gt; &amp;ldquo;, continue = &amp;ldquo;+ &amp;ldquo;, width = 64,
+digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE)
+library(&amp;ldquo;AER&amp;rdquo;)
+set.seed(1071)
+data(&amp;#34;Journals&amp;#34;, package = &amp;#34;AER&amp;#34;) #View(Journals) journals &amp;lt;- Journals[, c(&amp;#34;subs&amp;#34;, &amp;#34;price&amp;#34;)] journals$citeprice &amp;lt;- Journals$price/Journals$citations summary(journals) #&amp;gt; subs price citeprice  #&amp;gt; Min. : 2.0 Min. : 20.0 Min. : 0.005223  #&amp;gt; 1st Qu.</description>
+    </item>
+    
+    <item>
       <title>assignment-1</title>
       <link>/rlang/hw/hw_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
