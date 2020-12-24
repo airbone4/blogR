@@ -597,11 +597,11 @@ new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) ) predict(model, newdata 
       
       <guid>/rlang/demo/citation.html</guid>
       <description>introduction Goal: Estimate the effect of the price per citation on the number of library subscriptions
-initial options(prompt = &amp;ldquo;R&amp;gt; &amp;ldquo;, continue = &amp;ldquo;+ &amp;ldquo;, width = 64,
+Journals.csvJournals.csv(17 ko)initial options(prompt = &amp;ldquo;R&amp;gt; &amp;ldquo;, continue = &amp;ldquo;+ &amp;ldquo;, width = 64,
 digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE)
 library(&amp;ldquo;AER&amp;rdquo;)
 set.seed(1071)
-library(&amp;#34;AER&amp;#34;) #&amp;gt; Warning: package &amp;#39;AER&amp;#39; was built under R version 4.0.3 #&amp;gt; Loading required package: car #&amp;gt; Warning: package &amp;#39;car&amp;#39; was built under R version 4.0.3 #&amp;gt; Loading required package: carData #&amp;gt; Warning: package &amp;#39;carData&amp;#39; was built under R version 4.</description>
+library(&amp;#34;AER&amp;#34;) #&amp;gt; Warning: package &amp;#39;AER&amp;#39; was built under R version 4.0.3 #&amp;gt; Loading required package: car #&amp;gt; Warning: package &amp;#39;car&amp;#39; was built under R version 4.</description>
     </item>
     
     <item>

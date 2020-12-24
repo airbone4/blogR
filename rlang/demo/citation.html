@@ -13,19 +13,19 @@
     <title>引用 - R in Class</title>
 
     
-    <link href="../../css/nucleus.css?1608787830" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1608787830" rel="stylesheet">
-    <link href="../../css/hybrid.css?1608787830" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1608787830" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1608787830" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1608787830" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1608787830" rel="stylesheet">
-    <link href="../../css/theme.css?1608787830" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1608787830" rel="stylesheet">
+    <link href="../../css/nucleus.css?1608794475" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1608794475" rel="stylesheet">
+    <link href="../../css/hybrid.css?1608794475" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1608794475" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1608794475" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1608794475" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1608794475" rel="stylesheet">
+    <link href="../../css/theme.css?1608794475" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1608794475" rel="stylesheet">
     
-    <link href="../../extra_theme/css/mystyle.css?1608787830" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1608787830" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1608787830" rel="stylesheet">
+    <link href="../../extra_theme/css/mystyle.css?1608794475" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1608794475" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1608794475" rel="stylesheet">
 
-    <script src="../../js/jquery-3.3.1.min.js?1608787830"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1608794475"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1608787830"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1608787830"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1608794475"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1608794475"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1608787830"></script>
+<script type="text/javascript" src="../../js/search.js?1608794475"></script>
 
     
   </div>
@@ -1192,11 +1192,6 @@
 <li>
 <ul>
 <li><a href="#introduction">introduction</a></li>
-<li><a href="#initial">initial</a>
-<ul>
-<li><a href="#最簡單的報告產生函數">最簡單的報告產生函數</a></li>
-<li><a href="#參數為模型類別的plot">參數為模型類別的plot()</a></li>
-</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1230,7 +1225,162 @@
 
 <p>Goal: Estimate the effect of the price per citation on the number of library subscriptions</p>
 
-<h2 id="initial">initial</h2>
+
+<section class="attachments ">
+	<label>
+		<i class="fas fa-paperclip" aria-hidden="true"></i>
+		Journals.csv
+	</label>
+	
+	
+	  
+	
+	<div class="attachments-files">
+	
+		
+		
+			
+				<li>
+					<a href="../../rlang/resources/Journals.csv" >
+						Journals.csv
+					</a>
+					(17 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+		
+		
+			
+		
+	
+	</div>
+	<h2 id="initial">initial</h2>
 
 <p>options(prompt = &ldquo;R&gt; &ldquo;, continue = &ldquo;+  &ldquo;, width = 64,<br />
   digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE)<br />
@@ -1281,7 +1431,7 @@ jour_lm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm<
 <span style="color:#75715e">#&gt;  [1] &#34;coefficients&#34;  &#34;residuals&#34;     &#34;effects&#34;       &#34;rank&#34;         </span>
 <span style="color:#75715e">#&gt;  [5] &#34;fitted.values&#34; &#34;assign&#34;        &#34;qr&#34;            &#34;df.residual&#34;  </span>
 <span style="color:#75715e">#&gt;  [9] &#34;xlevels&#34;       &#34;call&#34;          &#34;terms&#34;         &#34;model&#34;</span>
-<span style="color:#a6e22e">str</span>(jour_lm) <span style="color:#75715e">#<div class="tooltip">📝<span class="tooltiptext" style="background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;"> 注意`list of 12` </span></div></span>
+<span style="color:#a6e22e">str</span>(jour_lm) <span style="color:#75715e">#&lt;div class=&#34;tooltip&#34;&gt;📝&lt;span class=&#34;tooltiptext&#34; style=&#34;background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;&#34;&gt; 注意`list of 12` &lt;/span&gt;&lt;/div&gt;</span>
 <span style="color:#75715e">#&gt; List of 12</span>
 <span style="color:#75715e">#&gt;  $ coefficients : Named num [1:2] 4.766 -0.533</span>
 <span style="color:#75715e">#&gt;   ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;(Intercept)&#34; &#34;log(citeprice)&#34;</span>
@@ -1354,8 +1504,8 @@ jour_lm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm<
     <div class="expand-content" style="display: none;">
        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">jour_lm<span style="color:#f92672">$</span>rank
 <span style="color:#75715e">#&gt; [1] 2</span></code></pre></div>
-    </div>
-</div>
+<pre><code>&lt;/div&gt;</code></pre>
+<p></div></p>
 
 <h3 id="最簡單的報告產生函數">最簡單的報告產生函數</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(jour_lm)
@@ -1455,6 +1605,10 @@ jour_pred <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">p
 <li>分別給出 speed=12,19,24 的信賴區間和預測區間<br /></li>
 <li>畫圖<br /></li>
 </ul>
+
+</section>
+
+
 
 
 <footer class="footline">
@@ -2249,19 +2403,19 @@ rlang\demo\citation.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1608787830"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1608787830"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1608787830"></script>
-    <script src="../../js/jquery.sticky.js?1608787830"></script>
-    <script src="../../js/featherlight.min.js?1608787830"></script>
-    <script src="../../js/highlight.pack.js?1608787830"></script>
+    <script src="../../js/clipboard.min.js?1608794475"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1608794475"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1608794475"></script>
+    <script src="../../js/jquery.sticky.js?1608794475"></script>
+    <script src="../../js/featherlight.min.js?1608794475"></script>
+    <script src="../../js/highlight.pack.js?1608794475"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1608787830"></script>
-    <script src="../../js/learn.js?1608787830"></script>
-    <script src="../../js/hugo-learn.js?1608787830"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1608794475"></script>
+    <script src="../../js/learn.js?1608794475"></script>
+    <script src="../../js/hugo-learn.js?1608794475"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1608787830"></script>
+            <script src="../../mermaid/mermaid.js?1608794475"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
