@@ -13,19 +13,19 @@
     <title>Chapter 6 - R in Class</title>
 
     
-    <link href="../../css/nucleus.css?1609392453" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1609392453" rel="stylesheet">
-    <link href="../../css/hybrid.css?1609392453" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1609392453" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1609392453" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1609392453" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1609392453" rel="stylesheet">
-    <link href="../../css/theme.css?1609392453" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1609392453" rel="stylesheet">
+    <link href="../../css/nucleus.css?1609399092" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1609399092" rel="stylesheet">
+    <link href="../../css/hybrid.css?1609399092" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1609399092" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1609399092" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1609399092" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1609399092" rel="stylesheet">
+    <link href="../../css/theme.css?1609399092" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1609399092" rel="stylesheet">
     
-    <link href="../../extra_theme/css/mystyle.css?1609392453" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1609392453" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1609392453" rel="stylesheet">
+    <link href="../../extra_theme/css/mystyle.css?1609399092" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1609399092" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1609399092" rel="stylesheet">
 
-    <script src="../../js/jquery-3.3.1.min.js?1609392453"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1609399092"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1609392453"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1609392453"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1609399092"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1609399092"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1609392453"></script>
+<script type="text/javascript" src="../../js/search.js?1609399092"></script>
 
     
   </div>
@@ -1218,29 +1218,6 @@
 </ul></li>
 <li><a href="#example">example</a></li>
 <li><a href="#24個人的數學和統計成績">24個人的數學和統計成績</a></li>
-<li><a href="#a-numeric-vector-with-199-entries-each-measuring-compensation-in-10-000s-of-dollars">A numeric vector with 199 entries each measuring compensation in 10,000s of dollars.</a></li>
-<li><a href="#總經理薪水-10萬為單位">總經理薪水,10萬為單位</a></li>
-<li><a href="#ewr">ewr</a></li>
-<li><a href="#qqplot-比較">qqplot 比較</a></li>
-<li><a href="#yes-no">yes,no</a></li>
-<li><a href="#紀錄每個人喜歡的酒類-紅-白-黃-啤酒">紀錄每個人喜歡的酒類: 紅、白、黃、啤酒</a></li>
-<li><a href="#ex">ex</a>
-<ul>
-<li><a href="#add-150000">add 150000</a></li>
-</ul></li>
-<li><a href="#two-variables">two variables</a></li>
-<li><a href="#ex-1">ex</a>
-<ul>
-<li><a href="#boxplot">boxplot</a></li>
-<li><a href="#boxplot-1">boxplot</a></li>
-<li><a href="#demo">demo</a></li>
-</ul></li>
-<li><a href="#ex-2">ex</a></li>
-<li><a href="#ex-3">ex</a>
-<ul>
-<li><a href="#stripchart-demo">stripChart demo</a></li>
-</ul></li>
-<li><a href="#iris">iris</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1302,8 +1279,68 @@ y<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">quantile</s
 <p><img src="../../post/ch6_files/figure-html/unnamed-chunk-2-2.png" alt="plot of chunk unnamed-chunk-2" /></p>
 <pre><code>#&gt; [1] 23  1</code></pre>
 <h2 id="24個人的數學和統計成績">24個人的數學和統計成績</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">MS<span style="color:#f92672">=</span><span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#34;data/mathstat.csv&#34;</span>,header<span style="color:#f92672">=</span>T)
-MS <span style="color:#75715e"># <div class="tooltip">📝<span class="tooltiptext" style="background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;"> data.frame </span></div></span>
+
+
+<section class="attachments ">
+	<label>
+		<i class="fas fa-paperclip" aria-hidden="true"></i>
+		Attachments
+	</label>
+	
+	
+	  
+	
+	<div class="attachments-files">
+	
+		
+		
+			
+				<li>
+					<a href="../../rlang/demo/data/mathstat.csv" >
+						mathstat.csv
+					</a>
+					(0 ko)
+				</li>
+			
+		
+	
+		
+		
+			
+		
+	
+	</div>
+	<section class="attachments ">
+    <label>
+        <i class="fas fa-paperclip" aria-hidden="true"></i>
+        Attachments
+    </label>
+    
+    
+      
+    
+    <div class="attachments-files">
+    
+        
+        
+            
+        
+    
+        
+        
+            
+                <li>
+                    <a href="../../rlang/demo/data/revenue.txt" >
+                        revenue.txt
+                    </a>
+                    (0 ko)
+                </li>
+            
+        
+    
+    </div>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">MS<span style="color:#f92672">=</span><span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#34;data/mathstat.csv&#34;</span>,header<span style="color:#f92672">=</span>T)
+MS <span style="color:#75715e"># &lt;div class=&#34;tooltip&#34;&gt;📝&lt;span class=&#34;tooltiptext&#34; style=&#34;background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;&#34;&gt; data.frame &lt;/span&gt;&lt;/div&gt;</span>
 <span style="color:#75715e">#&gt;    maths stats</span>
 <span style="color:#75715e">#&gt; 1     81    72</span>
 <span style="color:#75715e">#&gt; 2     90    90</span>
@@ -1821,8 +1858,10 @@ mpg<span style="color:#f92672">=</span><span style="color:#a6e22e">cut</span>(MP
 <span style="color:#75715e">#&gt;   expensive       0     0       0     0      0   0</span>
 <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
 <span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(price,Type))
-<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(price,Type),beside<span style="color:#f92672">=</span>T)</code></pre></div>
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(price,Type),beside<span style="color:#f92672">=</span>T)  </code></pre></div>
 <p><img src="../../post/ch6_files/figure-html/unnamed-chunk-19-1.png" alt="plot of chunk unnamed-chunk-19" /></p>
+
+<div class="notices tip" >table中的每個格子中的數字就一個bar,轉換成2D 就是barplot結果</div>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
 <span style="color:#a6e22e">boxplot</span>(Price<span style="color:#f92672">~</span>Type)</code></pre></div>
 <p><img src="../../post/ch6_files/figure-html/unnamed-chunk-20-1.png" alt="plot of chunk unnamed-chunk-20" /></p>
@@ -1837,13 +1876,13 @@ f1<span style="color:#f92672">=</span><span style="color:#a6e22e">factor</span>(
 <span style="color:#a6e22e">stripchart</span>(r1<span style="color:#f92672">~</span>f1)</code></pre></div>
 <p><img src="../../post/ch6_files/figure-html/unnamed-chunk-21-2.png" alt="plot of chunk unnamed-chunk-21" /></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">r2<span style="color:#f92672">=</span><span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>)
-f2<span style="color:#f92672">=</span><span style="color:#a6e22e">factor</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>))
+f2<span style="color:#f92672">=</span><span style="color:#a6e22e">factor</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">20</span>))
 <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
-<span style="color:#a6e22e">stripChart</span>(r2<span style="color:#f92672">~</span>f2)
-<span style="color:#75715e">#&gt; Error in min(x, na.rm = na.rm): &#39;type&#39; (list) 的引數無效</span>
-<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
-<span style="color:#a6e22e">dotchart</span>(PlantGrowth<span style="color:#f92672">$</span>weight,groups<span style="color:#f92672">=</span>PlantGrowth<span style="color:#f92672">$</span>group)</code></pre></div>
+<span style="color:#a6e22e">stripchart</span>(r2<span style="color:#f92672">~</span>f2)</code></pre></div>
 <p><img src="../../post/ch6_files/figure-html/unnamed-chunk-21-3.png" alt="plot of chunk unnamed-chunk-21" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">dotchart</span>(PlantGrowth<span style="color:#f92672">$</span>weight,groups<span style="color:#f92672">=</span>PlantGrowth<span style="color:#f92672">$</span>group)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-21-4.png" alt="plot of chunk unnamed-chunk-21" /></p>
 
 <h2 id="iris">iris</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#iris</span>
@@ -1875,6 +1914,12 @@ iris.lab <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</s
 <p><img src="../../post/ch6_files/figure-html/unnamed-chunk-22-4.png" alt="plot of chunk unnamed-chunk-22" /></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">pairs</span>(iris[1<span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>],pch<span style="color:#f92672">=</span><span style="color:#ae81ff">21</span>, bg<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;red&#34;</span>, <span style="color:#e6db74">&#34;green3&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>)<span style="color:#a6e22e">[unclass</span>(iris<span style="color:#f92672">$</span>Species)])</code></pre></div>
 <p><img src="../../post/ch6_files/figure-html/unnamed-chunk-22-5.png" alt="plot of chunk unnamed-chunk-22" /></p>
+
+</section>
+
+</section>
+
+
 
 
 <footer class="footline">
@@ -2685,19 +2730,19 @@ rlang\demo\ch6.md
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1609392453"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1609392453"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1609392453"></script>
-    <script src="../../js/jquery.sticky.js?1609392453"></script>
-    <script src="../../js/featherlight.min.js?1609392453"></script>
-    <script src="../../js/highlight.pack.js?1609392453"></script>
+    <script src="../../js/clipboard.min.js?1609399092"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1609399092"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1609399092"></script>
+    <script src="../../js/jquery.sticky.js?1609399092"></script>
+    <script src="../../js/featherlight.min.js?1609399092"></script>
+    <script src="../../js/highlight.pack.js?1609399092"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1609392453"></script>
-    <script src="../../js/learn.js?1609392453"></script>
-    <script src="../../js/hugo-learn.js?1609392453"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1609399092"></script>
+    <script src="../../js/learn.js?1609399092"></script>
+    <script src="../../js/hugo-learn.js?1609399092"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1609392453"></script>
+            <script src="../../mermaid/mermaid.js?1609399092"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
