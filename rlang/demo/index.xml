@@ -31,5 +31,22 @@ set.seed(1071)
 library(&amp;#34;AER&amp;#34;) #&amp;gt; Warning: package &amp;#39;AER&amp;#39; was built under R version 4.0.3 #&amp;gt; Loading required package: car #&amp;gt; Warning: package &amp;#39;car&amp;#39; was built under R version 4.</description>
     </item>
     
+    <item>
+      <title>Chapter 6</title>
+      <link>/rlang/demo/ch6.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/demo/ch6.html</guid>
+      <description>tips qqplot 比較qnorm,quantile
+qnorm(seq(0.01,0.99,0.01)) quantile(rnorm(200),probs = seq(0.01,0.99,0.01)) #基本上就是升冪排序 結論:
+x&amp;lt;-qnorm(seq(0.01,0.99,0.01))
+y&amp;lt;-quantile(rnorm(200,10,2),probs = seq(0.01,0.99,0.01)) #基本上就是升冪排序
+par(mfrow=c(3,1))
+qqnorm(x)
+qqnorm(y)
+plot(x,y)
+example my_data &amp;lt;- ToothGrowth qqnorm(my_data$len, pch = 1, frame = FALSE) qqline(my_data$len, col = &amp;#34;steelblue&amp;#34;, lwd = 2) # 📝也可以利用套裝car上的函數 library(car) #&amp;gt; Loading required package: carData qqPlot(my_data$len) #&amp;gt; [1] 23 1 24個人的數學和統計成績 MS=read.csv(&amp;#34;data/mathstat.csv&amp;#34;,header=T) MS # 📝data.frame  #&amp;gt; maths stats #&amp;gt; 1 81 72 #&amp;gt; 2 90 90 #&amp;gt; 3 91 96 #&amp;gt; 4 73 78 #&amp;gt; 5 88 89 #&amp;gt; 6 78 82 #&amp;gt; 7 95 96 #&amp;gt; 8 63 75 #&amp;gt; 9 85 86 #&amp;gt; 10 60 71 #&amp;gt; 11 83 78 #&amp;gt; 12 81 94 #&amp;gt; 13 77 73 #&amp;gt; 14 60 66 #&amp;gt; 15 66 58 #&amp;gt; 16 84 87 #&amp;gt; 17 80 86 #&amp;gt; 18 85 84 #&amp;gt; 19 70 82 #&amp;gt; 20 54 56 #&amp;gt; 21 93 98 #&amp;gt; 22 68 76 head(MS) #&amp;gt; maths stats #&amp;gt; 1 81 72 #&amp;gt; 2 90 90 #&amp;gt; 3 91 96 #&amp;gt; 4 73 78 #&amp;gt; 5 88 89 #&amp;gt; 6 78 82 dim(MS) #&amp;gt; [1] 22 2 stem(MS$maths) #&amp;gt;  #&amp;gt; The decimal point is 1 digit(s) to the right of the | #&amp;gt;  #&amp;gt; 5 | 4 #&amp;gt; 6 | 00368 #&amp;gt; 7 | 0378 #&amp;gt; 8 | 01134558 #&amp;gt; 9 | 0135 stem(MS$stats) #&amp;gt;  #&amp;gt; The decimal point is 1 digit(s) to the right of the | #&amp;gt;  #&amp;gt; 5 | 68 #&amp;gt; 6 | 6 #&amp;gt; 7 | 1235688 #&amp;gt; 8 | 2246679 #&amp;gt; 9 | 04668par(mfrow=c(1,2)) hist(MS$maths); hist(MS$stats)  par(mfrow=c(1,1)) stem(MS$maths) #&amp;gt;  #&amp;gt; The decimal point is 1 digit(s) to the right of the | #&amp;gt;  #&amp;gt; 5 | 4 #&amp;gt; 6 | 00368 #&amp;gt; 7 | 0378 #&amp;gt; 8 | 01134558 #&amp;gt; 9 | 0135 stem(MS$stats) #&amp;gt;  #&amp;gt; The decimal point is 1 digit(s) to the right of the | #&amp;gt;  #&amp;gt; 5 | 68 #&amp;gt; 6 | 6 #&amp;gt; 7 | 1235688 #&amp;gt; 8 | 2246679 #&amp;gt; 9 | 04668 EDA &amp;lt;- function (x) { par(mfrow=c(2,2)) hist(x) dotchart(x) boxplot(x,horizontal=T) qqnorm(x);qqline(x) par(mfrow=c(1,1)) } EDA(MS$maths) EDA(MS$stats) A numeric vector with 199 entries each measuring compensation in 10,000s of dollars.</description>
+    </item>
+    
   </channel>
 </rss>

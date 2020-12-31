@@ -1,0 +1,2712 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.79.1" />
+    <meta name="description" content="引用">
+
+
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="../../images/favicon.png" type="image/x-icon" />
+
+    <title>Chapter 6 - R in Class</title>
+
+    
+    <link href="../../css/nucleus.css?1609392453" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1609392453" rel="stylesheet">
+    <link href="../../css/hybrid.css?1609392453" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1609392453" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1609392453" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1609392453" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1609392453" rel="stylesheet">
+    <link href="../../css/theme.css?1609392453" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1609392453" rel="stylesheet">
+    
+    <link href="../../extra_theme/css/mystyle.css?1609392453" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1609392453" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1609392453" rel="stylesheet">
+
+    <script src="../../js/jquery-3.3.1.min.js?1609392453"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="../../rlang/demo/ch6.html">
+
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://airbon5.github.io/xx/">
+  <img src=../../extra_theme/images/rmi.png>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1609392453"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1609392453"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1609392453"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='../../'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang.html" title="R language" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../rlang.html">
+          R language
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/requirement.html" title="Requirement" class="dd-item ">
+        <a href="../../rlang/requirement.html">
+        Requirement
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/data_explorer_1.html" title="data explorer 1" class="dd-item ">
+        <a href="../../rlang/data_explorer_1.html">
+        data explorer 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/data_explorer_2.html" title="data explorer 2" class="dd-item ">
+        <a href="../../rlang/data_explorer_2.html">
+        data explorer 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/quickview1.html" title="Quick view 1" class="dd-item ">
+        <a href="../../rlang/quickview1.html">
+        Quick view 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/regular_expression.html" title="Regular expression syntax" class="dd-item ">
+        <a href="../../rlang/regular_expression.html">
+        Regular expression syntax
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_basic.html" title="type basic" class="dd-item ">
+        <a href="../../rlang/type_basic.html">
+        type basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_list.html" title="type list" class="dd-item ">
+        <a href="../../rlang/type_list.html">
+        type list
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_matrix.html" title="type matrix" class="dd-item ">
+        <a href="../../rlang/type_matrix.html">
+        type matrix
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_more.html" title="type more" class="dd-item ">
+        <a href="../../rlang/type_more.html">
+        type more
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_post.html" title="type post" class="dd-item ">
+        <a href="../../rlang/type_post.html">
+        type post
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_string_function.html" title="type string" class="dd-item ">
+        <a href="../../rlang/type_string_function.html">
+        type string
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/type_vector.html" title="type vector" class="dd-item ">
+        <a href="../../rlang/type_vector.html">
+        type vector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/filesystem.html" title="File System" class="dd-item ">
+        <a href="../../rlang/filesystem.html">
+        File System
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/programming_1.html" title="Programming 1" class="dd-item ">
+        <a href="../../rlang/programming_1.html">
+        Programming 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/apply_family.html" title="function - apply family" class="dd-item ">
+        <a href="../../rlang/apply_family.html">
+        function - apply family
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/function_1.html" title="Function basic" class="dd-item ">
+        <a href="../../rlang/function_1.html">
+        Function basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/rpackages.html" title="R Package" class="dd-item ">
+        <a href="../../rlang/rpackages.html">
+        R Package
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/plot01.html" title="Plot 01" class="dd-item ">
+        <a href="../../rlang/plot01.html">
+        Plot 01
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/plot02.html" title="Plot more" class="dd-item ">
+        <a href="../../rlang/plot02.html">
+        Plot more
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/environments.html" title="Environment" class="dd-item ">
+        <a href="../../rlang/environments.html">
+        Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/sampling.html" title="sampling" class="dd-item ">
+        <a href="../../rlang/sampling.html">
+        sampling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/eco_01_intro.html" title="Econometrics" class="dd-item ">
+        <a href="../../rlang/eco_01_intro.html">
+        Econometrics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/sim_1.html" title="simulation 1" class="dd-item ">
+        <a href="../../rlang/sim_1.html">
+        simulation 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang/hw.html" title="練習用" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../rlang/hw.html">
+          練習用
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/dataset_class.html" title="資料集" class="dd-item ">
+        <a href="../../rlang/hw/dataset_class.html">
+        資料集
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/hw_filesystem.html" title="檔案系統" class="dd-item ">
+        <a href="../../rlang/hw/hw_filesystem.html">
+        檔案系統
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/hw_basic.html" title="assignment-1" class="dd-item ">
+        <a href="../../rlang/hw/hw_basic.html">
+        assignment-1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/hw/hw_regexp.html" title="regexpr" class="dd-item ">
+        <a href="../../rlang/hw/hw_regexp.html">
+        regexpr
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../rlang/resources.html">
+          練習相關檔案
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/rlang/demo.html" title="暫時" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../rlang/demo.html">
+          暫時
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/demo/citation.html" title="引用" class="dd-item ">
+        <a href="../../rlang/demo/citation.html">
+        引用
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/rlang/demo/ch6.html" title="Chapter 6" class="dd-item active">
+        <a href="../../rlang/demo/ch6.html">
+        Chapter 6
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/topic.html" title="Topics" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../topic.html">
+          Topics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_basic.html" title="Rmd basic" class="dd-item ">
+        <a href="../../topic/rmd/rmd_basic.html">
+        Rmd basic
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_hook.html" title="Rmd hook" class="dd-item ">
+        <a href="../../topic/rmd/rmd_hook.html">
+        Rmd hook
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_pdf.html" title="Rmd pdf" class="dd-item ">
+        <a href="../../topic/rmd/rmd_pdf.html">
+        Rmd pdf
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/rmd_topic_1.html" title="rmd topic 1" class="dd-item ">
+        <a href="../../topic/rmd/rmd_topic_1.html">
+        rmd topic 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/rmd/git-book-note.html" title="git book note" class="dd-item ">
+        <a href="../../topic/rmd/git-book-note.html">
+        git book note
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/interesting.html" title="interesting" class="dd-item ">
+        <a href="../../topic/interesting.html">
+        interesting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/topic/experiment.html" title="實驗" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../topic/experiment.html">
+          實驗
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/experiment/central.html" title="中央" class="dd-item ">
+        <a href="../../topic/experiment/central.html">
+        中央
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/topic/test.html" title="網頁測試" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../topic/test.html">
+          網頁測試
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/test/emo_test.html" title="emoji_test" class="dd-item ">
+        <a href="../../topic/test/emo_test.html">
+        emoji_test
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/topic/test/testpage.html" title="testpage" class="dd-item ">
+        <a href="../../topic/test/testpage.html">
+        testpage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>class log</a> > <a href='../../rlang.html'>R language</a> > <a href='../../rlang/demo.html'>暫時</a> > Chapter 6
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#tips">tips</a>
+<ul>
+<li><a href="#qqplot">qqplot</a></li>
+</ul></li>
+<li><a href="#example">example</a></li>
+<li><a href="#24個人的數學和統計成績">24個人的數學和統計成績</a></li>
+<li><a href="#a-numeric-vector-with-199-entries-each-measuring-compensation-in-10-000s-of-dollars">A numeric vector with 199 entries each measuring compensation in 10,000s of dollars.</a></li>
+<li><a href="#總經理薪水-10萬為單位">總經理薪水,10萬為單位</a></li>
+<li><a href="#ewr">ewr</a></li>
+<li><a href="#qqplot-比較">qqplot 比較</a></li>
+<li><a href="#yes-no">yes,no</a></li>
+<li><a href="#紀錄每個人喜歡的酒類-紅-白-黃-啤酒">紀錄每個人喜歡的酒類: 紅、白、黃、啤酒</a></li>
+<li><a href="#ex">ex</a>
+<ul>
+<li><a href="#add-150000">add 150000</a></li>
+</ul></li>
+<li><a href="#two-variables">two variables</a></li>
+<li><a href="#ex-1">ex</a>
+<ul>
+<li><a href="#boxplot">boxplot</a></li>
+<li><a href="#boxplot-1">boxplot</a></li>
+<li><a href="#demo">demo</a></li>
+</ul></li>
+<li><a href="#ex-2">ex</a></li>
+<li><a href="#ex-3">ex</a>
+<ul>
+<li><a href="#stripchart-demo">stripChart demo</a></li>
+</ul></li>
+<li><a href="#iris">iris</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Chapter 6
+
+            </h1>
+			
+          
+
+        
+
+
+
+
+<h2 id="tips">tips</h2>
+
+<h3 id="qqplot">qqplot</h3>
+
+<p>比較qnorm,quantile</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">qnorm</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0.99</span>,<span style="color:#ae81ff">0.01</span>))
+<span style="color:#a6e22e">quantile</span>(<span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">200</span>),probs <span style="color:#f92672">=</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0.99</span>,<span style="color:#ae81ff">0.01</span>)) <span style="color:#75715e">#基本上就是升冪排序</span></code></pre></div>
+<p>結論:</p>
+
+
+<div class="notices quiz" ><p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">qnorm</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0.99</span>,<span style="color:#ae81ff">0.01</span>))<br />
+y<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">quantile</span>(<span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">200</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>),probs <span style="color:#f92672">=</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0.99</span>,<span style="color:#ae81ff">0.01</span>)) <span style="color:#75715e">#基本上就是升冪排序</span><br />
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>))<br />
+<span style="color:#a6e22e">qqnorm</span>(x)<br />
+<span style="color:#a6e22e">qqnorm</span>(y)<br />
+<span style="color:#a6e22e">plot</span>(x,y)</code></pre></div><br />
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p></p>
+</div>
+
+
+<h2 id="example">example</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">my_data <span style="color:#f92672">&lt;-</span> ToothGrowth
+<span style="color:#a6e22e">qqnorm</span>(my_data<span style="color:#f92672">$</span>len, pch <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+<span style="color:#a6e22e">qqline</span>(my_data<span style="color:#f92672">$</span>len, col <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;steelblue&#34;</span>, lwd <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># <div class="tooltip">📝<span class="tooltiptext" style="background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;"> 也可以利用套裝car上的函數</span></div></span>
+<span style="color:#a6e22e">library</span>(car)
+<span style="color:#75715e">#&gt; Loading required package: carData</span>
+<span style="color:#a6e22e">qqPlot</span>(my_data<span style="color:#f92672">$</span>len)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-2-2.png" alt="plot of chunk unnamed-chunk-2" /></p>
+<pre><code>#&gt; [1] 23  1</code></pre>
+<h2 id="24個人的數學和統計成績">24個人的數學和統計成績</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">MS<span style="color:#f92672">=</span><span style="color:#a6e22e">read.csv</span>(<span style="color:#e6db74">&#34;data/mathstat.csv&#34;</span>,header<span style="color:#f92672">=</span>T)
+MS <span style="color:#75715e"># <div class="tooltip">📝<span class="tooltiptext" style="background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;"> data.frame </span></div></span>
+<span style="color:#75715e">#&gt;    maths stats</span>
+<span style="color:#75715e">#&gt; 1     81    72</span>
+<span style="color:#75715e">#&gt; 2     90    90</span>
+<span style="color:#75715e">#&gt; 3     91    96</span>
+<span style="color:#75715e">#&gt; 4     73    78</span>
+<span style="color:#75715e">#&gt; 5     88    89</span>
+<span style="color:#75715e">#&gt; 6     78    82</span>
+<span style="color:#75715e">#&gt; 7     95    96</span>
+<span style="color:#75715e">#&gt; 8     63    75</span>
+<span style="color:#75715e">#&gt; 9     85    86</span>
+<span style="color:#75715e">#&gt; 10    60    71</span>
+<span style="color:#75715e">#&gt; 11    83    78</span>
+<span style="color:#75715e">#&gt; 12    81    94</span>
+<span style="color:#75715e">#&gt; 13    77    73</span>
+<span style="color:#75715e">#&gt; 14    60    66</span>
+<span style="color:#75715e">#&gt; 15    66    58</span>
+<span style="color:#75715e">#&gt; 16    84    87</span>
+<span style="color:#75715e">#&gt; 17    80    86</span>
+<span style="color:#75715e">#&gt; 18    85    84</span>
+<span style="color:#75715e">#&gt; 19    70    82</span>
+<span style="color:#75715e">#&gt; 20    54    56</span>
+<span style="color:#75715e">#&gt; 21    93    98</span>
+<span style="color:#75715e">#&gt; 22    68    76</span>
+
+<span style="color:#a6e22e">head</span>(MS)
+<span style="color:#75715e">#&gt;   maths stats</span>
+<span style="color:#75715e">#&gt; 1    81    72</span>
+<span style="color:#75715e">#&gt; 2    90    90</span>
+<span style="color:#75715e">#&gt; 3    91    96</span>
+<span style="color:#75715e">#&gt; 4    73    78</span>
+<span style="color:#75715e">#&gt; 5    88    89</span>
+<span style="color:#75715e">#&gt; 6    78    82</span>
+<span style="color:#a6e22e">dim</span>(MS)
+<span style="color:#75715e">#&gt; [1] 22  2</span>
+<span style="color:#a6e22e">stem</span>(MS<span style="color:#f92672">$</span>maths)
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   The decimal point is 1 digit(s) to the right of the |</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   5 | 4</span>
+<span style="color:#75715e">#&gt;   6 | 00368</span>
+<span style="color:#75715e">#&gt;   7 | 0378</span>
+<span style="color:#75715e">#&gt;   8 | 01134558</span>
+<span style="color:#75715e">#&gt;   9 | 0135</span>
+<span style="color:#a6e22e">stem</span>(MS<span style="color:#f92672">$</span>stats)
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   The decimal point is 1 digit(s) to the right of the |</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   5 | 68</span>
+<span style="color:#75715e">#&gt;   6 | 6</span>
+<span style="color:#75715e">#&gt;   7 | 1235688</span>
+<span style="color:#75715e">#&gt;   8 | 2246679</span>
+<span style="color:#75715e">#&gt;   9 | 04668</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">hist</span>(MS<span style="color:#f92672">$</span>maths); <span style="color:#a6e22e">hist</span>(MS<span style="color:#f92672">$</span>stats)   </code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+
+<span style="color:#a6e22e">stem</span>(MS<span style="color:#f92672">$</span>maths)
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   The decimal point is 1 digit(s) to the right of the |</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   5 | 4</span>
+<span style="color:#75715e">#&gt;   6 | 00368</span>
+<span style="color:#75715e">#&gt;   7 | 0378</span>
+<span style="color:#75715e">#&gt;   8 | 01134558</span>
+<span style="color:#75715e">#&gt;   9 | 0135</span>
+<span style="color:#a6e22e">stem</span>(MS<span style="color:#f92672">$</span>stats)
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   The decimal point is 1 digit(s) to the right of the |</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   5 | 68</span>
+<span style="color:#75715e">#&gt;   6 | 6</span>
+<span style="color:#75715e">#&gt;   7 | 1235688</span>
+<span style="color:#75715e">#&gt;   8 | 2246679</span>
+<span style="color:#75715e">#&gt;   9 | 04668</span>
+
+EDA <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function </span>(x)
+{ 
+  <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>))              
+  <span style="color:#a6e22e">hist</span>(x)                        
+  <span style="color:#a6e22e">dotchart</span>(x)                    
+  <span style="color:#a6e22e">boxplot</span>(x,horizontal<span style="color:#f92672">=</span>T)        
+  <span style="color:#a6e22e">qqnorm</span>(x);<span style="color:#a6e22e">qqline</span>(x)            
+  <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))              
+}
+
+<span style="color:#a6e22e">EDA</span>(MS<span style="color:#f92672">$</span>maths)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-4-2.png" alt="plot of chunk unnamed-chunk-4" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">EDA</span>(MS<span style="color:#f92672">$</span>stats)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-4-3.png" alt="plot of chunk unnamed-chunk-4" /></p>
+
+<h2 id="a-numeric-vector-with-199-entries-each-measuring-compensation-in-10-000s-of-dollars">A numeric vector with 199 entries each measuring compensation in 10,000s of dollars.</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(UsingR) <span style="color:#75715e"># ebook UsingR</span>
+<span style="color:#75715e">#&gt; Loading required package: MASS</span>
+<span style="color:#75715e">#&gt; Loading required package: HistData</span>
+<span style="color:#75715e">#&gt; Loading required package: Hmisc</span>
+<span style="color:#75715e">#&gt; Loading required package: lattice</span>
+<span style="color:#75715e">#&gt; Loading required package: survival</span>
+<span style="color:#75715e">#&gt; Loading required package: Formula</span>
+<span style="color:#75715e">#&gt; Loading required package: ggplot2</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; Attaching package: &#39;Hmisc&#39;</span>
+<span style="color:#75715e">#&gt; The following objects are masked from &#39;package:base&#39;:</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;     format.pval, units</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; Attaching package: &#39;UsingR&#39;</span>
+<span style="color:#75715e">#&gt; The following object is masked from &#39;package:survival&#39;:</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;     cancer</span>
+<span style="color:#a6e22e">data</span>(exec.pay) <span style="color:#75715e">#  </span>
+<span style="color:#a6e22e">mean</span>(exec.pay)
+<span style="color:#75715e">#&gt; [1] 59.88945</span>
+<span style="color:#a6e22e">summary</span>(exec.pay)
+<span style="color:#75715e">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span style="color:#75715e">#&gt;    0.00   14.00   27.00   59.89   41.50 2510.00</span>
+<span style="color:#a6e22e">boxplot</span>(exec.pay)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">mean</span>(exec.pay,trim<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>)
+<span style="color:#75715e">#&gt; [1] 29.96894</span>
+<span style="color:#a6e22e">EDA</span>(exec.pay)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-5-2.png" alt="plot of chunk unnamed-chunk-5" /><br />
+做一下轉換</p>
+
+<p>#log.exec.pay = log(exec.pay[exec.pay &gt;0])/log(10) #<br />
+#EDA(log.exec.pay)<br />
+#pay=round(rexp(100,<sup>1</sup>&frasl;<sub>25</sub>),0)<br />
+#pay1=pay[pay&gt;10]</p>
+
+<h2 id="總經理薪水-10萬為單位">總經理薪水,10萬為單位</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">pay<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">22</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">81</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">43</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">42</span>,<span style="color:#ae81ff">22</span>,<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">22</span>,
+      <span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">108</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">43</span>,<span style="color:#ae81ff">82</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">51</span>,<span style="color:#ae81ff">76</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">66</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">65</span>,<span style="color:#ae81ff">37</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">37</span>,<span style="color:#ae81ff">35</span>,
+      <span style="color:#ae81ff">39</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">38</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">85</span>,<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">25</span>,<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">54</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">14</span>,
+      <span style="color:#ae81ff">33</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">77</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">34</span>)
+<span style="color:#a6e22e">EDA</span>(pay)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-6-1.png" alt="plot of chunk unnamed-chunk-6" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">log.pay <span style="color:#f92672">=</span><span style="color:#a6e22e">log10</span>(pay)   
+<span style="color:#a6e22e">EDA</span>(log.pay)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-6-2.png" alt="plot of chunk unnamed-chunk-6" /></p>
+
+<h2 id="ewr">ewr</h2>
+
+<p>The ewr data frame has 46 rows and 11 columns.</p>
+
+<p>Gives taxi in and taxi out times for 8 different airlines and several months at EWR airport.</p>
+
+<p>Airline codes are AA (American Airlines), AQ (Aloha Airlines), AS (Alaska Airlines), CO (Continental Airlines), DL (Delta Airlines), HP (America West Airlines), NW (Northwest Airlines), TW (Trans World Airlines), UA (United Airlines), US (US Airways), and WN (Southwest Airlines)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">data</span>()
+<span style="color:#a6e22e">data</span>(ewr)
+<span style="color:#a6e22e">head</span>(ewr) 
+<span style="color:#75715e">#&gt;   Year Month  AA  CO  DL   HP  NW   TW  UA  US inorout</span>
+<span style="color:#75715e">#&gt; 1 2000   Nov 8.6 8.3 8.6 10.4 8.1  9.1 8.4 7.6      in</span>
+<span style="color:#75715e">#&gt; 2 2000   Oct 8.5 8.0 8.4 11.2 8.2  8.5 8.5 7.8      in</span>
+<span style="color:#75715e">#&gt; 3 2000   Sep 8.1 8.5 8.4 10.2 8.3  8.6 8.2 7.6      in</span>
+<span style="color:#75715e">#&gt; 4 2000   Aug 8.9 9.1 9.2 14.5 9.0 10.3 9.2 8.7      in</span>
+<span style="color:#75715e">#&gt; 5 2000   Jul 8.3 8.9 8.2 11.5 8.8  9.1 9.2 8.2      in</span>
+<span style="color:#75715e">#&gt; 6 2000   Jun 8.8 9.0 8.8 14.9 8.4 10.8 8.9 8.3      in</span>
+<span style="color:#a6e22e">boxplot</span>(ewr[,<span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>])</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">names</span>(ewr)[1]
+<span style="color:#75715e">#&gt; [1] &#34;Year&#34;</span>
+
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>))    
+<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>) <span style="color:#a6e22e">boxplot</span>(ewr[,i] <span style="color:#f92672">~</span> <span style="color:#a6e22e">as.factor</span>(ewr<span style="color:#f92672">$</span>inorout),main<span style="color:#f92672">=</span><span style="color:#a6e22e">names</span>(ewr)[i])</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-7-2.png" alt="plot of chunk unnamed-chunk-7" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))    
+<span style="color:#a6e22e">attach</span>(InsectSprays)
+<span style="color:#a6e22e">boxplot</span>(count)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">boxplot</span>(count<span style="color:#f92672">~</span>spray)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-8-2.png" alt="plot of chunk unnamed-chunk-8" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">detach</span>()</code></pre></div>
+<h2 id="qqplot-比較">qqplot 比較</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">X<span style="color:#f92672">=</span><span style="color:#a6e22e">runif</span>(<span style="color:#ae81ff">100</span>);<span style="color:#a6e22e">EDA</span>(X)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">X<span style="color:#f92672">=</span><span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>);<span style="color:#a6e22e">EDA</span>(X)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-9-2.png" alt="plot of chunk unnamed-chunk-9" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">X<span style="color:#f92672">=</span><span style="color:#a6e22e">rt</span>(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">10</span>);<span style="color:#a6e22e">EDA</span>(X)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-9-3.png" alt="plot of chunk unnamed-chunk-9" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">X<span style="color:#f92672">=</span><span style="color:#a6e22e">rf</span>(<span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">10</span>);<span style="color:#a6e22e">EDA</span>(X)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-9-4.png" alt="plot of chunk unnamed-chunk-9" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">X<span style="color:#f92672">=</span><span style="color:#a6e22e">abs</span>(<span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">200</span>));<span style="color:#a6e22e">EDA</span>(X)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-9-5.png" alt="plot of chunk unnamed-chunk-9" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">X<span style="color:#f92672">=</span><span style="color:#a6e22e">rexp</span>(<span style="color:#ae81ff">200</span>);<span style="color:#a6e22e">EDA</span>(X)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-9-6.png" alt="plot of chunk unnamed-chunk-9" /></p>
+
+<h2 id="yes-no">yes,no</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;y&#34;</span>,<span style="color:#e6db74">&#34;n&#34;</span>,<span style="color:#e6db74">&#34;n&#34;</span>,<span style="color:#e6db74">&#34;y&#34;</span>,<span style="color:#e6db74">&#34;y&#34;</span>,<span style="color:#e6db74">&#34;n&#34;</span>,<span style="color:#e6db74">&#34;n&#34;</span>,<span style="color:#e6db74">&#34;y&#34;</span>,<span style="color:#e6db74">&#34;y&#34;</span>)
+<span style="color:#a6e22e">table</span>(x)
+<span style="color:#75715e">#&gt; x</span>
+<span style="color:#75715e">#&gt; n y </span>
+<span style="color:#75715e">#&gt; 4 5</span></code></pre></div>
+<h2 id="紀錄每個人喜歡的酒類-紅-白-黃-啤酒">紀錄每個人喜歡的酒類: 紅、白、黃、啤酒</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">drink<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>) 
+<span style="color:#a6e22e">table</span>(drink)
+<span style="color:#75715e">#&gt; drink</span>
+<span style="color:#75715e">#&gt;  1  2  3  4 </span>
+<span style="color:#75715e">#&gt; 10  4  8  3</span>
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">barplot</span>(drink) 
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(drink))</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-11-1.png" alt="plot of chunk unnamed-chunk-11" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(drink)<span style="color:#f92672">/</span><span style="color:#a6e22e">length</span>(drink),col<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>)
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(drink),col<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;red&#34;</span>,<span style="color:#e6db74">&#34;yellow&#34;</span>,<span style="color:#e6db74">&#34;blue&#34;</span>,<span style="color:#e6db74">&#34;white&#34;</span>))</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-11-2.png" alt="plot of chunk unnamed-chunk-11" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+
+drink.count<span style="color:#f92672">=</span><span style="color:#a6e22e">table</span>(drink)    
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>))
+<span style="color:#a6e22e">pie</span>(drink.count)
+<span style="color:#a6e22e">names</span>(drink.count)<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;wine&#34;</span>,<span style="color:#e6db74">&#34;wite&#34;</span>,<span style="color:#e6db74">&#34;yellow&#34;</span>,<span style="color:#e6db74">&#34;beer&#34;</span>)
+<span style="color:#a6e22e">pie</span>(drink.count)
+<span style="color:#a6e22e">pie</span>(drink.count,col<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;purple&#34;</span>,<span style="color:#e6db74">&#34;green&#34;</span>,<span style="color:#e6db74">&#34;cyan&#34;</span>,<span style="color:#e6db74">&#34;white&#34;</span>))</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-11-3.png" alt="plot of chunk unnamed-chunk-11" /></p>
+
+<h2 id="ex">ex</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+
+salary<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2000</span>,<span style="color:#ae81ff">2100</span>,<span style="color:#ae81ff">2200</span>,<span style="color:#ae81ff">2300</span>,<span style="color:#ae81ff">2350</span>,<span style="color:#ae81ff">2450</span>,<span style="color:#ae81ff">2500</span> ,<span style="color:#ae81ff">2700</span>,<span style="color:#ae81ff">2900</span>,<span style="color:#ae81ff">2850</span>,<span style="color:#ae81ff">3500</span>,<span style="color:#ae81ff">3800</span>,<span style="color:#ae81ff">2600</span>,
+         <span style="color:#ae81ff">3000</span>,<span style="color:#ae81ff">3300</span>,<span style="color:#ae81ff">3200</span>,<span style="color:#ae81ff">4000</span>,<span style="color:#ae81ff">3100</span>,<span style="color:#ae81ff">4200</span>)
+<span style="color:#a6e22e">mean</span>(salary)
+<span style="color:#75715e">#&gt; [1] 2897.368</span>
+<span style="color:#a6e22e">median</span>(salary)
+<span style="color:#75715e">#&gt; [1] 2850</span>
+<span style="color:#a6e22e">var</span>(salary)
+<span style="color:#75715e">#&gt; [1] 414853.8</span>
+<span style="color:#a6e22e">sd</span>(salary)
+<span style="color:#75715e">#&gt; [1] 644.0915</span>
+<span style="color:#a6e22e">fivenum</span>(salary)
+<span style="color:#75715e">#&gt; [1] 2000 2400 2850 3250 4200</span>
+<span style="color:#a6e22e">summary</span>(salary)
+<span style="color:#75715e">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span>
+<span style="color:#75715e">#&gt;    2000    2400    2850    2897    3250    4200</span></code></pre></div>
+<h3 id="add-150000">add 150000</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">salarym<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(salary,<span style="color:#ae81ff">150000</span>)
+<span style="color:#a6e22e">mean</span>(salarym)
+<span style="color:#75715e">#&gt; [1] 10252.5</span>
+<span style="color:#a6e22e">median</span>(salarym)
+<span style="color:#75715e">#&gt; [1] 2875</span>
+<span style="color:#a6e22e">mean</span>(salarym,trim<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>)
+<span style="color:#75715e">#&gt; [1] 2870.833</span>
+<span style="color:#a6e22e">mean</span>(salarym,trim<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)
+<span style="color:#75715e">#&gt; [1] 2875</span>
+<span style="color:#a6e22e">IQR</span>(salarym)
+<span style="color:#75715e">#&gt; [1] 925</span>
+<span style="color:#a6e22e">mad</span>(salarym)
+<span style="color:#75715e">#&gt; [1] 704.235</span>
+<span style="color:#a6e22e">stem</span>(salary)
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   The decimal point is 3 digit(s) to the right of the |</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   2 | 01234</span>
+<span style="color:#75715e">#&gt;   2 | 556799</span>
+<span style="color:#75715e">#&gt;   3 | 0123</span>
+<span style="color:#75715e">#&gt;   3 | 58</span>
+<span style="color:#75715e">#&gt;   4 | 02</span>
+<span style="color:#a6e22e">stem</span>(salarym)
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   The decimal point is 5 digit(s) to the right of the |</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;   0 | 0000000000000000000</span>
+<span style="color:#75715e">#&gt;   0 | </span>
+<span style="color:#75715e">#&gt;   1 | </span>
+<span style="color:#75715e">#&gt;   1 | 5</span>
+salaryg<span style="color:#f92672">=</span><span style="color:#a6e22e">cut</span>(salary,breaks<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2000</span>,<span style="color:#ae81ff">3000</span>,<span style="color:#ae81ff">4000</span>,<span style="color:#a6e22e">max</span>(salary)))
+<span style="color:#a6e22e">table</span>(salaryg)
+<span style="color:#75715e">#&gt; salaryg</span>
+<span style="color:#75715e">#&gt;   (2e+03,3e+03]   (3e+03,4e+03] (4e+03,4.2e+03] </span>
+<span style="color:#75715e">#&gt;              11               6               1</span>
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">hist</span>(salary)
+<span style="color:#a6e22e">rug</span>(salary)
+<span style="color:#a6e22e">hist</span>(salary,prob<span style="color:#f92672">=</span>T)
+<span style="color:#a6e22e">rug</span>(salary)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-13-1.png" alt="plot of chunk unnamed-chunk-13" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">boxplot</span>(salary)
+<span style="color:#a6e22e">boxplot</span>(salary,horizontal<span style="color:#f92672">=</span>T)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-13-2.png" alt="plot of chunk unnamed-chunk-13" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+
+<span style="color:#a6e22e">hist</span>(faithful<span style="color:#f92672">$</span>eruptions,prob<span style="color:#f92672">=</span>T,breaks<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span>)  
+<span style="color:#a6e22e">lines</span>(<span style="color:#a6e22e">density</span>(faithful<span style="color:#f92672">$</span>eruptions),col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-13-3.png" alt="plot of chunk unnamed-chunk-13" /><br />
+###outlier detection</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">boxplot</span>(salarym)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-14-1.png" alt="plot of chunk unnamed-chunk-14" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">boxplot.stats</span>(salarym)
+<span style="color:#75715e">#&gt; $stats</span>
+<span style="color:#75715e">#&gt; [1] 2000 2400 2875 3400 4200</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; $n</span>
+<span style="color:#75715e">#&gt; [1] 20</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; $conf</span>
+<span style="color:#75715e">#&gt; [1] 2521.701 3228.299</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; $out</span>
+<span style="color:#75715e">#&gt; [1] 150000</span></code></pre></div>
+<p>##Grubb test<br />
+library(outliers)<br />
+set.seed(5)<br />
+x = rnorm(10)<br />
+x<br />
+grubbs.test(x)<br />
+grubbs.test(x,type=20)<br />
+grubbs.test(x,type=11)<br />
+######Dixon Q test<br />
+set.seed(8)<br />
+x=rnorm(10)<br />
+x<br />
+dixon.test(x)<br />
+dixon.test(x,opposite=TRUE)<br />
+dixon.test(x,type=10)</p>
+
+<h2 id="two-variables">two variables</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">smoke<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>)
+study<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>)
+smoke<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>,<span style="color:#e6db74">&#34;N&#34;</span>,<span style="color:#e6db74">&#34;Y&#34;</span>)
+study<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;&lt;5h&#34;</span>,<span style="color:#e6db74">&#34;5-10h&#34;</span>,<span style="color:#e6db74">&#34;5-10h&#34;</span>,<span style="color:#e6db74">&#34;&gt;10h&#34;</span>,<span style="color:#e6db74">&#34;&gt;10h&#34;</span>,<span style="color:#e6db74">&#34;&lt;5h&#34;</span>,<span style="color:#e6db74">&#34;5-10h&#34;</span>,<span style="color:#e6db74">&#34;&lt;5h&#34;</span>,<span style="color:#e6db74">&#34;&gt;10h&#34;</span>,<span style="color:#e6db74">&#34;5-10h&#34;</span>)
+<span style="color:#a6e22e">table</span>(smoke,study)
+<span style="color:#75715e">#&gt;      study</span>
+<span style="color:#75715e">#&gt; smoke &lt;5h &gt;10h 5-10h</span>
+<span style="color:#75715e">#&gt;     N   0    2     2</span>
+<span style="color:#75715e">#&gt;     Y   3    1     2</span>
+tab<span style="color:#f92672">=</span><span style="color:#a6e22e">table</span>(smoke,study)
+<span style="color:#a6e22e">prop.table</span>(tab,<span style="color:#ae81ff">1</span>)
+<span style="color:#75715e">#&gt;      study</span>
+<span style="color:#75715e">#&gt; smoke       &lt;5h      &gt;10h     5-10h</span>
+<span style="color:#75715e">#&gt;     N 0.0000000 0.5000000 0.5000000</span>
+<span style="color:#75715e">#&gt;     Y 0.5000000 0.1666667 0.3333333</span>
+<span style="color:#a6e22e">prop.table</span>(tab,<span style="color:#ae81ff">2</span>)
+<span style="color:#75715e">#&gt;      study</span>
+<span style="color:#75715e">#&gt; smoke       &lt;5h      &gt;10h     5-10h</span>
+<span style="color:#75715e">#&gt;     N 0.0000000 0.6666667 0.5000000</span>
+<span style="color:#75715e">#&gt;     Y 1.0000000 0.3333333 0.5000000</span>
+<span style="color:#a6e22e">prop.table</span>(tab)
+<span style="color:#75715e">#&gt;      study</span>
+<span style="color:#75715e">#&gt; smoke &lt;5h &gt;10h 5-10h</span>
+<span style="color:#75715e">#&gt;     N 0.0  0.2   0.2</span>
+<span style="color:#75715e">#&gt;     Y 0.3  0.1   0.2</span>
+prop <span style="color:#f92672">=</span> <span style="color:#a6e22e">function</span>(x) x<span style="color:#f92672">/</span><span style="color:#a6e22e">sum</span>(x)
+<span style="color:#a6e22e">apply</span>(tab,<span style="color:#ae81ff">2</span>,prop)
+<span style="color:#75715e">#&gt;      study</span>
+<span style="color:#75715e">#&gt; smoke &lt;5h      &gt;10h 5-10h</span>
+<span style="color:#75715e">#&gt;     N   0 0.6666667   0.5</span>
+<span style="color:#75715e">#&gt;     Y   1 0.3333333   0.5</span>
+<span style="color:#a6e22e">t</span>(<span style="color:#a6e22e">apply</span>(tab,<span style="color:#ae81ff">1</span>,prop))
+<span style="color:#75715e">#&gt;      study</span>
+<span style="color:#75715e">#&gt; smoke &lt;5h      &gt;10h     5-10h</span>
+<span style="color:#75715e">#&gt;     N 0.0 0.5000000 0.5000000</span>
+<span style="color:#75715e">#&gt;     Y 0.5 0.1666667 0.3333333</span>
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>))
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(smoke,study))     
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(study,smoke))     
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(study,smoke),beside<span style="color:#f92672">=</span>T,legend.text<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;&lt;5h&#34;</span>,<span style="color:#e6db74">&#34;5-10h&#34;</span>,<span style="color:#e6db74">&#34;&gt;10&#34;</span>))</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-15-1.png" alt="plot of chunk unnamed-chunk-15" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#legend()</span>
+<span style="color:#75715e">#par(mfrow=c(1,1))</span></code></pre></div>
+<h2 id="ex-1">ex</h2>
+
+<h3 id="boxplot">boxplot</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">x<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>)
+y<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>)
+<span style="color:#a6e22e">boxplot</span>(x,y)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-16-1.png" alt="plot of chunk unnamed-chunk-16" /></p>
+
+<h3 id="boxplot-1">boxplot</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">d<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>)
+g<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>)
+<span style="color:#a6e22e">boxplot</span>(d<span style="color:#f92672">~</span>g)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-17-1.png" alt="plot of chunk unnamed-chunk-17" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">plot</span>(d,g)                
+<span style="color:#a6e22e">abline</span>(<span style="color:#a6e22e">lm</span>(d<span style="color:#f92672">~</span>g))          </code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-17-2.png" alt="plot of chunk unnamed-chunk-17" /></p>
+
+<h3 id="demo">demo</h3>
+
+<p>不執行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">yx<span style="color:#f92672">=</span><span style="color:#a6e22e">read.table</span>(<span style="color:#e6db74">&#34;reg1.txt&#34;</span>,header<span style="color:#f92672">=</span>T)
+yx
+<span style="color:#a6e22e">attach</span>(yx)
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">plot</span>(x,y,pch<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+<span style="color:#a6e22e">plot</span>(x,y);<span style="color:#a6e22e">abline</span>(<span style="color:#a6e22e">lm</span>(y<span style="color:#f92672">~</span>x))
+<span style="color:#a6e22e">abline</span>(v<span style="color:#f92672">=</span><span style="color:#ae81ff">4500</span>)
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">cor</span>(x,y)
+<span style="color:#a6e22e">cor</span>(y,x)
+
+<span style="color:#a6e22e">cor</span>(<span style="color:#a6e22e">rank</span>(yx<span style="color:#f92672">$</span>x),<span style="color:#a6e22e">rank</span>(yx<span style="color:#f92672">$</span>y))
+<span style="color:#a6e22e">cor</span>(x,y,method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;spearman&#34;</span>) <span style="color:#75715e">#cor(yx$x,yx$y,method=&#34;spearman&#34;)</span>
+<span style="color:#a6e22e">detach</span>()
+ </code></pre></div>
+<h2 id="ex-2">ex</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">data</span>(PlantGrowth)
+<span style="color:#a6e22e">attach</span>(PlantGrowth)
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">stripchart</span>(weight<span style="color:#f92672">~</span>group,pc<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)         
+<span style="color:#a6e22e">boxplot</span>(weight<span style="color:#f92672">~</span>group, horizontal<span style="color:#f92672">=</span>T)   </code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-18-1.png" alt="plot of chunk unnamed-chunk-18" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">detach</span>()
+unPG<span style="color:#f92672">=</span><span style="color:#a6e22e">unstack</span>(PlantGrowth)
+sPG<span style="color:#f92672">=</span><span style="color:#a6e22e">stack</span>(unPG)
+sPG
+<span style="color:#75715e">#&gt;    values  ind</span>
+<span style="color:#75715e">#&gt; 1    4.17 ctrl</span>
+<span style="color:#75715e">#&gt; 2    5.58 ctrl</span>
+<span style="color:#75715e">#&gt; 3    5.18 ctrl</span>
+<span style="color:#75715e">#&gt; 4    6.11 ctrl</span>
+<span style="color:#75715e">#&gt; 5    4.50 ctrl</span>
+<span style="color:#75715e">#&gt; 6    4.61 ctrl</span>
+<span style="color:#75715e">#&gt; 7    5.17 ctrl</span>
+<span style="color:#75715e">#&gt; 8    4.53 ctrl</span>
+<span style="color:#75715e">#&gt; 9    5.33 ctrl</span>
+<span style="color:#75715e">#&gt; 10   5.14 ctrl</span>
+<span style="color:#75715e">#&gt; 11   4.81 trt1</span>
+<span style="color:#75715e">#&gt; 12   4.17 trt1</span>
+<span style="color:#75715e">#&gt; 13   4.41 trt1</span>
+<span style="color:#75715e">#&gt; 14   3.59 trt1</span>
+<span style="color:#75715e">#&gt; 15   5.87 trt1</span>
+<span style="color:#75715e">#&gt; 16   3.83 trt1</span>
+<span style="color:#75715e">#&gt; 17   6.03 trt1</span>
+<span style="color:#75715e">#&gt; 18   4.89 trt1</span>
+<span style="color:#75715e">#&gt; 19   4.32 trt1</span>
+<span style="color:#75715e">#&gt; 20   4.69 trt1</span>
+<span style="color:#75715e">#&gt; 21   6.31 trt2</span>
+<span style="color:#75715e">#&gt; 22   5.12 trt2</span>
+<span style="color:#75715e">#&gt; 23   5.54 trt2</span>
+<span style="color:#75715e">#&gt; 24   5.50 trt2</span>
+<span style="color:#75715e">#&gt; 25   5.37 trt2</span>
+<span style="color:#75715e">#&gt; 26   5.29 trt2</span>
+<span style="color:#75715e">#&gt; 27   4.92 trt2</span>
+<span style="color:#75715e">#&gt; 28   6.15 trt2</span>
+<span style="color:#75715e">#&gt; 29   5.80 trt2</span>
+<span style="color:#75715e">#&gt; 30   5.26 trt2</span></code></pre></div>
+<h2 id="ex-3">ex</h2>
+
+<p>將價格分3組,cheap,okay,expensive</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(MASS)
+<span style="color:#a6e22e">data</span>(Cars93)
+<span style="color:#a6e22e">dim</span>(Cars93)
+<span style="color:#75715e">#&gt; [1] 93 27</span>
+<span style="color:#a6e22e">attach</span>(Cars93)
+<span style="color:#a6e22e">names</span>(Cars93)
+<span style="color:#75715e">#&gt;  [1] &#34;Manufacturer&#34;       &#34;Model&#34;              &#34;Type&#34;              </span>
+<span style="color:#75715e">#&gt;  [4] &#34;Min.Price&#34;          &#34;Price&#34;              &#34;Max.Price&#34;         </span>
+<span style="color:#75715e">#&gt;  [7] &#34;MPG.city&#34;           &#34;MPG.highway&#34;        &#34;AirBags&#34;           </span>
+<span style="color:#75715e">#&gt; [10] &#34;DriveTrain&#34;         &#34;Cylinders&#34;          &#34;EngineSize&#34;        </span>
+<span style="color:#75715e">#&gt; [13] &#34;Horsepower&#34;         &#34;RPM&#34;                &#34;Rev.per.mile&#34;      </span>
+<span style="color:#75715e">#&gt; [16] &#34;Man.trans.avail&#34;    &#34;Fuel.tank.capacity&#34; &#34;Passengers&#34;        </span>
+<span style="color:#75715e">#&gt; [19] &#34;Length&#34;             &#34;Wheelbase&#34;          &#34;Width&#34;             </span>
+<span style="color:#75715e">#&gt; [22] &#34;Turn.circle&#34;        &#34;Rear.seat.room&#34;     &#34;Luggage.room&#34;      </span>
+<span style="color:#75715e">#&gt; [25] &#34;Weight&#34;             &#34;Origin&#34;             &#34;Make&#34;</span>
+price<span style="color:#f92672">=</span><span style="color:#a6e22e">cut</span>(Price,<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">20</span>,<span style="color:#a6e22e">max</span>(Price)))    
+<span style="color:#a6e22e">table</span>(price)
+<span style="color:#75715e">#&gt; price</span>
+<span style="color:#75715e">#&gt;    (0,12]   (12,20] (20,61.9] </span>
+<span style="color:#75715e">#&gt;        22        40        31</span>
+<span style="color:#a6e22e">levels</span>(price)<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;cheap&#34;</span>,<span style="color:#e6db74">&#34;okay&#34;</span>,<span style="color:#e6db74">&#34;expensive&#34;</span>)
+<span style="color:#a6e22e">table</span>(price)
+<span style="color:#75715e">#&gt; price</span>
+<span style="color:#75715e">#&gt;     cheap      okay expensive </span>
+<span style="color:#75715e">#&gt;        22        40        31</span>
+mpg<span style="color:#f92672">=</span><span style="color:#a6e22e">cut</span>(MPG.highway,<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>,<span style="color:#a6e22e">max</span>(MPG.highway)))
+<span style="color:#a6e22e">table</span>(mpg)
+<span style="color:#75715e">#&gt; mpg</span>
+<span style="color:#75715e">#&gt;  (0,20] (20,30] (30,50] </span>
+<span style="color:#75715e">#&gt;       2      62      29</span>
+<span style="color:#a6e22e">levels</span>(mpg)<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;gas guzzler&#34;</span>,<span style="color:#e6db74">&#34;oky&#34;</span>,<span style="color:#e6db74">&#34;miser&#34;</span>)
+<span style="color:#a6e22e">table</span>(mpg)
+<span style="color:#75715e">#&gt; mpg</span>
+<span style="color:#75715e">#&gt; gas guzzler         oky       miser </span>
+<span style="color:#75715e">#&gt;           2          62          29</span>
+<span style="color:#a6e22e">table</span>(Type)
+<span style="color:#75715e">#&gt; Type</span>
+<span style="color:#75715e">#&gt; Compact   Large Midsize   Small  Sporty     Van </span>
+<span style="color:#75715e">#&gt;      16      11      22      21      14       9</span>
+<span style="color:#a6e22e">table</span>(price,Type)
+<span style="color:#75715e">#&gt;            Type</span>
+<span style="color:#75715e">#&gt; price       Compact Large Midsize Small Sporty Van</span>
+<span style="color:#75715e">#&gt;   cheap           3     0       0    18      1   0</span>
+<span style="color:#75715e">#&gt;   okay            9     3       8     3      9   8</span>
+<span style="color:#75715e">#&gt;   expensive       4     8      14     0      4   1</span>
+<span style="color:#a6e22e">table</span>(price,mpg)
+<span style="color:#75715e">#&gt;            mpg</span>
+<span style="color:#75715e">#&gt; price       gas guzzler oky miser</span>
+<span style="color:#75715e">#&gt;   cheap               0   5    17</span>
+<span style="color:#75715e">#&gt;   okay                2  26    12</span>
+<span style="color:#75715e">#&gt;   expensive           0  31     0</span>
+<span style="color:#a6e22e">table</span>(price,Type,mpg)
+<span style="color:#75715e">#&gt; , , mpg = gas guzzler</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;            Type</span>
+<span style="color:#75715e">#&gt; price       Compact Large Midsize Small Sporty Van</span>
+<span style="color:#75715e">#&gt;   cheap           0     0       0     0      0   0</span>
+<span style="color:#75715e">#&gt;   okay            0     0       0     0      0   2</span>
+<span style="color:#75715e">#&gt;   expensive       0     0       0     0      0   0</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; , , mpg = oky</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;            Type</span>
+<span style="color:#75715e">#&gt; price       Compact Large Midsize Small Sporty Van</span>
+<span style="color:#75715e">#&gt;   cheap           1     0       0     4      0   0</span>
+<span style="color:#75715e">#&gt;   okay            5     3       6     0      6   6</span>
+<span style="color:#75715e">#&gt;   expensive       4     8      14     0      4   1</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt; , , mpg = miser</span>
+<span style="color:#75715e">#&gt; </span>
+<span style="color:#75715e">#&gt;            Type</span>
+<span style="color:#75715e">#&gt; price       Compact Large Midsize Small Sporty Van</span>
+<span style="color:#75715e">#&gt;   cheap           2     0       0    14      1   0</span>
+<span style="color:#75715e">#&gt;   okay            4     0       2     3      3   0</span>
+<span style="color:#75715e">#&gt;   expensive       0     0       0     0      0   0</span>
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(price,Type))
+<span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(price,Type),beside<span style="color:#f92672">=</span>T)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-19-1.png" alt="plot of chunk unnamed-chunk-19" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">boxplot</span>(Price<span style="color:#f92672">~</span>Type)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-20-1.png" alt="plot of chunk unnamed-chunk-20" /></p>
+
+<h3 id="stripchart-demo">stripChart demo</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">r1<span style="color:#f92672">=</span><span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">1000</span>)
+f1<span style="color:#f92672">=</span><span style="color:#a6e22e">factor</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">100</span>))
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">boxplot</span>(r1<span style="color:#f92672">~</span>f1)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-21-1.png" alt="plot of chunk unnamed-chunk-21" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">stripchart</span>(r1<span style="color:#f92672">~</span>f1)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-21-2.png" alt="plot of chunk unnamed-chunk-21" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">r2<span style="color:#f92672">=</span><span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>)
+f2<span style="color:#f92672">=</span><span style="color:#a6e22e">factor</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>))
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">stripChart</span>(r2<span style="color:#f92672">~</span>f2)
+<span style="color:#75715e">#&gt; Error in min(x, na.rm = na.rm): &#39;type&#39; (list) 的引數無效</span>
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+<span style="color:#a6e22e">dotchart</span>(PlantGrowth<span style="color:#f92672">$</span>weight,groups<span style="color:#f92672">=</span>PlantGrowth<span style="color:#f92672">$</span>group)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-21-3.png" alt="plot of chunk unnamed-chunk-21" /></p>
+
+<h2 id="iris">iris</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">#iris</span>
+<span style="color:#a6e22e">head</span>(iris)
+<span style="color:#75715e">#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species</span>
+<span style="color:#75715e">#&gt; 1          5.1         3.5          1.4         0.2  setosa</span>
+<span style="color:#75715e">#&gt; 2          4.9         3.0          1.4         0.2  setosa</span>
+<span style="color:#75715e">#&gt; 3          4.7         3.2          1.3         0.2  setosa</span>
+<span style="color:#75715e">#&gt; 4          4.6         3.1          1.5         0.2  setosa</span>
+<span style="color:#75715e">#&gt; 5          5.0         3.6          1.4         0.2  setosa</span>
+<span style="color:#75715e">#&gt; 6          5.4         3.9          1.7         0.4  setosa</span>
+<span style="color:#a6e22e">levels</span>(iris<span style="color:#f92672">$</span>Species)
+<span style="color:#75715e">#&gt; [1] &#34;setosa&#34;     &#34;versicolor&#34; &#34;virginica&#34;</span>
+iris.lab <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;1&#34;</span>,<span style="color:#e6db74">&#34;2&#34;</span>,<span style="color:#e6db74">&#34;3&#34;</span>),<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">3</span>))
+
+<span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>))
+<span style="color:#a6e22e">plot</span>(iris[,<span style="color:#ae81ff">1</span>],iris[,<span style="color:#ae81ff">3</span>],type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;n&#34;</span>)      
+<span style="color:#a6e22e">text</span>(iris[,<span style="color:#ae81ff">1</span>],iris[,<span style="color:#ae81ff">3</span>],cex<span style="color:#f92672">=</span><span style="color:#ae81ff">0.6</span>)       
+<span style="color:#a6e22e">plot</span>(iris[,<span style="color:#ae81ff">1</span>],iris[,<span style="color:#ae81ff">3</span>],type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;n&#34;</span>) 
+<span style="color:#a6e22e">text</span>(iris[,<span style="color:#ae81ff">1</span>],iris[,<span style="color:#ae81ff">3</span>],iris.lab,cex<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>)  </code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-22-1.png" alt="plot of chunk unnamed-chunk-22" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)) 
+<span style="color:#a6e22e">pairs</span>(iris)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-22-2.png" alt="plot of chunk unnamed-chunk-22" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)) 
+<span style="color:#a6e22e">pairs</span>(iris[,<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>])</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-22-3.png" alt="plot of chunk unnamed-chunk-22" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">pairs</span>(iris[1<span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>],pch<span style="color:#f92672">=</span><span style="color:#ae81ff">21</span>,bg<span style="color:#f92672">=</span>iris.lab)</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-22-4.png" alt="plot of chunk unnamed-chunk-22" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">pairs</span>(iris[1<span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>],pch<span style="color:#f92672">=</span><span style="color:#ae81ff">21</span>, bg<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;red&#34;</span>, <span style="color:#e6db74">&#34;green3&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>)<span style="color:#a6e22e">[unclass</span>(iris<span style="color:#f92672">$</span>Species)])</code></pre></div>
+<p><img src="../../post/ch6_files/figure-html/unnamed-chunk-22-5.png" alt="plot of chunk unnamed-chunk-22" /></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+rlang\demo\ch6.md
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../rlang/demo/citation.html" title="引用"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../topic.html" title="Topics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1609392453"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1609392453"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1609392453"></script>
+    <script src="../../js/jquery.sticky.js?1609392453"></script>
+    <script src="../../js/featherlight.min.js?1609392453"></script>
+    <script src="../../js/highlight.pack.js?1609392453"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1609392453"></script>
+    <script src="../../js/learn.js?1609392453"></script>
+    <script src="../../js/hugo-learn.js?1609392453"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1609392453"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+
+
+  </body>
+</html>
+
