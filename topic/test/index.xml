@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>網頁測試 on R in Class</title>
-    <link>/topic/test.html</link>
+    <link>https://airbone4.github.io/blogR/topic/test.html</link>
     <description>Recent content in 網頁測試 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/topic/test/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/topic/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>emoji_test</title>
-      <link>/topic/test/emo_test.html</link>
+      <link>https://airbone4.github.io/blogR/topic/test/emo_test.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/test/emo_test.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/test/emo_test.html</guid>
       <description> R Markdown Example You can either refer to emoji by their name (which is unique):
 emo::ji(&amp;quot;poop&amp;quot;) #&amp;gt; &amp;lt;U+0001F4A9&amp;gt;  Or by a keyword. Keywords are not unique so emo::ji will pick one for you at random.
 emo::ji(&amp;quot;face&amp;quot;) #&amp;gt; &amp;lt;U+0001F479&amp;gt; emo::ji(&amp;quot;face&amp;quot;) #&amp;gt; &amp;lt;U+0001F42E&amp;gt; emo::ji(&amp;quot;face&amp;quot;) #&amp;gt; &amp;lt;U+0001F61A&amp;gt;  Often you&#39;ll use inline like `r emo::ji(&amp;quot;smile&amp;quot;)` 😄
@@ -21,10 +21,10 @@ Keywords These are all keywords with more than one emoji associated with them.
     
     <item>
       <title>testpage</title>
-      <link>/topic/test/testpage.html</link>
+      <link>https://airbone4.github.io/blogR/topic/test/testpage.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/test/testpage.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/test/testpage.html</guid>
       <description>By default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.   </description>
     </item>
     

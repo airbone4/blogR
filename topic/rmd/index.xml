@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rmarkdown on R in Class</title>
-    <link>/topic/rmd.html</link>
+    <link>https://airbone4.github.io/blogR/topic/rmd.html</link>
     <description>Recent content in rmarkdown on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/topic/rmd/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/topic/rmd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 Rmd basic</title>
-      <link>/topic/rmd/01_rmd_basic.html</link>
+      <link>https://airbone4.github.io/blogR/topic/rmd/01_rmd_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/rmd/01_rmd_basic.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/rmd/01_rmd_basic.html</guid>
       <description>rbook 提要 markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。
 在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)參考下節。
 相關指令和流程可以參考這裡
@@ -29,10 +29,10 @@ knitr::purl(&amp;quot;03-purl.Rmd&amp;quot;) # output: 03-purl.R
     
     <item>
       <title>04 Rmd hook</title>
-      <link>/topic/rmd/04_rmd_hook.html</link>
+      <link>https://airbone4.github.io/blogR/topic/rmd/04_rmd_hook.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/rmd/04_rmd_hook.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/rmd/04_rmd_hook.html</guid>
       <description>背景 提取程式碼 參考
 knitr hook 插塊(chunk)顏色 有關hook 的設定,參考 knitr hook
 設定警告訊息為紅色
@@ -43,10 +43,10 @@ rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&amp;quot;#&amp;quot;,na.
     
     <item>
       <title>03 Rmd pdf</title>
-      <link>/topic/rmd/03_rmd_pdf.html</link>
+      <link>https://airbone4.github.io/blogR/topic/rmd/03_rmd_pdf.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/rmd/03_rmd_pdf.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/rmd/03_rmd_pdf.html</guid>
       <description>產生PDF 文件 ** 中文字型問題 ** 參考
 update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update()  中文：
 不要管那麼多網路上講的，就
@@ -60,10 +60,10 @@ meta data 上的pdf 設定,常見版本 --- title: &amp;quot;Habits&amp;quot; au
     
     <item>
       <title>05 rmd topic 1</title>
-      <link>/topic/rmd/05_rmd_topic_1.html</link>
+      <link>https://airbone4.github.io/blogR/topic/rmd/05_rmd_topic_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/rmd/05_rmd_topic_1.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/rmd/05_rmd_topic_1.html</guid>
       <description>討論  hook
  Verbatim Chunks in R Markdow
  HTML widgets
@@ -82,10 +82,10 @@ inline(&amp;quot;dd&amp;quot;) ===&amp;gt; `` `r dd` ``  測試
     
     <item>
       <title>02 git book note</title>
-      <link>/topic/rmd/02_git-book-note.html</link>
+      <link>https://airbone4.github.io/blogR/topic/rmd/02_git-book-note.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/rmd/02_git-book-note.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/rmd/02_git-book-note.html</guid>
       <description>gitbook introduction 3個地方需要注意:
 _output.yml
 _bookdown.yml

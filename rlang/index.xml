@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rlangs on R in Class</title>
-    <link>/rlang.html</link>
+    <link>https://airbone4.github.io/blogR/rlang.html</link>
     <description>Recent content in Rlangs on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/rlang/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/rlang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1 Requirement</title>
-      <link>/rlang/1_0_requirement.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/1_0_requirement.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/1_0_requirement.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/1_0_requirement.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2 data explorer 1</title>
-      <link>/rlang/2_data_explorer_1.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/2_data_explorer_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/2_data_explorer_1.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/2_data_explorer_1.html</guid>
       <description>資料探索 常用函數  Mean
  Median
  Quartile
@@ -40,19 +40,19 @@ mean(mtcars$mpg)  #&amp;gt; [1] 20.09062  median(mtcars$mpg)  #&amp;gt; [1] 19.2
     
     <item>
       <title>2.1 data explorer 2</title>
-      <link>/rlang/2_1_data_explorer_2.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/2_1_data_explorer_2.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/2_1_data_explorer_2.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/2_1_data_explorer_2.html</guid>
       <description>age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372, 34.935, 35.2115, 35.2115, 5.2115, 36.7803) group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1) dframe = data.frame(age=age, group=group)  分組列出summary:利用函數 age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372, 34.935, 35.2115, 35.2115, 5.2115, 36.7803) group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1) dframe = data.frame(age=age, group=group) mygroup&amp;lt;-function(df,g,idx) { ft&amp;lt;-factor(df$g) gf&amp;lt;-ft==levels(ft)[idx] # 第一組 g1&amp;lt;-df[gf,] return(g1) } x&amp;lt;-mygroup(dframe,&amp;quot;group&amp;quot;,1)  問題： 現在把某個欄位依據分組畫出boxplot</description>
     </item>
     
     <item>
       <title>3. Quick view 1</title>
-      <link>/rlang/3_quickview1.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/3_quickview1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/3_quickview1.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/3_quickview1.html</guid>
       <description>quick view 快速指令
 目前有哪些資料集可以測試 data()
 attach()
@@ -64,19 +64,19 @@ mtcars  #&amp;gt; mpg cyl disp hp drat wt qsec vs am gear carb #&amp;gt; Mazda R
     
     <item>
       <title>3.1 Regular expression syntax</title>
-      <link>/rlang/3_01_regular_expression.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/3_01_regular_expression.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/3_01_regular_expression.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/3_01_regular_expression.html</guid>
       <description>&lt;p&gt;利用一些特殊字元，例如 &lt;code&gt;$ * + . ? [ ] ^ { } | ( ) \&lt;/code&gt;構成Regular expressions，用來在文字中表達某些搜尋樣式的語法。 這裡只是簡短的介紹&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>4.1.4 type more</title>
-      <link>/rlang/4_1_4_type_more.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_1_4_type_more.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_1_4_type_more.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_1_4_type_more.html</guid>
       <description>Factors R也能把資料存為factor。
 在大部分實驗中,某些解釋變數經常有不同程度的測試,稱為因子。
 大意如下：
@@ -91,10 +91,10 @@ fert  #&amp;gt; [1] 10 20 20 50 10 20 10 50 20 #&amp;gt; Levels: 10 &amp;lt; 20 
     
     <item>
       <title>4.2 type post</title>
-      <link>/rlang/4_2_type_post.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_2_type_post.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_2_type_post.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_2_type_post.html</guid>
       <description>相關操作 practice1.R
 問題:想要知道有甚麼資料庫可以用? 例如， 想要知道資料庫裏面有沒有&#39;mtcars&#39;
 hint:
@@ -106,10 +106,10 @@ xx  str(xx)  #&amp;gt; List of 4 #&amp;gt; $ title : chr &amp;quot;Data sets&amp
     
     <item>
       <title>4.3 type matrix</title>
-      <link>/rlang/4_3_type_matrix.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_3_type_matrix.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_3_type_matrix.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_3_type_matrix.html</guid>
       <description>matrix 矩陣的建立有多種方式,其中一種是利用向量轉填矩陣，填入的方式預設是以coumn為主要方向。
 matrix(c(1,2,3,4,5,6),2,3) #&amp;gt; [,1] [,2] [,3] #&amp;gt; [1,] 1 3 5 #&amp;gt; [2,] 2 4 6  問題: 怎樣產生
 1 2 3
@@ -120,10 +120,10 @@ diag(1, nrow = 5) #&amp;gt; [,1] [,2] [,3] [,4] [,5] #&amp;gt; [1,] 1 0 0 0 0 #&
     
     <item>
       <title>4.3-a type matrix</title>
-      <link>/rlang/4_3_a_type_matrix.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_3_a_type_matrix.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_3_a_type_matrix.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_3_a_type_matrix.html</guid>
       <description>matrix 矩陣的建立有多種方式,其中一種是利用向量轉填矩陣，填入的方式預設是以coumn為主要方向。
 matrix(c(1,2,3,4,5,6),2,3)  #&amp;gt; [,1] [,2] [,3] #&amp;gt; [1,] 1 3 5 #&amp;gt; [2,] 2 4 6  問題: 怎樣產生
 1 2 3
@@ -134,10 +134,10 @@ diag(1, nrow = 5)  #&amp;gt; [,1] [,2] [,3] [,4] [,5] #&amp;gt; [1,] 1 0 0 0 0 #
     
     <item>
       <title>4.4 type string</title>
-      <link>/rlang/4_4_type_string_function.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_4_type_string_function.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_4_type_string_function.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_4_type_string_function.html</guid>
       <description>字串函數 R提供的字串函數(ascii)  nchar: string length
  paste: concatenate strings
  substr: substring
@@ -152,30 +152,30 @@ strtrim accepts both a vector of strings and a vector of truncation positions.
     
     <item>
       <title>4.5 type vector</title>
-      <link>/rlang/4_5_type_vector.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_5_type_vector.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_5_type_vector.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_5_type_vector.html</guid>
       <description>vector 函數範例 cbind,rbind x&amp;lt;-runif(5) y&amp;lt;-runif(6) cbind(x,y)  #&amp;gt; Warning in cbind(x, y): number of rows of result is not a multiple of vector #&amp;gt; length (arg 1)  #&amp;gt; x y #&amp;gt; [1,] 0.43924873 0.1709444 #&amp;gt; [2,] 0.74164621 0.9249346 #&amp;gt; [3,] 0.72473924 0.2492189 #&amp;gt; [4,] 0.04998882 0.1531836 #&amp;gt; [5,] 0.40336666 0.1483507 #&amp;gt; [6,] 0.43924873 0.1862884  函數diff Arguments
 * x: a numeric vector or matrix containing the values to be differenced.</description>
     </item>
     
     <item>
       <title>4.6 topic data frame</title>
-      <link>/rlang/4_06_topic_dataframe.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_06_topic_dataframe.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_06_topic_dataframe.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_06_topic_dataframe.html</guid>
       <description>Bootstrap method for mixed-model [](https://www.r-bloggers.com/2016/09/linear-mixed-effects-model-with-bootstrapping/)
 b.coef &amp;lt;- list() for (i in 1:1000){ # 1:1000 = 執行1000次 # 隨機取樣 boot.data &amp;lt;- dataset[, .SD[sample(.N, min(.N,200), replace = FALSE)], by = list(ZONE8, Year)] # 用boot.data來跑GLMM boot.logit &amp;lt;- glmer(Count.F ~ Year.s + (0 + Year.s|ZONE8), data = boot.data, family = poisson) # 輸出斜率與截距，輸出到 b.coef 裡面 b.coef[[i]] &amp;lt;- fixef(boot.logit) } b.coef &amp;lt;- do.call(rbind, b.coef) %&amp;gt;% data.table  L3 &amp;lt;- LETTERS[1:3] fac &amp;lt;- sample(L3, 10, replace = TRUE) (d &amp;lt;- data.</description>
     </item>
     
     <item>
       <title>5 File System</title>
-      <link>/rlang/5_filesystem.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/5_filesystem.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/5_filesystem.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/5_filesystem.html</guid>
       <description>File System 暫時子目錄 函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。
 mydirname &amp;lt;- tempfile(pattern = &amp;quot;mydir&amp;quot;) mydirname  #&amp;gt; [1] &amp;quot;C:\\Users\\linchao\\AppData\\Local\\Temp\\RtmpkLukVq\\mydir1bb05d806927&amp;quot;  在視窗系統中:
 mydirname
@@ -191,20 +191,20 @@ system.file(package = &amp;quot;stats&amp;quot;)  [1] &amp;quot;C:/PROGRA~1/R/R-
     
     <item>
       <title>5 object_basic</title>
-      <link>/rlang/5_objectbasic.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/5_objectbasic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/5_objectbasic.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/5_objectbasic.html</guid>
       <description>物件 attribute oth the names and the dimensions of matrices and arrays are stored in R as attributes of the object. These attributes can be seen as labeled values you can attach to any object.
 They form one of the mechanisms R uses to define specific object types like dates, time series, and so on. They can include any kind of information, and you can use them yourself to add information to any object.</description>
     </item>
     
     <item>
       <title>6. Programming 1</title>
-      <link>/rlang/6_programming_1.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/6_programming_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/6_programming_1.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/6_programming_1.html</guid>
       <description>programming in R 條件指令 if 一般來講，通用寫法如下：
 if(判斷式){ 成功 }else{ 失敗 }  例如
 多行寫法 if(4 &amp;gt; 3){ TRUE }else{ FALSE }  另外，如果區塊內只有一行
@@ -224,19 +224,19 @@ switch(&amp;quot;a&amp;quot;, a = 1, b = 2, c = &amp;quot;why&amp;quot;)  #&amp;
     
     <item>
       <title>7 Function basic</title>
-      <link>/rlang/7_function_1.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/7_function_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/7_function_1.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/7_function_1.html</guid>
       <description>普通函數範例 fivenum function (x, na.rm = TRUE) { xna &amp;lt;- is.na(x) if (any(xna)) { if (na.rm) x &amp;lt;- x[!xna] else return(rep.int(NA, 5)) } x &amp;lt;- sort(x) n &amp;lt;- length(x) if (n == 0) rep.int(NA, 5) else { n4 &amp;lt;- floor((n + 3)/2)/2 d &amp;lt;- c(1, n4, (n + 1)/2, n + 1 - n4, n) 0.5 * (x[floor(d)] + x[ceiling(d)]) } }  自己寫一個類似which()的函數。3個逗點 (dots) 3個逗點可以利用?dots查詢。</description>
     </item>
     
     <item>
       <title>7.1 function - apply family</title>
-      <link>/rlang/7_1_apply_family.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/7_1_apply_family.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/7_1_apply_family.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/7_1_apply_family.html</guid>
       <description>apply family  其他參考
   apply 可以處理的對象包括 矩陣、資料集、陣列(二維、多維)，可以指定直行、橫行。
 函數定義：
@@ -252,19 +252,19 @@ x&amp;lt;-matrix(1,ncol=4,nrow=3);x #&amp;gt; [,1] [,2] [,3] [,4] #&amp;gt; [1,]
     
     <item>
       <title>7.8 Function more</title>
-      <link>/rlang/7_8_function_2.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/7_8_function_2.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/7_8_function_2.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/7_8_function_2.html</guid>
       <description># Functions## Introduction簡單測試### Quiz Answer the following questions to see if you can safely skip this chapter. You can find the answers in [function-answer](#function-answer).1. What are the three components of a function?1. What does the following code return?```rx 匿名函數:```rlapply(mtcars, function(x) length(unique(x)))Filter(function(x) !is.numeric(x), mtcars)integrate(function(x) sin(x) ^ 2, 0, pi)```在list中,也可以放入函數:```rfuns [1] 20```在R語言中,函數有時叫做closure因為,R函數包含(enclose)它們的環境 environments.```rtypeof(f01)``````# [1] &#34;</description>
     </item>
     
     <item>
       <title>8. R Package</title>
-      <link>/rlang/8_00_rpackages.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/8_00_rpackages.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/8_00_rpackages.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/8_00_rpackages.html</guid>
       <description>基本 套件在哪裡  R package and Github
  建立R套件
    note: 可以DOS指令tree .列出目錄樹結構
@@ -287,10 +287,10 @@ css &amp;lt;- system.</description>
     
     <item>
       <title>9. Plot 01</title>
-      <link>/rlang/9_plot01.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/9_plot01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/9_plot01.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/9_plot01.html</guid>
       <description>提點和參考 Quick R
 basic 一般視窗作業系統的繪圖，會有一個抽象物件device在這個device上，有一個抽象物件canvas，和繪圖工具例如，水彩筆之類的抽象物件可以指定顏色，線條粗細等等。 在R中,對應上述作業系統的關鍵字.Devices(paired list)、.Device(長度為1)、dev.cur(目前的裝置active device)。這裡說的Device指的是視窗。在視窗裡面的畫布,就是R提供的繪圖函數輸出所在,例如plot(),hist()等等。
 所以dev.new() 指的是開啟新視窗，dev.cur是目前視窗號碼,dev.prev()前一個視窗號碼。
@@ -309,20 +309,20 @@ basic 一般視窗作業系統的繪圖，會有一個抽象物件device在這�
     
     <item>
       <title>10. TidyBasic01</title>
-      <link>/rlang/10_00_tidybasic01.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/10_00_tidybasic01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/10_00_tidybasic01.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/10_00_tidybasic01.html</guid>
       <description>需要安裝babynames,ggplot2  title: Tidy basic 01 Tidy Basic 01 require(tidyr) require(dplyr) # data_frame  From http://stackoverflow.com/questions/1181060
 require(tidyr)  #&amp;gt; Loading required package: tidyr  #&amp;gt; Warning: package &#39;tidyr&#39; was built under R version 4.0.5  require(dplyr) # data_frame  #&amp;gt; Loading required package: dplyr  #&amp;gt; Warning: package &#39;dplyr&#39; was built under R version 4.0.5  #&amp;gt; #&amp;gt; Attaching package: &#39;dplyr&#39;  #&amp;gt; The following objects are masked from &#39;package:stats&#39;: #&amp;gt; #&amp;gt; filter, lag  #&amp;gt; The following objects are masked from &#39;package:base&#39;: #&amp;gt; #&amp;gt; intersect, setdiff, setequal, union  stocks &amp;lt;- data_frame( time = as.</description>
     </item>
     
     <item>
       <title>11. sampling</title>
-      <link>/rlang/11_00_sampling.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/11_00_sampling.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/11_00_sampling.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/11_00_sampling.html</guid>
       <description>Sample and Distribution 01 N&amp;lt;-100 pop&amp;lt;-rnorm(N,5,2) rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-pop[rndno] ss&amp;lt;-summary(smp) s1&amp;lt;-hist(smp) rug(quantile(smp), col=2, lwd=2.5) plot(s1$mids,s1$density,type=&amp;quot;s&amp;quot;) #quiz:barplot?? s2&amp;lt;-hist(pop) plot(s1,col=&amp;quot;red&amp;quot;) lines(s2,col=&amp;quot;blue&amp;quot;)  內建隨機抽樣 函數sample(x,n,replace=FALSE ).
 其中x為要抽取的向量, n為樣本容量. replace 預設為false
  no replacement, 等機率:
@@ -336,10 +336,10 @@ sample(x, n, replace=TRUE, prob=y)</description>
     
     <item>
       <title>13. Econometrics</title>
-      <link>/rlang/13_0_eco_01_intro.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/13_0_eco_01_intro.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/13_0_eco_01_intro.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/13_0_eco_01_intro.html</guid>
       <description>package recommended package foreign 可以用來導入外部資料例如，
 * stata 的資料 dta,
 * SPSS
@@ -353,10 +353,10 @@ rm(affairs) load(&#39;./resources/affairs.RData&#39;) head(affairs)  #&amp;gt; i
     
     <item>
       <title>14. simulation 1</title>
-      <link>/rlang/14_00_sim_1.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/14_00_sim_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/14_00_sim_1.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/14_00_sim_1.html</guid>
       <description>basic dnorm : PDF
 pnorm : CDF
 qnorm : inverse CDF
@@ -366,28 +366,28 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1) pvalues &amp;lt;- pnorm(z_scores) # N
     
     <item>
       <title>11 Environments</title>
-      <link>/rlang/11_environments.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/11_environments.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/11_environments.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/11_environments.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1_1_執行</title>
-      <link>/rlang/1_1_%E5%9F%B7%E8%A1%8C.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/1_1_%E5%9F%B7%E8%A1%8C.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/1_1_%E5%9F%B7%E8%A1%8C.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/1_1_%E5%9F%B7%E8%A1%8C.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.1.1 type basic</title>
-      <link>/rlang/4_1_1_type_basic.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_1_1_type_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_1_1_type_basic.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_1_1_type_basic.html</guid>
       <description>基本操作  操作通常和資料結構相關,可以參考 資料結構
  在R語言中,型態不須經過宣告(declared)。 一個變數的型態經由assignment的過程決定,即&amp;lt;-右邊的R-Objects。也就是在指派變數值的時候,同時決定了型態。
 基本的 R-object有 −
@@ -403,37 +403,37 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1) pvalues &amp;lt;- pnorm(z_scores) # N
     
     <item>
       <title>4.1.2_type練習</title>
-      <link>/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.1.3 type list</title>
-      <link>/rlang/4_1_3_type_list.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_1_3_type_list.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_1_3_type_list.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_1_3_type_list.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.4.1 json</title>
-      <link>/rlang/4_4_1_json.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/4_4_1_json.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_4_1_json.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/4_4_1_json.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>9.1 Plot more</title>
-      <link>/rlang/9_1_plot02.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/9_1_plot02.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/9_1_plot02.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/9_1_plot02.html</guid>
       <description>更多繪圖 繪圖區中的字串 函數 text() 在繪圖區填入字串,簡化的指令如下:
 text(x, y, labels)
 x and y: 文字座標;
@@ -455,10 +455,10 @@ plot(1:10, 1:10, main=&amp;quot;mtext(...) examples\n~~~~~~~~~~~&amp;quot;) mtex
     
     <item>
       <title>作業系統</title>
-      <link>/rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html</guid>
       <description></description>
     </item>
     
