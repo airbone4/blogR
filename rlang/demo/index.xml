@@ -12,9 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/demo/car.html</guid>
-      <description>Build a linear regression data(&amp;#34;cars&amp;#34;, package = &amp;#34;datasets&amp;#34;) model &amp;lt;- lm(dist ~ speed, data = cars) model #&amp;gt;  #&amp;gt; Call: #&amp;gt; lm(formula = dist ~ speed, data = cars) #&amp;gt;  #&amp;gt; Coefficients: #&amp;gt; (Intercept) speed  #&amp;gt; -17.579 3.932 回歸式可以寫成: dist = -17.579 + 3.932*speed.
+      <description>Build a linear regression data(&amp;quot;cars&amp;quot;, package = &amp;quot;datasets&amp;quot;) model &amp;lt;- lm(dist ~ speed, data = cars) model #&amp;gt; #&amp;gt; Call: #&amp;gt; lm(formula = dist ~ speed, data = cars) #&amp;gt; #&amp;gt; Coefficients: #&amp;gt; (Intercept) speed #&amp;gt; -17.579 3.932  回歸式可以寫成: dist = -17.579 + 3.932*speed.
 新資料的預測:distance 分別是:12,19,24
-new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) ) predict(model, newdata = new.speeds) #&amp;gt; 1 2 3  #&amp;gt; 29.60981 57.</description>
+new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) ) predict(model, newdata = new.speeds) #&amp;gt; 1 2 3 #&amp;gt; 29.60981 57.13667 76.79872  ❓ 不寫newdata ?</description>
     </item>
     
     <item>
@@ -24,37 +24,11 @@ new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) ) predict(model, newdata 
       
       <guid>/rlang/demo/citation.html</guid>
       <description>introduction Goal: Estimate the effect of the price per citation on the number of library subscriptions
-Journals.csvJournals.csv(17 ko)initial options(prompt = &amp;ldquo;R&amp;gt; &amp;ldquo;, continue = &amp;ldquo;+ &amp;ldquo;, width = 64,
+ Journals.csv  Journals.csv   initial options(prompt = &amp;quot;R&amp;gt; &amp;quot;, continue = &amp;quot;+ &amp;quot;, width = 64,
 digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE)
-library(&amp;ldquo;AER&amp;rdquo;)
+library(&amp;quot;AER&amp;quot;)
 set.seed(1071)
-library(&amp;#34;AER&amp;#34;) #&amp;gt; Warning: package &amp;#39;AER&amp;#39; was built under R version 4.0.3 #&amp;gt; Loading required package: car #&amp;gt; Warning: package &amp;#39;car&amp;#39; was built under R version 4.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 6</title>
-      <link>/rlang/demo/ch6.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/demo/ch6.html</guid>
-      <description>tips qqplot 比較qnorm,quantile
-qnorm(seq(0.01,0.99,0.01)) quantile(rnorm(200),probs = seq(0.01,0.99,0.01)) #基本上就是升冪排序 結論:
-x&amp;lt;-qnorm(seq(0.01,0.99,0.01))
-y&amp;lt;-quantile(rnorm(200,10,2),probs = seq(0.01,0.99,0.01)) #基本上就是升冪排序
-par(mfrow=c(3,1))
-qqnorm(x)
-qqnorm(y)
-plot(x,y)
-example my_data &amp;lt;- ToothGrowth qqnorm(my_data$len, pch = 1, frame = FALSE) qqline(my_data$len, col = &amp;#34;steelblue&amp;#34;, lwd = 2) # 📝也可以利用套裝car上的函數 library(car) #&amp;gt; Loading required package: carData qqPlot(my_data$len) #&amp;gt; [1] 23 1 24個人的數學和統計成績 Attachmentsmathstat.csv(0 ko)  Attachments   revenue.txt  (0 ko)   MS=read.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 7</title>
-      <link>/rlang/demo/ch7.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/demo/ch7.html</guid>
-      <description>Attachmentsch7.pdf(2746 ko)某公司宣稱生產的輪軸,直徑為5CM,標準差為1CM,如何確定是否為真? x&amp;lt;-c(3.801895,5.214785,5.445979,4.293448,7.401404,4.156799,6.029400,3.982314,3.605331,4.707879,4.087529,4.635022,5.597247,3.889285,6.268631, 6.304441,5.565396,5.380210,1.754372,5.449418) u.test&amp;lt;-function(x,mu,thegma) { Se=thegma/sqrt(length(x)) u=(mean(x)-mu)/Se p=pnorm(u) list(u=u, p=p) } rst&amp;lt;-u.test(x,5,1) rst #&amp;gt; $u #&amp;gt; [1] -0.543189 #&amp;gt;  #&amp;gt; $p #&amp;gt; [1] 0.2934998m&amp;lt;-qnorm(0.975) x &amp;lt;- seq(-4, 4, length=100) hx &amp;lt;- dnorm(x) plot(x,hx,&amp;#34;l&amp;#34;) rug(c(-m,rst$u,0,m)) hw1 or background Children&amp;rsquo;s IQ scores are normally distributed with a mean of 100 and a standard deviation of 15. What proportion of children are expected to have an IQ between 80 and 120?</description>
+library(&amp;quot;AER&amp;quot;) #&amp;gt; Warning: package &#39;AER&#39; was built under R version 4.0.3 #&amp;gt; Loading required package: car #&amp;gt; Warning: package &#39;car&#39; was built under R version 4.</description>
     </item>
     
   </channel>

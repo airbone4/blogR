@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html><head>
+  <title>6. Programming 1</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#programming-in-r">programming in R</a>
+<ul>
+<li><a href="#條件指令">條件指令</a>
+<ul>
+<li><a href="#if">if</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#多行寫法">多行寫法</a>
+<ul>
+<li>
+<ul>
+<li><a href="#ifelse的寫法">ifelse的寫法</a></li>
+<li><a href="#switch的寫法">switch的寫法</a></li>
+</ul></li>
+<li><a href="#迴圈指令">迴圈指令</a>
+<ul>
+<li><a href="#for-loop">for-loop</a></li>
+<li><a href="#while-loop">while-loop</a></li>
+<li><a href="#repeat-loop">repeat-loop</a></li>
+</ul></li>
+<li><a href="#in-operator"><code>%in%</code> operator</a>
+<ul>
+<li><a href="#範例-detach-package">範例 detach_package()</a></li>
+<li><a href="#範例2-libpaths">範例2：.libPaths()</a></li>
+</ul></li>
+<li><a href="#r語言的-meta-計算">R語言的 meta 計算。</a>
+<ul>
+<li><a href="#deparse">deparse</a></li>
+<li><a href="#quote">quote*</a></li>
+<li><a href="#eval">eval*</a>
+<ul>
+<li><a href="#parse-和eval">parse() 和eval()</a></li>
+<li><a href="#quote-和eval">quote() 和eval()</a></li>
+<li><a href="#substitue">substitue()</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#討論">討論</a>
+<ul>
+<li><a href="#測試紀錄">測試紀錄</a></li>
+</ul></li>
+<li><a href="#練習">練習</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>6. Programming 1</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    
+
+<h1 id="programming-in-r">programming in R</h1>
+
+<h2 id="條件指令">條件指令</h2>
+
+<h3 id="if">if</h3>
+
+<p>一般來講，通用寫法如下：</p>
+
+<pre><code class="language-r">if(判斷式){
+ 成功
+}else{
+ 失敗
+}
+</code></pre>
+
+<p>例如</p>
+
+<h1 id="多行寫法">多行寫法</h1>
+
+<pre><code>if(4 &gt; 3){
+  TRUE
+}else{
+  FALSE
+}
+</code></pre>
+
+<p>另外，如果區塊內只有一行</p>
+
+<p><code>if(4 &gt; 3) TRUE else FALSE</code></p>
+
+<h3 id="ifelse的寫法">ifelse的寫法</h3>
+
+<p><code>ifelse('判斷式','成功','失敗')</code><br />
+例如，<br />
+<code>ifelse(4 &gt; 3, T, F)</code></p>
+
+<h3 id="switch的寫法">switch的寫法</h3>
+
+<p>switch('判斷式',<br />
+       '動作1',<br />
+       '動作2',<br />
+       ...<br />
+       )<br />
+** 指定第幾行 **</p>
+
+<pre><code class="language-r">switch(2, 
+       1, 
+       2, #因為判斷式為2，因此，執行動作2
+       3) 
+</code></pre>
+
+<ul>
+<li><p>也可以利用字串</p>
+
+<pre><code class="language-r">switch(&quot;a&quot;, 
+   a = 1,         
+   b = 2,       
+   c = &quot;why&quot;)
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre></li>
+</ul>
+
+<p>這個switch 並不是一個語法，而是一個函數，原理大概是 第1個參數以後的東西，會被變成是一個named list。<br />
+例如上面的例子中</p>
+
+<pre><code class="language-r">alist &lt;-list(a=1,b=2,c=&quot;why&quot;)
+</code></pre>
+
+<p>然後利用判斷式 查找要返回對應的值。</p>
+
+<h2 id="迴圈指令">迴圈指令</h2>
+
+<p>R 語言的迴圈，可以搭配  break和next，前者跳出迴圈，後者繼續下一個迴圈。</p>
+
+<h3 id="for-loop">for-loop</h3>
+
+<p>計算 1+2+3+4. 的值是多少？</p>
+
+<pre><code class="language-r">rst &lt;- 0
+for(i in c(1:4)){ 
+  rst &lt;- rst + i
+}
+</code></pre>
+
+<h3 id="while-loop">while-loop</h3>
+
+<pre><code class="language-r">i &lt;- 1
+result &lt;- 0
+
+while(i &lt; 5){  
+  rst &lt;- rst + i
+  i &lt;- i + 1
+}
+</code></pre>
+
+<h3 id="repeat-loop">repeat-loop</h3>
+
+<pre><code class="language-r">i &lt;- 1
+rst &lt;- 0
+
+repeat{  
+  
+  if(i &gt; 4) break 
+  rst &lt;- rst + i
+  i &lt;- i + 1
+}
+</code></pre>
+
+<h2 id="in-operator"><code>%in%</code> operator</h2>
+
+<h3 id="範例-detach-package">範例 detach_package()</h3>
+
+<p>討論內建函數<code>detach_package()</code><br />
+使用方法：</p>
+
+<pre><code class="language-r">detach_package(vegan)
+detach_package(&quot;vegan&quot;, TRUE)
+</code></pre>
+
+<p>注意一下第2個使用方式，第2個參數`character.only'：</p>
+
+<pre><code class="language-r">detach_package &lt;- function(pkg, character.only = FALSE)
+{
+  if(!character.only) #如果沒有指定參數是字串
+  {
+    pkg &lt;- deparse(substitute(pkg)) # 轉字串
+  }
+  search_item &lt;- paste(&quot;package&quot;, pkg, sep = &quot;:&quot;)
+  while(search_item %in% search())
+  {
+    detach(search_item, unload = TRUE, character.only = TRUE)
+  }
+}
+</code></pre>
+
+<h3 id="範例2-libpaths">範例2：.libPaths()</h3>
+
+<pre><code class="language-r">.libPaths
+</code></pre>
+
+<pre><code>#&gt; function (new) 
+#&gt; {
+#&gt;     if (!missing(new)) {
+#&gt;         new &lt;- Sys.glob(path.expand(new))
+#&gt;         paths &lt;- c(new, .Library.site, .Library)
+#&gt;         paths &lt;- paths[dir.exists(paths)]
+#&gt;         .lib.loc &lt;&lt;- unique(normalizePath(paths, &quot;/&quot;))
+#&gt;     }
+#&gt;     else .lib.loc
+#&gt; }
+#&gt; &lt;bytecode: 0x00000000177cd6c0&gt;
+#&gt; &lt;environment: 0x00000000177c8630&gt;
+</code></pre>
+
+<h2 id="r語言的-meta-計算">R語言的 meta 計算。</h2>
+
+<ul>
+<li>assign()<br /></li>
+<li>語法解析：substitute(), parse(), deparse()<br /></li>
+<li>表達式構造：quote()<br /></li>
+<li>表達式求值：eval(), source()<br /></li>
+
+<li><p>表達式：expression()</p>
+
+<pre><code class="language-r">parse(text='x&lt;-1+2')
+</code></pre>
+
+<pre><code>#&gt; expression(x &lt;- 1 + 2)
+</code></pre></li>
+</ul>
+
+<p>在R中解析有 <strong>三種不同的變種</strong>：</p>
+
+<ul>
+<li>The read-eval-print loop<br /></li>
+<li>Parsing of text files<br /></li>
+<li>Parsing of character strings<br />
+<br /></li>
+</ul>
+
+<p>read-eval-print 是讀入文本，然後進行解析，然後求值，最後打印，這個就是我們日常看到的命令行操作。</p>
+
+<p>解析文件是parse函數來完成。</p>
+
+<p>解析字符串就是parse中用text參數來表示。</p>
+
+<h3 id="deparse">deparse</h3>
+
+<p>相對於parse,deparse 把<code>expression</code> 轉為字串。</p>
+
+<pre><code class="language-r"> deparse(expression(1+2))
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;expression(1 + 2)&quot;
+</code></pre>
+
+<h3 id="quote">quote*</h3>
+
+<p>quote() 的參數也是<code>expression</code>，返回類別<code>class</code>，可以再給<code>eval()</code>計算。<br />
+<code>quote()</code>的參數雖然是<code>expression</code>但是不會進行計算，而是token分解。</p>
+
+<pre><code class="language-r"> quote(1+2)
+</code></pre>
+
+<pre><code>#&gt; 1 + 2
+</code></pre>
+
+<pre><code class="language-r"> typeof(quote(1+2)) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;language&quot;
+</code></pre>
+
+<pre><code class="language-r"> class(quote(1+2))
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;call&quot;
+</code></pre>
+
+<h3 id="eval">eval*</h3>
+
+<h4 id="parse-和eval">parse() 和eval()</h4>
+
+<p>text --&gt;parse()--&gt; expression---&gt;eval()</p>
+
+<h4 id="quote-和eval">quote() 和eval()</h4>
+
+<p>expression --&gt;quote()--&gt; call---&gt;eval()</p>
+
+<pre><code class="language-r"> eval(quote(1+2))
+</code></pre>
+
+<pre><code>#&gt; [1] 3
+</code></pre>
+
+<p>一般是用parse從字符串（或者是硬盤上的文件）解析成一個expression對象，是表達式列表，不是一個表達式。</p>
+
+<pre><code class="language-r"> eval(parse(text=&quot;1+2&quot;))
+</code></pre>
+
+<pre><code>#&gt; [1] 3
+</code></pre>
+
+<p>首先使用parse()函數將字符串轉化為表達式（expression），而後使用eval()函數對表達式求解。</p>
+
+<pre><code class="language-text">?eval
+# Evaluate an R expression in a specified environment.
+# Usage
+# eval(expr, envir = parent.frame(),
+#      enclos = if(is.list(envir) || is.pairlist(envir))
+#          parent.frame() else baseenv())
+# evalq(expr, envir, enclos)
+# eval.parent(expr, n = 1)
+# local(expr, envir = new.env())
+
+</code></pre>
+
+<h4 id="substitue">substitue()</h4>
+
+<p>如果沒有第二個參數，是否substitue()==quote()?</p>
+
+<pre><code class="language-r">(s.e &lt;- substitute(expression(a + b), list(a = 1)))  #&gt; expression(1 + b)
+</code></pre>
+
+<pre><code>#&gt; expression(1 + b)
+</code></pre>
+
+<pre><code class="language-r">(s.s &lt;- substitute( a + b,            list(a = 1)))  #&gt; 1 + b
+</code></pre>
+
+<pre><code>#&gt; 1 + b
+</code></pre>
+
+<h2 id="討論">討論</h2>
+
+<h3 id="測試紀錄">測試紀錄</h3>
+
+<pre><code class="language-r">test1&lt;-function (..., list = character() ) 
+{
+    names &lt;- c(as.character(substitute(list(...))[-1L]), list)
+    return (names)
+}
+test1(x,y,list=&quot;data&quot;)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;x&quot;    &quot;y&quot;    &quot;data&quot;
+</code></pre>
+
+<p><code>names &lt;- c(as.character(substitute(list(...))[-1L]), list)</code><br />
+* list(...) 把傳進來的參數打包成list<br />
+* 在執行list(...)的時候，如果傳進的參數是還沒有初值的變數，會出錯，因此用<code>substitute()</code>打包。<br />
+    + 為什麼用substitute()就不會出錯，因為它不執行這個expression(e.g. list(...))。<br />
+        -為什麼可以不執行？因為<code>substitue()</code>有把它變成匿名函數(和call這個類別有關，自推論），這樣當然不會有問題。<br />
+        -為什麼有-1L?接續之前的推論，第一個元素應該是匿名函數的內建名稱。</p>
+
+<p>所以整個函數，就是把使用者所有的參數，打成字串向量。如範例結果。</p>
+
+<h2 id="練習">練習</h2>
+
+<ol>
+<li>zeros(3,2),ones(2,3)<br />
+<br /></li>
+</ol>
+
+<p>hint:</p>
+
+<pre><code class="language-r">sapply(a,function(x) matrix(x,2,2), simplify='array')
+</code></pre>
+
+<pre><code class="language-r">zeros&lt;-function (nrow,ncol)
+{
+rst&lt;-sapply(c(0),function(x) matrix(x,nrow,ncol),simplify='array')
+  return(rst[,,1])
+}
+x&lt;-zeros(4,5)
+x
+</code></pre>
+
+<pre><code>#&gt;      [,1] [,2] [,3] [,4] [,5]
+#&gt; [1,]    0    0    0    0    0
+#&gt; [2,]    0    0    0    0    0
+#&gt; [3,]    0    0    0    0    0
+#&gt; [4,]    0    0    0    0    0
+</code></pre>
+
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/5_objectbasic.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=5&#32;object_basic>前</a>
+                   
+          
+            <a href="../rlang/7_function_1.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=7&#32;Function&#32;basic>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1631762489"></script>
+  <script src="../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../js/hugohelper.js?1631762489"></script>
+
+  <link href="../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

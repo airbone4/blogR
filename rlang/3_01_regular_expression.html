@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html><head>
+  <title>3.1 Regular expression syntax</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#functions-which-work-with-regular-expression-patterns">Functions which work with regular expression patterns</a>
+<ul>
+<li><a href="#grep-grepl">grep, grepl</a>
+<ul>
+<li><a href="#練習">練習</a></li>
+</ul></li>
+<li><a href="#regexpr-gregexpr">regexpr, gregexpr</a></li>
+<li><a href="#數量修飾詞quantifiers">數量修飾詞Quantifiers</a></li>
+<li><a href="#position-of-pattern-within-the-string">Position of pattern within the string</a>
+<ul>
+<li><a href="#exercise">Exercise</a></li>
+</ul></li>
+<li><a href="#operators">Operators</a>
+<ul>
+<li><a href="#excercise">Excercise</a></li>
+</ul></li>
+<li><a href="#character-classes">Character classes</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>3.1 Regular expression syntax</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <p>利用一些特殊字元，例如 <code>$ * + . ? [ ] ^ { } | ( ) \</code>構成Regular expressions，用來在文字中表達某些搜尋樣式的語法。 這裡只是簡短的介紹</p>
+
+<h2 id="functions-which-work-with-regular-expression-patterns">Functions which work with regular expression patterns</h2>
+
+<ul>
+<li>strsplit: split string into substrings at occurances of regexp<br /></li>
+<li>grep: search for a regular expression within a string<br /></li>
+<li>sub: search and then replace an occurance of a regular expression in a strng<br /></li>
+<li>gsub: global search and replace all occurances of a regular expression in a string<br />
+<br /></li>
+</ul>
+
+<h3 id="grep-grepl">grep, grepl</h3>
+
+<p>grep,grepl的差別是後者不支援參數value，且比對的結果和搜尋內容的個數相同。<br />
+下面的例子是找出<code>a.c</code>這個字串。</p>
+
+<pre><code class="language-r">grep(&quot;a\\.c&quot;, c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;))
+</code></pre>
+
+<pre><code>#&gt; [1] 2
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;a\\.c&quot;, c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;),value=TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;a.c&quot;
+</code></pre>
+
+<pre><code class="language-r">grepl(&quot;a\\.c&quot;, c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;))
+</code></pre>
+
+<pre><code>#&gt; [1] FALSE  TRUE FALSE
+</code></pre>
+
+<p>又另一個例子,是在字串中尋找單引號,假定要在國家中找尋是否有名稱包含單引號的名字,可以使用<code>'\''</code><br />
+問題:為甚麼不是<code>'\\''</code></p>
+
+<div class="notices">
+    <div class= info>
+        <h2 id="escape-sequences">Escape sequences</h2>
+
+<p>正規表達式中<code>.</code>代表任意字元,但是如果我們要在字串中查找&quot;.&quot;(例如,檔案名稱中的點) 的時候要怎樣表示?答案是使用逃逸字元<code>\</code>。但是在R語言中,正規表達式，也是使用字串，可是在字串中,<code>\</code>本身就逃逸字元，因此需要<code>\\.</code>。</p>
+
+<pre><code class="language-r">dot &lt;- &quot;\\.&quot;
+writeLines(dot)
+</code></pre>
+
+<pre><code>#&gt; \.
+</code></pre>
+
+<pre><code class="language-r">x &lt;- &quot;a\\b&quot;
+writeLines(x)
+</code></pre>
+
+<pre><code>#&gt; a\b
+</code></pre>
+
+<p>這裡的逃逸字元只是字串的標準用法,<code>'</code>不是正規表達式的特殊字元。電腦語言認字串的方法是成對的引號,這個時候如果寫<code>'''</code>那是甚麼意思?所以<code>'\''</code>就是字串<code>'</code>的意思。所以為甚麼之前是&quot;a\.c&quot;中,第二個<code>\</code>是解脫正規表達中<code>.</code>的意義。而第一個是<code>\</code>是逃逸字串解讀。</p>
+
+<pre><code class="language-r">country&lt;-read.delim('resources/country.txt',header=FALSE)
+names(country)&lt;-&quot;Name&quot; 
+cname &lt;-levels(country$Name)
+grep('\'', cname, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; character(0)
+</code></pre>
+
+<p>note:<br />
+- 不是country.names&lt;-&quot;Name&quot;</p>
+
+<p>問題:下面兩行有甚麼差別?</p>
+
+<pre><code class="language-r">grep('\'', country$Name, value = TRUE)
+grep('\'', levels(country$Name), value = TRUE)
+
+</code></pre>
+
+<p>Hint: levels 傳回唯一值</p>
+
+<pre><code class="language-r">levels(factor(c(&quot;a&quot;,&quot;b&quot;,&quot;a&quot;)))
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;a&quot; &quot;b&quot;
+</code></pre>
+
+<pre><code class="language-r">factor(c(&quot;a&quot;,&quot;b&quot;,&quot;a&quot;))
+</code></pre>
+
+<pre><code>#&gt; [1] a b a
+#&gt; Levels: a b
+</code></pre>
+
+    </div>
+</div>
+
+
+<h4 id="練習">練習</h4>
+
+<p>產生3個檔案,檔案名稱含有cat</p>
+
+<pre><code class="language-r">file.create(c(&quot;xcat1.rmd&quot;, &quot;ycat2.txt&quot;, &quot;zcat3.rmd&quot;))
+</code></pre>
+
+<pre><code class="language-r">files&lt;-list.files(&quot;.&quot;)
+grep(&quot;cat&quot;, files, value = TRUE)
+grep(&quot;cat&quot;, files, value = FALSE)
+grepl(&quot;cat&quot;, files)
+</code></pre>
+
+<h3 id="regexpr-gregexpr">regexpr, gregexpr</h3>
+
+<p><code>regexpr</code> 函數的使用方式類似<code>grepl</code>。傳回整數向量(表示符合位置，如果找不到,則傳回-1),個數和比對字串串列相同。這個向量同時有屬性<code>match.length</code>(參考範例) .</p>
+
+<pre><code class="language-r">s&lt;-&quot;a.b.c.9&quot;
+regexpr('b',s )
+</code></pre>
+
+<pre><code>#&gt; [1] 3
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] 1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<pre><code class="language-r">regexpr('.',s ) # 要定位符號「.」,這是錯的,\.也錯
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] 1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<pre><code class="language-r">regexpr('\\.',s ) # 正確
+</code></pre>
+
+<pre><code>#&gt; [1] 2
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] 1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<pre><code class="language-r">regexpr('[.]',s ) # 正確 ,不需要regexpr('[\\.]',s )
+</code></pre>
+
+<pre><code>#&gt; [1] 2
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] 1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<pre><code class="language-r">regexpr('\\d',s ) # 正確
+</code></pre>
+
+<pre><code>#&gt; [1] 7
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] 1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<pre><code class="language-r">x&lt;-regexpr('[0-9]',s ) # 正確
+attr(x,&quot;match.length&quot;)
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre>
+
+<pre><code class="language-r">s&lt;-&quot;a.b.c.9 6 8&quot;
+x&lt;-regexpr('[0-9]',s ) 
+x
+</code></pre>
+
+<pre><code>#&gt; [1] 7
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] 1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<pre><code class="language-r">attr(x,&quot;match.length&quot;)
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre>
+
+<p><code>gregexpr()</code> 和 <code>regexpr()</code>一樣,不同的是會在目標字串中搜尋所有符合的位置而不是只找第一個(g:全局)。 因此傳回的結果個數雖然和查找的串列元素個數一樣,但是每個元素都是一個向量。如果都沒找到,只有一個-1。</p>
+
+<pre><code class="language-r">s&lt;-&quot;a.b.c.9 6 8&quot;
+ gregexpr('[0-9]',s ) 
+</code></pre>
+
+<pre><code>#&gt; [[1]]
+#&gt; [1]  7  9 11
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] 1 1 1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<h3 id="數量修飾詞quantifiers">數量修飾詞Quantifiers</h3>
+
+<p>指定重複次數.</p>
+
+<ul>
+<li><code>*</code>: 至少0個。<br /></li>
+<li><code>+</code>: 至少一個.<br /></li>
+<li><code>?</code>: 最多一個.<br /></li>
+<li><code>{n}</code>: 剛好n個.<br /></li>
+<li><code>{n,}</code>: 至少n個.<br /></li>
+
+<li><p><code>{n,m}</code>: 次數在 n 到 m 之間(包括n,m).</p>
+
+<pre><code class="language-r">(strings &lt;- c(&quot;a&quot;, &quot;ab&quot;, &quot;acb&quot;, &quot;accb&quot;, &quot;acccb&quot;, &quot;accccb&quot;))
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;a&quot;      &quot;ab&quot;     &quot;acb&quot;    &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ac*b&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;ab&quot;     &quot;acb&quot;    &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ac+b&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;acb&quot;    &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ac?b&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;ab&quot;  &quot;acb&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ac{2}b&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;accb&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ac{2,}b&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ac{2,3}b&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;accb&quot;  &quot;acccb&quot;
+</code></pre></li>
+</ul>
+
+<div class="notices">
+    <div class= info>
+        <p>練習:Find all countries with <code>ee</code> in Gapminder using quantifiers.</p>
+
+<pre><code>#&gt; character(0)
+</code></pre>
+
+    </div>
+</div>
+
+
+<h3 id="position-of-pattern-within-the-string">Position of pattern within the string</h3>
+
+<ul>
+<li><code>^</code>: 字串開頭.<br /></li>
+<li><code>$</code>: 字串結尾.<br /></li>
+<li><code>\b</code>: 左右都空白的 <em>word</em>.<br /></li>
+
+<li><p><code>\B</code>: 左右不是空白 <em>word</em>.</p>
+
+<pre><code class="language-r">(strings &lt;- c(&quot;abcd&quot;, &quot;cdab&quot;, &quot;cabd&quot;, &quot;c abd&quot;))
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abcd&quot;  &quot;cdab&quot;  &quot;cabd&quot;  &quot;c abd&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ab&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abcd&quot;  &quot;cdab&quot;  &quot;cabd&quot;  &quot;c abd&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;^ab&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abcd&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ab$&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;cdab&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;\\bab&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abcd&quot;  &quot;c abd&quot;
+</code></pre>
+
+<pre><code class="language-r">regexpr(&quot;\\bab&quot;, strings)
+</code></pre>
+
+<pre><code>#&gt; [1]  1 -1 -1  3
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1]  2 -1 -1  2
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre>
+
+<pre><code class="language-r">regexpr(&quot;\\Bab&quot;, strings)
+</code></pre>
+
+<pre><code>#&gt; [1] -1  3  2 -1
+#&gt; attr(,&quot;match.length&quot;)
+#&gt; [1] -1  2  2 -1
+#&gt; attr(,&quot;index.type&quot;)
+#&gt; [1] &quot;chars&quot;
+#&gt; attr(,&quot;useBytes&quot;)
+#&gt; [1] TRUE
+</code></pre></li>
+</ul>
+
+<h4 id="exercise">Exercise</h4>
+
+<p>Find all <code>.txt</code> files in the repository.</p>
+
+<pre><code class="language-md">```{r ex_pos, echo = FALSE}
+grep(&quot;\\.txt$&quot;, files, value = TRUE)
+grep(&quot;[.]txt$&quot;, files, value = TRUE)
+```
+</code></pre>
+
+<h3 id="operators">Operators</h3>
+
+<ul>
+<li><code>.</code>: 任意字元。<br /></li>
+<li><code>[...]</code>: 例如,[ade] 3個字元其中一個。[a-e],a到e.<br /></li>
+<li><code>[^...]</code>: 除了[]指定的字元，非[...]的意思。.<br /></li>
+<li><code>\</code>: 抑制下列字元在字串,<code>&quot;&quot;</code>,中的特殊意思 <code>$ * + . ? [ ] ^ { } | ( ) \</code>, 只是在R中,因為<code>\</code>又有特殊意義 ,因此必須雙<code>\</code>例如 <code>\\$</code>。<br /></li>
+<li><code>|</code>: 或.<br /></li>
+
+<li><p><code>(...)</code>: 字元組,根據出現的順序,可以用 <code>\\N</code>識別( <strong>backreference</strong>).</p>
+
+<pre><code class="language-r">(strings &lt;- c(&quot;^ab&quot;, &quot;ab&quot;, &quot;abc&quot;, &quot;abd&quot;, &quot;abe&quot;, &quot;ab 12&quot;))
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;^ab&quot;   &quot;ab&quot;    &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ab.&quot;, strings, value = TRUE) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ab[c-e]&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abc&quot; &quot;abd&quot; &quot;abe&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;ab[^c]&quot;, strings, value = TRUE)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;^ab&quot;, strings, value = TRUE) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;ab&quot;    &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;\\^ab&quot;, strings, value = TRUE) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;^ab&quot;
+</code></pre>
+
+<pre><code class="language-r">grep(&quot;abc|abd&quot;, strings, value = TRUE) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;abc&quot; &quot;abd&quot;
+</code></pre>
+
+<pre><code class="language-r">gsub(&quot;(ab) 12&quot;, &quot;\\1 34&quot;, strings) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;^ab&quot;   &quot;ab&quot;    &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 34&quot;
+</code></pre></li>
+</ul>
+
+<p>note:<br />
+要讓<code>.</code>失效，可以<code>[.]</code>或 <code>\\.</code> 表示。</p>
+
+<h4 id="excercise">Excercise</h4>
+
+<p>找出國名中間有字元<code>i</code> <code>t</code> 並且將<code>land</code>結尾的字串改為大寫。例如,Finland-&gt;FinLAND</p>
+
+<pre><code>#&gt; character(0)
+</code></pre>
+
+<h3 id="character-classes">Character classes</h3>
+
+<p>預設字元分類例如 numbers, letters, 分類。<br />
+開頭<code>[:</code> 結尾 <code>:]</code> ，另一種簡寫方式為利用 <code>\</code> 。</p>
+
+<ul>
+<li><code>[:digit:]</code> or <code>\d</code>: 數字,等同  <code>[0-9]</code>.<br /></li>
+<li><code>\D</code>: 非數字,等同  <code>[^0-9]</code>.<br /></li>
+<li><code>[:lower:]</code>: 小寫,等同 <code>[a-z]</code>.<br /></li>
+<li><code>[:upper:]</code>: 大寫,等同 <code>[A-Z]</code>.<br /></li>
+<li><code>[:alpha:]</code>: 字母,等同 <code>[[:lower:][:upper:]]</code> or <code>[A-z]</code>.<br /></li>
+<li><code>[:alnum:]</code>: 等同  <code>[[:alpha:][:digit:]]</code> 或 <code>[A-z0-9]</code>.<br /></li>
+<li><code>\w</code>: word characters, equivalent to <code>[[:alnum:]_]</code> or <code>[A-z0-9_]</code>.<br /></li>
+<li><code>\W</code>: not word, equivalent to <code>[^A-z0-9_]</code>.<br /></li>
+<li><code>[:xdigit:]</code>: hexadecimal digits (base 16), 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f, equivalent to <code>[0-9A-Fa-f]</code>.<br /></li>
+<li><code>[:blank:]</code>: blank characters, i.e. space and tab.<br /></li>
+<li><code>[:space:]</code>: space characters: tab, newline, vertical tab, form feed, carriage return, space.<br /></li>
+<li><code>\s</code>: space, .<br /></li>
+<li><code>\S</code>: not space.<br /></li>
+<li><code>[:punct:]</code>: punctuation characters, ! &quot; # $ % &amp; ' ( ) * + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ ` { | } ~.<br /></li>
+<li><code>[:graph:]</code>: graphical (human readable) characters: equivalent to <code>[[:alnum:][:punct:]]</code>.<br /></li>
+<li><code>[:print:]</code>: printable characters, equivalent to <code>[[:alnum:][:punct:]\\s]</code>.<br /></li>
+<li><code>[:cntrl:]</code>: control characters, like <code>\n</code> or <code>\r</code>, <code>[\x00-\x1F\x7F]</code>.<br />
+<br /></li>
+</ul>
+
+<p>Note:</p>
+
+<ul>
+<li><code>[:...:]</code> 必須寫在中括號中, 例如 <code>[[:digit:]]</code>.<br /></li>
+<li><code>\</code> 注意 <code>\\d</code>. 和 <code>\t</code>的區別。<br /></li>
+</ul>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/3_quickview1.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=3.&#32;Quick&#32;view&#32;1>前</a>
+                   
+          
+            <a href="../rlang/4_1_4_type_more.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=4.1.4&#32;type&#32;more>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1631762489"></script>
+  <script src="../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../js/hugohelper.js?1631762489"></script>
+
+  <link href="../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

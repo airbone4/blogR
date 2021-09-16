@@ -1,2147 +1,573 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
-  <head>
+<html><head>
+  <title>網頁測試</title>  
+      
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.79.1" />
-    <meta name="description" content="測試">
-
-
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
-<link rel="icon" href="../images/favicon.png" type="image/x-icon" />
-
-    <title>網頁測試 - R in Class</title>
-
-    
-    <link href="../css/nucleus.css?1609996082" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1609996082" rel="stylesheet">
-    <link href="../css/hybrid.css?1609996082" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1609996082" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1609996082" rel="stylesheet">
-    <link href="../css/auto-complete.css?1609996082" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1609996082" rel="stylesheet">
-    <link href="../css/theme.css?1609996082" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1609996082" rel="stylesheet">
-    
-    <link href="../extra_theme/css/mystyle.css?1609996082" rel="stylesheet"><link href="../extra_theme/css/demoContainer.css?1609996082" rel="stylesheet"><link href="../extra_theme/css/rmd.css?1609996082" rel="stylesheet">
-
-    <script src="../js/jquery-3.3.1.min.js?1609996082"></script>
-
-    <style>
-      :root #header + #content > #left > #rlblock_left{
-          display:none !important;
-      }
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-        :not(pre) > code + span.copy-to-clipboard {
-            display: none;
-        }
-      
-    </style>
+    <script src="../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
-  </head>
-  <body class="" data-url="../topic/test.html">
-
-    <nav id="sidebar" class="">
-
-
-
-  <div id="header-wrapper">
-    <div id="header">
-      <a id="logo" href="https://airbon5.github.io/xx/">
-  <img src=../extra_theme/images/rmi.png>
-</a>
-
-    </div>
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-        <div class="searchbox">
-    <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="Search...">
-    <span data-search-clear=""><i class="fas fa-times"></i></span>
+    <link href="../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../css/syntax.css?1631762489" rel="stylesheet">
+    
+    
+    <link href="../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span ><span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>網頁測試</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1609996082"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1609996082"></script>
-<script type="text/javascript">
-    
-        var baseurl = "\/";
-    
-</script>
-<script type="text/javascript" src="../js/search.js?1609996082"></script>
+    </span>
+</div> 
+</div>
 
-    
-  </div>
-  
-    <section id="homelinks">
-      <ul>
-        <li>
-            <a class="padding" href='../'><i class='fas fa-home'></i> Home</a>
-        </li>
-      </ul>
-    </section>
+<div id="content-wrapper">
+  <nav id="sidebar">
+
   
 
-    <div class="highlightable">
-    <ul class="topics">
-
-        
-          
-          
-
-
-
-
- 
-  
     
-    <li data-nav-id="/rlang.html" title="R language" class="dd-item
-        
-        
-        
-        ">
-      <a href="../rlang.html">
-          R language
-          
-      </a>
+    
+    <ul class="nav flex-column topics" id="home-topics">
       
-      
-        <ul>
-          
-          
-            
-          
-          
-
         
           
-            
-            
-
-
-
+          
 
  
-  
-    
-      <li data-nav-id="/rlang/requirement.html" title="Requirement" class="dd-item ">
-        <a href="../rlang/requirement.html">
-        Requirement
-        
-        </a>
-    </li>
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
      
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
   
- 
-
-            
+  
+  
+  
+        <li class="nav-item">
           
-            
-            
-
-
-
-
- 
+          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
   
     
-      <li data-nav-id="/rlang/data_explorer_1.html" title="data explorer 1" class="dd-item ">
-        <a href="../rlang/data_explorer_1.html">
-        data explorer 1
-        
-        </a>
-    </li>
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
      
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
   
- 
-
-            
-          
-            
-            
-
-
-
-
- 
+  
+  
   
     
-      <li data-nav-id="/rlang/data_explorer_2.html" title="data explorer 2" class="dd-item ">
-        <a href="../rlang/data_explorer_2.html">
-        data explorer 2
-        
-        </a>
-    </li>
-     
   
- 
-
-            
+        <li class="nav-item">
           
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/quickview1.html" title="Quick view 1" class="dd-item ">
-        <a href="../rlang/quickview1.html">
-        Quick view 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/regular_expression.html" title="Regular expression syntax" class="dd-item ">
-        <a href="../rlang/regular_expression.html">
-        Regular expression syntax
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_basic.html" title="type basic" class="dd-item ">
-        <a href="../rlang/type_basic.html">
-        type basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_list.html" title="type list" class="dd-item ">
-        <a href="../rlang/type_list.html">
-        type list
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_matrix.html" title="type matrix" class="dd-item ">
-        <a href="../rlang/type_matrix.html">
-        type matrix
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_more.html" title="type more" class="dd-item ">
-        <a href="../rlang/type_more.html">
-        type more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_post.html" title="type post" class="dd-item ">
-        <a href="../rlang/type_post.html">
-        type post
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_string_function.html" title="type string" class="dd-item ">
-        <a href="../rlang/type_string_function.html">
-        type string
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_vector.html" title="type vector" class="dd-item ">
-        <a href="../rlang/type_vector.html">
-        type vector
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/filesystem.html" title="File System" class="dd-item ">
-        <a href="../rlang/filesystem.html">
-        File System
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/programming_1.html" title="Programming 1" class="dd-item ">
-        <a href="../rlang/programming_1.html">
-        Programming 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/apply_family.html" title="function - apply family" class="dd-item ">
-        <a href="../rlang/apply_family.html">
-        function - apply family
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/function_1.html" title="Function basic" class="dd-item ">
-        <a href="../rlang/function_1.html">
-        Function basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/rpackages.html" title="R Package" class="dd-item ">
-        <a href="../rlang/rpackages.html">
-        R Package
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/plot01.html" title="Plot 01" class="dd-item ">
-        <a href="../rlang/plot01.html">
-        Plot 01
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/plot02.html" title="Plot more" class="dd-item ">
-        <a href="../rlang/plot02.html">
-        Plot more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/environments.html" title="Environment" class="dd-item ">
-        <a href="../rlang/environments.html">
-        Environment
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/sampling.html" title="sampling" class="dd-item ">
-        <a href="../rlang/sampling.html">
-        sampling
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/eco_01_intro.html" title="Econometrics" class="dd-item ">
-        <a href="../rlang/eco_01_intro.html">
-        Econometrics
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/sim_1.html" title="simulation 1" class="dd-item ">
-        <a href="../rlang/sim_1.html">
-        simulation 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/hw.html" title="練習用" class="dd-item
-        
-        
-        
-        ">
-      <a href="../rlang/hw.html">
-          練習用
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/dataset_class.html" title="資料集" class="dd-item ">
-        <a href="../rlang/hw/dataset_class.html">
-        資料集
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_filesystem.html" title="檔案系統" class="dd-item ">
-        <a href="../rlang/hw/hw_filesystem.html">
-        檔案系統
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_basic.html" title="assignment-1" class="dd-item ">
-        <a href="../rlang/hw/hw_basic.html">
-        assignment-1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_regexp.html" title="regexpr" class="dd-item ">
-        <a href="../rlang/hw/hw_regexp.html">
-        regexpr
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
-        
-        
-        
-        ">
-      <a href="../rlang/resources.html">
-          練習相關檔案
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/demo.html" title="暫時" class="dd-item
-        
-        
-        
-        ">
-      <a href="../rlang/demo.html">
-          暫時
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/citation.html" title="引用" class="dd-item ">
-        <a href="../rlang/demo/citation.html">
-        引用
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/ch6.html" title="Chapter 6" class="dd-item ">
-        <a href="../rlang/demo/ch6.html">
-        Chapter 6
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/ch7.html" title="Chapter 7" class="dd-item ">
-        <a href="../rlang/demo/ch7.html">
-        Chapter 7
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic.html" title="Topics" class="dd-item
-        parent
-        
-        
-        ">
-      <a href="../topic.html">
-          Topics
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_basic.html" title="Rmd basic" class="dd-item ">
-        <a href="../topic/rmd/rmd_basic.html">
-        Rmd basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_hook.html" title="Rmd hook" class="dd-item ">
-        <a href="../topic/rmd/rmd_hook.html">
-        Rmd hook
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_pdf.html" title="Rmd pdf" class="dd-item ">
-        <a href="../topic/rmd/rmd_pdf.html">
-        Rmd pdf
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_topic_1.html" title="rmd topic 1" class="dd-item ">
-        <a href="../topic/rmd/rmd_topic_1.html">
-        rmd topic 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/git-book-note.html" title="git book note" class="dd-item ">
-        <a href="../topic/rmd/git-book-note.html">
-        git book note
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/interesting.html" title="interesting" class="dd-item ">
-        <a href="../topic/interesting.html">
-        interesting
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic/experiment.html" title="實驗" class="dd-item
-        
-        
-        
-        ">
-      <a href="../topic/experiment.html">
-          實驗
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/experiment/central.html" title="中央" class="dd-item ">
-        <a href="../topic/experiment/central.html">
-        中央
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic/test.html" title="網頁測試" class="dd-item
-        parent
-        active
-        
-        ">
-      <a href="../topic/test.html">
-          網頁測試
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/test/emo_test.html" title="emoji_test" class="dd-item ">
-        <a href="../topic/test/emo_test.html">
-        emoji_test
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/test/testpage.html" title="testpage" class="dd-item ">
-        <a href="../topic/test/testpage.html">
-        testpage
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-          
-        
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
     </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
 
     
     
 
-    
+    <hr/>
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
-
+      最近3篇<br/><ul><li><a href="../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
     </section>
-  </div>
+  
 </nav>
 
+<div class="container" id="body-inner">
+  <p class="text-center h2">
+    Topic
+  </p>
+    
 
+  <table class="compact" id="section-pages">
+    <thead><td style="width:12rem" class="text-end">最後修改日期</td><td>標題</td></thead>
+    <tbody>
+  <tr>
+      <td class="text-end">
+        <time class="post-date" datetime="2021-09-04T08:07:06&#43;08:00">2021/09/04</time>
+      </td>
+    <td>
+        <a class="text-body" href="../topic/test/emo_test.html">emoji_test</a>
+     </td>
+  </tr><tr>
+      <td class="text-end">
+        <time class="post-date" datetime="2021-09-04T08:07:06&#43;08:00">2021/09/04</time>
+      </td>
+    <td>
+        <a class="text-body" href="../topic/test/testpage.html">testpage</a>
+     </td>
+  </tr>
+</tbody>
+</table>
 
-
-
-        <section id="body">
-        <div id="overlay"></div>
-        <div class="padding highlightable">
-              
-              <div>
-                <div id="top-bar">
-                
-                
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fas fa-bars"></i>
-                        </a>
-                    </span>
-                  
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
-                  <span class="links">
-                 
-                 
-                    
-          
-          
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='../'>class log</a> > <a href='../topic.html'>Topics</a> > 網頁測試
-          
-        
-          
-        
-          
-        
-                 
-                  </span>
-                </div>
-                
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
 </div>
+</div>
+<script>
+$(document).ready( function () {
+  $('#section-pages').DataTable({
+    paging: false,
+    autoWidth: false,
+    searching: false
+});
+} );
+</script>
+<style>
 
-                
-              </div>
-            </div>
-            
-        <div id="head-tags">
-        
-        </div>
-        
-        <div id="body-inner">
-          
-            <h1>
-              
-              網頁測試
+.dataTables_wrapper{
+  margin: 0 auto;
+  width: 70%;
+}  
 
-            </h1>
-			
-          
+</style>
 
-        
+  <script src="../js/featherlight.min.js?1631762489"></script>
+  <script src="../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
 
-
-
-
+  <script src="../js/highlight.pack.js?1631762489"></script>
   
-  <p style="text-align:center"> 測試 </p>
-  
+  <script src="../js/hugohelper.js?1631762489"></script>
 
+  <link href="../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../js/variant.js?1631762489'></script>
 
-
-<hr/>
-<h2>章節列表<small>網頁測試</small></h2>
-<ul>
-  
-  
-  
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../js/localsearch.js?1631762489'></script>
     
-    <li>
-	<a class="title" href="../topic/test/emo_test.html">emoji_test</a> 
-	
+
+
+  
       
-	    R Markdown Example You can either refer to emoji by their name (which is unique):
-emo::ji(&#34;poop&#34;) #&gt; &lt;U+0001F4A9&gt; Or by a keyword. Keywords are not unique so emo::ji will pick one for you at random.
-emo::ji(&#34;face&#34;) #&gt; &lt;U+0001F479&gt; emo::ji(&#34;face&#34;) #&gt; &lt;U+0001F42E&gt; emo::ji(&#34;face&#34;) #&gt; &lt;U+0001F61A&gt; Often you&rsquo;ll use inline like `r emo::ji(&quot;smile&quot;)` 😄
-Keywords These are all keywords with more than one emoji associated with them.
-#&gt; : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F9B0&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F9B0&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F9B1&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F9B1&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F9B2&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F9B2&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F9B3&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F9B3&gt;&lt;U+0001F9B8&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9B8&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F9B9&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9B9&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; (no specific gender) : &lt;U+0001F9D2&gt;&lt;U+0001F9D1&gt;&lt;U+0001F9D3&gt; #&gt; (non-human color) : &lt;U+0001F9DE&gt;&lt;U+0001F9DF&gt; #&gt; 00 : &lt;U+0001F55B&gt;&lt;U+0001F550&gt;&lt;U+0001F551&gt;&lt;U+0001F552&gt;&lt;U+0001F553&gt;&lt;U+0001F554&gt;&lt;U+0001F555&gt;&lt;U+0001F556&gt;&lt;U+0001F557&gt;&lt;U+0001F558&gt;&lt;U+0001F559&gt;&lt;U+0001F55A&gt; #&gt; 1 : &lt;U+0001F550&gt;&lt;U+0001F55C&gt; #&gt; 10 : &lt;U+0001F559&gt;&lt;U+0001F565&gt; #&gt; 11 : &lt;U+0001F55A&gt;&lt;U+0001F566&gt; #&gt; 12 : &lt;U+0001F55B&gt;&lt;U+0001F567&gt; #&gt; 2 : &lt;U+0001F551&gt;&lt;U+0001F55D&gt; #&gt; 3 : &lt;U+0001F552&gt;&lt;U+0001F55E&gt; #&gt; 30 : &lt;U+0001F567&gt;&lt;U+0001F55C&gt;&lt;U+0001F55D&gt;&lt;U+0001F55E&gt;&lt;U+0001F55F&gt;&lt;U+0001F560&gt;&lt;U+0001F561&gt;&lt;U+0001F562&gt;&lt;U+0001F563&gt;&lt;U+0001F564&gt;&lt;U+0001F565&gt;&lt;U+0001F566&gt; #&gt; 4 : &lt;U+0001F340&gt;&lt;U+0001F553&gt;&lt;U+0001F55F&gt; #&gt; 5 : &lt;U+0001F554&gt;&lt;U+0001F560&gt; #&gt; 6 : &lt;U+0001F555&gt;&lt;U+0001F561&gt; #&gt; 7 : &lt;U+0001F556&gt;&lt;U+0001F562&gt; #&gt; 8 : &lt;U+0001F557&gt;&lt;U+0001F563&gt;&lt;U+0001F3B1&gt; #&gt; 9 : &lt;U+0001F558&gt;&lt;U+0001F564&gt; #&gt; actor : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt; #&gt; admission : &lt;U+0001F39F&gt;&lt;U+0001F3AB&gt; #&gt; aeroplane : &lt;U+0001F6E9&gt;&lt;U+0001F6EB&gt;&lt;U+0001F6EC&gt; #&gt; airplane : &lt;U+0001F6E9&gt;&lt;U+0001F6EB&gt;&lt;U+0001F6EC&gt; #&gt; alien : &lt;U+0001F47D&gt;&lt;U+0001F47E&gt; #&gt; alphabet : &lt;U+0001F524&gt;&lt;U+0001F524&gt; #&gt; amusement park : &lt;U+0001F3A1&gt;&lt;U+0001F3A2&gt; #&gt; anchor : &lt;U+2693&gt;&lt;U+0001F531&gt; #&gt; angel : &lt;U+0001F607&gt;&lt;U+0001F607&gt;&lt;U+0001F47C&gt; #&gt; angry : &lt;U+0001F621&gt;&lt;U+0001F621&gt;&lt;U+0001F620&gt;&lt;U+0001F47F&gt;&lt;U+0001F4A2&gt;&lt;U+0001F4A2&gt;&lt;U+0001F5EF&gt; #&gt; antenna : &lt;U+0001F4E1&gt;&lt;U+0001F4F6&gt; #&gt; apology : &lt;U+0001F647&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; apple : &lt;U+0001F34E&gt;&lt;U+0001F34F&gt; #&gt; Aquarius : &lt;U+0001F3FA&gt;&lt;U+2652&gt; #&gt; archer : &lt;U+0001F3F9&gt;&lt;U+2650&gt; #&gt; architect : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt; #&gt; Aries : &lt;U+0001F40F&gt;&lt;U+2648&gt; #&gt; arrow : &lt;U+0001F498&gt;&lt;U+0001F4F2&gt;&lt;U+0001F4E9&gt;&lt;U+0001F3F9&gt;&lt;U+2B06&gt;&lt;U+FE0F&gt;↗&lt;U+FE0F&gt;&lt;U+27A1&gt;&lt;U+FE0F&gt;↘&lt;U+FE0F&gt;&lt;U+2B07&gt;&lt;U+FE0F&gt;↙&lt;U+FE0F&gt;&lt;U+2B05&gt;&lt;U+FE0F&gt;↖&lt;U+FE0F&gt;&lt;U+2195&gt;&lt;U+FE0F&gt;&lt;U+21A9&gt;&lt;U+FE0F&gt;&lt;U+21AA&gt;&lt;U+FE0F&gt;&lt;U+2934&gt;&lt;U+FE0F&gt;&lt;U+2935&gt;&lt;U+FE0F&gt;&lt;U+0001F503&gt;&lt;U+0001F504&gt;&lt;U+0001F519&gt;&lt;U+0001F51A&gt;&lt;U+0001F51B&gt;&lt;U+0001F51C&gt;&lt;U+0001F51D&gt;&lt;U+0001F500&gt;&lt;U+0001F501&gt;&lt;U+0001F502&gt;&lt;U+25B6&gt;&lt;U+FE0F&gt;&lt;U+23E9&gt;&lt;U+23ED&gt;&lt;U+23EF&gt;&lt;U+25C0&gt;&lt;U+FE0F&gt;&lt;U+23EA&gt;&lt;U+23EE&gt;&lt;U+0001F53C&gt;&lt;U+23EB&gt;&lt;U+0001F53D&gt;&lt;U+23EC&gt; #&gt; art : &lt;U+0001F3AD&gt;&lt;U+0001F5BC&gt;&lt;U+0001F3A8&gt; #&gt; artist : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt; #&gt; assembly : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt; #&gt; astronaut : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F680&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F680&gt; #&gt; aubergine : &lt;U+0001F346&gt;&lt;U+0001F346&gt; #&gt; Australia : &lt;U+0001F998&gt;&lt;U+0001F30F&gt; #&gt; automobile : &lt;U+0001F697&gt;&lt;U+0001F698&gt; #&gt; autumn : &lt;U+0001F342&gt;&lt;U+0001F96E&gt; #&gt; baby : &lt;U+0001F476&gt;&lt;U+0001F931&gt;&lt;U+0001F47C&gt;&lt;U+0001F423&gt;&lt;U+0001F424&gt;&lt;U+0001F425&gt;&lt;U+0001F37C&gt;&lt;U+0001F6BC&gt; #&gt; backhand : &lt;U+0001F448&gt;&lt;U+0001F449&gt;&lt;U+0001F446&gt;&lt;U+0001F447&gt;&lt;U+0001F91A&gt; #&gt; bacteria : &lt;U+0001F9A0&gt;&lt;U+0001F9EB&gt; #&gt; bag : &lt;U+0001F45C&gt;&lt;U+0001F45D&gt;&lt;U+0001F45D&gt;&lt;U+0001F6CD&gt;&lt;U+0001F392&gt;&lt;U+0001F4B0&gt; #&gt; baggage : &lt;U+0001F6C4&gt;&lt;U+0001F6C5&gt; #&gt; bakery : &lt;U+0001F96F&gt;&lt;U+0001F9C1&gt; #&gt; balance : &lt;U+0001F939&gt;&lt;U+264E&gt; #&gt; ball : &lt;U+0001F3CC&gt;&lt;U+26F9&gt;&lt;U+26F9&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+26F9&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F93E&gt;&lt;U+0001F359&gt;&lt;U+0001F38A&gt;&lt;U+26BD&gt;&lt;U+26BE&gt;&lt;U+0001F94E&gt;&lt;U+0001F3C0&gt;&lt;U+0001F3D0&gt;&lt;U+0001F3C8&gt;&lt;U+0001F3C9&gt;&lt;U+0001F3BE&gt;&lt;U+0001F3B3&gt;&lt;U+0001F3CF&gt;&lt;U+0001F3D1&gt;&lt;U+0001F94D&gt;&lt;U+0001F3D3&gt;&lt;U+0001F3B1&gt;&lt;U+0001F52E&gt;&lt;U+0001F9F6&gt; #&gt; balloon : &lt;U+0001F4AC&gt;&lt;U+0001F5EF&gt;&lt;U+0001F4AD&gt;&lt;U+0001F388&gt; #&gt; bank : &lt;U+0001F3E6&gt;&lt;U+0001F4B4&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B6&gt;&lt;U+0001F4B7&gt;&lt;U+0001F4B8&gt;&lt;U+0001F4B3&gt;&lt;U+0001F4B9&gt;&lt;U+0001F4B1&gt;&lt;U+0001F3E7&gt; #&gt; banknote : &lt;U+0001F4B4&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B6&gt;&lt;U+0001F4B7&gt;&lt;U+0001F4B8&gt; #&gt; bar : &lt;U+0001F36B&gt;&lt;U+0001F376&gt;&lt;U+0001F37E&gt;&lt;U+0001F377&gt;&lt;U+0001F378&gt;&lt;U+0001F379&gt;&lt;U+0001F37A&gt;&lt;U+0001F37B&gt;&lt;U+0001F3EE&gt;&lt;U+0001F4CA&gt;&lt;U+0001F9FC&gt;&lt;U+23F8&gt;&lt;U+0001F4F6&gt; #&gt; barber : &lt;U+0001F487&gt;&lt;U+0001F488&gt; #&gt; bat : &lt;U+0001F987&gt;&lt;U+0001F3CF&gt;&lt;U+0001F3D3&gt; #&gt; bath : &lt;U+0001F6C0&gt;&lt;U+0001F6BF&gt;&lt;U+0001F6C1&gt; #&gt; bathtub : &lt;U+0001F6C0&gt;&lt;U+0001F6C1&gt; #&gt; beach : &lt;U+0001F459&gt;&lt;U+0001F41A&gt;&lt;U+0001F3D6&gt; #&gt; bear : &lt;U+0001F43B&gt;&lt;U+0001F428&gt; #&gt; bearer : &lt;U+0001F40D&gt;&lt;U+2652&gt;&lt;U+26CE&gt; #&gt; beauty : &lt;U+0001F487&gt;&lt;U+0001F485&gt; #&gt; beer : &lt;U+0001F37A&gt;&lt;U+0001F37B&gt; #&gt; bell : &lt;U+0001F6CE&gt;&lt;U+0001F390&gt;&lt;U+0001F514&gt;&lt;U+0001F515&gt; #&gt; beverage : &lt;U+2615&gt;&lt;U+0001F375&gt;&lt;U+0001F376&gt;&lt;U+0001F377&gt; #&gt; bicycle : &lt;U+0001F6B4&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B2&gt;&lt;U+0001F6B2&gt;&lt;U+0001F6B3&gt; #&gt; bike : &lt;U+0001F6B5&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B2&gt;&lt;U+0001F6B3&gt; #&gt; biking : &lt;U+0001F6B4&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; bill : &lt;U+0001F4B4&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B6&gt;&lt;U+0001F4B7&gt;&lt;U+0001F4B8&gt; #&gt; biologist : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F9EB&gt;&lt;U+0001F9EC&gt; #&gt; bird : &lt;U+0001F983&gt;&lt;U+0001F414&gt;&lt;U+0001F413&gt;&lt;U+0001F423&gt;&lt;U+0001F424&gt;&lt;U+0001F425&gt;&lt;U+0001F426&gt;&lt;U+0001F427&gt;&lt;U+0001F54A&gt;&lt;U+0001F985&gt;&lt;U+0001F986&gt;&lt;U+0001F9A2&gt;&lt;U+0001F989&gt;&lt;U+0001F99A&gt;&lt;U+0001F99C&gt; #&gt; birthday : &lt;U+0001F382&gt;&lt;U+0001F388&gt;&lt;U+0001F381&gt; #&gt; blond : &lt;U+0001F471&gt;&lt;U+0001F471&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; blonde : &lt;U+0001F478&gt;&lt;U+0001F471&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; blood type : &lt;U+0001F170&gt;&lt;U+FE0F&gt;&lt;U+0001F18E&gt;&lt;U+0001F171&gt;&lt;U+FE0F&gt;&lt;U+0001F17E&gt;&lt;U+FE0F&gt; #&gt; blossom : &lt;U+0001F338&gt;&lt;U+0001F33C&gt; #&gt; blow : &lt;U+0001F4A8&gt;&lt;U+0001F343&gt;&lt;U+0001F32C&gt; #&gt; blue : &lt;U+0001F630&gt;&lt;U+0001F499&gt;&lt;U+0001F4D8&gt;&lt;U+0001F537&gt;&lt;U+0001F539&gt;&lt;U+0001F535&gt; #&gt; blush : &lt;U+0001F60A&gt;&lt;U+263A&gt;&lt;U+FE0F&gt; #&gt; boat : &lt;U+0001F6A3&gt;&lt;U+0001F6A3&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6A3&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+26F5&gt;&lt;U+0001F6F6&gt;&lt;U+0001F6A4&gt;&lt;U+26F4&gt;&lt;U+0001F6E5&gt;&lt;U+0001F6A2&gt; #&gt; body : &lt;U+0001F442&gt;&lt;U+0001F443&gt;&lt;U+0001F441&gt;&lt;U+0001F445&gt; #&gt; bone : &lt;U+0001F356&gt;&lt;U+0001F357&gt; #&gt; book : &lt;U+0001F4D4&gt;&lt;U+0001F4D5&gt;&lt;U+0001F4D6&gt;&lt;U+0001F4D7&gt;&lt;U+0001F4D8&gt;&lt;U+0001F4D9&gt;&lt;U+0001F4DA&gt; #&gt; bookmark : &lt;U+0001F4D1&gt;&lt;U+0001F516&gt; #&gt; boom : &lt;U+0001F4A3&gt;&lt;U+0001F4A5&gt; #&gt; boot : &lt;U+0001F97E&gt;&lt;U+0001F462&gt; #&gt; bottle : &lt;U+0001F37C&gt;&lt;U+0001F376&gt;&lt;U+0001F37E&gt;&lt;U+0001F37E&gt; #&gt; bow : &lt;U+0001F647&gt;&lt;U+0001F64F&gt;&lt;U+0001F3F9&gt; #&gt; bowing : &lt;U+0001F647&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; box : &lt;U+0001F371&gt;&lt;U+0001F381&gt;&lt;U+0001F4E4&gt;&lt;U+0001F4E5&gt;&lt;U+0001F4E6&gt;&lt;U+0001F5F3&gt;&lt;U+0001F5C3&gt; #&gt; boy : &lt;U+0001F466&gt;&lt;U+0001F471&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt; #&gt; bread : &lt;U+0001F35E&gt;&lt;U+0001F950&gt;&lt;U+0001F956&gt;&lt;U+0001F96A&gt; #&gt; breakfast : &lt;U+0001F373&gt;&lt;U+0001F963&gt;&lt;U+0001F375&gt; #&gt; bright : &lt;U+0001F60E&gt;&lt;U+2600&gt;&lt;U+FE0F&gt;&lt;U+0001F31D&gt;&lt;U+0001F31E&gt;&lt;U+0001F506&gt; #&gt; brightness : &lt;U+0001F505&gt;&lt;U+0001F506&gt; #&gt; bubble : &lt;U+0001F4AC&gt;&lt;U+0001F5EF&gt;&lt;U+0001F4AD&gt; #&gt; bug : &lt;U+0001F41B&gt;&lt;U+0001F41E&gt; #&gt; building : &lt;U+0001F3E2&gt;&lt;U+0001F3E6&gt;&lt;U+0001F3E8&gt;&lt;U+0001F3EB&gt;&lt;U+0001F3ED&gt; #&gt; bull : &lt;U+0001F402&gt;&lt;U+0001F3AF&gt;&lt;U+2649&gt; #&gt; bunny : &lt;U+0001F46F&gt;&lt;U+0001F46F&gt;&lt;U+200D&gt;♂&lt;U+0001F430&gt;&lt;U+0001F430&gt;&lt;U+0001F407&gt; #&gt; bunny ear : &lt;U+0001F46F&gt;&lt;U+0001F46F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F46F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; bus : &lt;U+0001F68C&gt;&lt;U+0001F68D&gt;&lt;U+0001F68E&gt;&lt;U+0001F690&gt;&lt;U+0001F68F&gt; #&gt; business : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F574&gt;&lt;U+0001F4BC&gt; #&gt; bust : &lt;U+0001F464&gt;&lt;U+0001F465&gt; #&gt; button : &lt;U+0001F53C&gt;&lt;U+0001F53D&gt;&lt;U+0001F518&gt;&lt;U+0001F532&gt;&lt;U+0001F533&gt; #&gt; cable : &lt;U+0001F6A0&gt;&lt;U+0001F6A1&gt; #&gt; cake : &lt;U+0001F365&gt;&lt;U+0001F382&gt;&lt;U+0001F370&gt; #&gt; calendar : &lt;U+0001F4C5&gt;&lt;U+0001F4C5&gt;&lt;U+0001F4C6&gt;&lt;U+0001F5D3&gt; #&gt; call : &lt;U+0001F919&gt;&lt;U+0001F4F2&gt;&lt;U+0001F4DE&gt; #&gt; camel : &lt;U+0001F42A&gt;&lt;U+0001F42B&gt; #&gt; camera : &lt;U+0001F933&gt;&lt;U+0001F3A5&gt;&lt;U+0001F4F7&gt;&lt;U+0001F4F8&gt;&lt;U+0001F4F9&gt;&lt;U+0001F3A6&gt; #&gt; camping : &lt;U+0001F97E&gt;&lt;U+0001F3D5&gt;&lt;U+26FA&gt; #&gt; Cancer : &lt;U+0001F980&gt;&lt;U+264B&gt; #&gt; candy : &lt;U+0001F36C&gt;&lt;U+0001F36D&gt; #&gt; Capricorn : &lt;U+0001F410&gt;&lt;U+2651&gt; #&gt; car : &lt;U+0001F3CE&gt;&lt;U+0001F683&gt;&lt;U+0001F69E&gt;&lt;U+0001F68B&gt;&lt;U+0001F693&gt;&lt;U+0001F694&gt;&lt;U+0001F697&gt;&lt;U+0001F698&gt;&lt;U+0001F6A8&gt;&lt;U+0001F6A1&gt; #&gt; card : &lt;U+2660&gt;&lt;U+FE0F&gt;&lt;U+2665&gt;&lt;U+FE0F&gt;&lt;U+2666&gt;&lt;U+FE0F&gt;&lt;U+2663&gt;&lt;U+FE0F&gt;&lt;U+0001F0CF&gt;&lt;U+0001F3B4&gt;&lt;U+0001F4B3&gt;&lt;U+0001F5C2&gt;&lt;U+0001F4C7&gt;&lt;U+0001F5C3&gt; #&gt; cardinal : &lt;U+2B06&gt;&lt;U+FE0F&gt;&lt;U+27A1&gt;&lt;U+FE0F&gt;&lt;U+2B07&gt;&lt;U+FE0F&gt;&lt;U+2B05&gt;&lt;U+FE0F&gt; #&gt; castle : &lt;U+0001F3EF&gt;&lt;U+0001F3F0&gt; #&gt; cat : &lt;U+0001F63A&gt;&lt;U+0001F638&gt;&lt;U+0001F639&gt;&lt;U+0001F63B&gt;&lt;U+0001F63C&gt;&lt;U+0001F63D&gt;&lt;U+0001F640&gt;&lt;U+0001F63F&gt;&lt;U+0001F63E&gt;&lt;U+0001F431&gt;&lt;U+0001F408&gt; #&gt; celebration : &lt;U+0001F973&gt;&lt;U+0001F385&gt;&lt;U+0001F936&gt;&lt;U+0001F64C&gt;&lt;U+0001F393&gt;&lt;U+0001F382&gt;&lt;U+0001F37E&gt;&lt;U+0001F383&gt;&lt;U+0001F384&gt;&lt;U+0001F386&gt;&lt;U+0001F387&gt;&lt;U+0001F388&gt;&lt;U+0001F389&gt;&lt;U+0001F38A&gt;&lt;U+0001F38B&gt;&lt;U+0001F38D&gt;&lt;U+0001F38E&gt;&lt;U+0001F38F&gt;&lt;U+0001F390&gt;&lt;U+0001F391&gt;&lt;U+0001F380&gt;&lt;U+0001F381&gt;&lt;U+0001F397&gt;&lt;U+0001F396&gt;&lt;U+0001F38C&gt; #&gt; cell : &lt;U+0001F4F1&gt;&lt;U+0001F4F2&gt;&lt;U+0001F4F5&gt;&lt;U+0001F4F6&gt;&lt;U+0001F4F3&gt;&lt;U+0001F4F4&gt; #&gt; chart : &lt;U+0001F4B9&gt;&lt;U+0001F4C8&gt;&lt;U+0001F4C9&gt;&lt;U+0001F4CA&gt; #&gt; cheese : &lt;U+0001F9C0&gt;&lt;U+0001F355&gt; #&gt; chef : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F373&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F373&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F373&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F373&gt; #&gt; chemist : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F9EA&gt; #&gt; cherry : &lt;U+0001F338&gt;&lt;U+0001F352&gt; #&gt; chick : &lt;U+0001F423&gt;&lt;U+0001F424&gt;&lt;U+0001F425&gt; #&gt; chicken : &lt;U+0001F414&gt;&lt;U+0001F357&gt;&lt;U+0001F357&gt; #&gt; child : &lt;U+0001F476&gt;&lt;U+0001F9D2&gt;&lt;U+0001F466&gt;&lt;U+0001F467&gt;&lt;U+0001F46A&gt;&lt;U+0001F6B8&gt; #&gt; chop : &lt;U+0001F969&gt;&lt;U+0001F52A&gt; #&gt; christmas : &lt;U+0001F385&gt;&lt;U+2603&gt;&lt;U+FE0F&gt;&lt;U+0001F381&gt; #&gt; Christmas : &lt;U+0001F385&gt;&lt;U+0001F936&gt;&lt;U+0001F384&gt; #&gt; cigarette : &lt;U+0001F6AC&gt;&lt;U+0001F6AC&gt; #&gt; cinema : &lt;U+0001F3A5&gt;&lt;U+0001F39E&gt;&lt;U+0001F4FD&gt;&lt;U+0001F3A6&gt; #&gt; circle : &lt;U+23FA&gt;&lt;U+2B55&gt;&lt;U+24C2&gt;&lt;U+FE0F&gt;&lt;U+26AA&gt;&lt;U+26AB&gt;&lt;U+0001F534&gt;&lt;U+0001F535&gt; #&gt; city : &lt;U+0001F3D9&gt;&lt;U+0001F306&gt; #&gt; claus : &lt;U+0001F385&gt;&lt;U+0001F936&gt; #&gt; cleaning : &lt;U+0001F9F9&gt;&lt;U+0001F9FC&gt;&lt;U+0001F9FD&gt; #&gt; clenched : &lt;U+270A&gt;&lt;U+0001F44A&gt; #&gt; climber : &lt;U+0001F9D7&gt;&lt;U+0001F9D7&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9D7&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; clink : &lt;U+0001F37B&gt;&lt;U+0001F942&gt; #&gt; clock : &lt;U+231A&gt;&lt;U+23F0&gt;&lt;U+23F1&gt;&lt;U+23F2&gt;&lt;U+0001F570&gt;&lt;U+0001F55B&gt;&lt;U+0001F567&gt;&lt;U+0001F550&gt;&lt;U+0001F55C&gt;&lt;U+0001F551&gt;&lt;U+0001F55D&gt;&lt;U+0001F552&gt;&lt;U+0001F55E&gt;&lt;U+0001F553&gt;&lt;U+0001F55F&gt;&lt;U+0001F554&gt;&lt;U+0001F560&gt;&lt;U+0001F555&gt;&lt;U+0001F561&gt;&lt;U+0001F556&gt;&lt;U+0001F562&gt;&lt;U+0001F557&gt;&lt;U+0001F563&gt;&lt;U+0001F558&gt;&lt;U+0001F564&gt;&lt;U+0001F559&gt;&lt;U+0001F565&gt;&lt;U+0001F55A&gt;&lt;U+0001F566&gt; #&gt; clockwise : &lt;U+0001F503&gt;&lt;U+0001F501&gt;&lt;U+0001F502&gt; #&gt; closed : &lt;U+0001F61A&gt;&lt;U+0001F4D5&gt;&lt;U+0001F4EB&gt;&lt;U+0001F4EA&gt;&lt;U+0001F512&gt;&lt;U+0001F510&gt; #&gt; clothing : &lt;U+0001F463&gt;&lt;U+0001F453&gt;&lt;U+0001F454&gt;&lt;U+0001F455&gt;&lt;U+0001F456&gt;&lt;U+0001F457&gt;&lt;U+0001F458&gt;&lt;U+0001F459&gt;&lt;U+0001F45A&gt;&lt;U+0001F45B&gt;&lt;U+0001F45C&gt;&lt;U+0001F45D&gt;&lt;U+0001F45E&gt;&lt;U+0001F45F&gt;&lt;U+0001F460&gt;&lt;U+0001F461&gt;&lt;U+0001F462&gt;&lt;U+0001F451&gt;&lt;U+0001F452&gt;&lt;U+0001F3A9&gt;&lt;U+0001F393&gt;&lt;U+0001F4FF&gt;&lt;U+0001F302&gt;&lt;U+2602&gt;&lt;U+FE0F&gt;&lt;U+2614&gt; #&gt; cloud : &lt;U+26C5&gt;&lt;U+26C8&gt;&lt;U+0001F324&gt;&lt;U+0001F325&gt;&lt;U+0001F326&gt;&lt;U+0001F327&gt;&lt;U+0001F328&gt;&lt;U+0001F329&gt;&lt;U+0001F32A&gt;&lt;U+0001F32B&gt;&lt;U+0001F32C&gt; #&gt; clue : &lt;U+0001F9E9&gt;&lt;U+0001F5DD&gt; #&gt; coder : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt; #&gt; cold : &lt;U+0001F605&gt;&lt;U+0001F613&gt;&lt;U+0001F630&gt;&lt;U+0001F976&gt;&lt;U+0001F637&gt;&lt;U+0001F3D4&gt;&lt;U+0001F328&gt;&lt;U+2744&gt;&lt;U+FE0F&gt;&lt;U+2603&gt;&lt;U+FE0F&gt;&lt;U+26C4&gt;&lt;U+0001F4A7&gt; #&gt; comic : &lt;U+0001F4A9&gt;&lt;U+0001F4AA&gt;&lt;U+0001F4A4&gt;&lt;U+0001F4A2&gt;&lt;U+0001F4A3&gt;&lt;U+0001F4A5&gt;&lt;U+0001F4A6&gt;&lt;U+0001F4A8&gt;&lt;U+0001F4AB&gt;&lt;U+0001F4AC&gt;&lt;U+0001F4AD&gt;&lt;U+0001F4A7&gt;&lt;U+0001F4A1&gt;&lt;U+0001F4A0&gt; #&gt; computer : &lt;U+0001F4BB&gt;&lt;U+0001F5A5&gt;&lt;U+0001F5A8&gt;&lt;U+0001F5B1&gt;&lt;U+0001F5B2&gt;&lt;U+0001F4BD&gt;&lt;U+0001F4BE&gt;&lt;U+0001F4BF&gt;&lt;U+0001F4C0&gt; #&gt; confused : &lt;U+0001F615&gt;&lt;U+2753&gt; #&gt; construction : &lt;U+0001F477&gt;&lt;U+0001F477&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F477&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3D7&gt;&lt;U+0001F6A7&gt; #&gt; control : &lt;U+0001F39B&gt;&lt;U+0001F6C2&gt; #&gt; controller : &lt;U+0001F3AE&gt;&lt;U+0001F3AE&gt; #&gt; cook : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F373&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F373&gt; #&gt; cooking : &lt;U+0001F373&gt;&lt;U+0001F37D&gt;&lt;U+0001F374&gt;&lt;U+0001F52A&gt;&lt;U+0001F3FA&gt; #&gt; cool : &lt;U+0001F60E&gt;&lt;U+0001F60E&gt;&lt;U+0001F192&gt; #&gt; cop : &lt;U+0001F46E&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; cosmetics : &lt;U+0001F485&gt;&lt;U+0001F484&gt; #&gt; couple : &lt;U+0001F46B&gt;&lt;U+0001F46C&gt;&lt;U+0001F46C&gt;&lt;U+0001F46D&gt;&lt;U+0001F46D&gt;&lt;U+0001F48F&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+0001F491&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F469&gt; #&gt; couple with heart : &lt;U+0001F491&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F469&gt; #&gt; cow : &lt;U+0001F42E&gt;&lt;U+0001F404&gt; #&gt; crab : &lt;U+0001F980&gt;&lt;U+264B&gt; #&gt; cream : &lt;U+0001F366&gt;&lt;U+0001F368&gt;&lt;U+0001F4B0&gt; #&gt; creature : &lt;U+0001F479&gt;&lt;U+0001F47A&gt;&lt;U+0001F47B&gt;&lt;U+0001F47D&gt;&lt;U+0001F47E&gt; #&gt; crescent : &lt;U+0001F312&gt;&lt;U+0001F318&gt;&lt;U+0001F319&gt; #&gt; cross : &lt;U+0001F91E&gt;&lt;U+26D1&gt;&lt;U+26EA&gt;&lt;U+0001F38C&gt; #&gt; crossed : &lt;U+0001F500&gt;&lt;U+0001F38C&gt; #&gt; crown : &lt;U+0001F934&gt;&lt;U+0001F478&gt;&lt;U+0001F451&gt; #&gt; crush : &lt;U+0001F60D&gt;&lt;U+0001F970&gt; #&gt; cry : &lt;U+0001F622&gt;&lt;U+0001F62D&gt;&lt;U+0001F62D&gt;&lt;U+0001F63F&gt; #&gt; cup : &lt;U+0001F375&gt;&lt;U+0001F376&gt; #&gt; curl : &lt;U+0001F4C3&gt;&lt;U+27B0&gt;&lt;U+27BF&gt; #&gt; currency : &lt;U+0001F4B4&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B6&gt;&lt;U+0001F4B7&gt;&lt;U+0001F4B9&gt;&lt;U+0001F4B1&gt;&lt;U+0001F4B2&gt; #&gt; curry : &lt;U+0001F958&gt;&lt;U+0001F35B&gt; #&gt; cut : &lt;U+0001F52A&gt;&lt;U+2702&gt;&lt;U+FE0F&gt; #&gt; cutlery : &lt;U+0001F374&gt;&lt;U+0001F374&gt; #&gt; cyclist : &lt;U+0001F6B4&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; dancer : &lt;U+0001F57A&gt;&lt;U+0001F46F&gt;&lt;U+0001F46F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F46F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; danger : &lt;U+0001F480&gt;&lt;U+2620&gt;&lt;U+FE0F&gt;&lt;U+26A1&gt; #&gt; dark : &lt;U+0001F576&gt;&lt;U+0001F311&gt; #&gt; date : &lt;U+0001F46B&gt;&lt;U+0001F46C&gt;&lt;U+0001F46D&gt;&lt;U+0001F4C5&gt; #&gt; desert : &lt;U+0001F42A&gt;&lt;U+0001F3DC&gt;&lt;U+0001F3DD&gt; #&gt; desktop : &lt;U+0001F4BB&gt;&lt;U+0001F5A5&gt; #&gt; dessert : &lt;U+0001F361&gt;&lt;U+0001F366&gt;&lt;U+0001F367&gt;&lt;U+0001F368&gt;&lt;U+0001F369&gt;&lt;U+0001F36A&gt;&lt;U+0001F382&gt;&lt;U+0001F370&gt;&lt;U+0001F370&gt;&lt;U+0001F36B&gt;&lt;U+0001F36C&gt;&lt;U+0001F36D&gt;&lt;U+0001F36E&gt; #&gt; detective : &lt;U+0001F575&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; developer : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt; #&gt; devil : &lt;U+0001F608&gt;&lt;U+0001F47F&gt;&lt;U+0001F47F&gt; #&gt; dialog : &lt;U+0001F4AC&gt;&lt;U+0001F5E8&gt;&lt;U+FE0F&gt; #&gt; diamond : &lt;U+0001F48D&gt;&lt;U+0001F48E&gt;&lt;U+0001F48E&gt;&lt;U+0001F536&gt;&lt;U+0001F537&gt;&lt;U+0001F538&gt;&lt;U+0001F539&gt;&lt;U+0001F4A0&gt; #&gt; dice : &lt;U+0001F3B2&gt;&lt;U+0001F3B2&gt; #&gt; direction : &lt;U+2B06&gt;&lt;U+FE0F&gt;↗&lt;U+FE0F&gt;&lt;U+27A1&gt;&lt;U+FE0F&gt;↘&lt;U+FE0F&gt;&lt;U+2B07&gt;&lt;U+FE0F&gt;↙&lt;U+FE0F&gt;&lt;U+2B05&gt;&lt;U+FE0F&gt;↖&lt;U+FE0F&gt; #&gt; disappointed : &lt;U+0001F625&gt;&lt;U+0001F61E&gt; #&gt; disbelief : &lt;U+0001F928&gt;&lt;U+0001F926&gt; #&gt; disk : &lt;U+0001F4BD&gt;&lt;U+0001F4BE&gt;&lt;U+0001F4BF&gt;&lt;U+0001F4C0&gt; #&gt; dizzy : &lt;U+0001F635&gt;&lt;U+0001F974&gt;&lt;U+0001F4AB&gt;&lt;U+0001F300&gt; #&gt; djinn : &lt;U+0001F9DE&gt;&lt;U+0001F9DE&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9DE&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; doctor : &lt;U+0001F637&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2695&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2695&gt;&lt;U+0001F97C&gt;&lt;U+0001F3E5&gt;&lt;U+0001F489&gt;&lt;U+0001F48A&gt; #&gt; document : &lt;U+0001F4C3&gt;&lt;U+0001F4DC&gt;&lt;U+0001F4C4&gt;&lt;U+0001F4DD&gt; #&gt; dog : &lt;U+0001F436&gt;&lt;U+0001F415&gt;&lt;U+0001F429&gt;&lt;U+0001F429&gt; #&gt; dollar : &lt;U+0001F4B0&gt;&lt;U+0001F4B0&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B8&gt;&lt;U+0001F4B8&gt;&lt;U+0001F4B2&gt; #&gt; double : &lt;U+23E9&gt;&lt;U+23EA&gt;&lt;U+23EB&gt;&lt;U+23EC&gt;&lt;U+23F8&gt;&lt;U+27BF&gt; #&gt; down : &lt;U+0001F447&gt;&lt;U+0001F44E&gt;&lt;U+0001F4E9&gt;&lt;U+0001F4C9&gt;&lt;U+2B07&gt;&lt;U+FE0F&gt;&lt;U+2935&gt;&lt;U+FE0F&gt;&lt;U+0001F53D&gt;&lt;U+23EC&gt;&lt;U+0001F53B&gt; #&gt; Dracula : &lt;U+0001F9DB&gt;&lt;U+0001F9DB&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; dragon : &lt;U+0001F432&gt;&lt;U+0001F409&gt; #&gt; dress : &lt;U+0001F483&gt;&lt;U+0001F457&gt; #&gt; drink : &lt;U+0001F37C&gt;&lt;U+0001F95B&gt;&lt;U+2615&gt;&lt;U+0001F375&gt;&lt;U+0001F376&gt;&lt;U+0001F37E&gt;&lt;U+0001F377&gt;&lt;U+0001F378&gt;&lt;U+0001F378&gt;&lt;U+0001F379&gt;&lt;U+0001F37A&gt;&lt;U+0001F37A&gt;&lt;U+0001F37B&gt;&lt;U+0001F942&gt;&lt;U+0001F3FA&gt; #&gt; drop : &lt;U+2614&gt;&lt;U+0001F4A7&gt; #&gt; drum : &lt;U+0001F6E2&gt;&lt;U+0001F941&gt; #&gt; dusk : &lt;U+0001F306&gt;&lt;U+0001F307&gt; #&gt; e-mail : &lt;U+0001F4E7&gt;&lt;U+0001F4E8&gt;&lt;U+0001F4E9&gt; #&gt; ear : &lt;U+0001F442&gt;&lt;U+0001F33E&gt;&lt;U+0001F33D&gt; #&gt; earth : &lt;U+0001F30D&gt;&lt;U+0001F30E&gt;&lt;U+0001F30F&gt;&lt;U+0001F310&gt; #&gt; egg : &lt;U+0001F95A&gt;&lt;U+0001F373&gt; #&gt; eight : &lt;U+0001F557&gt;&lt;U+0001F563&gt;&lt;U+0001F3B1&gt; #&gt; electric : &lt;U+0001F683&gt;&lt;U+26A1&gt;&lt;U+0001F50C&gt;&lt;U+0001F4A1&gt;&lt;U+0001F526&gt; #&gt; electrician : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F527&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F527&gt; #&gt; electricity : &lt;U+26A1&gt;&lt;U+0001F50C&gt; #&gt; eleven : &lt;U+0001F55A&gt;&lt;U+0001F566&gt; #&gt; email : &lt;U+0001F48C&gt;&lt;U+0001F4E7&gt;&lt;U+0001F4E8&gt;&lt;U+0001F4E9&gt; #&gt; emergency : &lt;U+0001F6A8&gt;&lt;U+0001F198&gt; #&gt; engine : &lt;U+0001F682&gt;&lt;U+0001F692&gt; #&gt; engineer : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt; #&gt; entertainer : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt; #&gt; entry : &lt;U+26D4&gt;&lt;U+0001F6AB&gt; #&gt; envelope : &lt;U+0001F48C&gt;&lt;U+0001F4E8&gt;&lt;U+0001F4E9&gt; #&gt; European : &lt;U+0001F3E4&gt;&lt;U+0001F3F0&gt; #&gt; evil : &lt;U+0001F608&gt;&lt;U+0001F47F&gt;&lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F9B9&gt;&lt;U+0001F5A4&gt; #&gt; excited : &lt;U+0001F496&gt;&lt;U+0001F497&gt; #&gt; exclamation : &lt;U+203C&gt;&lt;U+FE0F&gt;&lt;U+2049&gt;&lt;U+FE0F&gt;&lt;U+2755&gt;&lt;U+2757&gt; #&gt; exercise : &lt;U+0001F3C3&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♀ #&gt; experiment : &lt;U+0001F97C&gt;&lt;U+0001F9EA&gt; #&gt; extraterrestrial : &lt;U+0001F47D&gt;&lt;U+0001F47E&gt; #&gt; eye : &lt;U+0001F601&gt;&lt;U+0001F604&gt;&lt;U+0001F60A&gt;&lt;U+0001F60E&gt;&lt;U+0001F60D&gt;&lt;U+0001F619&gt;&lt;U+0001F61A&gt;&lt;U+0001F61C&gt;&lt;U+0001F61D&gt;&lt;U+0001F92A&gt;&lt;U+0001F638&gt;&lt;U+0001F63B&gt;&lt;U+0001F63D&gt;&lt;U+0001F440&gt;&lt;U+0001F441&gt;&lt;U+0001F441&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F5E8&gt;&lt;U+FE0F&gt;&lt;U+0001F453&gt;&lt;U+0001F576&gt;&lt;U+0001F3AF&gt; #&gt; eyes : &lt;U+0001F929&gt;&lt;U+0001F644&gt;&lt;U+0001F440&gt; #&gt; eyewear : &lt;U+0001F60E&gt;&lt;U+0001F453&gt;&lt;U+0001F576&gt; #&gt; face : &lt;U+0001F600&gt;&lt;U+0001F601&gt;&lt;U+0001F602&gt;&lt;U+0001F923&gt;&lt;U+0001F603&gt;&lt;U+0001F604&gt;&lt;U+0001F605&gt;&lt;U+0001F606&gt;&lt;U+0001F609&gt;&lt;U+0001F60A&gt;&lt;U+0001F60B&gt;&lt;U+0001F60E&gt;&lt;U+0001F60D&gt;&lt;U+0001F618&gt;&lt;U+0001F617&gt;&lt;U+0001F619&gt;&lt;U+0001F61A&gt;&lt;U+263A&gt;&lt;U+FE0F&gt;&lt;U+0001F642&gt;&lt;U+0001F917&gt;&lt;U+0001F929&gt;&lt;U+0001F914&gt;&lt;U+0001F610&gt;&lt;U+0001F611&gt;&lt;U+0001F636&gt;&lt;U+0001F644&gt;&lt;U+0001F60F&gt;&lt;U+0001F623&gt;&lt;U+0001F625&gt;&lt;U+0001F62E&gt;&lt;U+0001F910&gt;&lt;U+0001F62F&gt;&lt;U+0001F62A&gt;&lt;U+0001F62B&gt;&lt;U+0001F634&gt;&lt;U+0001F60C&gt;&lt;U+0001F61B&gt;&lt;U+0001F61C&gt;&lt;U+0001F61D&gt;&lt;U+0001F924&gt;&lt;U+0001F612&gt;&lt;U+0001F613&gt;&lt;U+0001F614&gt;&lt;U+0001F615&gt;&lt;U+0001F643&gt;&lt;U+0001F911&gt;&lt;U+0001F632&gt;&lt;U+0001F641&gt;&lt;U+0001F616&gt;&lt;U+0001F61E&gt;&lt;U+0001F61F&gt;&lt;U+0001F624&gt;&lt;U+0001F622&gt;&lt;U+0001F62D&gt;&lt;U+0001F626&gt;&lt;U+0001F627&gt;&lt;U+0001F628&gt;&lt;U+0001F629&gt;&lt;U+0001F62C&gt;&lt;U+0001F630&gt;&lt;U+0001F631&gt;&lt;U+0001F633&gt;&lt;U+0001F635&gt;&lt;U+0001F621&gt;&lt;U+0001F620&gt;&lt;U+0001F637&gt;&lt;U+0001F912&gt;&lt;U+0001F915&gt;&lt;U+0001F922&gt;&lt;U+0001F927&gt;&lt;U+0001F607&gt;&lt;U+0001F920&gt;&lt;U+0001F925&gt;&lt;U+0001F913&gt;&lt;U+0001F608&gt;&lt;U+0001F47F&gt;&lt;U+0001F921&gt;&lt;U+0001F479&gt;&lt;U+0001F47A&gt;&lt;U+0001F480&gt;&lt;U+0001F47B&gt;&lt;U+0001F47D&gt;&lt;U+0001F47E&gt;&lt;U+0001F916&gt;&lt;U+0001F4A9&gt;&lt;U+0001F63A&gt;&lt;U+0001F638&gt;&lt;U+0001F639&gt;&lt;U+0001F63B&gt;&lt;U+0001F63C&gt;&lt;U+0001F63D&gt;&lt;U+0001F640&gt;&lt;U+0001F63F&gt;&lt;U+0001F63E&gt;&lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F47C&gt;&lt;U+0001F926&gt;&lt;U+0001F486&gt;&lt;U+0001F486&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F486&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F5E3&gt;&lt;U+0001F440&gt;&lt;U+26D1&gt;&lt;U+0001F435&gt;&lt;U+0001F436&gt;&lt;U+0001F43A&gt;&lt;U+0001F98A&gt;&lt;U+0001F431&gt;&lt;U+0001F981&gt;&lt;U+0001F42F&gt;&lt;U+0001F434&gt;&lt;U+0001F984&gt;&lt;U+0001F42E&gt;&lt;U+0001F437&gt;&lt;U+0001F43D&gt;&lt;U+0001F42D&gt;&lt;U+0001F439&gt;&lt;U+0001F430&gt;&lt;U+0001F43B&gt;&lt;U+0001F43C&gt;&lt;U+0001F438&gt;&lt;U+0001F432&gt;&lt;U+0001F433&gt;&lt;U+0001F31A&gt;&lt;U+0001F31B&gt;&lt;U+0001F31C&gt;&lt;U+0001F31D&gt;&lt;U+0001F31E&gt;&lt;U+0001F32C&gt;&lt;U+0001F5FF&gt; #&gt; factory : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F3ED&gt; #&gt; fairy tale : &lt;U+0001F607&gt;&lt;U+0001F608&gt;&lt;U+0001F47F&gt;&lt;U+0001F479&gt;&lt;U+0001F47A&gt;&lt;U+0001F480&gt;&lt;U+0001F47B&gt;&lt;U+0001F47D&gt;&lt;U+0001F47E&gt;&lt;U+0001F478&gt;&lt;U+0001F47C&gt;&lt;U+0001F432&gt;&lt;U+0001F409&gt;&lt;U+0001F52E&gt; #&gt; falling : &lt;U+0001F341&gt;&lt;U+0001F342&gt;&lt;U+0001F320&gt; #&gt; family : &lt;U+0001F46A&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt; #&gt; fantasy : &lt;U+0001F607&gt;&lt;U+0001F608&gt;&lt;U+0001F47F&gt;&lt;U+0001F479&gt;&lt;U+0001F47A&gt;&lt;U+0001F47B&gt;&lt;U+0001F47D&gt;&lt;U+0001F47E&gt;&lt;U+0001F478&gt;&lt;U+0001F47C&gt;&lt;U+0001F52E&gt; #&gt; farmer : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt; #&gt; fast : &lt;U+0001F4A8&gt;&lt;U+23E9&gt; #&gt; father : &lt;U+0001F468&gt;&lt;U+0001F385&gt; #&gt; favor : &lt;U+0001F647&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; fear : &lt;U+0001F628&gt;&lt;U+0001F631&gt; #&gt; fearful : &lt;U+0001F628&gt;&lt;U+0001F631&gt; #&gt; feet : &lt;U+0001F463&gt;&lt;U+0001F43E&gt; #&gt; festival : &lt;U+0001F96E&gt;&lt;U+0001F386&gt;&lt;U+0001F38E&gt; #&gt; file : &lt;U+0001F4C1&gt;&lt;U+0001F4C2&gt;&lt;U+0001F5C3&gt;&lt;U+0001F5C4&gt; #&gt; film : &lt;U+0001F3A5&gt;&lt;U+0001F39E&gt;&lt;U+0001F4FD&gt;&lt;U+0001F3AC&gt;&lt;U+0001F3A6&gt;&lt;U+0001F3A6&gt; #&gt; finger : &lt;U+0001F448&gt;&lt;U+0001F449&gt;&lt;U+261D&gt;&lt;U+FE0F&gt;&lt;U+0001F446&gt;&lt;U+0001F595&gt;&lt;U+0001F447&gt;&lt;U+0001F91E&gt;&lt;U+0001F596&gt;&lt;U+0001F918&gt;&lt;U+0001F590&gt; #&gt; fire : &lt;U+0001F692&gt;&lt;U+0001F525&gt;&lt;U+0001F9EF&gt; #&gt; firefighter : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F692&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F692&gt; #&gt; firetruck : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F692&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F692&gt; #&gt; fireworks : &lt;U+0001F386&gt;&lt;U+0001F387&gt;&lt;U+0001F9E8&gt; #&gt; fish : &lt;U+0001F41F&gt;&lt;U+0001F420&gt;&lt;U+0001F421&gt;&lt;U+0001F988&gt;&lt;U+0001F365&gt;&lt;U+0001F3A3&gt;&lt;U+2653&gt; #&gt; fist : &lt;U+270A&gt;&lt;U+0001F44A&gt;&lt;U+0001F91B&gt;&lt;U+0001F91C&gt; #&gt; five : &lt;U+0001F554&gt;&lt;U+0001F560&gt; #&gt; flag : &lt;U+0001F1E6&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F6&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1FD&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F6&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1FD&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F6&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F6&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F6&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FD&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1F5&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1F6&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1E7&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1FD&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1E9&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1ED&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1EF&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F1&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F4&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F7&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1E8&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1EC&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1EE&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1F3&gt;&lt;U+0001F1FB&gt;&lt;U+0001F1FA&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1FC&gt;&lt;U+0001F1F8&gt;&lt;U+0001F1FD&gt;&lt;U+0001F1F0&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1EA&gt;&lt;U+0001F1FE&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1E6&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1F2&gt;&lt;U+0001F1FF&gt;&lt;U+0001F1FC&gt;&lt;U+0001F3F4&gt;&lt;U+000E0067&gt;&lt;U+000E0062&gt;&lt;U+000E0065&gt;&lt;U+000E006E&gt;&lt;U+000E0067&gt;&lt;U+000E007F&gt;&lt;U+0001F3F4&gt;&lt;U+000E0067&gt;&lt;U+000E0062&gt;&lt;U+000E0073&gt;&lt;U+000E0063&gt;&lt;U+000E0074&gt;&lt;U+000E007F&gt;&lt;U+0001F3F4&gt;&lt;U+000E0067&gt;&lt;U+000E0062&gt;&lt;U+000E0077&gt;&lt;U+000E006C&gt;&lt;U+000E0073&gt;&lt;U+000E007F&gt; #&gt; flex : &lt;U+0001F4AA&gt;&lt;U+0001F4AA&gt; #&gt; flight : &lt;U+2708&gt;&lt;U+FE0F&gt;&lt;U+0001F6E9&gt; #&gt; flirt : &lt;U+0001F609&gt;&lt;U+0001F618&gt; #&gt; flower : &lt;U+0001F490&gt;&lt;U+0001F338&gt;&lt;U+0001F338&gt;&lt;U+0001F4AE&gt;&lt;U+0001F339&gt;&lt;U+0001F940&gt;&lt;U+0001F33A&gt;&lt;U+0001F33B&gt;&lt;U+0001F33C&gt;&lt;U+0001F337&gt;&lt;U+0001F3B4&gt; #&gt; fly : &lt;U+0001F54A&gt;&lt;U+0001F4B8&gt; #&gt; fog : &lt;U+0001F301&gt;&lt;U+0001F32B&gt; #&gt; folder : &lt;U+0001F4C1&gt;&lt;U+0001F4C2&gt; #&gt; food : &lt;U+0001F990&gt;&lt;U+0001F991&gt;&lt;U+0001F95D&gt;&lt;U+0001F951&gt;&lt;U+0001F954&gt;&lt;U+0001F955&gt;&lt;U+0001F952&gt;&lt;U+0001F95C&gt;&lt;U+0001F950&gt;&lt;U+0001F956&gt;&lt;U+0001F95E&gt;&lt;U+0001F953&gt;&lt;U+0001F959&gt;&lt;U+0001F95A&gt;&lt;U+0001F958&gt;&lt;U+0001F957&gt; #&gt; football : &lt;U+26BD&gt;&lt;U+0001F3C8&gt;&lt;U+0001F3C9&gt; #&gt; forbidden : &lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F645&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F515&gt;&lt;U+26D4&gt;&lt;U+0001F6AB&gt;&lt;U+0001F6B3&gt;&lt;U+0001F6AD&gt;&lt;U+0001F6AF&gt;&lt;U+0001F6B7&gt;&lt;U+0001F4F5&gt;&lt;U+0001F51E&gt; #&gt; fork : &lt;U+0001F37D&gt;&lt;U+0001F374&gt; #&gt; fortune : &lt;U+0001F52E&gt;&lt;U+0001F52F&gt; #&gt; fountain : &lt;U+26F2&gt;&lt;U+0001F58B&gt; #&gt; four : &lt;U+0001F340&gt;&lt;U+0001F553&gt;&lt;U+0001F55F&gt; #&gt; french : &lt;U+0001F950&gt;&lt;U+0001F956&gt;&lt;U+0001F35F&gt;&lt;U+0001F1EB&gt;&lt;U+0001F1F7&gt; #&gt; frown : &lt;U+0001F641&gt;&lt;U+0001F626&gt;&lt;U+0001F64D&gt; #&gt; frowning : &lt;U+0001F64D&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64D&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; fruit : &lt;U+0001F347&gt;&lt;U+0001F348&gt;&lt;U+0001F349&gt;&lt;U+0001F34A&gt;&lt;U+0001F34B&gt;&lt;U+0001F34C&gt;&lt;U+0001F34C&gt;&lt;U+0001F34D&gt;&lt;U+0001F34E&gt;&lt;U+0001F34F&gt;&lt;U+0001F34F&gt;&lt;U+0001F350&gt;&lt;U+0001F351&gt;&lt;U+0001F352&gt;&lt;U+0001F352&gt;&lt;U+0001F353&gt;&lt;U+0001F353&gt;&lt;U+0001F95D&gt;&lt;U+0001F345&gt;&lt;U+0001F951&gt;&lt;U+0001F967&gt; #&gt; full : &lt;U+0001F315&gt;&lt;U+0001F31D&gt;&lt;U+0001F4AF&gt; #&gt; game : &lt;U+0001F47E&gt;&lt;U+0001F3D0&gt;&lt;U+0001F3B3&gt;&lt;U+0001F3CF&gt;&lt;U+0001F3D1&gt;&lt;U+0001F3D2&gt;&lt;U+0001F3D3&gt;&lt;U+0001F3F8&gt;&lt;U+0001F94C&gt;&lt;U+0001F3AF&gt;&lt;U+0001F3B1&gt;&lt;U+0001F3AE&gt;&lt;U+0001F579&gt;&lt;U+0001F3B0&gt;&lt;U+0001F3B2&gt;&lt;U+2660&gt;&lt;U+FE0F&gt;&lt;U+2665&gt;&lt;U+FE0F&gt;&lt;U+2666&gt;&lt;U+FE0F&gt;&lt;U+2663&gt;&lt;U+FE0F&gt;&lt;U+0001F0CF&gt;&lt;U+0001F004&gt;&lt;U+0001F3B4&gt; #&gt; gardener : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt; #&gt; geek : &lt;U+0001F913&gt;&lt;U+0001F913&gt; #&gt; Gemini : &lt;U+0001F46C&gt;&lt;U+264A&gt; #&gt; gender-neutral : &lt;U+0001F9D2&gt;&lt;U+0001F9D1&gt;&lt;U+0001F9D3&gt; #&gt; geometric : &lt;U+25FD&gt;&lt;U+25FE&gt;&lt;U+2B1B&gt;&lt;U+2B1C&gt;&lt;U+0001F536&gt;&lt;U+0001F537&gt;&lt;U+0001F538&gt;&lt;U+0001F539&gt;&lt;U+0001F53A&gt;&lt;U+0001F53B&gt;&lt;U+0001F4A0&gt;&lt;U+0001F518&gt;&lt;U+0001F532&gt;&lt;U+0001F533&gt;&lt;U+26AA&gt;&lt;U+26AB&gt;&lt;U+0001F534&gt;&lt;U+0001F535&gt; #&gt; gesture : &lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F64D&gt;&lt;U+0001F64D&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64D&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F64E&gt;&lt;U+0001F64E&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64E&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F646&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F64B&gt;&lt;U+0001F64B&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64B&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F64C&gt;&lt;U+0001F64F&gt; #&gt; gibbous : &lt;U+0001F314&gt;&lt;U+0001F316&gt; #&gt; gift : &lt;U+0001F9E7&gt;&lt;U+0001F381&gt; #&gt; girl : &lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt; #&gt; glass : &lt;U+0001F95B&gt;&lt;U+0001F377&gt;&lt;U+0001F378&gt;&lt;U+0001F942&gt;&lt;U+0001F943&gt;&lt;U+0001F50D&gt;&lt;U+0001F50E&gt; #&gt; glasses : &lt;U+0001F60E&gt;&lt;U+0001F913&gt;&lt;U+0001F453&gt;&lt;U+0001F576&gt; #&gt; globe : &lt;U+0001F30D&gt;&lt;U+0001F30D&gt;&lt;U+0001F30E&gt;&lt;U+0001F30E&gt;&lt;U+0001F30F&gt;&lt;U+0001F30F&gt;&lt;U+0001F310&gt; #&gt; glove : &lt;U+0001F94E&gt;&lt;U+0001F94A&gt; #&gt; goal : &lt;U+0001F94D&gt;&lt;U+0001F945&gt; #&gt; goat : &lt;U+0001F410&gt;&lt;U+2651&gt; #&gt; gold : &lt;U+0001F3C5&gt;&lt;U+0001F947&gt; #&gt; golf : &lt;U+0001F3CC&gt;&lt;U+0001F3CC&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3CC&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+26F3&gt; #&gt; gondola : &lt;U+0001F6A0&gt;&lt;U+0001F6A1&gt; #&gt; graduate : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F393&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F393&gt; #&gt; graduation : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F393&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F393&gt;&lt;U+0001F393&gt;&lt;U+0001F393&gt; #&gt; graph : &lt;U+0001F4B9&gt;&lt;U+0001F4C8&gt;&lt;U+0001F4C8&gt;&lt;U+0001F4C9&gt;&lt;U+0001F4C9&gt;&lt;U+0001F4CA&gt; #&gt; green : &lt;U+0001F49A&gt;&lt;U+0001F34F&gt;&lt;U+0001F957&gt;&lt;U+0001F375&gt;&lt;U+0001F4D7&gt;&lt;U+267B&gt;&lt;U+FE0F&gt;&lt;U+0001F530&gt; #&gt; grin : &lt;U+0001F600&gt;&lt;U+0001F601&gt;&lt;U+0001F638&gt; #&gt; groom : &lt;U+0001F935&gt;&lt;U+0001F935&gt; #&gt; growth : &lt;U+0001F4B9&gt;&lt;U+0001F4C8&gt; #&gt; guard : &lt;U+0001F482&gt;&lt;U+0001F482&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F482&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; gym : &lt;U+0001F3CB&gt;&lt;U+0001F3CB&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; haha : &lt;U+0001F603&gt;&lt;U+0001F606&gt; #&gt; haircut : &lt;U+0001F487&gt;&lt;U+0001F487&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F487&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F488&gt; #&gt; halloween : &lt;U+0001F47B&gt;&lt;U+0001F383&gt;&lt;U+0001F383&gt; #&gt; halt : &lt;U+0001F645&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂ #&gt; hammer : &lt;U+0001F528&gt;&lt;U+2692&gt;&lt;U+0001F6E0&gt; #&gt; hand : &lt;U+0001F645&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F646&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F481&gt;&lt;U+0001F64B&gt;&lt;U+0001F46B&gt;&lt;U+0001F46C&gt;&lt;U+0001F46D&gt;&lt;U+0001F448&gt;&lt;U+0001F449&gt;&lt;U+261D&gt;&lt;U+FE0F&gt;&lt;U+0001F446&gt;&lt;U+0001F595&gt;&lt;U+0001F447&gt;&lt;U+270C&gt;&lt;U+FE0F&gt;&lt;U+0001F91E&gt;&lt;U+0001F596&gt;&lt;U+0001F918&gt;&lt;U+0001F919&gt;&lt;U+0001F590&gt;&lt;U+270B&gt;&lt;U+0001F44C&gt;&lt;U+0001F44D&gt;&lt;U+0001F44E&gt;&lt;U+270A&gt;&lt;U+0001F44A&gt;&lt;U+0001F44B&gt;&lt;U+0001F91F&gt;&lt;U+0001F44F&gt;&lt;U+0001F450&gt;&lt;U+0001F64C&gt;&lt;U+0001F64F&gt;&lt;U+0001F91D&gt;&lt;U+0001F9E4&gt; #&gt; happy : &lt;U+0001F600&gt;&lt;U+0001F603&gt;&lt;U+0001F604&gt;&lt;U+0001F606&gt;&lt;U+0001F64B&gt; #&gt; hat : &lt;U+0001F920&gt;&lt;U+0001F973&gt;&lt;U+0001F477&gt;&lt;U+0001F472&gt;&lt;U+0001F452&gt;&lt;U+0001F3A9&gt;&lt;U+0001F393&gt;&lt;U+26D1&gt; #&gt; health : &lt;U+0001F489&gt;&lt;U+0001F48A&gt; #&gt; hear : &lt;U+0001F649&gt;&lt;U+0001F442&gt; #&gt; heart : &lt;U+0001F498&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+0001F49F&gt;&lt;U+0001F48C&gt; #&gt; helmet : &lt;U+0001F477&gt;&lt;U+26D1&gt; #&gt; help : &lt;U+0001F481&gt;&lt;U+0001F198&gt;&lt;U+0001F198&gt; #&gt; hike : &lt;U+0001F6B6&gt;&lt;U+0001F6B6&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B6&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; hockey : &lt;U+0001F3D1&gt;&lt;U+0001F3D2&gt; #&gt; hold : &lt;U+0001F46B&gt;&lt;U+0001F46C&gt;&lt;U+0001F46D&gt; #&gt; hole : &lt;U+0001F573&gt;&lt;U+26F3&gt; #&gt; home : &lt;U+0001F46A&gt;&lt;U+0001F3E0&gt;&lt;U+0001F3E1&gt; #&gt; hooray : &lt;U+0001F64C&gt;&lt;U+0001F64C&gt;&lt;U+0001F389&gt; #&gt; horn : &lt;U+0001F973&gt;&lt;U+0001F4EF&gt; #&gt; horns : &lt;U+0001F608&gt;&lt;U+0001F608&gt;&lt;U+0001F47F&gt;&lt;U+0001F918&gt; #&gt; horror : &lt;U+0001F631&gt;&lt;U+0001F640&gt; #&gt; horse : &lt;U+0001F3C7&gt;&lt;U+0001F434&gt;&lt;U+0001F40E&gt;&lt;U+0001F3A0&gt; #&gt; hospital : &lt;U+0001F3E5&gt;&lt;U+0001F489&gt; #&gt; hot : &lt;U+0001F605&gt;&lt;U+0001F975&gt;&lt;U+0001F336&gt;&lt;U+2615&gt;&lt;U+2668&gt;&lt;U+FE0F&gt; #&gt; hotel : &lt;U+0001F6CC&gt;&lt;U+0001F6CD&gt;&lt;U+0001F3E8&gt;&lt;U+0001F3E9&gt;&lt;U+0001F6CE&gt;&lt;U+0001F6CF&gt;&lt;U+0001F6CB&gt; #&gt; house : &lt;U+0001F3DA&gt;&lt;U+0001F3E0&gt;&lt;U+0001F3E1&gt; #&gt; hump : &lt;U+0001F42A&gt;&lt;U+0001F42B&gt; #&gt; hurt : &lt;U+0001F915&gt;&lt;U+0001F915&gt; #&gt; hush : &lt;U+0001F910&gt;&lt;U+0001F64A&gt; #&gt; ice : &lt;U+0001F366&gt;&lt;U+0001F367&gt;&lt;U+0001F368&gt;&lt;U+0001F3D2&gt;&lt;U+26F8&gt; #&gt; idea : &lt;U+0001F4A1&gt;&lt;U+0001F4A1&gt; #&gt; ideograph : &lt;U+0001F237&gt;&lt;U+FE0F&gt;&lt;U+0001F236&gt;&lt;U+0001F22F&gt;&lt;U+0001F250&gt;&lt;U+0001F239&gt;&lt;U+0001F21A&gt;&lt;U+0001F232&gt;&lt;U+0001F251&gt;&lt;U+0001F238&gt;&lt;U+0001F234&gt;&lt;U+0001F233&gt;祝&lt;U+FE0F&gt;秘&lt;U+FE0F&gt;&lt;U+0001F23A&gt;&lt;U+0001F235&gt; #&gt; ill : &lt;U+0001F637&gt;&lt;U+0001F912&gt; #&gt; incoming : &lt;U+0001F4F2&gt;&lt;U+0001F4E8&gt; #&gt; index : &lt;U+0001F448&gt;&lt;U+0001F449&gt;&lt;U+261D&gt;&lt;U+FE0F&gt;&lt;U+0001F446&gt;&lt;U+0001F447&gt;&lt;U+0001F5C2&gt;&lt;U+0001F4C7&gt; #&gt; industrial : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt; #&gt; information : &lt;U+0001F481&gt;&lt;U+0001F481&gt;&lt;U+200D&gt;♂&lt;U+2139&gt;&lt;U+FE0F&gt; #&gt; input : &lt;U+0001F520&gt;&lt;U+0001F521&gt;&lt;U+0001F522&gt;&lt;U+0001F523&gt;&lt;U+0001F524&gt; #&gt; insect : &lt;U+0001F98B&gt;&lt;U+0001F41B&gt;&lt;U+0001F41C&gt;&lt;U+0001F41D&gt;&lt;U+0001F41E&gt;&lt;U+0001F577&gt;&lt;U+0001F99F&gt; #&gt; instructor : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt; #&gt; instrument : &lt;U+0001F3B7&gt;&lt;U+0001F3B8&gt;&lt;U+0001F3B9&gt;&lt;U+0001F3BA&gt;&lt;U+0001F3BB&gt; #&gt; intercardinal : ↗&lt;U+FE0F&gt;↘&lt;U+FE0F&gt;↙&lt;U+FE0F&gt;↖&lt;U+FE0F&gt; #&gt; international : &lt;U+0001F30D&gt;&lt;U+0001F30E&gt;&lt;U+0001F30F&gt;&lt;U+0001F310&gt; #&gt; inventor : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt; #&gt; islam : &lt;U+0001F54C&gt;&lt;U+0001F54B&gt; #&gt; Japanese : &lt;U+0001F359&gt;&lt;U+0001F361&gt;&lt;U+0001F3E3&gt;&lt;U+0001F3EF&gt;&lt;U+0001F38B&gt;&lt;U+0001F38D&gt;&lt;U+0001F38E&gt;&lt;U+0001F3B4&gt;&lt;U+0001F530&gt;&lt;U+0001F201&gt;&lt;U+0001F202&gt;&lt;U+FE0F&gt;&lt;U+0001F237&gt;&lt;U+FE0F&gt;&lt;U+0001F236&gt;&lt;U+0001F22F&gt;&lt;U+0001F250&gt;&lt;U+0001F239&gt;&lt;U+0001F21A&gt;&lt;U+0001F232&gt;&lt;U+0001F251&gt;&lt;U+0001F238&gt;&lt;U+0001F234&gt;&lt;U+0001F233&gt;祝&lt;U+FE0F&gt;秘&lt;U+FE0F&gt;&lt;U+0001F23A&gt;&lt;U+0001F235&gt;&lt;U+0001F38C&gt; #&gt; Jew : &lt;U+0001F54D&gt;&lt;U+2721&gt;&lt;U+FE0F&gt; #&gt; Jewish : &lt;U+0001F54D&gt;&lt;U+2721&gt;&lt;U+FE0F&gt; #&gt; joy : &lt;U+0001F602&gt;&lt;U+0001F603&gt;&lt;U+0001F604&gt;&lt;U+0001F639&gt; #&gt; justice : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2696&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2696&gt;&lt;U+264E&gt; #&gt; katakana : &lt;U+0001F201&gt;&lt;U+0001F202&gt;&lt;U+FE0F&gt; #&gt; kebab : &lt;U+0001F959&gt;&lt;U+0001F362&gt; #&gt; key : &lt;U+0001F510&gt;&lt;U+0001F511&gt;&lt;U+0001F5DD&gt; #&gt; keycap : #&lt;U+FE0F&gt;&lt;U+20E3&gt;*&lt;U+FE0F&gt;&lt;U+20E3&gt;0&lt;U+FE0F&gt;&lt;U+20E3&gt;1&lt;U+FE0F&gt;&lt;U+20E3&gt;2&lt;U+FE0F&gt;&lt;U+20E3&gt;3&lt;U+FE0F&gt;&lt;U+20E3&gt;4&lt;U+FE0F&gt;&lt;U+20E3&gt;5&lt;U+FE0F&gt;&lt;U+20E3&gt;6&lt;U+FE0F&gt;&lt;U+20E3&gt;7&lt;U+FE0F&gt;&lt;U+20E3&gt;8&lt;U+FE0F&gt;&lt;U+20E3&gt;9&lt;U+FE0F&gt;&lt;U+20E3&gt;&lt;U+0001F51F&gt; #&gt; kick : &lt;U+0001F9B5&gt;&lt;U+0001F9B6&gt;&lt;U+0001F6F4&gt; #&gt; king : &lt;U+0001F451&gt;&lt;U+0001F451&gt; #&gt; kiss : &lt;U+0001F618&gt;&lt;U+0001F617&gt;&lt;U+0001F619&gt;&lt;U+0001F61A&gt;&lt;U+0001F63D&gt;&lt;U+0001F48F&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+0001F444&gt;&lt;U+0001F48B&gt; #&gt; knife : &lt;U+0001F37D&gt;&lt;U+0001F374&gt;&lt;U+0001F52A&gt;&lt;U+0001F5E1&gt; #&gt; lab : &lt;U+0001F9EA&gt;&lt;U+0001F9EB&gt; #&gt; lantern : &lt;U+0001F383&gt;&lt;U+0001F3EE&gt; #&gt; latin : &lt;U+0001F520&gt;&lt;U+0001F521&gt;&lt;U+0001F524&gt; #&gt; laugh : &lt;U+0001F602&gt;&lt;U+0001F923&gt;&lt;U+0001F604&gt;&lt;U+0001F606&gt; #&gt; lavatory : &lt;U+0001F6B9&gt;&lt;U+0001F6BA&gt;&lt;U+0001F6BB&gt;&lt;U+0001F6BE&gt; #&gt; leaf : &lt;U+0001F33F&gt;&lt;U+0001F340&gt;&lt;U+0001F341&gt;&lt;U+0001F342&gt;&lt;U+0001F343&gt;&lt;U+0001F530&gt; #&gt; Leo : &lt;U+0001F981&gt;&lt;U+264C&gt; #&gt; letter : &lt;U+0001F48C&gt;&lt;U+2709&gt;&lt;U+FE0F&gt;&lt;U+0001F4E7&gt;&lt;U+0001F4E8&gt;&lt;U+0001F4E9&gt;&lt;U+0001F4E4&gt;&lt;U+0001F4E5&gt; #&gt; letters : &lt;U+0001F520&gt;&lt;U+0001F521&gt;&lt;U+0001F524&gt; #&gt; light : &lt;U+0001F6A8&gt;&lt;U+0001F6A5&gt;&lt;U+0001F6A6&gt;&lt;U+0001F56F&gt;&lt;U+0001F4A1&gt;&lt;U+0001F4A1&gt;&lt;U+0001F526&gt;&lt;U+0001F3EE&gt; #&gt; lightning : &lt;U+0001F329&gt;&lt;U+26A1&gt; #&gt; link : &lt;U+0001F587&gt;&lt;U+0001F517&gt; #&gt; lion : &lt;U+0001F981&gt;&lt;U+264C&gt; #&gt; lips : &lt;U+0001F444&gt;&lt;U+0001F48B&gt; #&gt; lipstick : &lt;U+0001F48B&gt;&lt;U+0001F484&gt; #&gt; litter : &lt;U+0001F6AE&gt;&lt;U+0001F6AF&gt; #&gt; location : &lt;U+0001F4CC&gt;&lt;U+0001F4CD&gt; #&gt; lock : &lt;U+0001F513&gt;&lt;U+0001F50F&gt;&lt;U+0001F510&gt;&lt;U+0001F511&gt;&lt;U+0001F511&gt;&lt;U+0001F5DD&gt; #&gt; loop : &lt;U+0001F501&gt;&lt;U+27B0&gt;&lt;U+27BF&gt; #&gt; loud : &lt;U+0001F50A&gt;&lt;U+0001F4E2&gt; #&gt; love : &lt;U+0001F60D&gt;&lt;U+0001F60D&gt;&lt;U+0001F63B&gt;&lt;U+0001F491&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+0001F498&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+0001F495&gt;&lt;U+0001F48C&gt;&lt;U+0001F3E9&gt; #&gt; lowered : &lt;U+0001F4EA&gt;&lt;U+0001F4ED&gt; #&gt; luck : &lt;U+0001F91E&gt;&lt;U+0001F340&gt; #&gt; mad : &lt;U+0001F621&gt;&lt;U+0001F620&gt;&lt;U+0001F620&gt;&lt;U+0001F4A2&gt;&lt;U+0001F5EF&gt; #&gt; magical : &lt;U+0001F9DD&gt;&lt;U+0001F9DD&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9DD&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; magnetic : &lt;U+0001F9ED&gt;&lt;U+0001F9F2&gt; #&gt; magnifying : &lt;U+0001F50D&gt;&lt;U+0001F50E&gt; #&gt; mail : &lt;U+0001F48C&gt;&lt;U+0001F4E7&gt;&lt;U+0001F4E8&gt;&lt;U+0001F4E9&gt;&lt;U+0001F4E4&gt;&lt;U+0001F4E5&gt;&lt;U+0001F4EB&gt;&lt;U+0001F4EA&gt;&lt;U+0001F4EC&gt;&lt;U+0001F4ED&gt;&lt;U+0001F4EE&gt; #&gt; mailbox : &lt;U+0001F4EB&gt;&lt;U+0001F4EA&gt;&lt;U+0001F4EC&gt;&lt;U+0001F4ED&gt;&lt;U+0001F4EE&gt; #&gt; man : &lt;U+0001F468&gt;&lt;U+0001F474&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F393&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F373&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F527&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F680&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F692&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F482&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F477&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F473&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F472&gt;&lt;U+0001F471&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F935&gt;&lt;U+0001F64D&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64E&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F481&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64B&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F486&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F487&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B6&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F57A&gt;&lt;U+0001F574&gt;&lt;U+0001F3CC&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3C4&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6A3&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3CA&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+26F9&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3CB&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F46B&gt;&lt;U+0001F46C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F45E&gt;&lt;U+0001F6B9&gt;♂&lt;U+FE0F&gt; #&gt; manager : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt; #&gt; manicure : &lt;U+0001F485&gt;&lt;U+0001F485&gt; #&gt; map : &lt;U+0001F5FA&gt;&lt;U+0001F5FE&gt; #&gt; marathon : &lt;U+0001F3C3&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♀&lt;U+0001F3BD&gt; #&gt; mark : &lt;U+0001F4D1&gt;&lt;U+0001F516&gt;&lt;U+0001F51B&gt;&lt;U+2705&gt;&lt;U+274C&gt;&lt;U+274E&gt;&lt;U+203C&gt;&lt;U+FE0F&gt;&lt;U+2049&gt;&lt;U+FE0F&gt;&lt;U+2753&gt;&lt;U+2754&gt;&lt;U+2755&gt;&lt;U+2757&gt;&lt;U+2122&gt;&lt;U+FE0F&gt;&lt;U+0001F199&gt; #&gt; marriage : &lt;U+0001F935&gt;&lt;U+0001F470&gt;&lt;U+0001F48D&gt;&lt;U+0001F492&gt; #&gt; mask : &lt;U+0001F637&gt;&lt;U+0001F3AD&gt; #&gt; massage : &lt;U+0001F486&gt;&lt;U+0001F486&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F486&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; math : &lt;U+2795&gt;&lt;U+2796&gt;&lt;U+2797&gt; #&gt; mathematician : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt; #&gt; meat : &lt;U+0001F356&gt;&lt;U+0001F357&gt;&lt;U+0001F953&gt;&lt;U+0001F967&gt; #&gt; mechanic : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F527&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F527&gt;&lt;U+0001F9F0&gt; #&gt; medal : &lt;U+0001F396&gt;&lt;U+0001F3C5&gt;&lt;U+0001F947&gt;&lt;U+0001F948&gt;&lt;U+0001F949&gt; #&gt; medicine : &lt;U+0001F637&gt;&lt;U+0001F3E5&gt;&lt;U+0001F489&gt;&lt;U+0001F48A&gt;&lt;U+0001F48A&gt;&lt;U+2695&gt;&lt;U+FE0F&gt; #&gt; meditation : &lt;U+0001F9D8&gt;&lt;U+0001F9D8&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9D8&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; meh : &lt;U+0001F610&gt;&lt;U+0001F612&gt; #&gt; mermaid : &lt;U+0001F9DC&gt;&lt;U+0001F9DC&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; merman : &lt;U+0001F9DC&gt;&lt;U+0001F9DC&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; merwoman : &lt;U+0001F9DC&gt;&lt;U+0001F9DC&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; metrics : &lt;U+0001F4C8&gt;&lt;U+0001F4C9&gt;&lt;U+0001F4CA&gt; #&gt; mexican : &lt;U+0001F32E&gt;&lt;U+0001F32F&gt; #&gt; mic : &lt;U+0001F399&gt;&lt;U+0001F3A4&gt; #&gt; microphone : &lt;U+0001F399&gt;&lt;U+0001F3A4&gt; #&gt; milk : &lt;U+0001F37C&gt;&lt;U+0001F37C&gt;&lt;U+0001F95B&gt; #&gt; mobile : &lt;U+0001F4F1&gt;&lt;U+0001F4F2&gt;&lt;U+0001F4F5&gt;&lt;U+0001F4F6&gt;&lt;U+0001F4F3&gt;&lt;U+0001F4F4&gt; #&gt; money : &lt;U+0001F911&gt;&lt;U+0001F9E7&gt;&lt;U+0001F4B0&gt;&lt;U+0001F4B4&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B6&gt;&lt;U+0001F4B7&gt;&lt;U+0001F4B8&gt;&lt;U+0001F4B3&gt;&lt;U+0001F4B9&gt;&lt;U+0001F4B1&gt;&lt;U+0001F4B2&gt; #&gt; monkey : &lt;U+0001F648&gt;&lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F64A&gt;&lt;U+0001F435&gt;&lt;U+0001F412&gt; #&gt; monster : &lt;U+0001F479&gt;&lt;U+0001F479&gt;&lt;U+0001F47A&gt;&lt;U+0001F480&gt;&lt;U+0001F47B&gt;&lt;U+0001F47D&gt;&lt;U+0001F47E&gt;&lt;U+0001F916&gt;&lt;U+0001F4A9&gt; #&gt; moon : &lt;U+0001F311&gt;&lt;U+0001F312&gt;&lt;U+0001F313&gt;&lt;U+0001F314&gt;&lt;U+0001F315&gt;&lt;U+0001F316&gt;&lt;U+0001F317&gt;&lt;U+0001F318&gt;&lt;U+0001F319&gt;&lt;U+0001F31A&gt;&lt;U+0001F31B&gt;&lt;U+0001F31C&gt;&lt;U+0001F31D&gt;&lt;U+0001F391&gt; #&gt; morning : &lt;U+0001F304&gt;&lt;U+0001F305&gt;&lt;U+23F0&gt; #&gt; mountain : &lt;U+0001F6B5&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3D4&gt;&lt;U+26F0&gt;&lt;U+0001F30B&gt;&lt;U+0001F5FB&gt;&lt;U+0001F304&gt;&lt;U+0001F69E&gt;&lt;U+0001F6A0&gt; #&gt; mouse : &lt;U+0001F42D&gt;&lt;U+0001F401&gt; #&gt; mouth : &lt;U+0001F603&gt;&lt;U+0001F604&gt;&lt;U+0001F606&gt;&lt;U+0001F636&gt;&lt;U+0001F62E&gt;&lt;U+0001F910&gt;&lt;U+0001F911&gt;&lt;U+0001F626&gt;&lt;U+0001F630&gt;&lt;U+0001F63A&gt;&lt;U+0001F444&gt; #&gt; movie : &lt;U+0001F3A5&gt;&lt;U+0001F39E&gt;&lt;U+0001F4FD&gt;&lt;U+0001F3AC&gt;&lt;U+0001F3A6&gt;&lt;U+0001F3A6&gt; #&gt; mug : &lt;U+0001F37A&gt;&lt;U+0001F37B&gt; #&gt; museum : &lt;U+0001F5BC&gt;&lt;U+0001F3A8&gt; #&gt; music : &lt;U+0001F3BC&gt;&lt;U+0001F3B5&gt;&lt;U+0001F3B6&gt;&lt;U+0001F3B6&gt;&lt;U+0001F399&gt;&lt;U+0001F39A&gt;&lt;U+0001F39B&gt;&lt;U+0001F3A7&gt;&lt;U+0001F3B7&gt;&lt;U+0001F3B8&gt;&lt;U+0001F3B9&gt;&lt;U+0001F3BA&gt;&lt;U+0001F3BB&gt;&lt;U+0001F941&gt; #&gt; Muslim : &lt;U+0001F54C&gt;&lt;U+0001F54B&gt; #&gt; mute : &lt;U+0001F636&gt;&lt;U+0001F64A&gt;&lt;U+0001F507&gt;&lt;U+0001F515&gt;&lt;U+0001F4F4&gt; #&gt; needle : &lt;U+0001F9F5&gt;&lt;U+0001F489&gt;&lt;U+0001F489&gt; #&gt; nervous : &lt;U+0001F625&gt;&lt;U+0001F61F&gt;&lt;U+0001F630&gt;&lt;U+0001F497&gt; #&gt; news : &lt;U+0001F4F0&gt;&lt;U+0001F5DE&gt; #&gt; newspaper : &lt;U+0001F4F0&gt;&lt;U+0001F5DE&gt; #&gt; night : &lt;U+0001F303&gt;&lt;U+0001F309&gt;&lt;U+0001F319&gt; #&gt; nine : &lt;U+0001F558&gt;&lt;U+0001F564&gt; #&gt; no : &lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F645&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F515&gt;&lt;U+26D4&gt;&lt;U+0001F6AB&gt;&lt;U+0001F6B3&gt;&lt;U+0001F6AD&gt;&lt;U+0001F6AF&gt;&lt;U+0001F6B7&gt;&lt;U+0001F4F5&gt;&lt;U+0001F51E&gt; #&gt; noodle : &lt;U+0001F35C&gt;&lt;U+0001F35C&gt; #&gt; nose : &lt;U+0001F443&gt;&lt;U+0001F43D&gt; #&gt; not : &lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F645&gt;&lt;U+0001F515&gt;&lt;U+26D4&gt;&lt;U+0001F6AB&gt;&lt;U+0001F6B3&gt;&lt;U+0001F6AD&gt;&lt;U+0001F6AF&gt;&lt;U+0001F6B7&gt;&lt;U+0001F4F5&gt;&lt;U+0001F51E&gt; #&gt; note : &lt;U+0001F3B5&gt;&lt;U+0001F3B6&gt;&lt;U+0001F4B4&gt;&lt;U+0001F4B5&gt;&lt;U+0001F4B6&gt;&lt;U+0001F4B7&gt;&lt;U+0001F4B8&gt;&lt;U+0001F4DD&gt;&lt;U+0001F5D2&gt; #&gt; notebook : &lt;U+0001F4D4&gt;&lt;U+0001F4D3&gt;&lt;U+0001F4D2&gt; #&gt; numbers : &lt;U+0001F522&gt;&lt;U+0001F522&gt; #&gt; nurse : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+2695&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2695&gt; #&gt; nut : &lt;U+0001F95C&gt;&lt;U+0001F529&gt; #&gt; o : &lt;U+2B55&gt;&lt;U+0001F17E&gt;&lt;U+FE0F&gt; #&gt; o’clock : &lt;U+0001F55B&gt;&lt;U+0001F550&gt;&lt;U+0001F551&gt;&lt;U+0001F552&gt;&lt;U+0001F553&gt;&lt;U+0001F554&gt;&lt;U+0001F555&gt;&lt;U+0001F556&gt;&lt;U+0001F557&gt;&lt;U+0001F558&gt;&lt;U+0001F559&gt;&lt;U+0001F55A&gt; #&gt; Oberon : &lt;U+0001F9DA&gt;&lt;U+0001F9DA&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; off : &lt;U+0001F515&gt;&lt;U+0001F4F4&gt; #&gt; office : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt; #&gt; officer : &lt;U+0001F46E&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; OK : &lt;U+0001F646&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F44C&gt;&lt;U+0001F197&gt; #&gt; old : &lt;U+0001F9D3&gt;&lt;U+0001F474&gt;&lt;U+0001F475&gt;&lt;U+0001F9B3&gt;&lt;U+0001F5DD&gt; #&gt; oncoming : &lt;U+0001F68D&gt;&lt;U+0001F694&gt;&lt;U+0001F696&gt;&lt;U+0001F698&gt; #&gt; one : &lt;U+0001F550&gt;&lt;U+0001F55C&gt; #&gt; open : &lt;U+0001F603&gt;&lt;U+0001F604&gt;&lt;U+0001F605&gt;&lt;U+0001F606&gt;&lt;U+0001F62E&gt;&lt;U+0001F626&gt;&lt;U+0001F630&gt;&lt;U+0001F63A&gt;&lt;U+0001F450&gt;&lt;U+0001F4D6&gt;&lt;U+0001F4EC&gt;&lt;U+0001F4ED&gt;&lt;U+0001F4C2&gt;&lt;U+0001F513&gt; #&gt; Ophiuchus : &lt;U+0001F40D&gt;&lt;U+26CE&gt; #&gt; optical : &lt;U+0001F4BD&gt;&lt;U+0001F4BF&gt;&lt;U+0001F4C0&gt; #&gt; orange : &lt;U+0001F9E1&gt;&lt;U+0001F34A&gt;&lt;U+0001F4D9&gt;&lt;U+0001F536&gt;&lt;U+0001F538&gt; #&gt; outlined : &lt;U+263A&gt;&lt;U+FE0F&gt;&lt;U+2754&gt;&lt;U+2755&gt;&lt;U+0001F533&gt; #&gt; ox : &lt;U+0001F402&gt;&lt;U+2649&gt; #&gt; pad : &lt;U+0001F5D2&gt;&lt;U+0001F5D3&gt; #&gt; paella : &lt;U+0001F958&gt;&lt;U+0001F958&gt; #&gt; page : &lt;U+0001F4C3&gt;&lt;U+0001F4C4&gt; #&gt; painter : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt; #&gt; painting : &lt;U+0001F5BC&gt;&lt;U+0001F3A8&gt;&lt;U+0001F58C&gt; #&gt; palette : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt;&lt;U+0001F3A8&gt; #&gt; palm : &lt;U+0001F926&gt;&lt;U+0001F334&gt;&lt;U+0001F965&gt; #&gt; pan : &lt;U+0001F373&gt;&lt;U+0001F958&gt; #&gt; paper : &lt;U+0001F4DC&gt;&lt;U+0001F4F0&gt;&lt;U+0001F5DE&gt; #&gt; paperclip : &lt;U+0001F4CE&gt;&lt;U+0001F587&gt; #&gt; party : &lt;U+0001F973&gt;&lt;U+0001F382&gt;&lt;U+0001F388&gt;&lt;U+0001F389&gt;&lt;U+0001F389&gt; #&gt; partying : &lt;U+0001F46F&gt;&lt;U+0001F46F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F46F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; passenger : &lt;U+0001F6F3&gt;&lt;U+26F4&gt;&lt;U+0001F6A2&gt; #&gt; password : &lt;U+0001F511&gt;&lt;U+0001F511&gt; #&gt; pastry : &lt;U+0001F365&gt;&lt;U+0001F382&gt;&lt;U+0001F370&gt;&lt;U+0001F967&gt; #&gt; pause : &lt;U+23EF&gt;&lt;U+23F8&gt; #&gt; peace : &lt;U+270C&gt;&lt;U+FE0F&gt;&lt;U+0001F54A&gt; #&gt; pedestrian : &lt;U+0001F6B8&gt;&lt;U+0001F6B7&gt; #&gt; pen : &lt;U+0001F58B&gt;&lt;U+0001F58A&gt;&lt;U+0001F50F&gt; #&gt; pet : &lt;U+0001F436&gt;&lt;U+0001F436&gt;&lt;U+0001F415&gt;&lt;U+0001F431&gt;&lt;U+0001F431&gt;&lt;U+0001F408&gt;&lt;U+0001F439&gt;&lt;U+0001F430&gt;&lt;U+0001F407&gt; #&gt; phone : &lt;U+0001F933&gt;&lt;U+0001F4F1&gt;&lt;U+0001F4F2&gt;&lt;U+0001F4DE&gt;&lt;U+0001F4F5&gt;&lt;U+0001F4F6&gt;&lt;U+0001F4F3&gt;&lt;U+0001F4F4&gt; #&gt; photo : &lt;U+0001F4F7&gt;&lt;U+0001F4F8&gt; #&gt; physicist : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt; #&gt; piano : &lt;U+0001F3B9&gt;&lt;U+0001F3B9&gt; #&gt; pick : &lt;U+26CF&gt;&lt;U+2692&gt; #&gt; pig : &lt;U+0001F437&gt;&lt;U+0001F416&gt;&lt;U+0001F417&gt;&lt;U+0001F43D&gt; #&gt; pin : &lt;U+0001F4CC&gt;&lt;U+0001F4CD&gt; #&gt; pirate : &lt;U+2620&gt;&lt;U+FE0F&gt;&lt;U+0001F99C&gt;&lt;U+0001F3F4&gt;&lt;U+200D&gt;&lt;U+2620&gt;&lt;U+FE0F&gt; #&gt; Pisces : &lt;U+0001F41F&gt;&lt;U+2653&gt; #&gt; plant : &lt;U+0001F3F5&gt;&lt;U+0001F331&gt;&lt;U+0001F335&gt;&lt;U+0001F330&gt; #&gt; play : &lt;U+0001F3AE&gt;&lt;U+25B6&gt;&lt;U+FE0F&gt;&lt;U+23EF&gt; #&gt; please : &lt;U+0001F64F&gt;&lt;U+0001F64F&gt; #&gt; pleased : &lt;U+0001F604&gt;&lt;U+263A&gt;&lt;U+FE0F&gt; #&gt; plumber : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F527&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F527&gt; #&gt; podcast : &lt;U+0001F399&gt;&lt;U+0001F4FB&gt; #&gt; point : &lt;U+0001F448&gt;&lt;U+0001F449&gt;&lt;U+261D&gt;&lt;U+FE0F&gt;&lt;U+0001F446&gt;&lt;U+0001F447&gt; #&gt; pole : &lt;U+0001F488&gt;&lt;U+0001F3A3&gt; #&gt; police : &lt;U+0001F46E&gt;&lt;U+0001F46E&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F693&gt;&lt;U+0001F694&gt;&lt;U+0001F6A8&gt; #&gt; post : &lt;U+0001F3E3&gt;&lt;U+0001F3E4&gt;&lt;U+0001F4EF&gt;&lt;U+0001F6A9&gt; #&gt; postbox : &lt;U+0001F4EB&gt;&lt;U+0001F4EA&gt;&lt;U+0001F4EC&gt;&lt;U+0001F4ED&gt;&lt;U+0001F4EE&gt; #&gt; pot : &lt;U+0001F372&gt;&lt;U+0001F36F&gt; #&gt; potato : &lt;U+0001F954&gt;&lt;U+0001F360&gt; #&gt; pouting : &lt;U+0001F621&gt;&lt;U+0001F63E&gt;&lt;U+0001F64E&gt;&lt;U+0001F64E&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64E&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; power : &lt;U+270A&gt;&lt;U+0001F50B&gt; #&gt; prank : &lt;U+0001F61C&gt;&lt;U+0001F61D&gt; #&gt; prayer : &lt;U+0001F932&gt;&lt;U+0001F4FF&gt; #&gt; present : &lt;U+0001F381&gt;&lt;U+0001F381&gt; #&gt; press : &lt;U+0001F4F0&gt;&lt;U+0001F5DE&gt; #&gt; print : &lt;U+0001F463&gt;&lt;U+0001F43E&gt; #&gt; professor : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt; #&gt; prohibited : &lt;U+0001F648&gt;&lt;U+0001F649&gt;&lt;U+0001F64A&gt;&lt;U+0001F645&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F515&gt;&lt;U+26D4&gt;&lt;U+0001F6AB&gt;&lt;U+0001F6B3&gt;&lt;U+0001F6AD&gt;&lt;U+0001F6AF&gt;&lt;U+0001F6B7&gt;&lt;U+0001F4F5&gt;&lt;U+0001F51E&gt; #&gt; proud : &lt;U+0001F60A&gt;&lt;U+0001F99A&gt; #&gt; Puck : &lt;U+0001F9DA&gt;&lt;U+0001F9DA&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; punch : &lt;U+270A&gt;&lt;U+0001F44A&gt; #&gt; punctuation : &lt;U+203C&gt;&lt;U+FE0F&gt;&lt;U+2049&gt;&lt;U+FE0F&gt;&lt;U+2753&gt;&lt;U+2754&gt;&lt;U+2755&gt;&lt;U+2757&gt; #&gt; purse : &lt;U+0001F45B&gt;&lt;U+0001F45C&gt; #&gt; pushpin : &lt;U+0001F4CC&gt;&lt;U+0001F4CD&gt; #&gt; quarter : &lt;U+0001F313&gt;&lt;U+0001F317&gt;&lt;U+0001F31B&gt;&lt;U+0001F31C&gt; #&gt; question : &lt;U+2049&gt;&lt;U+FE0F&gt;&lt;U+2753&gt;&lt;U+2754&gt; #&gt; quiet : &lt;U+0001F636&gt;&lt;U+0001F92B&gt;&lt;U+0001F507&gt;&lt;U+0001F515&gt; #&gt; rabbit : &lt;U+0001F430&gt;&lt;U+0001F407&gt; #&gt; racehorse : &lt;U+0001F3C7&gt;&lt;U+0001F40E&gt; #&gt; racing : &lt;U+0001F3C3&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3C7&gt;&lt;U+0001F3CE&gt;&lt;U+0001F3CD&gt;&lt;U+0001F40E&gt;&lt;U+0001F3C1&gt; #&gt; racquet : &lt;U+0001F3BE&gt;&lt;U+0001F3F8&gt; #&gt; radio : &lt;U+0001F4FB&gt;&lt;U+0001F518&gt; #&gt; railway : &lt;U+0001F682&gt;&lt;U+0001F683&gt;&lt;U+0001F684&gt;&lt;U+0001F685&gt;&lt;U+0001F686&gt;&lt;U+0001F688&gt;&lt;U+0001F689&gt;&lt;U+0001F69E&gt;&lt;U+0001F6E4&gt;&lt;U+0001F69F&gt; #&gt; rain : &lt;U+26C8&gt;&lt;U+0001F326&gt;&lt;U+0001F327&gt;&lt;U+0001F308&gt;&lt;U+0001F302&gt;&lt;U+0001F302&gt;&lt;U+2602&gt;&lt;U+FE0F&gt;&lt;U+2614&gt;&lt;U+26F1&gt; #&gt; rainbow : &lt;U+0001F308&gt;&lt;U+0001F3F3&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F308&gt; #&gt; raised : &lt;U+0001F64B&gt;&lt;U+0001F91A&gt;&lt;U+0001F64C&gt; #&gt; raising hand : &lt;U+0001F64B&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F64B&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; ram : &lt;U+0001F40F&gt;&lt;U+2648&gt; #&gt; rancher : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt; #&gt; receive : &lt;U+0001F4F2&gt;&lt;U+0001F4E8&gt;&lt;U+0001F4E5&gt; #&gt; red : &lt;U+0001F621&gt;&lt;U+0001F34E&gt;&lt;U+0001F352&gt;&lt;U+0001F004&gt;&lt;U+0001F3EE&gt;&lt;U+0001F53C&gt;&lt;U+0001F53D&gt;&lt;U+0001F53A&gt;&lt;U+0001F53B&gt;&lt;U+0001F534&gt; #&gt; relieved : &lt;U+0001F625&gt;&lt;U+0001F60C&gt; #&gt; religion : &lt;U+0001F4FF&gt;&lt;U+26EA&gt;&lt;U+0001F54C&gt;&lt;U+0001F54D&gt;&lt;U+26E9&gt;&lt;U+0001F54B&gt;&lt;U+0001F6D0&gt;&lt;U+0001F549&gt;&lt;U+2721&gt;&lt;U+FE0F&gt;&lt;U+0001F54E&gt; #&gt; research : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt; #&gt; respect : &lt;U+0001F647&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀ #&gt; restroom : &lt;U+0001F6B9&gt;&lt;U+0001F6BA&gt;&lt;U+0001F6BB&gt;&lt;U+0001F6BE&gt;&lt;U+0001F6BE&gt; #&gt; revolving : &lt;U+0001F49E&gt;&lt;U+0001F6A8&gt; #&gt; ribbon : &lt;U+0001F49D&gt;&lt;U+0001F380&gt;&lt;U+0001F397&gt; #&gt; rice : &lt;U+0001F33E&gt;&lt;U+0001F358&gt;&lt;U+0001F359&gt;&lt;U+0001F35A&gt;&lt;U+0001F35B&gt; #&gt; right : &lt;U+25B6&gt;&lt;U+FE0F&gt;&lt;U+23EF&gt; #&gt; rock : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F94C&gt;&lt;U+0001F3B8&gt; #&gt; rocket : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F680&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F680&gt;&lt;U+0001F680&gt; #&gt; rockstar : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt; #&gt; rolling : &lt;U+0001F923&gt;&lt;U+0001F644&gt; #&gt; rowboat : &lt;U+0001F6A3&gt;&lt;U+0001F6A3&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6A3&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; royal : &lt;U+0001F934&gt;&lt;U+0001F478&gt;&lt;U+0001F451&gt; #&gt; ruler : &lt;U+0001F4CF&gt;&lt;U+0001F4D0&gt; #&gt; running : &lt;U+0001F3C3&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F4A8&gt;&lt;U+0001F45F&gt;&lt;U+0001F3BD&gt; #&gt; sad : &lt;U+0001F61E&gt;&lt;U+0001F622&gt;&lt;U+0001F622&gt;&lt;U+0001F62D&gt;&lt;U+0001F62D&gt;&lt;U+0001F63F&gt;&lt;U+0001F63F&gt;&lt;U+0001F64D&gt; #&gt; Sagittarius : &lt;U+0001F3F9&gt;&lt;U+2650&gt; #&gt; sand : &lt;U+231B&gt;&lt;U+23F3&gt; #&gt; santa : &lt;U+0001F385&gt;&lt;U+0001F936&gt; #&gt; sassy : &lt;U+0001F481&gt;&lt;U+0001F481&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F481&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; satellite : &lt;U+0001F6F0&gt;&lt;U+0001F4E1&gt; #&gt; sauna : &lt;U+0001F9D6&gt;&lt;U+0001F9D6&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9D6&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; scared : &lt;U+0001F628&gt;&lt;U+0001F628&gt;&lt;U+0001F631&gt; #&gt; schedule : &lt;U+0001F4C5&gt;&lt;U+0001F4C6&gt; #&gt; school : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F392&gt;&lt;U+0001F3EB&gt; #&gt; science : &lt;U+0001F9EA&gt;&lt;U+0001F52C&gt;&lt;U+0001F52C&gt;&lt;U+0001F52D&gt; #&gt; scientist : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F97C&gt; #&gt; scooter : &lt;U+0001F6F4&gt;&lt;U+0001F6F5&gt; #&gt; score : &lt;U+0001F3BC&gt;&lt;U+0001F4AF&gt;&lt;U+0001F4AF&gt; #&gt; Scorpio : &lt;U+0001F982&gt;&lt;U+264F&gt; #&gt; scorpion : &lt;U+0001F982&gt;&lt;U+264F&gt; #&gt; sea : &lt;U+0001F433&gt;&lt;U+0001F41A&gt;&lt;U+26F5&gt;&lt;U+0001F30A&gt; #&gt; seafood : &lt;U+0001F99E&gt;&lt;U+0001F362&gt; #&gt; search : &lt;U+0001F50D&gt;&lt;U+0001F50D&gt;&lt;U+0001F50E&gt; #&gt; security : &lt;U+0001F512&gt;&lt;U+0001F513&gt;&lt;U+0001F510&gt; #&gt; see : &lt;U+0001F648&gt;&lt;U+0001F440&gt; #&gt; sent : &lt;U+0001F4E9&gt;&lt;U+0001F4E4&gt; #&gt; serpent : &lt;U+0001F40D&gt;&lt;U+26CE&gt; #&gt; seven : &lt;U+0001F556&gt;&lt;U+0001F562&gt; #&gt; shaker : &lt;U+0001F96D&gt;&lt;U+0001F9C2&gt; #&gt; sheep : &lt;U+0001F40F&gt;&lt;U+0001F411&gt; #&gt; shinkansen : &lt;U+0001F684&gt;&lt;U+0001F685&gt; #&gt; ship : &lt;U+2693&gt;&lt;U+0001F6A4&gt;&lt;U+0001F6F3&gt;&lt;U+0001F6A2&gt;&lt;U+0001F680&gt;&lt;U+0001F531&gt; #&gt; shirt : &lt;U+0001F454&gt;&lt;U+0001F455&gt;&lt;U+0001F3BD&gt; #&gt; shocked : &lt;U+0001F632&gt;&lt;U+0001F628&gt;&lt;U+0001F92F&gt;&lt;U+0001F631&gt; #&gt; shoe : &lt;U+0001F45E&gt;&lt;U+0001F45F&gt;&lt;U+0001F460&gt;&lt;U+0001F461&gt;&lt;U+0001F462&gt; #&gt; shopping : &lt;U+0001F6CD&gt;&lt;U+0001F6D2&gt; #&gt; shot : &lt;U+0001F943&gt;&lt;U+0001F489&gt; #&gt; shower : &lt;U+0001F6C0&gt;&lt;U+0001F6BF&gt; #&gt; shrimp : &lt;U+0001F990&gt;&lt;U+0001F364&gt; #&gt; sick : &lt;U+0001F637&gt;&lt;U+0001F637&gt;&lt;U+0001F912&gt;&lt;U+0001F912&gt;&lt;U+0001F922&gt;&lt;U+0001F92E&gt;&lt;U+0001F927&gt;&lt;U+0001F489&gt;&lt;U+0001F48A&gt; #&gt; signal : &lt;U+0001F6A5&gt;&lt;U+0001F6A6&gt;&lt;U+0001F4E1&gt;&lt;U+0001F4F6&gt; #&gt; silence : &lt;U+0001F636&gt;&lt;U+0001F910&gt;&lt;U+0001F62F&gt; #&gt; silent : &lt;U+0001F636&gt;&lt;U+0001F507&gt;&lt;U+0001F515&gt; #&gt; silhouette : &lt;U+0001F5E3&gt;&lt;U+0001F464&gt;&lt;U+0001F465&gt; #&gt; singer : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt; #&gt; six : &lt;U+0001F555&gt;&lt;U+0001F561&gt; #&gt; skewer : &lt;U+0001F362&gt;&lt;U+0001F361&gt; #&gt; ski : &lt;U+26F7&gt;&lt;U+0001F3C2&gt;&lt;U+0001F3BF&gt; #&gt; sleep : &lt;U+0001F62A&gt;&lt;U+0001F634&gt;&lt;U+0001F6CC&gt;&lt;U+0001F4A4&gt;&lt;U+0001F6CF&gt; #&gt; sleuth : &lt;U+0001F575&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; slice : &lt;U+0001F355&gt;&lt;U+0001F370&gt; #&gt; slow : &lt;U+0001F422&gt;&lt;U+0001F40C&gt; #&gt; small : &lt;U+0001F92A&gt;&lt;U+0001F990&gt; #&gt; smile : &lt;U+0001F600&gt;&lt;U+0001F601&gt;&lt;U+0001F603&gt;&lt;U+0001F604&gt;&lt;U+0001F605&gt;&lt;U+0001F606&gt;&lt;U+0001F60A&gt;&lt;U+0001F60B&gt;&lt;U+0001F60E&gt;&lt;U+0001F60D&gt;&lt;U+0001F619&gt;&lt;U+263A&gt;&lt;U+FE0F&gt;&lt;U+0001F642&gt;&lt;U+0001F607&gt;&lt;U+0001F608&gt;&lt;U+0001F63A&gt;&lt;U+0001F638&gt;&lt;U+0001F63B&gt;&lt;U+0001F63C&gt; #&gt; smoking : &lt;U+0001F6AC&gt;&lt;U+0001F6AD&gt; #&gt; smug : &lt;U+0001F60F&gt;&lt;U+0001F624&gt; #&gt; snake : &lt;U+0001F40D&gt;&lt;U+26CE&gt; #&gt; snow : &lt;U+26F7&gt;&lt;U+0001F3C2&gt;&lt;U+0001F3D4&gt;&lt;U+0001F328&gt;&lt;U+2603&gt;&lt;U+FE0F&gt;&lt;U+26C4&gt;&lt;U+0001F3BF&gt; #&gt; snowman : &lt;U+2603&gt;&lt;U+FE0F&gt;&lt;U+26C4&gt; #&gt; soft : &lt;U+0001F366&gt;&lt;U+0001F508&gt; #&gt; software : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt; #&gt; sorcerer : &lt;U+0001F9D9&gt;&lt;U+0001F9D9&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; sorceress : &lt;U+0001F9D9&gt;&lt;U+0001F9D9&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; sorry : &lt;U+0001F647&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; sound : &lt;U+0001F442&gt;&lt;U+0001F507&gt;&lt;U+0001F514&gt; #&gt; spa : &lt;U+0001F486&gt;&lt;U+0001F486&gt;&lt;U+200D&gt;♂ #&gt; space : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F680&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F680&gt;&lt;U+0001F30C&gt;&lt;U+0001F6F0&gt;&lt;U+0001F680&gt;&lt;U+2604&gt; #&gt; spanner : &lt;U+0001F6E0&gt;&lt;U+0001F527&gt; #&gt; sparkle : &lt;U+0001F496&gt;&lt;U+0001F31F&gt;&lt;U+0001F387&gt;&lt;U+2728&gt; #&gt; speak : &lt;U+0001F64A&gt;&lt;U+0001F5E3&gt; #&gt; speech : &lt;U+0001F4AC&gt;&lt;U+0001F5E8&gt;&lt;U+FE0F&gt; #&gt; speed : &lt;U+0001F40E&gt;&lt;U+0001F684&gt;&lt;U+0001F685&gt; #&gt; spider : &lt;U+0001F577&gt;&lt;U+0001F578&gt; #&gt; spiral : &lt;U+0001F41A&gt;&lt;U+0001F5D2&gt;&lt;U+0001F5D3&gt; #&gt; spock : &lt;U+0001F596&gt;&lt;U+0001F596&gt; #&gt; sports : &lt;U+0001F3C0&gt;&lt;U+0001F3C8&gt;&lt;U+0001F3BE&gt; #&gt; spy : &lt;U+0001F575&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; square : &lt;U+23F9&gt;&lt;U+274E&gt;&lt;U+25FD&gt;&lt;U+25FE&gt;&lt;U+2B1B&gt;&lt;U+2B1C&gt;&lt;U+0001F532&gt;&lt;U+0001F533&gt; #&gt; star : &lt;U+0001F929&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F4AB&gt;&lt;U+0001F4AB&gt;&lt;U+0001F303&gt;&lt;U+2B50&gt;&lt;U+0001F31F&gt;&lt;U+0001F320&gt;&lt;U+2728&gt;&lt;U+2721&gt;&lt;U+FE0F&gt;&lt;U+0001F52F&gt;&lt;U+2734&gt;&lt;U+FE0F&gt; #&gt; station : &lt;U+0001F689&gt;&lt;U+26FD&gt; #&gt; statue : &lt;U+0001F5FD&gt;&lt;U+0001F5FF&gt; #&gt; steam room : &lt;U+0001F9D6&gt;&lt;U+0001F9D6&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9D6&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; steaming : &lt;U+0001F35C&gt;&lt;U+2615&gt;&lt;U+2668&gt;&lt;U+FE0F&gt; #&gt; stick : &lt;U+0001F362&gt;&lt;U+0001F361&gt;&lt;U+0001F3D1&gt;&lt;U+0001F3D2&gt;&lt;U+0001F94D&gt; #&gt; stop : &lt;U+0001F645&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♂&lt;U+270B&gt;&lt;U+0001F68F&gt;&lt;U+0001F6D1&gt;&lt;U+23F9&gt; #&gt; store : &lt;U+0001F3EA&gt;&lt;U+0001F3EC&gt; #&gt; student : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F393&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F393&gt; #&gt; stuffed : &lt;U+0001F959&gt;&lt;U+0001F9F8&gt; #&gt; stunned : &lt;U+0001F62F&gt;&lt;U+0001F627&gt; #&gt; summer : &lt;U+0001F379&gt;&lt;U+0001F31E&gt; #&gt; sun : &lt;U+0001F60E&gt;&lt;U+0001F33B&gt;&lt;U+0001F304&gt;&lt;U+0001F305&gt;&lt;U+0001F306&gt;&lt;U+0001F307&gt;&lt;U+2600&gt;&lt;U+FE0F&gt;&lt;U+0001F31E&gt;&lt;U+26C5&gt;&lt;U+0001F324&gt;&lt;U+0001F325&gt;&lt;U+0001F326&gt;&lt;U+26F1&gt; #&gt; sunglasses : &lt;U+0001F60E&gt;&lt;U+0001F576&gt; #&gt; sunrise : &lt;U+0001F304&gt;&lt;U+0001F305&gt; #&gt; sunset : &lt;U+0001F306&gt;&lt;U+0001F307&gt; #&gt; superpowers : &lt;U+0001F9B8&gt;&lt;U+0001F9B9&gt; #&gt; surfing : &lt;U+0001F3C4&gt;&lt;U+0001F3C4&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3C4&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; surprise : &lt;U+0001F62E&gt;&lt;U+0001F92D&gt; #&gt; surprised : &lt;U+0001F62F&gt;&lt;U+0001F640&gt; #&gt; sweat : &lt;U+0001F605&gt;&lt;U+0001F625&gt;&lt;U+0001F613&gt;&lt;U+0001F630&gt;&lt;U+0001F4A6&gt;&lt;U+0001F4A7&gt; #&gt; sweet : &lt;U+0001F360&gt;&lt;U+0001F361&gt;&lt;U+0001F366&gt;&lt;U+0001F367&gt;&lt;U+0001F368&gt;&lt;U+0001F369&gt;&lt;U+0001F36A&gt;&lt;U+0001F382&gt;&lt;U+0001F370&gt;&lt;U+0001F9C1&gt;&lt;U+0001F36B&gt;&lt;U+0001F36C&gt;&lt;U+0001F36C&gt;&lt;U+0001F36D&gt;&lt;U+0001F36E&gt;&lt;U+0001F36F&gt; #&gt; swim : &lt;U+0001F3CA&gt;&lt;U+0001F3CA&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3CA&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F459&gt; #&gt; swirl : &lt;U+0001F365&gt;&lt;U+0001F300&gt; #&gt; target : &lt;U+0001F3AF&gt;&lt;U+0001F3AF&gt; #&gt; taste : &lt;U+0001F61D&gt;&lt;U+0001F445&gt; #&gt; Taurus : &lt;U+0001F402&gt;&lt;U+2649&gt; #&gt; taxi : &lt;U+0001F695&gt;&lt;U+0001F696&gt; #&gt; tea : &lt;U+2615&gt;&lt;U+0001F375&gt; #&gt; teacher : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt; #&gt; tear : &lt;U+0001F602&gt;&lt;U+0001F622&gt;&lt;U+0001F62D&gt;&lt;U+0001F639&gt;&lt;U+0001F63F&gt; #&gt; technologist : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt; #&gt; telephone : &lt;U+0001F4F1&gt;&lt;U+0001F4F2&gt;&lt;U+0001F4DE&gt;&lt;U+0001F4F5&gt;&lt;U+0001F4F6&gt;&lt;U+0001F4F3&gt;&lt;U+0001F4F4&gt; #&gt; ten : &lt;U+0001F559&gt;&lt;U+0001F565&gt; #&gt; tent : &lt;U+26FA&gt;&lt;U+0001F3AA&gt; #&gt; thanks : &lt;U+0001F647&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀&lt;U+0001F64F&gt; #&gt; theater : &lt;U+0001F3AD&gt;&lt;U+0001F3AD&gt; #&gt; thermometer : &lt;U+0001F912&gt;&lt;U+0001F321&gt; #&gt; thinking : &lt;U+0001F914&gt;&lt;U+0001F4AD&gt; #&gt; thirty : &lt;U+0001F567&gt;&lt;U+0001F55C&gt;&lt;U+0001F55D&gt;&lt;U+0001F55E&gt;&lt;U+0001F55F&gt;&lt;U+0001F560&gt;&lt;U+0001F561&gt;&lt;U+0001F562&gt;&lt;U+0001F563&gt;&lt;U+0001F564&gt;&lt;U+0001F565&gt;&lt;U+0001F566&gt; #&gt; three : &lt;U+0001F552&gt;&lt;U+0001F55E&gt; #&gt; thumb : &lt;U+0001F44D&gt;&lt;U+0001F44E&gt; #&gt; ticket : &lt;U+0001F39F&gt;&lt;U+0001F3AB&gt; #&gt; tiger : &lt;U+0001F42F&gt;&lt;U+0001F405&gt; #&gt; timer : &lt;U+231B&gt;&lt;U+23F3&gt;&lt;U+23F2&gt; #&gt; tipping hand : &lt;U+0001F481&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F481&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; tired : &lt;U+0001F62A&gt;&lt;U+0001F62B&gt;&lt;U+0001F629&gt;&lt;U+0001F629&gt; #&gt; Titania : &lt;U+0001F9DA&gt;&lt;U+0001F9DA&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; toast : &lt;U+0001F35E&gt;&lt;U+0001F942&gt; #&gt; toilet : &lt;U+0001F6BD&gt;&lt;U+0001F6BB&gt;&lt;U+0001F6BE&gt; #&gt; tongue : &lt;U+0001F60B&gt;&lt;U+0001F61B&gt;&lt;U+0001F61C&gt;&lt;U+0001F61D&gt;&lt;U+0001F445&gt; #&gt; tool : &lt;U+0001F52A&gt;&lt;U+0001F3FA&gt;&lt;U+2693&gt;&lt;U+0001F525&gt;&lt;U+0001F52E&gt;&lt;U+0001F50D&gt;&lt;U+0001F50E&gt;&lt;U+0001F526&gt;&lt;U+0001F528&gt;&lt;U+26CF&gt;&lt;U+2692&gt;&lt;U+0001F6E0&gt;&lt;U+0001F52B&gt;&lt;U+0001F3F9&gt;&lt;U+0001F527&gt;&lt;U+0001F529&gt;&lt;U+0001F5DC&gt;&lt;U+0001F9F0&gt;&lt;U+0001F52C&gt;&lt;U+0001F52D&gt;&lt;U+0001F489&gt;&lt;U+0001F531&gt;&lt;U+0001F530&gt; #&gt; top : &lt;U+0001F3A9&gt;&lt;U+0001F51D&gt; #&gt; trademark : &lt;U+2122&gt;&lt;U+FE0F&gt;&lt;U+2122&gt;&lt;U+FE0F&gt; #&gt; tradesperson : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F527&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F527&gt; #&gt; traffic : &lt;U+0001F6A5&gt;&lt;U+0001F6A6&gt;&lt;U+0001F6B8&gt;&lt;U+26D4&gt; #&gt; train : &lt;U+0001F682&gt;&lt;U+0001F682&gt;&lt;U+0001F683&gt;&lt;U+0001F684&gt;&lt;U+0001F685&gt;&lt;U+0001F686&gt;&lt;U+0001F689&gt;&lt;U+0001F6E4&gt; #&gt; tram : &lt;U+0001F683&gt;&lt;U+0001F68A&gt;&lt;U+0001F68B&gt;&lt;U+0001F68E&gt; #&gt; travel : &lt;U+0001F5FA&gt;&lt;U+0001F9F3&gt; #&gt; tray : &lt;U+0001F4E4&gt;&lt;U+0001F4E5&gt; #&gt; tree : &lt;U+0001F332&gt;&lt;U+0001F333&gt;&lt;U+0001F334&gt;&lt;U+0001F384&gt;&lt;U+0001F38B&gt; #&gt; trend : &lt;U+0001F4B9&gt;&lt;U+0001F4C8&gt;&lt;U+0001F4C9&gt; #&gt; triangle : &lt;U+0001F4D0&gt;&lt;U+25B6&gt;&lt;U+FE0F&gt;&lt;U+23ED&gt;&lt;U+23EF&gt;&lt;U+25C0&gt;&lt;U+FE0F&gt;&lt;U+23EE&gt; #&gt; trolley : &lt;U+0001F68E&gt;&lt;U+0001F6D2&gt; #&gt; trolleybus : &lt;U+0001F683&gt;&lt;U+0001F68A&gt;&lt;U+0001F68B&gt;&lt;U+0001F68E&gt; #&gt; tropical : &lt;U+0001F420&gt;&lt;U+0001F96D&gt;&lt;U+0001F379&gt; #&gt; truck : &lt;U+0001F692&gt;&lt;U+0001F69A&gt;&lt;U+0001F69B&gt; #&gt; turban : &lt;U+0001F473&gt;&lt;U+0001F473&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F473&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; turkey : &lt;U+0001F983&gt;&lt;U+0001F1F9&gt;&lt;U+0001F1F7&gt; #&gt; twelve : &lt;U+0001F55B&gt;&lt;U+0001F567&gt; #&gt; twins : &lt;U+0001F46C&gt;&lt;U+264A&gt; #&gt; two : &lt;U+0001F551&gt;&lt;U+0001F55D&gt; #&gt; ufo : &lt;U+0001F47D&gt;&lt;U+0001F47E&gt; #&gt; umbrella : &lt;U+0001F3D6&gt;&lt;U+0001F302&gt;&lt;U+2602&gt;&lt;U+FE0F&gt;&lt;U+2614&gt;&lt;U+26F1&gt; #&gt; undead : &lt;U+0001F9DB&gt;&lt;U+0001F9DB&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9DB&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F9DF&gt;&lt;U+0001F9DF&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9DF&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; up : &lt;U+261D&gt;&lt;U+FE0F&gt;&lt;U+0001F446&gt;&lt;U+0001F44D&gt;&lt;U+0001F51D&gt;&lt;U+0001F199&gt; #&gt; upward : &lt;U+0001F4B9&gt;&lt;U+0001F4C8&gt; #&gt; vampire : &lt;U+0001F9DB&gt;&lt;U+0001F987&gt; #&gt; vegetable : &lt;U+0001F345&gt;&lt;U+0001F346&gt;&lt;U+0001F954&gt;&lt;U+0001F955&gt;&lt;U+0001F952&gt;&lt;U+0001F95C&gt; #&gt; vehicle : &lt;U+0001F69D&gt;&lt;U+0001F68C&gt;&lt;U+0001F691&gt;&lt;U+0001F695&gt;&lt;U+0001F69C&gt;&lt;U+0001F681&gt; #&gt; victory : &lt;U+270C&gt;&lt;U+FE0F&gt;&lt;U+270C&gt;&lt;U+FE0F&gt; #&gt; video : &lt;U+0001F4FB&gt;&lt;U+0001F3A5&gt;&lt;U+0001F4FD&gt;&lt;U+0001F4FA&gt;&lt;U+0001F4F7&gt;&lt;U+0001F4F8&gt;&lt;U+0001F4F9&gt;&lt;U+0001F4FC&gt; #&gt; video game : &lt;U+0001F3AE&gt;&lt;U+0001F579&gt; #&gt; Virgo : &lt;U+0001F467&gt;&lt;U+264D&gt; #&gt; virus : &lt;U+0001F99F&gt;&lt;U+0001F9A0&gt; #&gt; volume : &lt;U+0001F507&gt;&lt;U+0001F509&gt;&lt;U+0001F50A&gt;&lt;U+0001F515&gt; #&gt; vomit : &lt;U+0001F922&gt;&lt;U+0001F92E&gt; #&gt; walk : &lt;U+0001F6B6&gt;&lt;U+0001F6B6&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F6B6&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; walking dead : &lt;U+0001F9DF&gt;&lt;U+0001F9DF&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9DF&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; waning : &lt;U+0001F316&gt;&lt;U+0001F318&gt; #&gt; watch : &lt;U+0001F440&gt;&lt;U+231A&gt; #&gt; water : &lt;U+0001F93D&gt;&lt;U+0001F4A6&gt;&lt;U+0001F403&gt;&lt;U+0001F964&gt;&lt;U+0001F4A7&gt;&lt;U+0001F30A&gt;&lt;U+0001F6BF&gt;&lt;U+0001F6B0&gt;&lt;U+0001F6BE&gt;&lt;U+0001F6B1&gt;&lt;U+2652&gt; #&gt; wave : &lt;U+0001F44B&gt;&lt;U+0001F30A&gt; #&gt; waving : &lt;U+0001F44B&gt;&lt;U+0001F3F4&gt; #&gt; waxing : &lt;U+0001F312&gt;&lt;U+0001F314&gt; #&gt; wc : &lt;U+0001F6BD&gt;&lt;U+0001F6B9&gt;&lt;U+0001F6BA&gt;&lt;U+0001F6BE&gt; #&gt; weapon : &lt;U+0001F52A&gt;&lt;U+0001F3FA&gt;&lt;U+0001F5E1&gt;&lt;U+0001F52B&gt;&lt;U+0001F52B&gt;&lt;U+0001F3F9&gt;&lt;U+0001F6E1&gt; #&gt; weary : &lt;U+0001F629&gt;&lt;U+0001F640&gt; #&gt; weather : &lt;U+0001F321&gt;&lt;U+2600&gt;&lt;U+FE0F&gt;&lt;U+0001F302&gt;&lt;U+2744&gt;&lt;U+FE0F&gt; #&gt; wedding : &lt;U+0001F935&gt;&lt;U+0001F470&gt;&lt;U+0001F470&gt;&lt;U+0001F48D&gt;&lt;U+0001F492&gt; #&gt; weight lifter : &lt;U+0001F3CB&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F3CB&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; whale : &lt;U+0001F433&gt;&lt;U+0001F40B&gt; #&gt; whew : &lt;U+0001F625&gt;&lt;U+0001F60C&gt; #&gt; whisky : &lt;U+0001F943&gt;&lt;U+0001F943&gt; #&gt; white-collar : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt; #&gt; wind : &lt;U+0001F4A8&gt;&lt;U+0001F343&gt;&lt;U+0001F32C&gt;&lt;U+0001F390&gt; #&gt; wink : &lt;U+0001F609&gt;&lt;U+0001F61C&gt; #&gt; winner : &lt;U+0001F3C6&gt;&lt;U+0001F3C5&gt; #&gt; winter : &lt;U+2744&gt;&lt;U+FE0F&gt;&lt;U+2603&gt;&lt;U+FE0F&gt; #&gt; wip : &lt;U+0001F6A7&gt;&lt;U+26A0&gt;&lt;U+FE0F&gt; #&gt; witch : &lt;U+0001F9D9&gt;&lt;U+0001F9D9&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9F9&gt; #&gt; wizard : &lt;U+0001F9D9&gt;&lt;U+0001F9D9&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; woman : &lt;U+0001F469&gt;&lt;U+0001F475&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F393&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3EB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F33E&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F373&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F527&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BC&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F52C&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F4BB&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A4&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3A8&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F680&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F692&gt;&lt;U+0001F46E&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F575&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F482&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F477&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F473&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F471&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F930&gt;&lt;U+0001F64D&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F64E&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F645&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F646&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F481&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F64B&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F647&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F486&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F487&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B6&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F483&gt;&lt;U+0001F3CC&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3C4&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6A3&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3CA&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+26F9&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F3CB&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B4&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F6B5&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F46B&gt;&lt;U+0001F46D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F468&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F48B&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+2764&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F466&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+200D&gt;&lt;U+0001F467&gt;&lt;U+0001F45A&gt;&lt;U+0001F460&gt;&lt;U+0001F461&gt;&lt;U+0001F462&gt;&lt;U+0001F452&gt;&lt;U+0001F6BA&gt;♀&lt;U+FE0F&gt; #&gt; wood : &lt;U+0001F332&gt;&lt;U+0001F333&gt; #&gt; worker : &lt;U+0001F468&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F469&gt;&lt;U+200D&gt;&lt;U+0001F3ED&gt;&lt;U+0001F477&gt;&lt;U+0001F477&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt;&lt;U+0001F477&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt; #&gt; workout : &lt;U+0001F3C3&gt;&lt;U+0001F3C3&gt;&lt;U+200D&gt;♀&lt;U+0001F3CB&gt;&lt;U+0001F3CB&gt;&lt;U+FE0F&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F4AA&gt;&lt;U+0001F4A6&gt; #&gt; world : &lt;U+0001F30D&gt;&lt;U+0001F30D&gt;&lt;U+0001F30E&gt;&lt;U+0001F30E&gt;&lt;U+0001F30F&gt;&lt;U+0001F30F&gt;&lt;U+0001F310&gt;&lt;U+0001F310&gt;&lt;U+0001F5FA&gt; #&gt; wrench : &lt;U+0001F6E0&gt;&lt;U+0001F527&gt; #&gt; yellow : &lt;U+0001F49B&gt;&lt;U+0001F530&gt; #&gt; yen : &lt;U+0001F4B4&gt;&lt;U+0001F4B9&gt; #&gt; yoga : &lt;U+0001F9D8&gt;&lt;U+0001F9D8&gt;&lt;U+200D&gt;♀&lt;U+FE0F&gt;&lt;U+0001F9D8&gt;&lt;U+200D&gt;♂&lt;U+FE0F&gt; #&gt; young : &lt;U+0001F476&gt;&lt;U+0001F9D2&gt;&lt;U+0001F466&gt;&lt;U+0001F467&gt;&lt;U+0001F331&gt; #&gt; zodiac : &lt;U+0001F467&gt;&lt;U+0001F46C&gt;&lt;U+0001F981&gt;&lt;U+0001F402&gt;&lt;U+0001F40F&gt;&lt;U+0001F410&gt;&lt;U+0001F40D&gt;&lt;U+0001F41F&gt;&lt;U+0001F980&gt;&lt;U+0001F982&gt;&lt;U+0001F3FA&gt;&lt;U+0001F3F9&gt;&lt;U+2648&gt;&lt;U+2649&gt;&lt;U+264A&gt;&lt;U+264B&gt;&lt;U+264C&gt;&lt;U+264D&gt;&lt;U+264E&gt;&lt;U+264F&gt;&lt;U+2650&gt;&lt;U+2651&gt;&lt;U+2652&gt;&lt;U+2653&gt;&lt;U+26CE&gt; #&gt; zzz : &lt;U+0001F634&gt;&lt;U+0001F634&gt;&lt;U+0001F4A4&gt;
-	    
-        
-      	
-
-    
-    </li>
-  	
-
-  
-    
-    <li>
-	<a class="title" href="../topic/test/testpage.html">testpage</a> 
-	
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
       
-	   By default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.
-	    
-        
-      	
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
 
+  <script>
     
-    </li>
-  	
-
-</ul>
-
-<footer class=" footline" >
-	
-</footer>
-
-        
-        </div>
-        
-topic\test\_index.md
-      </div>
-
-    <div id="navigation">
-        
-        
-
-        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-
-        
-
-
-	 
-	 
-		
-			<a class="nav nav-prev" href="../topic/experiment/central.html" title="中央"> <i class="fa fa-chevron-left"></i></a>
-		
-		
-			<a class="nav nav-next" href="../topic/test/emo_test.html" title="emoji_test" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-		
-	
-    </div>
-
-    </section>
-
-    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
-      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
-    </div>
-    <script src="../js/clipboard.min.js?1609996082"></script>
-    <script src="../js/perfect-scrollbar.min.js?1609996082"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1609996082"></script>
-    <script src="../js/jquery.sticky.js?1609996082"></script>
-    <script src="../js/featherlight.min.js?1609996082"></script>
-    <script src="../js/highlight.pack.js?1609996082"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1609996082"></script>
-    <script src="../js/learn.js?1609996082"></script>
-    <script src="../js/hugo-learn.js?1609996082"></script>
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
     
-        
-            <script src="../mermaid/mermaid.js?1609996082"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
-    
-    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
 
 
 
-  </body>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
 </html>

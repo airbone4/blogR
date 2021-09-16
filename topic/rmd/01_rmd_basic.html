@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html><head>
+  <title>01 Rmd basic</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../../images/favicon.ico'/>
+      
+    <script src="../../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#rbook-提要">rbook 提要</a>
+<ul>
+<li><a href="#資料探索和rmd">資料探索和RMD</a>
+<ul>
+<li><a href="#我比較常用的格式">我比較常用的格式</a></li>
+</ul></li>
+<li><a href="#rmarkdown在ｒ專案中的幾個應用">rmarkdown在Ｒ專案中的幾個應用</a></li>
+<li><a href="#建立web-site-利用-render-site">建立web site ：利用<code>render_site()</code></a></li>
+<li><a href="#book">book</a>
+<ul>
+<li><a href="#bookdown-yml"><code>_bookdown.yml</code></a></li>
+<li><a href="#output-yml"><code>_output.yml</code></a></li>
+<li><a href="#index-rmd">index.Rmd</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#源碼片">源碼片</a>
+<ul>
+<li>
+<ul>
+<li><a href="#output-yml-範例">_output.yml 範例</a></li>
+</ul></li>
+<li><a href="#travis-yml">.travis.yml</a></li>
+<li><a href="#紀錄">紀錄</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>01 Rmd basic</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    
+
+<h1 id="rbook-提要">rbook 提要</h1>
+
+<p>markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。</p>
+
+<p>在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)<a href="#rmarkdown在Ｒ專案中的幾個應用">參考下節</a>。</p>
+
+<p>相關指令和流程可以參考<a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-knit.html">這裡</a></p>
+
+<p>如果有共用的yaml ,可以參考<a href="https://stackoverflow.com/questions/39885363/importing-common-yaml-in-rstudio-knitr-document">這裡</a></p>
+
+<blockquote>
+<p>程式員會比較想知道相關的的流程:<br />
+The script is converted to Rmd through <code>knitr::spin()</code>; then <code>rmarkdown::render()</code> will render the Rmd。<br />
+也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。</p>
+
+<p>Convert Rmd to R script<br />
+<code>knitr::purl(&quot;03-purl.Rmd&quot;)</code>  # output: 03-purl.R</p>
+</blockquote>
+
+<h2 id="資料探索和rmd">資料探索和RMD</h2>
+
+<p>範例:</p>
+
+<blockquote>
+<p>mtcars 中的資料筆數有 32。</p>
+</blockquote>
+
+<h3 id="我比較常用的格式">我比較常用的格式</h3>
+
+<div class="notices">
+    <div class= info>
+        <p>這裡稍微解釋一下RMD文件表頭中的yaml:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;處理2003(92R)變數AB v1&quot;
+author: &quot;lin&quot;
+date: &quot;08 八月, 2021, 13:49&quot;
+header-includes:
+- \usepackage{xeCJK}
+- \setCJKmainfont{標楷體}
+output:
+  html_document:  
+    toc: yes
+    toc_float:
+      collapsed: false
+#     smooth_scroll: true        
+#    df_print: paged
+    highlight: tango  
+    css: [&quot;adv-r.css&quot;,&quot;mystyle.css&quot;]  
+  word_document:
+    toc: yes
+  pdf_document: 
+    latex_engine: xelatex 
+    toc: yes
+knit:   myknit 
+---
+</code></pre>
+
+<ul>
+<li>上面的word_document,其實對應 <code>rmarkdown::word_document()</code><br /></li>
+<li>而下面的 toc: yes 是要傳入上面函數的參數.可以對照?rmarkdown::word_document()<br />
+<br /></li>
+</ul>
+
+    </div>
+</div>
+
+
+<p>例如,如果我想要把我比較常用的word 模板,當成RMD 產生WORD文件的模板,可以</p>
+
+<ol>
+<li>先利用RMarkdown產生word 文件,<br /></li>
+
+<li><p>然後在yml的參數中指定:</p>
+
+<pre><code class="language-yaml">...
+word_document:
+reference_docx: myword.docx
+
+</code></pre></li>
+</ol>
+
+<p>#　Ｒ專案</p>
+
+<h2 id="rmarkdown在ｒ專案中的幾個應用">rmarkdown在Ｒ專案中的幾個應用</h2>
+
+<ol>
+<li>建立 web site<br /></li>
+<li>book<br /></li>
+<li>blogdown<br />
+<br /></li>
+</ol>
+
+<h2 id="建立web-site-利用-render-site">建立web site ：利用<code>render_site()</code></h2>
+
+<p>👍<a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p>
+
+<p>指令 <code>rmarkdown::render_site()</code> 用來建立網站。這個指令需要,一個檔案 <code>_site.yml</code>,內容如下:</p>
+
+<pre><code class="language-yaml">name: &quot;my-website&quot;
+navbar:
+  title: &quot;My Website&quot;
+  left:
+    - text: &quot;Home&quot;
+      href: index.html
+    - text: &quot;About&quot;
+      href: about.html
+</code></pre>
+
+<p>同時檔案<code>index.html</code> 是第一個網站的入門網頁。</p>
+
+<h2 id="book">book</h2>
+
+<p>指令 <code>bookdown::render_book()</code> 需要的檔案有<br />
+- <code>index.Rmd</code><br />
+- <code>_bookdown.yml'
+-</code>_output.yml'。</p>
+
+<h3 id="bookdown-yml"><code>_bookdown.yml</code></h3>
+
+<p>The <code>_bookdown.yml</code> 那些檔案要被包含進來。</p>
+
+<pre><code class="language-yaml">rmd_files: [&quot;index.Rmd&quot;, &quot;02-literature.Rmd&quot;, &quot;01-intro.Rmd&quot;]
+</code></pre>
+
+<h3 id="output-yml"><code>_output.yml</code></h3>
+
+<p>The <code>_output.yml</code> 用來指定如何輸出,例如HTML和PDF的格式。範例:</p>
+
+<pre><code class="language-yaml">bookdown::gitbook:
+  lib_dir: assets
+  split_by: section
+  config:
+    toolbar:
+      position: static
+bookdown::pdf_book:
+  keep_tex: yes
+bookdown::html_book:
+  css: toc.css
+</code></pre>
+
+<p>splitby: 後面可以是RMD,每個RMD一個HTML檔案。</p>
+
+<h3 id="index-rmd">index.Rmd</h3>
+
+<p>通常是一系列文章裡面的第一個文件。其他rmd文件的yml 頭部都可以統一放在這裡。</p>
+
+<p>下面是一些選項,可以自行添加到上面:</p>
+
+<pre><code>```yml
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+```
+</code></pre>
+
+<p>bibliography 暫時沒有參考文件檔,所以我沒有放.</p>
+
+<p>參考位置:<br />
+* <a href="https://rmarkdown.rstudio.com/r_notebook_format.html">HTML Format</a> 來自<a href="https://github.com/rstudio/rmarkdown">rmarkdown from rstudio</a><br />
+* <a href="http://conjugateprior.org/2012/12/r-markdown-to-other-document-formats/">pandox</a></p>
+
+<h1 id="源碼片">源碼片</h1>
+
+<p>簡單講,_output.yml放的是輸出到哪裡?gitbook? pdf? 或者是簡單html格式。</p>
+
+<h3 id="output-yml-範例">_output.yml 範例</h3>
+
+<pre><code class="language-yaml">bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        &lt;li&gt;&lt;a href=&quot;./&quot;&gt;A Minimal Book Example&lt;/a&gt;&lt;/li&gt;
+      after: |
+        &lt;li&gt;&lt;a href=&quot;https://github.com/rstudio/bookdown&quot; target=&quot;blank&quot;&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;
+    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+    download: [&quot;pdf&quot;, &quot;epub&quot;]
+
+ # bookdown::pdf_book:
+ #   latex_engine: &quot;xelatex&quot;
+ #   keep_tex: true
+ #   includes:
+ #     in_header: header.tex
+
+ bookdown::pdf_book:
+   includes:
+     in_header: latex/preamble.tex
+     before_body: latex/before_body.tex
+     after_body: latex/after_body.tex
+   keep_tex: true
+   dev: &quot;cairo_pdf&quot;
+   latex_engine: xelatex
+   citation_package: natbib
+   pandoc_args: [&quot;--top-level-division=chapter&quot;, &quot;--lua-filter=latex/sidebar.lua&quot;]
+   template: null
+   quote_footer: null
+   toc_unnumbered: false
+   number_sections: true    
+</code></pre>
+
+<p>另一個</p>
+
+<pre><code class="language-yaml">output: 
+  html_document: 
+    highlight: tango
+    number_sections: yes
+    toc: yes
+</code></pre>
+
+<p>上面這段YML會被解譯到下面的R程式碼:<br />
+html_document對應rmarkdown::html_document()<br />
+例如,<br />
+number_sections: yes 會被當成<code>html_document()</code>的參數轉譯:</p>
+
+<p>highlight: tango 對應到參數(沒有在下面)</p>
+
+<pre><code class="language-r">rmarkdown::html_document( theme= &quot;lumen&quot;,
+                               template= template,
+                               css= css,
+                               toc= toc,
+                               toc_float= TRUE,
+                               toc_depth= 2,
+                               number_sections= number_sections,
+                               df_print = &quot;paged&quot;,
+                               code_folding = code_folding,
+                               includes = includes(before_body = header)
+                            )
+}
+
+</code></pre>
+
+<h2 id="travis-yml">.travis.yml</h2>
+
+<blockquote>
+<p><a href="http://www.goring.org/resources/Adding_CI_To_RMarkdown.html">rmarkdown and travis</a></p>
+</blockquote>
+
+<p>應該是用來指導怎麼建立專案的一個yml。<br />
+已知的部分有:<br />
+directories : 可以指定子目錄,用來放暫存檔案(一些翻譯過程產生的中間黨),否則每個RMD都會產生一個組目錄。</p>
+
+<pre><code class="language-yml">language: R
+sudo: false
+cache:
+  packages: true
+  directories:
+  - _bookdown_files
+  - $HOME/.npm
+
+pandoc_version: 2.1.1
+</code></pre>
+
+<h2 id="紀錄">紀錄</h2>
+
+<p>before_chapter_script: &quot;common.R&quot;<br />
+前面要有兩個空白</p>
+
+<p>if(FALSE) {<br />
+'<br />
+兩個地方可以放,<br />
+1) 一個是在_bookdown.yml中的最後一行:<br />
+  before_chapter_script: &quot;common.R&quot;<br />
+2)一個是在每個RMD的第一個chunk執行<br />
+  source(&quot;common.R&quot;)</p>
+
+<p>'<br />
+}</p>
+
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+                   
+          
+            <a href="../../topic/rmd/04_rmd_hook.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=04&#32;Rmd&#32;hook>後</a>            
+          
+          
+
+  
+<script src="../../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../../js/featherlight.min.js?1631762489"></script>
+  <script src="../../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../../js/hugohelper.js?1631762489"></script>
+
+  <link href="../../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

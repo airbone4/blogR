@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html><head>
+  <title>5 object_basic</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#物件">物件</a>
+<ul>
+<li><a href="#attribute">attribute</a></li>
+<li><a href="#attr-attributes-structure-functions-in-r-4-examples-get-remove-set">attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</a>
+<ul>
+<li><a href="#basic-application-of-attr-attributes">Basic Application of attr() &amp; attributes()</a></li>
+<li><a href="#assign-new-attributes-with-the-attributes-r-function">Assign New Attributes with the attributes() R Function</a></li>
+<li><a href="#利用attr-改變其中一個attribute">利用attr() 改變其中一個Attribute</a></li>
+<li><a href="#the-r-structure-function">The R structure Function</a>
+<ul>
+<li><a href="#example">Example:</a></li>
+<li><a href="#in-one-go">In one go</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#oop">OOP</a>
+<ul>
+<li><a href="#base-objects-vs-oo-objects">Base objects vs OO objects</a></li>
+<li><a href="#變數屬性查詢函數">變數屬性查詢函數</a></li>
+</ul></li>
+<li><a href="#operator">operator %&gt;%</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>5 object_basic</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    
+
+<h1 id="物件">物件</h1>
+
+<h2 id="attribute">attribute</h2>
+
+<p>oth the names and the dimensions of matrices and arrays are stored in R as attributes of the object. These attributes can be seen as labeled values you can attach to any object.</p>
+
+<p>They form one of the mechanisms R uses to define specific object types like dates, time series, and so on. They can include any kind of information, and you can use them yourself to add information to any object.</p>
+
+<p>To see all the attributes of an object, you can use the attributes() function. You can see all the attributes of my.array like this:</p>
+
+<blockquote>
+<p>attributes(my.array)<br />
+$dim<br />
+[1] 3 4 2<br />
+This function returns a named list, where each item in the list is an attribute. Each attribute can, on itself, be a list again. For example, the attribute dimnames is actually a list containing the row and column names of a matrix.</p>
+</blockquote>
+
+<p>You can check that for yourself by checking the output of attributes(baskets.team). You can set all attributes as a named list as well. You find examples of that in the Help file ?attributes.</p>
+
+<p>To get or set a single attribute, you can use the attr() function. This function takes two important arguments. The first argument is the object you want to examine, and the second argument is the name of the attribute you want to see or change. If the attribute you ask for doesn’t exist, R simply returns NULL.</p>
+
+<p>Imagine you want to add which season Granny and Geraldine scored the baskets mentioned in baskets.team. You can do this with the following code:</p>
+
+<blockquote>
+<p>attr(baskets.team,'season') &lt;- '2010-2011'<br />
+To get the value of this attribute returned, you can then use following code:</p>
+
+<p>attr(baskets.team,'season')<br />
+[1] &quot;2010-2011&quot;<br />
+You can delete attributes again by setting their value to NULL, like this:</p>
+
+<p>attr(baskets.team,'season') &lt;- NULL</p>
+</blockquote>
+
+<h2 id="attr-attributes-structure-functions-in-r-4-examples-get-remove-set">attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</h2>
+
+<p>三個函數的基本寫法:</p>
+
+<pre><code class="language-r">attributes(data)
+attr(x = data, which = &quot;attribute_name&quot;)
+structure(data, dim = c(2, 6))
+</code></pre>
+
+<p>Definitions:</p>
+
+<p>函數 <code>attributes</code> 設定或列出物件的所有attributes。</p>
+
+<p>函數 <code>attr</code> 物件中某個指定的attribute.</p>
+
+<p>函數<code>structure</code> 設定資料物件中其他額外的 attributes。</p>
+
+<p>使用方法</p>
+
+<h3 id="basic-application-of-attr-attributes">Basic Application of attr() &amp; attributes()</h3>
+
+<p>載入資料集然後利用函數看看data.frame有甚麼attribute。</p>
+
+<pre><code class="language-r">data(cars)                                             # Load head(cars)             attributes(cars)     
+attr(x = cars, which = &quot;names&quot;) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;speed&quot; &quot;dist&quot;
+</code></pre>
+
+<div class="notices">
+    <div class= sidebar>
+        <p>也可以寫成</p>
+
+<pre><code class="language-r">attr(cars,&quot;names&quot;)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;speed&quot; &quot;dist&quot;
+</code></pre>
+
+<p>比較一下names,可以發現,names 只是一個data.frame中的attribute</p>
+
+<pre><code class="language-r"> class(cars)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;data.frame&quot;
+</code></pre>
+
+<pre><code class="language-r"> str(cars)
+</code></pre>
+
+<pre><code>#&gt; 'data.frame':	50 obs. of  2 variables:
+#&gt;  $ speed: num  4 4 7 7 8 9 10 10 10 11 ...
+#&gt;  $ dist : num  2 10 4 22 16 10 18 26 34 17 ...
+</code></pre>
+
+<pre><code class="language-r"> names(cars)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;speed&quot; &quot;dist&quot;
+</code></pre>
+
+    </div>
+</div>
+
+
+<h3 id="assign-new-attributes-with-the-attributes-r-function">Assign New Attributes with the attributes() R Function</h3>
+
+<pre><code class="language-r">attributes_list &lt;- list(names = c(&quot;col1&quot;, &quot;col2&quot;),     #設定不同的欄位名稱
+                        class = &quot;data.frame&quot;,          # 保留類別
+                        row.names = nrow(cars):1)      # 反向
+</code></pre>
+
+<p>然後可以利用<code>attributes</code>設定所有attributes。</p>
+
+<pre><code class="language-r">attributes(cars) &lt;- attributes_list                    # Set all attributes of data
+attributes(cars)                                       # Apply attributes function
+</code></pre>
+
+<pre><code>#&gt; $names
+#&gt; [1] &quot;col1&quot; &quot;col2&quot;
+#&gt; 
+#&gt; $class
+#&gt; [1] &quot;data.frame&quot;
+#&gt; 
+#&gt; $row.names
+#&gt;  [1] 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26
+#&gt; [26] 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
+</code></pre>
+
+<h3 id="利用attr-改變其中一個attribute">利用attr() 改變其中一個Attribute</h3>
+
+<pre><code class="language-r">attr(x = cars, which = &quot;names&quot;) &lt;- c(&quot;aaa&quot;, &quot;bbb&quot;)     # Set only names attribute
+</code></pre>
+
+<p>檢查看看結果</p>
+
+<pre><code class="language-r">attributes(cars)    # Apply attributes function
+</code></pre>
+
+<pre><code>#&gt; $names
+#&gt; [1] &quot;aaa&quot; &quot;bbb&quot;
+#&gt; 
+#&gt; $class
+#&gt; [1] &quot;data.frame&quot;
+#&gt; 
+#&gt; $row.names
+#&gt;  [1] 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26
+#&gt; [26] 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
+</code></pre>
+
+<p>　</p>
+
+<h3 id="the-r-structure-function">The R structure Function</h3>
+
+<p>和<code>attributes()</code> <code>attr()</code> 相關的命令是 <code>structure()</code> 。</p>
+
+<pre><code class="language-r">set.seed(12345)                             
+vec &lt;- round(runif(15, 0, 10))     # 1D 向量 
+vec
+</code></pre>
+
+<pre><code>#&gt;  [1]  7  9  8  9  5  2  3  5  7 10  0  2  7  0  4
+</code></pre>
+
+<p>改變成矩陣:</p>
+
+<pre><code class="language-r">vec_dim &lt;- structure(vec, dim = c(3, 5))               # Change dimension of vector
+vec_dim                                                # Print updated vector
+</code></pre>
+
+<pre><code>#&gt;      [,1] [,2] [,3] [,4] [,5]
+#&gt; [1,]    7    9    3   10    7
+#&gt; [2,]    9    5    5    0    0
+#&gt; [3,]    8    2    7    2    4
+</code></pre>
+
+<p>比較之前的寫法:</p>
+
+<pre><code class="language-r">matrix(vec,nrow=3)
+</code></pre>
+
+<h4 id="example">Example:</h4>
+
+<pre><code class="language-r">dd &lt;- structure(list( 
+         year = c(2001, 2002, 2004, 2006) 
+        ,length_days = c(366.3240, 365.4124, 366.5323423, 364.9573234)) 
+        ,.Names = c(&quot;year&quot;, &quot;length of days&quot;) 
+        ,row.names = c(NA, -4L) 
+        ,class = &quot;data.frame&quot;)
+dd
+</code></pre>
+
+<pre><code>#&gt;   year length of days
+#&gt; 1 2001       366.3240
+#&gt; 2 2002       365.4124
+#&gt; 3 2004       366.5323
+#&gt; 4 2006       364.9573
+</code></pre>
+
+<pre><code class="language-r">str(dd)
+</code></pre>
+
+<pre><code>#&gt; 'data.frame':	4 obs. of  2 variables:
+#&gt;  $ year          : num  2001 2002 2004 2006
+#&gt;  $ length of days: num  366 365 367 365
+</code></pre>
+
+<p>dd的meta data:</p>
+
+<pre><code class="language-r">attributes(dd)
+</code></pre>
+
+<pre><code>#&gt; $names
+#&gt; [1] &quot;year&quot;           &quot;length of days&quot;
+#&gt; 
+#&gt; $row.names
+#&gt; [1] 1 2 3 4
+#&gt; 
+#&gt; $class
+#&gt; [1] &quot;data.frame&quot;
+</code></pre>
+
+<p>利用<code>structure()</code>建立的物件,不管是同質(vector,matrix)還是異質(data.frame,list) 都會利用attributes儲存meta data。例如,</p>
+
+<pre><code class="language-r">just_vector &lt;- structure(1:10, comment = &quot;This is my simple vector with info&quot;)
+just_vector
+</code></pre>
+
+<pre><code>#&gt;  [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre>
+
+<pre><code class="language-r">str(just_vector)
+</code></pre>
+
+<pre><code>#&gt;  int [1:10] 1 2 3 4 5 6 7 8 9 10
+#&gt;  - attr(*, &quot;comment&quot;)= chr &quot;This is my simple vector with info&quot;
+</code></pre>
+
+<p>然後利用函數，可以拿到我們之前的資訊:</p>
+
+<pre><code class="language-r">attributes(just_vector)
+</code></pre>
+
+<p>結果如下:<br />
+$comment<br />
+[1] &quot;This is my simple vector with info&quot;</p>
+
+<p>注意:attributes()的傳回結果為list,因此有$comment</p>
+
+<pre><code class="language-r">str(attributes(just_vector))
+</code></pre>
+
+<pre><code>#&gt; List of 1
+#&gt;  $ comment: chr &quot;This is my simple vector with info&quot;
+</code></pre>
+
+<pre><code class="language-r">attributes(attributes(just_vector))
+</code></pre>
+
+<pre><code>#&gt; $names
+#&gt; [1] &quot;comment&quot;
+</code></pre>
+
+<h4 id="in-one-go">In one go</h4>
+
+<p>這是另一個利用函數<code>structure()</code>的例子。先看一下一般建立data.frame物件的方法:</p>
+
+<pre><code class="language-r">year = c(1999, 2002, 2005, 2008)
+pollution = c(346.82,134.308821199349, 130.430379885892, 88.275457392443)
+dd2 &lt;- data.frame(year,pollution)
+dd2$year &lt;- as.factor(dd2$year)
+</code></pre>
+
+<p>利用  <code>structure</code>, 一步就可以完成:</p>
+
+<pre><code class="language-r">dd &lt;- structure(list( 
+   year = as.factor(c(2001, 2002, 2004, 2006))
+  ,length_days = c(366.3240, 365.4124, 366.5323423, 364.9573234)) 
+  ,.Names = c(&quot;year&quot;, &quot;length of days&quot;) 
+  ,row.names = c(NA, -4L) 
+  ,class = &quot;data.frame&quot;)
+</code></pre>
+
+<p>Constructing data-frame with additional attributes and comments.</p>
+
+<pre><code class="language-r">dd3 &lt;- structure(list(
+   v1 = as.factor(c(2001, 2002, 2004, 2006))
+  ,v2 = I(c(2001, 2002, 2004, 2006))
+  ,v3 = ordered(c(2001, 2002, 2004, 2006))
+  ,v4 = as.double(c(366.3240, 365.4124, 366.5323423, 364.9573234)))
+  ,.Names = c(&quot;year&quot;, &quot;AsIs Year&quot;,&quot;yearO&quot;, &quot;length of days&quot;)
+  ,.typeOf = c(&quot;factor&quot;, &quot;numeric&quot;, &quot;ordered&quot;,&quot;numeric&quot;)
+  ,row.names = c(NA, -4L)
+  ,class = &quot;data.frame&quot;
+  ,comment = &quot;Ordered YearO for categorical analysis and other variables&quot;)
+
+dd3
+</code></pre>
+
+<pre><code>#&gt;   year AsIs Year yearO length of days
+#&gt; 1 2001      2001  2001       366.3240
+#&gt; 2 2002      2002  2002       365.4124
+#&gt; 3 2004      2004  2004       366.5323
+#&gt; 4 2006      2006  2006       364.9573
+</code></pre>
+
+<p>And checking comments can be done as:</p>
+
+<pre><code class="language-r">attributes(dd3)$comment
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;Ordered YearO for categorical analysis and other variables&quot;
+</code></pre>
+
+<pre><code class="language-r">attr(dd3, which=&quot;comment&quot;)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;Ordered YearO for categorical analysis and other variables&quot;
+</code></pre>
+
+<h2 id="oop">OOP</h2>
+
+<p><a href="https://adv-r.hadley.nz/base-types.html">advance R</a></p>
+
+<h3 id="base-objects-vs-oo-objects">Base objects vs OO objects</h3>
+
+<p>辨別變數是基礎型別或是物件型別，可以簡單利用函數： <code>is.object()</code>:</p>
+
+<p>基礎物件base object:</p>
+
+<pre><code class="language-r">is.object(1:10)
+</code></pre>
+
+<pre><code>#&gt; [1] FALSE
+</code></pre>
+
+<p>[1] FALSE</p>
+
+<p>物件導向物件 OO object</p>
+
+<pre><code class="language-r">is.object(mtcars)
+</code></pre>
+
+<pre><code>#&gt; [1] TRUE
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<p>主要的區別在於基本物件沒有class 這個attribute</p>
+
+<pre><code class="language-r">attr(1:10, &quot;class&quot;) #  NULL
+</code></pre>
+
+<pre><code>#&gt; NULL
+</code></pre>
+
+<pre><code class="language-r">attr(mtcars, &quot;class&quot;) # [1] &quot;data.frame&quot;
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;data.frame&quot;
+</code></pre>
+
+<p>class()這個函數,不見得總是會和attr()的結果一致,因為，對基本物件而言,傳回的是後面討論,而不是 NULL。</p>
+
+<h3 id="變數屬性查詢函數">變數屬性查詢函數</h3>
+
+<p>names()<br />
+dimnames()<br />
+length()<br />
+dim(): 各維度長度<br />
+class() : 變數類別<br />
+table()：各類資料計數<br />
+str()：變數的資料結構(其實是一個list)</p>
+
+<p>透過names()函數，可取得各種list元素的名稱,但是如果是data.frame則是顯示欄位名稱<br />
+islands是內建資料</p>
+
+<pre><code class="language-r">str(islands)
+</code></pre>
+
+<pre><code>#&gt;  Named num [1:48] 11506 5500 16988 2968 16 ...
+#&gt;  - attr(*, &quot;names&quot;)= chr [1:48] &quot;Africa&quot; &quot;Antarctica&quot; &quot;Asia&quot; &quot;Australia&quot; ...
+</code></pre>
+
+<pre><code class="language-r">head(names(islands)) 
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;Africa&quot;       &quot;Antarctica&quot;   &quot;Asia&quot;         &quot;Australia&quot;    &quot;Axel Heiberg&quot;
+#&gt; [6] &quot;Baffin&quot;
+</code></pre>
+
+<p>方形資料（例如，矩陣，table, data.frame)，可以透過dimnames()函數可顯示data.frame 橫行和直行的名稱 先橫行，然後直行。</p>
+
+<pre><code class="language-r">dimnames(USArrests) 
+</code></pre>
+
+<pre><code>#&gt; [[1]]
+#&gt;  [1] &quot;Alabama&quot;        &quot;Alaska&quot;         &quot;Arizona&quot;        &quot;Arkansas&quot;      
+#&gt;  [5] &quot;California&quot;     &quot;Colorado&quot;       &quot;Connecticut&quot;    &quot;Delaware&quot;      
+#&gt;  [9] &quot;Florida&quot;        &quot;Georgia&quot;        &quot;Hawaii&quot;         &quot;Idaho&quot;         
+#&gt; [13] &quot;Illinois&quot;       &quot;Indiana&quot;        &quot;Iowa&quot;           &quot;Kansas&quot;        
+#&gt; [17] &quot;Kentucky&quot;       &quot;Louisiana&quot;      &quot;Maine&quot;          &quot;Maryland&quot;      
+#&gt; [21] &quot;Massachusetts&quot;  &quot;Michigan&quot;       &quot;Minnesota&quot;      &quot;Mississippi&quot;   
+#&gt; [25] &quot;Missouri&quot;       &quot;Montana&quot;        &quot;Nebraska&quot;       &quot;Nevada&quot;        
+#&gt; [29] &quot;New Hampshire&quot;  &quot;New Jersey&quot;     &quot;New Mexico&quot;     &quot;New York&quot;      
+#&gt; [33] &quot;North Carolina&quot; &quot;North Dakota&quot;   &quot;Ohio&quot;           &quot;Oklahoma&quot;      
+#&gt; [37] &quot;Oregon&quot;         &quot;Pennsylvania&quot;   &quot;Rhode Island&quot;   &quot;South Carolina&quot;
+#&gt; [41] &quot;South Dakota&quot;   &quot;Tennessee&quot;      &quot;Texas&quot;          &quot;Utah&quot;          
+#&gt; [45] &quot;Vermont&quot;        &quot;Virginia&quot;       &quot;Washington&quot;     &quot;West Virginia&quot; 
+#&gt; [49] &quot;Wisconsin&quot;      &quot;Wyoming&quot;       
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] &quot;Murder&quot;   &quot;Assault&quot;  &quot;UrbanPop&quot; &quot;Rape&quot;
+</code></pre>
+
+<p>方形資料，可以透過length()函數可顯示資料長度，但是如果是data.frame則顯示欄位數。</p>
+
+<pre><code class="language-r">length(islands) 
+</code></pre>
+
+<pre><code>#&gt; [1] 48
+</code></pre>
+
+<p>透過dim() 顯示方形資料的「資料筆數」和「欄位數目」，先「橫行」，後「直行」</p>
+
+<pre><code class="language-r">dim(USArrests) 
+</code></pre>
+
+<pre><code>#&gt; [1] 50  4
+</code></pre>
+
+<p>使用class()函數可知道變數類別</p>
+
+<pre><code class="language-r">class(pi)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;numeric&quot;
+</code></pre>
+
+<pre><code class="language-r">class(Sys.Date())
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;Date&quot;
+</code></pre>
+
+<p>使用table()函數可知道向量中每個值出現幾次</p>
+
+<pre><code class="language-r">table(iris$Species) ##統計結果
+</code></pre>
+
+<pre><code>#&gt; 
+#&gt;     setosa versicolor  virginica 
+#&gt;         50         50         50
+</code></pre>
+
+<h2 id="operator">operator %&gt;%</h2>
+
+<p>%&gt;% 不是R基礎套件<br />
+而是定義再套件 magrittr (CRAN) 且常跟 dplyr (CRAN)搭配。</p>
+
+<p>意思是把左邊(LHS)當成右邊(RHS)的參數。<br />
+例如下面的例子: 資料框iris 用來當 head()的參數:<br />
+也就是說 iris %&gt;% head() 相當於 head(iris).</p>
+
+<p>library(magrittr)<br />
+iris %&gt;% head()<br />
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species<br />
+1          5.1         3.5          1.4         0.2  setosa<br />
+2          4.9         3.0          1.4         0.2  setosa<br />
+3          4.7         3.2          1.3         0.2  setosa<br />
+4          4.6         3.1          1.5         0.2  setosa<br />
+5          5.0         3.6          1.4         0.2  setosa<br />
+6          5.4         3.9          1.7         0.4  setosa</p>
+
+<p>為甚麼需要這樣用,下面是一個例子</p>
+
+<p>iris %&gt;% head() %&gt;% summary()<br />
+類似的觀念, iris %&gt;% head() %&gt;% summary() 等同於summary(head(iris)).<br />
+也就是說,避免了使用巢狀呼叫。</p>
+
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/5_filesystem.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=5&#32;File&#32;System>前</a>
+                   
+          
+            <a href="../rlang/6_programming_1.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=6.&#32;Programming&#32;1>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1631762489"></script>
+  <script src="../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../js/hugohelper.js?1631762489"></script>
+
+  <link href="../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html><head>
+  <title>4.1.3 type list</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#list">List</a>
+<ul>
+<li><a href="#建立-list">建立 List</a></li>
+<li><a href="#給串列中的每個元素命名">給串列中的每個元素命名</a></li>
+<li><a href="#存取-list-元素">存取 List 元素</a></li>
+<li><a href="#處理list-元素">處理list 元素</a></li>
+<li><a href="#merging-lists">Merging Lists</a></li>
+<li><a href="#list-轉-vector">List 轉 Vector</a></li>
+<li><a href="#比較vector-list中-字串的問題">比較vector, list中,字串的問題</a></li>
+</ul></li>
+<li><a href="#data-set-build-in">data set build in</a>
+<ul>
+<li><a href="#list-of-pre-loaded-data">List of pre-loaded data</a></li>
+</ul></li>
+<li><a href="#練習-拿元素">練習 拿元素</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 10, 2021'>4.1.3 type list</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="list">List</h2>
+
+<p>Lists 是一個R物件。其元素內容可以是不同型態,例如 numbers, strings, vectors,matrix 或者是另一個 list，甚至是函數。</p>
+
+<h3 id="建立-list">建立 List</h3>
+
+<p>函數<code>list()</code> 可以建立list.<br />
+<code>list()</code>中的參數用逗點隔開,幾個參數就幾個Node。</p>
+
+<pre><code class="language-r">list_data &lt;- list(&quot;Red&quot;, &quot;Green&quot;, c(21,32,11), TRUE, 51.23, 119.1)
+print(list_data)
+</code></pre>
+
+<pre><code>#&gt; [[1]]
+#&gt; [1] &quot;Red&quot;
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] &quot;Green&quot;
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 21 32 11
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] TRUE
+#&gt; 
+#&gt; [[5]]
+#&gt; [1] 51.23
+#&gt; 
+#&gt; [[6]]
+#&gt; [1] 119.1
+</code></pre>
+
+<h3 id="給串列中的每個元素命名">給串列中的每個元素命名</h3>
+
+<p>list中的元素可以命名,然後經由名稱存取。</p>
+
+<pre><code class="language-r">#建立串列,其中的原素有向量,矩陣,和一個串列
+list_data &lt;- list(c(&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;),  
+                  matrix(c(3,9,5,1,-2,8), nrow = 2),
+                  list(&quot;green&quot;,12.3))
+
+# 給每個NODE命名
+names(list_data) &lt;- c(&quot;1st Quarter&quot;, &quot;A_Matrix&quot;, &quot;A Inner list&quot;)
+
+#Show the list.
+print(list_data)
+</code></pre>
+
+<pre><code>#&gt; $`1st Quarter`
+#&gt; [1] &quot;Jan&quot; &quot;Feb&quot; &quot;Mar&quot;
+#&gt; 
+#&gt; $A_Matrix
+#&gt;      [,1] [,2] [,3]
+#&gt; [1,]    3    5   -2
+#&gt; [2,]    9    1    8
+#&gt; 
+#&gt; $`A Inner list`
+#&gt; $`A Inner list`[[1]]
+#&gt; [1] &quot;green&quot;
+#&gt; 
+#&gt; $`A Inner list`[[2]]
+#&gt; [1] 12.3
+</code></pre>
+
+<p>帶名的vector和list ,白話文意思就是將每個元素命名。</p>
+
+<pre><code class="language-r">x=c(1,2,3)
+names(x)&lt;-c('a','b','c')
+x
+</code></pre>
+
+<pre><code>#&gt; a b c 
+#&gt; 1 2 3
+</code></pre>
+
+<ul>
+<li><br />
+<div class="notices">
+    <div class= info>
+        <p>這裡討論一下為甚麼在R語言堅持<code>&lt;-</code>而不是<code>=</code>的一個原因</p>
+
+<p>一般的程式語言,不會用到這種文法,例如,在其他程式語言中,直覺上應該是有一個<code>names()</code>,然後用法如下:</p>
+
+<pre><code class="language-c">names(x,c('a','b','c') )
+</code></pre>
+
+<p>👹因此<code>&lt;-</code>不類似指派,而是類似流向某個物件的屬性。</p>
+
+    </div>
+</div>
+<br />
+<br /></li>
+</ul>
+
+<p><code>names()</code>的參數如果是matrix,被命名的就是欄位(直行)或是紀錄(橫行)?答案是以上皆非 .而是給每個元素命名。</p>
+
+<pre><code class="language-r">x&lt;-matrix(runif(9),nrow=3)
+names(x)&lt;-c('a','b','c')
+x
+</code></pre>
+
+<pre><code>#&gt;           [,1]      [,2]       [,3]
+#&gt; [1,] 0.2418582 0.9307930 0.88989298
+#&gt; [2,] 0.4308953 0.9658296 0.06133088
+#&gt; [3,] 0.7975235 0.4329790 0.60921991
+#&gt; attr(,&quot;names&quot;)
+#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; NA  NA  NA  NA  NA  NA
+</code></pre>
+
+
+  <figure  class="figure text-center d-block border border-primary w-75">
+
+
+
+
+
+
+
+    <img src="4_1_3_type_list.files/%e7%9f%a9%e9%99%a3%e5%91%bd%e5%90%8d.png" class="figure-img"
+         alt="names &amp;amp; matrix" width="100%"/> <figcaption class="figure-caption">
+            names &amp; matrix
+        </figcaption>
+
+</figure>
+
+
+<pre><code class="language-r">rownames(x)&lt;-c('x','y','z')
+print(x,row.names=T)
+</code></pre>
+
+<pre><code>#&gt;        [,1]      [,2]       [,3]
+#&gt; x 0.2418582 0.9307930 0.88989298
+#&gt; y 0.4308953 0.9658296 0.06133088
+#&gt; z 0.7975235 0.4329790 0.60921991
+#&gt; attr(,&quot;names&quot;)
+#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; NA  NA  NA  NA  NA  NA
+</code></pre>
+
+
+  <figure  class="figure text-center d-block border border-primary w-75">
+
+
+
+
+
+
+
+    <img src="4_1_3_type_list.files/%e7%9f%a9%e9%99%a3%e5%91%bd%e5%90%8d2.png" class="figure-img"
+         alt="圖" width="100%"/> <figcaption class="figure-caption">
+            圖
+        </figcaption>
+
+</figure>
+
+
+<p>❓問:在上面的例子中x是一個矩陣,x[&quot;a&quot;]會傳回甚麼?</p>
+
+<p>📝 必須是x[[&quot;a&quot;]]傳回的才是純量,否則仍然是一個<code>list</code></p>
+
+<p>但是在data.frame的結構中,names()&lt;- 給定的是欄位名稱</p>
+
+<pre><code class="language-r">xd&lt;-data.frame(x)
+names(xd)&lt;-c('a','b','c')
+xd
+</code></pre>
+
+<pre><code>#&gt;           a         b          c
+#&gt; x 0.2418582 0.9307930 0.88989298
+#&gt; y 0.4308953 0.9658296 0.06133088
+#&gt; z 0.7975235 0.4329790 0.60921991
+</code></pre>
+
+<h3 id="存取-list-元素">存取 List 元素</h3>
+
+<pre><code class="language-r"># 3個元素,分別是list, matrix, list
+list_data &lt;- list(c(&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;), 
+                  matrix(c(3,9,5,1,-2,8), nrow = 2),
+                  list(&quot;green&quot;,12.3))
+
+# 給名稱
+names(list_data) &lt;- c(&quot;1st Quarter&quot;, &quot;A_Matrix&quot;, &quot;A Inner list&quot;)
+
+# Access the first element of the list.
+print(list_data[1])
+</code></pre>
+
+<pre><code>#&gt; $`1st Quarter`
+#&gt; [1] &quot;Jan&quot; &quot;Feb&quot; &quot;Mar&quot;
+</code></pre>
+
+<pre><code class="language-r"># Access the thrid element. As it is also a list, all its elements will be printed.
+print(list_data[3])
+</code></pre>
+
+<pre><code>#&gt; $`A Inner list`
+#&gt; $`A Inner list`[[1]]
+#&gt; [1] &quot;green&quot;
+#&gt; 
+#&gt; $`A Inner list`[[2]]
+#&gt; [1] 12.3
+</code></pre>
+
+<pre><code class="language-r"># Access the list element using the name of the element.
+print(list_data$A_Matrix)
+</code></pre>
+
+<pre><code>#&gt;      [,1] [,2] [,3]
+#&gt; [1,]    3    5   -2
+#&gt; [2,]    9    1    8
+</code></pre>
+
+<p>list 元素的存取可以是<code>[[]]</code> 或 <code>$</code> 例如x[[&quot;a&quot;]], x$a。</p>
+
+<div class="notices">
+    <div class= tips>
+        一個主要分別是,list中的號碼索引,也是名稱,例如,向量矩陣都可以是x[1]拿到純量,但是list x[1]拿到的仍然是list。
+    </div>
+</div>
+
+
+<h3 id="處理list-元素">處理list 元素</h3>
+
+<p>list的加入和刪除,只能在尾端，但是更改資料不受限制。</p>
+
+<pre><code class="language-r"># Create a list containing a vector, a matrix and a list.
+list_data &lt;- list(c(&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;), matrix(c(3,9,5,1,-2,8), nrow = 2),
+   list(&quot;green&quot;,12.3))
+
+# Give names to the elements in the list.
+names(list_data) &lt;- c(&quot;1st Quarter&quot;, &quot;A_Matrix&quot;, &quot;A Inner list&quot;)
+
+# 加入元素
+list_data[4] &lt;- &quot;New element&quot;
+print(list_data[4])
+</code></pre>
+
+<pre><code>#&gt; [[1]]
+#&gt; [1] &quot;New element&quot;
+</code></pre>
+
+<pre><code class="language-r"># 🔑移除最後一個元素
+list_data[4] &lt;- NULL
+
+# Print the 4th Element.
+print(list_data[4])
+</code></pre>
+
+<pre><code>#&gt; $&lt;NA&gt;
+#&gt; NULL
+</code></pre>
+
+<pre><code class="language-r"># Update the 3rd Element.
+list_data[3] &lt;- &quot;updated element&quot;
+print(list_data[3])
+</code></pre>
+
+<pre><code>#&gt; $`A Inner list`
+#&gt; [1] &quot;updated element&quot;
+</code></pre>
+
+<h3 id="merging-lists">Merging Lists</h3>
+
+<p>You can merge many lists into one list by placing all the lists inside one list() function.</p>
+
+<pre><code class="language-r"># Create two lists.
+list1 &lt;- list(1,2,3)
+list2 &lt;- list(&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;)
+
+# Merge the two lists.
+merged.list &lt;- c(list1,list2)
+
+# Print the merged list.
+print(merged.list)
+</code></pre>
+
+<pre><code>#&gt; [[1]]
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] 2
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 3
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] &quot;Sun&quot;
+#&gt; 
+#&gt; [[5]]
+#&gt; [1] &quot;Mon&quot;
+#&gt; 
+#&gt; [[6]]
+#&gt; [1] &quot;Tue&quot;
+</code></pre>
+
+<div class="notices">
+    <div class= info>
+        <p>❓ 在大部分程式語言中,向量的意思,只要元素同型態就行。又，我們已經知道,函數<code>c</code>可以產生向量。上面的程式碼中,利用c將兩個list 合併,我們按照大部分程式語言的觀念知道,既然元素都是相同型態(都是list),那就是2個元素，但是現在是6個,為甚麼?</p>
+
+<p>👍 函數<code>c()</code>是一個多型函數(物件語言中的講法就是根據參數的不同,而有不同的結果)。這裡的結果是6個元素。每個元素都是list(證明:list)。</p>
+
+    </div>
+</div>
+
+
+<div class="notices">
+    <div class= info>
+        <ul>
+<li>❓如果要2個?<br />
+
+<ul>
+<li>📝 那就是<code>merged.list2&lt;-list(list1,list2)</code>。<br /></li>
+</ul></li>
+<li>❓ <code>merge.list&lt;-c(x,y)</code> 中的merge是不是物件的意思?<br />
+
+<ul>
+<li>👍  不是。只是個合法的變數。<br /></li>
+</ul></li>
+</ul>
+
+    </div>
+</div>
+
+
+<div class="notices">
+    <div class= info>
+        <p>❓ 寫一個函數,合併兩個list,但是要求兩個list中有同名的元素必須是第2個中的名稱。例如 list(a=1,b=2,c=3), list(b=4) 合併後變成 a=1,b=4,c=3。<br />
+📝</p>
+
+<pre><code class="language-r">merge_list = function(x, y) {
+  x[names(y)] = y
+  x
+}
+</code></pre>
+
+    </div>
+</div>
+
+
+<h3 id="list-轉-vector">List 轉 Vector</h3>
+
+<p>函數 <code>unlist()</code></p>
+
+<pre><code class="language-r"># Create lists.
+list1 &lt;- list(1:5) # <span class="codenote nopre">🏷<span class="tooltiptext" >不是產生5個NODEL的串列,而是先產生5個元素的向量,然後放到第一個節點 </span></span>
+print(list1)
+</code></pre>
+
+<pre><code>#&gt; [[1]]
+#&gt; [1] 1 2 3 4 5
+</code></pre>
+
+<pre><code class="language-r">list2 &lt;-list(10:14)
+print(list2)
+</code></pre>
+
+<pre><code>#&gt; [[1]]
+#&gt; [1] 10 11 12 13 14
+</code></pre>
+
+<pre><code class="language-r"># Convert the lists to vectors.
+v1 &lt;- unlist(list1)
+v2 &lt;- unlist(list2)
+
+print(v1)
+</code></pre>
+
+<pre><code>#&gt; [1] 1 2 3 4 5
+</code></pre>
+
+<pre><code class="language-r">print(v2)
+</code></pre>
+
+<pre><code>#&gt; [1] 10 11 12 13 14
+</code></pre>
+
+<pre><code class="language-r"># Now add the vectors
+result &lt;- v1+v2
+print(result)
+</code></pre>
+
+<pre><code>#&gt; [1] 11 13 15 17 19
+</code></pre>
+
+<div class="notices">
+    <div class= info>
+        <p>❓ 如果是list中的內容有不一樣的型態呢?例如</p>
+
+<pre><code class="language-r">x&lt;-list(&quot;a&quot;,1)
+y&lt;-unlist(x)
+typeof (y)
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;character&quot;
+</code></pre>
+
+    </div>
+</div>
+
+
+<h3 id="比較vector-list中-字串的問題">比較vector, list中,字串的問題</h3>
+
+<ol>
+<li><p>Q length()函數可以知道vector,list 的長度,但是為甚麼length(&quot;hello&quot;)的長度是1?</p>
+
+<pre><code class="language-r">a&lt;-c(&quot;hello&quot;,&quot;r&quot;)
+length(a) #💡
+</code></pre>
+
+<pre><code>#&gt; [1] 2
+</code></pre>
+
+<pre><code class="language-r">length(a[1]) #💡
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre>
+
+<pre><code class="language-r">length(a[[1]]) #💡
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre>
+
+<pre><code class="language-r">nchar(a[1]) #🔑
+</code></pre>
+
+<pre><code>#&gt; [1] 5
+</code></pre>
+
+<pre><code class="language-r">length(&quot;hello&quot;) #❓
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre></li>
+</ol>
+
+
+  <figure  class="figure text-center d-block border border-primary w-50">
+
+
+
+
+
+
+
+    <img src="4_1_3_type_list.files/%e5%ad%97%e4%b8%b2%e5%90%91%e9%87%8f.png" class="figure-img"
+         alt="圖" width="100%"/> <figcaption class="figure-caption">
+            圖
+        </figcaption>
+
+</figure>
+
+
+<ol>
+<li><p>Q</p>
+
+<pre><code class="language-r">a&lt;-list(&quot;hello&quot;,&quot;r&quot;)
+length(a)
+</code></pre>
+
+<pre><code>#&gt; [1] 2
+</code></pre>
+
+<pre><code class="language-r">length(a[1])
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre>
+
+<pre><code class="language-r">length(a[[1]])
+</code></pre>
+
+<pre><code>#&gt; [1] 1
+</code></pre>
+
+<pre><code class="language-r">typeof(&quot;xxx&quot;) #💡
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;character&quot;
+</code></pre>
+
+<pre><code class="language-r">typeof(1) #💡
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;double&quot;
+</code></pre>
+
+<pre><code class="language-r">typeof(1L) #💡
+</code></pre>
+
+<pre><code>#&gt; [1] &quot;integer&quot;
+</code></pre></li>
+</ol>
+
+<p>上面兩個答案的問題,和R怎樣建立字串有關<br />
+📝總之,字串長度函數🔑<code>nchar()</code>。</p>
+
+<h2 id="data-set-build-in">data set build in</h2>
+
+<h3 id="list-of-pre-loaded-data">List of pre-loaded data</h3>
+
+<pre><code class="language-r">data()
+</code></pre>
+
+<p>Loading a built-in R data</p>
+
+<pre><code class="language-r">data(mtcars) 
+</code></pre>
+
+<pre><code class="language-r">nrow(mtcars)
+</code></pre>
+
+<pre><code>#&gt; [1] 32
+</code></pre>
+
+<pre><code class="language-r">ncol(mtcars)
+</code></pre>
+
+<pre><code>#&gt; [1] 11
+</code></pre>
+
+<h2 id="練習-拿元素">練習 拿元素</h2>
+
+<p><code>[</code> 大概涵蓋了所有存取元素的方法<a href="https://stackoverflow.com/questions/7448881/how-to-access-single-elements-in-a-table-in-r">參考</a></p>
+
+<p>❓如果資料如下,</p>
+
+<pre><code class="language-r">&gt; data
+         V1     V2
+1      12.448 13.919
+2      22.242  4.606
+3      24.509  0.176
+</code></pre>
+
+<p>則下面指令分別拿到甚麼?</p>
+
+<pre><code class="language-r">data[1,1]
+data[1,&quot;V1&quot;]
+
+data$V1[1]
+
+data[[1]][1]
+data[[&quot;V1&quot;]][1]
+</code></pre>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=4.1.2_type練習>前</a>
+                   
+          
+            <a href="../rlang/4_4_1_json.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=4.4.1&#32;json>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1631762489"></script>
+  <script src="../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../js/hugohelper.js?1631762489"></script>
+
+  <link href="../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

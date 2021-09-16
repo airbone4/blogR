@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html><head>
+  <title>7.8 Function more</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>7.8 Function more</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    # Functions
+
+
+## Introduction
+
+
+簡單測試
+
+### Quiz 
+
+Answer the following questions to see if you can safely skip this chapter. You can find the answers in [function-answer](#function-answer).
+
+1.  What are the three components of a function?
+1.  What does the following code return?
+
+    
+    ```r
+    x <- 10
+    f1 <- function(x) {
+      function() {
+        x + 10
+      }
+    }
+    f1(1)()
+    ```
+1.  How would you usually write this code?
+    
+    ```r
+    `+`(1, `*`(2, 3))
+    ```
+1.  How could you make this call easier to read?
+    
+    ```r
+    mean(, TRUE, x = c(1:10, NA))
+    ```
+1.  Does the following code throw an error when executed? Why/why not?
+    
+    ```r
+    f2 <- function(a, b) {
+      a * 10
+    }
+    f2(10, stop("This is an error!"))
+    ```
+
+1. What is an infix function? How do you write it? What's a replacement function? How do you write it?
+
+1.  How do you ensure that cleanup action occurs regardless of how a function exits?
+
+### Outline 
+
+- Section [Function fundamentals](#function-fundamentals) describes the basics of creating a 
+function, the three main components of a function, and the exception to many function rules: primitive functions (which are implemented in C, not R).
+- Section [lexical scoping](#lexical-scoping) shows you how R finds the value associated with a given name, i.e. the rules of lexical scoping.
+- Section [lazy evaluation](#lazy-evaluation) is devoted to an important property of function arguments: they are only evaluated when used for the first time.
+- Section [existing a function](#exiting-a-function) discusses the two primary ways that a function can exit, and how to define an exit handler, code that is run on exit, regardless of what triggers it.
+- Section [function-forms](#function-forms) shows you the various ways in which R disguises ordinary function calls, and how you can use the standard prefix form to better understand what's going on.
+
+## Function fundamentals
+
+幾個重要觀念
+
+* 函數也是物件,就像是vectors 也是物件。
+* 由三個部份組成: arguments, body, and environment.
+
+但是規則都會被打破,例外大概都利用C寫成的 "primitive" base functions。
+
+### First-class functions {#first-class-functions}
+
+在R中,函數也是物件,這種特性也叫做 "first-class functions". 如下:
+
+
+```r
+f01 <- function(x) {
+  sin(1 / x ^ 2)
+}
+```
+
+<img src="diagrams/functions/first-class.png" width="194" style="display: block; margin: auto;" />
+
+匿名函數:
+
+
+```r
+lapply(mtcars, function(x) length(unique(x)))
+Filter(function(x) !is.numeric(x), mtcars)
+integrate(function(x) sin(x) ^ 2, 0, pi)
+```
+
+在list中,也可以放入函數:
+
+
+```r
+funs <- list(
+  half = function(x) x / 2,
+  double = function(x) x * 2
+)
+
+funs$double(10)
+```
+
+```
+#> [1] 20
+```
+
+在R語言中,函數有時叫做closure因為,R函數包含(enclose)它們的環境 environments.
+
+
+```r
+typeof(f01)
+```
+
+```
+#> [1] "closure"
+```
+
+### Function components
+
+1個函數有3個部分:
+
+* `formals()`, 參數
+* `body()`, {}內部.
+* `environment()`, 決定函數怎樣找出變數(names)的內容。.
+
+<img src="diagrams/functions/components.png" width="148" style="display: block; margin: auto;" />
+
+測試3部分
+
+```r
+f02 <- function(x) {
+  # A comment
+  x ^ 2
+}
+
+formals(f02)
+```
+
+```
+#> $x
+```
+
+```r
+body(f02)
+```
+
+```
+#> {
+#>     x^2
+#> }
+```
+
+```r
+environment(f02)
+```
+
+```
+#> <environment: R_GlobalEnv>
+```
+
+<div class="expand">
+    <div class="expand-label" onclick="vexpand(this)">
+        <i style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span>:?:</span>
+    </div><div class="expand-content incode" style="overflow-x:auto"> 函數的environment 都會存在,但是在整體環境中定義的函數,不會被顯示。
+上面的environment(f02)有顯示environment. why()?</div></div>
+
+👍就像所以其他R的物件,函數也有很多 `attributes()`. 其中一個 "srcref", 是 source reference的縮寫。 　 
+
+
+```r
+attr(f02, "srcref")
+```
+
+```
+#> function(x) {
+#>   # A comment
+#>   x ^ 2
+#> }
+```
+
+### Primitive functions
+
+３個組件的規則有例外，像是 Primitive functions, like `sum()` and `[`, 直接調用Ｃ語言。 
+
+
+```r
+sum
+```
+
+```
+#> function (..., na.rm = FALSE)  .Primitive("sum")
+```
+
+```r
+`[`
+```
+
+```
+#> .Primitive("[")
+```
+
+看一下type
+分別屬於 "builtin" or "special":
+
+
+```r
+typeof(sum)
+```
+
+```
+#> [1] "builtin"
+```
+
+```r
+typeof(`[`)
+```
+
+```
+#> [1] "special"
+```
+
+因此， `formals()`, `body()`, and `environment()` 都回傳 `NULL`:  
+
+
+```r
+formals(sum)
+```
+
+```
+#> NULL
+```
+
+```r
+body(sum)
+```
+
+```
+#> NULL
+```
+
+```r
+environment(sum)
+```
+
+```
+#> NULL
+```
+
+這些所謂的原始函數，只存在於基本套件(base packages) 。.
+
+### Exercises
+
+1.  It's possible (although typically not useful) to call an anonymous function.
+    Which of the two approaches below is correct? Why?
+
+    
+    ```r
+    function(x) 3()
+    ```
+    
+    ```
+    #> function(x) 3()
+    ```
+    
+    ```r
+    (function(x) 3)()
+    ```
+    
+    ```
+    #> [1] 3
+    ```
+
+1. A good rule of thumb is that an anonymous function should fit on one line and shouldn't need to use `{}`. 
+
+1.  This code makes a list of all functions in the base package. 
+    
+    
+    ```r
+    objs <- mget(ls("package:base"), inherits = TRUE)
+    funs <- Filter(is.function, objs)
+    ```
+
+    Use it to answer the following questions:
+
+    a. Which base function has the most arguments?
+    a. How many base functions have no arguments? What's special about those functions?
+    a. How could you adapt the code to find all primitive functions?
+
+1. What are the three important components of a function?
+1. When does printing a function not show the environment it was created in?
+
+## Lexical scoping 
+
+ 
+In [Names and values], we discussed assignment, the act of binding a name to a value. Here we'll discuss __scoping__, the act of finding the value associated with a name.
+
+下面的執行結果傳回10還是20?
+
+<div class="expand">
+    <div class="expand-label" onclick="vexpand(this)">
+        <i style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span>answer</span>
+    </div><div class="expand-content incode" style="overflow-x:auto"> `20`.</div></div>
+
+
+```r
+x <- 10
+g01 <- function() {
+  x <- 20
+  x
+}
+
+g01()
+```
+
+
+了解範圍規則,有助於函數的模組開發,甚至有助於將R翻譯到其他語言。
+
+ *lexical scoping*　[^dyn-scope]: it looks up the values of names based on how a function is defined, not how it is called. "Lexical" here is not the English adjective "relating to words or a vocabulary". It's a technical CS term that tells us that the scoping rules use a parse-time, rather than a run-time structure. 
+
+R的's lexical scoping 遵循4個主要規則::
+
+* Name masking
+* Functions vs. variables
+* A fresh start
+* Dynamic lookup
+
+[^dyn-scope]: Functions that automatically quote one or more arguments (sometimes called NSE functions) can override the default scoping rules to implement other varieties of scoping. You'll learn more about that in [metaprogramming](#meta).
+
+### Name masking
+
+內部範圍的宣告(第一次使用)覆蓋外部範圍的宣告。.
+
+
+```r
+x <- 10
+y <- 20
+g02 <- function() {
+  x <- 1
+  y <- 2
+  c(x, y)
+}
+g02()
+```
+
+```
+#> [1] 1 2
+```
+
+如果在內部宣告找不到,就找外一層，一直到global environment。
+
+
+```r
+x <- 2
+g03 <- function() {
+  y <- 1
+  c(x, y)
+}
+g03()
+```
+
+```
+#> [1] 2 1
+```
+
+上面的規則仍然適用於函數中的函數. 
+
+測試:下面的R程式會有甚麼結果 ? [^answer2]
+
+[^answer2]: `g04()` returns `c(1, 2, 3)`.
+
+
+```r
+x <- 1
+g04 <- function() {
+  y <- 2
+  i <- function() {
+    z <- 3
+    c(x, y, z)
+  }
+  i()
+}
+g04()
+```
+
+同樣也適用於建立函數的函數( __closures__).參考 [closures]; 這裡只是用來說明上述規則的使用。 `g05()`, 傳回函數,猜猜執行結果?[^answer3]
+
+[^answer3]: `g06()` returns `c(10, 2)`.
+
+
+
+```r
+x <- 10
+y <- 20
+
+g05 <- function() {
+  y <- 2
+  function() {
+    c(x, y)
+  }
+}
+g06 <- g05()
+g06()
+```
+
+This seems a little magical: how does R know what the value of `y` is after `j()` has returned? It works because `k` preserves the environment in which it was defined and because the environment includes the value of `y`. You'll learn more about how environments work in [Environments](#environments).
+
+### Functions vs. variables
+
+既然函數也只是普通的物件,那麼同樣的名稱尋找規則也適用於函數:這個例子中,g07在外部和內部皆有定義。
+
+
+```r
+g07 <- function(x) x + 1
+g08 <- function() {
+  g07 <- function(x) x + 100
+  g07(10)
+}
+g08()
+```
+
+```
+#> [1] 110
+```
+
+但是如果同一個名稱,在不同範圍有不一樣的型態呢?例如g9一個是變數,一個是函數:
+
+
+
+```r
+g09 <- function(x) x + 100
+g10 <- function() {
+  g09 <- 10
+  g09(g09)
+}
+g10()
+```
+
+```
+#> [1] 110
+```
+
+一般來講,上面的用法在語法上是沒問題,但是最好避免。
+
+### A fresh start {#fresh-start}
+
+第一次執行和第二次執行有甚麼不同?[^answer4] 
+
+函數 `exists(x)` :會尋找變數名稱x是否存在,存在則無回 `TRUE`,否則傳回 `FALSE`.)
+
+[^answer4]: `g11()` 每次被調用都是傳回 `1`。.
+
+
+```r
+g11 <- function() {
+  if (!exists("a")) {
+    a <- 1
+  } else {
+    a <- a + 1
+  }
+  a
+}
+
+g11()
+g11()
+```
+
+每次執行g11()的時候,一個新的environment會被建立,也就是這個函數的**局部空間**。 這個局部空間會在函數結束的時候消失。
+
+### Dynamic lookup
+
+但是如果函數執行的時候用倒在局部環境找不到的變數的時候,會目前的總體環境(也就是函數所在的環境)找變數值。
+
+
+```r
+g12 <- function() x + 1
+x <- 15
+g12()
+```
+
+```
+#> [1] 16
+```
+
+```r
+x <- 20
+g12()
+```
+
+```
+#> [1] 21
+```
+上面的總體環境包含了兩個變數,一個是函數`g12()`,一個是變數`x`:  
+- g12()
+- x
+
+如果要檢查函數的變數參考是不是有問題,可以使用工具 `codetools::findGlobals()`. This function lists all the external dependencies (unbound symbols) within a function: 
+
+
+```r
+codetools::findGlobals(g12)
+```
+
+```
+#> [1] "+" "x"
+```
+
+Another way to solve the problem would be to manually change the environment of the function to the `emptyenv()`, an environment which contains nothing:
+
+
+```r
+environment(g12) <- emptyenv()
+g12()
+```
+
+```
+#> Error in x + 1: 沒有這個函數 "+"
+```
+
+
+### Exercises
+
+1. What does the following code return? Why? Describe how each of the three
+   `c`'s is interpreted.
+
+    
+    ```r
+    c <- 10
+    c(c = c)
+    ```
+
+1. What are the four principles that govern how R looks for values?
+
+1. What does the following function return? Make a prediction before 
+   running the code yourself.
+
+    
+    ```r
+    f <- function(x) {
+      f <- function(x) {
+        f <- function() {
+          x ^ 2
+        }
+        f() + 1
+      }
+      f(x) * 2
+    }
+    f(10)
+    ```
+
+## Lazy evaluation {#lazy-evaluation}
+ 
+
+
+In R, function arguments are __lazily evaluated__: they're only evaluated if accessed. For example, this code doesn't generate an error because `x` is never used:
+
+
+```r
+h01 <- function(x) {
+  10
+}
+h01(stop("This is an error!"))
+```
+
+```
+#> [1] 10
+```
+
+This is an important feature because it allows you to do things like include potentially expensive computations in function arguments that will only be evaluated if needed.
+
+### Forcing evaluation
+
+
+To __compel__ the evaluation of an argument, use `force()`: 
+
+
+```r
+h02 <- function(x) {
+  force(x)
+  10
+}
+h02(stop("This is an error!"))
+```
+
+```
+#> Error in force(x): This is an error!
+```
+
+It is usually not necessary to force evaluation. It's needed primarily for certain functional programming techniques which we'll cover in detail in [function operators]. Here, I want to show you the basic issue.
+
+Take this small but surprisingly tricky function. It takes a single argument `x`, and returns a function that returns `x` when called.
+
+
+```r
+capture1 <- function(x) {
+  function() {
+    x
+  }
+}
+```
+
+There's a subtle issue with this function: the value of `x` will be captured not when you call `capture()`, but when you call the function that `capture()` returns:
+
+
+```r
+x <- 10
+h03 <- capture1(x)
+h04 <- capture1(x)
+
+h03()
+```
+
+```
+#> [1] 10
+```
+
+```r
+x <- 20
+h04()
+```
+
+```
+#> [1] 20
+```
+
+Even more confusingly this only happens once: the value is locked in after you have called `h03()`/`h04()` for the first time.
+
+
+```r
+x <- 30
+h03()
+```
+
+```
+#> [1] 10
+```
+
+```r
+h04()
+```
+
+```
+#> [1] 20
+```
+
+This behaviour is a consequence of lazy evaluation. The `x` argument is evaluated once `h03()`/`h04()` is called, and then its value is cached.  We can avoid the confusion by forcing `x`:
+
+
+```r
+capture2 <- function(x) {
+  force(x)
+  
+  function() {
+    x
+  }
+}
+
+x <- 10
+h05 <- capture2(x)
+
+x <- 20
+h05()
+```
+
+```
+#> [1] 10
+```
+
+### Promises (skip)
+
+
+Lazy evaluation is powered by a data structure called a __promise__, or (less commonly) a thunk. We'll come back to this data structure in [metaprogramming](#meta) because it's one of the features of R that makes it most interesting as a programming language.
+
+A promise has three components: 
+
+* The expression, like `x + y` which gives rise to the delayed computation.
+
+* The environment where the expression should be evaluated.
+
+* The value, which is computed and cached when the promise is first accessed
+  by evaluating the expression in the specified environment.
+
+The value cache ensures that accessing the promise multiple times always returns the same value. For example, you can see in the following code that `runif(1)` is only evaluated once:
+
+
+```r
+h06 <- function(x) { 
+  c(x, x, x)  
+}
+
+h06(runif(1))
+```
+
+```
+#> [1] 0.7572024 0.7572024 0.7572024
+```
+
+You can also create promises "by hand" using `delayedAssign()`:
+
+
+```r
+delayedAssign("x", {print("Executing code"); runif(1)})
+x
+```
+
+```
+#> [1] "Executing code"
+```
+
+```
+#> [1] 0.1372905
+```
+
+```r
+x
+```
+
+```
+#> [1] 0.1372905
+```
+
+You'll see this idea again in [advanced bindings].
+
+### Default arguments 
+
+
+
+```r
+h07 <- function(x = 1, y = x * 2) {
+
+  c(x, y)
+}
+
+h07()
+```
+
+```
+#> [1] 1 2
+```
+
+
+
+ 
+### Missing arguments
+
+判斷參數內容來自使用者或者預設的函數: `missing()`:
+
+
+```r
+h09 <- function(x = 10) {
+  list(missing(x), x)
+}
+str(h09()) # 預設
+```
+
+```
+#> List of 2
+#>  $ : logi TRUE
+#>  $ : num 10
+```
+
+```r
+str(h09(10)) # 使用者
+```
+
+```
+#> List of 2
+#>  $ : logi FALSE
+#>  $ : num 10
+```
+
+
+## Exiting a function
+
+Most functions exit in one of two ways[^function_exit]: either returning a value, indicating successful completion, or throwing an error, indicating failure. This section describes return values (implicit vs. explicit; visible vs. invisible), briefly discusses errors, and introduces exit handlers, which allow you to run code when a function exits, regardless of how it exits.
+
+[^function_exit]: 函數的脫離狀態可以是產生一個旗號,用來觸發既有的處理函數,可以是重新啟動,或是互動訊息向是按Q脫離。
+
+### Implicit vs. explict returns
+
+
+
+There are two ways that a function can return a value:
+
+*   Implicitly, where the last evaluated expression becomes the return 
+    value:
+
+    
+    ```r
+    j01 <- function(x) {
+      if (x < 10) {
+        0
+      } else {
+        10
+      }
+    }
+    f(5)
+    ```
+    
+    ```
+    #> [1] 52
+    ```
+    
+    ```r
+    f(15)
+    ```
+    
+    ```
+    #> [1] 452
+    ```
+
+*   Explicitly, by calling `return()`:
+
+    
+    ```r
+    j02 <- function(x) {
+      if (x < 10) {
+        return(0)
+      } else {
+        return(10)
+      }
+    }
+    ```
+    
+### Invisible values
+ 
+大部分函數再傳回值的時候都會顯示在主控台上:
+
+
+```r
+j03 <- function() 1
+j03()
+```
+
+```
+#> [1] 1
+```
+
+但是也可以不用顯示:利用函數 `invisible()`。 
+
+
+```r
+j04 <- function() invisible(1)
+j04()
+```
+
+這種不會顯示傳回值的函數,可以用下面的方法驗證:
+
+
+```r
+print(j04())
+```
+
+```
+#> [1] 1
+```
+
+```r
+(j04())
+```
+
+```
+#> [1] 1
+```
+
+或者利用函數 `withVisible():
+
+
+```r
+str(withVisible(j04()))
+```
+
+```
+#> List of 2
+#>  $ value  : num 1
+#>  $ visible: logi FALSE
+```
+
+
+最常用的方法是 `<-`: 
+
+
+```r
+a <- 2
+(a <- 2)
+```
+
+```
+#> [1] 2
+```
+
+也因此可以利用下面的串聯指派:
+
+
+```r
+a <- b <- c <- d <- 2
+```
+
+一般而言，像是 (like `<-`, `print()`, or `plot()`) 都是傳回不可見結果。
+
+### Errors
+
+函數可以利用函數 `stop()`結束一個函數的執行。
+
+
+```r
+j05 <- function() {
+  stop("I'm an error")
+  return(10)
+}
+j05()
+```
+
+```
+#> Error in j05(): I'm an error
+```
+
+
+### Exit handlers {#on-exit}
+
+
+
+Sometimes a function needs to make a temporary change to global state and you want to ensure those changes are restored when the function completes. It's painful to make sure you cleanup before any explicit return, and what happens if there's an error? Instead, you can set up an __exiting handler__ that is called when the function terminates, regardless of whether it returns a value or throws an error.
+
+To setup an exiting handler, call `on.exit()` with the code to be run. It will execute when the function exits, regardless of what causes it to exit:
+
+
+```r
+j06 <- function(x) {
+  cat("Hello\n")
+  on.exit(cat("Goodbye!\n"), add = TRUE)
+  
+  if (x) {
+    return(10)
+  } else {
+    stop("Error")
+  }
+}
+
+f(TRUE)
+```
+
+```
+#> [1] 4
+```
+
+```r
+f(FALSE)
+```
+
+```
+#> [1] 2
+```
+
+<div class="notices">
+    <div class= sidebar>
+        Always set <code>add = TRUE</code> when using <code>on.exit()</code>. If you don't, each call to <code>on.exit()</code> will overwrite the previous exiting handler. Even when only registering a single handler, it's good practice to  set <code>add = TRUE</code> so that you don't get an unpleasant surprise if you later add more exit handlers
+    </div>
+</div>
+
+
+`on.exit()` is important because it allows you to place clean-up actions next to actions with their cleanup operations. 
+
+
+```r
+cleanup <- function(dir, code) {
+  old_dir <- setwd(dir)
+  on.exit(setwd(old), add = TRUE)
+  
+  old_opt <- options(stringsAsFactors = FALSE)
+  on.exit(options(old_opt), add = TRUE)
+}
+```
+
+When coupled with lazy evaluation, this leads to a very useful pattern for running a block of code in an altered environment:
+
+
+```r
+with_dir <- function(dir, code) {
+  old <- setwd(dir)
+  on.exit(setwd(old), add = TRUE)
+
+  force(code)
+}
+
+getwd()
+```
+
+```
+#> [1] "C:/work/rmi_r/content/rlang"
+```
+
+```r
+with_dir("~", getwd())
+```
+
+```
+#> [1] "C:/Users/linchao/Documents"
+```
+
+See the [withr package](http://withr.r-lib.org) for a collection of functions of this nature.
+
+In R 3.4 and prior, `on.exit()` expressions are always run in the order in which they are created:
+
+
+```r
+f <- function() {
+  on.exit(message("a"), add = TRUE)
+  on.exit(message("b"), add = TRUE)
+}
+f()
+```
+
+```
+#> a
+```
+
+```
+#> b
+```
+
+This can make cleanup a little tricky if some actions need to happen in a specific order; typically you want the most recent added expression to be run first. In R 3.5 and later, you can control this by setting `after = FALSE`:
+
+
+```r
+f <- function() {
+  on.exit(message("a"), add = TRUE, after = FALSE)
+  on.exit(message("b"), add = TRUE, after = FALSE)
+}
+f()
+```
+
+```
+#> b
+```
+
+```
+#> a
+```
+
+### Exercises
+
+1.  What does `load()` return? Why don't you normally see these values?
+
+1.  What does `write.table()` return? What would be more useful?
+
+1.  How does the `chdir` parameter of `source()` compare to `in_dir()`? Why 
+    might you prefer one approach to the other?
+
+1.  Write a function that opens a graphics device, runs the supplied code, and 
+    closes the graphics device (always, regardless of whether or not the plotting 
+    code worked).
+
+1.  We can use `on.exit()` to implement a simple version of `capture.output()`.
+
+    
+    ```r
+    capture.output2 <- function(code) {
+      temp <- tempfile()
+      on.exit(file.remove(temp), add = TRUE, after = TRUE)
+    
+      sink(temp)
+      on.exit(sink(), add = TRUE, after = TRUE)
+    
+      force(code)
+      readLines(temp)
+    }
+    capture.output2(cat("a", "b", "c", sep = "\n"))
+    ```
+    
+    ```
+    #> Warning in file.remove(temp): 無法移除檔案 'C:
+    #> \Users\linchao\AppData\Local\Temp\Rtmpiq1UX6\file4c5c1dd421f9' ，原因是
+    #> 'Permission denied'
+    ```
+    
+    ```
+    #> [1] "a" "b" "c"
+    ```
+
+    Compare `capture.output()` to `capture.output2()`. How do the functions 
+    differ? What features have I removed to make the key ideas easier to see? 
+    How have I rewritten the key ideas to be easier to understand?
+
+## Function forms (skip)
+
+> "To understand computations in R, two slogans are helpful:
+>
+> * Everything that exists is an object.
+> * Everything that happens is a function call."
+>
+> --- John Chambers
+
+While everything that happens in R is a result of a function call, not all calls look the same. Function calls come in four varieties:
+
+* In __prefix__ form, the function name comes before its arguments, like `foofy(a, b, c)`. These constitute of the majority of function calls in R.
+
+* In __infix__ form, the function name comes inbetween its arguments, like `x + y`. Infix forms are used for many mathematical operators, as well as user-defined functions that begin and end with `%`.
+  
+* A __replacement__ function assigns into what looks like a prefix function, like `names(df) <- c("a", "b", "c")`.
+  
+* __Special forms__ like `[[`, `if`, and `for`, don't have a consistent structure and provide some of the most important syntax in R.
+
+While four forms exist, you only need to use one, because any call can be written in prefix form. I'll demonstrate this property, and then you'll learn about each of the forms in turn.
+
+### Rewriting to prefix form
+ 
+ 
+
+An interesting property of R is every infix, replacement, or special form can be rewritten in prefix form. Rewriting in prefix form is useful because it helps you better understand the structure of the language, and it gives you the real name of every function. Knowing the real name of non-prefix functions is useful because it allows you to modify them for fun and profit.
+
+The following example shows three pairs of equivalent calls, rewriting an infix form, replacement form, and a special form into prefix form.
+
+
+```r
+x + y
+`+`(x, y)
+
+names(df) <- c("x", "y", "z")
+`names<-`(df, c("x", "y", "z"))
+
+for(i in 1:10) print(i)
+`for`(i, 1:10, print(i))
+```
+
+Knowing the function name of a non-prefix function allows you to override its behaviour. For example, if you're ever feeling particularly evil, run the following code while a friend is away from their computer. It will introduce a fun bug: 10% of the time, 1 will be added to any numeric calculation inside of parentheses.
+
+
+```r
+`(` <- function(e1) {
+  if (is.numeric(e1) && runif(1) < 0.1) {
+    e1 + 1
+  } else {
+    e1
+  }
+}
+replicate(50, (1 + 2))
+```
+
+```
+#>  [1] 3 3 4 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 4 3 3 4 3 3 3 3 3 3 4 3 3 4 4
+#> [39] 3 3 3 3 3 3 3 3 3 3 3 3
+```
+
+```r
+rm("(")
+```
+
+Of course, overriding built-in functions like this is a bad idea, but, as you'll learn about in [metaprogramming], it's possible to apply it only to selected code blocks. This provides a clean and elegant approach to writing domain specific languages and translators to other languages.
+
+A more useful technique is to use this knowledge when using functional programming tools. For example, you could use `sapply()` to add 3 to every element of a list by first defining a function `add()`, like this: 
+
+
+```r
+add <- function(x, y) x + y
+sapply(1:10, add, 3)
+```
+
+```
+#>  [1]  4  5  6  7  8  9 10 11 12 13
+```
+
+But we can also get the same effect more simply by relying on the existing `+` function:
+
+
+```r
+sapply(1:5, `+`, 3)
+```
+
+```
+#> [1] 4 5 6 7 8
+```
+
+We'll explore this idea in detail in [functionals].
+
+### Prefix form 
+
+
+The prefix form 函數的類型通常指的是函數在前面,然後後面接參數,使用方式有三種:
+
+* By position, like `help(mean)`.
+* Using partial matching, like `help(to = mean)`.
+* By name, like `help(topic = mean)`.
+
+As illustrated by the following chunk, arguments are matched by exact name, then with unique prefixes, and finally by position.
+
+
+```r
+k01 <- function(abcdef, bcde1, bcde2) {
+  list(a = abcdef, b1 = bcde1, b2 = bcde2)
+}
+str(k01(1, 2, 3))
+```
+
+```
+#> List of 3
+#>  $ a : num 1
+#>  $ b1: num 2
+#>  $ b2: num 3
+```
+
+```r
+str(k01(2, 3, abcdef = 1))
+```
+
+```
+#> List of 3
+#>  $ a : num 1
+#>  $ b1: num 2
+#>  $ b2: num 3
+```
+
+```r
+# Can abbreviate long argument names:
+str(k01(2, 3, a = 1))
+```
+
+```
+#> List of 3
+#>  $ a : num 1
+#>  $ b1: num 2
+#>  $ b2: num 3
+```
+
+```r
+# But this doesn't work because abbreviation is ambiguous
+str(k01(1, 3, b = 1))
+```
+
+```
+#> Error in k01(1, 3, b = 1): 引數 3 有多個與之相對應的正式引數
+```
+
+Generally, only use positional matching for the first one or two arguments; they will be the most commonly used, and most readers will know what they are. Avoid using positional matching for less commonly used arguments, and never use partial matching. See the tidyverse style guide, <http://style.tidyverse.org/syntax.html#argument-names>, for more advice.
+
+### Infix functions
+ 
+R的內建 infix operators: `:`, `::`, `:::`, `$`, `@`, `^`, `*`, `/`, `+`, `-`, `>`, `>=`, `<`, `<=`, `==`, `!=`, `!`, `&`, `&&`, `|`, `||`, `~`, `<-`, and `<<-`. 
+
+建立infix函數,1)兩個參數,2)函數名稱兩邊有`%`, base R 也額外定義了 `%%`, `%*%`, `%/%`, `%in%`, `%o%`, and `%x%`.
+
+
+```r
+`%+%` <- function(a, b) paste0(a, b)
+"new " %+% "string"
+```
+
+```
+#> [1] "new string"
+```
+
+The names of infix functions are more flexible than regular R functions: they can contain any sequence of characters except "%". You will need to escape any special characters in the string used to define the function, but not when you call it:
+
+
+```r
+`% %` <- function(a, b) paste(a, b)
+`%/\\%` <- function(a, b) paste(a, b)
+
+"a" % % "b"
+```
+
+```
+#> [1] "a b"
+```
+
+```r
+"a" %/\% "b"
+```
+
+```
+#> [1] "a b"
+```
+
+R's default precedence rules mean that infix operators are composed from left to right:
+
+
+```r
+`%-%` <- function(a, b) paste0("(", a, " %-% ", b, ")")
+"a" %-% "b" %-% "c"
+```
+
+```
+#> [1] "((a %-% b) %-% c)"
+```
+
+兩個例外的INFIX函數可以只有一參數: `+` and `-`. 
+
+```r
+-1
+```
+
+```
+#> [1] -1
+```
+
+```r
++10
+```
+
+```
+#> [1] 10
+```
+
+### Replacement functions 
+
+Replacement functions 的函數名稱必須是類似 `xxx<-`. 必須要有兩個參數 `x` 和 `value`, 且必須回傳更改過的物件。例如下面的例子,允選我們更改向量的第二個元素:  : 
+
+
+```r
+`second<-` <- function(x, value) {
+  x[2] <- value
+  x
+}
+```
+
+使用方法:利用 `<-` 的LHS: 
+
+
+```r
+x <- 1:10
+second(x) <- 5L
+x
+```
+
+```
+#>  [1]  1  5  3  4  5  6  7  8  9 10
+```
+
+I say they "act" like they modify their arguments in place, because, as discussed in [Modify-in-place], they actually create a modified copy. We can see that by using `tracemem()`:
+
+
+```r
+x <- 1:10
+tracemem(x)
+#> <0x7ffae71bd880>
+
+second(x) <- 6L
+#> tracemem[0x7ffae71bd880 -> 0x7ffae61b5480]: 
+#> tracemem[0x7ffae61b5480 -> 0x7ffae73f0408]: second<- 
+```
+
+If you want to supply additional arguments, they go inbetween `x` and `value`:
+
+
+```r
+`modify<-` <- function(x, position, value) {
+  x[position] <- value
+  x
+}
+modify(x, 1) <- 10
+x
+```
+
+```
+#>  [1] 10  5  3  4  5  6  7  8  9 10
+```
+
+When you write `modify(x, 1) <- 10`, behind the scenes R turns it into:
+
+
+```r
+x <- `modify<-`(x, 1, 10)
+```
+
+Combining replacement with other functions requires more complex translation. For example, this:
+
+
+```r
+x <- c(a = 1, b = 2, c = 3)
+names(x)
+```
+
+```
+#> [1] "a" "b" "c"
+```
+
+```r
+names(x)[2] <- "two"
+names(x)
+```
+
+```
+#> [1] "a"   "two" "c"
+```
+
+Is translated into:
+
+
+```r
+`*tmp*` <- x
+x <- `names<-`(`*tmp*`, `[<-`(names(`*tmp*`), 2, "two"))
+rm(`*tmp*`)
+```
+
+(Yes, it really does create a local variable named *tmp*, which is removed afterwards.)
+
+### Special forms
+
+Finally, there are a bunch of language features that are usually written in special ways, but also have prefix forms. These include parentheses:
+
+* `(x)` (`` `(`(x) ``)
+* `{x}` (`` `{`(x) ``).
+
+The subsetting operators:
+
+* `x[i]` (`` `[`(x, i) ``) 
+* `x[[i]]` (`` `[[`(x, i) ``)
+
+And the tools of control flow:
+
+* `if (cond) true` (`` `if`(cond, true) ``)
+* `if (cond) true else false` (`` `if`(cond, true, false) ``)
+* `for(var in seq) action` (`` `for`(var, seq, action) ``)
+* `while(cond) action` (`` `while`(cond, action)  ``)
+* `repeat expr` (`` `repeat`(expr) ``)
+* `next` (`` `next`() ``)
+* `break` (`` `break`() ``)
+
+Finally, the most complex is the "function" function:
+
+* `function(arg1, arg2) {body}` (`` `function`(alist(arg1, arg2), body, env)``)
+
+Knowing the name of the function that underlies the special form is useful for getting documentation. `?(` is a syntax error; `` ?`(` `` will give you the documentation for parentheses.
+
+Note that all special forms are implemented as primitive functions (i.e. in C); that means printing these functions is not informative:
+
+
+```r
+`for`
+```
+
+```
+#> .Primitive("for")
+```
+
+## Invoking a function
+
+[另一個do.call()的參考](https://www.cnblogs.com/Demo1589/p/6984537.html)
+
+Suppose you had a list of function arguments: 
+
+
+```r
+args <- list(1:10, na.rm = TRUE)
+```
+
+How could you then send that list to `mean()`?  In base R, you need `do.call()`:
+
+
+```r
+do.call(mean, args)
+```
+
+```
+#> [1] 5.5
+```
+
+```r
+# Equivalent to
+mean(1:10, na.rm = TRUE)
+```
+
+```
+#> [1] 5.5
+```
+
+### Exercises
+
+1. Rewrite the following code snippets into prefix form:
+
+    
+    ```r
+    1 + 2 + 3
+    
+    1 + (2 + 3)
+    
+    if (length(x) <= 5) x[[5]] else x[[n]]
+    ```
+
+1.  Clarify the following list of odd function calls:
+
+    
+    ```r
+    x <- sample(replace = TRUE, 20, x = c(1:10, NA))
+    y <- runif(min = 0, max = 1, 20)
+    cor(m = "k", y = y, u = "p", x = x)
+    ```
+
+<div class="notices">
+    <div class= tips>
+        相關係數<br />
+cor(x, y = NULL, use = &quot;everything&quot;,<br />
+    method = c(&quot;pearson&quot;, &quot;kendall&quot;, &quot;spearman&quot;))<br />
+if method is &quot;kendall&quot; or &quot;spearman&quot;, Kendall's tau or Spearman's rho statistic is used to estimate a rank-based measure of association
+    </div>
+</div>
+    
+
+1. Explain why the following code fails:
+
+    
+    ```r
+    modify(get("x"), 1) <- 10
+    #> Error: target of assignment expands to non-language object
+    ```
+
+1. Create a replacement function that modifies a random location in a vector.
+
+1. Write your own version of `+` that will paste its inputs together if
+   they are character vectors but behaves as usual otherwise. In other words,
+   make this code work:
+   
+    
+    ```r
+    1 + 2
+    #> [1] 3
+    
+    "a" + "b"
+    #> [1] "ab"
+    ```
+
+1. Create a list of all the replacement functions found in the base package. 
+   Which ones are primitive functions? (Hint use `apropros()`)
+
+1. What are valid names for user-created infix functions?
+
+1. Create an infix `xor()` operator.
+
+1. Create infix versions of the set functions `intersect()`, `union()`, and
+   `setdiff()`. You might call them `%n%`, `%u%`, and `%/%` to match 
+   conventions from mathematics.
+
+
+## Quiz answers {#function-answers}
+
+1.  The three components of a function are its body, arguments, and environment.
+
+1.  `f1(1)()` returns 11.
+
+1.  You'd normally write it in infix style: `1 + (2 * 3)`.
+
+1.  Rewriting the call to `mean(c(1:10, NA), na.rm = TRUE)` is easier to
+    understand.
+    
+1.  No, it does not throw an error because the second argument is never used 
+    so it's never evaluated.
+
+1.  See [infix](#infix-functions) and 
+    [replacement functions](#replacement-functions).
+
+1.  You use `on.exit()`; see [on exit](#on-exit) for details.
+
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/7_1_apply_family.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=7.1&#32;function&#32;-&#32;apply&#32;family>前</a>
+                   
+          
+            <a href="../rlang/8_00_rpackages.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=8.&#32;R&#32;Package>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1631762489"></script>
+  <script src="../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../js/hugohelper.js?1631762489"></script>
+
+  <link href="../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

@@ -1,1614 +1,711 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
-  <head>
+<html><head>
+  <title>引用</title>  
+      
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.79.1" />
-    <meta name="description" content="暫時">
-
-
-    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon" />
-<link rel="icon" href="../../images/favicon.png" type="image/x-icon" />
-
-    <title>引用 - R in Class</title>
-
-    
-    <link href="../../css/nucleus.css?1609996082" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1609996082" rel="stylesheet">
-    <link href="../../css/hybrid.css?1609996082" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1609996082" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1609996082" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1609996082" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1609996082" rel="stylesheet">
-    <link href="../../css/theme.css?1609996082" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1609996082" rel="stylesheet">
-    
-    <link href="../../extra_theme/css/mystyle.css?1609996082" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1609996082" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1609996082" rel="stylesheet">
-
-    <script src="../../js/jquery-3.3.1.min.js?1609996082"></script>
-
-    <style>
-      :root #header + #content > #left > #rlblock_left{
-          display:none !important;
-      }
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../../images/favicon.ico'/>
       
-        :not(pre) > code + span.copy-to-clipboard {
-            display: none;
-        }
-      
-    </style>
+    <script src="../../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
-  </head>
-  <body class="" data-url="../../rlang/demo/citation.html">
-
-    <nav id="sidebar" class="">
-
-
-
-  <div id="header-wrapper">
-    <div id="header">
-      <a id="logo" href="https://airbon5.github.io/xx/">
-  <img src=../../extra_theme/images/rmi.png>
-</a>
-
-    </div>
+    <script src='../../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-        <div class="searchbox">
-    <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="Search...">
-    <span data-search-clear=""><i class="fas fa-times"></i></span>
-</div>
-
-<script type="text/javascript" src="../../js/lunr.min.js?1609996082"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1609996082"></script>
-<script type="text/javascript">
+    <link href="../../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../../css/syntax.css?1631762489" rel="stylesheet">
     
-        var baseurl = "\/";
+    <link href="../../css/theme-mine.css?1631762489" rel="stylesheet">
     
-</script>
-<script type="text/javascript" src="../../js/search.js?1609996082"></script>
-
-    
-  </div>
-  
-    <section id="homelinks">
-      <ul>
-        <li>
-            <a class="padding" href='../../'><i class='fas fa-home'></i> Home</a>
-        </li>
-      </ul>
-    </section>
-  
-
-    <div class="highlightable">
-    <ul class="topics">
-
-        
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang.html" title="R language" class="dd-item
-        parent
-        
-        
-        ">
-      <a href="../../rlang.html">
-          R language
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/requirement.html" title="Requirement" class="dd-item ">
-        <a href="../../rlang/requirement.html">
-        Requirement
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/data_explorer_1.html" title="data explorer 1" class="dd-item ">
-        <a href="../../rlang/data_explorer_1.html">
-        data explorer 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/data_explorer_2.html" title="data explorer 2" class="dd-item ">
-        <a href="../../rlang/data_explorer_2.html">
-        data explorer 2
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/quickview1.html" title="Quick view 1" class="dd-item ">
-        <a href="../../rlang/quickview1.html">
-        Quick view 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/regular_expression.html" title="Regular expression syntax" class="dd-item ">
-        <a href="../../rlang/regular_expression.html">
-        Regular expression syntax
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_basic.html" title="type basic" class="dd-item ">
-        <a href="../../rlang/type_basic.html">
-        type basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_list.html" title="type list" class="dd-item ">
-        <a href="../../rlang/type_list.html">
-        type list
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_matrix.html" title="type matrix" class="dd-item ">
-        <a href="../../rlang/type_matrix.html">
-        type matrix
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_more.html" title="type more" class="dd-item ">
-        <a href="../../rlang/type_more.html">
-        type more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_post.html" title="type post" class="dd-item ">
-        <a href="../../rlang/type_post.html">
-        type post
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_string_function.html" title="type string" class="dd-item ">
-        <a href="../../rlang/type_string_function.html">
-        type string
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_vector.html" title="type vector" class="dd-item ">
-        <a href="../../rlang/type_vector.html">
-        type vector
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/filesystem.html" title="File System" class="dd-item ">
-        <a href="../../rlang/filesystem.html">
-        File System
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/programming_1.html" title="Programming 1" class="dd-item ">
-        <a href="../../rlang/programming_1.html">
-        Programming 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/apply_family.html" title="function - apply family" class="dd-item ">
-        <a href="../../rlang/apply_family.html">
-        function - apply family
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/function_1.html" title="Function basic" class="dd-item ">
-        <a href="../../rlang/function_1.html">
-        Function basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/rpackages.html" title="R Package" class="dd-item ">
-        <a href="../../rlang/rpackages.html">
-        R Package
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/plot01.html" title="Plot 01" class="dd-item ">
-        <a href="../../rlang/plot01.html">
-        Plot 01
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/plot02.html" title="Plot more" class="dd-item ">
-        <a href="../../rlang/plot02.html">
-        Plot more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/environments.html" title="Environment" class="dd-item ">
-        <a href="../../rlang/environments.html">
-        Environment
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/sampling.html" title="sampling" class="dd-item ">
-        <a href="../../rlang/sampling.html">
-        sampling
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/eco_01_intro.html" title="Econometrics" class="dd-item ">
-        <a href="../../rlang/eco_01_intro.html">
-        Econometrics
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/sim_1.html" title="simulation 1" class="dd-item ">
-        <a href="../../rlang/sim_1.html">
-        simulation 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/hw.html" title="練習用" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../rlang/hw.html">
-          練習用
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/dataset_class.html" title="資料集" class="dd-item ">
-        <a href="../../rlang/hw/dataset_class.html">
-        資料集
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_filesystem.html" title="檔案系統" class="dd-item ">
-        <a href="../../rlang/hw/hw_filesystem.html">
-        檔案系統
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_basic.html" title="assignment-1" class="dd-item ">
-        <a href="../../rlang/hw/hw_basic.html">
-        assignment-1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_regexp.html" title="regexpr" class="dd-item ">
-        <a href="../../rlang/hw/hw_regexp.html">
-        regexpr
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../rlang/resources.html">
-          練習相關檔案
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/demo.html" title="暫時" class="dd-item
-        parent
-        
-        
-        ">
-      <a href="../../rlang/demo.html">
-          暫時
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/citation.html" title="引用" class="dd-item active">
-        <a href="../../rlang/demo/citation.html">
-        引用
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/ch6.html" title="Chapter 6" class="dd-item ">
-        <a href="../../rlang/demo/ch6.html">
-        Chapter 6
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/ch7.html" title="Chapter 7" class="dd-item ">
-        <a href="../../rlang/demo/ch7.html">
-        Chapter 7
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic.html" title="Topics" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../topic.html">
-          Topics
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_basic.html" title="Rmd basic" class="dd-item ">
-        <a href="../../topic/rmd/rmd_basic.html">
-        Rmd basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_hook.html" title="Rmd hook" class="dd-item ">
-        <a href="../../topic/rmd/rmd_hook.html">
-        Rmd hook
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_pdf.html" title="Rmd pdf" class="dd-item ">
-        <a href="../../topic/rmd/rmd_pdf.html">
-        Rmd pdf
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_topic_1.html" title="rmd topic 1" class="dd-item ">
-        <a href="../../topic/rmd/rmd_topic_1.html">
-        rmd topic 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/git-book-note.html" title="git book note" class="dd-item ">
-        <a href="../../topic/rmd/git-book-note.html">
-        git book note
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/interesting.html" title="interesting" class="dd-item ">
-        <a href="../../topic/interesting.html">
-        interesting
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic/experiment.html" title="實驗" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../topic/experiment.html">
-          實驗
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/experiment/central.html" title="中央" class="dd-item ">
-        <a href="../../topic/experiment/central.html">
-        中央
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic/test.html" title="網頁測試" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../topic/test.html">
-          網頁測試
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/test/emo_test.html" title="emoji_test" class="dd-item ">
-        <a href="../../topic/test/emo_test.html">
-        emoji_test
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/test/testpage.html" title="testpage" class="dd-item ">
-        <a href="../../topic/test/testpage.html">
-        testpage
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-          
-        
-    </ul>
-
+    <link href="../../css/theme.css?1631762489" rel="stylesheet">
     
     
+    <link rel="stylesheet" href="../../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
 
     
-    <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
-
-    </section>
-  </div>
-</nav>
-
-
-
-
-
-        <section id="body">
-        <div id="overlay"></div>
-        <div class="padding highlightable">
-              
-              <div>
-                <div id="top-bar">
-                
-                
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fas fa-bars"></i>
-                        </a>
-                    </span>
-                  
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
-                  <span class="links">
-                 
-                 
-                    
-          
-          
-            
-            
-          
-          
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='../../'>class log</a> > <a href='../../rlang.html'>R language</a> > <a href='../../rlang/demo.html'>暫時</a> > 引用
-          
-        
-          
-        
-          
-        
-          
-        
-                 
-                  </span>
-                </div>
-                
-                    <div class="progress">
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
     <div class="wrapper">
-<nav id="TableOfContents">
+        <nav id="TableOfContents">
 <ul>
 <li>
 <ul>
 <li><a href="#introduction">introduction</a></li>
+<li><a href="#initial">initial</a>
+<ul>
+<li><a href="#最簡單的報告產生函數">最簡單的報告產生函數</a></li>
+<li><a href="#參數為模型類別的plot">參數為模型類別的plot()</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
     </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>引用</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
 </div>
 
-                
-              </div>
-            </div>
-            
-        <div id="head-tags">
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
         
-        </div>
-        
-        <div id="body-inner">
           
-            <h1>
-              
-              引用
-
-            </h1>
-			
           
 
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse show" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
         
+          
+          
+
+ 
 
 
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
 
+  <a class="nav-link" 
+    href="../../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    
 
 <h2 id="introduction">introduction</h2>
 
 <p>Goal: Estimate the effect of the price per citation on the number of library subscriptions</p>
 
+<div class="nopre attachments ">
+     <label>
+       <i class="fas fa-paperclip" aria-hidden="true"></i>Journals.csv</label>
+      
+       <ol class="attachments-files"><li>
+                      <a id="f_0a6a004dccc39cd502246d648eb99b09" href="../../rlang/resources/Journals.csv" class="toa-item" >Journals.csv</a>
+                  </li></ol>
+   </div>
 
-<section class="attachments ">
-	<label>
-		<i class="fas fa-paperclip" aria-hidden="true"></i>
-		Journals.csv
-	</label>
-	
-	
-	  
-	
-	<div class="attachments-files">
-	
-		
-		
-			
-				<li>
-					<a href="../../rlang/resources/Journals.csv" >
-						Journals.csv
-					</a>
-					(17 ko)
-				</li>
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-		
-		
-			
-		
-	
-	</div>
-	<h2 id="initial">initial</h2>
+<h2 id="initial">initial</h2>
 
-<p>options(prompt = &ldquo;R&gt; &ldquo;, continue = &ldquo;+  &ldquo;, width = 64,<br />
+<p>options(prompt = &quot;R&gt; &quot;, continue = &quot;+  &quot;, width = 64,<br />
   digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE)<br />
-library(&ldquo;AER&rdquo;)<br />
+library(&quot;AER&quot;)<br />
 set.seed(1071)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(<span style="color:#e6db74">&#34;AER&#34;</span>)
-<span style="color:#75715e">#&gt; Warning: package &#39;AER&#39; was built under R version 4.0.3</span>
-<span style="color:#75715e">#&gt; Loading required package: car</span>
-<span style="color:#75715e">#&gt; Warning: package &#39;car&#39; was built under R version 4.0.3</span>
-<span style="color:#75715e">#&gt; Loading required package: carData</span>
-<span style="color:#75715e">#&gt; Warning: package &#39;carData&#39; was built under R version 4.0.3</span>
-<span style="color:#75715e">#&gt; Loading required package: lmtest</span>
-<span style="color:#75715e">#&gt; Warning: package &#39;lmtest&#39; was built under R version 4.0.3</span>
-<span style="color:#75715e">#&gt; Loading required package: zoo</span>
-<span style="color:#75715e">#&gt; Warning: package &#39;zoo&#39; was built under R version 4.0.3</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Attaching package: &#39;zoo&#39;</span>
-<span style="color:#75715e">#&gt; The following objects are masked from &#39;package:base&#39;:</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt;     as.Date, as.Date.numeric</span>
-<span style="color:#75715e">#&gt; Loading required package: sandwich</span>
-<span style="color:#75715e">#&gt; Warning: package &#39;sandwich&#39; was built under R version 4.0.3</span>
-<span style="color:#75715e">#&gt; Loading required package: survival</span>
-<span style="color:#75715e">#&gt; Warning: package &#39;survival&#39; was built under R version 4.0.3</span>
-<span style="color:#a6e22e">data</span>(<span style="color:#e6db74">&#34;Journals&#34;</span>, package <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;AER&#34;</span>)
-<span style="color:#75715e">#View(Journals)</span>
-journals <span style="color:#f92672">&lt;-</span> Journals[, <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;subs&#34;</span>, <span style="color:#e6db74">&#34;price&#34;</span>)]
-journals<span style="color:#f92672">$</span>citeprice <span style="color:#f92672">&lt;-</span> Journals<span style="color:#f92672">$</span>price<span style="color:#f92672">/</span>Journals<span style="color:#f92672">$</span>citations
-<span style="color:#a6e22e">summary</span>(journals)
-<span style="color:#75715e">#&gt;       subs            price          citeprice        </span>
-<span style="color:#75715e">#&gt;  Min.   :   2.0   Min.   :  20.0   Min.   : 0.005223  </span>
-<span style="color:#75715e">#&gt;  1st Qu.:  52.0   1st Qu.: 134.5   1st Qu.: 0.464495  </span>
-<span style="color:#75715e">#&gt;  Median : 122.5   Median : 282.0   Median : 1.320513  </span>
-<span style="color:#75715e">#&gt;  Mean   : 196.9   Mean   : 417.7   Mean   : 2.548455  </span>
-<span style="color:#75715e">#&gt;  3rd Qu.: 268.2   3rd Qu.: 540.8   3rd Qu.: 3.440171  </span>
-<span style="color:#75715e">#&gt;  Max.   :1098.0   Max.   :2120.0   Max.   :24.459459</span></code></pre></div>
+
+<pre><code class="language-r">library(&quot;AER&quot;)
+#&gt; Warning: package 'AER' was built under R version 4.0.3
+#&gt; Loading required package: car
+#&gt; Warning: package 'car' was built under R version 4.0.3
+#&gt; Loading required package: carData
+#&gt; Warning: package 'carData' was built under R version 4.0.3
+#&gt; Loading required package: lmtest
+#&gt; Warning: package 'lmtest' was built under R version 4.0.3
+#&gt; Loading required package: zoo
+#&gt; Warning: package 'zoo' was built under R version 4.0.3
+#&gt; 
+#&gt; Attaching package: 'zoo'
+#&gt; The following objects are masked from 'package:base':
+#&gt; 
+#&gt;     as.Date, as.Date.numeric
+#&gt; Loading required package: sandwich
+#&gt; Warning: package 'sandwich' was built under R version 4.0.3
+#&gt; Loading required package: survival
+#&gt; Warning: package 'survival' was built under R version 4.0.3
+data(&quot;Journals&quot;, package = &quot;AER&quot;)
+#View(Journals)
+journals &lt;- Journals[, c(&quot;subs&quot;, &quot;price&quot;)]
+journals$citeprice &lt;- Journals$price/Journals$citations
+summary(journals)
+#&gt;       subs            price          citeprice        
+#&gt;  Min.   :   2.0   Min.   :  20.0   Min.   : 0.005223  
+#&gt;  1st Qu.:  52.0   1st Qu.: 134.5   1st Qu.: 0.464495  
+#&gt;  Median : 122.5   Median : 282.0   Median : 1.320513  
+#&gt;  Mean   : 196.9   Mean   : 417.7   Mean   : 2.548455  
+#&gt;  3rd Qu.: 268.2   3rd Qu.: 540.8   3rd Qu.: 3.440171  
+#&gt;  Max.   :1098.0   Max.   :2120.0   Max.   :24.459459
+</code></pre>
+
 <p>❓ 練習:<br />
 改成datatable</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">log</span>(subs) <span style="color:#f92672">~</span> <span style="color:#a6e22e">log</span>(citeprice), data <span style="color:#f92672">=</span> journals)
-jour_lm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(<span style="color:#a6e22e">log</span>(subs) <span style="color:#f92672">~</span> <span style="color:#a6e22e">log</span>(citeprice), data <span style="color:#f92672">=</span> journals)
-<span style="color:#a6e22e">abline</span>(jour_lm)</code></pre></div>
+
+<pre><code class="language-r">plot(log(subs) ~ log(citeprice), data = journals)
+jour_lm &lt;- lm(log(subs) ~ log(citeprice), data = journals)
+abline(jour_lm)
+</code></pre>
+
 <p><img src="../../post/citation_files/figure-html/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2" /></p>
 
 <p>❓ what is jour_lm ?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">class</span>(jour_lm)
-<span style="color:#75715e">#&gt; [1] &#34;lm&#34;</span>
-<span style="color:#a6e22e">names</span>(jour_lm)
-<span style="color:#75715e">#&gt;  [1] &#34;coefficients&#34;  &#34;residuals&#34;     &#34;effects&#34;       &#34;rank&#34;         </span>
-<span style="color:#75715e">#&gt;  [5] &#34;fitted.values&#34; &#34;assign&#34;        &#34;qr&#34;            &#34;df.residual&#34;  </span>
-<span style="color:#75715e">#&gt;  [9] &#34;xlevels&#34;       &#34;call&#34;          &#34;terms&#34;         &#34;model&#34;</span>
-<span style="color:#a6e22e">str</span>(jour_lm) <span style="color:#75715e">#&lt;div class=&#34;tooltip&#34;&gt;📝&lt;span class=&#34;tooltiptext&#34; style=&#34;background: rgb(255 255 255 / 37%); margin: 0;   padding: 0;border:solid orange;&#34;&gt; 注意`list of 12` &lt;/span&gt;&lt;/div&gt;</span>
-<span style="color:#75715e">#&gt; List of 12</span>
-<span style="color:#75715e">#&gt;  $ coefficients : Named num [1:2] 4.766 -0.533</span>
-<span style="color:#75715e">#&gt;   ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;(Intercept)&#34; &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;  $ residuals    : Named num [1:180] -1.185 -0.739 -0.332 -2.725 1.136 ...</span>
-<span style="color:#75715e">#&gt;   ..- attr(*, &#34;names&#34;)= chr [1:180] &#34;APEL&#34; &#34;SAJoEH&#34; &#34;CE&#34; &#34;MEPiTE&#34; ...</span>
-<span style="color:#75715e">#&gt;  $ effects      : Named num [1:180] -63.599 -11.222 -0.338 -2.715 1.146 ...</span>
-<span style="color:#75715e">#&gt;   ..- attr(*, &#34;names&#34;)= chr [1:180] &#34;(Intercept)&#34; &#34;log(citeprice)&#34; &#34;&#34; &#34;&#34; ...</span>
-<span style="color:#75715e">#&gt;  $ rank         : int 2</span>
-<span style="color:#75715e">#&gt;  $ fitted.values: Named num [1:180] 3.82 4.82 3.17 3.42 3.43 ...</span>
-<span style="color:#75715e">#&gt;   ..- attr(*, &#34;names&#34;)= chr [1:180] &#34;APEL&#34; &#34;SAJoEH&#34; &#34;CE&#34; &#34;MEPiTE&#34; ...</span>
-<span style="color:#75715e">#&gt;  $ assign       : int [1:2] 0 1</span>
-<span style="color:#75715e">#&gt;  $ qr           :List of 5</span>
-<span style="color:#75715e">#&gt;   ..$ qr   : num [1:180, 1:2] -13.4164 0.0745 0.0745 0.0745 0.0745 ...</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;dimnames&#34;)=List of 2</span>
-<span style="color:#75715e">#&gt;   .. .. ..$ : chr [1:180] &#34;APEL&#34; &#34;SAJoEH&#34; &#34;CE&#34; &#34;MEPiTE&#34; ...</span>
-<span style="color:#75715e">#&gt;   .. .. ..$ : chr [1:2] &#34;(Intercept)&#34; &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;assign&#34;)= int [1:2] 0 1</span>
-<span style="color:#75715e">#&gt;   ..$ qraux: num [1:2] 1.07 1.01</span>
-<span style="color:#75715e">#&gt;   ..$ pivot: int [1:2] 1 2</span>
-<span style="color:#75715e">#&gt;   ..$ tol  : num 1e-07</span>
-<span style="color:#75715e">#&gt;   ..$ rank : int 2</span>
-<span style="color:#75715e">#&gt;   ..- attr(*, &#34;class&#34;)= chr &#34;qr&#34;</span>
-<span style="color:#75715e">#&gt;  $ df.residual  : int 178</span>
-<span style="color:#75715e">#&gt;  $ xlevels      : Named list()</span>
-<span style="color:#75715e">#&gt;  $ call         : language lm(formula = log(subs) ~ log(citeprice), data = journals)</span>
-<span style="color:#75715e">#&gt;  $ terms        :Classes &#39;terms&#39;, &#39;formula&#39;  language log(subs) ~ log(citeprice)</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;variables&#34;)= language list(log(subs), log(citeprice))</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;factors&#34;)= int [1:2, 1] 0 1</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2</span>
-<span style="color:#75715e">#&gt;   .. .. .. ..$ : chr [1:2] &#34;log(subs)&#34; &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;   .. .. .. ..$ : chr &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;term.labels&#34;)= chr &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;order&#34;)= int 1</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;intercept&#34;)= int 1</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;response&#34;)= int 1</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;.Environment&#34;)=&lt;environment: R_GlobalEnv&gt; </span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;predvars&#34;)= language list(log(subs), log(citeprice))</span>
-<span style="color:#75715e">#&gt;   .. ..- attr(*, &#34;dataClasses&#34;)= Named chr [1:2] &#34;numeric&#34; &#34;numeric&#34;</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;log(subs)&#34; &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;  $ model        :&#39;data.frame&#39;:	180 obs. of  2 variables:</span>
-<span style="color:#75715e">#&gt;   ..$ log(subs)     : num [1:180] 2.639 4.078 2.833 0.693 4.564 ...</span>
-<span style="color:#75715e">#&gt;   ..$ log(citeprice): num [1:180] 1.7677 -0.0953 3.0025 2.5294 2.5089 ...</span>
-<span style="color:#75715e">#&gt;   ..- attr(*, &#34;terms&#34;)=Classes &#39;terms&#39;, &#39;formula&#39;  language log(subs) ~ log(citeprice)</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;variables&#34;)= language list(log(subs), log(citeprice))</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;factors&#34;)= int [1:2, 1] 0 1</span>
-<span style="color:#75715e">#&gt;   .. .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2</span>
-<span style="color:#75715e">#&gt;   .. .. .. .. ..$ : chr [1:2] &#34;log(subs)&#34; &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;   .. .. .. .. ..$ : chr &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;term.labels&#34;)= chr &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;order&#34;)= int 1</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;intercept&#34;)= int 1</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;response&#34;)= int 1</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;.Environment&#34;)=&lt;environment: R_GlobalEnv&gt; </span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;predvars&#34;)= language list(log(subs), log(citeprice))</span>
-<span style="color:#75715e">#&gt;   .. .. ..- attr(*, &#34;dataClasses&#34;)= Named chr [1:2] &#34;numeric&#34; &#34;numeric&#34;</span>
-<span style="color:#75715e">#&gt;   .. .. .. ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;log(subs)&#34; &#34;log(citeprice)&#34;</span>
-<span style="color:#75715e">#&gt;  - attr(*, &#34;class&#34;)= chr &#34;lm&#34;</span></code></pre></div>
+
+<pre><code class="language-r">class(jour_lm)
+#&gt; [1] &quot;lm&quot;
+names(jour_lm)
+#&gt;  [1] &quot;coefficients&quot;  &quot;residuals&quot;     &quot;effects&quot;       &quot;rank&quot;         
+#&gt;  [5] &quot;fitted.values&quot; &quot;assign&quot;        &quot;qr&quot;            &quot;df.residual&quot;  
+#&gt;  [9] &quot;xlevels&quot;       &quot;call&quot;          &quot;terms&quot;         &quot;model&quot;
+str(jour_lm) #<span class="codenote nopre">🏷<span class="tooltiptext" > 注意`list of 12` </span></span>
+#&gt; List of 12
+#&gt;  $ coefficients : Named num [1:2] 4.766 -0.533
+#&gt;   ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;(Intercept)&quot; &quot;log(citeprice)&quot;
+#&gt;  $ residuals    : Named num [1:180] -1.185 -0.739 -0.332 -2.725 1.136 ...
+#&gt;   ..- attr(*, &quot;names&quot;)= chr [1:180] &quot;APEL&quot; &quot;SAJoEH&quot; &quot;CE&quot; &quot;MEPiTE&quot; ...
+#&gt;  $ effects      : Named num [1:180] -63.599 -11.222 -0.338 -2.715 1.146 ...
+#&gt;   ..- attr(*, &quot;names&quot;)= chr [1:180] &quot;(Intercept)&quot; &quot;log(citeprice)&quot; &quot;&quot; &quot;&quot; ...
+#&gt;  $ rank         : int 2
+#&gt;  $ fitted.values: Named num [1:180] 3.82 4.82 3.17 3.42 3.43 ...
+#&gt;   ..- attr(*, &quot;names&quot;)= chr [1:180] &quot;APEL&quot; &quot;SAJoEH&quot; &quot;CE&quot; &quot;MEPiTE&quot; ...
+#&gt;  $ assign       : int [1:2] 0 1
+#&gt;  $ qr           :List of 5
+#&gt;   ..$ qr   : num [1:180, 1:2] -13.4164 0.0745 0.0745 0.0745 0.0745 ...
+#&gt;   .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+#&gt;   .. .. ..$ : chr [1:180] &quot;APEL&quot; &quot;SAJoEH&quot; &quot;CE&quot; &quot;MEPiTE&quot; ...
+#&gt;   .. .. ..$ : chr [1:2] &quot;(Intercept)&quot; &quot;log(citeprice)&quot;
+#&gt;   .. ..- attr(*, &quot;assign&quot;)= int [1:2] 0 1
+#&gt;   ..$ qraux: num [1:2] 1.07 1.01
+#&gt;   ..$ pivot: int [1:2] 1 2
+#&gt;   ..$ tol  : num 1e-07
+#&gt;   ..$ rank : int 2
+#&gt;   ..- attr(*, &quot;class&quot;)= chr &quot;qr&quot;
+#&gt;  $ df.residual  : int 178
+#&gt;  $ xlevels      : Named list()
+#&gt;  $ call         : language lm(formula = log(subs) ~ log(citeprice), data = journals)
+#&gt;  $ terms        :Classes 'terms', 'formula'  language log(subs) ~ log(citeprice)
+#&gt;   .. ..- attr(*, &quot;variables&quot;)= language list(log(subs), log(citeprice))
+#&gt;   .. ..- attr(*, &quot;factors&quot;)= int [1:2, 1] 0 1
+#&gt;   .. .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+#&gt;   .. .. .. ..$ : chr [1:2] &quot;log(subs)&quot; &quot;log(citeprice)&quot;
+#&gt;   .. .. .. ..$ : chr &quot;log(citeprice)&quot;
+#&gt;   .. ..- attr(*, &quot;term.labels&quot;)= chr &quot;log(citeprice)&quot;
+#&gt;   .. ..- attr(*, &quot;order&quot;)= int 1
+#&gt;   .. ..- attr(*, &quot;intercept&quot;)= int 1
+#&gt;   .. ..- attr(*, &quot;response&quot;)= int 1
+#&gt;   .. ..- attr(*, &quot;.Environment&quot;)=&lt;environment: R_GlobalEnv&gt; 
+#&gt;   .. ..- attr(*, &quot;predvars&quot;)= language list(log(subs), log(citeprice))
+#&gt;   .. ..- attr(*, &quot;dataClasses&quot;)= Named chr [1:2] &quot;numeric&quot; &quot;numeric&quot;
+#&gt;   .. .. ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;log(subs)&quot; &quot;log(citeprice)&quot;
+#&gt;  $ model        :'data.frame':	180 obs. of  2 variables:
+#&gt;   ..$ log(subs)     : num [1:180] 2.639 4.078 2.833 0.693 4.564 ...
+#&gt;   ..$ log(citeprice): num [1:180] 1.7677 -0.0953 3.0025 2.5294 2.5089 ...
+#&gt;   ..- attr(*, &quot;terms&quot;)=Classes 'terms', 'formula'  language log(subs) ~ log(citeprice)
+#&gt;   .. .. ..- attr(*, &quot;variables&quot;)= language list(log(subs), log(citeprice))
+#&gt;   .. .. ..- attr(*, &quot;factors&quot;)= int [1:2, 1] 0 1
+#&gt;   .. .. .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+#&gt;   .. .. .. .. ..$ : chr [1:2] &quot;log(subs)&quot; &quot;log(citeprice)&quot;
+#&gt;   .. .. .. .. ..$ : chr &quot;log(citeprice)&quot;
+#&gt;   .. .. ..- attr(*, &quot;term.labels&quot;)= chr &quot;log(citeprice)&quot;
+#&gt;   .. .. ..- attr(*, &quot;order&quot;)= int 1
+#&gt;   .. .. ..- attr(*, &quot;intercept&quot;)= int 1
+#&gt;   .. .. ..- attr(*, &quot;response&quot;)= int 1
+#&gt;   .. .. ..- attr(*, &quot;.Environment&quot;)=&lt;environment: R_GlobalEnv&gt; 
+#&gt;   .. .. ..- attr(*, &quot;predvars&quot;)= language list(log(subs), log(citeprice))
+#&gt;   .. .. ..- attr(*, &quot;dataClasses&quot;)= Named chr [1:2] &quot;numeric&quot; &quot;numeric&quot;
+#&gt;   .. .. .. ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;log(subs)&quot; &quot;log(citeprice)&quot;
+#&gt;  - attr(*, &quot;class&quot;)= chr &quot;lm&quot;
+</code></pre>
+
 <p>❓ 自由度在哪?</p>
 
 <div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
-        <span>
-        
-        
-        提示
-        
-        </span>
-    </div>
-    <div class="expand-content" style="display: none;">
-       <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">jour_lm<span style="color:#f92672">$</span>rank
-<span style="color:#75715e">#&gt; [1] 2</span></code></pre></div>
-<pre><code>&lt;/div&gt;</code></pre>
-<p></div></p>
+    <div class="expand-label" onclick="vexpand(this)">
+        <i style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span>提示</span>
+    </div><div class="expand-content incode" style="overflow-x:auto">```r
+jour_lm$rank
+#&gt; [1] 2
+```</div></div>
 
 <h3 id="最簡單的報告產生函數">最簡單的報告產生函數</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">summary</span>(jour_lm)
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Call:</span>
-<span style="color:#75715e">#&gt; lm(formula = log(subs) ~ log(citeprice), data = journals)</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Residuals:</span>
-<span style="color:#75715e">#&gt;      Min       1Q   Median       3Q      Max </span>
-<span style="color:#75715e">#&gt; -2.72478 -0.53609  0.03721  0.46619  1.84808 </span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Coefficients:</span>
-<span style="color:#75715e">#&gt;                Estimate Std. Error t value Pr(&gt;|t|)    </span>
-<span style="color:#75715e">#&gt; (Intercept)     4.76621    0.05591   85.25   &lt;2e-16 ***</span>
-<span style="color:#75715e">#&gt; log(citeprice) -0.53305    0.03561  -14.97   &lt;2e-16 ***</span>
-<span style="color:#75715e">#&gt; ---</span>
-<span style="color:#75715e">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Residual standard error: 0.7497 on 178 degrees of freedom</span>
-<span style="color:#75715e">#&gt; Multiple R-squared:  0.5573,	Adjusted R-squared:  0.5548 </span>
-<span style="color:#75715e">#&gt; F-statistic:   224 on 1 and 178 DF,  p-value: &lt; 2.2e-16</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">jour_slm <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">summary</span>(jour_lm)
-<span style="color:#a6e22e">class</span>(jour_slm)
-<span style="color:#75715e">#&gt; [1] &#34;summary.lm&#34;</span>
-<span style="color:#a6e22e">names</span>(jour_slm)
-<span style="color:#75715e">#&gt;  [1] &#34;call&#34;          &#34;terms&#34;         &#34;residuals&#34;     &#34;coefficients&#34; </span>
-<span style="color:#75715e">#&gt;  [5] &#34;aliased&#34;       &#34;sigma&#34;         &#34;df&#34;            &#34;r.squared&#34;    </span>
-<span style="color:#75715e">#&gt;  [9] &#34;adj.r.squared&#34; &#34;fstatistic&#34;    &#34;cov.unscaled&#34;</span>
-jour_slm<span style="color:#f92672">$</span>coefficients
-<span style="color:#75715e">#&gt;                  Estimate Std. Error   t value      Pr(&gt;|t|)</span>
-<span style="color:#75715e">#&gt; (Intercept)     4.7662121 0.05590908  85.24934 2.953913e-146</span>
-<span style="color:#75715e">#&gt; log(citeprice) -0.5330535 0.03561320 -14.96786  2.563943e-33</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">anova</span>(jour_lm)
-<span style="color:#75715e">#&gt; Analysis of Variance Table</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Response: log(subs)</span>
-<span style="color:#75715e">#&gt;                 Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
-<span style="color:#75715e">#&gt; log(citeprice)   1 125.93 125.934  224.04 &lt; 2.2e-16 ***</span>
-<span style="color:#75715e">#&gt; Residuals      178 100.06   0.562                      </span>
-<span style="color:#75715e">#&gt; ---</span>
-<span style="color:#75715e">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+
+<pre><code class="language-r">summary(jour_lm)
+#&gt; 
+#&gt; Call:
+#&gt; lm(formula = log(subs) ~ log(citeprice), data = journals)
+#&gt; 
+#&gt; Residuals:
+#&gt;      Min       1Q   Median       3Q      Max 
+#&gt; -2.72478 -0.53609  0.03721  0.46619  1.84808 
+#&gt; 
+#&gt; Coefficients:
+#&gt;                Estimate Std. Error t value Pr(&gt;|t|)    
+#&gt; (Intercept)     4.76621    0.05591   85.25   &lt;2e-16 ***
+#&gt; log(citeprice) -0.53305    0.03561  -14.97   &lt;2e-16 ***
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#&gt; 
+#&gt; Residual standard error: 0.7497 on 178 degrees of freedom
+#&gt; Multiple R-squared:  0.5573, Adjusted R-squared:  0.5548 
+#&gt; F-statistic:   224 on 1 and 178 DF,  p-value: &lt; 2.2e-16
+</code></pre>
+
+<pre><code class="language-r">jour_slm &lt;- summary(jour_lm)
+class(jour_slm)
+#&gt; [1] &quot;summary.lm&quot;
+names(jour_slm)
+#&gt;  [1] &quot;call&quot;          &quot;terms&quot;         &quot;residuals&quot;     &quot;coefficients&quot; 
+#&gt;  [5] &quot;aliased&quot;       &quot;sigma&quot;         &quot;df&quot;            &quot;r.squared&quot;    
+#&gt;  [9] &quot;adj.r.squared&quot; &quot;fstatistic&quot;    &quot;cov.unscaled&quot;
+jour_slm$coefficients
+#&gt;                  Estimate Std. Error   t value      Pr(&gt;|t|)
+#&gt; (Intercept)     4.7662121 0.05590908  85.24934 2.953913e-146
+#&gt; log(citeprice) -0.5330535 0.03561320 -14.96786  2.563943e-33
+</code></pre>
+
+<pre><code class="language-r">anova(jour_lm)
+#&gt; Analysis of Variance Table
+#&gt; 
+#&gt; Response: log(subs)
+#&gt;                 Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+#&gt; log(citeprice)   1 125.93 125.934  224.04 &lt; 2.2e-16 ***
+#&gt; Residuals      178 100.06   0.562                      
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
  
-<span style="color:#a6e22e">coef</span>(jour_lm)
-<span style="color:#75715e">#&gt;    (Intercept) log(citeprice) </span>
-<span style="color:#75715e">#&gt;      4.7662121     -0.5330535</span>
+coef(jour_lm)
+#&gt;    (Intercept) log(citeprice) 
+#&gt;      4.7662121     -0.5330535
  
-<span style="color:#a6e22e">confint</span>(jour_lm, level <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.95</span>)
-<span style="color:#75715e">#&gt;                     2.5 %     97.5 %</span>
-<span style="color:#75715e">#&gt; (Intercept)     4.6558822  4.8765420</span>
-<span style="color:#75715e">#&gt; log(citeprice) -0.6033319 -0.4627751</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">predict</span>(jour_lm, newdata <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(citeprice <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.11</span>),
-  interval <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;confidence&#34;</span>)
-<span style="color:#75715e">#&gt;        fit      lwr     upr</span>
-<span style="color:#75715e">#&gt; 1 4.368188 4.247485 4.48889</span>
-<span style="color:#a6e22e">predict</span>(jour_lm, newdata <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(citeprice <span style="color:#f92672">=</span> <span style="color:#ae81ff">2.11</span>), 
-  interval <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;prediction&#34;</span>)
-<span style="color:#75715e">#&gt;        fit      lwr      upr</span>
-<span style="color:#75715e">#&gt; 1 4.368188 2.883746 5.852629</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">lciteprice <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(from <span style="color:#f92672">=</span> <span style="color:#ae81ff">-6</span>, to <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>, by <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.25</span>)
-jour_pred <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">predict</span>(jour_lm, interval <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;prediction&#34;</span>,
-  newdata <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(citeprice <span style="color:#f92672">=</span> <span style="color:#a6e22e">exp</span>(lciteprice)))  
-<span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">log</span>(subs) <span style="color:#f92672">~</span> <span style="color:#a6e22e">log</span>(citeprice), data <span style="color:#f92672">=</span> journals)
-<span style="color:#a6e22e">lines</span>(jour_pred[, <span style="color:#ae81ff">1</span>] <span style="color:#f92672">~</span> lciteprice, col <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)    
-<span style="color:#a6e22e">lines</span>(jour_pred[, <span style="color:#ae81ff">2</span>] <span style="color:#f92672">~</span> lciteprice, col <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, lty <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)
-<span style="color:#a6e22e">lines</span>(jour_pred[, <span style="color:#ae81ff">3</span>] <span style="color:#f92672">~</span> lciteprice, col <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, lty <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>)</code></pre></div>
+confint(jour_lm, level = 0.95)
+#&gt;                     2.5 %     97.5 %
+#&gt; (Intercept)     4.6558822  4.8765420
+#&gt; log(citeprice) -0.6033319 -0.4627751
+</code></pre>
+
+<pre><code class="language-r">predict(jour_lm, newdata = data.frame(citeprice = 2.11),
+  interval = &quot;confidence&quot;)
+#&gt;        fit      lwr     upr
+#&gt; 1 4.368188 4.247485 4.48889
+predict(jour_lm, newdata = data.frame(citeprice = 2.11), 
+  interval = &quot;prediction&quot;)
+#&gt;        fit      lwr      upr
+#&gt; 1 4.368188 2.883746 5.852629
+</code></pre>
+
+<pre><code class="language-r">lciteprice &lt;- seq(from = -6, to = 4, by = 0.25)
+jour_pred &lt;- predict(jour_lm, interval = &quot;prediction&quot;,
+  newdata = data.frame(citeprice = exp(lciteprice)))  
+plot(log(subs) ~ log(citeprice), data = journals)
+lines(jour_pred[, 1] ~ lciteprice, col = 1)    
+lines(jour_pred[, 2] ~ lciteprice, col = 1, lty = 2)
+lines(jour_pred[, 3] ~ lciteprice, col = 1, lty = 2)
+</code></pre>
+
 <p><img src="../../post/citation_files/figure-html/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" /></p>
 
 <h3 id="參數為模型類別的plot">參數為模型類別的plot()</h3>
@@ -1624,23 +721,29 @@ jour_pred <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">p
 </ul>
 
 <p>個別的圖:例如QQ plot:　<code>plot(jour_lm, which = 2)</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>))
-<span style="color:#a6e22e">plot</span>(jour_lm)</code></pre></div>
-<p><img src="../../post/citation_files/figure-html/unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10" /></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">par</span>(mfrow <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
 
-<span style="color:#a6e22e">linearHypothesis</span>(jour_lm, <span style="color:#e6db74">&#34;log(citeprice) = -0.5&#34;</span>)
-<span style="color:#75715e">#&gt; Linear hypothesis test</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Hypothesis:</span>
-<span style="color:#75715e">#&gt; log(citeprice) = - 0.5</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt; Model 1: restricted model</span>
-<span style="color:#75715e">#&gt; Model 2: log(subs) ~ log(citeprice)</span>
-<span style="color:#75715e">#&gt; </span>
-<span style="color:#75715e">#&gt;   Res.Df    RSS Df Sum of Sq      F Pr(&gt;F)</span>
-<span style="color:#75715e">#&gt; 1    179 100.54                           </span>
-<span style="color:#75715e">#&gt; 2    178 100.06  1   0.48421 0.8614 0.3546</span></code></pre></div>
+<pre><code class="language-r">par(mfrow = c(2, 2))
+plot(jour_lm)
+</code></pre>
+
+<p><img src="../../post/citation_files/figure-html/unnamed-chunk-10-1.png" alt="plot of chunk unnamed-chunk-10" /></p>
+
+<pre><code class="language-r">par(mfrow = c(1, 1))
+
+linearHypothesis(jour_lm, &quot;log(citeprice) = -0.5&quot;)
+#&gt; Linear hypothesis test
+#&gt; 
+#&gt; Hypothesis:
+#&gt; log(citeprice) = - 0.5
+#&gt; 
+#&gt; Model 1: restricted model
+#&gt; Model 2: log(subs) ~ log(citeprice)
+#&gt; 
+#&gt;   Res.Df    RSS Df Sum of Sq      F Pr(&gt;F)
+#&gt; 1    179 100.54                           
+#&gt; 2    178 100.06  1   0.48421 0.8614 0.3546
+</code></pre>
+
 <p>❓ 利用資料集 <code>cars</code> : <code>dist ~ speed</code></p>
 
 <ul>
@@ -1648,857 +751,113 @@ jour_pred <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">p
 <li>畫圖<br /></li>
 </ul>
 
-</section>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
 
-
-
-
-<footer class="footline">
-	
-</footer>
-
-        
-        </div>
-        
-rlang\demo\citation.md
-      </div>
-
-    <div id="navigation">
-        
-        
-
-        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-
-        
-
-
-	 
-	 
-		
-			<a class="nav nav-prev" href="../../rlang/demo.html" title="暫時"> <i class="fa fa-chevron-left"></i></a>
-		
-		
-			<a class="nav nav-next" href="../../rlang/demo/ch6.html" title="Chapter 6" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-		
-	
     </div>
+</div>
 
-    </section>
-
-    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
-      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
-    </div>
-    <script src="../../js/clipboard.min.js?1609996082"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1609996082"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1609996082"></script>
-    <script src="../../js/jquery.sticky.js?1609996082"></script>
-    <script src="../../js/featherlight.min.js?1609996082"></script>
-    <script src="../../js/highlight.pack.js?1609996082"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1609996082"></script>
-    <script src="../../js/learn.js?1609996082"></script>
-    <script src="../../js/hugo-learn.js?1609996082"></script>
+<link href="../../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
     
-        
-            <script src="../../mermaid/mermaid.js?1609996082"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+          
+          <a href="../../rlang/demo/car.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=predict>前</a>
+                   
+          
+          
+
+  
+<script src="../../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../../js/featherlight.min.js?1631762489"></script>
+  <script src="../../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../../js/hugohelper.js?1631762489"></script>
+
+  <link href="../../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../../js/localsearch.js?1631762489'></script>
     
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
     
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
 
 
 
-  </body>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
 </html>
-

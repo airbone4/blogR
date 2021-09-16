@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html><head>
+  <title>03 Rmd pdf</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../../images/favicon.ico'/>
+      
+    <script src="../../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#產生pdf-文件">產生PDF 文件</a>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#meta-data-上的pdf-設定-常見版本">meta data 上的pdf 設定,常見版本</a>
+<ul>
+<li><a href="#加入目錄">加入目錄</a></li>
+<li><a href="#圖形選項">圖形選項</a></li>
+<li><a href="#data-frame-printing">Data Frame Printing</a></li>
+<li><a href="#syntax-highlighting">Syntax Highlighting</a></li>
+<li><a href="#latex-options">LaTeX Options</a></li>
+<li><a href="#在rmd中有rmd">在RMD中有RMD</a></li>
+<li><a href="#其他">其他</a></li>
+</ul></li>
+<li><a href="#latex-packages-for-citations">LaTeX Packages for Citations</a></li>
+</ul></li>
+<li><a href="#中文">中文</a></li>
+<li><a href="#rstudio-chinese">Rstudio chinese</a>
+<ul>
+<li><a href="#latex-engine">LaTeX Engine</a></li>
+<li><a href="#include">Include</a></li>
+<li><a href="#註記">註記</a></li>
+<li><a href="#測試中文轉pdf">測試中文轉pdf</a></li>
+<li><a href="#custom-templates">Custom Templates</a></li>
+<li><a href="#pandoc-arguments">Pandoc Arguments</a></li>
+</ul></li>
+<li><a href="#共用設定">共用設定</a></li>
+<li><a href="#客製block">客製block</a>
+<ul>
+<li><a href="#解釋範例">解釋範例</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>03 Rmd pdf</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    
+
+<h2 id="產生pdf-文件">產生PDF 文件</h2>
+
+<p>** 中文字型問題 ** <a href="https://yihui.org/tinytex/r/#debugging">參考</a></p>
+
+<pre><code>update.packages(ask = FALSE, checkBuilt = TRUE)  
+tinytex::tlmgr_update()
+</code></pre>
+
+<p>中文：<br />
+不要管那麼多網路上講的，就</p>
+
+<pre><code>devtools::install_github(c('rstudio/rmarkdown', 'yihui/tinytex'))
+tinytex::install_tinytex()
+</code></pre>
+
+<p>大部分問題都是中文自行沒有安裝或指定錯誤的問題：<br />
+在RMD檔案開頭指定</p>
+
+<pre><code>---
+title: &quot;xxx&quot;
+author: &quot;xxx&quot;
+date: &quot;2020年8月10日&quot;
+header-includes:
+- \usepackage{xeCJK}
+- \setCJKmainfont{標楷體}
+output:
+  html_document:  
+    toc: yes
+    df_print: paged
+  word_document:
+    toc: yes
+  pdf_document: 
+    latex_engine: xelatex 
+    toc: yes
+---
+</code></pre>
+
+<h3 id="overview">Overview</h3>
+
+<p><a href="https://rmarkdown.rstudio.com/pdf_document_format">參考</a></p>
+
+<p>整個轉換過程如下：<br />
+Rmarkdown -&gt; markdown -&gt;pandoc-&gt;pdf,html</p>
+
+<h3 id="meta-data-上的pdf-設定-常見版本">meta data 上的pdf 設定,常見版本</h3>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+author: lendjwjcen 
+date: 3/1/2017
+output: pdf_document
+---
+</code></pre>
+
+<h4 id="加入目錄">加入目錄</h4>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+</code></pre>
+
+<p>TOC深度預設是3。<br />
+yaml的註解符號是<code>#</code> 。</p>
+
+<p>如果要章節號碼,則利用<code>number_sections option</code>:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+---
+</code></pre>
+
+<h4 id="圖形選項">圖形選項</h4>
+
+<p>fig_width 和 fig_height 控制圖形的寬度和高度 (6 x 4.5 is used by default)</p>
+
+<p>fig_crop 控制 pdfcrop utility (如果有)是否自動使用來修剪圖型(default). 如果我們的圖形設備是 postscript, 建議關掉這個選項。.</p>
+
+<p>fig_caption 控制是否有圖型標題(預設是否)</p>
+
+<p>dev 控制用來描繪圖型的設備 (defaults to pdf)</p>
+
+<p>例如:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+---
+</code></pre>
+
+<h4 id="data-frame-printing">Data Frame Printing</h4>
+
+<p><code>df-print</code> 參數可以用來改進data frame的輸出,選項包括:</p>
+
+<p>選項描述<br />
+default: 利用  print.data.frame 函數<br />
+kable   其實利用的是 knitr::kable 函數<br />
+tibble  則利用  tibble::print.tbl_df 函數。.<br />
+例如:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    df_print: kable
+---
+</code></pre>
+
+<h4 id="syntax-highlighting">Syntax Highlighting</h4>
+
+<p>打光型態有 “default”, “tango”, “pygments”, “kate”, “monochrome”, “espresso”, “zenburn”, and “haddock” 如果不要打光,則設定null:</p>
+
+<p>例如:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    highlight: tango
+---
+</code></pre>
+
+<h4 id="latex-options">LaTeX Options</h4>
+
+<p>有關LaTeX選項的設定位置並不是在<code>output: pdf_document</code>的後續段落,而是在最頂層。<br />
+例如:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Crop Analysis Q3 2013&quot;
+output: pdf_document
+fontsize: 11pt
+geometry: margin=1in
+---
+</code></pre>
+
+<h4 id="在rmd中有rmd">在RMD中有RMD</h4>
+
+<pre><code class="language-markdown">```{block2, type='FOO'}
+Some text for this block [@citation-key].
+- a list item
+- another item
+- end the list with a blank line
+
+```
+</code></pre>
+
+<h4 id="其他">其他</h4>
+
+<p>Available metadata variables include:</p>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>papersize</td>
+<td>paper size, e.g. <code>letter</code>, <code>A4</code></td>
+</tr>
+
+<tr>
+<td>lang</td>
+<td>Document language code</td>
+</tr>
+
+<tr>
+<td>fontsize</td>
+<td>Font size (e.g. 10pt, 11pt, 12pt)</td>
+</tr>
+
+<tr>
+<td>documentclass</td>
+<td>LaTeX document class (e.g. article)</td>
+</tr>
+
+<tr>
+<td>classoption</td>
+<td>Option for documentclass (e.g. oneside); may be repeated</td>
+</tr>
+
+<tr>
+<td>geometry</td>
+<td>Options for geometry class (e.g. margin=1in); may be repeated</td>
+</tr>
+
+<tr>
+<td>linkcolor, urlcolor, citecolor</td>
+<td>Color for internal, external, and citation links (red, green, magenta, cyan, blue, black)</td>
+</tr>
+
+<tr>
+<td>thanks</td>
+<td>specifies contents of acknowledgments footnote after document title.</td>
+</tr>
+</tbody>
+</table>
+
+<p>更多控制可以在 <a href="http://pandoc.org/MANUAL.html#variables-for-latex">here</a>.找到</p>
+
+<h3 id="latex-packages-for-citations">LaTeX Packages for Citations</h3>
+
+<p>citation的處理,預設是經由 <code>pandoc-citeproc</code>(不僅PDF文件,還有HTML), 但是對於PDF來講,最好還是使用 LaTeX 來處理例如 <code>natbib</code> or <code>biblatex</code>。設定方法僅僅是設定 <code>citation_package</code> 為 <code>natbib</code> 或 <code>biblatex</code>, 例如:</p>
+
+<pre><code class="language-yaml">---
+output:
+  pdf_document:
+    citation_package: natbib
+---
+</code></pre>
+
+<h2 id="中文">中文</h2>
+
+<p>建立中文PDF 需要安裝 TeX版本可以使用<code>tinytex</code>。</p>
+
+<pre><code class="language-r">install.packages('tinytex')
+tinytex::install_tinytex()
+</code></pre>
+
+<h2 id="rstudio-chinese">Rstudio chinese</h2>
+
+<pre><code class="language-bash">cd /usr/lib/rstudio/bin
+sudo mkdir Qt
+sudo mv libQt5* Qt
+sudo mv qt.conf Qt
+</code></pre>
+
+<h3 id="latex-engine">LaTeX Engine</h3>
+
+<p>RStudio 預設使用 <code>pdflatex</code>. 我們可以使用 <code>latex_engine</code> 選項設定其他引擎例如, “pdflatex”, “xelatex”, and “lualatex”. 而中文的引擎範例:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+  latex_engine: xelatex
+---
+</code></pre>
+
+<p>但是只有這樣還不夠，因為我們需要中文字型,這時可以利用<code>indclude</code>選項:</p>
+
+<h3 id="include">Include</h3>
+
+<p>要在文件本身(body)前面後面加上一些內容,可以利用<code>includes</code> 選項:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    includes:
+      in_header: header.tex
+      before_body: doc_prefix.tex
+      after_body: doc_suffix.tex
+---
+</code></pre>
+
+<p>::: sidebar<br />
+最後的中文設定可以是這樣</p>
+
+<pre><code class="language-yaml">
+---
+title: &quot;Untitled&quot;
+author: &quot;lin&quot;
+date: &quot;&quot;
+output:
+  pdf_document: 
+    latex_engine: xelatex    
+    includes:
+      in_header: header.tex    
+
+</code></pre>
+
+<p><code>header.tex</code>的內容(%是註解):</p>
+
+<pre><code>\usepackage{xeCJK}
+% microsoft windows
+
+% linux font
+\setCJKmainfont{AR PL UMing TW}
+
+% microsoft font
+% \setCJKmainfont{微軟正黑體}
+% \setCJKmainfont{Microsoft YaHei}
+
+%\setmainfont{Georgia} % 設定英文字型
+%\setromanfont{Georgia} % 字型
+%\setmonofont{Courier New}
+</code></pre>
+
+<p>:::</p>
+
+<h3 id="註記">註記</h3>
+
+<p>有關一些中文常常發生的錯誤：</p>
+
+<ul>
+<li><p>無法解決字型錯誤:Package fontspec Error: The font &quot;Inconsolata&quot; cannot be found<br />
+改用其他字形，例如使用指令</p>
+
+<pre><code class="language-bash">fc-list :lang=zh-tw fullname
+</code></pre></li>
+</ul>
+
+<p>::: sidebar<br />
+新系統例如linux安裝完以後，如果要測試中文是否可用於產生pdf，最好利用一些短文。</p>
+
+<h3 id="測試中文轉pdf">測試中文轉pdf</h3>
+
+<p>下列的檔案名稱為<code>x1.tx</code>,測試的時候，可以利用<code>tinytex::xelatex(x1.tex)</code> 用來驗證是否中文可以轉pdf。</p>
+
+<p>這裡先利用tex小檔案測試xelatex是否功能正常。</p>
+
+<pre><code class="language-tex">\documentclass{book}
+\usepackage{xeCJK}
+\setCJKmainfont{AR PL UMing TW}
+
+
+\begin{document}
+早安，台灣
+
+$$b^2-4\times a \times c$$
+
+night TeXing.
+\end{document}
+</code></pre>
+
+<p>:::</p>
+
+<h3 id="custom-templates">Custom Templates</h3>
+
+<p>也可以利用選項<code>template</code> 取代pandoc 模板  :</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    template: quarterly_report.tex
+---
+</code></pre>
+
+<p>參考 <a href="http://pandoc.org/README.html#templates">pandoc templates</a> 上的說明。或者參考 <a href="https://github.com/jgm/pandoc-templates/blob/master/default.latex">default LaTeX template</a> 中的範例。</p>
+
+<h3 id="pandoc-arguments">Pandoc Arguments</h3>
+
+<p>如果在YAML中找不到相關於pandoc的選項,則可以直接利用 <code>pandoc_args</code>. 例如:</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    pandoc_args: [
+      &quot;--no-tex-ligatures&quot;
+    ]
+---
+</code></pre>
+
+<h2 id="共用設定">共用設定</h2>
+
+<p>多個文件如果都有一樣的輸出格式,則可以利用檔案 <code>_output.yaml</code> 例如:</p>
+
+<p><strong>_output.yaml</strong></p>
+
+<pre><code class="language-yaml">pdf_document:
+  toc: true
+  highlight: zenburn
+</code></pre>
+
+<p>做為文件中的YAML的比對,可以發現,只是把output: 的後面整個層級搬到_output.yaml。</p>
+
+<pre><code class="language-yaml">---
+title: &quot;Habits&quot;
+output:
+  pdf_document:
+    includes:
+      in_header: header.tex
+      before_body: doc_prefix.tex
+      after_body: doc_suffix.tex
+---
+</code></pre>
+
+<h2 id="客製block">客製block</h2>
+
+<ul>
+<li><a href="https://bookdown.org/yihui/bookdown/custom-blocks.html">客製block參考(<a href="https://github.com/rstudio/bookdown/blob/master/inst/examples/02-components.Rmd">git</a>)</a><br />
+
+<ul>
+<li><a href="https://github.com/rstudio/bookdown/blob/7a0364b7ffd16b360b7abde36a29a8801675906c/inst/examples/latex/preamble.tex#L58-L88">相關tex</a><br />
+<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="解釋範例">解釋範例</h3>
+
+<p>資源子目錄下可以找到相關專案(customizedBlock)。</p>
+
+<p>在RMD中打入<br />
+- RMD檔案內容 :</p>
+
+<pre><code class="language-markdown">
+::: xxx :::
+
+- xxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- yyyy yyyyyyyyyyyyyyyyyyyyy
+
+</code></pre>
+
+<p>會在產生的tex產生一個<code>environment xxx</code></p>
+
+<ul>
+<li><p>檔案<code>preamble.tex</code> 內容:</p>
+
+<pre><code class="language-tex">\usepackage{booktabs}
+\makeatletter
+\newenvironment{kframe}{%
+\medskip{}
+\setlength{\fboxsep}{.8em}
+\def\at@end@of@kframe{}%
+\ifinner\ifhmode%
+\def\at@end@of@kframe{\end{minipage}}%
+\begin{minipage}{\columnwidth}%
+\fi\fi%
+\def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+\colorbox{shadecolor}{##1}\hskip-\fboxsep
+ % There is no \\@totalrightmargin, so:
+ \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+\MakeFramed {\advance\hsize-\width
+\@totalleftmargin\z@ \linewidth\hsize
+\@setminipage}}%
+{\par\unskip\endMakeFramed%
+\at@end@of@kframe}
+\makeatother
+
+
+\newenvironment{xxx}
+{\begin{kframe}}
+{\end{kframe}}
+
+\newenvironment{whisper}
+{\begin{kframe}}
+{\end{kframe}}
+
+</code></pre></li>
+</ul>
+
+<p>此時pandoc 利用 <code>output.yml</code> PDF才有這個自訂BLOCK。</p>
+
+<ul>
+<li><p>檔案(<code>output.yml</code>)內容:</p>
+
+<pre><code class="language-yaml">bookdown::pdf_book:
+includes:
+in_header: preamble.tex
+latex_engine: xelatex
+citation_package: natbib
+keep_tex: yes
+keep_md: yes
+#pandoc_args: [&quot;--lua-filter=./texclass.lua&quot;]
+</code></pre>
+
+<p>上面的內容中,pandoc_args 無作用。</p></li>
+
+<li><p>檔案<code>texclass.lua</code>內容</p>
+
+<pre><code class="language-tex">function Div(el)
+local kls, _ = el.classes:find_if(function (s) return string.match(s, &quot;^tex%-&quot;) end)
+if kls then
+  local texkls = kls:gsub(&quot;^tex%-&quot;,&quot;&quot;,1)
+  if texkls then
+	 return { pandoc.RawBlock(&quot;latex&quot;, &quot;\\begin{&quot; .. texkls .. &quot;}&quot;),
+		  el,
+		  pandoc.RawBlock(&quot;latex&quot;, &quot;\\end{&quot; .. texkls ..  &quot;}&quot;)}
+  end
+end
+end
+
+</code></pre></li>
+</ul>
+
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../../topic/rmd/04_rmd_hook.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=04&#32;Rmd&#32;hook>前</a>
+                   
+          
+            <a href="../../topic/rmd/05_rmd_topic_1.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=05&#32;rmd&#32;topic&#32;1>後</a>            
+          
+          
+
+  
+<script src="../../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../../js/featherlight.min.js?1631762489"></script>
+  <script src="../../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../../js/hugohelper.js?1631762489"></script>
+
+  <link href="../../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

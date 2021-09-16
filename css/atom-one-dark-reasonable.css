@@ -42,7 +42,8 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
   color: #9CCC65;
 }
 .hljs-comment, .hljs-quote {
-  color: #b18eb1;
+  /*color: #b18eb1;*/
+  color:#98ce2ed4;
   font-style: italic;
 }
 .hljs-doctag, .hljs-formula {

@@ -1,1235 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
-  <head>
+<html><head>
+  <title>中央</title>  
+      
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.79.1" />
-    <meta name="description" content="包括中央極限">
-
-
-    <link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon" />
-<link rel="icon" href="../../images/favicon.png" type="image/x-icon" />
-
-    <title>中央 - R in Class</title>
-
-    
-    <link href="../../css/nucleus.css?1609996082" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1609996082" rel="stylesheet">
-    <link href="../../css/hybrid.css?1609996082" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1609996082" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1609996082" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1609996082" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1609996082" rel="stylesheet">
-    <link href="../../css/theme.css?1609996082" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1609996082" rel="stylesheet">
-    
-    <link href="../../extra_theme/css/mystyle.css?1609996082" rel="stylesheet"><link href="../../extra_theme/css/demoContainer.css?1609996082" rel="stylesheet"><link href="../../extra_theme/css/rmd.css?1609996082" rel="stylesheet">
-
-    <script src="../../js/jquery-3.3.1.min.js?1609996082"></script>
-
-    <style>
-      :root #header + #content > #left > #rlblock_left{
-          display:none !important;
-      }
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../../images/favicon.ico'/>
       
-        :not(pre) > code + span.copy-to-clipboard {
-            display: none;
-        }
-      
-    </style>
+    <script src="../../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
-  </head>
-  <body class="" data-url="../../topic/experiment/central.html">
-
-    <nav id="sidebar" class="">
-
-
-
-  <div id="header-wrapper">
-    <div id="header">
-      <a id="logo" href="https://airbon5.github.io/xx/">
-  <img src=../../extra_theme/images/rmi.png>
-</a>
-
-    </div>
+    <script src='../../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-        <div class="searchbox">
-    <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="Search...">
-    <span data-search-clear=""><i class="fas fa-times"></i></span>
-</div>
-
-<script type="text/javascript" src="../../js/lunr.min.js?1609996082"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1609996082"></script>
-<script type="text/javascript">
+    <link href="../../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../../css/syntax.css?1631762489" rel="stylesheet">
     
-        var baseurl = "\/";
+    <link href="../../css/theme-mine.css?1631762489" rel="stylesheet">
     
-</script>
-<script type="text/javascript" src="../../js/search.js?1609996082"></script>
-
-    
-  </div>
-  
-    <section id="homelinks">
-      <ul>
-        <li>
-            <a class="padding" href='../../'><i class='fas fa-home'></i> Home</a>
-        </li>
-      </ul>
-    </section>
-  
-
-    <div class="highlightable">
-    <ul class="topics">
-
-        
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang.html" title="R language" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../rlang.html">
-          R language
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/requirement.html" title="Requirement" class="dd-item ">
-        <a href="../../rlang/requirement.html">
-        Requirement
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/data_explorer_1.html" title="data explorer 1" class="dd-item ">
-        <a href="../../rlang/data_explorer_1.html">
-        data explorer 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/data_explorer_2.html" title="data explorer 2" class="dd-item ">
-        <a href="../../rlang/data_explorer_2.html">
-        data explorer 2
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/quickview1.html" title="Quick view 1" class="dd-item ">
-        <a href="../../rlang/quickview1.html">
-        Quick view 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/regular_expression.html" title="Regular expression syntax" class="dd-item ">
-        <a href="../../rlang/regular_expression.html">
-        Regular expression syntax
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_basic.html" title="type basic" class="dd-item ">
-        <a href="../../rlang/type_basic.html">
-        type basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_list.html" title="type list" class="dd-item ">
-        <a href="../../rlang/type_list.html">
-        type list
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_matrix.html" title="type matrix" class="dd-item ">
-        <a href="../../rlang/type_matrix.html">
-        type matrix
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_more.html" title="type more" class="dd-item ">
-        <a href="../../rlang/type_more.html">
-        type more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_post.html" title="type post" class="dd-item ">
-        <a href="../../rlang/type_post.html">
-        type post
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_string_function.html" title="type string" class="dd-item ">
-        <a href="../../rlang/type_string_function.html">
-        type string
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/type_vector.html" title="type vector" class="dd-item ">
-        <a href="../../rlang/type_vector.html">
-        type vector
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/filesystem.html" title="File System" class="dd-item ">
-        <a href="../../rlang/filesystem.html">
-        File System
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/programming_1.html" title="Programming 1" class="dd-item ">
-        <a href="../../rlang/programming_1.html">
-        Programming 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/apply_family.html" title="function - apply family" class="dd-item ">
-        <a href="../../rlang/apply_family.html">
-        function - apply family
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/function_1.html" title="Function basic" class="dd-item ">
-        <a href="../../rlang/function_1.html">
-        Function basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/rpackages.html" title="R Package" class="dd-item ">
-        <a href="../../rlang/rpackages.html">
-        R Package
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/plot01.html" title="Plot 01" class="dd-item ">
-        <a href="../../rlang/plot01.html">
-        Plot 01
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/plot02.html" title="Plot more" class="dd-item ">
-        <a href="../../rlang/plot02.html">
-        Plot more
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/environments.html" title="Environment" class="dd-item ">
-        <a href="../../rlang/environments.html">
-        Environment
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/sampling.html" title="sampling" class="dd-item ">
-        <a href="../../rlang/sampling.html">
-        sampling
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/eco_01_intro.html" title="Econometrics" class="dd-item ">
-        <a href="../../rlang/eco_01_intro.html">
-        Econometrics
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/sim_1.html" title="simulation 1" class="dd-item ">
-        <a href="../../rlang/sim_1.html">
-        simulation 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/hw.html" title="練習用" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../rlang/hw.html">
-          練習用
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/dataset_class.html" title="資料集" class="dd-item ">
-        <a href="../../rlang/hw/dataset_class.html">
-        資料集
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_filesystem.html" title="檔案系統" class="dd-item ">
-        <a href="../../rlang/hw/hw_filesystem.html">
-        檔案系統
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_basic.html" title="assignment-1" class="dd-item ">
-        <a href="../../rlang/hw/hw_basic.html">
-        assignment-1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/hw/hw_regexp.html" title="regexpr" class="dd-item ">
-        <a href="../../rlang/hw/hw_regexp.html">
-        regexpr
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/resources.html" title="練習相關檔案" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../rlang/resources.html">
-          練習相關檔案
-          
-      </a>
-      
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/rlang/demo.html" title="暫時" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../rlang/demo.html">
-          暫時
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/citation.html" title="引用" class="dd-item ">
-        <a href="../../rlang/demo/citation.html">
-        引用
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/ch6.html" title="Chapter 6" class="dd-item ">
-        <a href="../../rlang/demo/ch6.html">
-        Chapter 6
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/rlang/demo/ch7.html" title="Chapter 7" class="dd-item ">
-        <a href="../../rlang/demo/ch7.html">
-        Chapter 7
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic.html" title="Topics" class="dd-item
-        parent
-        
-        
-        ">
-      <a href="../../topic.html">
-          Topics
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_basic.html" title="Rmd basic" class="dd-item ">
-        <a href="../../topic/rmd/rmd_basic.html">
-        Rmd basic
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_hook.html" title="Rmd hook" class="dd-item ">
-        <a href="../../topic/rmd/rmd_hook.html">
-        Rmd hook
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_pdf.html" title="Rmd pdf" class="dd-item ">
-        <a href="../../topic/rmd/rmd_pdf.html">
-        Rmd pdf
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/rmd_topic_1.html" title="rmd topic 1" class="dd-item ">
-        <a href="../../topic/rmd/rmd_topic_1.html">
-        rmd topic 1
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/rmd/git-book-note.html" title="git book note" class="dd-item ">
-        <a href="../../topic/rmd/git-book-note.html">
-        git book note
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/interesting.html" title="interesting" class="dd-item ">
-        <a href="../../topic/interesting.html">
-        interesting
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic/experiment.html" title="實驗" class="dd-item
-        parent
-        
-        
-        ">
-      <a href="../../topic/experiment.html">
-          實驗
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/experiment/central.html" title="中央" class="dd-item active">
-        <a href="../../topic/experiment/central.html">
-        中央
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/topic/test.html" title="網頁測試" class="dd-item
-        
-        
-        
-        ">
-      <a href="../../topic/test.html">
-          網頁測試
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/test/emo_test.html" title="emoji_test" class="dd-item ">
-        <a href="../../topic/test/emo_test.html">
-        emoji_test
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/topic/test/testpage.html" title="testpage" class="dd-item ">
-        <a href="../../topic/test/testpage.html">
-        testpage
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-      
-    </li>
-  
- 
-
-          
-        
-    </ul>
-
+    <link href="../../css/theme.css?1631762489" rel="stylesheet">
     
     
+    <link rel="stylesheet" href="../../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
 
     
-    <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
-
-    </section>
-  </div>
-</nav>
-
-
-
-
-
-        <section id="body">
-        <div id="overlay"></div>
-        <div class="padding highlightable">
-              
-              <div>
-                <div id="top-bar">
-                
-                
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fas fa-bars"></i>
-                        </a>
-                    </span>
-                  
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
-                  <span class="links">
-                 
-                 
-                    
-          
-          
-            
-            
-          
-          
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='../../'>class log</a> > <a href='../../topic.html'>Topics</a> > <a href='../../topic/experiment.html'>實驗</a> > 中央
-          
-        
-          
-        
-          
-        
-          
-        
-                 
-                  </span>
-                </div>
-                
-                    <div class="progress">
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
     <div class="wrapper">
-<nav id="TableOfContents">
+        <nav id="TableOfContents">
 <ul>
 <li>
 <ul>
@@ -1238,39 +44,458 @@
 </ul>
 </nav>
     </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 4, 2021'>中央</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
 </div>
 
-                
-              </div>
-            </div>
-            
-        <div id="head-tags">
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
         
-        </div>
-        
-        <div id="body-inner">
           
-            <h1>
-              
-              中央
-
-            </h1>
-			
           
 
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
         
+          
+          
+
+ 
 
 
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
 
+  <a class="nav-link" 
+    href="../../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse show" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    
 
 <h2 id="r-markdown">R Markdown</h2>
 
 <p>員工的薪水分配，嚴重懷疑不是常態分配</p>
 
-<p>100: -&gt;<br />
-/mu&lt;-100<br />
-/sd()&lt;-100<br />
-/se(stander error) &lt;- /sd/sqrt(100)</p>
+<p>100: -&gt;</p>
+
+<ul>
+<li>mu&lt;-100<br /></li>
+<li>sd&lt;-100<br /></li>
+<li>se(stander error) &lt;- /sd/sqrt(100)<br />
+<br /></li>
+</ul>
 
 <p>1.96</p>
 
@@ -1280,43 +505,56 @@
 把我們得到的100個樣本，重複抽1000，(每次必須抽100個)然後得到1000個平均<br />
 mu,sd<br />
   percentile(2.5) , mu, percentile(97.5)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">N<span style="color:#f92672">&lt;-</span><span style="color:#ae81ff">10</span>
-metasample<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">rnorm</span>(N,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>)
 
-bmu<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">numeric</span>(<span style="color:#ae81ff">1000</span>)
-<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1000</span>){
-  rndno<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">as.integer</span>(<span style="color:#a6e22e">runif</span>(N)<span style="color:#f92672">*</span>N)<span style="color:#ae81ff">+1</span>  
-  smp<span style="color:#f92672">&lt;-</span>metasample[rndno]
-  bmu[i]<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">mean</span>(smp)
+<pre><code class="language-r">N&lt;-10
+metasample&lt;-rnorm(N,5,2)
+
+bmu&lt;-numeric(1000)
+for(i in 1:1000){
+  rndno&lt;-as.integer(runif(N)*N)+1  
+  smp&lt;-metasample[rndno]
+  bmu[i]&lt;-mean(smp)
   
 }
 
-p<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">density</span>(bmu)
-<span style="color:#a6e22e">plot</span>(p)
-qq<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">quantile</span>(bmu)
-<span style="color:#a6e22e">rug</span>(qq,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>)</code></pre></div>
+p&lt;-density(bmu)
+plot(p)
+qq&lt;-quantile(bmu)
+rug(qq,col=&quot;red&quot;)
+</code></pre>
+
 <p><img src="../../post/central_files/figure-html/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">qq
-<span style="color:#75715e">#&gt;       0%      25%      50%      75%     100% </span>
-<span style="color:#75715e">#&gt; 2.956123 4.972385 5.370682 5.739111 6.897819</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">N<span style="color:#f92672">&lt;-</span><span style="color:#ae81ff">100</span>
-metasample<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">rnorm</span>(N,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>)
 
-bmu<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">numeric</span>(<span style="color:#ae81ff">1000</span>)
-<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1000</span>){
-  rndno<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">as.integer</span>(<span style="color:#a6e22e">runif</span>(N)<span style="color:#f92672">*</span>N)<span style="color:#ae81ff">+1</span>  
-  smp<span style="color:#f92672">&lt;-</span>metasample[rndno]
-  bmu[i]<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">mean</span>(smp)
+<pre><code class="language-r">qq
+#&gt;       0%      25%      50%      75%     100% 
+#&gt; 2.956123 4.972385 5.370682 5.739111 6.897819
+</code></pre>
+
+<pre><code class="language-r">N&lt;-100
+metasample&lt;-rnorm(N,5,2)
+
+bmu&lt;-numeric(1000)
+for(i in 1:1000){
+  rndno&lt;-as.integer(runif(N)*N)+1  
+  smp&lt;-metasample[rndno]
+  bmu[i]&lt;-mean(smp)
   
 }
 
-p<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">density</span>(bmu)
-<span style="color:#a6e22e">plot</span>(p)
-qq<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">quantile</span>(bmu)
-<span style="color:#a6e22e">rug</span>(qq,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>)</code></pre></div>
+p&lt;-density(bmu)
+plot(p)
+qq&lt;-quantile(bmu)
+rug(qq,col=&quot;red&quot;)
+</code></pre>
+
 <p><img src="../../post/central_files/figure-html/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2" /></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">qq
-<span style="color:#75715e">#&gt;       0%      25%      50%      75%     100% </span>
-<span style="color:#75715e">#&gt; 4.813307 5.265694 5.383897 5.521531 5.898978</span></code></pre></div><pre><code class="language-.r .bg-danger" data-lang=".r .bg-danger">N&lt;-100
+
+<pre><code class="language-r">qq
+#&gt;       0%      25%      50%      75%     100% 
+#&gt; 4.813307 5.265694 5.383897 5.521531 5.898978
+</code></pre>
+
+<pre><code class="language-.r">N&lt;-100
 metasample&lt;-rnorm(N,5,2)
 
 hinfo&lt;-hist(metasample)
@@ -1324,866 +562,121 @@ hinfo&lt;-hist(metasample)
 lx&lt;-seq(min(metasample),max(metasample),length=100)
 ly&lt;-dnorm(lx,mean(metasample),sd(metasample))
 sy&lt;-ly*(diff(lx)[1])*N  
-lines(lx,sy,col=&#34;blue&#34;)</code></pre>
+lines(lx,sy,col=&quot;blue&quot;)
+</code></pre>
+
 <p><img src="../../post/central_files/figure-html/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3" /></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">N<span style="color:#f92672">&lt;-</span><span style="color:#ae81ff">100</span>
-metasample<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">rnorm</span>(N,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>)
 
-hinfo<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">hist</span>(metasample)
+<pre><code class="language-r">N&lt;-100
+metasample&lt;-rnorm(N,5,2)
+
+hinfo&lt;-hist(metasample)
 
 
-ly<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">dnorm</span>(hinfo<span style="color:#f92672">$</span>mids,<span style="color:#a6e22e">mean</span>(metasample),<span style="color:#a6e22e">sd</span>(metasample))
-sy<span style="color:#f92672">&lt;-</span>ly<span style="color:#f92672">*</span>(<span style="color:#a6e22e">diff</span>(hinfo<span style="color:#f92672">$</span>mids)[1])<span style="color:#f92672">*</span>N  
-<span style="color:#a6e22e">lines</span>(hinfo<span style="color:#f92672">$</span>mids,sy,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>)</code></pre></div>
+ly&lt;-dnorm(hinfo$mids,mean(metasample),sd(metasample))
+sy&lt;-ly*(diff(hinfo$mids)[1])*N  
+lines(hinfo$mids,sy,col=&quot;blue&quot;)
+</code></pre>
+
 <p><img src="../../post/central_files/figure-html/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" width="300px" /></p>
 
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
 
-<footer class="footline">
-	
-</footer>
-
-        
-        </div>
-        
-topic\experiment\central.md
-      </div>
-
-    <div id="navigation">
-        
-        
-
-        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-
-        
-
-
-	 
-	 
-		
-			<a class="nav nav-prev" href="../../topic/experiment.html" title="實驗"> <i class="fa fa-chevron-left"></i></a>
-		
-		
-			<a class="nav nav-next" href="../../topic/test.html" title="網頁測試" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-		
-	
     </div>
+</div>
 
-    </section>
+<link href="../../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+  
+<script src="../../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
 
-    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
-      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
-    </div>
-    <script src="../../js/clipboard.min.js?1609996082"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1609996082"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1609996082"></script>
-    <script src="../../js/jquery.sticky.js?1609996082"></script>
-    <script src="../../js/featherlight.min.js?1609996082"></script>
-    <script src="../../js/highlight.pack.js?1609996082"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1609996082"></script>
-    <script src="../../js/learn.js?1609996082"></script>
-    <script src="../../js/hugo-learn.js?1609996082"></script>
+
+  <script src="../../js/featherlight.min.js?1631762489"></script>
+  <script src="../../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../../js/hugohelper.js?1631762489"></script>
+
+  <link href="../../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../../js/localsearch.js?1631762489'></script>
     
-        
-            <script src="../../mermaid/mermaid.js?1609996082"></script>
-        
-        <script>
-            mermaid.initialize({ startOnLoad: true });
-        </script>
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
     
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
     
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
 
 
 
-  </body>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
 </html>
-

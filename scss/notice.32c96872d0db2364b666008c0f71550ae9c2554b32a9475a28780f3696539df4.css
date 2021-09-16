@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.info {
+  background-color: #84c2eb57;
+  border: solid  #84c2eb; }
+
+.warning {
+  border: solid rgba(217, 83, 79, 0.8);
+  background: #FAE2E2; }
+
+.tip {
+  background: #E6F9E6;
+  border: solid rgba(92, 184, 92, 0.8) 1px; }
+
+.notices {
+  margin: 1rem 2rem 1rem 3rem;
+  position: relative; }
+  .notices .info, .notices .warning, .notices .tip {
+    margin: 0px;
+    border-width: 20px 1px 1px 1px;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .notices .info:before, .notices .warning:before, .notices .tip:before {
+      position: absolute;
+      top: 0px;
+      left: 2px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 14px;
+      color: white;
+      content: "\f129"; }
+    .notices .info:after, .notices .warning:after, .notices .tip:after {
+      position: absolute;
+      top: 0px;
+      left: 18px;
+      content: "info";
+      font-size: 14px;
+      color: white;
+      content: "訊息"; }
+  .notices .warning:before {
+    content: "\f7ba"; }
+  .notices .warning:after {
+    content: "注意"; }
+  .notices .tip:before {
+    content: "\f7ba"; }
+  .notices .tip:after {
+    content: "註記"; }

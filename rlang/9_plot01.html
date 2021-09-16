@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html><head>
+  <title>9. Plot 01</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1631762489"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1631762489" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1631762489" rel="stylesheet">
+    <link href="../css/syntax.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1631762489" rel="stylesheet">
+    
+    <link href="../css/theme.css?1631762489" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#提點和參考">提點和參考</a>
+<ul>
+<li><a href="#basic">basic</a></li>
+<li><a href="#函數-plot">函數<code>plot()</code></a></li>
+<li><a href="#line-範例">line() 範例</a></li>
+<li><a href="#scatterplot-範例">scatterplot() 範例</a></li>
+<li><a href="#histograms">Histograms</a>
+<ul>
+<li><a href="#add-a-normal-curve">Add a Normal Curve</a></li>
+</ul></li>
+<li><a href="#kernel-density-plot">Kernel Density Plot</a>
+<ul>
+<li><a href="#filled-density-plot">Filled Density Plot</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#多個圖和疊圖">多個圖和疊圖</a>
+<ul>
+<li><a href="#多視窗">多視窗</a></li>
+<li><a href="#合併-plots">合併 Plots</a>
+<ul>
+<li><a href="#par"><code>par()</code></a></li>
+</ul></li>
+<li><a href="#rmd-中的圖">RMD 中的圖</a></li>
+<li><a href="#練習">練習</a>
+<ul>
+<li><a href="#layout"><code>layout()</code></a></li>
+</ul></li>
+<li><a href="#疊圖">疊圖</a></li>
+</ul></li>
+<li><a href="#分組畫圖">分組畫圖</a>
+<ul>
+<li><a href="#comparing-groups-via-kernal-density">Comparing Groups VIA Kernal Density</a>
+<ul>
+<li><a href="#compare-mpg-distributions-for-cars-with-4-6-or-8-cylinders">Compare MPG distributions for cars with  4,6, or 8 cylinders</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 8, 2021'>9. Plot 01</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_0_requirement.html"> <i class="far fa-clock" ></i>1 Requirement[2021-09-11 PM 04:23]</a></li><li><a href="../rlang/4_1_3_type_list.html"> <i class="far fa-clock" ></i>4.1.3 type list[2021-09-10 PM 11:49]</a></li><li><a href="../rlang/4_1_4_type_more.html"> <i class="far fa-clock" ></i>4.1.4 type more[2021-09-10 PM 11:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    
+
+<h2 id="提點和參考">提點和參考</h2>
+
+<p><a href="https://www.statmethods.net/graphs/creating.html">Quick R</a></p>
+
+<h3 id="basic">basic</h3>
+
+<p>一般視窗作業系統的繪圖，會有一個抽象物件<code>device</code>在這個device上，有一個抽象物件<code>canvas</code>，和繪圖工具例如，水彩筆之類的抽象物件可以指定顏色，線條粗細等等。 在R中,對應上述作業系統的關鍵字<code>.Devices</code>(paired list)、<code>.Device</code>(長度為1)、<code>dev.cur</code>(目前的裝置active device)。這裡說的Device指的是視窗。在視窗裡面的畫布,就是R提供的繪圖函數輸出所在,例如<code>plot()</code>,<code>hist()</code>等等。</p>
+
+<p>所以dev.new() 指的是開啟新視窗，dev.cur是目前視窗號碼,dev.prev()前一個視窗號碼。<br />
+而plot.new() 則是新增畫布。<a href="#背景練習">見練習</a></p>
+
+<p>㊙️ 怎樣快速查詢？</p>
+
+<ul>
+<li>??draw<br /></li>
+<li>?plot : 參考其中的<code>plot.default</code> 查看圖形選項<br />
+<br /></li>
+</ul>
+
+<h3 id="函數-plot">函數<code>plot()</code></h3>
+
+<p>可能最常用的繪圖函數就是plot(),而這個函數比較常用的選項有：</p>
+
+<ul>
+<li>type: 僅分佈點（預設）是否連線等基本模板。<br /></li>
+<li>lty: 線條樣式line style<br /></li>
+<li>lwd: 線條寬度line width<br /></li>
+<li>col:<br /></li>
+<li>pch: mark<br />
+<br />
+<br /></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="w-50 m-auto">
+<thead class="">
+<tr>
+<th class=text-end><strong>type</strong></th>
+<th class=text-start><strong>description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class=text-end>p</td>
+<td class=text-start>points</td>
+</tr>
+
+<tr>
+<td class=text-end>l</td>
+<td class=text-start>lines</td>
+</tr>
+
+<tr>
+<td class=text-end>o</td>
+<td class=text-start>重合的點和線段</td>
+</tr>
+
+<tr>
+<td class=text-end>b, c</td>
+<td class=text-start>b(both) 點+線,不重合 (如果是&quot;c&quot; 則沒有點)</td>
+</tr>
+
+<tr>
+<td class=text-end>s, S</td>
+<td class=text-start>stair steps</td>
+</tr>
+
+<tr>
+<td class=text-end>h</td>
+<td class=text-start>histogram-like vertical lines</td>
+</tr>
+
+<tr>
+<td class=text-end>n</td>
+<td class=text-start>does not produce any points or lines</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<p><strong>資料點 符號</strong></p>
+
+<p>設定樣本點的符號,可以用 <code>pch</code> (<strong>&quot;point character&quot;</strong>).</p>
+
+<p>pch 的值除了從 0 到 24 共25個符號外，還有 &quot;*&quot;, &quot;+&quot;, &quot;o&quot;, &quot;@&quot;, &quot;#&quot; 可以用。</p>
+
+<pre><code>      pch=0    square
+      pch=1    circle
+      pch=2    triangle point up
+      pch=3    plus
+      pch=4    cross
+      pch=5    diamond
+      pch=6    triangle point down
+      pch=7    square cross
+      pch=8    star
+      pch=9    diamond plus
+      pch=10   circle plus
+      pch=11   triangles up and down
+      pch=12   square plus
+      pch=13   circle cross
+      pch=14   square and triangle down
+      pch=15   filled square blue
+      pch=16   filled circle blue
+      pch=17   filled triangle point up blue
+      pch=18   filled diamond blue
+      pch=19   solid circle blue
+      pch=20   bullet (smaller circle)
+      pch=21   filled circle red
+      pch=22   filled square red
+      pch=23   filled diamond red
+      pch=24   filled triangle point up red
+      pch=25   filled triangle point down red
+</code></pre>
+
+<p><strong>cex 資料點大小</strong></p>
+
+<p>cex 用來放大文字或符號的倍數</p>
+
+<p>因此, cex = 1     is default size<br />
+      cex = 1.5   is 150% of default size<br />
+      cex = 0.5   is 50% of default size</p>
+
+<p>[Note :  cex.axis  --&gt; scales the axis<br />
+         cex.lab   ---&gt; scales the label<br />
+         cex.main --&gt; scales main title<br />
+         cex.sub  ---&gt; scales the subtitle ]</p>
+
+<p><strong>線條型態</strong></p>
+
+<pre><code>     lty = 0     or    lty = &quot;blank&quot;
+     lty = 1     or    lty = &quot;solid&quot;
+     lty = 2     or    lty = &quot;dashed&quot;
+     lty = 3     or    lty = &quot;dotted&quot;
+     lty = 4     or    lty = &quot;dotdash&quot;
+     lty = 5     or    lty = &quot;longdash&quot;
+     lty = 6     or    lty = &quot;twodash&quot;
+</code></pre>
+
+<p><a href="#線條類型">參考後節</a><br />
+<strong>顏色 col</strong></p>
+
+<p>col = &quot;blue<br />
+col = &quot;red&quot;</p>
+
+<div class="notices">
+    <div class= info>
+        <p>col 後的值,可用colors() 來查詢顏色,會傳回 657 代表顏色的參數。或者也可以直接用16進位數字，例如</p>
+
+<p>col = &quot;#A9F3BB&quot;   ------&gt;  colour corresponding to  Red=A9, Green=F3, Blue=BB in hexadecimal representation.</p>
+
+    </div>
+</div>
+
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-2-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<pre><code class="language-r">par(def.par) 
+#&gt; Warning in par(def.par): 無法設定繪圖參數 &quot;cin&quot;
+#&gt; Warning in par(def.par): 無法設定繪圖參數 &quot;cra&quot;
+#&gt; Warning in par(def.par): 無法設定繪圖參數 &quot;csi&quot;
+#&gt; Warning in par(def.par): 無法設定繪圖參數 &quot;cxy&quot;
+#&gt; Warning in par(def.par): 無法設定繪圖參數 &quot;din&quot;
+#&gt; Warning in par(def.par): 無法設定繪圖參數 &quot;page&quot;
+</code></pre>
+
+<p>繪製向量 中的資料</p>
+
+<pre><code class="language-r">x &lt;- c(1,3,4,7,8,9)
+y &lt;- c(0,3,6,9,7,8)
+plot(x,y,main='plot(x,y)')
+</code></pre>
+
+<p>繪製data.frame 中的資料</p>
+
+<pre><code class="language-r">
+plot(mtcars$wt, mtcars$mpg) 
+abline(lm(mtcars$mpg~mtcars$wt))
+title(&quot;Regression of MPG on Weight&quot;)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" /><br />
+如果不想要打$字號,則用<code>attach()</code></p>
+
+<pre><code class="language-r">attach(mtcars)
+plot(wt, mpg) 
+abline(lm(mpg~wt))
+title(&quot;Regression of MPG on Weight&quot;)
+
+</code></pre>
+
+<p><code>plot()</code>函數，新建視窗然後畫出 weight vs. miles per gallon.<br />
+<code>abline()</code> 不會開啟新視窗做圖，abline()的語法如下:</p>
+
+<p>abline(a = NULL, b = NULL, h = NULL, v = NULL, reg = NULL,coef = NULL, untf = FALSE, …)<br />
+代表的意思是畫出一條直線<code>a+bx</code> ，其中a代表截距常數，b則是斜率常數。例如</p>
+
+<ul>
+<li><code>Y=2X+1</code>，則對應的函數為 <code>abline(a=1,b=2)</code> 。<br /></li>
+<li>abline(h=3),水平線<br /></li>
+<li>abline(v=2) 垂直<br />
+<br /></li>
+</ul>
+
+<p>函數畫圖</p>
+
+<p>x: -pi ~ 2*pi<br />
+y: sin(x)</p>
+
+<pre><code class="language-r">plot(sin, -pi, 2*pi) 
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<h3 id="line-範例">line() 範例</h3>
+
+<pre><code class="language-r">require(stats) # for lowess, rpois, rnorm
+summary(cars)
+#&gt;      speed           dist       
+#&gt;  Min.   : 4.0   Min.   :  2.00  
+#&gt;  1st Qu.:12.0   1st Qu.: 26.00  
+#&gt;  Median :15.0   Median : 36.00  
+#&gt;  Mean   :15.4   Mean   : 42.98  
+#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  
+#&gt;  Max.   :25.0   Max.   :120.00
+plot(cars)
+lines(lowess(cars)) #<span class="codenote nopre">🏷<span class="tooltiptext" >疊上額外的線條 </span></span>
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" /><br />
+&gt; <a href="https://www.ime.unicamp.br/~dias/loess.pdf">LOWESS</a>, locally weighted scatter plot smoothing。<br />
+&gt; <a href="https://biotoolbox.binghamton.edu/Graphics%20in%20R/scatter%20plots/scatter%20plots%20A/Scatterplots.pdf">相關閱讀</a><br />
+&gt;</p>
+
+<pre><code class="language-r">attach(cars)
+plot(speed,dist,main=&quot;Stopping Distance&quot;, xlab=&quot;Speed&quot;, ylab=&quot;Distance&quot;, pch=21, bg=2, col=2)
+lines(lowess(cars, f=.3),col =1)
+lines(lowess(cars, f=.5),col =4)
+lines(lowess(cars, f=.1),col =7)
+</code></pre>
+
+<h3 id="scatterplot-範例">scatterplot() 範例</h3>
+
+<p>範例</p>
+
+<pre><code class="language-r">if(!require(&quot;car&quot;))
+  install.packages(&quot;car&quot;,repos=&quot;http://cran.us.r-project.org&quot;) # <span class="codenote nopre">🏷<span class="tooltiptext" > scatterplot 在這個套件中 </span></span> 
+#&gt; 載入需要的套件：car
+#&gt; 載入需要的套件：carData
+library(car)
+scatterplot(wt ~ mpg, data = mtcars)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<ul>
+<li>綠線: 回歸線<br /></li>
+<li>紅色虛線:the smoothed conditional spread<br /></li>
+
+<li><p>紅色實線:the non-parametric regression smooth</p>
+
+<pre><code class="language-r">scatterplot(wt ~ mpg, data = mtcars, 
+        smooth = FALSE, grid = FALSE, frame = FALSE)
+</code></pre></li>
+</ul>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<h3 id="histograms">Histograms</h3>
+
+<p>函數<code>hist(x)</code>：其中x是一個數字向量，</p>
+
+<ul>
+<li>選項<code>freq=FALSE</code> 用來畫出 probability densities 而不是次數 frequencies.<br /></li>
+<li>選項：<code>breaks= ##</code> 則是控制分成幾份。<br />
+<br /></li>
+</ul>
+
+<p><strong>Simple Histogram</strong></p>
+
+<pre><code class="language-r">hist(mtcars$mpg)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<p><strong>分成12份，顏色紅色。</strong></p>
+
+<pre><code class="language-r">hist(mtcars$mpg, breaks=12, col=&quot;red&quot;)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<p>自行給定分割點</p>
+
+<pre><code class="language-r">hist(mtcars$mpg, breaks=c(4,5,12,50), col=&quot;red&quot;)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<h4 id="add-a-normal-curve">Add a Normal Curve</h4>
+
+<p>Histograms can be a poor method for determining the shape of a distribution because it is so strongly affected by the number of bins used.</p>
+
+<pre><code class="language-r">x &lt;- mtcars$mpg 
+h&lt;-hist(x, breaks=10, col=&quot;red&quot;, xlab=&quot;Miles Per Gallon&quot;, main=&quot;Histogram with Normal Curve&quot;) 
+xfit&lt;-seq(min(x),max(x),length=40) 
+yfit&lt;-dnorm(xfit,mean=mean(x),sd=sd(x)) 
+yfit &lt;- yfit*diff(h$mids[1:2])*length(x) #<span class="codenote nopre">🏷<span class="tooltiptext" >length(X)是個數,不是長度 </span></span>
+lines(xfit, yfit, col=&quot;blue&quot;, lwd=2)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" /><br />
+hint:<br />
+h: 次數分配圖,又</p>
+
+<p>$$ pdf  = \frac{機率}{長度} =\frac{\frac{n}{N}}{bin \quad width} $$</p>
+
+<p>所以</p>
+
+<p>$$ n=pdf\times N \times (bin \quad width) $$</p>
+
+<pre><code class="language-r">h
+#&gt; $breaks
+#&gt;  [1] 10 12 14 16 18 20 22 24 26 28 30 32 34
+#&gt; 
+#&gt; $counts
+#&gt;  [1] 2 1 7 3 5 5 2 2 1 0 2 2
+#&gt; 
+#&gt; $density
+#&gt;  [1] 0.031250 0.015625 0.109375 0.046875 0.078125 0.078125 0.031250 0.031250
+#&gt;  [9] 0.015625 0.000000 0.031250 0.031250
+#&gt; 
+#&gt; $mids
+#&gt;  [1] 11 13 15 17 19 21 23 25 27 29 31 33
+#&gt; 
+#&gt; $xname
+#&gt; [1] &quot;x&quot;
+#&gt; 
+#&gt; $equidist
+#&gt; [1] TRUE
+#&gt; 
+#&gt; attr(,&quot;class&quot;)
+#&gt; [1] &quot;histogram&quot;
+</code></pre>
+
+<h3 id="kernel-density-plot">Kernel Density Plot</h3>
+
+<p>核密度畫圖(Kernal density plots) 用來觀察一個變量，比較有有效率，指令如：<code>plot(density(x))</code> 其中<code>x</code> 是一個數字向量。</p>
+
+<pre><code class="language-r">d &lt;- density(mtcars$mpg) # returns the density data 
+plot(d) # plots the results
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<h4 id="filled-density-plot">Filled Density Plot</h4>
+
+<pre><code class="language-r">d &lt;- density(mtcars$mpg)
+plot(d, main=&quot;Kernel Density of Miles Per Gallon&quot;)
+polygon(d, col=&quot;red&quot;, border=&quot;blue&quot;)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-16-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<h2 id="多個圖和疊圖">多個圖和疊圖</h2>
+
+<p>傻瓜指令例如 (plot, hist, boxplot, etc.)基本上會開啟新視窗，然後畫圖,而line(),scatterplot()則是疊圖。這裡另外看看幾種自行控制的方法：</p>
+
+<p>多視窗(multiple windows)、組合圖(combining figure) 和疊圖(overlay)討論。</p>
+
+<h3 id="多視窗">多視窗</h3>
+
+<p>開多視窗的方法根據OS而不同，如下：</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">Function</th>
+<th align="left">Platform</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="right">windows()</td>
+<td align="left">Windows</td>
+</tr>
+
+<tr>
+<td align="right">X11()</td>
+<td align="left">Unix</td>
+</tr>
+
+<tr>
+<td align="right">quartz()</td>
+<td align="left">Mac</td>
+</tr>
+</tbody>
+</table>
+
+<p>要關閉視窗，可以用函數<code>dev.off()</code><br />
+如果要知道目前的視窗是那一個，可以參考 <code>dev.cur()</code>。<br />
+Note:<br />
+如果目前有多個圖窗，則一直呼叫這個函數<code>dev.off()</code>，會依次關閉視窗，直到函數傳回NULL。</p>
+
+<p>驗證上面的說法可以利用</p>
+
+<pre><code class="language-r">hist(mtcars$mpg)
+dev.cur()
+#&gt; png 
+#&gt;   2
+hist(mtcars$mpg)
+dev.cur()
+#&gt; png 
+#&gt;   2
+dev.off()
+#&gt; null device 
+#&gt;           1
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-17-1.png" width="70%" style="display: block; margin: auto;" /><br />
+❓上面的範例，可以看到圖裝置的編號都是2，也就是多個圖在一個視窗上。這是因為在Rmakdown中,視窗都是預設的裝置,方便整合到最後的文件中,如果在rscript中,則dev.cur()會顯示兩個編號。</p>
+
+<p>討論下面的輸出結果，：</p>
+
+<p><div class="position-relative warning p-0">
+<p>比較程式碼在rmarkdown和console中執行的結果？</p>
+
+<pre><code class="language-r">if(.Platform$OS.type==&quot;windows&quot;) windows() else X11()
+
+hist(mtcars$mpg)
+dev.cur()
+
+if(.Platform$OS.type==&quot;windows&quot;) windows() else X11()
+
+hist(mtcars$mpg)
+dev.cur()
+
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-07301">提示</button>
+</div>    
+
+<br />
+<div class="collapse" id="quiz-07301">在rscript✔中執行正常。</div>
+</p>
+
+<span id='背景練習'>⛳**測試,練習** </span>
+
+<pre><code>plot.new() # 同一個視窗，新增圖層
+dev.new() #新視窗
+plot(1:1)
+dev.new()
+plot(2,2)
+dev.set(dev.prev()) # go back to first
+title(main=&quot;test dev 1&quot;)
+
+dev.set(dev.next()) # go to second
+title(main=&quot;test dev 2&quot;)
+</code></pre>
+
+<h3 id="合併-plots">合併 Plots</h3>
+
+<h4 id="par"><code>par()</code></h4>
+
+<p><a href="https://thepracticalr.wordpress.com/tag/plotting/">about par()</a><br />
+同時顯示多個<code>plot</code>的結果，可以利用函數<code>par()</code> or <code>layout( )</code>。</p>
+
+<p>函數<code>par( )</code>的選項有：<br />
+mfrow=c(nrows, ncols) 填plot的方向為橫行(matrix flow by row)。<br />
+mfcol=c(nrows, ncols) 填入的方向為直行。</p>
+
+<p>在console執行(課堂執行)</p>
+
+<pre><code class="language-r">def.par&lt;-par() # <span class="codenote nopre">🏷<span class="tooltiptext" >將目前的參數存到def.par </span></span>
+def.par$mfrow
+def.par&lt;-par(mfrow=c(1,3))
+def.par$mfrow
+par()$mfrow # 目前的設定
+par(def.par) # 還原
+</code></pre>
+
+<p>x&lt;-par() 會把目前的參數拿出存到變數x。  如果par() 放了參數,會在設定完新參數以後，傳回舊紀錄(一個原因是,便於以後再還原)。在這個過程中，有些參數是無法修改的，因此</p>
+
+<pre><code class="language-r">op &lt;- par(no.readonly = TRUE) # <span class="codenote nopre">🏷<span class="tooltiptext" >op現在放的是所有可以修改的參數和參數值。 </span></span>
+... (操作)
+par(op) # <span class="codenote nopre">🏷<span class="tooltiptext" >重設 </span></span>
+</code></pre>
+
+<div class="notices">
+    <div class= tip>
+        <code>no.readonly=T</code>是說不要唯讀參數
+    </div>
+</div>
+
+
+<span id='線條類型'>⛳線條形式`type`的幾種基本類型範例 </span>
+
+<pre><code class="language-r">x &lt;- c(1,3,4,7,8,9)
+y &lt;- c(0,3,6,9,7,8)
+
+par(mfrow=c(2,3))
+plot(x,y,main='plot(x,y)',color=&quot;red&quot;)
+#&gt; Warning in plot.window(...): &quot;color&quot; 不是一個繪圖參數
+#&gt; Warning in plot.xy(xy, type, ...): &quot;color&quot; 不是一個繪圖參數
+#&gt; Warning in axis(side = side, at = at, labels = labels, ...): &quot;color&quot; 不是一個繪
+#&gt; 圖參數
+
+#&gt; Warning in axis(side = side, at = at, labels = labels, ...): &quot;color&quot; 不是一個繪
+#&gt; 圖參數
+#&gt; Warning in box(...): &quot;color&quot; 不是一個繪圖參數
+#&gt; Warning in title(...): &quot;color&quot; 不是一個繪圖參數
+plot(x,y,type=&quot;l&quot;,main=&quot;plot(x,y,type='l')&quot;,color=&quot;green&quot;)
+#&gt; Warning in plot.window(...): &quot;color&quot; 不是一個繪圖參數
+#&gt; Warning in plot.xy(xy, type, ...): &quot;color&quot; 不是一個繪圖參數
+#&gt; Warning in axis(side = side, at = at, labels = labels, ...): &quot;color&quot; 不是一個繪
+#&gt; 圖參數
+
+#&gt; Warning in axis(side = side, at = at, labels = labels, ...): &quot;color&quot; 不是一個繪
+#&gt; 圖參數
+#&gt; Warning in box(...): &quot;color&quot; 不是一個繪圖參數
+#&gt; Warning in title(...): &quot;color&quot; 不是一個繪圖參數
+plot(x,y,type=&quot;b&quot;,main=&quot;plot(x,y,type='b')&quot;)
+plot(x,y,type=&quot;o&quot;,main=&quot;plot(x,y,type='o')&quot;)
+plot(x,y,type=&quot;s&quot;,main=&quot;plot(x,y,type='s')&quot;)
+plot(x,y,type=&quot;h&quot;,main=&quot;plot(x,y,type='h')&quot;)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<p>範例</p>
+
+<pre><code class="language-r">
+attach(mtcars)
+
+par(mfrow=c(2,2))
+plot(wt,mpg, main=&quot;Scatterplot of wt vs. mpg&quot;)
+plot(wt,disp, main=&quot;Scatterplot of wt vs disp&quot;)
+hist(wt, main=&quot;Histogram of wt&quot;)
+boxplot(wt, main=&quot;Boxplot of wt&quot;)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-19-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<pre><code class="language-r"># attach(mtcars)
+par(mfrow=c(1,3)) 
+hist(wt)
+hist(mpg)
+hist(disp)
+#dev.off()
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-20-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<div class="notices">
+    <div class= sidebar>
+        <p>note:<br />
+par(mar) 列出margin<br />
+par(mar=c(1,1,1,1)) 更動margin</p>
+
+<p>plot.new()常發生的錯誤 : figure margins too large</p>
+
+<p>有兩個原因：1 是畫布過小 2，當前畫布的上下左右距離過大<br />
+這裡看看如何解第二個發生原因</p>
+
+<p>默認的畫布上邊款的距離為：<br />
+ 預設為 c(5, 4, 4, 2) + 0.1. 對應 c(bottom, left, top, right)，也就是順時針，由下到右結束一圈。</p>
+
+<p>我們可以將其設置為0，同時將目前的設定紀錄，後面程式的第一行</p>
+
+<pre><code class="language-r">op &lt;- par(mar = rep(0, 4))   # op 會紀錄之前的margin = 5.1 4.1 4.1 2.1  
+plot.new() # 畫圖   
+par(op) # 改回原先的margin  
+</code></pre>
+
+    </div>
+</div>
+
+
+<div class="notices">
+    <div class= sidebar>
+        <p>是不是有需要寫個新函數，用來重設裝置參數？<br />
+下面這個函數<code>resetPar()</code>產生新的重設參數,用來將device回復成原先的設定值:</p>
+
+<p>主要看這一行:<code>par(no.readonly = TRUE)</code>。<br />
+意思是說，不要傳回 readonly的設定。</p>
+
+<pre><code class="language-r">resetPar &lt;- function() {
+    dev.new() #重新開始一個裝置
+    op &lt;- par(no.readonly = TRUE)#因為是新的，所以裡面的設定都是預設值
+    dev.off()# 只是把之前的新裝置關掉
+    op # 傳回預設值
+}
+# 使用方法
+par(resetPar)
+</code></pre>
+
+<p>提要</p>
+
+<pre><code class="language-r">par()              # view current settings  
+opar &lt;- par()      # make a copy of current settings  
+par(col.lab=&quot;red&quot;) # red x and y labels   
+hist(mtcars$mpg)   # create a plot with these new settings  
+par(opar)          #回復原來的設定
+</code></pre>
+
+    </div>
+</div>
+
+
+<p>更多的圖形控制: 在散佈圖中加入boxplot</p>
+
+<pre><code class="language-r"># windows圖的座標，左下角(0,0)右上角(1,1)
+par(mar=rep(2,4)) #設定margin
+par(fig=c(0,0.8,0,0.8)) #<span class="codenote nopre">🏷<span class="tooltiptext" > X軸從0到0.8,Y軸也是。因此，左下(0,0)右上(0.8,0.8)</span></span> 
+# <span class="codenote nopre">🏷<span class="tooltiptext" > 左下(x1,y1)右上(x2,y2) =&gt; c(x1,x2,y1,y2) </span></span> 
+plot(mtcars$wt, mtcars$mpg, xlab=&quot;Car Weight&quot;,ylab=&quot;Miles Per Gallon&quot;)
+par(fig=c(0,0.8,0.55,1), new=TRUE) #<span class="codenote nopre">🏷<span class="tooltiptext" >同一個圖,因為沒有設定dev.new </span></span>
+boxplot(mtcars$wt, horizontal=TRUE, axes=FALSE)
+par(fig=c(0.65,1,0,0.8),new=TRUE)
+boxplot(mtcars$mpg, axes=FALSE)
+mtext(&quot;Enhanced Scatterplot&quot;, side=3, outer=TRUE, line=-3)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-22-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<h3 id="rmd-中的圖">RMD 中的圖</h3>
+
+<p>並排顯示圖形(<a href="https://holtzy.github.io/Pimp-my-rmd/">參考</a>):</p>
+
+<pre><code class="language-md">```{r out.width=c('50%', '50%') , fig.show='hold'}
+boxplot(1:10)
+plot(rnorm(10))
+```
+</code></pre>
+
+
+  <figure  class="figure text-center d-block border border-primary ">
+
+
+
+
+
+
+
+    <img src="9_Plot01.files/%e4%b8%a6%e6%8e%92.png" class="figure-img"
+         alt="執行結果" width="100%"/> <figcaption class="figure-caption">
+            執行結果
+        </figcaption>
+
+</figure>
+
+
+<h3 id="練習">練習</h3>
+
+<p><strong>練習1</strong><br />
+ 讓下面兩個圖重疊</p>
+
+<pre><code class="language-r"> boxplot(mtcars$wt,  axes=FALSE)
+par(new=TRUE)
+boxplot(mtcars$mpg, axes=FALSE)
+</code></pre>
+
+<p><strong>練習2</strong><br />
+ 讓disp,mpg 的histogram 疊在一起:</p>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-25-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<p><strong>練習3</strong><br />
+<a href="http://www.programmingr.com/content/positioning-charts-fig-and-fin/">測試這篇文章</a></p>
+
+<h4 id="layout"><code>layout()</code></h4>
+
+<p>函數 layout( ) 的使用方法為 layout(mat) 其中<br />
+mat 的元素用來指定圖形號碼。例如分成4個格子,順序為左右上下(byrow=TRUE)</p>
+
+<p>如<code>layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))</code> 對應如下表</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-r"># One figure in row 1 and two figures in row 2
+
+#attach(mtcars)
+layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))
+hist(wt)
+hist(mpg)
+hist(disp)
+#dev.off()
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-27-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<p>在<code>layout()</code>函數中，也可以更改圖形大小，其參數 為：<br />
+widths= 數字向量，用來代表column 寬度<br />
+heights= 數字向量，用來代表row 高度</p>
+
+<p>note:Relative widths are specified with numeric values. Absolute widths (in centimetres) are specified with the lcm() function.</p>
+
+<h3 id="疊圖">疊圖</h3>
+
+<p>有些繪圖指令的選項，可以利用<code>add=T</code>。</p>
+
+<p>💥 plot指令不支援<code>add=T</code></p>
+
+<pre><code class="language-r">curve( dnorm(x,0,1), -5 , 5, lwd=1, lty=1)
+curve( dnorm(x,0,2), add=TRUE, lwd=2, lty=2)
+curve( dnorm(x,0,3) , add=TRUE, lwd=3, lty=3)
+# Add the legend
+legend( &quot;topright&quot;,c(&quot;sigma=1&quot;,&quot;sigma=2&quot;,&quot;sigma=3&quot;) , lwd=1:3, lty=1:3)
+</code></pre>
+
+<p><img src="../rlang/9_Plot01_files/figure-html/unnamed-chunk-28-1.png" width="70%" style="display: block; margin: auto;" /></p>
+
+<h2 id="分組畫圖">分組畫圖</h2>
+
+<h3 id="comparing-groups-via-kernal-density">Comparing Groups VIA Kernal Density</h3>
+
+<p>The sm.density.compare( ) function in the sm package allows you to superimpose the kernal density plots of two or more groups. The format is sm.density.compare(x, factor) where x is a numeric vector and factor is the grouping variable.</p>
+
+<h4 id="compare-mpg-distributions-for-cars-with-4-6-or-8-cylinders">Compare MPG distributions for cars with  4,6, or 8 cylinders</h4>
+
+<pre><code class="language-r">library(sm)
+attach(mtcars)
+
+#create value labels 
+cyl.f &lt;- factor(cyl, levels= c(4,6,8),
+  labels = c(&quot;4 cylinder&quot;, &quot;6 cylinder&quot;, &quot;8 cylinder&quot;)) 
+
+#plot densities 
+sm.density.compare(mpg, cyl, xlab=&quot;Miles Per Gallon&quot;)
+title(main=&quot;MPG Distribution by Car Cylinders&quot;)
+
+#add legend via mouse click
+colfill&lt;-c(2:(2+length(levels(cyl.f)))) 
+legend(locator(1), levels(cyl.f), fill=colfill)
+
+</code></pre>
+
+<p><img src="./diagrams/class/mpg_plot01.png" alt="" /></p>
+
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1631762489" rel="stylesheet">
+<script src="../js/quicknote.js?1631762489"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/8_00_rpackages.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=8.&#32;R&#32;Package>前</a>
+                   
+          
+            <a href="../rlang/10_00_tidybasic01.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=10.&#32;TidyBasic01>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1631762489"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1631762489"></script>
+  <script src="../js/featherlight.gallery.min.js?1631762489"></script>
+  <link href="../css/featherlight.min.css?1631762489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1631762489" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1631762489"></script>
+  
+  <script src="../js/hugohelper.js?1631762489"></script>
+
+  <link href="../css/rmd.css?1631762489" rel="stylesheet">
+  <link href="../css/mystyle.css?1631762489" rel="stylesheet">    
+  <script src='../js/variant.js?1631762489'></script>
+
+<script>
+  var idxfile = "\//index.json"
+</script>
+<script src='../js/localsearch.js?1631762489'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>
