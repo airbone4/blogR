@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rmarkdown on R in Class</title>
-    <link>https://airbone4.github.io/blogR/topic/rmd.html</link>
+    <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd.html</link>
     <description>Recent content in rmarkdown on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/topic/rmd/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://www2.nkust.edu.tw/~linchao/test/topic/rmd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 Rmd basic</title>
-      <link>https://airbone4.github.io/blogR/topic/rmd/01_rmd_basic.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/01_rmd_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/topic/rmd/01_rmd_basic.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/01_rmd_basic.html</guid>
       <description>rbook 提要 markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。
 在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)參考下節。
 相關指令和流程可以參考這裡
@@ -24,15 +24,15 @@ knitr::purl(&amp;quot;03-purl.Rmd&amp;quot;) # output: 03-purl.R
  資料探索和RMD 範例:
  mtcars 中的資料筆數有 32。
  我比較常用的格式 這裡稍微解釋一下RMD文件表頭中的yaml:
---- title: &amp;quot;處理2003(92R)變數AB v1&amp;quot; author: &amp;quot;lin&amp;quot; date: &amp;quot;08 八月, 2021, 13:49&amp;quot; header-includes: - \usepackage{xeCJK} - \setCJKmainfont{標楷體} output: html_document: toc: yes toc_float: collapsed: false # smooth_scroll: true # df_print: paged highlight: tango css: [&amp;quot;adv-r.</description>
+--- title: &amp;quot;處理2003(92R)變數AB v1&amp;quot; author: &amp;quot;lin&amp;quot; date: &amp;quot;16 九月, 2021, 12:58&amp;quot; header-includes: - \usepackage{xeCJK} - \setCJKmainfont{標楷體} output: html_document: toc: yes toc_float: collapsed: false # smooth_scroll: true # df_print: paged highlight: tango css: [&amp;quot;adv-r.</description>
     </item>
     
     <item>
       <title>04 Rmd hook</title>
-      <link>https://airbone4.github.io/blogR/topic/rmd/04_rmd_hook.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/04_rmd_hook.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/topic/rmd/04_rmd_hook.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/04_rmd_hook.html</guid>
       <description>背景 提取程式碼 參考
 knitr hook 插塊(chunk)顏色 有關hook 的設定,參考 knitr hook
 設定警告訊息為紅色
@@ -43,10 +43,10 @@ rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&amp;quot;#&amp;quot;,na.
     
     <item>
       <title>03 Rmd pdf</title>
-      <link>https://airbone4.github.io/blogR/topic/rmd/03_rmd_pdf.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/03_rmd_pdf.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/topic/rmd/03_rmd_pdf.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/03_rmd_pdf.html</guid>
       <description>產生PDF 文件 ** 中文字型問題 ** 參考
 update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update()  中文：
 不要管那麼多網路上講的，就
@@ -60,32 +60,37 @@ meta data 上的pdf 設定,常見版本 --- title: &amp;quot;Habits&amp;quot; au
     
     <item>
       <title>05 rmd topic 1</title>
-      <link>https://airbone4.github.io/blogR/topic/rmd/05_rmd_topic_1.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/05_rmd_topic_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/topic/rmd/05_rmd_topic_1.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/05_rmd_topic_1.html</guid>
       <description>討論  hook
  Verbatim Chunks in R Markdow
  HTML widgets
  R Notebook HTML FOrmat
  Render option
- hook example
-  more
- dynamic book
-  TOC 問題
+hook example
+ more
+dynamic book
+ TOC 問題
   publish to github tutorial
 在chunk中，顯示RMD語法 讓inline code 不作用 inline 讓內籤R程式碼不作用:方法是兩邊打上”``空白”。例如:
-inline(&amp;quot;dd&amp;quot;) ===&amp;gt; `` `r dd` ``  測試
+inline(&amp;quot;dd&amp;quot;)
+===&amp;gt; `r dd`
+
+&amp;lt;/div&amp;gt;  
+測試
 執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
-```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;} cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)) # 我想要前後加上```,但是顯示的結果不換行 # txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;) # cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;))) ```  留著測試</description>
+```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;} cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)) # 我想要前後加上```,但是顯示的結果不換行 # txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;) # cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;))) ```  留著測試
+有意思的程式片段 只編譯一個RMD文件 使用套件中的內部函數,為:::,例如 blogdown:::build_rmds()。</description>
     </item>
     
     <item>
       <title>02 git book note</title>
-      <link>https://airbone4.github.io/blogR/topic/rmd/02_git-book-note.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/02_git-book-note.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/topic/rmd/02_git-book-note.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/02_git-book-note.html</guid>
       <description>gitbook introduction 3個地方需要注意:
 _output.yml
 _bookdown.yml

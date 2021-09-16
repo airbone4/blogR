@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>練習用 on R in Class</title>
-    <link>https://airbone4.github.io/blogR/rlang/hw.html</link>
+    <link>http://www2.nkust.edu.tw/~linchao/test/rlang/hw.html</link>
     <description>Recent content in 練習用 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/rlang/hw/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://www2.nkust.edu.tw/~linchao/test/rlang/hw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>資料集</title>
-      <link>https://airbone4.github.io/blogR/rlang/hw/dataset_class.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/dataset_class.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/rlang/hw/dataset_class.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/dataset_class.html</guid>
       <description>❓
 1. 要知道目前有哪些資料集
 - 📝data()可以列出目前有甚麼資料可以用,也可以放入參數,只列出某個package的資料集。
@@ -20,18 +20,18 @@
 1. 要知道資料集cars的欄位
 1. 列出前10筆資料
 - normal
-- pretty: 📝 安裝DT: install.pacakges(&amp;quot;DT&amp;quot;),參考 💣 會缺失各種程式庫
+- pretty: 📝 安裝DT: install.pacakges(“DT”),參考 💣 會缺失各種程式庫
 hint  data()
  names(cars)
-List of 4 #🏷👍跟我們說這是list ,有4個元素 $ title : chr &amp;quot;Data sets&amp;quot; $ header : NULL $ results: chr [1:104, 1:4] # 🏷(這是一個字串矩陣,可以大致資料在這裡) &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; ... ..- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 ## 🏷(2維度的名稱,這裡可以看到沒有ROW名稱,但是有欄位名稱) .. ..$ : NULL .. ..$ : chr [1:4] #🏷(這裡可以看出是一個矩陣) &amp;quot;Package&amp;quot; &amp;quot;LibPath&amp;quot; &amp;quot;Item&amp;quot; &amp;quot;Title&amp;quot; $ footer : chr &amp;quot;Use ‘data(package = .</description>
+List of 4 #🏷👍跟我們說這是list ,有4個元素 $ title : chr &amp;quot;Data sets&amp;quot; $ header : NULL $ results: chr [1:104, 1:4] # 🏷(這是一個字串矩陣,可以大致資料在這裡) &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; ... ..- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 ## 🏷(2維度的名稱,這裡可以看到沒有ROW名稱,但是有欄位名稱) .. ..$ : NULL .</description>
     </item>
     
     <item>
       <title>檔案系統</title>
-      <link>https://airbone4.github.io/blogR/rlang/hw/hw_filesystem.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_filesystem.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/rlang/hw/hw_filesystem.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_filesystem.html</guid>
       <description>❓ 1  要知道目前有哪些套件
  View
  列表(datatable)
@@ -40,15 +40,15 @@ List of 4 #🏷👍跟我們說這是list ,有4個元素 $ title : chr &amp;quot
   分析
  主要版本第2版的有幾個,有哪些?
  平均每個套件有幾個檔案?
-pkgs&amp;lt;-installed.packages() str(pkgs) #&amp;gt; chr [1:169, 1:16] &amp;quot;addinStataFast&amp;quot; &amp;quot;askpass&amp;quot; &amp;quot;assertthat&amp;quot; &amp;quot;babynames&amp;quot; ... #&amp;gt; - attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 #&amp;gt; ..$ : chr [1:169] &amp;quot;addinStataFast&amp;quot; &amp;quot;askpass&amp;quot; &amp;quot;assertthat&amp;quot; &amp;quot;babynames&amp;quot; ... #&amp;gt; ..$ : chr [1:16] &amp;quot;Package&amp;quot; &amp;quot;LibPath&amp;quot; &amp;quot;Version&amp;quot; &amp;quot;Priority&amp;quot; ... # 🏷上面可以知道是matrix head(rownames(pkgs),5) #&amp;gt; [1] &amp;quot;addinStataFast&amp;quot; &amp;quot;askpass&amp;quot; &amp;quot;assertthat&amp;quot; &amp;quot;babynames&amp;quot; #&amp;gt; [5] &amp;quot;backports&amp;quot; head(colnames(pkgs),5) #&amp;gt; [1] &amp;quot;Package&amp;quot; &amp;quot;LibPath&amp;quot; &amp;quot;Version&amp;quot; &amp;quot;Priority&amp;quot; &amp;quot;Depends&amp;quot;  library(DT) #&amp;gt; Warning: package &#39;DT&#39; was built under R version 4.</description>
+pkgs&amp;lt;-installed.packages() str(pkgs) #&amp;gt; chr [1:206, 1:16] &amp;quot;abind&amp;quot; &amp;quot;AER&amp;quot; &amp;quot;askpass&amp;quot; &amp;quot;assertthat&amp;quot; &amp;quot;babynames&amp;quot; ... #&amp;gt; - attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 #&amp;gt; ..$ : chr [1:206] &amp;quot;abind&amp;quot; &amp;quot;AER&amp;quot; &amp;quot;askpass&amp;quot; &amp;quot;assertthat&amp;quot; ... #&amp;gt; ..$ : chr [1:16] &amp;quot;Package&amp;quot; &amp;quot;LibPath&amp;quot; &amp;quot;Version&amp;quot; &amp;quot;Priority&amp;quot; .</description>
     </item>
     
     <item>
       <title>assignment-1</title>
-      <link>https://airbone4.github.io/blogR/rlang/hw/hw_basic.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/rlang/hw/hw_basic.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_basic.html</guid>
       <description>part 1 basic  參考程式碼,數學上,e既然是純量,那就是1X1的矩陣。在R中,如果 e&amp;lt;-3那麼在R中判斷e是不是相量,是不是矩陣?
 e&amp;lt;-3 length(e) #&amp;gt; [1] 1 is.vector(e) # q1: true or false #&amp;gt; [1] TRUE is.matrix(e) # q2: true or false #&amp;gt; [1] FALSE # 指定沒有任何資料的向量 e1&amp;lt;-numeric(0) length(e1) #&amp;gt; [1] 0 is.vector(e) # q3: true or false #&amp;gt; [1] TRUE  建立向量e21,e22,e23 解釋出現的訊息
 e21&amp;lt;-1:3 # 向量,內容為[1,2,3] 也可以e2&amp;lt;-seq(1,3),e2&amp;lt;-c(1,2,3) e22&amp;lt;-1:4 e23&amp;lt;-1:6 e21==e23 #&amp;gt; [1] TRUE TRUE TRUE FALSE FALSE FALSE e21==e22 #&amp;gt; Warning in e21 == e22: 較長的物件長度並非較短物件長度的倍數 #&amp;gt; [1] TRUE TRUE TRUE FALSE  &amp;gt; e21==e23 [1] TRUE TRUE TRUE FALSE FALSE FALSE &amp;gt; e21==e22 [1] TRUE TRUE TRUE FALSE Warning message: In e21 == e22 : 較長的物件長度並非較短物件長度的倍數   3.</description>
@@ -56,10 +56,10 @@ e21&amp;lt;-1:3 # 向量,內容為[1,2,3] 也可以e2&amp;lt;-seq(1,3),e2&amp;lt
     
     <item>
       <title>regexpr</title>
-      <link>https://airbone4.github.io/blogR/rlang/hw/hw_regexp.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_regexp.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/rlang/hw/hw_regexp.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_regexp.html</guid>
       <description>reference cheatsheet
 抽取字組 看看是不是#開頭的字串,如果是的話要置換,例如
 &amp;quot;# hello&amp;quot; -&amp;gt;&amp;quot;# hello &amp;quot;

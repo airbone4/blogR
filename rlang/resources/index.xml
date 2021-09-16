@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>練習相關檔案 on R in Class</title>
-    <link>https://airbone4.github.io/blogR/rlang/resources.html</link>
+    <link>http://www2.nkust.edu.tw/~linchao/test/rlang/resources.html</link>
     <description>Recent content in 練習相關檔案 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/rlang/resources/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://www2.nkust.edu.tw/~linchao/test/rlang/resources/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

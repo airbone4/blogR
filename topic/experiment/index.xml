@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>實驗 on R in Class</title>
-    <link>https://airbone4.github.io/blogR/topic/experiment.html</link>
+    <link>http://www2.nkust.edu.tw/~linchao/test/topic/experiment.html</link>
     <description>Recent content in 實驗 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/topic/experiment/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://www2.nkust.edu.tw/~linchao/test/topic/experiment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>中央</title>
-      <link>https://airbone4.github.io/blogR/topic/experiment/central.html</link>
+      <link>http://www2.nkust.edu.tw/~linchao/test/topic/experiment/central.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/blogR/topic/experiment/central.html</guid>
+      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/experiment/central.html</guid>
       <description>R Markdown 員工的薪水分配，嚴重懷疑不是常態分配
 100: -&amp;gt;
  mu&amp;lt;-100
@@ -23,7 +23,7 @@ boot strapping
 把我們得到的100個樣本，重複抽1000，(每次必須抽100個)然後得到1000個平均
 mu,sd
 percentile(2.5) , mu, percentile(97.5)
-N&amp;lt;-10 metasample&amp;lt;-rnorm(N,5,2) bmu&amp;lt;-numeric(1000) for(i in 1:1000){ rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno] bmu[i]&amp;lt;-mean(smp) } p&amp;lt;-density(bmu) plot(p) qq&amp;lt;-quantile(bmu) rug(qq,col=&amp;quot;red&amp;quot;)  qq #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 2.956123 4.972385 5.370682 5.739111 6.897819  N&amp;lt;-100 metasample&amp;lt;-rnorm(N,5,2) bmu&amp;lt;-numeric(1000) for(i in 1:1000){ rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno] bmu[i]&amp;lt;-mean(smp) } p&amp;lt;-density(bmu) plot(p) qq&amp;lt;-quantile(bmu) rug(qq,col=&amp;quot;red&amp;quot;)  qq #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 4.</description>
+N&amp;lt;-10 metasample&amp;lt;-rnorm(N,5,2) bmu&amp;lt;-numeric(1000) for(i in 1:1000){ rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno] bmu[i]&amp;lt;-mean(smp) } p&amp;lt;-density(bmu) plot(p) qq&amp;lt;-quantile(bmu) rug(qq,col=&amp;quot;red&amp;quot;) qq #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 3.791672 5.163775 5.632060 6.048594 7.543827  N&amp;lt;-100 metasample&amp;lt;-rnorm(N,5,2) bmu&amp;lt;-numeric(1000) for(i in 1:1000){ rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno] bmu[i]&amp;lt;-mean(smp) } p&amp;lt;-density(bmu) plot(p) qq&amp;lt;-quantile(bmu) rug(qq,col=&amp;quot;red&amp;quot;) qq #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 4.</description>
     </item>
     
   </channel>
