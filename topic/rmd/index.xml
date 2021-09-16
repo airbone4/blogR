@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rmarkdown on R in Class</title>
-    <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd.html</link>
+    <link>/topic/rmd.html</link>
     <description>Recent content in rmarkdown on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://www2.nkust.edu.tw/~linchao/test/topic/rmd/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/topic/rmd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 Rmd basic</title>
-      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/01_rmd_basic.html</link>
+      <link>/topic/rmd/01_rmd_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/01_rmd_basic.html</guid>
+      <guid>/topic/rmd/01_rmd_basic.html</guid>
       <description>rbook 提要 markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。
 在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)參考下節。
 相關指令和流程可以參考這裡
@@ -24,15 +24,15 @@ knitr::purl(&amp;quot;03-purl.Rmd&amp;quot;) # output: 03-purl.R
  資料探索和RMD 範例:
  mtcars 中的資料筆數有 32。
  我比較常用的格式 這裡稍微解釋一下RMD文件表頭中的yaml:
---- title: &amp;quot;處理2003(92R)變數AB v1&amp;quot; author: &amp;quot;lin&amp;quot; date: &amp;quot;16 九月, 2021, 12:58&amp;quot; header-includes: - \usepackage{xeCJK} - \setCJKmainfont{標楷體} output: html_document: toc: yes toc_float: collapsed: false # smooth_scroll: true # df_print: paged highlight: tango css: [&amp;quot;adv-r.</description>
+--- title: &amp;quot;處理2003(92R)變數AB v1&amp;quot; author: &amp;quot;lin&amp;quot; date: &amp;quot;16 九月, 2021, 13:12&amp;quot; header-includes: - \usepackage{xeCJK} - \setCJKmainfont{標楷體} output: html_document: toc: yes toc_float: collapsed: false # smooth_scroll: true # df_print: paged highlight: tango css: [&amp;quot;adv-r.</description>
     </item>
     
     <item>
       <title>04 Rmd hook</title>
-      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/04_rmd_hook.html</link>
+      <link>/topic/rmd/04_rmd_hook.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/04_rmd_hook.html</guid>
+      <guid>/topic/rmd/04_rmd_hook.html</guid>
       <description>背景 提取程式碼 參考
 knitr hook 插塊(chunk)顏色 有關hook 的設定,參考 knitr hook
 設定警告訊息為紅色
@@ -43,10 +43,10 @@ rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&amp;quot;#&amp;quot;,na.
     
     <item>
       <title>03 Rmd pdf</title>
-      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/03_rmd_pdf.html</link>
+      <link>/topic/rmd/03_rmd_pdf.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/03_rmd_pdf.html</guid>
+      <guid>/topic/rmd/03_rmd_pdf.html</guid>
       <description>產生PDF 文件 ** 中文字型問題 ** 參考
 update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update()  中文：
 不要管那麼多網路上講的，就
@@ -60,10 +60,10 @@ meta data 上的pdf 設定,常見版本 --- title: &amp;quot;Habits&amp;quot; au
     
     <item>
       <title>05 rmd topic 1</title>
-      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/05_rmd_topic_1.html</link>
+      <link>/topic/rmd/05_rmd_topic_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/05_rmd_topic_1.html</guid>
+      <guid>/topic/rmd/05_rmd_topic_1.html</guid>
       <description>討論  hook
  Verbatim Chunks in R Markdow
  HTML widgets
@@ -87,10 +87,10 @@ inline(&amp;quot;dd&amp;quot;)
     
     <item>
       <title>02 git book note</title>
-      <link>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/02_git-book-note.html</link>
+      <link>/topic/rmd/02_git-book-note.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/02_git-book-note.html</guid>
+      <guid>/topic/rmd/02_git-book-note.html</guid>
       <description>gitbook introduction 3個地方需要注意:
 _output.yml
 _bookdown.yml

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on R in Class</title>
-    <link>http://www2.nkust.edu.tw/~linchao/test/tags.html</link>
+    <link>/tags.html</link>
     <description>Recent content in Tags on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://www2.nkust.edu.tw/~linchao/test/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>環境變數</title>
-      <link>http://www2.nkust.edu.tw/~linchao/test/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html</link>
+      <link>/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www2.nkust.edu.tw/~linchao/test/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html</guid>
+      <guid>/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html</guid>
       <description></description>
     </item>
     

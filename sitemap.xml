@@ -2,205 +2,205 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/01_rmd_basic.html</loc>
-    <lastmod>2021-09-16T12:58:51+08:00</lastmod>
+    <loc>/topic/rmd/01_rmd_basic.html</loc>
+    <lastmod>2021-09-16T13:12:47+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/1_0_requirement.html</loc>
-    <lastmod>2021-09-16T12:56:17+08:00</lastmod>
+    <loc>/rlang/1_0_requirement.html</loc>
+    <lastmod>2021-09-16T13:09:04+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/04_rmd_hook.html</loc>
-    <lastmod>2021-09-16T12:59:00+08:00</lastmod>
+    <loc>/topic/rmd/04_rmd_hook.html</loc>
+    <lastmod>2021-09-16T13:12:56+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/2_data_explorer_1.html</loc>
-    <lastmod>2021-09-16T12:56:53+08:00</lastmod>
+    <loc>/rlang/2_data_explorer_1.html</loc>
+    <lastmod>2021-09-16T13:10:06+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/2_1_data_explorer_2.html</loc>
-    <lastmod>2021-09-16T12:56:49+08:00</lastmod>
+    <loc>/rlang/2_1_data_explorer_2.html</loc>
+    <lastmod>2021-09-16T13:09:57+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/3_quickview1.html</loc>
-    <lastmod>2021-09-16T12:57:01+08:00</lastmod>
+    <loc>/rlang/3_quickview1.html</loc>
+    <lastmod>2021-09-16T13:10:19+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/3_01_regular_expression.html</loc>
-    <lastmod>2021-09-16T12:56:57+08:00</lastmod>
+    <loc>/rlang/3_01_regular_expression.html</loc>
+    <lastmod>2021-09-16T13:10:10+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_1_4_type_more.html</loc>
-    <lastmod>2021-09-16T12:57:19+08:00</lastmod>
+    <loc>/rlang/4_1_4_type_more.html</loc>
+    <lastmod>2021-09-16T13:10:42+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_2_type_post.html</loc>
-    <lastmod>2021-09-16T12:57:22+08:00</lastmod>
+    <loc>/rlang/4_2_type_post.html</loc>
+    <lastmod>2021-09-16T13:10:45+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_3_type_matrix.html</loc>
-    <lastmod>2021-09-16T12:57:25+08:00</lastmod>
+    <loc>/rlang/4_3_type_matrix.html</loc>
+    <lastmod>2021-09-16T13:10:48+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_3_a_type_matrix.html</loc>
+    <loc>/rlang/4_3_a_type_matrix.html</loc>
     <lastmod>2021-09-09T23:51:01+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_4_type_string_function.html</loc>
-    <lastmod>2021-09-16T12:57:31+08:00</lastmod>
+    <loc>/rlang/4_4_type_string_function.html</loc>
+    <lastmod>2021-09-16T13:10:55+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_5_type_vector.html</loc>
-    <lastmod>2021-09-16T12:57:35+08:00</lastmod>
+    <loc>/rlang/4_5_type_vector.html</loc>
+    <lastmod>2021-09-16T13:10:58+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_06_topic_dataframe.html</loc>
-    <lastmod>2021-09-16T12:57:04+08:00</lastmod>
+    <loc>/rlang/4_06_topic_dataframe.html</loc>
+    <lastmod>2021-09-16T13:10:22+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/5_filesystem.html</loc>
-    <lastmod>2021-09-16T12:57:38+08:00</lastmod>
+    <loc>/rlang/5_filesystem.html</loc>
+    <lastmod>2021-09-16T13:11:01+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/5_objectbasic.html</loc>
-    <lastmod>2021-09-16T12:57:42+08:00</lastmod>
+    <loc>/rlang/5_objectbasic.html</loc>
+    <lastmod>2021-09-16T13:11:05+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/6_programming_1.html</loc>
-    <lastmod>2021-09-16T12:57:45+08:00</lastmod>
+    <loc>/rlang/6_programming_1.html</loc>
+    <lastmod>2021-09-16T13:11:08+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/7_function_1.html</loc>
-    <lastmod>2021-09-16T12:57:57+08:00</lastmod>
+    <loc>/rlang/7_function_1.html</loc>
+    <lastmod>2021-09-16T13:11:20+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/7_1_apply_family.html</loc>
-    <lastmod>2021-09-16T12:57:49+08:00</lastmod>
+    <loc>/rlang/7_1_apply_family.html</loc>
+    <lastmod>2021-09-16T13:11:12+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/7_8_function_2.html</loc>
-    <lastmod>2021-09-16T12:57:53+08:00</lastmod>
+    <loc>/rlang/7_8_function_2.html</loc>
+    <lastmod>2021-09-16T13:11:17+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/8_00_rpackages.html</loc>
-    <lastmod>2021-09-16T12:58:00+08:00</lastmod>
+    <loc>/rlang/8_00_rpackages.html</loc>
+    <lastmod>2021-09-16T13:11:24+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/9_plot01.html</loc>
-    <lastmod>2021-09-16T12:58:12+08:00</lastmod>
+    <loc>/rlang/9_plot01.html</loc>
+    <lastmod>2021-09-16T13:11:40+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/03_rmd_pdf.html</loc>
-    <lastmod>2021-09-16T12:58:57+08:00</lastmod>
+    <loc>/topic/rmd/03_rmd_pdf.html</loc>
+    <lastmod>2021-09-16T13:12:53+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/05_rmd_topic_1.html</loc>
-    <lastmod>2021-09-16T12:59:04+08:00</lastmod>
+    <loc>/topic/rmd/05_rmd_topic_1.html</loc>
+    <lastmod>2021-09-16T13:12:59+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/10_00_tidybasic01.html</loc>
-    <lastmod>2021-09-16T12:56:27+08:00</lastmod>
+    <loc>/rlang/10_00_tidybasic01.html</loc>
+    <lastmod>2021-09-16T13:09:19+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/rmd/02_git-book-note.html</loc>
-    <lastmod>2021-09-16T12:58:54+08:00</lastmod>
+    <loc>/topic/rmd/02_git-book-note.html</loc>
+    <lastmod>2021-09-16T13:12:50+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/11_00_sampling.html</loc>
-    <lastmod>2021-09-16T12:56:31+08:00</lastmod>
+    <loc>/rlang/11_00_sampling.html</loc>
+    <lastmod>2021-09-16T13:09:29+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/13_0_eco_01_intro.html</loc>
-    <lastmod>2021-09-16T12:56:39+08:00</lastmod>
+    <loc>/rlang/13_0_eco_01_intro.html</loc>
+    <lastmod>2021-09-16T13:09:37+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/14_00_sim_1.html</loc>
-    <lastmod>2021-09-16T12:56:45+08:00</lastmod>
+    <loc>/rlang/14_00_sim_1.html</loc>
+    <lastmod>2021-09-16T13:09:48+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/hugo_shortcode.html</loc>
+    <loc>/hugo_shortcode.html</loc>
     <lastmod>2021-09-04T08:07:05+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/dataset_class.html</loc>
-    <lastmod>2021-09-16T12:58:24+08:00</lastmod>
+    <loc>/rlang/hw/dataset_class.html</loc>
+    <lastmod>2021-09-16T13:12:03+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_filesystem.html</loc>
-    <lastmod>2021-09-16T12:58:32+08:00</lastmod>
+    <loc>/rlang/hw/hw_filesystem.html</loc>
+    <lastmod>2021-09-16T13:12:14+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/hw.html</loc>
+    <loc>/rlang/hw.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/resources.html</loc>
+    <loc>/rlang/resources.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/demo.html</loc>
+    <loc>/rlang/demo.html</loc>
     <lastmod>2021-09-04T08:07:05+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/demo/car.html</loc>
-    <lastmod>2021-09-16T12:58:16+08:00</lastmod>
+    <loc>/rlang/demo/car.html</loc>
+    <lastmod>2021-09-16T13:11:50+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/demo/citation.html</loc>
-    <lastmod>2021-09-16T12:58:21+08:00</lastmod>
+    <loc>/rlang/demo/citation.html</loc>
+    <lastmod>2021-09-16T13:12:00+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/11_environments.html</loc>
-    <lastmod>2021-09-16T12:56:35+08:00</lastmod>
+    <loc>/rlang/11_environments.html</loc>
+    <lastmod>2021-09-16T13:09:34+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/1_1_%E5%9F%B7%E8%A1%8C.html</loc>
-    <lastmod>2021-09-16T12:56:20+08:00</lastmod>
+    <loc>/rlang/1_1_%E5%9F%B7%E8%A1%8C.html</loc>
+    <lastmod>2021-09-16T13:09:07+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_1_1_type_basic.html</loc>
-    <lastmod>2021-09-16T12:57:08+08:00</lastmod>
+    <loc>/rlang/4_1_1_type_basic.html</loc>
+    <lastmod>2021-09-16T13:10:26+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</loc>
-    <lastmod>2021-09-16T12:57:11+08:00</lastmod>
+    <loc>/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</loc>
+    <lastmod>2021-09-16T13:10:29+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_1_3_type_list.html</loc>
-    <lastmod>2021-09-16T12:57:15+08:00</lastmod>
+    <loc>/rlang/4_1_3_type_list.html</loc>
+    <lastmod>2021-09-16T13:10:33+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/4_4_1_json.html</loc>
-    <lastmod>2021-09-16T12:57:28+08:00</lastmod>
+    <loc>/rlang/4_4_1_json.html</loc>
+    <lastmod>2021-09-16T13:10:51+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/9_1_plot02.html</loc>
-    <lastmod>2021-09-16T12:58:05+08:00</lastmod>
+    <loc>/rlang/9_1_plot02.html</loc>
+    <lastmod>2021-09-16T13:11:34+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_basic.html</loc>
-    <lastmod>2021-09-16T12:58:28+08:00</lastmod>
+    <loc>/rlang/hw/hw_basic.html</loc>
+    <lastmod>2021-09-16T13:12:07+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/categories.html</loc>
-    <lastmod>2021-09-16T12:58:39+08:00</lastmod>
+    <loc>/categories.html</loc>
+    <lastmod>2021-09-16T13:12:27+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/</loc>
+    <loc>/</loc>
     <lastmod>2021-09-04T08:07:05+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/test/emo_test.html</loc>
-    <lastmod>2021-09-16T12:59:07+08:00</lastmod>
+    <loc>/topic/test/emo_test.html</loc>
+    <lastmod>2021-09-16T13:13:02+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/interesting.html</loc>
-    <lastmod>2021-09-16T12:58:48+08:00</lastmod>
+    <loc>/topic/interesting.html</loc>
+    <lastmod>2021-09-16T13:12:44+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/economics/mc_%E5%9F%BA%E6%9C%AC.html</loc>
-    <lastmod>2021-09-16T12:55:57+08:00</lastmod>
+    <loc>/economics/mc_%E5%9F%BA%E6%9C%AC.html</loc>
+    <lastmod>2021-09-16T13:08:33+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/economics/mpg.html</loc>
-    <lastmod>2021-09-16T12:56:04+08:00</lastmod>
+    <loc>/economics/mpg.html</loc>
+    <lastmod>2021-09-16T13:08:45+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/categories/r.html</loc>
-    <lastmod>2021-09-16T12:58:39+08:00</lastmod>
+    <loc>/categories/r.html</loc>
+    <lastmod>2021-09-16T13:12:27+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/hw/hw_regexp.html</loc>
-    <lastmod>2021-09-16T12:58:35+08:00</lastmod>
+    <loc>/rlang/hw/hw_regexp.html</loc>
+    <lastmod>2021-09-16T13:12:20+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang.html</loc>
-    <lastmod>2021-09-16T12:58:42+08:00</lastmod>
+    <loc>/rlang.html</loc>
+    <lastmod>2021-09-16T13:12:31+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/rmd.html</loc>
+    <loc>/topic/rmd.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/tags.html</loc>
-    <lastmod>2021-09-16T12:58:39+08:00</lastmod>
+    <loc>/tags.html</loc>
+    <lastmod>2021-09-16T13:12:27+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/test/testpage.html</loc>
-    <lastmod>2021-09-16T12:59:10+08:00</lastmod>
+    <loc>/topic/test/testpage.html</loc>
+    <lastmod>2021-09-16T13:13:05+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/experiment/central.html</loc>
-    <lastmod>2021-09-16T12:58:45+08:00</lastmod>
+    <loc>/topic/experiment/central.html</loc>
+    <lastmod>2021-09-16T13:12:41+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html</loc>
-    <lastmod>2021-09-16T12:58:39+08:00</lastmod>
+    <loc>/rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html</loc>
+    <lastmod>2021-09-16T13:12:27+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/economics/%E5%89%8D%E7%BD%AE.html</loc>
-    <lastmod>2021-09-16T12:56:14+08:00</lastmod>
+    <loc>/economics/%E5%89%8D%E7%BD%AE.html</loc>
+    <lastmod>2021-09-16T13:09:01+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/economics.html</loc>
+    <loc>/economics.html</loc>
     <lastmod>2021-09-05T00:21:39+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/experiment.html</loc>
+    <loc>/topic/experiment.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic.html</loc>
+    <loc>/topic.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/rlang/%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</loc>
-    <lastmod>2021-09-16T12:58:42+08:00</lastmod>
+    <loc>/rlang/%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</loc>
+    <lastmod>2021-09-16T13:12:31+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html</loc>
-    <lastmod>2021-09-16T12:58:39+08:00</lastmod>
+    <loc>/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html</loc>
+    <lastmod>2021-09-16T13:12:27+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/sitetecnote/site-note.html</loc>
+    <loc>/topic/sitetecnote/site-note.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
-    <loc>http://www2.nkust.edu.tw/~linchao/test/topic/test.html</loc>
+    <loc>/topic/test.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url>
 </urlset>

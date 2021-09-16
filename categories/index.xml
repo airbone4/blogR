@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on R in Class</title>
-    <link>http://www2.nkust.edu.tw/~linchao/test/categories.html</link>
+    <link>/categories.html</link>
     <description>Recent content in Categories on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://www2.nkust.edu.tw/~linchao/test/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R</title>
-      <link>http://www2.nkust.edu.tw/~linchao/test/categories/r.html</link>
+      <link>/categories/r.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www2.nkust.edu.tw/~linchao/test/categories/r.html</guid>
+      <guid>/categories/r.html</guid>
       <description></description>
     </item>
     
