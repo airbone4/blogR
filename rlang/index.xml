@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/2_2_data_explorer.html</guid>
-      <description>資料探索 常用函數  Mean Median Quartile Percentile Range Interquartile Range Box Plot Variance Standard Deviation Covariance Correlation Coefficient Central Moment Skewness Kurtosis  mean(mtcars$mpg) #&amp;gt; [1] 20.09062 median(mtcars$mpg) #&amp;gt; [1] 19.2 min(mtcars$mpg) #&amp;gt; [1] 10.4 max(mtcars$mpg) #&amp;gt; [1] 33.9 quantile(mtcars$mpg) #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 10.400 15.425 19.200 22.800 33.900 quantile(mtcars$mpg,c(0.2)) #&amp;gt; 20% #&amp;gt; 15.2 require(moments) #&amp;gt; 載入需要的套件：moments skewness(mtcars$mpg) #&amp;gt; [1] 0.</description>
+      <description>資料探索 常用函數  Mean Median Quartile Percentile Range Interquartile Range Box Plot Variance Standard Deviation Covariance Correlation Coefficient Central Moment Skewness Kurtosis  mean(mtcars$mpg) #&amp;gt; [1] 20.09062 median(mtcars$mpg) #&amp;gt; [1] 19.2 min(mtcars$mpg) #&amp;gt; [1] 10.4 max(mtcars$mpg) #&amp;gt; [1] 33.9 quantile(mtcars$mpg) #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 10.400 15.425 19.200 22.800 33.900 quantile(mtcars$mpg,c(0.2)) #&amp;gt; 20% #&amp;gt; 15.2 if(!require(moments))install.</description>
     </item>
     
     <item>
@@ -39,11 +39,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/3_quickview1.html</guid>
-      <description>quick view 快速指令
+      <description>快速指令
 目前有哪些資料集可以測試 data() attach() 一般是
 library(sample)data(&amp;quot;mydata&amp;quot;) attach(&amp;quot;mydata&amp;quot;) 就不用打入mydata$欄位名稱
 幾個常用的統計量: x&amp;lt;-c(1,2,3)median(x)mean(x)min(x)sd(x)range(x)diff(x) 資料型態和內容 可以先看看資料描述 ?mtcars
-mtcars#&amp;gt; mpg cyl disp hp drat wt qsec vs am gear carb#&amp;gt; Mazda RX4 21.0 6 160.0 110 3.90 2.620 16.46 0 1 4 4#&amp;gt; Mazda RX4 Wag 21.0 6 160.0 110 3.90 2.875 17.02 0 1 4 4#&amp;gt; Datsun 710 22.8 4 108.</description>
+mtcars #&amp;gt; mpg cyl disp hp drat wt qsec vs am gear carb#&amp;gt; Mazda RX4 21.0 6 160.0 110 3.90 2.620 16.46 0 1 4 4#&amp;gt; Mazda RX4 Wag 21.0 6 160.0 110 3.90 2.875 17.02 0 1 4 4#&amp;gt; Datsun 710 22.8 4 108.</description>
     </item>
     
     <item>
