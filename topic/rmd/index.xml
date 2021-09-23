@@ -17,14 +17,12 @@
 相關指令和流程可以參考這裡
 如果有共用的yaml ,可以參考這裡
  程式員會比較想知道相關的的流程:
-The script is converted to Rmd through knitr::spin(); then rmarkdown::render() will render the Rmd。
-也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。
-Convert Rmd to R script
-knitr::purl(&amp;quot;03-purl.Rmd&amp;quot;) # output: 03-purl.R
+The script is converted to Rmd through knitr::spin(); then rmarkdown::render() will render the Rmd。 也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。
+  Convert Rmd to R script knitr::purl(&amp;quot;03-purl.Rmd&amp;quot;) # output: 03-purl.R
  資料探索和RMD 範例:
  mtcars 中的資料筆數有 32。
  我比較常用的格式 這裡稍微解釋一下RMD文件表頭中的yaml:
---- title: &amp;quot;處理2003(92R)變數AB v1&amp;quot; author: &amp;quot;lin&amp;quot; date: &amp;quot;16 九月, 2021, 13:12&amp;quot; header-includes: - \usepackage{xeCJK} - \setCJKmainfont{標楷體} output: html_document: toc: yes toc_float: collapsed: false # smooth_scroll: true # df_print: paged highlight: tango css: [&amp;quot;adv-r.</description>
+---title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;16 九月, 2021, 13:12&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
     </item>
     
     <item>
@@ -36,9 +34,9 @@ knitr::purl(&amp;quot;03-purl.Rmd&amp;quot;) # output: 03-purl.R
       <description>背景 提取程式碼 參考
 knitr hook 插塊(chunk)顏色 有關hook 的設定,參考 knitr hook
 設定警告訊息為紅色
-knitr::knit_hooks$set(error = function(x, options) { paste0(&amp;quot;&amp;lt;pre style=\&amp;quot;color: red;\&amp;quot;&amp;gt;&amp;lt;code&amp;gt;&amp;quot;, x, &amp;quot;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;quot;) })  其他範例 #Color Format colFmt = function(x,color){ outputFormat = opts_knit$get(&amp;quot;rmarkdown.pandoc.to&amp;quot;) if(outputFormat == &#39;latex&#39;) paste(&amp;quot;\\textcolor{&amp;quot;,color,&amp;quot;}{&amp;quot;,x,&amp;quot;}&amp;quot;,sep=&amp;quot;&amp;quot;) else if(outputFormat == &#39;html&#39;) paste(&amp;quot;&amp;lt;font color=&#39;&amp;quot;,color,&amp;quot;&#39;&amp;gt;&amp;quot;,x,&amp;quot;&amp;lt;/font&amp;gt;&amp;quot;,sep=&amp;quot;&amp;quot;) else x }  terminal output 問題:如果以要看檔案內容,而不想被無關的輸出符號干擾,例如[1],那麼如果再R SCRIPT中可以使用 system(&amp;quot;cat 檔案名稱&amp;quot;) ,但是在R Markdown中(如下)不會顯示出結果:
+knitr::knit_hooks$set(error = function(x, options) {paste0(&amp;quot;&amp;lt;pre style=\&amp;quot;color: red;\&amp;quot;&amp;gt;&amp;lt;code&amp;gt;&amp;quot;, x, &amp;quot;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;quot;)}) 其他範例 #Color FormatcolFmt = function(x,color){outputFormat = opts_knit$get(&amp;quot;rmarkdown.pandoc.to&amp;quot;)if(outputFormat == &#39;latex&#39;)paste(&amp;quot;\\textcolor{&amp;quot;,color,&amp;quot;}{&amp;quot;,x,&amp;quot;}&amp;quot;,sep=&amp;quot;&amp;quot;)else if(outputFormat == &#39;html&#39;)paste(&amp;quot;&amp;lt;font color=&#39;&amp;quot;,color,&amp;quot;&#39;&amp;gt;&amp;quot;,x,&amp;quot;&amp;lt;/font&amp;gt;&amp;quot;,sep=&amp;quot;&amp;quot;)elsex} terminal output 問題:如果以要看檔案內容,而不想被無關的輸出符號干擾,例如[1],那麼如果再R SCRIPT中可以使用 system(&amp;quot;cat 檔案名稱&amp;quot;) ,但是在R Markdown中(如下)不會顯示出結果:
 🔖 wh.csv
-rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&amp;quot;#&amp;quot;,na.string=&#39;.&#39;) write.csv(rst, file = &amp;quot;MyData.csv&amp;quot;,row.names=FALSE, na=&amp;quot;&amp;quot;) system(&amp;quot;cat MyData.csv&amp;quot;)  You can use either</description>
+rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&amp;quot;#&amp;quot;,na.string=&#39;.&#39;)write.csv(rst, file = &amp;quot;MyData.csv&amp;quot;,row.names=FALSE, na=&amp;quot;&amp;quot;)system(&amp;quot;cat MyData.csv&amp;quot;) You can use either</description>
     </item>
     
     <item>
@@ -48,14 +46,11 @@ rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&amp;quot;#&amp;quot;,na.
       
       <guid>/topic/rmd/03_rmd_pdf.html</guid>
       <description>產生PDF 文件 ** 中文字型問題 ** 參考
-update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update()  中文：
-不要管那麼多網路上講的，就
-devtools::install_github(c(&#39;rstudio/rmarkdown&#39;, &#39;yihui/tinytex&#39;)) tinytex::install_tinytex()  大部分問題都是中文自行沒有安裝或指定錯誤的問題：
-在RMD檔案開頭指定
---- title: &amp;quot;xxx&amp;quot; author: &amp;quot;xxx&amp;quot; date: &amp;quot;2020年8月10日&amp;quot; header-includes: - \usepackage{xeCJK} - \setCJKmainfont{標楷體} output: html_document: toc: yes df_print: paged word_document: toc: yes pdf_document: latex_engine: xelatex toc: yes ---  Overview 參考
-整個轉換過程如下：
-Rmarkdown -&amp;gt; markdown -&amp;gt;pandoc-&amp;gt;pdf,html
-meta data 上的pdf 設定,常見版本 --- title: &amp;quot;Habits&amp;quot; author: lendjwjcen date: 3/1/2017 output: pdf_document ---  加入目錄 --- title: &amp;quot;Habits&amp;quot; output: pdf_document: toc: true toc_depth: 2 ---  TOC深度預設是3。</description>
+update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update() 中文： 不要管那麼多網路上講的，就
+devtools::install_github(c(&#39;rstudio/rmarkdown&#39;, &#39;yihui/tinytex&#39;))tinytex::install_tinytex() 大部分問題都是中文自行沒有安裝或指定錯誤的問題： 在RMD檔案開頭指定
+---title: &amp;quot;xxx&amp;quot;author: &amp;quot;xxx&amp;quot;date: &amp;quot;2020年8月10日&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yesdf_print: pagedword_document:toc: yespdf_document: latex_engine: xelatex toc: yes--- Overview 參考
+整個轉換過程如下： Rmarkdown -&amp;gt; markdown -&amp;gt;pandoc-&amp;gt;pdf,html
+meta data 上的pdf 設定,常見版本 ---title: &amp;quot;Habits&amp;quot;author: lendjwjcen date: 3/1/2017output: pdf_document--- 加入目錄 ---title: &amp;quot;Habits&amp;quot;output:pdf_document:toc: truetoc_depth: 2--- TOC深度預設是3。 yaml的註解符號是# 。</description>
     </item>
     
     <item>
@@ -64,25 +59,18 @@ meta data 上的pdf 設定,常見版本 --- title: &amp;quot;Habits&amp;quot; au
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/rmd/05_rmd_topic_1.html</guid>
-      <description>討論  hook
- Verbatim Chunks in R Markdow
- HTML widgets
- R Notebook HTML FOrmat
- Render option
-hook example
- more
+      <description>討論   hook
+  Verbatim Chunks in R Markdow
+  HTML widgets
+  R Notebook HTML FOrmat
+  Render option hook example
+  more
 dynamic book
- TOC 問題
+  TOC 問題
   publish to github tutorial
 在chunk中，顯示RMD語法 讓inline code 不作用 inline 讓內籤R程式碼不作用:方法是兩邊打上”``空白”。例如:
-inline(&amp;quot;dd&amp;quot;)
-===&amp;gt; `r dd`
-
-&amp;lt;/div&amp;gt;  
-測試
-執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
-```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;} cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)) # 我想要前後加上```,但是顯示的結果不換行 # txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;) # cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;))) ```  留著測試
-有意思的程式片段 只編譯一個RMD文件 使用套件中的內部函數,為:::,例如 blogdown:::build_rmds()。</description>
+inline(&amp;quot;dd&amp;quot;)===&amp;gt; `` `r dd` `` &amp;lt;/div&amp;gt; 測試 執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
+```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;}cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;))# 我想要前後加上```,但是顯示的結果不換行# txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)# cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;)))``` 留著測試</description>
     </item>
     
     <item>
@@ -91,12 +79,9 @@ inline(&amp;quot;dd&amp;quot;)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/rmd/02_git-book-note.html</guid>
-      <description>gitbook introduction 3個地方需要注意:
-_output.yml
-_bookdown.yml
-index.rmd
-_output.yml: bookdown::gitbook: css: style.css split_by: chapter config: toc: collapse: subsection before: | &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; after: | &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; bookdown::pdf_book: includes: in_header: preamble.tex latex_engine: xelatex citation_package: natbib bookdown::epub_book: stylesheet: style.css  上面要修改的部分只有書名(title of book)
-_bookdown.yml: book_filename: &amp;quot;bookdown-xx&amp;quot; chapter_name: &amp;quot;Chapter &amp;quot; repo: https://github.com/seankross/bookdown-start output_dir: docs rmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;] clean: [packages.bib, bookdown.bbl] new_session: yes   欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.</description>
+      <description>gitbook introduction 3個地方需要注意: _output.yml _bookdown.yml index.rmd
+_output.yml: bookdown::gitbook:css: style.csssplit_by: chapterconfig:toc:collapse: subsectionbefore: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;after: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;bookdown::pdf_book:includes:in_header: preamble.texlatex_engine: xelatexcitation_package: natbibbookdown::epub_book:stylesheet: style.css 上面要修改的部分只有書名(title of book)
+_bookdown.yml: book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp;quot;Chapter &amp;quot;repo: https://github.com/seankross/bookdown-startoutput_dir: docsrmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;]clean: [packages.bib, bookdown.bbl]new_session: yes  欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.pdf。 欄位 chapter_name:每個章節的前綴,例如 01-Introduction.</description>
     </item>
     
   </channel>

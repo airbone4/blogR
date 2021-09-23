@@ -8,6 +8,13 @@ var searchbutton = document.getElementById("search-button");
 var contextDive = 40;
 
 var timerUserInput = false;
+
+function getIdxbase(){
+    var getUrl = window.location;
+    var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+    return(baseUrl)    
+}
+//let idxfile = getIdxbase()+"/index.json"
 if (searchInput || searchbutton){
 searchInput.addEventListener("input", function()
 {

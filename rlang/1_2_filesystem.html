@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html><head>
-  <title>2.1 data explorer 2</title>  
+  <title>1.2 檔案系統</title>  
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1631779877"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632367358"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1631779877" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1631779877" rel="stylesheet">
-    <link href="../css/syntax.css?1631779877" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632367358" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632367358" rel="stylesheet">
+    <link href="../css/syntax.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1631779877" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme.css?1631779877" rel="stylesheet">
+    <link href="../css/theme.css?1632367358" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -36,13 +36,27 @@
 <div id="variant-toc-content" >
     <div class="wrapper">
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#分組列出summary-利用函數">分組列出summary:利用函數</a></li>
-<li><a href="#問題">問題：</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#分解合成檔案路徑">分解、合成檔案路徑</a>
+      <ul>
+        <li><a href="#合成路徑">合成路徑</a></li>
+        <li><a href="#路徑分解">路徑分解</a></li>
+      </ul>
+    </li>
+    <li><a href="#檔案系統相關操作">檔案系統相關操作</a>
+      <ul>
+        <li><a href="#練習">練習</a></li>
+      </ul>
+    </li>
+    <li><a href="#操作檔案系統">操作檔案系統</a></li>
+    <li><a href="#建立目錄">建立目錄</a></li>
+    <li><a href="#r系統檔案列表">R系統檔案列表</a></li>
+    <li><a href="#應用範例">應用範例</a>
+      <ul>
+        <li><a href="#列出目前工作目錄上的檔案">列出目前工作目錄上的檔案</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
     <hr class="p-0 m-0" />
@@ -50,7 +64,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 16, 2021'>2.1 data explorer 2</span>
+      title='最後修改September 23, 2021'>1.2 檔案系統</span>
         
     
 
@@ -107,22 +121,37 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
     
   
         <li class="nav-item active">
           
-          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
     
   
         <li class="nav-item">
@@ -133,6 +162,11 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
     
   
         <li class="nav-item">
@@ -191,11 +225,6 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
     
   
@@ -243,11 +272,6 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
     
   
     
@@ -481,115 +505,193 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../topic/test/testpage.html"> <i class="far fa-clock" ></i>testpage[2021-09-16 PM 01:13]</a></li><li><a href="../topic/test/emo_test.html"> <i class="far fa-clock" ></i>emoji_test[2021-09-16 PM 01:13]</a></li><li><a href="../topic/rmd/05_rmd_topic_1.html"> <i class="far fa-clock" ></i>05 rmd topic 1[2021-09-16 PM 01:12]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_2_filesystem.html"> <i class="far fa-clock" ></i>1.2 檔案系統[2021-09-23 AM 11:21]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-23 AM 12:15]</a></li><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-22 PM 10:32]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    
-
-<pre><code class="language-example">
-age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
-           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
-group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
-dframe = data.frame(age=age, group=group)
+    <h2 id="分解合成檔案路徑">分解、合成檔案路徑</h2>
+<p>在R語言中,路徑名稱不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
+<pre><code class="language-r">workingdir &lt;- &quot;projects&quot;
+projectdir &lt;- &quot;warandpeace&quot;
+datadir    &lt;- &quot;data&quot;
+file.path(workingdir, projectdir, datadir)
 </code></pre>
+<p>結果</p>
+<pre><code>[1] &quot;projects/warandpeace/data&quot;
+上面是windows 10系統上的結果,比較 Linux-based OS:  
+[1] &quot;projects/warandpeace/data&quot;
+注意斜線都一樣。
+</code></pre>
+<h3 id="合成路徑">合成路徑</h3>
+<p>利用函數 <code>file.path()</code>合成檔案路徑，其分隔是斜線,而不是反斜線  (例如for example <code>C:/Program Files/R/R-3.5.1</code>)?</p>
+<pre><code class="language-r">file.path(&quot;c:/temp&quot;,&quot;test.txt&quot;)
+</code></pre>
+<pre><code>#&gt; [1] &quot;c:/temp/test.txt&quot;
+</code></pre>
+<h3 id="路徑分解">路徑分解</h3>
+<ul>
+<li><code>dirname()</code> :分解路徑用，例如＂c:/temp/text.txt&quot; 得到&quot;c:/temp&quot;，但是&quot;c:/temp/&quot;,&quot;c:/temp&quot;, &quot;c:/temp.txt&quot;都得到&quot;c:/&quot;。😒<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >有時候有後綴&#34;/&#34;,有時候沒有 </span></span></li>
+<li><code>basename()</code></li>
+</ul>
+<h2 id="檔案系統相關操作">檔案系統相關操作</h2>
+<ul>
+<li><code>dir()</code>:包括資料夾、檔案名稱</li>
+<li><code>list.files()</code> : 僅檔案</li>
+<li><code>list.dirs()</code>:僅資料夾</li>
+</ul>
+<p>判別是否目標檔案或資料夾已經存在(我們不希望刪除或更動已經存在的檔案):</p>
+<ul>
+<li>
+<p><code>file.exists(&quot;xx.txt&quot;)</code>: 是否存在xx.txt</p>
+</li>
+<li>
+<p><code>dir.exists(&quot;xx&quot;)</code>: 是否存在子目錄xx</p>
+</li>
+<li>
+<p>工作區相關</p>
+<ul>
+<li><code>getwd()</code></li>
+<li><code>setwd()</code></li>
+<li><code>.libPaths()</code> : 目前套件安裝的地方。</li>
+<li><code>R.Home()</code> : 目前R安裝的地方,例如&quot;C:/PROGRA~1/R/R-41~1.1&quot;</li>
+</ul>
+</li>
+</ul>
+<p>範例</p>
+<pre><code class="language-r">currentwd&lt;-getwd()
+setwd(&quot;~&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >這是使用者目錄,看你是甚麼系統而定,我的是windows </span></span>
+getwd()
+#&gt; [1] &quot;C:/Users/you/Documents&quot;
+setwd(currentwd)
 
-<h2 id="分組列出summary-利用函數">分組列出summary:利用函數</h2>
+R.home()
+libPaths()
+list.files(R.home()) #:可以列出R的安裝的位置,然後list.files()列出檔案
 
-<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
-           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
-group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
-dframe = data.frame(age=age, group=group)
+list.dirs(R.home(&quot;doc&quot;))
+list.dirs(R.home(&quot;doc&quot;), full.names = FALSE)
 
-mygroup&lt;-function(df,g,idx)
-{
-  ft&lt;-factor(df$g)
-  
-  gf&lt;-ft==levels(ft)[idx] # 第一組
-  g1&lt;-df[gf,]
-  return(g1)  
+## 在使用者指定的目錄,列出 檔案的開頭是 a到l 或 r。
+dir(&quot;../..&quot;, pattern = &quot;^[a-lr]&quot;, full.names = TRUE, ignore.case = TRUE)
+
+</code></pre>
+<h3 id="練習">練習</h3>
+<p><div class="position-relative warning p-0">
+問題:
+利用<code>.libPaths()</code> 、 <code>list.files()</code>問題:列出所有套件<button type="button" class="btn btn-primary position-absolute top-0 end-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-2268">提示</button>
+</div>    
+
+
+<div class="collapse" id="quiz-2268"><pre><code class="language-r">list.files(.libPaths())
+</code></pre>
+</div>
+</p>
+<h2 id="操作檔案系統">操作檔案系統</h2>
+<ul>
+<li>
+<p>暫時子目錄的路徑<code>tempdir()</code>，暫時檔案<code>tempfile()</code></p>
+<ul>
+<li>函數 tempfile() 不是真正的建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。</li>
+<li><div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >展開</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">mydirname &lt;- tempfile(pattern = &quot;mydir&quot;)
+mydirname
+
+#&gt; C:\\Users\\使用者名稱\\AppData\\Local\\Temp\\RtmpSg2qRA\\mydir326845a02140
+</code></pre>
+</div></div></li>
+</ul>
+</li>
+<li>
+<p>函數 <code>file.exists()</code> 可以用來知道檔案是否存在,</p>
+</li>
+<li>
+<p>函數 <code>dir()</code> 用來列出子目錄中的檔案,例如<code>dir(tempdir())</code></p>
+</li>
+<li>
+<div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >範例</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">s&lt;-&quot;C:\\Users\\使用者名稱\\AppData\\Local\\Temp&quot;
+dir(s)
+</code></pre>
+</div></div>
+</li>
+</ul>
+<h2 id="建立目錄">建立目錄</h2>
+<p>dir.create 建立子目錄</p>
+<pre><code class="language-r">dir.create(mydirname)  
+file.exists(mydirname) # 上面指令建立的子目錄是否存在
+dir(tempdir(), full.names = TRUE) #列出目前子目錄內容(全名)
+file.mtime(mydirname) #子目錄建立時間,make time
+</code></pre>
+<p>結果</p>
+<pre><code class="language-r">[1] TRUE  
+[1] &quot;C:\\Users\\xxx\\AppData\\Local\\Temp\\RtmpIp3ZiD/file87e8755a1876&quot;                                  
+[2] &quot;C:\\Users\\xxx\\AppData\\Local\\Temp\\RtmpIp3ZiD/mydir87e86b51384d&quot;                                 
+[3] &quot;C:\\Users\\xxx\\AppData\\Local\\Temp\\RtmpIp3ZiD/rs-graphics-0f3f81af-32b7-49c4-a272-ad1a859f222f&quot;  
+[1] &quot;2018-10-25 23:42:51 CST&quot;
+</code></pre>
+<h2 id="r系統檔案列表">R系統檔案列表</h2>
+<p>如果要觀察安裝套件的檔案位置,可以使用指令<code>system.file()</code>,這個指令可以列出內建某個套建的全路徑。例如,</p>
+<pre><code class="language-r?preclass=ms-5">system.file(package = &quot;stats&quot;)
+# &gt; [1] &quot;C:/PROGRA~1/R/R-3.5.1/library/stats&quot;
+system.file() <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >基本套件路徑 </span></span>
+# &gt; [1] &quot;C:/PROGRA~1/R/R-41~1.1/library/base&quot; 
+.libPaths() <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >另外安裝的套件路徑 </span></span>
+# &gt; [1] &quot;C:/Users/you/Documents/R/win-library/4.1&quot;
+# &gt; [2] &quot;C:/Program Files/R/R-4.1.1/library&quot;
+</code></pre>
+<p><code>system.file()</code>的結果是一個目錄,因此可以利用<code>dir()</code>列出套件stats中,所有的檔案</p>
+<pre><code class="language-r?preclass=ms-5">dir(system.file(package = &quot;stats&quot;))
+
+#&gt;  [1] &quot;COPYRIGHTS.modreg&quot; &quot;demo&quot;              &quot;DESCRIPTION&quot;    
+#&gt;  [4] &quot;help&quot;              &quot;html&quot;              &quot;INDEX&quot;          
+#&gt;  [7] &quot;libs&quot;              &quot;Meta&quot;              &quot;NAMESPACE&quot;      
+#&gt;  [10] &quot;R&quot;                 &quot;SOURCES.ts&quot;     
+</code></pre>
+<p>上面可以看到套件中包含子目錄<code>demo</code>，如果還要查看<code>demo</code>中的檔案內容:</p>
+<pre><code class="language-r?preclass=ms-5">dir(system.file(&quot;demo&quot;, package = &quot;stats&quot;))
+
+#&gt; [1] &quot;glm.vr.R&quot; &quot;lm.glm.R&quot; &quot;nlm.R&quot;    &quot;smooth.R&quot;
+</code></pre>
+<p>上面只有檔案名稱,如果要看全路徑，可以利用參數<code>full.names</code>:</p>
+<pre><code class="language-r?preclass=ms-5">dir(system.file(&quot;demo&quot;, package = &quot;stats&quot;), full.names = TRUE)
+
+#&gt; [1] &quot;/usr/lib64/R/library/stats/demo/glm.vr.R&quot;
+#&gt; [2] &quot;/usr/lib64/R/library/stats/demo/lm.glm.R&quot;
+#&gt; [3] &quot;/usr/lib64/R/library/stats/demo/nlm.R&quot;   
+#&gt; [4] &quot;/usr/lib64/R/library/stats/demo/smooth.R&quot;
+</code></pre>
+<h2 id="應用範例">應用範例</h2>
+<h3 id="列出目前工作目錄上的檔案">列出目前工作目錄上的檔案</h3>
+<pre><code class="language-r?preclass=ms-5">x &lt;- dir()
+for (item in x) {
+    print(item) # show(item) 
 }
 
-x&lt;-mygroup(dframe,&quot;group&quot;,1)
 </code></pre>
+<p>或者,僅列出前幾個檔案</p>
+<pre><code class="language-r?preclass=ms-5">x&lt;-dir()
+head(x)
 
-<h2 id="問題">問題：</h2>
-
-<p>現在把某個欄位依據分組畫出boxplot<br />
-A:age<br />
-B:group(1,2)<br />
-不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na，<br />
-最後<br />
-boxplot(mtx)</p>
-
-<pre><code class="language-r">
-age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
-           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
-group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
-dframe = data.frame(age=age, group=group)
-
-
-  gf&lt;-group==1
-  g1&lt;-dframe[gf,1]
-  
-  gf&lt;-group==2
-  g2&lt;-dframe[gf,1]
-   
-  mlen&lt;-max(length(g1),length(g2))
-  length(g1)&lt;-mlen
-  length(g2)&lt;-mlen
-  
-  mtx&lt;-cbind(g1,g2)
-  boxplot(mtx)
 </code></pre>
-
-<p><img src="../rlang/2_1_data_explorer_2_files/figure-html/unnamed-chunk-2-1.png" width="70%" style="display: block; margin: auto;" /></p>
-
-<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
-           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
-group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
-dframe = data.frame(age=age, group=group)
-
-vl&lt;-list()
-for (i in 1:2){
-gf&lt;-group==i
-g1&lt;-dframe[gf,1]
-  vl[[i]]&lt;-g1
-}
-gn&lt;-sapply(vl,length)
-gn&lt;-max(gn)
-vl&lt;-lapply(vl,`length&lt;-`,gn) # 補NA
-mtx&lt;-matrix(unlist(vl),nrow=gn)
-boxplot(mtx)
+<div class="notices">
+    <div class= warnning>
+        <p>檢查在目前的工作目錄下,是否存在使用者傳遞進來的目錄?
+例如</p>
+<pre><code class="language-r">folderlist&lt;-c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;)
+checkdir(folderlist) 
 </code></pre>
+<p>📝 利用<code>file.exists()</code></p>
 
-<p><img src="../rlang/2_1_data_explorer_2_files/figure-html/unnamed-chunk-3-1.png" width="70%" style="display: block; margin: auto;" /></p>
+    </div>
+</div>
 
-<p>summary(dframe)</p>
-
-<p>ft&lt;-factor(dframe$group)<br />
-gn&lt;-length(levels(ft)) # nlevels(ft)</p>
-
-<p>gf&lt;-ft==levels(ft)[1] # 第一組<br />
-g1&lt;-dframe[gf,]<br />
-summary(g1)</p>
-
-<p>gf&lt;-ft==levels(ft)[2] # 第一組<br />
-g2&lt;-dframe[gf,]<br />
-summary(g2)</p>
-
-<p>mygroup&lt;-function(df,g,idx)<br />
-{<br />
-  ft&lt;-factor(df$g)</p>
-
-<p>gf&lt;-ft==levels(ft)[idx] # 第一組<br />
-  g1&lt;-df[gf,]<br />
-  return(g1)<br />
-}<br />
-for (i in 1:2){<br />
-  x&lt;-mygroup(dframe,&quot;group&quot;,i)<br />
-  print(summary(x))<br />
-}</p>
 
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
@@ -618,26 +720,26 @@ for (i in 1:2){<br />
     </div>
 </div>
 
-<link href="../css/quicknote.css?1631779877" rel="stylesheet">
-<script src="../js/quicknote.js?1631779877"></script>
+<link href="../css/quicknote.css?1632367358" rel="stylesheet">
+<script src="../js/quicknote.js?1632367358"></script>
 <div id="page-guide" class="bg-dark">  
   
     
           
-          <a href="../rlang/2_data_explorer_1.html" 
+          <a href="../rlang/4_06_topic_dataframe.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=2&#32;data&#32;explorer&#32;1>前</a>
+                   data-bs-placement="left" title=4.6&#32;topic&#32;data&#32;frame>前</a>
                    
           
-            <a href="../rlang/3_quickview1.html" 
+            <a href="../rlang/5_objectbasic.html" 
                class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
-               title=3.&#32;Quick&#32;view&#32;1>後</a>            
+               title=5&#32;R的物件相關概念>後</a>            
           
           
 
   
-<script src="../js/packhtml.js?1631779877"></script>    
+<script src="../js/packhtml.js?1632367358"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -647,27 +749,23 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1631779877"></script>
-  <script src="../js/featherlight.gallery.min.js?1631779877"></script>
-  <link href="../css/featherlight.min.css?1631779877" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1631779877" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632367358"></script>
+  <script src="../js/featherlight.gallery.min.js?1632367358"></script>
+  <link href="../css/featherlight.min.css?1632367358" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632367358" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1631779877"></script>
+  <script src="../js/highlight.pack.js?1632367358"></script>
   
-  <script src="../js/hugohelper.js?1631779877"></script>
+  <script src="../js/hugohelper.js?1632367358"></script>
 
-  <link href="../css/rmd.css?1631779877" rel="stylesheet">
-  <link href="../css/mystyle.css?1631779877" rel="stylesheet">    
-  <script src='../js/variant.js?1631779877'></script>
+  <link href="../css/rmd.css?1632367358" rel="stylesheet">
+  <link href="../css/mystyle.css?1632367358" rel="stylesheet">    
+  <script src='../js/variant.js?1632367358'></script>
 
 <script>
-
-var idxfile = "\/blogR\//index.json"
-
-
-  
+let idxfile = "\/index.json"  
 </script>
-<script src='../js/localsearch.js?1631779877'></script>
+<script src='../js/localsearch.js?1632367358'></script>
     
 
 

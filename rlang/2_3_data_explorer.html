@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html><head>
-  <title>作業系統</title>  
+  <title>2.3 data explorer</title>  
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1631779877"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632367358"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1631779877" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1631779877" rel="stylesheet">
-    <link href="../css/syntax.css?1631779877" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632367358" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632367358" rel="stylesheet">
+    <link href="../css/syntax.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1631779877" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme.css?1631779877" rel="stylesheet">
+    <link href="../css/theme.css?1632367358" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -36,15 +36,10 @@
 <div id="variant-toc-content" >
     <div class="wrapper">
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#編碼">編碼</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#分組列出summary利用函數">分組列出summary:利用函數</a></li>
+    <li><a href="#問題">問題：</a></li>
+  </ul>
 </nav>
     </div>
     <hr class="p-0 m-0" />
@@ -52,15 +47,13 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 16, 2021'>作業系統</span>
+      title='最後修改September 22, 2021'>2.3 data explorer</span>
         
     
 
     </span>
   
-  <span><a class="btn btn-outline-dark p-0" style="font-size:12px" href="../tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html">
-    <i class="fas fa-tag"></i>環境變數
-</a></span><span >
+  <span></span><span >
     <span >
     <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
     <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
@@ -111,22 +104,37 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
     
   
         <li class="nav-item">
@@ -137,6 +145,11 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
     
   
         <li class="nav-item">
@@ -195,11 +208,6 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
     
   
@@ -247,11 +255,6 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
-    
-  
-        <li class="nav-item active">
-          
-          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
     
   
     
@@ -485,250 +488,99 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../topic/test/testpage.html"> <i class="far fa-clock" ></i>testpage[2021-09-16 PM 01:13]</a></li><li><a href="../topic/test/emo_test.html"> <i class="far fa-clock" ></i>emoji_test[2021-09-16 PM 01:13]</a></li><li><a href="../topic/rmd/05_rmd_topic_1.html"> <i class="far fa-clock" ></i>05 rmd topic 1[2021-09-16 PM 01:12]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_2_filesystem.html"> <i class="far fa-clock" ></i>1.2 檔案系統[2021-09-23 AM 11:21]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-23 AM 12:15]</a></li><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-22 PM 10:32]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <pre><code class="language-r">
-Sys.getenv()
-#&gt; ALLUSERSPROFILE         C:\ProgramData
-#&gt; APPDATA                 C:\Users\linchao\AppData\Roaming
-#&gt; BLOGDOWN_SERVING_DIR    D:/work/rmi_r
-#&gt; CLICOLOR_FORCE          1
-#&gt; CLIENTNAME              ANTQUEEN
-#&gt; CommonProgramFiles      C:\Program Files\Common Files
-#&gt; CommonProgramFiles(x86)
-#&gt;                         C:\Program Files (x86)\Common Files
-#&gt; CommonProgramW6432      C:\Program Files\Common Files
-#&gt; COMPUTERNAME            TALI
-#&gt; ComSpec                 C:\WINDOWS\system32\cmd.exe
-#&gt; DISPLAY                 :0
-#&gt; DriverData              C:\Windows\System32\Drivers\DriverData
-#&gt; EDITURL                 D:/work/rmi_r
-#&gt; FPS_BROWSER_APP_PROFILE_STRING
-#&gt;                         Internet Explorer
-#&gt; FPS_BROWSER_USER_PROFILE_STRING
-#&gt;                         Default
-#&gt; GIT_ASKPASS             rpostback-askpass
-#&gt; HOME                    C:/Users/linchao/Documents
-#&gt; HOMEDRIVE               C:
-#&gt; HOMEPATH                \Users\linchao
-#&gt; LOCALAPPDATA            C:\Users\linchao\AppData\Local
-#&gt; LOGONSERVER             \\TALI
-#&gt; MPLENGINE               tkAgg
-#&gt; MSYS2_ENV_CONV_EXCL     R_ARCH
-#&gt; NUMBER_OF_PROCESSORS    32
-#&gt; OneDrive                C:\Users\linchao\OneDrive
-#&gt; OS                      Windows_NT
-#&gt; PATH                    C:\Program
-#&gt;                         Files\R\R-4.1.1\bin\x64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program
-#&gt;                         Files\Git\cmd;C:\Program
-#&gt;                         Files\R\R-4.1.1\bin\x64;C:\Users\linchao\AppData\Roaming\Hugo\0.88.0;;C:\Program
-#&gt;                         Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program
-#&gt;                         Files\PowerShell\7\;C:\Users\linchao\AppData\Local\Microsoft\WindowsApps;;C:\Users\linchao\AppData\Local\Programs\Microsoft
-#&gt;                         VS
-#&gt;                         Code\bin;C:\Users\linchao\AppData\Local\Pandoc\
-#&gt; PATHEXT                 .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
-#&gt; POWERSHELL_DISTRIBUTION_CHANNEL
-#&gt;                         MSI:Windows 10 Pro
-#&gt; PROCESSOR_ARCHITECTURE
-#&gt;                         AMD64
-#&gt; PROCESSOR_IDENTIFIER    AMD64 Family 25 Model 33 Stepping 0,
-#&gt;                         AuthenticAMD
-#&gt; PROCESSOR_LEVEL         25
-#&gt; PROCESSOR_REVISION      2100
-#&gt; ProgramData             C:\ProgramData
-#&gt; ProgramFiles            C:\Program Files
-#&gt; ProgramFiles(x86)       C:\Program Files (x86)
-#&gt; ProgramW6432            C:\Program Files
-#&gt; PSModulePath            C:\Program
-#&gt;                         Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
-#&gt; PUBLIC                  C:\Users\Public
-#&gt; PYTHONIOENCODING        utf-8
-#&gt; QT_D3DCREATE_MULTITHREADED
-#&gt;                         1
-#&gt; R_ARCH                  /x64
-#&gt; R_COMPILED_BY           gcc 8.3.0
-#&gt; R_DOC_DIR               C:/PROGRA~1/R/R-41~1.1/doc
-#&gt; R_HOME                  C:/PROGRA~1/R/R-41~1.1
-#&gt; R_LIBS_USER             C:/Users/linchao/Documents/R/win-library/4.1
-#&gt; R_USER                  C:/Users/linchao/Documents
-#&gt; RMARKDOWN_MATHJAX_PATH
-#&gt;                         C:/Program Files/RStudio/resources/mathjax-27
-#&gt; RS_LOCAL_PEER           \\.\pipe\41822-rsession
-#&gt; RS_RPOSTBACK_PATH       C:/Program Files/RStudio/bin/rpostback
-#&gt; RS_SHARED_SECRET        63341846741
-#&gt; RSTUDIO                 1
-#&gt; RSTUDIO_CONSOLE_COLOR   256
-#&gt; RSTUDIO_CONSOLE_WIDTH   62
-#&gt; RSTUDIO_MSYS_SSH        C:/Program Files/RStudio/bin/msys-ssh-1000-18
-#&gt; RSTUDIO_PANDOC          C:/Program Files/RStudio/bin/pandoc
-#&gt; RSTUDIO_PROGRAM_MODE    desktop
-#&gt; RSTUDIO_SESSION_PORT    41822
-#&gt; RSTUDIO_USER_IDENTITY   linchao
-#&gt; RSTUDIO_WINUTILS        C:/Program Files/RStudio/bin/winutils
-#&gt; RTOOLS40_HOME           C:\rtools40
-#&gt; SESSIONNAME             RDP-Tcp#49
-#&gt; SSH_ASKPASS             rpostback-askpass
-#&gt; SystemDrive             C:
-#&gt; SystemRoot              C:\WINDOWS
-#&gt; TEMP                    C:\Users\linchao\AppData\Local\Temp
-#&gt; TERM                    xterm-256color
-#&gt; TMP                     C:\Users\linchao\AppData\Local\Temp
-#&gt; USERDOMAIN              TALI
-#&gt; USERDOMAIN_ROAMINGPROFILE
-#&gt;                         TALI
-#&gt; USERNAME                linchao
-#&gt; USERPROFILE             C:\Users\linchao
-#&gt; windir                  C:\WINDOWS
-
-print(Sys.setenv(R_TEST = &quot;testit&quot;, &quot;A+C&quot; = 123))  # `A+C` could also be used
-#&gt; [1] TRUE TRUE
-Sys.getenv(&quot;R_TEST&quot;)
-#&gt; [1] &quot;testit&quot;
-Sys.unsetenv(&quot;R_TEST&quot;) # on Unix-alike may warn and not succeed
-Sys.getenv(&quot;R_TEST&quot;, unset = NA)
-#&gt; [1] NA
+    <pre><code class="language-example">
+age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
+group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
+dframe = data.frame(age=age, group=group)
 </code></pre>
+<h2 id="分組列出summary利用函數">分組列出summary:利用函數</h2>
+<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
+group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
+dframe = data.frame(age=age, group=group)
 
-<p>rlang::last_trace()</p>
+mygroup&lt;-function(df,g,idx)
+{
+  ft&lt;-factor(df$g)
+  
+  gf&lt;-ft==levels(ft)[idx] # 第一組
+  g1&lt;-df[gf,]
+  return(g1)  
+}
 
-<p>安裝的時候,出現找不到repos,可以如下,這樣不用第二次定義</p>
-
-<pre><code class="language-r">r = getOption(&quot;repos&quot;)
-r[&quot;CRAN&quot;] = &quot;http://cran.us.r-project.org&quot;
-options(repos = r)
+x&lt;-mygroup(dframe,&quot;group&quot;,1)
 </code></pre>
+<h2 id="問題">問題：</h2>
+<p>現在把某個欄位依據分組畫出boxplot
+A:age
+B:group(1,2)
+不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na，
+最後
+boxplot(mtx)</p>
+<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
+group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
+dframe = data.frame(age=age, group=group)
 
-<h3 id="編碼">編碼</h3>
 
-<p>看看系統本身的編碼(Current Locale)</p>
-
-<pre><code class="language-r">l10n_info()
-#&gt; $MBCS
-#&gt; [1] TRUE
-#&gt; 
-#&gt; $`UTF-8`
-#&gt; [1] FALSE
-#&gt; 
-#&gt; $`Latin-1`
-#&gt; [1] FALSE
-#&gt; 
-#&gt; $codepage
-#&gt; [1] 950
-#&gt; 
-#&gt; $system.codepage
-#&gt; [1] 950
-sessionInfo() # 裡的 local
-#&gt; R version 4.1.1 (2021-08-10)
-#&gt; Platform: x86_64-w64-mingw32/x64 (64-bit)
-#&gt; Running under: Windows 10 x64 (build 19042)
-#&gt; 
-#&gt; Matrix products: default
-#&gt; 
-#&gt; locale:
-#&gt; [1] LC_COLLATE=Chinese (Traditional)_Taiwan.950 
-#&gt; [2] LC_CTYPE=Chinese (Traditional)_Taiwan.950   
-#&gt; [3] LC_MONETARY=Chinese (Traditional)_Taiwan.950
-#&gt; [4] LC_NUMERIC=C                                
-#&gt; [5] LC_TIME=Chinese (Traditional)_Taiwan.950    
-#&gt; 
-#&gt; attached base packages:
-#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     
-#&gt; 
-#&gt; loaded via a namespace (and not attached):
-#&gt;  [1] bookdown_0.23   digest_0.6.27   R6_2.5.1        jsonlite_1.7.2 
-#&gt;  [5] magrittr_2.0.1  evaluate_0.14   blogdown_1.4    stringi_1.7.4  
-#&gt;  [9] rlang_0.4.11    jquerylib_0.1.4 bslib_0.2.5.1   rmarkdown_2.10 
-#&gt; [13] tools_4.1.1     stringr_1.4.0   xfun_0.25       yaml_2.2.1     
-#&gt; [17] fastmap_1.1.0   compiler_4.1.1  htmltools_0.5.2 knitr_1.33     
-#&gt; [21] sass_0.4.0
-Sys.getlocale(&quot;LC_ALL&quot;) # Sys.getlocale()
-#&gt; [1] &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
-getOption(&quot;encoding&quot;)
-#&gt; [1] &quot;native.enc&quot;
+  gf&lt;-group==1
+  g1&lt;-dframe[gf,1]
+  
+  gf&lt;-group==2
+  g2&lt;-dframe[gf,1]
+   
+  mlen&lt;-max(length(g1),length(g2))
+  length(g1)&lt;-mlen
+  length(g2)&lt;-mlen
+  
+  mtx&lt;-cbind(g1,g2)
+  boxplot(mtx)
 </code></pre>
+<p><img src="2_3_data_explorer_files/figure-html/unnamed-chunk-2-1.pdf" alt="plot of chunk unnamed-chunk-2"></p>
+<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
+group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
+dframe = data.frame(age=age, group=group)
 
-<p>.UTF-8/C/en_US.UTF-8/en_US.UTF-8&quot;<br />
-更改系統的語系，以下更改為 UTF-8</p>
-
-<pre><code class="language-r"># for mac
-Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;en_US.UTF-8&quot;)
-
-# for windows
-Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;UTF-8&quot;)
-
-# x is a vector
-Encoding(x)
+vl&lt;-list()
+for (i in 1:2){
+gf&lt;-group==i
+g1&lt;-dframe[gf,1]
+  vl[[i]]&lt;-g1
+}
+gn&lt;-sapply(vl,length)
+gn&lt;-max(gn)
+vl&lt;-lapply(vl,`length&lt;-`,gn) # 補NA
+mtx&lt;-matrix(unlist(vl),nrow=gn)
+boxplot(mtx)
 </code></pre>
+<p><img src="2_3_data_explorer_files/figure-html/unnamed-chunk-3-1.pdf" alt="plot of chunk unnamed-chunk-3"></p>
+<p>summary(dframe)</p>
+<p>ft&lt;-factor(dframe$group)
+gn&lt;-length(levels(ft)) # nlevels(ft)</p>
+<p>gf&lt;-ft==levels(ft)[1] # 第一組
+g1&lt;-dframe[gf,]
+summary(g1)</p>
+<p>gf&lt;-ft==levels(ft)[2] # 第一組
+g2&lt;-dframe[gf,]
+summary(g2)</p>
+<p>mygroup&lt;-function(df,g,idx)
+{
+ft&lt;-factor(df$g)</p>
+<p>gf&lt;-ft==levels(ft)[idx] # 第一組
+g1&lt;-df[gf,]
+return(g1)<br>
+}
+for (i in 1:2){
+x&lt;-mygroup(dframe,&quot;group&quot;,i)<br>
+print(summary(x))
+}</p>
 
-<pre><code class="language-r">x&lt;- '非蘋果' 
-Encoding(x) ## [1] &quot;unknown&quot;
-# 如果是big5
-x2&lt;- iconv(x, 'big5', 'UTF-8') #轉UTF-8
-# 如果是GB2312
-x2&lt;- iconv(x, 'GB2312', 'UTF-8') #轉UTF-8
-Encoding(x2) ## [1] &quot;UTF-8&quot; 
-</code></pre>
-
-<pre><code class="language-r">source(&quot;myRcode.R&quot;, encoding = &quot;utf-8&quot;)
-readLines(&quot;mydata.csv&quot;, encoding = &quot;big5&quot;)
-read.table(..., fileEncoding = &quot;&quot;, encoding = &quot;unknown&quot;,...)
-data &lt;- iconv(data, &quot;big5&quot;, &quot;utf8&quot;) # 將資料轉成 UTF-8
-</code></pre>
-
-<p>不確定的設定</p>
-
-<pre><code># 系統語系(locale)是否正確
-# 輸入 Sys.getlocale() ，如果不是 Chinese (Traditional)_Taiwan.950
-# 者，請輸入下列指令設定 RStudio/R 的語系
-# Sys.setlocale(&quot;LC_ALL&quot;,&quot;Chinese (Traditional)_Taiwan.950&quot;)
-</code></pre>
-
-<ul>
-<li><a href="https://rpubs.com/dcw102213006/R_textmining_chinese">??</a><br />
-<br /></li>
-</ul>
-
-<blockquote>
-<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/279354_f552c4c41852439f910ad620763960b6.html">更多</a></p>
-
-<p><a href="http://vito-note.blogspot.com/2012/01/blog-post_86.html">參考</a><br />
-每一種特定的語言，都存在一種或數種的字集碼，每一種字集碼就是一個代碼頁 ( code page )。 例如：big5 的 code page = 950，提供給繁體中文語系使用的編碼；Windows-1252 的 code page = 1252，提供給西歐的英語系使用；shift_jis 的 code page = 932，提供給日語中的漢字使用。 不過，這些表示 code page 的數字，是由不同的系統廠商自行定義的。例如：UTF-8 在 IBM 稱作代碼頁1208，在微軟稱作代碼頁65001，在 SAP 稱作代碼頁4110。 更詳細的字元編碼概念可參閱這篇說明</p>
-</blockquote>
-
-<p>這應該是linux 在windows 無作用,需要超級使用者</p>
-
-<pre><code class="language-r">Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;zh_TW.UTF-8&quot;)
-</code></pre>
-
-<p>Sys.sleep(0.1)</p>
-
-<pre><code>txt = c(sprintf('```{r test, cache=TRUE, cache.lazy=%s}', lazy),
-        'x1 = Sys.time()', '```')
-knit(text = txt, quiet = TRUE)
-</code></pre>
-
-<p>Windows:<br />
-方法一（暫時有效；重新啟動R之後此設定就會消失）：<br />
-在命令列執行語系切換<br />
-先在命令列執行 Sys.getlocale(category = &quot;LC_ALL&quot;)<br />
-查看目前R使用的語系<br />
-若為中文系統，則應看到<br />
-&quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;<br />
-中文換為英文：<br />
-Sys.setlocale(category = &quot;LC_ALL&quot;, locale = “UTF-8&quot;)<br />
-英文換為中文：<br />
-Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;cht&quot;)<br />
-方法二：直接修改預設值（永久，但安裝新版的R之後就要再到新的R安裝位置中重新設定一次）：<br />
-到安裝資料夾中找到Rconsole 檔案（例如 C:\Program Files\R\R-3.2.2\etc\Rconsole）<br />
-若要設為英文，<br />
-找到language這一行（或加上這一行）<br />
-language = English<br />
-若要設為正體中文，<br />
-找到language這一行（或加上這一行）<br />
-language = zh_TW<br />
-注意：若因權限關係無法直接編輯Rconsole，請將檔案移到桌面，編輯存檔後再拉回etc資料夾</p>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -756,26 +608,26 @@ language = zh_TW<br />
     </div>
 </div>
 
-<link href="../css/quicknote.css?1631779877" rel="stylesheet">
-<script src="../js/quicknote.js?1631779877"></script>
+<link href="../css/quicknote.css?1632367358" rel="stylesheet">
+<script src="../js/quicknote.js?1632367358"></script>
 <div id="page-guide" class="bg-dark">  
   
     
           
-          <a href="../rlang/9_1_plot02.html" 
+          <a href="../rlang/2_2_data_explorer.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=9.1&#32;Plot&#32;more>前</a>
+                   data-bs-placement="left" title=2.2&#32;data&#32;explorer>前</a>
                    
           
-            <a href="../rlang/%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html" 
+            <a href="../rlang/3_quickview1.html" 
                class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
-               title=測試工具>後</a>            
+               title=3.&#32;Quick&#32;view&#32;1>後</a>            
           
           
 
   
-<script src="../js/packhtml.js?1631779877"></script>    
+<script src="../js/packhtml.js?1632367358"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -785,27 +637,23 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1631779877"></script>
-  <script src="../js/featherlight.gallery.min.js?1631779877"></script>
-  <link href="../css/featherlight.min.css?1631779877" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1631779877" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632367358"></script>
+  <script src="../js/featherlight.gallery.min.js?1632367358"></script>
+  <link href="../css/featherlight.min.css?1632367358" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632367358" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1631779877"></script>
+  <script src="../js/highlight.pack.js?1632367358"></script>
   
-  <script src="../js/hugohelper.js?1631779877"></script>
+  <script src="../js/hugohelper.js?1632367358"></script>
 
-  <link href="../css/rmd.css?1631779877" rel="stylesheet">
-  <link href="../css/mystyle.css?1631779877" rel="stylesheet">    
-  <script src='../js/variant.js?1631779877'></script>
+  <link href="../css/rmd.css?1632367358" rel="stylesheet">
+  <link href="../css/mystyle.css?1632367358" rel="stylesheet">    
+  <script src='../js/variant.js?1632367358'></script>
 
 <script>
-
-var idxfile = "\/blogR\//index.json"
-
-
-  
+let idxfile = "\/index.json"  
 </script>
-<script src='../js/localsearch.js?1631779877'></script>
+<script src='../js/localsearch.js?1632367358'></script>
     
 
 

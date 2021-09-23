@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html><head>
-  <title>5 object_basic</title>  
+  <title>5 R的物件相關概念</title>  
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1631779877"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632367358"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1631779877" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1631779877" rel="stylesheet">
-    <link href="../css/syntax.css?1631779877" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632367358" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632367358" rel="stylesheet">
+    <link href="../css/syntax.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1631779877" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme.css?1631779877" rel="stylesheet">
+    <link href="../css/theme.css?1632367358" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -36,29 +36,24 @@
 <div id="variant-toc-content" >
     <div class="wrapper">
         <nav id="TableOfContents">
-<ul>
-<li><a href="#物件">物件</a>
-<ul>
-<li><a href="#attribute">attribute</a></li>
-<li><a href="#attr-attributes-structure-functions-in-r-4-examples-get-remove-set">attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</a>
-<ul>
-<li><a href="#basic-application-of-attr-attributes">Basic Application of attr() &amp; attributes()</a></li>
-<li><a href="#assign-new-attributes-with-the-attributes-r-function">Assign New Attributes with the attributes() R Function</a></li>
-<li><a href="#利用attr-改變其中一個attribute">利用attr() 改變其中一個Attribute</a></li>
-<li><a href="#the-r-structure-function">The R structure Function</a>
-<ul>
-<li><a href="#example">Example:</a></li>
-<li><a href="#in-one-go">In one go</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#oop">OOP</a>
-<ul>
-<li><a href="#base-objects-vs-oo-objects">Base objects vs OO objects</a></li>
-<li><a href="#變數屬性查詢函數">變數屬性查詢函數</a></li>
-</ul></li>
-<li><a href="#operator">operator %&gt;%</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#attribute">attribute</a></li>
+    <li><a href="#attr--attributes基本使用範例"><code>attr()</code> &amp; <code>attributes()</code>基本使用範例</a>
+      <ul>
+        <li><a href="#範例">範例</a></li>
+        <li><a href="#範例-1">範例</a></li>
+        <li><a href="#利用attr-改變其中一個attribute">利用attr() 改變其中一個Attribute</a></li>
+        <li><a href="#the-r-structure-function">The R structure Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#oop">OOP</a>
+      <ul>
+        <li><a href="#base-objects-vs-oo-objects">Base objects vs OO objects</a></li>
+        <li><a href="#變數屬性查詢函數">變數屬性查詢函數</a></li>
+      </ul>
+    </li>
+    <li><a href="#operator-">operator %&gt;%</a></li>
+  </ul>
 </nav>
     </div>
     <hr class="p-0 m-0" />
@@ -66,7 +61,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 16, 2021'>5 object_basic</span>
+      title='最後修改September 22, 2021'>5 R的物件相關概念</span>
         
     
 
@@ -123,22 +118,37 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
     
   
         <li class="nav-item">
@@ -149,6 +159,11 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
     
   
         <li class="nav-item">
@@ -207,11 +222,6 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
     
   
@@ -259,11 +269,6 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
     
   
     
@@ -497,110 +502,79 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../topic/test/testpage.html"> <i class="far fa-clock" ></i>testpage[2021-09-16 PM 01:13]</a></li><li><a href="../topic/test/emo_test.html"> <i class="far fa-clock" ></i>emoji_test[2021-09-16 PM 01:13]</a></li><li><a href="../topic/rmd/05_rmd_topic_1.html"> <i class="far fa-clock" ></i>05 rmd topic 1[2021-09-16 PM 01:12]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_2_filesystem.html"> <i class="far fa-clock" ></i>1.2 檔案系統[2021-09-23 AM 11:21]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-23 AM 12:15]</a></li><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-22 PM 10:32]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    
+    <h2 id="attribute">attribute</h2>
+<p>簡單理解為物件屬性,例如矩陣(matrix)陣列(array)的names和dimenstions。</p>
+<pre><code class="language-r">attributes(my.array)
+#&gt; $dim
+#&gt; [1] 3 4 2
+</code></pre>
+<p>設定和存取其中一個屬性:</p>
+<pre><code class="language-r">attr(baskets.team,'season') &lt;- '2010-2011'
+attr(baskets.team,'season')
+#&gt; [1] &quot;2010-2011&quot;
+</code></pre>
+<p>如果要刪除,則</p>
+<pre><code class="language-r">attr(baskets.team,'season') &lt;- NULL
+</code></pre>
+<h2 id="attr--attributes基本使用範例"><code>attr()</code> &amp; <code>attributes()</code>基本使用範例</h2>
+<pre><code class="language-r">attributes(data) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >所有的attributes </span></span>
 
-<h1 id="物件">物件</h1>
-
-<h2 id="attribute">attribute</h2>
-
-<p>oth the names and the dimensions of matrices and arrays are stored in R as attributes of the object. These attributes can be seen as labeled values you can attach to any object.</p>
-
-<p>They form one of the mechanisms R uses to define specific object types like dates, time series, and so on. They can include any kind of information, and you can use them yourself to add information to any object.</p>
-
-<p>To see all the attributes of an object, you can use the attributes() function. You can see all the attributes of my.array like this:</p>
-
-<blockquote>
-<p>attributes(my.array)<br />
-$dim<br />
-[1] 3 4 2<br />
-This function returns a named list, where each item in the list is an attribute. Each attribute can, on itself, be a list again. For example, the attribute dimnames is actually a list containing the row and column names of a matrix.</p>
-</blockquote>
-
-<p>You can check that for yourself by checking the output of attributes(baskets.team). You can set all attributes as a named list as well. You find examples of that in the Help file ?attributes.</p>
-
-<p>To get or set a single attribute, you can use the attr() function. This function takes two important arguments. The first argument is the object you want to examine, and the second argument is the name of the attribute you want to see or change. If the attribute you ask for doesn’t exist, R simply returns NULL.</p>
-
-<p>Imagine you want to add which season Granny and Geraldine scored the baskets mentioned in baskets.team. You can do this with the following code:</p>
-
-<blockquote>
-<p>attr(baskets.team,'season') &lt;- '2010-2011'<br />
-To get the value of this attribute returned, you can then use following code:</p>
-
-<p>attr(baskets.team,'season')<br />
-[1] &quot;2010-2011&quot;<br />
-You can delete attributes again by setting their value to NULL, like this:</p>
-
-<p>attr(baskets.team,'season') &lt;- NULL</p>
-</blockquote>
-
-<h2 id="attr-attributes-structure-functions-in-r-4-examples-get-remove-set">attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</h2>
-
-<p>三個函數的基本寫法:</p>
-
-<pre><code class="language-r">attributes(data)
-attr(x = data, which = &quot;attribute_name&quot;)
+attr(x = data, which = &quot;attribute_name&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >只是其中之一,第二個參數指定 </span></span>
+# 比較 
 structure(data, dim = c(2, 6))
 </code></pre>
-
 <p>Definitions:</p>
-
 <p>函數 <code>attributes</code> 設定或列出物件的所有attributes。</p>
-
 <p>函數 <code>attr</code> 物件中某個指定的attribute.</p>
-
 <p>函數<code>structure</code> 設定資料物件中其他額外的 attributes。</p>
-
 <p>使用方法</p>
-
-<h3 id="basic-application-of-attr-attributes">Basic Application of attr() &amp; attributes()</h3>
-
+<h3 id="範例">範例</h3>
 <p>載入資料集然後利用函數看看data.frame有甚麼attribute。</p>
-
 <pre><code class="language-r">data(cars)                                             # Load head(cars)             attributes(cars)     
 attr(x = cars, which = &quot;names&quot;) 
-#&gt; [1] &quot;speed&quot; &quot;dist&quot;
 </code></pre>
-
+<pre><code>#&gt; [1] &quot;speed&quot; &quot;dist&quot;
+</code></pre>
 <div class="notices">
     <div class= sidebar>
         <p>也可以寫成</p>
-
 <pre><code class="language-r">attr(cars,&quot;names&quot;)
-#&gt; [1] &quot;speed&quot; &quot;dist&quot;
 </code></pre>
-
+<pre><code>#&gt; [1] &quot;speed&quot; &quot;dist&quot;
+</code></pre>
 <p>比較一下names,可以發現,names 只是一個data.frame中的attribute</p>
-
 <pre><code class="language-r"> class(cars)
-#&gt; [1] &quot;data.frame&quot;
- str(cars)
-#&gt; 'data.frame':	50 obs. of  2 variables:
+</code></pre>
+<pre><code>#&gt; [1] &quot;data.frame&quot;
+</code></pre>
+<pre><code class="language-r"> str(cars)
+</code></pre>
+<pre><code>#&gt; 'data.frame':	50 obs. of  2 variables:
 #&gt;  $ speed: num  4 4 7 7 8 9 10 10 10 11 ...
 #&gt;  $ dist : num  2 10 4 22 16 10 18 26 34 17 ...
- names(cars)
-#&gt; [1] &quot;speed&quot; &quot;dist&quot;
+</code></pre>
+<pre><code class="language-r"> names(cars)
+</code></pre>
+<pre><code>#&gt; [1] &quot;speed&quot; &quot;dist&quot;
 </code></pre>
 
     </div>
 </div>
 
-
-<h3 id="assign-new-attributes-with-the-attributes-r-function">Assign New Attributes with the attributes() R Function</h3>
-
+<h3 id="範例-1">範例</h3>
 <pre><code class="language-r">attributes_list &lt;- list(names = c(&quot;col1&quot;, &quot;col2&quot;),     #設定不同的欄位名稱
                         class = &quot;data.frame&quot;,          # 保留類別
                         row.names = nrow(cars):1)      # 反向
 </code></pre>
-
 <p>然後可以利用<code>attributes</code>設定所有attributes。</p>
-
 <pre><code class="language-r">attributes(cars) &lt;- attributes_list                    # Set all attributes of data
 attributes(cars)                                       # Apply attributes function
-#&gt; $names
+</code></pre>
+<pre><code>#&gt; $names
 #&gt; [1] &quot;col1&quot; &quot;col2&quot;
 #&gt; 
 #&gt; $class
@@ -610,16 +584,13 @@ attributes(cars)                                       # Apply attributes functi
 #&gt;  [1] 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26
 #&gt; [26] 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
 </code></pre>
-
 <h3 id="利用attr-改變其中一個attribute">利用attr() 改變其中一個Attribute</h3>
-
 <pre><code class="language-r">attr(x = cars, which = &quot;names&quot;) &lt;- c(&quot;aaa&quot;, &quot;bbb&quot;)     # Set only names attribute
 </code></pre>
-
 <p>檢查看看結果</p>
-
 <pre><code class="language-r">attributes(cars)    # Apply attributes function
-#&gt; $names
+</code></pre>
+<pre><code>#&gt; $names
 #&gt; [1] &quot;aaa&quot; &quot;bbb&quot;
 #&gt; 
 #&gt; $class
@@ -629,36 +600,28 @@ attributes(cars)                                       # Apply attributes functi
 #&gt;  [1] 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26
 #&gt; [26] 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
 </code></pre>
-
 <p>　</p>
-
 <h3 id="the-r-structure-function">The R structure Function</h3>
-
 <p>和<code>attributes()</code> <code>attr()</code> 相關的命令是 <code>structure()</code> 。</p>
-
 <pre><code class="language-r">set.seed(12345)                             
 vec &lt;- round(runif(15, 0, 10))     # 1D 向量 
 vec
-#&gt;  [1]  7  9  8  9  5  2  3  5  7 10  0  2  7  0  4
 </code></pre>
-
+<pre><code>#&gt;  [1]  7  9  8  9  5  2  3  5  7 10  0  2  7  0  4
+</code></pre>
 <p>改變成矩陣:</p>
-
 <pre><code class="language-r">vec_dim &lt;- structure(vec, dim = c(3, 5))               # Change dimension of vector
 vec_dim                                                # Print updated vector
-#&gt;      [,1] [,2] [,3] [,4] [,5]
+</code></pre>
+<pre><code>#&gt;      [,1] [,2] [,3] [,4] [,5]
 #&gt; [1,]    7    9    3   10    7
 #&gt; [2,]    9    5    5    0    0
 #&gt; [3,]    8    2    7    2    4
 </code></pre>
-
 <p>比較之前的寫法:</p>
-
 <pre><code class="language-r">matrix(vec,nrow=3)
 </code></pre>
-
 <h4 id="example">Example:</h4>
-
 <pre><code class="language-r">dd &lt;- structure(list( 
          year = c(2001, 2002, 2004, 2006) 
         ,length_days = c(366.3240, 365.4124, 366.5323423, 364.9573234)) 
@@ -666,24 +629,23 @@ vec_dim                                                # Print updated vector
         ,row.names = c(NA, -4L) 
         ,class = &quot;data.frame&quot;)
 dd
-#&gt;   year length of days
+</code></pre>
+<pre><code>#&gt;   year length of days
 #&gt; 1 2001       366.3240
 #&gt; 2 2002       365.4124
 #&gt; 3 2004       366.5323
 #&gt; 4 2006       364.9573
 </code></pre>
-
 <pre><code class="language-r">str(dd)
-#&gt; 'data.frame':	4 obs. of  2 variables:
+</code></pre>
+<pre><code>#&gt; 'data.frame':	4 obs. of  2 variables:
 #&gt;  $ year          : num  2001 2002 2004 2006
 #&gt;  $ length of days: num  366 365 367 365
 </code></pre>
-
 <p>dd的meta data:</p>
-
-<pre><code class="language-r">
-attributes(dd)
-#&gt; $names
+<pre><code class="language-r">attributes(dd)
+</code></pre>
+<pre><code>#&gt; $names
 #&gt; [1] &quot;year&quot;           &quot;length of days&quot;
 #&gt; 
 #&gt; $row.names
@@ -692,59 +654,50 @@ attributes(dd)
 #&gt; $class
 #&gt; [1] &quot;data.frame&quot;
 </code></pre>
-
 <p>利用<code>structure()</code>建立的物件,不管是同質(vector,matrix)還是異質(data.frame,list) 都會利用attributes儲存meta data。例如,</p>
-
 <pre><code class="language-r">just_vector &lt;- structure(1:10, comment = &quot;This is my simple vector with info&quot;)
 just_vector
-#&gt;  [1]  1  2  3  4  5  6  7  8  9 10
-str(just_vector)
-#&gt;  int [1:10] 1 2 3 4 5 6 7 8 9 10
+</code></pre>
+<pre><code>#&gt;  [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre>
+<pre><code class="language-r">str(just_vector)
+</code></pre>
+<pre><code>#&gt;  int [1:10] 1 2 3 4 5 6 7 8 9 10
 #&gt;  - attr(*, &quot;comment&quot;)= chr &quot;This is my simple vector with info&quot;
 </code></pre>
-
 <p>然後利用函數，可以拿到我們之前的資訊:</p>
-
 <pre><code class="language-r">attributes(just_vector)
 </code></pre>
-
-<p>結果如下:<br />
-$comment<br />
+<p>結果如下:
+$comment
 [1] &quot;This is my simple vector with info&quot;</p>
-
 <p>注意:attributes()的傳回結果為list,因此有$comment</p>
-
 <pre><code class="language-r">str(attributes(just_vector))
-#&gt; List of 1
+</code></pre>
+<pre><code>#&gt; List of 1
 #&gt;  $ comment: chr &quot;This is my simple vector with info&quot;
-attributes(attributes(just_vector))
-#&gt; $names
+</code></pre>
+<pre><code class="language-r">attributes(attributes(just_vector))
+</code></pre>
+<pre><code>#&gt; $names
 #&gt; [1] &quot;comment&quot;
 </code></pre>
-
 <h4 id="in-one-go">In one go</h4>
-
 <p>這是另一個利用函數<code>structure()</code>的例子。先看一下一般建立data.frame物件的方法:</p>
-
 <pre><code class="language-r">year = c(1999, 2002, 2005, 2008)
 pollution = c(346.82,134.308821199349, 130.430379885892, 88.275457392443)
 dd2 &lt;- data.frame(year,pollution)
 dd2$year &lt;- as.factor(dd2$year)
 </code></pre>
-
 <p>利用  <code>structure</code>, 一步就可以完成:</p>
-
 <pre><code class="language-r">dd &lt;- structure(list( 
    year = as.factor(c(2001, 2002, 2004, 2006))
   ,length_days = c(366.3240, 365.4124, 366.5323423, 364.9573234)) 
   ,.Names = c(&quot;year&quot;, &quot;length of days&quot;) 
   ,row.names = c(NA, -4L) 
   ,class = &quot;data.frame&quot;)
- 
 </code></pre>
-
 <p>Constructing data-frame with additional attributes and comments.</p>
-
 <pre><code class="language-r">dd3 &lt;- structure(list(
    v1 = as.factor(c(2001, 2002, 2004, 2006))
   ,v2 = I(c(2001, 2002, 2004, 2006))
@@ -757,83 +710,74 @@ dd2$year &lt;- as.factor(dd2$year)
   ,comment = &quot;Ordered YearO for categorical analysis and other variables&quot;)
 
 dd3
-#&gt;   year AsIs Year yearO length of days
+</code></pre>
+<pre><code>#&gt;   year AsIs Year yearO length of days
 #&gt; 1 2001      2001  2001       366.3240
 #&gt; 2 2002      2002  2002       365.4124
 #&gt; 3 2004      2004  2004       366.5323
 #&gt; 4 2006      2006  2006       364.9573
 </code></pre>
-
 <p>And checking comments can be done as:</p>
-
-<pre><code class="language-r">
-attributes(dd3)$comment
-#&gt; [1] &quot;Ordered YearO for categorical analysis and other variables&quot;
-attr(dd3, which=&quot;comment&quot;)
-#&gt; [1] &quot;Ordered YearO for categorical analysis and other variables&quot;
+<pre><code class="language-r">attributes(dd3)$comment
 </code></pre>
-
+<pre><code>#&gt; [1] &quot;Ordered YearO for categorical analysis and other variables&quot;
+</code></pre>
+<pre><code class="language-r">attr(dd3, which=&quot;comment&quot;)
+</code></pre>
+<pre><code>#&gt; [1] &quot;Ordered YearO for categorical analysis and other variables&quot;
+</code></pre>
 <h2 id="oop">OOP</h2>
-
 <p><a href="https://adv-r.hadley.nz/base-types.html">advance R</a></p>
-
 <h3 id="base-objects-vs-oo-objects">Base objects vs OO objects</h3>
-
 <p>辨別變數是基礎型別或是物件型別，可以簡單利用函數： <code>is.object()</code>:</p>
-
 <p>基礎物件base object:</p>
-
 <pre><code class="language-r">is.object(1:10)
-#&gt; [1] FALSE
 </code></pre>
-
+<pre><code>#&gt; [1] FALSE
+</code></pre>
 <p>[1] FALSE</p>
-
 <p>物件導向物件 OO object</p>
-
 <pre><code class="language-r">is.object(mtcars)
-#&gt; [1] TRUE
 </code></pre>
-
+<pre><code>#&gt; [1] TRUE
+</code></pre>
 <p>[1] TRUE</p>
-
 <p>主要的區別在於基本物件沒有class 這個attribute</p>
-
 <pre><code class="language-r">attr(1:10, &quot;class&quot;) #  NULL
-#&gt; NULL
-attr(mtcars, &quot;class&quot;) # [1] &quot;data.frame&quot;
-#&gt; [1] &quot;data.frame&quot;
 </code></pre>
-
+<pre><code>#&gt; NULL
+</code></pre>
+<pre><code class="language-r">attr(mtcars, &quot;class&quot;) # [1] &quot;data.frame&quot;
+</code></pre>
+<pre><code>#&gt; [1] &quot;data.frame&quot;
+</code></pre>
 <p>class()這個函數,不見得總是會和attr()的結果一致,因為，對基本物件而言,傳回的是後面討論,而不是 NULL。</p>
-
 <h3 id="變數屬性查詢函數">變數屬性查詢函數</h3>
-
-<p>names()<br />
-dimnames()<br />
-length()<br />
-dim(): 各維度長度<br />
-class() : 變數類別<br />
-table()：各類資料計數<br />
-str()：變數的資料結構(其實是一個list)</p>
-
-<p>透過names()函數，可取得各種list元素的名稱,但是如果是data.frame則是顯示欄位名稱<br />
+<ul>
+<li>names()</li>
+<li>dimnames()</li>
+<li>length()</li>
+<li>dim(): 各維度長度</li>
+<li>class() : 變數類別</li>
+<li>table()：各類資料計數</li>
+<li>str()：變數的資料結構(其實是一個list)</li>
+</ul>
+<p>透過names()函數，可取得各種list元素的名稱,但是如果是data.frame則是顯示欄位名稱
 islands是內建資料</p>
-
 <pre><code class="language-r">str(islands)
-#&gt;  Named num [1:48] 11506 5500 16988 2968 16 ...
+</code></pre>
+<pre><code>#&gt;  Named num [1:48] 11506 5500 16988 2968 16 ...
 #&gt;  - attr(*, &quot;names&quot;)= chr [1:48] &quot;Africa&quot; &quot;Antarctica&quot; &quot;Asia&quot; &quot;Australia&quot; ...
 </code></pre>
-
 <pre><code class="language-r">head(names(islands)) 
-#&gt; [1] &quot;Africa&quot;       &quot;Antarctica&quot;   &quot;Asia&quot;         &quot;Australia&quot;    &quot;Axel Heiberg&quot;
+</code></pre>
+<pre><code>#&gt; [1] &quot;Africa&quot;       &quot;Antarctica&quot;   &quot;Asia&quot;         &quot;Australia&quot;    &quot;Axel Heiberg&quot;
 #&gt; [6] &quot;Baffin&quot;
 </code></pre>
-
 <p>方形資料（例如，矩陣，table, data.frame)，可以透過dimnames()函數可顯示data.frame 橫行和直行的名稱 先橫行，然後直行。</p>
-
 <pre><code class="language-r">dimnames(USArrests) 
-#&gt; [[1]]
+</code></pre>
+<pre><code>#&gt; [[1]]
 #&gt;  [1] &quot;Alabama&quot;        &quot;Alaska&quot;         &quot;Arizona&quot;        &quot;Arkansas&quot;      
 #&gt;  [5] &quot;California&quot;     &quot;Colorado&quot;       &quot;Connecticut&quot;    &quot;Delaware&quot;      
 #&gt;  [9] &quot;Florida&quot;        &quot;Georgia&quot;        &quot;Hawaii&quot;         &quot;Idaho&quot;         
@@ -851,59 +795,50 @@ islands是內建資料</p>
 #&gt; [[2]]
 #&gt; [1] &quot;Murder&quot;   &quot;Assault&quot;  &quot;UrbanPop&quot; &quot;Rape&quot;
 </code></pre>
-
 <p>方形資料，可以透過length()函數可顯示資料長度，但是如果是data.frame則顯示欄位數。</p>
-
 <pre><code class="language-r">length(islands) 
-#&gt; [1] 48
 </code></pre>
-
+<pre><code>#&gt; [1] 48
+</code></pre>
 <p>透過dim() 顯示方形資料的「資料筆數」和「欄位數目」，先「橫行」，後「直行」</p>
-
 <pre><code class="language-r">dim(USArrests) 
-#&gt; [1] 50  4
 </code></pre>
-
+<pre><code>#&gt; [1] 50  4
+</code></pre>
 <p>使用class()函數可知道變數類別</p>
-
 <pre><code class="language-r">class(pi)
-#&gt; [1] &quot;numeric&quot;
-class(Sys.Date())
-#&gt; [1] &quot;Date&quot;
 </code></pre>
-
+<pre><code>#&gt; [1] &quot;numeric&quot;
+</code></pre>
+<pre><code class="language-r">class(Sys.Date())
+</code></pre>
+<pre><code>#&gt; [1] &quot;Date&quot;
+</code></pre>
 <p>使用table()函數可知道向量中每個值出現幾次</p>
-
-<pre><code class="language-r">
-table(iris$Species) ##統計結果
-#&gt; 
+<pre><code class="language-r">table(iris$Species) ##統計結果
+</code></pre>
+<pre><code>#&gt; 
 #&gt;     setosa versicolor  virginica 
 #&gt;         50         50         50
 </code></pre>
-
-<h2 id="operator">operator %&gt;%</h2>
-
-<p>%&gt;% 不是R基礎套件<br />
+<h2 id="operator-">operator %&gt;%</h2>
+<p>%&gt;% 不是R基礎套件
 而是定義再套件 magrittr (CRAN) 且常跟 dplyr (CRAN)搭配。</p>
-
-<p>意思是把左邊(LHS)當成右邊(RHS)的參數。<br />
-例如下面的例子: 資料框iris 用來當 head()的參數:<br />
+<p>意思是把左邊(LHS)當成右邊(RHS)的參數。<br>
+例如下面的例子: 資料框iris 用來當 head()的參數:
 也就是說 iris %&gt;% head() 相當於 head(iris).</p>
-
-<p>library(magrittr)<br />
-iris %&gt;% head()<br />
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species<br />
-1          5.1         3.5          1.4         0.2  setosa<br />
-2          4.9         3.0          1.4         0.2  setosa<br />
-3          4.7         3.2          1.3         0.2  setosa<br />
-4          4.6         3.1          1.5         0.2  setosa<br />
-5          5.0         3.6          1.4         0.2  setosa<br />
+<p>library(magrittr)
+iris %&gt;% head()
+Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
 6          5.4         3.9          1.7         0.4  setosa</p>
-
 <p>為甚麼需要這樣用,下面是一個例子</p>
-
-<p>iris %&gt;% head() %&gt;% summary()<br />
-類似的觀念, iris %&gt;% head() %&gt;% summary() 等同於summary(head(iris)).<br />
+<p>iris %&gt;% head() %&gt;% summary()
+類似的觀念, iris %&gt;% head() %&gt;% summary() 等同於summary(head(iris)). 
 也就是說,避免了使用巢狀呼叫。</p>
 
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
@@ -933,16 +868,16 @@ iris %&gt;% head()<br />
     </div>
 </div>
 
-<link href="../css/quicknote.css?1631779877" rel="stylesheet">
-<script src="../js/quicknote.js?1631779877"></script>
+<link href="../css/quicknote.css?1632367358" rel="stylesheet">
+<script src="../js/quicknote.js?1632367358"></script>
 <div id="page-guide" class="bg-dark">  
   
     
           
-          <a href="../rlang/5_filesystem.html" 
+          <a href="../rlang/1_2_filesystem.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=5&#32;File&#32;System>前</a>
+                   data-bs-placement="left" title=1.2&#32;檔案系統>前</a>
                    
           
             <a href="../rlang/6_programming_1.html" 
@@ -952,7 +887,7 @@ iris %&gt;% head()<br />
           
 
   
-<script src="../js/packhtml.js?1631779877"></script>    
+<script src="../js/packhtml.js?1632367358"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -962,27 +897,23 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1631779877"></script>
-  <script src="../js/featherlight.gallery.min.js?1631779877"></script>
-  <link href="../css/featherlight.min.css?1631779877" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1631779877" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632367358"></script>
+  <script src="../js/featherlight.gallery.min.js?1632367358"></script>
+  <link href="../css/featherlight.min.css?1632367358" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632367358" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1631779877"></script>
+  <script src="../js/highlight.pack.js?1632367358"></script>
   
-  <script src="../js/hugohelper.js?1631779877"></script>
+  <script src="../js/hugohelper.js?1632367358"></script>
 
-  <link href="../css/rmd.css?1631779877" rel="stylesheet">
-  <link href="../css/mystyle.css?1631779877" rel="stylesheet">    
-  <script src='../js/variant.js?1631779877'></script>
+  <link href="../css/rmd.css?1632367358" rel="stylesheet">
+  <link href="../css/mystyle.css?1632367358" rel="stylesheet">    
+  <script src='../js/variant.js?1632367358'></script>
 
 <script>
-
-var idxfile = "\/blogR\//index.json"
-
-
-  
+let idxfile = "\/index.json"  
 </script>
-<script src='../js/localsearch.js?1631779877'></script>
+<script src='../js/localsearch.js?1632367358'></script>
     
 
 

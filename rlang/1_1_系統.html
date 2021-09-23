@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html><head>
+  <title>1.1 運作環境</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1632367358"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1632367358" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632367358" rel="stylesheet">
+    <link href="../css/syntax.css?1632367358" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1632367358" rel="stylesheet">
+    
+    <link href="../css/theme.css?1632367358" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#環境變數">環境變數</a>
+      <ul>
+        <li><a href="#存取作業系統的環境變數">存取作業系統的環境變數</a></li>
+        <li><a href="#r的環境變數">R的環境變數</a></li>
+        <li><a href="#練習">練習</a></li>
+      </ul>
+    </li>
+    <li><a href="#編碼">編碼</a></li>
+    <li><a href="#亂碼常用的判斷查詢">亂碼常用的判斷查詢</a></li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 22, 2021'>1.1 運作環境</span>
+        
+    
+
+    </span>
+  
+  <span><a class="btn btn-outline-dark p-0" style="font-size:12px" href="../tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html">
+    <i class="fas fa-tag"></i>環境變數
+</a></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_2_filesystem.html"> <i class="far fa-clock" ></i>1.2 檔案系統[2021-09-23 AM 11:21]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-23 AM 12:15]</a></li><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-22 PM 10:32]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="環境變數">環境變數</h2>
+<div class="notices">
+    <div class= info>
+        <ul>
+<li>windows 幾個常用的資料夾
+<ul>
+<li>%USERPROFILE%</li>
+<li>%LOCALAPPDATA%</li>
+<li>%APPDATA%</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="存取作業系統的環境變數">存取作業系統的環境變數</h3>
+<p>指令開頭是<code>Sys</code></p>
+<pre><code class="language-r?lang=r?preclass=.code-source">hugocmd(&quot;expand&quot; ,'title=&quot;&quot; incode=true')
+#&gt; <div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >展開</span>
+    </div><div data-nopre class="expand-content incode" style="overflow-x:auto">Sys.getenv()
+#&gt; ALLUSERSPROFILE         C:\ProgramData
+#&gt; APPDATA                 C:\Users\linchao\AppData\Roaming
+#&gt; CHROME_CRASHPAD_PIPE_NAME
+#&gt;                         \\.\pipe\crashpad_9896_XGBZVKPAVSUJKYDE
+#&gt; COLORTERM               truecolor
+#&gt; CommonProgramFiles      C:\Program Files\Common Files
+#&gt; CommonProgramFiles(x86)
+#&gt;                         C:\Program Files (x86)\Common Files
+#&gt; CommonProgramW6432      C:\Program Files\Common Files
+#&gt; COMPUTERNAME            TALI
+#&gt; ComSpec                 C:\WINDOWS\system32\cmd.exe
+#&gt; DriverData              C:\Windows\System32\Drivers\DriverData
+#&gt; EDITURL                 D:/work/rmi_r
+#&gt; FPS_BROWSER_APP_PROFILE_STRING
+#&gt;                         Internet Explorer
+#&gt; FPS_BROWSER_USER_PROFILE_STRING
+#&gt;                         Default
+#&gt; GIT_ASKPASS             c:\Users\linchao\AppData\Local\Programs\Microsoft
+#&gt;                         VS
+#&gt;                         Code\resources\app\extensions\git\dist\askpass.sh
+#&gt; HOME                    C:\Users\linchao\Documents
+#&gt; HOMEDRIVE               C:
+#&gt; HOMEPATH                \Users\linchao
+#&gt; LANG                    zh_TW.UTF-8
+#&gt; LANGUAGE                zh_TW
+#&gt; LOCALAPPDATA            C:\Users\linchao\AppData\Local
+#&gt; LOGONSERVER             \\TALI
+#&gt; MSYS2_ENV_CONV_EXCL     R_ARCH
+#&gt; NUMBER_OF_PROCESSORS    32
+#&gt; OneDrive                C:\Users\linchao\OneDrive
+#&gt; ORIGINAL_XDG_CURRENT_DESKTOP
+#&gt;                         undefined
+#&gt; OS                      Windows_NT
+#&gt; PATH                    C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program
+#&gt;                         Files\Git\cmd;C:\Program
+#&gt;                         Files\R\R-4.1.1\bin\x64;C:\Users\linchao\AppData\Roaming\Hugo\0.88.0;;C:\Program
+#&gt;                         Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program
+#&gt;                         Files\PowerShell\7\;C:\Program
+#&gt;                         Files\nodejs\;C:\Users\linchao\AppData\Local\Microsoft\WindowsApps;C:\Users\linchao\AppData\Local\Programs\Microsoft
+#&gt;                         VS
+#&gt;                         Code\bin;C:\Users\linchao\AppData\Local\Pandoc\;C:\Users\linchao\AppData\Roaming\npm;C:\Program
+#&gt;                         Files (x86)\EaseUS\Todo Backup\bin\x64\
+#&gt; PATHEXT                 .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+#&gt; POWERSHELL_DISTRIBUTION_CHANNEL
+#&gt;                         MSI:Windows 10 Pro
+#&gt; PROCESSOR_ARCHITECTURE
+#&gt;                         AMD64
+#&gt; PROCESSOR_IDENTIFIER    AMD64 Family 25 Model 33 Stepping 0,
+#&gt;                         AuthenticAMD
+#&gt; PROCESSOR_LEVEL         25
+#&gt; PROCESSOR_REVISION      2100
+#&gt; ProgramData             C:\ProgramData
+#&gt; ProgramFiles            C:\Program Files
+#&gt; ProgramFiles(x86)       C:\Program Files (x86)
+#&gt; ProgramW6432            C:\Program Files
+#&gt; PROMPT                  $P$G
+#&gt; PSModulePath            %ProgramFiles%\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+#&gt; PUBLIC                  C:\Users\Public
+#&gt; R_ARCH                  /x64
+#&gt; R_COMPILED_BY           gcc 8.3.0
+#&gt; R_HOME                  C:/PROGRA~1/R/R-41~1.1
+#&gt; R_LIBS_USER             C:\Users\linchao\Documents/R/win-library/4.1
+#&gt; R_USER                  C:\Users\linchao\Documents
+#&gt; RTOOLS40_HOME           C:\rtools40
+#&gt; SystemDrive             C:
+#&gt; SystemRoot              C:\WINDOWS
+#&gt; TEMP                    C:\Users\linchao\AppData\Local\Temp
+#&gt; TERM_PROGRAM            vscode
+#&gt; TERM_PROGRAM_VERSION    1.60.1
+#&gt; TMP                     C:\Users\linchao\AppData\Local\Temp
+#&gt; USERDOMAIN              TALI
+#&gt; USERDOMAIN_ROAMINGPROFILE
+#&gt;                         TALI
+#&gt; USERNAME                linchao
+#&gt; USERPROFILE             C:\Users\linchao
+#&gt; VSCODE_GIT_ASKPASS_MAIN
+#&gt;                         c:\Users\linchao\AppData\Local\Programs\Microsoft
+#&gt;                         VS
+#&gt;                         Code\resources\app\extensions\git\dist\askpass-main.js
+#&gt; VSCODE_GIT_ASKPASS_NODE
+#&gt;                         C:\Users\linchao\AppData\Local\Programs\Microsoft
+#&gt;                         VS Code\Code.exe
+#&gt; VSCODE_GIT_IPC_HANDLE   \\.\pipe\vscode-git-787abf7477-sock
+#&gt; windir                  C:\WINDOWS
+hugocmd(m=&#34;expand&#34; ,end=T)
+#&gt; </div></div>
+
+Sys.setenv(R_TEST = &quot;testit&quot;)
+Sys.getenv(&quot;R_TEST&quot;)
+#&gt; [1] &quot;testit&quot;
+Sys.unsetenv(&quot;R_TEST&quot;) # on Unix-alike may warn and not succeed
+Sys.getenv(&quot;R_TEST&quot;, unset = NA)
+#&gt; [1] NA
+</code></pre>
+<div class="notices">
+    <div class= info>
+        <p>(待補充)比較有趣的指令</p>
+<pre><code class="language-r">Sys.sleep(0.1)
+</code></pre>
+
+    </div>
+</div>
+
+<h3 id="r的環境變數">R的環境變數</h3>
+<p>在作業系統中的檔案,例如<code>.Renviron</code>,<code>.Rprofile</code>會影響R的啟動環境(<a href="https://support.rstudio.com/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">✔參考</a>)。</p>
+<ul>
+<li>
+<p>.Renviron - which contains environment variables to be set in R sessions.</p>
+<ul>
+<li><code>.Renviron</code> 在<code>%USERPROFILE%</code>中(預設是沒有的)。用來在R啟動<code>之前</code>,設定系統的環境變數，內容是文字檔,以KEY=VALUE的方式設定。例如rtools的位置(<a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Startup">參考1</a>)。</li>
+</ul>
+</li>
+<li>
+<p>.Rprofile - which contains R code to be run in each session.</p>
+</li>
+<li>
+<div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >範例 ~/.Renviron on Unix</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">## 範例 ~/.Renviron on Unix
+R_LIBS=~/R/library
+PAGER=/usr/local/bin/less
+
+## Example .Renviron on Windows
+R_LIBS=C:/R/library
+MY_TCLTK=&quot;c:/Program Files/Tcl/bin&quot;
+
+## Example of setting R_DEFAULT_PACKAGES (from R CMD check)
+R_DEFAULT_PACKAGES='utils,grDevices,graphics,stats'
+# this loads the packages in the order given, so they appear on
+# the search path in reverse order.
+</code></pre>
+</div></div>
+</li>
+<li>
+<div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >範例 .Rprofile</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">options(width=65, digits=5)
+options(show.signif.stars=FALSE)
+setHook(packageEvent(&quot;grDevices&quot;, &quot;onLoad&quot;),
+        function(...) grDevices::ps.options(horizontal=FALSE))
+set.seed(1234)
+.First &lt;- function() cat(&quot;\n   Welcome to R!\n\n&quot;)
+.Last &lt;- function()  cat(&quot;\n   Goodbye!\n\n&quot;)
+</code></pre>
+</div></div>
+</li>
+<li>
+<div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >範例 Rprofile.site</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">local({
+  # add MASS to the default packages, set a CRAN mirror
+  old &lt;- getOption(&quot;defaultPackages&quot;); r &lt;- getOption(&quot;repos&quot;)
+  r[&quot;CRAN&quot;] &lt;- &quot;http://my.local.cran&quot;
+  options(defaultPackages = c(old, &quot;MASS&quot;), repos = r)
+  ## (for Unix terminal users) set the width from COLUMNS if set
+  cols &lt;- Sys.getenv(&quot;COLUMNS&quot;)
+  if(nzchar(cols)) options(width = as.integer(cols))
+  # interactive sessions get a fortune cookie (needs fortunes package)
+  if (interactive())
+    fortunes::fortune()
+})
+
+## if .Renviron contains
+FOOBAR=&quot;coo\bar&quot;doh\ex&quot;abc\&quot;def'&quot;
+
+## then we get
+# &gt; cat(Sys.getenv(&quot;FOOBAR&quot;), &quot;\n&quot;)
+# coo\bardoh\exabc&quot;def'
+</code></pre>
+</div></div>
+</li>
+<li>
+<p><code>R.home()</code> <code>Sys.getenv(&quot;R_HOME&quot;)</code> 都可以知道安裝的目錄</p>
+</li>
+<li>
+<p>目前的設定 - 函數<code>options()</code></p>
+</li>
+</ul>
+<pre><code class="language-r?class=ms-5">options()
+getOption(&quot;windowsTimeouts&quot;)
+</code></pre>
+<div data-nopre class="expand ms-5 ">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >options()的執行結果</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">#&gt; $add.smooth
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $blogdown.method
+#&gt; [1] &quot;markdown&quot;
+#&gt; 
+#&gt; $blogdown.serve_site.startup
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $browserNLdisabled
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $CBoundsCheck
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $check.bounds
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $citation.bibtex.max
+#&gt; [1] 1
+#&gt; 
+#&gt; $continue
+#&gt; [1] &quot;+ &quot;
+#&gt; 
+#&gt; $contrasts
+#&gt;         unordered           ordered 
+#&gt; &quot;contr.treatment&quot;      &quot;contr.poly&quot; 
+#&gt; 
+#&gt; $defaultPackages
+#&gt; [1] &quot;datasets&quot;  &quot;utils&quot;     &quot;grDevices&quot; &quot;graphics&quot;  &quot;stats&quot;     &quot;methods&quot;  
+#&gt; 
+#&gt; $demo.ask
+#&gt; [1] &quot;default&quot;
+#&gt; 
+#&gt; $deparse.cutoff
+#&gt; [1] 60
+#&gt; 
+#&gt; $device
+#&gt; function (width = 7, height = 7, ...) 
+#&gt; {
+#&gt;     grDevices::pdf(NULL, width, height, ...)
+#&gt; }
+#&gt; &lt;bytecode: 0x000000001a675208&gt;
+#&gt; &lt;environment: namespace:knitr&gt;
+#&gt; 
+#&gt; $device.ask.default
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $digits
+#&gt; [1] 7
+#&gt; 
+#&gt; $echo
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $editor
+#&gt; [1] &quot;notepad&quot;
+#&gt; 
+#&gt; $encoding
+#&gt; [1] &quot;native.enc&quot;
+#&gt; 
+#&gt; $example.ask
+#&gt; [1] &quot;default&quot;
+#&gt; 
+#&gt; $expressions
+#&gt; [1] 5000
+#&gt; 
+#&gt; $help.search.types
+#&gt; [1] &quot;vignette&quot; &quot;demo&quot;     &quot;help&quot;    
+#&gt; 
+#&gt; $help.try.all.packages
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $help_type
+#&gt; [1] &quot;html&quot;
+#&gt; 
+#&gt; $HTTPUserAgent
+#&gt; [1] &quot;R (4.1.1 x86_64-w64-mingw32 x86_64 mingw32)&quot;
+#&gt; 
+#&gt; $install.packages.compile.from.source
+#&gt; [1] &quot;interactive&quot;
+#&gt; 
+#&gt; $internet.info
+#&gt; [1] 2
+#&gt; 
+#&gt; $keep.parse.data
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $keep.parse.data.pkgs
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $keep.source
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $keep.source.pkgs
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $knitr.in.progress &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;目前的文件在RMD中產生 &lt;/span&gt;&lt;/span&gt;
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $locatorBell
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $mailer
+#&gt; [1] &quot;mailto&quot;
+#&gt; 
+#&gt; $matprod
+#&gt; [1] &quot;default&quot;
+#&gt; 
+#&gt; $max.print
+#&gt; [1] 99999
+#&gt; 
+#&gt; $menu.graphics
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $na.action
+#&gt; [1] &quot;na.omit&quot;
+#&gt; 
+#&gt; $nwarnings
+#&gt; [1] 50
+#&gt; 
+#&gt; $OutDec
+#&gt; [1] &quot;.&quot;
+#&gt; 
+#&gt; $pager
+#&gt; [1] &quot;internal&quot;
+#&gt; 
+#&gt; $papersize
+#&gt; [1] &quot;a4&quot;
+#&gt; 
+#&gt; $PCRE_limit_recursion
+#&gt; [1] NA
+#&gt; 
+#&gt; $PCRE_study
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $PCRE_use_JIT
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $pdfviewer
+#&gt; [1] &quot;C:/PROGRA~1/R/R-41~1.1/bin/x64/open.exe&quot;
+#&gt; 
+#&gt; $pkgType
+#&gt; [1] &quot;both&quot;
+#&gt; 
+#&gt; $prompt
+#&gt; [1] &quot;&gt; &quot;
+#&gt; 
+#&gt; $repos
+#&gt;     CRAN 
+#&gt; &quot;@CRAN@&quot; 
+#&gt; 
+#&gt; $scipen
+#&gt; [1] 0
+#&gt; 
+#&gt; $show.coef.Pvalues
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $show.error.messages
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $show.signif.stars
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $showErrorCalls
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $str
+#&gt; $str$strict.width
+#&gt; [1] &quot;no&quot;
+#&gt; 
+#&gt; $str$digits.d
+#&gt; [1] 3
+#&gt; 
+#&gt; $str$vec.len
+#&gt; [1] 4
+#&gt; 
+#&gt; $str$list.len
+#&gt; [1] 99
+#&gt; 
+#&gt; $str$deparse.lines
+#&gt; NULL
+#&gt; 
+#&gt; $str$drop.deparse.attr
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $str$formatNum
+#&gt; function (x, ...) 
+#&gt; format(x, trim = TRUE, drop0trailing = TRUE, ...)
+#&gt; &lt;environment: 0x00000000193f2900&gt;
+#&gt; 
+#&gt; 
+#&gt; $str.dendrogram.last
+#&gt; [1] &quot;`&quot;
+#&gt; 
+#&gt; $stringsAsFactors
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $tikzMetricsDictionary
+#&gt; [1] &quot;1_0_requirement-tikzDictionary&quot;
+#&gt; 
+#&gt; $timeout
+#&gt; [1] 60
+#&gt; 
+#&gt; $try.outFile
+#&gt; A connection with                            
+#&gt; description &quot;output&quot;        
+#&gt; class       &quot;textConnection&quot;
+#&gt; mode        &quot;wr&quot;            
+#&gt; text        &quot;text&quot;          
+#&gt; opened      &quot;opened&quot;        
+#&gt; can read    &quot;no&quot;            
+#&gt; can write   &quot;yes&quot;           
+#&gt; 
+#&gt; $ts.eps
+#&gt; [1] 1e-05
+#&gt; 
+#&gt; $ts.S.compat
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $unzip
+#&gt; [1] &quot;internal&quot;
+#&gt; 
+#&gt; $useFancyQuotes
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $verbose
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $warn
+#&gt; [1] 0
+#&gt; 
+#&gt; $warning.length
+#&gt; [1] 1000
+#&gt; 
+#&gt; $width
+#&gt; [1] 80
+#&gt; 
+#&gt; $windowsTimeouts
+#&gt; [1] 100 500
+</code></pre>
+</div></div>
+<div class="notices">
+    <div class= tip>
+        <p>安裝的時候,出現找不到repos,可以如下,這樣不用第二次定義</p>
+<pre><code class="language-r">r = getOption(&quot;repos&quot;)
+r[&quot;CRAN&quot;] = &quot;http://cran.us.r-project.org&quot;
+options(repos = r)
+</code></pre>
+<p>解釋</p>
+<pre><code class="language-r">r # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;帶名字的字串,簡單理解為元素編號可以用元素名字代替 &lt;/span&gt;&lt;/span&gt;
+#&gt;                           CRAN 
+#&gt; &quot;http://cran.us.r-project.org&quot; 
+#&gt; attr(,&quot;RStudio&quot;)
+#&gt; [1] TRUE
+
+r[&quot;CRAN&quot;] # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;=r[1] &lt;/span&gt;&lt;/span&gt;
+#&gt;                       CRAN 
+#&gt; &quot;http://cran.us.r-project.org&quot; 
+</code></pre>
+
+    </div>
+</div>
+
+<h3 id="練習">練習</h3>
+<p>比較一下environments()這個函數，可以列出目前工作區上的變數。environment() 傳回一個frame,相當於R提供的總體變數<code>.GlobalEnv</code></p>
+<pre><code class="language-r">names(environment()) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >因為是結構frame 因此可以利用names()列出欄位 </span></span>
+identical(.GlobalEnv, environment()) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >用來比較兩個參數是否相同,包括值和類別 </span></span>
+names(.GlobalEnv)
+</code></pre>
+<h2 id="編碼">編碼</h2>
+<ul>
+<li>
+<p>每一種特定的語言，都存在一種或數種的 code page 。 例如：</p>
+</li>
+<li>
+<p>code page = 950 : 正體中文語big5</p>
+</li>
+<li>
+<p>windows-1252 的 code page = 1252 :西歐的英語系使用</p>
+</li>
+<li>
+<p>shift_jis 的 code page = 932 : 日語中的漢字使用。 但是在不同廠商(例如IBM), code page 的數字不同。</p>
+</li>
+<li>
+<p>系統語系(locale)是否正確: 輸入 <code>Sys.getlocale()</code> ，如果不是 Chinese (Traditional)_Taiwan.950 者，可以輸入下列指令設定 RStudio/R 的語系
+<code>Sys.setlocale(&quot;LC_ALL&quot;,&quot;Chinese (Traditional)_Taiwan.950&quot;)</code></p>
+</li>
+<li>
+<p><a href="https://rpubs.com/dcw102213006/R_textmining_chinese">??</a></p>
+</li>
+<li>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/279354_f552c4c41852439f910ad620763960b6.html">更多</a></p>
+</li>
+<li>
+<p><a href="http://vito-note.blogspot.com/2012/01/blog-post_86.html">參考</a></p>
+</li>
+</ul>
+<p>看看系統本身的編碼(Current Locale)</p>
+<pre><code class="language-r?lang=r?preclass=.code-source">l10n_info()
+#&gt; $MBCS
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $`UTF-8`
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $`Latin-1`
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $codepage
+#&gt; [1] 950
+#&gt; 
+#&gt; $system.codepage
+#&gt; [1] 950
+sessionInfo() # 裡的 local<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >因為傳回的是結構list因此sessionInfo()$local可以看到結果 </span></span>
+#&gt; R version 4.1.1 (2021-08-10)
+#&gt; Platform: x86_64-w64-mingw32/x64 (64-bit)
+#&gt; Running under: Windows 10 x64 (build 19043)
+#&gt; 
+#&gt; Matrix products: default
+#&gt; 
+#&gt; locale:
+#&gt; [1] LC_COLLATE=Chinese (Traditional)_Taiwan.950 
+#&gt; [2] LC_CTYPE=Chinese (Traditional)_Taiwan.950   
+#&gt; [3] LC_MONETARY=Chinese (Traditional)_Taiwan.950
+#&gt; [4] LC_NUMERIC=C                                
+#&gt; [5] LC_TIME=Chinese (Traditional)_Taiwan.950    
+#&gt; 
+#&gt; attached base packages:
+#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     
+#&gt; 
+#&gt; loaded via a namespace (and not attached):
+#&gt; [1] compiler_4.1.1 magrittr_2.0.1 tools_4.1.1    glue_1.4.2     stringi_1.7.4 
+#&gt; [6] knitr_1.33     stringr_1.4.0  xfun_0.25      evaluate_0.14
+Sys.getlocale(&quot;LC_ALL&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >由開頭Sys，可以知道這是作業系統變數存取 </span></span> <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" > 也可以只打Sys.getlocale()</span></span>
+#&gt; [1] &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
+getOption(&quot;encoding&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >其實就是前面的options() </span></span># <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >因為是list所以也可以options()$encoding </span></span>
+#&gt; [1] &quot;native.enc&quot;
+</code></pre>
+<p>.UTF-8/C/en_US.UTF-8/en_US.UTF-8&quot;
+更改系統的語系，以下更改為 UTF-8</p>
+<pre><code class="language-r"># for mac
+Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;en_US.UTF-8&quot;)
+
+# for windows
+Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;UTF-8&quot;)
+
+# x is a vector
+Encoding(x) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔不是用來知道系統的編碼,而是X變數中的資料編碼 </span></span>
+</code></pre>
+<div class="notices">
+    <div class= info>
+        <p>Encoding(X)的使用範例</p>
+<pre><code class="language-r">x&lt;- '非白馬' 
+Encoding(x) ## [1] &quot;unknown&quot;
+# 如果是big5
+x2&lt;- iconv(x, 'big5', 'UTF-8') #轉UTF-8
+# 如果是GB2312
+x2&lt;- iconv(x, 'GB2312', 'UTF-8') #轉UTF-8
+Encoding(x2) ## [1] &quot;UTF-8&quot; 
+</code></pre>
+<p>讀檔案的時候,如果要自行指定編碼,那麼下面是一些相關程式碼</p>
+<pre><code class="language-r">source(&quot;myRcode.R&quot;, encoding = &quot;utf-8&quot;)
+readLines(&quot;mydata.csv&quot;, encoding = &quot;big5&quot;)
+read.table(..., fileEncoding = &quot;&quot;, encoding = &quot;unknown&quot;,...)
+data &lt;- iconv(data, &quot;big5&quot;, &quot;utf8&quot;) # 將資料轉成 UTF-8
+</code></pre>
+
+    </div>
+</div>
+
+<h2 id="亂碼常用的判斷查詢">亂碼常用的判斷查詢</h2>
+<p>Windows:</p>
+<p>查看目前R使用的語系 執行 Sys.getlocale(category = &quot;LC_ALL&quot;)</p>
+<p>我的系統上顯示的是</p>
+<pre><code>&quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
+</code></pre>
+<ul>
+<li>
+<p>英文：</p>
+<ul>
+<li>Sys.setlocale(category = &quot;LC_ALL&quot;, locale = “UTF-8&quot;)</li>
+</ul>
+</li>
+<li>
+<p>中文：</p>
+<ul>
+<li>Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;cht&quot;)  ❓</li>
+<li>Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;zh_TW.UTF-8&quot;)
+<ul>
+<li>這應該是linux 在windows 無作用,需要超級使用者</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>老是有亂碼:</p>
+<ul>
+<li>找到Rconsole 檔案（用everything搜尋軟體,可能位置 R的安裝目錄\etc\Rconsole）,。這是一個文字檔。
+在其中找到 <code>language = English 或 zh_TW</code></li>
+</ul>
+</li>
+</ul>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1632367358" rel="stylesheet">
+<script src="../js/quicknote.js?1632367358"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/14_00_sim_1.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=14.&#32;simulation&#32;1>前</a>
+                   
+          
+            <a href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=1.3&#32;執行>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1632367358"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1632367358"></script>
+  <script src="../js/featherlight.gallery.min.js?1632367358"></script>
+  <link href="../css/featherlight.min.css?1632367358" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632367358" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1632367358"></script>
+  
+  <script src="../js/hugohelper.js?1632367358"></script>
+
+  <link href="../css/rmd.css?1632367358" rel="stylesheet">
+  <link href="../css/mystyle.css?1632367358" rel="stylesheet">    
+  <script src='../js/variant.js?1632367358'></script>
+
+<script>
+let idxfile = "\/index.json"  
+</script>
+<script src='../js/localsearch.js?1632367358'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

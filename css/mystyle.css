@@ -163,9 +163,8 @@ white-space:normal;
 }
 div.expand {
 white-space:normal;
-margin-left: 10px;
-
-width: 100%;
+/* margin-left: 10px;
+width: 100%; */
 }
 .expand-label {
 background: var(--theme-transparent-color);
@@ -406,8 +405,4 @@ div.sidebar, div.base {
 
 .file-tree li:last-child::before {
   content: '\2514\2500\2500\0020';
-}
-
-.code-out{
-  border:solid red 1px;
 }

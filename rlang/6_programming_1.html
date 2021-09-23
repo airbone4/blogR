@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1631779877"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632367358"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1631779877" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1631779877" rel="stylesheet">
-    <link href="../css/syntax.css?1631779877" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632367358" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632367358" rel="stylesheet">
+    <link href="../css/syntax.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1631779877" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632367358" rel="stylesheet">
     
-    <link href="../css/theme.css?1631779877" rel="stylesheet">
+    <link href="../css/theme.css?1632367358" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -36,50 +36,48 @@
 <div id="variant-toc-content" >
     <div class="wrapper">
         <nav id="TableOfContents">
-<ul>
-<li><a href="#programming-in-r">programming in R</a>
-<ul>
-<li><a href="#條件指令">條件指令</a>
-<ul>
-<li><a href="#if">if</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#多行寫法">多行寫法</a>
-<ul>
-<li>
-<ul>
-<li><a href="#ifelse的寫法">ifelse的寫法</a></li>
-<li><a href="#switch的寫法">switch的寫法</a></li>
-</ul></li>
-<li><a href="#迴圈指令">迴圈指令</a>
-<ul>
-<li><a href="#for-loop">for-loop</a></li>
-<li><a href="#while-loop">while-loop</a></li>
-<li><a href="#repeat-loop">repeat-loop</a></li>
-</ul></li>
-<li><a href="#in-operator"><code>%in%</code> operator</a>
-<ul>
-<li><a href="#範例-detach-package">範例 detach_package()</a></li>
-<li><a href="#範例2-libpaths">範例2：.libPaths()</a></li>
-</ul></li>
-<li><a href="#r語言的-meta-計算">R語言的 meta 計算。</a>
-<ul>
-<li><a href="#deparse">deparse</a></li>
-<li><a href="#quote">quote*</a></li>
-<li><a href="#eval">eval*</a>
-<ul>
-<li><a href="#parse-和eval">parse() 和eval()</a></li>
-<li><a href="#quote-和eval">quote() 和eval()</a></li>
-<li><a href="#substitue">substitue()</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#討論">討論</a>
-<ul>
-<li><a href="#測試紀錄">測試紀錄</a></li>
-</ul></li>
-<li><a href="#練習">練習</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#條件指令">條件指令</a>
+      <ul>
+        <li><a href="#if">if</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ifelse的寫法">ifelse的寫法</a></li>
+        <li><a href="#switch的寫法">switch的寫法</a></li>
+      </ul>
+    </li>
+    <li><a href="#迴圈指令">迴圈指令</a>
+      <ul>
+        <li><a href="#for-loop">for-loop</a></li>
+        <li><a href="#while-loop">while-loop</a></li>
+        <li><a href="#repeat-loop">repeat-loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#in-operator"><code>%in%</code> operator</a>
+      <ul>
+        <li><a href="#範例-detach_package">範例 detach_package()</a></li>
+        <li><a href="#範例2libpaths">範例2：.libPaths()</a></li>
+      </ul>
+    </li>
+    <li><a href="#r語言的-meta-計算">R語言的 meta 計算。</a>
+      <ul>
+        <li><a href="#deparse">deparse</a></li>
+        <li><a href="#quote">quote*</a></li>
+        <li><a href="#eval">eval*</a></li>
+      </ul>
+    </li>
+    <li><a href="#討論">討論</a>
+      <ul>
+        <li><a href="#測試紀錄">測試紀錄</a></li>
+      </ul>
+    </li>
+    <li><a href="#練習">練習</a></li>
+  </ul>
 </nav>
     </div>
     <hr class="p-0 m-0" />
@@ -144,22 +142,37 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/1_1_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1_1_執行">1_1_執行</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_data_explorer_1.html" data-bs-toggle="tooltip" title="2 data explorer 1">2 data explorer 1</a></li>
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_1_data_explorer_2.html" data-bs-toggle="tooltip" title="2.1 data explorer 2">2.1 data explorer 2</a></li>
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
     
   
         <li class="nav-item">
@@ -170,6 +183,11 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
     
   
         <li class="nav-item">
@@ -228,11 +246,6 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/5_filesystem.html" data-bs-toggle="tooltip" title="5 File System">5 File System</a></li>
-    
-  
-        <li class="nav-item active">
-          
           <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
     
   
@@ -277,14 +290,9 @@
           <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
     
   
-        <li class="nav-item">
+        <li class="nav-item active">
           
           <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="作業系統">作業系統</a></li>
     
   
     
@@ -518,98 +526,70 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../topic/test/testpage.html"> <i class="far fa-clock" ></i>testpage[2021-09-16 PM 01:13]</a></li><li><a href="../topic/test/emo_test.html"> <i class="far fa-clock" ></i>emoji_test[2021-09-16 PM 01:13]</a></li><li><a href="../topic/rmd/05_rmd_topic_1.html"> <i class="far fa-clock" ></i>05 rmd topic 1[2021-09-16 PM 01:12]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_2_filesystem.html"> <i class="far fa-clock" ></i>1.2 檔案系統[2021-09-23 AM 11:21]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-23 AM 12:15]</a></li><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-22 PM 10:32]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    
-
-<h1 id="programming-in-r">programming in R</h1>
-
+    <h1 id="programming-in-r">programming in R</h1>
 <h2 id="條件指令">條件指令</h2>
-
 <h3 id="if">if</h3>
-
 <p>一般來講，通用寫法如下：</p>
-
 <pre><code class="language-r">if(判斷式){
  成功
 }else{
  失敗
 }
 </code></pre>
-
 <p>例如</p>
-
 <h1 id="多行寫法">多行寫法</h1>
-
 <pre><code>if(4 &gt; 3){
   TRUE
 }else{
   FALSE
 }
 </code></pre>
-
 <p>另外，如果區塊內只有一行</p>
-
 <p><code>if(4 &gt; 3) TRUE else FALSE</code></p>
-
 <h3 id="ifelse的寫法">ifelse的寫法</h3>
-
-<p><code>ifelse('判斷式','成功','失敗')</code><br />
-例如，<br />
+<p><code>ifelse('判斷式','成功','失敗')</code><br>
+例如，
 <code>ifelse(4 &gt; 3, T, F)</code></p>
-
 <h3 id="switch的寫法">switch的寫法</h3>
-
-<p>switch('判斷式',<br />
-       '動作1',<br />
-       '動作2',<br />
-       ...<br />
-       )<br />
+<p>switch('判斷式', 
+'動作1', 
+'動作2',
+...
+)
 ** 指定第幾行 **</p>
-
 <pre><code class="language-r">switch(2, 
        1, 
        2, #因為判斷式為2，因此，執行動作2
        3) 
 </code></pre>
-
 <ul>
-<li><p>也可以利用字串</p>
-
-<pre><code class="language-r">switch(&quot;a&quot;, 
-   a = 1,         
-   b = 2,       
-   c = &quot;why&quot;)
-#&gt; [1] 1
-</code></pre></li>
+<li>也可以利用字串</li>
 </ul>
-
-<p>這個switch 並不是一個語法，而是一個函數，原理大概是 第1個參數以後的東西，會被變成是一個named list。<br />
+<pre><code class="language-r">switch(&quot;a&quot;, 
+       a = 1,         
+       b = 2,       
+       c = &quot;why&quot;)
+#&gt; [1] 1
+</code></pre>
+<p>這個switch 並不是一個語法，而是一個函數，原理大概是 第1個參數以後的東西，會被變成是一個named list。
 例如上面的例子中</p>
-
 <pre><code class="language-r">alist &lt;-list(a=1,b=2,c=&quot;why&quot;)
 </code></pre>
-
 <p>然後利用判斷式 查找要返回對應的值。</p>
-
 <h2 id="迴圈指令">迴圈指令</h2>
-
 <p>R 語言的迴圈，可以搭配  break和next，前者跳出迴圈，後者繼續下一個迴圈。</p>
-
 <h3 id="for-loop">for-loop</h3>
-
 <p>計算 1+2+3+4. 的值是多少？</p>
-
 <pre><code class="language-r">rst &lt;- 0
 for(i in c(1:4)){ 
   rst &lt;- rst + i
 }
 </code></pre>
-
 <h3 id="while-loop">while-loop</h3>
-
 <pre><code class="language-r">i &lt;- 1
 result &lt;- 0
 
@@ -618,9 +598,7 @@ while(i &lt; 5){
   i &lt;- i + 1
 }
 </code></pre>
-
 <h3 id="repeat-loop">repeat-loop</h3>
-
 <pre><code class="language-r">i &lt;- 1
 rst &lt;- 0
 
@@ -631,20 +609,14 @@ repeat{
   i &lt;- i + 1
 }
 </code></pre>
-
 <h2 id="in-operator"><code>%in%</code> operator</h2>
-
-<h3 id="範例-detach-package">範例 detach_package()</h3>
-
-<p>討論內建函數<code>detach_package()</code><br />
+<h3 id="範例-detach_package">範例 detach_package()</h3>
+<p>討論內建函數<code>detach_package()</code><br>
 使用方法：</p>
-
 <pre><code class="language-r">detach_package(vegan)
 detach_package(&quot;vegan&quot;, TRUE)
 </code></pre>
-
 <p>注意一下第2個使用方式，第2個參數`character.only'：</p>
-
 <pre><code class="language-r">detach_package &lt;- function(pkg, character.only = FALSE)
 {
   if(!character.only) #如果沒有指定參數是字串
@@ -658,9 +630,7 @@ detach_package(&quot;vegan&quot;, TRUE)
   }
 }
 </code></pre>
-
-<h3 id="範例2-libpaths">範例2：.libPaths()</h3>
-
+<h3 id="範例2libpaths">範例2：.libPaths()</h3>
 <pre><code class="language-r">.libPaths
 #&gt; function (new, include.site = TRUE) 
 #&gt; {
@@ -675,50 +645,34 @@ detach_package(&quot;vegan&quot;, TRUE)
 #&gt; &lt;bytecode: 0x0000000013084b10&gt;
 #&gt; &lt;environment: 0x000000001307f990&gt;
 </code></pre>
-
 <h2 id="r語言的-meta-計算">R語言的 meta 計算。</h2>
-
 <ul>
-<li>assign()<br /></li>
-<li>語法解析：substitute(), parse(), deparse()<br /></li>
-<li>表達式構造：quote()<br /></li>
-<li>表達式求值：eval(), source()<br /></li>
-
-<li><p>表達式：expression()</p>
-
+<li>assign()</li>
+<li>語法解析：substitute(), parse(), deparse()</li>
+<li>表達式構造：quote()</li>
+<li>表達式求值：eval(), source()</li>
+<li>表達式：expression()</li>
+</ul>
 <pre><code class="language-r">parse(text='x&lt;-1+2')
 #&gt; expression(x &lt;- 1 + 2)
-</code></pre></li>
-</ul>
-
+</code></pre>
 <p>在R中解析有 <strong>三種不同的變種</strong>：</p>
-
 <ul>
-<li>The read-eval-print loop<br /></li>
-<li>Parsing of text files<br /></li>
-<li>Parsing of character strings<br />
-<br /></li>
+<li>The read-eval-print loop</li>
+<li>Parsing of text files</li>
+<li>Parsing of character strings</li>
 </ul>
-
 <p>read-eval-print 是讀入文本，然後進行解析，然後求值，最後打印，這個就是我們日常看到的命令行操作。</p>
-
 <p>解析文件是parse函數來完成。</p>
-
 <p>解析字符串就是parse中用text參數來表示。</p>
-
 <h3 id="deparse">deparse</h3>
-
 <p>相對於parse,deparse 把<code>expression</code> 轉為字串。</p>
-
 <pre><code class="language-r"> deparse(expression(1+2))
 #&gt; [1] &quot;expression(1 + 2)&quot;
 </code></pre>
-
 <h3 id="quote">quote*</h3>
-
-<p>quote() 的參數也是<code>expression</code>，返回類別<code>class</code>，可以再給<code>eval()</code>計算。<br />
+<p>quote() 的參數也是<code>expression</code>，返回類別<code>class</code>，可以再給<code>eval()</code>計算。
 <code>quote()</code>的參數雖然是<code>expression</code>但是不會進行計算，而是token分解。</p>
-
 <pre><code class="language-r"> quote(1+2)
 #&gt; 1 + 2
  typeof(quote(1+2)) 
@@ -726,29 +680,19 @@ detach_package(&quot;vegan&quot;, TRUE)
  class(quote(1+2))
 #&gt; [1] &quot;call&quot;
 </code></pre>
-
 <h3 id="eval">eval*</h3>
-
 <h4 id="parse-和eval">parse() 和eval()</h4>
-
 <p>text --&gt;parse()--&gt; expression---&gt;eval()</p>
-
 <h4 id="quote-和eval">quote() 和eval()</h4>
-
 <p>expression --&gt;quote()--&gt; call---&gt;eval()</p>
-
 <pre><code class="language-r"> eval(quote(1+2))
 #&gt; [1] 3
 </code></pre>
-
 <p>一般是用parse從字符串（或者是硬盤上的文件）解析成一個expression對象，是表達式列表，不是一個表達式。</p>
-
 <pre><code class="language-r"> eval(parse(text=&quot;1+2&quot;))
 #&gt; [1] 3
 </code></pre>
-
 <p>首先使用parse()函數將字符串轉化為表達式（expression），而後使用eval()函數對表達式求解。</p>
-
 <pre><code class="language-text">?eval
 # Evaluate an R expression in a specified environment.
 # Usage
@@ -760,21 +704,15 @@ detach_package(&quot;vegan&quot;, TRUE)
 # local(expr, envir = new.env())
 
 </code></pre>
-
 <h4 id="substitue">substitue()</h4>
-
 <p>如果沒有第二個參數，是否substitue()==quote()?</p>
-
 <pre><code class="language-r">(s.e &lt;- substitute(expression(a + b), list(a = 1)))  #&gt; expression(1 + b)
 #&gt; expression(1 + b)
 (s.s &lt;- substitute( a + b,            list(a = 1)))  #&gt; 1 + b
 #&gt; 1 + b
 </code></pre>
-
 <h2 id="討論">討論</h2>
-
 <h3 id="測試紀錄">測試紀錄</h3>
-
 <pre><code class="language-r">test1&lt;-function (..., list = character() ) 
 {
     names &lt;- c(as.character(substitute(list(...))[-1L]), list)
@@ -783,28 +721,25 @@ detach_package(&quot;vegan&quot;, TRUE)
 test1(x,y,list=&quot;data&quot;)
 #&gt; [1] &quot;x&quot;    &quot;y&quot;    &quot;data&quot;
 </code></pre>
-
-<p><code>names &lt;- c(as.character(substitute(list(...))[-1L]), list)</code><br />
-* list(...) 把傳進來的參數打包成list<br />
-* 在執行list(...)的時候，如果傳進的參數是還沒有初值的變數，會出錯，因此用<code>substitute()</code>打包。<br />
-    + 為什麼用substitute()就不會出錯，因為它不執行這個expression(e.g. list(...))。<br />
-        -為什麼可以不執行？因為<code>substitue()</code>有把它變成匿名函數(和call這個類別有關，自推論），這樣當然不會有問題。<br />
-        -為什麼有-1L?接續之前的推論，第一個元素應該是匿名函數的內建名稱。</p>
-
+<p><code>names &lt;- c(as.character(substitute(list(...))[-1L]), list)</code></p>
+<ul>
+<li>list(...) 把傳進來的參數打包成list</li>
+<li>在執行list(...)的時候，如果傳進的參數是還沒有初值的變數，會出錯，因此用<code>substitute()</code>打包。
+<ul>
+<li>為什麼用substitute()就不會出錯，因為它不執行這個expression(e.g. list(...))。
+-為什麼可以不執行？因為<code>substitue()</code>有把它變成匿名函數(和call這個類別有關，自推論），這樣當然不會有問題。
+-為什麼有-1L?接續之前的推論，第一個元素應該是匿名函數的內建名稱。</li>
+</ul>
+</li>
+</ul>
 <p>所以整個函數，就是把使用者所有的參數，打成字串向量。如範例結果。</p>
-
 <h2 id="練習">練習</h2>
-
 <ol>
-<li>zeros(3,2),ones(2,3)<br />
-<br /></li>
+<li>zeros(3,2),ones(2,3)</li>
 </ol>
-
 <p>hint:</p>
-
 <pre><code class="language-r">sapply(a,function(x) matrix(x,2,2), simplify='array')
 </code></pre>
-
 <pre><code class="language-r">zeros&lt;-function (nrow,ncol)
 {
 rst&lt;-sapply(c(0),function(x) matrix(x,nrow,ncol),simplify='array')
@@ -846,8 +781,8 @@ x
     </div>
 </div>
 
-<link href="../css/quicknote.css?1631779877" rel="stylesheet">
-<script src="../js/quicknote.js?1631779877"></script>
+<link href="../css/quicknote.css?1632367358" rel="stylesheet">
+<script src="../js/quicknote.js?1632367358"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -855,7 +790,7 @@ x
           <a href="../rlang/5_objectbasic.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=5&#32;object_basic>前</a>
+                   data-bs-placement="left" title=5&#32;R的物件相關概念>前</a>
                    
           
             <a href="../rlang/7_function_1.html" 
@@ -865,7 +800,7 @@ x
           
 
   
-<script src="../js/packhtml.js?1631779877"></script>    
+<script src="../js/packhtml.js?1632367358"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -875,27 +810,23 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1631779877"></script>
-  <script src="../js/featherlight.gallery.min.js?1631779877"></script>
-  <link href="../css/featherlight.min.css?1631779877" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1631779877" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632367358"></script>
+  <script src="../js/featherlight.gallery.min.js?1632367358"></script>
+  <link href="../css/featherlight.min.css?1632367358" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632367358" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1631779877"></script>
+  <script src="../js/highlight.pack.js?1632367358"></script>
   
-  <script src="../js/hugohelper.js?1631779877"></script>
+  <script src="../js/hugohelper.js?1632367358"></script>
 
-  <link href="../css/rmd.css?1631779877" rel="stylesheet">
-  <link href="../css/mystyle.css?1631779877" rel="stylesheet">    
-  <script src='../js/variant.js?1631779877'></script>
+  <link href="../css/rmd.css?1632367358" rel="stylesheet">
+  <link href="../css/mystyle.css?1632367358" rel="stylesheet">    
+  <script src='../js/variant.js?1632367358'></script>
 
 <script>
-
-var idxfile = "\/blogR\//index.json"
-
-
-  
+let idxfile = "\/index.json"  
 </script>
-<script src='../js/localsearch.js?1631779877'></script>
+<script src='../js/localsearch.js?1632367358'></script>
     
 
 

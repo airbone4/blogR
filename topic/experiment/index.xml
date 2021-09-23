@@ -14,16 +14,10 @@
       <guid>/topic/experiment/central.html</guid>
       <description>R Markdown 員工的薪水分配，嚴重懷疑不是常態分配
 100: -&amp;gt;
- mu&amp;lt;-100
- sd&amp;lt;-100
- se(stander error) &amp;lt;- /sd/sqrt(100)
-  1.96
--1.96/se , /mu , 1.96 /se
-boot strapping
-把我們得到的100個樣本，重複抽1000，(每次必須抽100個)然後得到1000個平均
-mu,sd
-percentile(2.5) , mu, percentile(97.5)
-N&amp;lt;-10 metasample&amp;lt;-rnorm(N,5,2) bmu&amp;lt;-numeric(1000) for(i in 1:1000){ rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno] bmu[i]&amp;lt;-mean(smp) } p&amp;lt;-density(bmu) plot(p) qq&amp;lt;-quantile(bmu) rug(qq,col=&amp;quot;red&amp;quot;) qq #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 3.810875 5.332504 5.745269 6.147151 7.410791  N&amp;lt;-100 metasample&amp;lt;-rnorm(N,5,2) bmu&amp;lt;-numeric(1000) for(i in 1:1000){ rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno] bmu[i]&amp;lt;-mean(smp) } p&amp;lt;-density(bmu) plot(p) qq&amp;lt;-quantile(bmu) rug(qq,col=&amp;quot;red&amp;quot;) qq #&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 4.</description>
+ mu&amp;lt;-100 sd&amp;lt;-100 se(stander error) &amp;lt;- /sd/sqrt(100)  1.96
+-1.96*/se , /mu , 1.96* /se
+boot strapping 把我們得到的100個樣本，重複抽1000，(每次必須抽100個)然後得到1000個平均 mu,sd percentile(2.5) , mu, percentile(97.5)
+N&amp;lt;-10metasample&amp;lt;-rnorm(N,5,2)bmu&amp;lt;-numeric(1000)for(i in 1:1000){rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno]bmu[i]&amp;lt;-mean(smp)}p&amp;lt;-density(bmu)plot(p)qq&amp;lt;-quantile(bmu)rug(qq,col=&amp;quot;red&amp;quot;)qq#&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 3.810875 5.332504 5.745269 6.147151 7.410791 N&amp;lt;-100metasample&amp;lt;-rnorm(N,5,2)bmu&amp;lt;-numeric(1000)for(i in 1:1000){rndno&amp;lt;-as.integer(runif(N)*N)+1 smp&amp;lt;-metasample[rndno]bmu[i]&amp;lt;-mean(smp)}p&amp;lt;-density(bmu)plot(p)qq&amp;lt;-quantile(bmu)rug(qq,col=&amp;quot;red&amp;quot;)qq#&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 4.</description>
     </item>
     
   </channel>

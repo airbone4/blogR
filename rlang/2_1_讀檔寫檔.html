@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html><head>
+  <title>2.1 讀檔寫檔</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1632367358"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1632367358" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632367358" rel="stylesheet">
+    <link href="../css/syntax.css?1632367358" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1632367358" rel="stylesheet">
+    
+    <link href="../css/theme.css?1632367358" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#讀檔">讀檔</a>
+      <ul>
+        <li><a href="#基本輸入和輸出">基本輸入和輸出</a></li>
+      </ul>
+    </li>
+    <li><a href="#一般的開檔關檔過程">一般的開檔/關檔過程</a>
+      <ul>
+        <li><a href="#低階">低階</a></li>
+        <li><a href="#dataframe-to-csv">data.frame to CSV</a></li>
+        <li><a href="#more">more</a></li>
+      </ul>
+    </li>
+    <li><a href="#r語言的檔案格式">R語言的檔案格式</a></li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 23, 2021'>2.1 讀檔寫檔</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_2_filesystem.html"> <i class="far fa-clock" ></i>1.2 檔案系統[2021-09-23 AM 11:21]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-23 AM 12:15]</a></li><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-22 PM 10:32]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="讀檔">讀檔</h2>
+<h3 id="基本輸入和輸出">基本輸入和輸出</h3>
+<p>😜<a href="../rlang/4_1_1_type_basic.html#字串">參考第4部分字串一節</a></p>
+<ul>
+<li><code>print()</code></li>
+<li><code>cat()</code></li>
+<li><code>sprintf()</code></li>
+</ul>
+<pre><code class="language-r?lang=r?preclass=.ms-5.w-75">a&lt;-&quot;hello&quot;
+print(a)
+#&gt; [1] &quot;hello&quot;
+print(&quot;hello&quot;)
+#&gt; [1] &quot;hello&quot;
+b&lt;-'陌生人'
+print(b)
+#&gt; [1] &quot;陌生人&quot;
+print('hello')
+#&gt; [1] &quot;hello&quot;
+
+cat(a)
+#&gt; hello
+cat(b)
+#&gt; 陌生人
+cat(&quot;陌生人&quot;)
+#&gt; 陌生人
+
+c&lt;-paste0(a,b)
+print(c)
+#&gt; [1] &quot;hello陌生人&quot;
+c&lt;-paste0(a,&quot; &quot;,b)
+print(c)
+#&gt; [1] &quot;hello 陌生人&quot;
+</code></pre>
+<p><code>print()</code>,<code>cat()</code>雖然在上面的例子看起來一樣。但是初學者推薦使用<code>print()</code>。</p>
+<div data-nopre class="expand ms-5 ">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >補充</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><p><code>cat()</code>通常是在檔案處理的時候。在C類的語言中,鍵盤和螢幕都屬於檔案-特殊檔案,一種只能讀出,一種只能寫入,抽象觀念的描述是串流。
+使用範例如下:</p>
+<pre><code class="language-r">sink(&quot;foobar.txt&quot;) # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;從這個指令開始,所有流向螢幕的輸出都輸出到檔案foobar.txt &lt;/span&gt;&lt;/span&gt;
+cat('&quot;foo&quot;\n')
+cat('&quot;bar&quot;')
+sink() #&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;結束 &lt;/span&gt;&lt;/span&gt;
+
+</code></pre>
+<p>檔案內容是:</p>
+<pre><code class="language-txt">&quot;foo&quot;
+&quot;bar&quot;
+</code></pre>
+<ul>
+<li>一行指令完成上述程式碼</li>
+</ul>
+<pre><code class="language-r?class=ms-5.w-75">  cat('&quot;foo&quot;', '&quot;bar&quot;', file=&quot;foobar.txt&quot;, sep=&quot;\n&quot;)
+</code></pre>
+<ul>
+<li>如果檔案已經存在,還要添加,那麼就加上參數<code>append=T</code></li>
+</ul>
+<pre><code class="language-r?class=ms-5.w-75">  cat('&quot;foo&quot;', file=&quot;foobar.txt&quot;, append=TRUE)
+  cat('&quot;bar&quot;', file=&quot;foobar.txt&quot;, append=TRUE)
+</code></pre>
+</div></div>
+<h4 id="僅僅查看檔案內容">僅僅查看檔案內容</h4>
+<ul>
+<li><a href="resources/wh_chinese.csv">測試中文檔案的指令</a>
+<ul>
+<li><code>readLines(logf, encoding=&quot;UTF-8&quot;)</code></li>
+<li><code>writeLines(字串, 檔案名稱, useBytes=T)</code></li>
+</ul>
+</li>
+</ul>
+<div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >展開</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><p>readLines()的範例</p>
+<pre><code class="language-r">dir(system.file())
+#&gt; [1] &quot;CITATION&quot;    &quot;demo&quot;        &quot;DESCRIPTION&quot; &quot;help&quot;       
+#&gt; [5] &quot;html&quot;        &quot;INDEX&quot;       &quot;Meta&quot;        &quot;R&quot;  
+res &lt;- readLines(system.file(&quot;DESCRIPTION&quot;, package=&quot;MASS&quot;))
+length(res)
+</code></pre>
+</div></div>
+<div class="nopre attachments ">
+     <label>
+       <i class="fas fa-paperclip" aria-hidden="true"></i>可以用來練習的文字檔</label>
+      
+       <ol class="attachments-files"><li>
+                      <a id="f_0a6a004dccc39cd502246d648eb99b09" href="../rlang/resources/Journals.csv" class="toa-item" >Journals.csv</a>
+                  </li><li>
+                      <a id="f_e9bd1020d1af66ca68a5198e65dfa2f7" href="../rlang/resources/sample1.csv" class="toa-item" >sample1.csv</a>
+                  </li><li>
+                      <a id="f_c5a9cb720ae9929e7707d6fed74094e0" href="../rlang/resources/sample2.csv" class="toa-item" >sample2.csv</a>
+                  </li><li>
+                      <a id="f_0416e2d739becc85afc3967832049291" href="../rlang/resources/sample3.csv" class="toa-item" >sample3.csv</a>
+                  </li><li>
+                      <a id="f_4b0b8cb6e9e73e4725142a53e9e2593f" href="../rlang/resources/simple.csv" class="toa-item" >simple.csv</a>
+                  </li><li>
+                      <a id="f_93728a7fdbda2b1848eb0c70cf45c648" href="../rlang/resources/smoker.csv" class="toa-item" >smoker.csv</a>
+                  </li><li>
+                      <a id="f_dff66a7f0fa2ac280aa2f40c3e8a7d93" href="../rlang/resources/trees91.csv" class="toa-item" >trees91.csv</a>
+                  </li><li>
+                      <a id="f_f9f4c7f8b44d8fcded5a200c61804a5d" href="../rlang/resources/wh.csv" class="toa-item" >wh.csv</a>
+                  </li><li>
+                      <a id="f_85a86054344bf7fe1af34346f24b7f3e" href="../rlang/resources/wh_chinese.csv" class="toa-item" >wh_chinese.csv</a>
+                  </li></ol>
+   </div>
+<p>注意檔案內容第一行不是資料,而是欄位。<br>
+<div class="notices">
+    <div class= info>
+        <p><code>file.show(&quot;resources/wh.csv&quot;)</code>會打開excel<br>
+也可以利用殼層指令:<br>
+<code>system(&quot;cat resources/wh.csv&quot;)</code>，但是如果內容是中文,顯示結果會變成亂碼。</p>
+<p>上面兩種方法,可能會覺得有點多餘,因為在視窗介面中,直接按兩下就可以打該檔案。但是，有時候檔案很大,一般的編輯器打不開但是又不知道是甚麼格式，這時可以使用可以指定讀入長度的指令<code>readChar()</code></p>
+<pre><code class="language-r?lang=r?preclass=ms-5">cat(readChar(&quot;resources/wh.csv&quot;, 1e5))
+#&gt; Warning in readChar(&quot;resources/wh.csv&quot;, 1e+05): 在非 UTF-8 MBCS 語區中只能以位元
+#&gt; 組為單位讀取
+#&gt; # this is a test file
+#&gt; height,weight,sex
+#&gt; 156,56, m
+#&gt; 167,., f
+#&gt; 189,70, m
+#&gt; 180,, f
+</code></pre>
+<p>利用useBytes 不會出現警告</p>
+<pre><code class="language-r?lang=r?preclass=ms-5">cat(readChar(&quot;resources/wh_chinese.csv&quot;, useBytes=TRUE,1e5))  
+#&gt; Error in cat(readChar(&quot;resources/wh_chinese.csv&quot;, useBytes = TRUE, 1e+05)): 無效的多位元組字串於 '&lt;e9&gt;&lt;99&gt;&lt;e6&gt;皜祈岫瑼&lt;94&gt;
+#&gt; 頨恍&lt;ab&gt;&lt;98&gt;,擃&lt;87&gt;&lt;8d&gt;,&lt;e6&gt;批
+#&gt; 156,56,&lt;e7&gt;
+#&gt; 167,66,憟&lt;b3&gt;
+#&gt; 189,70,&lt;e7&gt;
+#&gt; 180,,憟&lt;b3&gt;
+#&gt; '
+</code></pre>
+<p>❌參數有useBytes,但是不管TRUE/FALSE，都是中文亂碼</p>
+<p>✔正解:</p>
+<pre><code class="language-r?lang=r?preclass=ms-5">x&lt;-readChar(&quot;resources/wh_chinese.csv&quot;, useBytes=TRUE,1e5)
+Encoding(x)&lt;-&quot;UTF-8&quot;
+cat(x)
+#&gt; #這是測試檔
+#&gt; 身高,體重,性別
+#&gt; 156,56,男
+#&gt; 167,66,女
+#&gt; 189,70,男
+#&gt; 180,,女
+</code></pre>
+<p>如果要轉碼: ❓<code>iconv(x,&quot;UTF-8&quot;,&quot;zh_TW&quot;)</code></p>
+
+    </div>
+</div>
+</p>
+<h4 id="csv-範例">csv 範例</h4>
+<div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >wh.csv的內容</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-csv"># this is a test file
+height,weight,sex
+156,56, m
+167,., f
+189,70, m
+180,, f
+</code></pre>
+</div></div>
+<pre><code class="language-r?lang=r?preclass=ms-5">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;,na.string='.')
+write.csv(rst, file = &quot;MyData.csv&quot;,row.names=FALSE, quote=F)
+
+cat(readLines('MyData.csv'), sep = '\n') # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >內建 readLine() </span></span>
+#&gt; height,weight,sex
+#&gt; 156,56, m
+#&gt; 167,NA, f
+#&gt; 189,70, m
+#&gt; 180,NA, f
+cat(readr::read_file(&quot;MyData.csv&quot;)) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >利用套件readr </span></span>
+#&gt; height,weight,sex
+#&gt; 156,56, m
+#&gt; 167,NA, f
+#&gt; 189,70, m
+#&gt; 180,NA, f
+</code></pre>
+<h2 id="一般的開檔關檔過程">一般的開檔/關檔過程</h2>
+<h3 id="低階">低階</h3>
+<p>大體上每個語言的開檔和關檔案的過程，都會利用到作業系統，因此會有開檔動作，從作業系統得到一個數字，這裡稱為檔案指標，然後利用這個指標，讀入文字或寫入文字，然後有一個關閉檔案的動作告訴作業系統，處理檔案結束。</p>
+<p>在R語言中，開檔不是open(),而是file：</p>
+<pre><code class="language-r?preclass=ms-5">  con = file(filepath, &quot;r&quot;)
+  開始讀寫操作
+  close(con)
+</code></pre>
+<p>迴圈一行一行讀入並寫到螢幕上</p>
+<pre><code class="language-r?preclass=ms-5">processFile = function(filepath) {
+  con = file(filepath, &quot;r&quot;)
+  while ( TRUE ) {
+    line = readLines(con, n = 1) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >n=1 每次讀入一行 </span></span>
+    if ( length(line) == 0 ) {
+      break
+    }
+    print(line)
+  }
+
+  close(con)
+}
+
+</code></pre>
+<h4 id="利用套件讀取excel的csv">利用套件讀取excel的csv</h4>
+<pre><code class="language-r?preclass=ms-5">read.csv(&quot;filename.csv&quot;, #name of file
+         header = TRUE, #are there column names in 1st row?
+         sep = &quot;,&quot;, #what separates rows?
+         as.is = !stringsAsFactors, #關掉字元轉factor
+         colClasses = NA # to convert everything to character data set to &quot;character&quot;
+         na.string = &quot;NA&quot; # could be &quot;.&quot; for SAS files
+         skip = 0, #要跳過的前幾行數目&gt;0
+         strip.white = TRUE, #擠掉空白,例如 &quot; 0.1&quot; = &quot;0.1&quot;
+         fill = TRUE, #fill in rows that have unequal numbers of columns
+         comment.char = &quot;#&quot;, #註解不讀入
+         stringsAsFactors = FALSE #比as.is 常用,關掉字元轉factor
+         )
+</code></pre>
+<p><code>read.csv()</code>最簡單的用法是直接給檔案名稱,例如</p>
+<pre><code class="language-r?preclass=ms-5">rst = read.csv('resources/wh.csv')
+</code></pre>
+<p>但是wh.csv 前面有幾行是註解</p>
+<pre><code class="language-r?preclass=ms-5">readLines('resources/wh.csv',n=3)
+</code></pre>
+<p>因此加上skip 參數</p>
+<pre><code class="language-r?lang=r?preclass=ms-5">rst = read.csv('resources/wh.csv',skip=1)
+head(rst)
+#&gt;   height weight sex
+#&gt; 1    156     56   m
+#&gt; 2    167      .   f
+#&gt; 3    189     70   m
+#&gt; 4    180          f
+</code></pre>
+<p>也可以利用參數<code>comment.char</code></p>
+<pre><code class="language-r?lang=r?preclass=ms-5">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;)
+head(rst)
+#&gt;   height weight sex
+#&gt; 1    156     56   m
+#&gt; 2    167      .   f
+#&gt; 3    189     70   m
+#&gt; 4    180          f
+</code></pre>
+<p>但是注意到<code>weight</code>這個欄位被轉為字串,因為有一個 &quot;.&quot; 。有些套裝軟體的CSV輸出將NA轉為&quot;.&quot;,因此</p>
+<pre><code class="language-r?lang=r?preclass=ms-5">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;,na.string='.')
+head(rst)
+#&gt;   height weight sex
+#&gt; 1    156     56   m
+#&gt; 2    167     NA   f
+#&gt; 3    189     70   m
+#&gt; 4    180     NA   f
+</code></pre>
+<h3 id="dataframe-to-csv">data.frame to CSV</h3>
+<pre><code class="language-r?lang=r?preclass=ms-5">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;,na.string='.') # 讀進來的檔案類別是 class(rst) = data.frame
+write.csv(rst, file = &quot;MyData.csv&quot;)
+readLines(&quot;MyData.csv&quot;,n=3) 
+#&gt; [1] &quot;\&quot;\&quot;,\&quot;height\&quot;,\&quot;weight\&quot;,\&quot;sex\&quot;&quot; &quot;\&quot;1\&quot;,156,56,\&quot; m\&quot;&quot;               
+#&gt; [3] &quot;\&quot;2\&quot;,167,NA,\&quot; f\&quot;&quot;
+</code></pre>
+<p>如果row names不要寫進csv,可以利用參數 <code>row.names=FALSE</code>。</p>
+<pre><code class="language-r?lang=r?preclass=ms-5">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;,na.string='.')
+write.csv(rst, file = &quot;MyData.csv&quot;,row.names=FALSE)
+readLines(&quot;MyData.csv&quot;,n=3) 
+#&gt; [1] &quot;\&quot;height\&quot;,\&quot;weight\&quot;,\&quot;sex\&quot;&quot; &quot;156,56,\&quot; m\&quot;&quot;                
+#&gt; [3] &quot;167,NA,\&quot; f\&quot;&quot;
+</code></pre>
+<div class="notices">
+    <div class= sidebar>
+        <pre><code class="language-r">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;,na.string='.')
+write.csv(rst, file = &quot;MyData.csv&quot;,row.names=FALSE)
+readLines(&quot;MyData.csv&quot;,n=3) 
+</code></pre>
+<p>輸出是:</p>
+<pre><code class="language-txt?preclass=ms-5">[1] &quot;\&quot;height\&quot;,\&quot;weight\&quot;,\&quot;sex\&quot;&quot;  
+[2] &quot;156,56,\&quot; m\&quot;&quot;                 
+[3] &quot;167,NA,\&quot; f\&quot;&quot;  
+</code></pre>
+<p>可以看出來每一行都有雙引號表示字串。<br>
+對照原來的文字檔(mData.csv)</p>
+<pre><code class="language-txt?preclass=ms-5">&quot;height&quot;,&quot;weight&quot;,&quot;sex&quot;  
+156,56,&quot; m&quot;  
+167,NA,&quot; f&quot;  
+189,70,&quot; m&quot;  
+180,NA,&quot; f&quot;  
+</code></pre>
+
+    </div>
+</div>
+
+<div class="notices">
+    <div class= quiz>
+        <ol>
+<li>上面sidebar中,顯示的的sex欄位,可以看見&quot; m&quot; 也就是有空白,問利用<code>read.csv</code> 讀入時,會是甚麼情況?</li>
+</ol>
+
+    </div>
+</div>
+
+<ul>
+<li>如果輸出時,字串不要雙引號,則可以用<code>quote=FALSE</code> (自行對照上面的sidebar)</li>
+</ul>
+<pre><code class="language-r?preclass=ms-5">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;,na.string='.')
+write.csv(rst, file = &quot;MyData.csv&quot;,row.names=FALSE, quote=F) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >開關quote=F </span></span>
+cat(readLines('MyData.csv'), sep = '\n')
+</code></pre>
+<ul>
+<li>如果要指定NA的值,可以利用欄位=<code>&quot;&quot;</code>,否則預定是<code>NA</code></li>
+</ul>
+<pre><code class="language-r?preclass=ms-5">rst = read.csv('resources/wh.csv',comment.char=&quot;#&quot;,na.string='.')
+write.csv(rst, file = &quot;MyData.csv&quot;,row.names=FALSE, na=&quot;&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >輸出的文件中,這欄是空的 </span></span>
+cat(readLines(&quot;MyData.csv&quot;), sep = '\n')
+</code></pre>
+<h3 id="more">more</h3>
+<p>如果要更多的輸出控制可以參考可以<a href="http://stat.ethz.ch/R-manual/R-devel/library/utils/html/write.table.html"><code>write.table()</code></a>.
+<code>write.csv()</code>函數,實際上會再呼叫<code>write.table()</code>函數。例如,欄位名稱也不要輸出的話,可以利用<code>write.table()</code>，要設定的參數如下: <code>sep=”,”</code> 和 <code>col.names=FALSE</code>,前者是CSV的主要分隔字元,後者則是不要欄位名稱。</p>
+<pre><code class="language-r">write.table(rst, file = &quot;MyData.csv&quot;,row.names=FALSE, na=&quot;&quot;,col.names=FALSE, sep=&quot;,&quot;)
+cat(readLines('MyData.csv'), sep = '\n')
+</code></pre>
+<h2 id="r語言的檔案格式">R語言的檔案格式</h2>
+<p>如果不考慮存檔格式，那麼可以利用</p>
+<pre><code class="language-r?lang=r?preclass=.code-source">save(v1,v2,...file=&quot;myfile.RData&quot;)
+...
+load(file=&quot;myfie.RData&quot;)
+</code></pre>
+<hr>
+<p>📝 解答</p>
+<pre><code>userfolder&lt;-??
+allfolder&lt;-list.dir()
+okfolder&lt;-allfolder[dir.exists(userfolder)]
+</code></pre>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1632367358" rel="stylesheet">
+<script src="../js/quicknote.js?1632367358"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/11_environments.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=11&#32;Environments>前</a>
+                   
+          
+            <a href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=3.02.regular練習>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1632367358"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1632367358"></script>
+  <script src="../js/featherlight.gallery.min.js?1632367358"></script>
+  <link href="../css/featherlight.min.css?1632367358" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632367358" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1632367358"></script>
+  
+  <script src="../js/hugohelper.js?1632367358"></script>
+
+  <link href="../css/rmd.css?1632367358" rel="stylesheet">
+  <link href="../css/mystyle.css?1632367358" rel="stylesheet">    
+  <script src='../js/variant.js?1632367358'></script>
+
+<script>
+let idxfile = "\/index.json"  
+</script>
+<script src='../js/localsearch.js?1632367358'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>
