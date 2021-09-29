@@ -59,7 +59,7 @@ text-decoration: none;
 color: inherit;
 border-bottom: 1px solid var(--theme-border-color);
 
-background: transparent;
+background: #8ce9e44a; /*transparent;*/
 
 }
 

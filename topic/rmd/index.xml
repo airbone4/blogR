@@ -26,17 +26,12 @@ The script is converted to Rmd through knitr::spin(); then rmarkdown::render() w
     </item>
     
     <item>
-      <title>04 Rmd hook</title>
+      <title>04 Rmd hook✔</title>
       <link>/topic/rmd/04_rmd_hook.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/rmd/04_rmd_hook.html</guid>
-      <description>背景 提取程式碼 參考
-knitr hook 插塊(chunk)顏色 有關hook 的設定,參考 knitr hook
-設定警告訊息為紅色
-knitr::knit_hooks$set(error = function(x, options) {paste0(&amp;quot;&amp;lt;pre style=\&amp;quot;color: red;\&amp;quot;&amp;gt;&amp;lt;code&amp;gt;&amp;quot;, x, &amp;quot;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;quot;)}) 其他範例 #Color FormatcolFmt = function(x,color){outputFormat = opts_knit$get(&amp;quot;rmarkdown.pandoc.to&amp;quot;)if(outputFormat == &#39;latex&#39;)paste(&amp;quot;\\textcolor{&amp;quot;,color,&amp;quot;}{&amp;quot;,x,&amp;quot;}&amp;quot;,sep=&amp;quot;&amp;quot;)else if(outputFormat == &#39;html&#39;)paste(&amp;quot;&amp;lt;font color=&#39;&amp;quot;,color,&amp;quot;&#39;&amp;gt;&amp;quot;,x,&amp;quot;&amp;lt;/font&amp;gt;&amp;quot;,sep=&amp;quot;&amp;quot;)elsex} terminal output 問題:如果以要看檔案內容,而不想被無關的輸出符號干擾,例如[1],那麼如果再R SCRIPT中可以使用 system(&amp;quot;cat 檔案名稱&amp;quot;) ,但是在R Markdown中(如下)不會顯示出結果:
-🔖 wh.csv
-rst = read.csv(&#39;resources/wh.csv&#39;,comment.char=&amp;quot;#&amp;quot;,na.string=&#39;.&#39;)write.csv(rst, file = &amp;quot;MyData.csv&amp;quot;,row.names=FALSE, na=&amp;quot;&amp;quot;)system(&amp;quot;cat MyData.csv&amp;quot;) You can use either</description>
+      <description>快遞 knitr::opts_chunk$set(echo = FALSE, collapse = TRUE,comment = &amp;quot;#&amp;gt;&amp;quot;,fig.path = &amp;quot;graphics/knitr-&amp;quot;,fig.retina = 2, # Control using dpifig.width = 6, # generated imagesfig.pos = &amp;quot;t&amp;quot;, # pdf modefig.align = &amp;quot;center&amp;quot;,dpi = if (knitr::is_latex_output()) 72 else 300, out.width = &amp;quot;100%&amp;quot;,dev = &amp;quot;svg&amp;quot;,dev.args = list(png = list(type = &amp;quot;cairo-png&amp;quot;)), #🏷註解👏 optipng = &amp;quot;-o1 -quiet&amp;quot;) ⛳Graphics Device  The graphics device is the default device for used to create and provide graphics.</description>
     </item>
     
     <item>

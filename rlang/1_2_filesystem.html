@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632374882"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632928432"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632374882" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632374882" rel="stylesheet">
-    <link href="../css/syntax.css?1632374882" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632928432" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632928432" rel="stylesheet">
+    <link href="../css/syntax.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632374882" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme.css?1632374882" rel="stylesheet">
+    <link href="../css/theme.css?1632928432" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -64,7 +64,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 23, 2021'>1.2 檔案系統</span>
+      title='最後修改September 24, 2021'>1.2 檔案系統</span>
         
     
 
@@ -139,6 +139,13 @@
           <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
     
   
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
@@ -196,12 +203,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
@@ -240,6 +247,9 @@
   
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html" data-bs-toggle="tooltip" title="8.1. 自製套件">8.1. 自製套件</a></li>
     
   
         <li class="nav-item">
@@ -505,19 +515,19 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-09-23 PM 01:27]</a></li><li><a href="../rlang/2_2_data_explorer.html"> <i class="far fa-clock" ></i>2.2 data explorer[2021-09-23 PM 12:47]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-09-23 AM 11:48]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 09:38]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li><li><a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html"> <i class="far fa-clock" ></i>4.1.2_type練習[2021-09-25 PM 06:06]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
     <h2 id="分解合成檔案路徑">分解、合成檔案路徑</h2>
 <p>在R語言中,路徑名稱不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
-<pre><code class="language-r">workingdir &lt;- &quot;projects&quot;
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">workingdir &lt;- &quot;projects&quot;
 projectdir &lt;- &quot;warandpeace&quot;
 datadir    &lt;- &quot;data&quot;
 file.path(workingdir, projectdir, datadir)
 </code></pre>
 <p>結果</p>
-<pre><code>[1] &quot;projects/warandpeace/data&quot;
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">[1] &quot;projects/warandpeace/data&quot;
 上面是windows 10系統上的結果,比較 Linux-based OS:  
 [1] &quot;projects/warandpeace/data&quot;
 注意斜線都一樣。
@@ -526,7 +536,7 @@ file.path(workingdir, projectdir, datadir)
 <p>利用函數 <code>file.path()</code>合成檔案路徑，其分隔是斜線,而不是反斜線  (例如for example <code>C:/Program Files/R/R-3.5.1</code>)?</p>
 <pre><code class="language-r">file.path(&quot;c:/temp&quot;,&quot;test.txt&quot;)
 </code></pre>
-<pre><code>#&gt; [1] &quot;c:/temp/test.txt&quot;
+<pre><code>## [1] &quot;c:/temp/test.txt&quot;
 </code></pre>
 <h3 id="路徑分解">路徑分解</h3>
 <ul>
@@ -558,11 +568,13 @@ file.path(workingdir, projectdir, datadir)
 </li>
 </ul>
 <p>範例</p>
-<pre><code class="language-r">currentwd&lt;-getwd()
+<pre><code class="language-r?preclass=.code-source.ms-5">currentwd&lt;-getwd()
 setwd(&quot;~&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >這是使用者目錄,看你是甚麼系統而定,我的是windows </span></span>
 getwd()
 #&gt; [1] &quot;C:/Users/you/Documents&quot;
 setwd(currentwd)
+
+path.expand(&quot;~&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏展開路徑~ </span></span>
 
 R.home()
 libPaths()
@@ -578,12 +590,12 @@ dir(&quot;../..&quot;, pattern = &quot;^[a-lr]&quot;, full.names = TRUE, ignore.
 <h3 id="練習">練習</h3>
 <p><div class="position-relative warning p-0">
 問題:
-利用<code>.libPaths()</code> 、 <code>list.files()</code>問題:列出所有套件<button type="button" class="btn btn-primary position-absolute top-0 end-0" 
+利用<code>.libPaths()</code> 、 <code>list.files()</code>問題:列出所有套件<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-2268">提示</button>
 </div>    
 
 
-<div class="collapse" id="quiz-2268"><pre><code class="language-r">list.files(.libPaths())
+<div class="collapse" id="quiz-2268"><pre><code class="language-r?preclass=.code-source.ms-5.w-75">list.files(.libPaths())
 </code></pre>
 </div>
 </p>
@@ -597,7 +609,7 @@ dir(&quot;../..&quot;, pattern = &quot;^[a-lr]&quot;, full.names = TRUE, ignore.
     <div data-nopre class="expand-label" onclick="vexpand(this)">
         <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
         <span data-nopre >展開</span>
-    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">mydirname &lt;- tempfile(pattern = &quot;mydir&quot;)
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r?preclass=.code-source.ms-5.w-75">mydirname &lt;- tempfile(pattern = &quot;mydir&quot;)
 mydirname
 
 #&gt; C:\\Users\\使用者名稱\\AppData\\Local\\Temp\\RtmpSg2qRA\\mydir326845a02140
@@ -616,7 +628,7 @@ mydirname
     <div data-nopre class="expand-label" onclick="vexpand(this)">
         <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
         <span data-nopre >範例</span>
-    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">s&lt;-&quot;C:\\Users\\使用者名稱\\AppData\\Local\\Temp&quot;
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r?preclass=.code-source.ms-5.w-75">s&lt;-&quot;C:\\Users\\使用者名稱\\AppData\\Local\\Temp&quot;
 dir(s)
 </code></pre>
 </div></div>
@@ -624,13 +636,13 @@ dir(s)
 </ul>
 <h2 id="建立目錄">建立目錄</h2>
 <p>dir.create 建立子目錄</p>
-<pre><code class="language-r">dir.create(mydirname)  
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">dir.create(mydirname)  
 file.exists(mydirname) # 上面指令建立的子目錄是否存在
 dir(tempdir(), full.names = TRUE) #列出目前子目錄內容(全名)
 file.mtime(mydirname) #子目錄建立時間,make time
 </code></pre>
 <p>結果</p>
-<pre><code class="language-r">[1] TRUE  
+<pre><code class="language-r?preclass=.code-out.ms-5.w-75">[1] TRUE  
 [1] &quot;C:\\Users\\xxx\\AppData\\Local\\Temp\\RtmpIp3ZiD/file87e8755a1876&quot;                                  
 [2] &quot;C:\\Users\\xxx\\AppData\\Local\\Temp\\RtmpIp3ZiD/mydir87e86b51384d&quot;                                 
 [3] &quot;C:\\Users\\xxx\\AppData\\Local\\Temp\\RtmpIp3ZiD/rs-graphics-0f3f81af-32b7-49c4-a272-ad1a859f222f&quot;  
@@ -638,7 +650,7 @@ file.mtime(mydirname) #子目錄建立時間,make time
 </code></pre>
 <h2 id="r系統檔案列表">R系統檔案列表</h2>
 <p>如果要觀察安裝套件的檔案位置,可以使用指令<code>system.file()</code>,這個指令可以列出內建某個套建的全路徑。例如,</p>
-<pre><code class="language-r?preclass=ms-5">system.file(package = &quot;stats&quot;)
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">system.file(package = &quot;stats&quot;)
 # &gt; [1] &quot;C:/PROGRA~1/R/R-3.5.1/library/stats&quot;
 system.file() <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >基本套件路徑 </span></span>
 # &gt; [1] &quot;C:/PROGRA~1/R/R-41~1.1/library/base&quot; 
@@ -647,7 +659,7 @@ system.file() <span data-nopre class="codenote nopre">🏷<span data-nopre  clas
 # &gt; [2] &quot;C:/Program Files/R/R-4.1.1/library&quot;
 </code></pre>
 <p><code>system.file()</code>的結果是一個目錄,因此可以利用<code>dir()</code>列出套件stats中,所有的檔案</p>
-<pre><code class="language-r?preclass=ms-5">dir(system.file(package = &quot;stats&quot;))
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">dir(system.file(package = &quot;stats&quot;))
 
 #&gt;  [1] &quot;COPYRIGHTS.modreg&quot; &quot;demo&quot;              &quot;DESCRIPTION&quot;    
 #&gt;  [4] &quot;help&quot;              &quot;html&quot;              &quot;INDEX&quot;          
@@ -655,12 +667,12 @@ system.file() <span data-nopre class="codenote nopre">🏷<span data-nopre  clas
 #&gt;  [10] &quot;R&quot;                 &quot;SOURCES.ts&quot;     
 </code></pre>
 <p>上面可以看到套件中包含子目錄<code>demo</code>，如果還要查看<code>demo</code>中的檔案內容:</p>
-<pre><code class="language-r?preclass=ms-5">dir(system.file(&quot;demo&quot;, package = &quot;stats&quot;))
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">dir(system.file(&quot;demo&quot;, package = &quot;stats&quot;))
 
 #&gt; [1] &quot;glm.vr.R&quot; &quot;lm.glm.R&quot; &quot;nlm.R&quot;    &quot;smooth.R&quot;
 </code></pre>
 <p>上面只有檔案名稱,如果要看全路徑，可以利用參數<code>full.names</code>:</p>
-<pre><code class="language-r?preclass=ms-5">dir(system.file(&quot;demo&quot;, package = &quot;stats&quot;), full.names = TRUE)
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">dir(system.file(&quot;demo&quot;, package = &quot;stats&quot;), full.names = TRUE)
 
 #&gt; [1] &quot;/usr/lib64/R/library/stats/demo/glm.vr.R&quot;
 #&gt; [2] &quot;/usr/lib64/R/library/stats/demo/lm.glm.R&quot;
@@ -669,22 +681,22 @@ system.file() <span data-nopre class="codenote nopre">🏷<span data-nopre  clas
 </code></pre>
 <h2 id="應用範例">應用範例</h2>
 <h3 id="列出目前工作目錄上的檔案">列出目前工作目錄上的檔案</h3>
-<pre><code class="language-r?preclass=ms-5">x &lt;- dir()
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">x &lt;- dir()
 for (item in x) {
     print(item) # show(item) 
 }
 
 </code></pre>
 <p>或者,僅列出前幾個檔案</p>
-<pre><code class="language-r?preclass=ms-5">x&lt;-dir()
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">x&lt;-dir()
 head(x)
 
 </code></pre>
 <div class="notices">
-    <div class= warnning>
+    <div class= tip>
         <p>檢查在目前的工作目錄下,是否存在使用者傳遞進來的目錄?
 例如</p>
-<pre><code class="language-r">folderlist&lt;-c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;)
+<pre><code class="language-r?preclass=.code-source.ms-5.w-75">folderlist&lt;-c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;)
 checkdir(folderlist) 
 </code></pre>
 <p>📝 利用<code>file.exists()</code></p>
@@ -720,8 +732,8 @@ checkdir(folderlist)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632374882" rel="stylesheet">
-<script src="../js/quicknote.js?1632374882"></script>
+<link href="../css/quicknote.css?1632928432" rel="stylesheet">
+<script src="../js/quicknote.js?1632928432"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -739,7 +751,7 @@ checkdir(folderlist)
           
 
   
-<script src="../js/packhtml.js?1632374882"></script>    
+<script src="../js/packhtml.js?1632928432"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -749,23 +761,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632374882"></script>
-  <script src="../js/featherlight.gallery.min.js?1632374882"></script>
-  <link href="../css/featherlight.min.css?1632374882" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632374882" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632928432"></script>
+  <script src="../js/featherlight.gallery.min.js?1632928432"></script>
+  <link href="../css/featherlight.min.css?1632928432" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632928432" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632374882"></script>
+  <script src="../js/highlight.pack.js?1632928432"></script>
   
-  <script src="../js/hugohelper.js?1632374882"></script>
+  <script src="../js/hugohelper.js?1632928432"></script>
 
-  <link href="../css/rmd.css?1632374882" rel="stylesheet">
-  <link href="../css/mystyle.css?1632374882" rel="stylesheet">    
-  <script src='../js/variant.js?1632374882'></script>
+  <link href="../css/rmd.css?1632928432" rel="stylesheet">
+  <link href="../css/mystyle.css?1632928432" rel="stylesheet">    
+  <script src='../js/variant.js?1632928432'></script>
 
 <script>
-let idxfile = "\/index.json"  
+  
+    let idxfile = "\/blogR\/index.json"  
+  
 </script>
-<script src='../js/localsearch.js?1632374882'></script>
+<script src='../js/localsearch.js?1632928432'></script>
     
 
 

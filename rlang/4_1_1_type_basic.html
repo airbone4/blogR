@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632374882"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632928432"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632374882" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632374882" rel="stylesheet">
-    <link href="../css/syntax.css?1632374882" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632928432" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632928432" rel="stylesheet">
+    <link href="../css/syntax.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632374882" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme.css?1632374882" rel="stylesheet">
+    <link href="../css/theme.css?1632928432" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -62,14 +62,9 @@
         <li><a href="#如何存取vector中的元素">如何存取vector中的元素</a></li>
         <li><a href="#篩選">篩選</a></li>
         <li><a href="#利用字串-character-vector-作為索引">利用字串( character vector) 作為索引</a></li>
-        <li><a href="#how-to-modify-a-vector-in-r">How to modify a vector in R?</a></li>
+        <li><a href="#怎樣變動矩陣向量">怎樣變動矩陣向量?</a></li>
         <li><a href="#how-to-delete-a-vector">How to delete a Vector?</a></li>
-      </ul>
-    </li>
-    <li><a href="#型態操作">型態操作</a>
-      <ul>
-        <li><a href="#判定型態-is-family">判定型態 is family</a></li>
-        <li><a href="#型態轉換-as-family">型態轉換 as family</a></li>
+        <li><a href="#練習">練習</a></li>
       </ul>
     </li>
     <li><a href="#assignment">assignment</a></li>
@@ -83,7 +78,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 22, 2021'>4.1.1 type basic</span>
+      title='最後修改September 25, 2021'>4.1.1 type basic</span>
         
     
 
@@ -158,6 +153,13 @@
           <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
     
   
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
@@ -215,12 +217,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
@@ -259,6 +261,9 @@
   
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html" data-bs-toggle="tooltip" title="8.1. 自製套件">8.1. 自製套件</a></li>
     
   
         <li class="nav-item">
@@ -524,7 +529,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-09-23 PM 01:27]</a></li><li><a href="../rlang/2_2_data_explorer.html"> <i class="far fa-clock" ></i>2.2 data explorer[2021-09-23 PM 12:47]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-09-23 AM 11:48]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 09:38]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li><li><a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html"> <i class="far fa-clock" ></i>4.1.2_type練習[2021-09-25 PM 06:06]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -591,62 +596,51 @@
 </tr>
 </tbody>
 </table>
-
+<p>💡: H-&gt;48怎麼來的? 利用JS驗證 &quot;H&quot;.charCodeAt(0).toString(16)
 </div>
 <p>數字(3種),邏輯,字元(2種)</p>
-<pre><code class="language-r">v &lt;- TRUE 
+<pre><code class="language-r?lang=r?preclass=.code-source">v &lt;- TRUE 
 print(class(v))
-</code></pre>
-<pre><code>#&gt; [1] &quot;logical&quot;
-</code></pre>
-<pre><code class="language-r">v &lt;- 23.5
+#&gt; [1] &quot;logical&quot;
+
+v &lt;- 23.5
 print(class(v))
-</code></pre>
-<pre><code>#&gt; [1] &quot;numeric&quot;
-</code></pre>
-<pre><code class="language-r">v &lt;- 2L
+#&gt; [1] &quot;numeric&quot;
+
+v &lt;- 2L
 print(class(v))
-</code></pre>
-<pre><code>#&gt; [1] &quot;integer&quot;
-</code></pre>
-<pre><code class="language-r">v &lt;- 2+5i
+#&gt; [1] &quot;integer&quot;
+
+v &lt;- 2+5i
 print(class(v))
-</code></pre>
-<pre><code>#&gt; [1] &quot;complex&quot;
-</code></pre>
-<pre><code class="language-r">v &lt;- &quot;TRUE&quot;
+#&gt; [1] &quot;complex&quot;
+
+v &lt;- &quot;TRUE&quot;
 print(class(v))
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">v &lt;- charToRaw(&quot;Hello&quot;)
+#&gt; [1] &quot;character&quot;
+
+v &lt;- charToRaw(&quot;Hello&quot;)
 print(class(v))
-</code></pre>
-<pre><code>#&gt; [1] &quot;raw&quot;
+#&gt; [1] &quot;raw&quot;
 </code></pre>
 <h3 id="指派">指派</h3>
 <p>雖然也可以用=但是，R的設計是使用&lt;-。</p>
-<pre><code class="language-r">a &lt;- 3
+<pre><code class="language-r?lang=r?preclass=.code-source">a &lt;- 3
 </code></pre>
 <p><code>a&lt;-3</code>是一個指派的敘述句,不會回饋資訊到螢幕上。如果要知道a的內容是甚麼,就打入<code>a</code> 或者<code>(a&lt;-3)</code></p>
-<pre><code class="language-r">    a
-</code></pre>
-<pre><code>#&gt; [1] 3
-</code></pre>
-<pre><code class="language-r">(a&lt;-3)
-</code></pre>
-<pre><code>#&gt; [1] 3
+<pre><code class="language-r?lang=r?preclass=.code-source">    a
+#&gt; [1] 3
+(a&lt;-3)
+#&gt; [1] 3
 </code></pre>
 <p>一般的數學函數</p>
-<pre><code class="language-r">b &lt;- sqrt(a * a + 5)
+<pre><code class="language-r?lang=r?preclass=.code-source">b &lt;- sqrt(a * a + 5)
 b
-</code></pre>
-<pre><code>#&gt; [1] 3.741657
+#&gt; [1] 3.741657
 </code></pre>
 <p>在session中的如果要列出已經定義過的變數,可以利用ls</p>
-<pre><code class="language-r">ls()
-</code></pre>
-<pre><code>#&gt;  [1] &quot;a&quot;                  &quot;b&quot;                  &quot;base_name&quot;         
+<pre><code class="language-r?lang=r?preclass=.code-source">ls()
+#&gt;  [1] &quot;a&quot;                  &quot;b&quot;                  &quot;base_name&quot;         
 #&gt;  [4] &quot;cachepath&quot;          &quot;collectOutputClass&quot; &quot;collectSourceClass&quot;
 #&gt;  [7] &quot;debugp&quot;             &quot;hugocmd&quot;            &quot;indir&quot;             
 #&gt; [10] &quot;infile&quot;             &quot;ohook_chunk&quot;        &quot;ohook_output&quot;      
@@ -664,15 +658,12 @@ b
 <p>參考實際操作</p>
 <h3 id="logical">Logical</h3>
 <p>Another important data type is the logical type. There are two predefined variables, TRUE and FALSE:</p>
-<pre><code class="language-r">a = TRUE
+<pre><code class="language-r?lang=r?preclass=.code-source">a = TRUE
 typeof(a)
-</code></pre>
-<pre><code>#&gt; [1] &quot;logical&quot;
-</code></pre>
-<pre><code class="language-r">b = FALSE
+#&gt; [1] &quot;logical&quot;
+b = FALSE
 typeof(b)
-</code></pre>
-<pre><code>#&gt; [1] &quot;logical&quot;
+#&gt; [1] &quot;logical&quot;
 </code></pre>
 <h3 id="r語言常用邏輯運算子">R語言常用邏輯運算子</h3>
 <table>
@@ -734,19 +725,14 @@ typeof(b)
 </tbody>
 </table>
 <p>範例：不同的運算子，在個別元素和整個向量的運算結果不一樣：</p>
-<pre><code class="language-r">a = c(TRUE, FALSE)
+<pre><code class="language-r?lang=r?preclass=.code-source">a = c(TRUE, FALSE)
 b = c(FALSE, FALSE)
 a | b
-</code></pre>
-<pre><code>#&gt; [1]  TRUE FALSE
-</code></pre>
-<pre><code class="language-r">a || b
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">xor(a, b)
-</code></pre>
-<pre><code>#&gt; [1]  TRUE FALSE
+#&gt; [1]  TRUE FALSE
+a || b
+#&gt; [1] TRUE
+xor(a, b)
+#&gt; [1]  TRUE FALSE
 </code></pre>
 <p>a||b 只比對a,b中的第一個元素。因此長度只有1個。✔如果是流程控制,大體上用的這兩種。</p>
 <p>&amp; 和 | 比對元素,傳回長度為大小最長的那個。</p>
@@ -758,9 +744,9 @@ y &lt;- c(FALSE,TRUE,FALSE,TRUE)
 x&amp;y
 x&amp;&amp;y
 x|y
-x||y
+x||y #&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏常用於邏輯判斷式 &lt;/span&gt;&lt;/span&gt;
 </code></pre>
-<button type="button" class="btn btn-primary position-absolute top-0 end-0" 
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-2499">提示</button>
 </div>    
 
@@ -790,39 +776,31 @@ x||y
 而<code>&lt;&lt;-</code> 用來指派值給親代環境下的變數。</p>
 <h3 id="邏輯函數">邏輯函數</h3>
 <p><code>is.</code>family 函數，可以用來判定變數是什麼型態，傳回真假值，例如</p>
-<pre><code class="language-r">a = c(1, 2, 3)
+<pre><code class="language-r?lang=r?preclass=.code-source">a = c(1, 2, 3)
 is.numeric(a)
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">is.factor(a)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
+#&gt; [1] TRUE
+is.factor(a)
+#&gt; [1] FALSE
 </code></pre>
 <p>函數<code>identical(a,b)</code>
 a,b 是否相等,比較的是除了a,b的內容以外,💡還有a b 的型態。例如，identical(1,as.integer(1)) 結果是F,因為 前者是double,後者是整數。</p>
-<pre><code class="language-r">A &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;)
+<pre><code class="language-r?lang=r?preclass=.code-source">A &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;)
 B &lt;- A
 C &lt;- c(&quot;A&quot;, &quot;C&quot;, &quot;C&quot;, &quot;E&quot;)
 
 identical(A,C)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
+#&gt; [1] FALSE
 </code></pre>
 <p>identical 允許只比較有效位數。</p>
 <p>函數<code>which()</code>哪些元素不一致</p>
-<pre><code class="language-r">which(A != C)
-</code></pre>
-<pre><code>#&gt; [1] 2 4
+<pre><code class="language-r?lang=r?preclass=.code-source">which(A != C)
+#&gt; [1] 2 4
 </code></pre>
 <p>函數<code>all()</code></p>
-<pre><code class="language-r">all(A==B)
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">all(A==C)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
+<pre><code class="language-r?lang=r?preclass=.code-source">all(A==B)
+#&gt; [1] TRUE
+all(A==C)
+#&gt; [1] FALSE
 </code></pre>
 <div class="notices">
     <div class= tip>
@@ -831,15 +809,12 @@ identical(A,C)
 </div>
 
 <p>註解：但是R語言的向量運算，涉及自動填充循環，因此注意下面的計算結果</p>
-<pre><code class="language-r">D &lt;- c(&quot;A&quot;,&quot;B&quot;,&quot;A&quot;,&quot;B&quot;)
+<pre><code class="language-r?lang=r?preclass=.code-source">D &lt;- c(&quot;A&quot;,&quot;B&quot;,&quot;A&quot;,&quot;B&quot;)
 E &lt;- c(&quot;A&quot;,&quot;B&quot;)
 all(D==E)
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">all(length(D)==length(E)) &amp;&amp; all(D==E)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
+#&gt; [1] TRUE
+all(length(D)==length(E)) &amp;&amp; all(D==E)
+#&gt; [1] FALSE
 </code></pre>
 <p>練習：<br>
 將上面可能造成誤判的情況，寫成函數先判斷是否長度相等，然後判斷元素相等，可以和<code>identical()</code>比較。</p>
@@ -855,178 +830,136 @@ hint: 利用length</p>
 </div>
 
 <h2 id="實數的比較">實數的比較</h2>
-<pre><code class="language-r">x &lt;- seq(0, 1, by = 0.2)
+<pre><code class="language-r?lang=r?preclass=.code-source">
+x &lt;- seq(0, 1, by = 0.2)
 y &lt;- seq(0, 1, by = 0.2)
 y[4]
-</code></pre>
-<pre><code>#&gt; [1] 0.6
-</code></pre>
-<pre><code class="language-r">x[3]
-</code></pre>
-<pre><code>#&gt; [1] 0.4
-</code></pre>
-<pre><code class="language-r">1 - x[3]
-</code></pre>
-<pre><code>#&gt; [1] 0.6
-</code></pre>
-<pre><code class="language-r">y[4] == 1 - x[3]
-</code></pre>
-<pre><code>#&gt; [1] FALSE
-</code></pre>
-<pre><code class="language-r">y[4] &gt; 1 - x[3]
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">## note:
+#&gt; [1] 0.6
+x[3]
+#&gt; [1] 0.4
+1 - x[3]
+#&gt; [1] 0.6
+y[4] == 1 - x[3]
+#&gt; [1] FALSE
+y[4] &gt; 1 - x[3]
+#&gt; [1] TRUE
+## note:
 all.equal(y[4], 1 - x[3])
+#&gt; [1] TRUE
+## Q: what is the result of : 1-0.4 ==0.6
 </code></pre>
-<pre><code>#&gt; [1] TRUE
+<pre><code class="language-r?lang=r?preclass=.code-source">0.1+0.2 == 0.3
+#&gt; [1] FALSE
+all.equal(0.1+0.2,0.3)
+#&gt; [1] TRUE
 </code></pre>
-<pre><code class="language-r">## Q: what is the result of : 1-0.4 ==0.6
-</code></pre>
-<pre><code class="language-r">0.1+0.2 == 0.3
-</code></pre>
-<pre><code>#&gt; [1] FALSE
-</code></pre>
-<pre><code class="language-r">all.equal(0.1+0.2,0.3)
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">nx1&lt;-numeric(0)
+<pre><code class="language-r?lang=r?preclass=.code-source">nx1&lt;-numeric(0)
 nx2&lt;-3
 is.null(nx1) # F,因為nx1是空向量(長度為0的數字向量)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
-</code></pre>
-<pre><code class="language-r">is.na(nx1)   # logical(0),每個元素檢查是不是NA,但是現在是空向量,所以結果是logical(0)
-</code></pre>
-<pre><code>#&gt; logical(0)
-</code></pre>
-<pre><code class="language-r">typeof(nx1)  # double
-</code></pre>
-<pre><code>#&gt; [1] &quot;double&quot;
-</code></pre>
-<pre><code class="language-r">typeof(nx2)  # double
-</code></pre>
-<pre><code>#&gt; [1] &quot;double&quot;
-</code></pre>
-<pre><code class="language-r">length(nx1)  # 0 
-</code></pre>
-<pre><code>#&gt; [1] 0
-</code></pre>
-<pre><code class="language-r">length(nx2)  # 1
-</code></pre>
-<pre><code>#&gt; [1] 1
+#&gt; [1] FALSE
+is.na(nx1)   # logical(0),每個元素檢查是不是NA,但是現在是空向量,所以結果是logical(0)
+#&gt; logical(0)
+typeof(nx1)  # double
+#&gt; [1] &quot;double&quot;
+typeof(nx2)  # double
+#&gt; [1] &quot;double&quot;
+length(nx1)  # 0 
+#&gt; [1] 0
+length(nx2)  # 1
+#&gt; [1] 1
 </code></pre>
 <div class="position-relative warning p-0">
-甚麼時候用到is.null<button type="button" class="btn btn-primary position-absolute top-0 end-0" 
+甚麼時候用到is.null<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-24276">提示</button>
 </div>    
 
 
-<div class="collapse" id="quiz-24276"><pre><code class="language-r">config &lt;- list()
+<div class="collapse" id="quiz-24276"><pre><code class="language-r?lang=r?preclass=.code-source">config &lt;- list()
+is.null(config) # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏是empty(空的)list物件,但不是null(虛的) &lt;/span&gt;&lt;/span&gt;
+#&gt; [1] FALSE
 is.null(config$name)
+#&gt; [1] TRUE
 </code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
+<div class="notices">
+    <div class= tip>
+        空的和虛的有甚麼差別? 一個是在記憶體有位置,一個是沒有。
+    </div>
+</div>
 </div>
 
 <h2 id="vector">vector</h2>
 <p>利用<code>c</code>函數，可以使用vector存放一個以上的數字。</p>
-<pre><code class="language-r">a = c(1, 2, 3, 4, 5)
+<pre><code class="language-r?lang=r?preclass=.code-source">a = c(1, 2, 3, 4, 5)
 a1 = 1:5
 </code></pre>
 <p>有關list的運算:加減乘除等等</p>
-<pre><code class="language-r">a = c(1, 2, 3, 4, 5)
+<pre><code class="language-r?lang=r?preclass=.code-source">a = c(1, 2, 3, 4, 5)
 a+1
+#&gt; [1] 2 3 4 5 6
 </code></pre>
-<pre><code>#&gt; [1] 2 3 4 5 6
-</code></pre>
-<pre><code class="language-r">mean(a)
-</code></pre>
-<pre><code>#&gt; [1] 3
-</code></pre>
-<pre><code class="language-r">var(a)
-</code></pre>
-<pre><code>#&gt; [1] 2.5
-</code></pre>
-<pre><code class="language-r">summary(a)
-</code></pre>
-<pre><code>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+<pre><code class="language-r?lang=r?preclass=.code-source">mean(a)
+#&gt; [1] 3
+var(a)
+#&gt; [1] 2.5
+summary(a)
+#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #&gt;       1       2       3       3       4       5
 </code></pre>
 <p>note:
 對比stata sum a 指令,summary(a) 返回的是一個table物件。可以指派給變數,因此計算結果可以經由變數(類別為table)存取。</p>
 <p>list的元素,利用中括號</p>
-<pre><code class="language-r">a = 2:6
+<pre><code class="language-r?lang=r?preclass=.code-source">a = 2:6
 a[1]
-</code></pre>
-<pre><code>#&gt; [1] 2
-</code></pre>
-<pre><code class="language-r">a[2]
-</code></pre>
-<pre><code>#&gt; [1] 3
-</code></pre>
-<pre><code class="language-r">a[0]
-</code></pre>
-<pre><code>#&gt; integer(0)
-</code></pre>
-<pre><code class="language-r">a[6]
-</code></pre>
-<pre><code>#&gt; [1] NA
+#&gt; [1] 2
+a[2]
+#&gt; [1] 3
+a[0]
+#&gt; integer(0)
+a[6]
+#&gt; [1] NA
 </code></pre>
 <p>在R中,的最小的索引值為1base.如果給索引為0,可以知道資料是否被排序。 超出索引範圍得到&quot;NA。</p>
-<pre><code class="language-r">a=2:6
+<pre><code class="language-r?lang=r?preclass=.code-source">a=2:6
 x = a[6]
 </code></pre>
 <div class="notices">
     <div class= info>
         <p>如何判斷是否NA</p>
-<pre><code class="language-r">x == NA
-</code></pre>
-<pre><code>#&gt; [1] NA
+<pre><code class="language-r?lang=r?preclass=.code-source">x == NA
+#&gt; [1] NA
 </code></pre>
 <p>上面的比較沒有意義,和NA的任何運算都是NA</p>
-<pre><code class="language-r">r = x == NA
+<pre><code class="language-r?lang=r?preclass=.code-source">r = x == NA
 r
-</code></pre>
-<pre><code>#&gt; [1] NA
+#&gt; [1] NA
 </code></pre>
 <p>結論:任何變數和NA運算,結果還是NA<br>
 另一種方法</p>
-<pre><code class="language-r">print(x == NA)
-</code></pre>
-<pre><code>#&gt; [1] NA
+<pre><code class="language-r?lang=r?preclass=.code-source">print(x == NA)
+#&gt; [1] NA
 </code></pre>
 <p>如何判斷NA ? <code>is.na()</code></p>
-<pre><code class="language-r">    is.na(a[6])
-</code></pre>
-<pre><code>#&gt; [1] TRUE
+<pre><code class="language-r?lang=r?preclass=.code-source">    is.na(a[6])
+#&gt; [1] TRUE
 </code></pre>
 
     </div>
 </div>
 
 <p>初始化向量,可以利用a&lt;-10 或指定numeric(double)型態</p>
-<pre><code class="language-r">a &lt;- numeric(10) 
+<pre><code class="language-r?lang=r?preclass=.code-source">a &lt;- numeric(10) 
 a
-</code></pre>
-<pre><code>#&gt;  [1] 0 0 0 0 0 0 0 0 0 0
+#&gt;  [1] 0 0 0 0 0 0 0 0 0 0
 </code></pre>
 <p>如果想要知到變數的資料型別,利用函數typeof()</p>
 <p>typeof()函數回傳的結果是&quot;字串&quot;</p>
-<pre><code class="language-r">typeof(a) # 結果是&quot;double&quot;
-</code></pre>
-<pre><code>#&gt; [1] &quot;double&quot;
-</code></pre>
-<pre><code class="language-r">s = typeof(a)
+<pre><code class="language-r?lang=r?preclass=.code-source">typeof(a) # 結果是&quot;double&quot;
+#&gt; [1] &quot;double&quot;
+s = typeof(a)
 s
-</code></pre>
-<pre><code>#&gt; [1] &quot;double&quot;
-</code></pre>
-<pre><code class="language-r">typeof(s) #結果是 &quot;character&quot;
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
+#&gt; [1] &quot;double&quot;
+typeof(s) #結果是 &quot;character&quot;
+#&gt; [1] &quot;character&quot;
 </code></pre>
 <h2 id="字串">字串</h2>
 <blockquote>
@@ -1036,238 +969,167 @@ s
 <p>可以是 雙引號中<code>&quot;</code> 或 單引號中<code>'</code>。
 字串中如果有雙引號,或單引號，則如下表示:<br>
 &quot;'這個'來自'那個'&quot;</p>
-<pre><code class="language-r">a &lt;- &quot;hello&quot;
+<pre><code class="language-r?lang=r?preclass=.code-source">a &lt;- &quot;hello&quot;
 a
-</code></pre>
-<pre><code>#&gt; [1] &quot;hello&quot;
-</code></pre>
-<pre><code class="language-r">typeof(a)   #[1]  &quot;character&quot; 
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">is.vector(a) #[1] TRUE
-</code></pre>
-<pre><code>#&gt; [1] TRUE
+#&gt; [1] &quot;hello&quot;
+typeof(a)   #[1]  &quot;character&quot; 
+#&gt; [1] &quot;character&quot;
+is.vector(a) #[1] TRUE
+#&gt; [1] TRUE
 </code></pre>
 <p>利用函數:character() 這個函數的參數為整數,建立一個vector(不是list),裡面的元素都是空字串,例如<code>character(5)</code>。</p>
-<pre><code class="language-r"># 變數ex初始化為character vector,參看後面的討論
+<pre><code class="language-r?lang=r?preclass=.code-source"># 變數ex初始化為character vector,參看後面的討論
 (ex &lt;- character(0))
-</code></pre>
-<pre><code>#&gt; character(0)
-</code></pre>
-<pre><code class="language-r">is.null(ex) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >不是null,這是一個指標 </span></span>
-</code></pre>
-<pre><code>#&gt; [1] FALSE
-</code></pre>
-<pre><code class="language-r">length(ex)
-</code></pre>
-<pre><code>#&gt; [1] 0
-</code></pre>
-<pre><code class="language-r">class(ex)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r"># 如果剛剛沒有設定ex &lt;- character(0),這裡會發生錯誤
-(ex[1] &lt;- &quot;first&quot;)
-</code></pre>
-<pre><code>#&gt; [1] &quot;first&quot;
-</code></pre>
-<pre><code class="language-r"># check its length again
+#&gt; character(0)
+is.null(ex) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >不是null,這是一個指標 </span></span>
+#&gt; [1] FALSE
 length(ex)
-</code></pre>
-<pre><code>#&gt; [1] 1
-</code></pre>
-<pre><code class="language-r">(ex[4] &lt;- &quot;fourth&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >索引可以用跳的: </span></span>
-</code></pre>
-<pre><code>#&gt; [1] &quot;fourth&quot;
-</code></pre>
-<pre><code class="language-r">length(ex)
-</code></pre>
-<pre><code>#&gt; [1] 4
-</code></pre>
-<pre><code class="language-r">typeof(ex)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">ex
-</code></pre>
-<pre><code>#&gt; [1] &quot;first&quot;  NA       NA       &quot;fourth&quot;
+#&gt; [1] 0
+class(ex)
+#&gt; [1] &quot;character&quot;
+
+# 如果剛剛沒有設定ex &lt;- character(0),這裡會發生錯誤
+(ex[1] &lt;- &quot;first&quot;)
+#&gt; [1] &quot;first&quot;
+
+# check its length again
+length(ex)
+#&gt; [1] 1
+
+(ex[4] &lt;- &quot;fourth&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >索引可以用跳的: </span></span>
+#&gt; [1] &quot;fourth&quot;
+length(ex)
+#&gt; [1] 4
+typeof(ex)
+#&gt; [1] &quot;character&quot;
+ex
+#&gt; [1] &quot;first&quot;  NA       NA       &quot;fourth&quot;
 </code></pre>
 <p>跳過的索引,內容自動為<code>NA</code>.</p>
 <h3 id="空字串">空字串</h3>
 <p>引號內連空白都沒有的字串:
 (比較上面利用character(5)可以建立5個元素為空字串的vector。)</p>
-<pre><code class="language-r"># empty string
+<pre><code class="language-r?lang=r?preclass=.code-source"># empty string
 empty_str &lt;- &quot;&quot;
 empty_str
-</code></pre>
-<pre><code>#&gt; [1] &quot;&quot;
-</code></pre>
-<pre><code class="language-r"># class
+#&gt; [1] &quot;&quot;
+
+# class
 class(empty_str)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
+#&gt; [1] &quot;character&quot;
 </code></pre>
 <h4 id="探討character0">探討character(0)</h4>
 <p>前面說character(2),可以傳回長度2,每個元素都是空白字串&quot;&quot;的向量,那麼character(0)是甚麼?
 除了前面提到的變數初始化為向量(也許可以說是向量宣告)
 例如,整數也是這樣</p>
-<pre><code class="language-r">zz&lt;-integer(0)
+<pre><code class="language-r?lang=r?preclass=.code-source">zz&lt;-integer(0)
 zz[4]=6
 zz
-</code></pre>
-<pre><code>#&gt; [1] NA NA NA  6
+#&gt; [1] NA NA NA  6
 </code></pre>
 <p>這裡利用分別使用<code>typeof</code>, <code>str</code>,<code>class</code>,<code>is</code>對character(0)做一些測試:</p>
-<pre><code class="language-r">ex1&lt;-character(0) 
+<pre><code class="language-r?lang=r?preclass=.code-source">ex1&lt;-character(0) 
 ex2&lt;-&quot;&quot;
 
 typeof(ex1) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >都是向量 </span></span>
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">typeof(ex2)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
+#&gt; [1] &quot;character&quot;
+typeof(ex2)
+#&gt; [1] &quot;character&quot;
 </code></pre>
 <p>函數str()用來顯示R物件的結構:</p>
-<pre><code class="language-r">str(ex1) 
+<pre><code class="language-r?lang=r?preclass=.code-source">str(ex1) 
+#&gt;  chr(0)
+str(ex2) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >前面看起來都是向量,但是這裡有更多資訊 chr(0),&#34;&#34; </span></span>
+#&gt;  chr &quot;&quot;
 </code></pre>
-<pre><code>#&gt;  chr(0)
+<pre><code class="language-r?lang=r?preclass=.code-source">class(ex1)
+#&gt; [1] &quot;character&quot;
+class(ex2)
+#&gt; [1] &quot;character&quot;
 </code></pre>
-<pre><code class="language-r">str(ex2) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >前面看起來都是向量,但是這裡有更多資訊 chr(0),&#34;&#34; </span></span>
-</code></pre>
-<pre><code>#&gt;  chr &quot;&quot;
-</code></pre>
-<pre><code class="language-r">class(ex1)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">class(ex2)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">is.list(ex1)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
-</code></pre>
-<pre><code class="language-r">is.list(ex2)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
+<pre><code class="language-r?lang=r?preclass=.code-source">is.list(ex1)
+#&gt; [1] FALSE
+is.list(ex2)
+#&gt; [1] FALSE
 </code></pre>
 <p>👹 一個字元也是向量。</p>
-<pre><code class="language-r">is.vector(ex1)
+<pre><code class="language-r?lang=r?preclass=.code-source">is.vector(ex1)
+#&gt; [1] TRUE
+is.vector(ex2)
+#&gt; [1] TRUE
 </code></pre>
-<pre><code>#&gt; [1] TRUE
+<pre><code class="language-r?lang=r?preclass=.code-source">length(ex1)
+#&gt; [1] 0
+length(ex2)
+#&gt; [1] 1
 </code></pre>
-<pre><code class="language-r">is.vector(ex2)
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">length(ex1)
-</code></pre>
-<pre><code>#&gt; [1] 0
-</code></pre>
-<pre><code class="language-r">length(ex2)
-</code></pre>
-<pre><code>#&gt; [1] 1
-</code></pre>
-<pre><code class="language-r">is.null(ex1)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
-</code></pre>
-<pre><code class="language-r">is.null(ex2)
-</code></pre>
-<pre><code>#&gt; [1] FALSE
-</code></pre>
-<pre><code class="language-r">is.na(ex1) #&gt; <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >logical(0) 說這是邏輯向量,但是長度0 </span></span>
-</code></pre>
-<pre><code>#&gt; logical(0)
-</code></pre>
-<pre><code class="language-r">is.na(ex2) #&gt; FALSE
-</code></pre>
-<pre><code>#&gt; [1] FALSE
+<pre><code class="language-r?lang=r?preclass=.code-source">is.null(ex1)
+#&gt; [1] FALSE
+is.null(ex2)
+#&gt; [1] FALSE
+
+is.na(ex1) #&gt; <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >logical(0) 說這是邏輯向量,但是長度0 </span></span>
+#&gt; logical(0)
+is.na(ex2) #&gt; FALSE
+#&gt; [1] FALSE
 </code></pre>
 <p>最後,這兩個是不是相等</p>
-<pre><code class="language-r">ex1==ex2
-</code></pre>
-<pre><code>#&gt; logical(0)
+<pre><code class="language-r?lang=r?preclass=.code-source">ex1==ex2
+#&gt; logical(0)
 </code></pre>
 <h3 id="字串和vector">字串和vector</h3>
 <blockquote>
 <p>在EXCEL中，vector 一般指的是只放元素為數字的陣列(array);而陣列是可以存數字和文字的區域。table是有欄位的陣列。
 但是在R語言中,vector 只是元素型態相同即可。</p>
 </blockquote>
-<pre><code class="language-r">a &lt;- &quot;hello&quot;
+<pre><code class="language-r?lang=r?preclass=.code-source">a &lt;- &quot;hello&quot;
 a
+#&gt; [1] &quot;hello&quot;
+typeof(a)
+#&gt; [1] &quot;character&quot;
 </code></pre>
-<pre><code>#&gt; [1] &quot;hello&quot;
-</code></pre>
-<pre><code class="language-r">typeof(a)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">b &lt;- c(&quot;hello&quot;, &quot;there&quot;)
+<pre><code class="language-r?lang=r?preclass=.code-source">b &lt;- c(&quot;hello&quot;, &quot;there&quot;)
 b
+#&gt; [1] &quot;hello&quot; &quot;there&quot;
+b[1]
+#&gt; [1] &quot;hello&quot;
+
+typeof(b)
+#&gt; [1] &quot;character&quot;
 </code></pre>
-<pre><code>#&gt; [1] &quot;hello&quot; &quot;there&quot;
-</code></pre>
-<pre><code class="language-r">b[1]
-</code></pre>
-<pre><code>#&gt; [1] &quot;hello&quot;
-</code></pre>
-<pre><code class="language-r">typeof(b)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">(a = character(5)) # 產生5個空字串
-</code></pre>
-<pre><code>#&gt; [1] &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot;
-</code></pre>
-<pre><code class="language-r">(b = letters[1:4]) # 注意,letters不是函數
-</code></pre>
-<pre><code>#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;
-</code></pre>
-<pre><code class="language-r">letters
-</code></pre>
-<pre><code>#&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot; &quot;s&quot;
+<pre><code class="language-r?lang=r?preclass=.code-source">(a = character(5)) # 產生5個空字串
+#&gt; [1] &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot;
+(b = letters[1:4]) # 注意,letters不是函數
+#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;
+letters
+#&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot; &quot;s&quot;
 #&gt; [20] &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; &quot;y&quot; &quot;z&quot;
-</code></pre>
-<pre><code class="language-r">typeof(letters)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
-</code></pre>
-<pre><code class="language-r">class(letters)
-</code></pre>
-<pre><code>#&gt; [1] &quot;character&quot;
+typeof(letters)
+#&gt; [1] &quot;character&quot;
+class(letters)
+#&gt; [1] &quot;character&quot;
 </code></pre>
 <p>因為c函數的運算結果為vector,因此下例中,其元素都是字串</p>
-<pre><code class="language-r"> (a&lt;-c(&quot;d&quot;,4,TRUE))
-</code></pre>
-<pre><code>#&gt; [1] &quot;d&quot;    &quot;4&quot;    &quot;TRUE&quot;
+<pre><code class="language-r?lang=r?preclass=.code-source"> (a&lt;-c(&quot;d&quot;,4,TRUE))
+#&gt; [1] &quot;d&quot;    &quot;4&quot;    &quot;TRUE&quot;
 </code></pre>
 <p>問題:
 怎樣知道r是空集合?</p>
-<pre><code class="language-r">y &lt;- letters[1:3] 
+<pre><code class="language-r?lang=r?preclass=.code-source">
+y &lt;- letters[1:3] 
 z &lt;- letters[4:6] 
 r&lt;-intersect(y,z) 
 r
-</code></pre>
-<pre><code>#&gt; character(0)
-</code></pre>
-<pre><code class="language-r">is.na(r)
-</code></pre>
-<pre><code>#&gt; logical(0)
-</code></pre>
-<pre><code class="language-r">length(r)
-</code></pre>
-<pre><code>#&gt; [1] 0
+#&gt; character(0)
+is.na(r)
+#&gt; logical(0)
+length(r)
+#&gt; [1] 0
 </code></pre>
 <p>另外,當vector有多個字串,而使用索引0的時候,也會出現 <code>character(0)</code>,例如:</p>
-<pre><code class="language-r">string &lt;- c('sun', 'sky', 'clouds')
+<pre><code class="language-r?lang=r?preclass=.code-source">string &lt;- c('sun', 'sky', 'clouds')
 string[0]
-</code></pre>
-<pre><code>#&gt; character(0)
+#&gt; character(0)
 </code></pre>
 <h3 id="vector-相關的運算">vector 相關的運算</h3>
 <p>連續數字可以利用操作元<code>:</code>,例如:</p>
@@ -1275,23 +1137,21 @@ string[0]
 y &lt;- 2:-2; y
 </code></pre>
 <p>比較複雜的序列可以利用函數 seq() ,例如</p>
-<pre><code class="language-r">seq(1, 3, by=0.2)          # specify step size
-</code></pre>
-<pre><code>#&gt;  [1] 1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0
-</code></pre>
-<pre><code class="language-r">seq(1, 5, length.out=4)    # specify length of the vector
-</code></pre>
-<pre><code>#&gt; [1] 1.000000 2.333333 3.666667 5.000000
+<pre><code class="language-r?lang=r?preclass=.code-source">seq(1, 3, by=0.2)          # specify step size
+#&gt;  [1] 1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0
+
+seq(1, 5, length.out=4)    # specify length of the vector
+#&gt; [1] 1.000000 2.333333 3.666667 5.000000
 </code></pre>
 <h3 id="練習範例">練習範例</h3>
 <p>Q1. a,a1,a2 屬於甚麼型態</p>
-<pre><code class="language-r">a = 1:4
+<pre><code class="language-r?lang=r?preclass=.code-source">a = 1:4
 a1 = c(1, 2, 3, 4)
 a2 = numeric(4)
 </code></pre>
 <p>A1</p>
 <p>Q2:a3的長度是甚麼?2,或6</p>
-<pre><code class="language-r">a1&lt;-c(1,2,3)
+<pre><code class="language-r?lang=r?preclass=.code-source">a1&lt;-c(1,2,3)
 a2&lt;-c(2,3,4)
 a3&lt;-c(a1,a2)
 </code></pre>
@@ -1344,14 +1204,13 @@ Error in x[c(2, -4)] : only 0's may be mixed with negative subscripts
 #&gt; 3     9
 
 </code></pre>
-<pre><code class="language-r">a&lt;-c(x=1:2,y=3:4)
+<pre><code class="language-r?lang=r?preclass=.code-source">a&lt;-c(x=1:2,y=3:4)
 a[&quot;x1&quot;] # 不是a[x1]
-</code></pre>
-<pre><code>#&gt; x1 
+#&gt; x1 
 #&gt;  1
 </code></pre>
 <p><div class="position-relative warning p-0">
-❓ a[&quot;x1&quot;]哪裡來的x1?<button type="button" class="btn btn-primary position-absolute top-0 end-0" 
+❓ a[&quot;x1&quot;]哪裡來的x1?<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-24666">提示</button>
 </div>    
 
@@ -1381,6 +1240,7 @@ a[&quot;x1&quot;] # 不是a[x1]
 #&gt; [1] 1
 
 </code></pre>
+<p>💡例如,我只要陣列的值,則x[[1]]可以用來去掉names。
 <div class="notices">
     <div class= info>
         <p>和list的區別是</p>
@@ -1388,26 +1248,25 @@ a[&quot;x1&quot;] # 不是a[x1]
 <li>$</li>
 <li>不必有&quot;&quot;</li>
 </ol>
-<pre><code class="language-r">a1&lt;-list(x=1:2,y=3:4)
+<pre><code class="language-r?lang=r?preclass=.code-source">a1&lt;-list(x=1:2,y=3:4)
 a1$x
-</code></pre>
-<pre><code>#&gt; [1] 1 2
+#&gt; [1] 1 2
 </code></pre>
 
     </div>
 </div>
-
-<h3 id="how-to-modify-a-vector-in-r">How to modify a vector in R?</h3>
+</p>
+<h3 id="怎樣變動矩陣向量">怎樣變動矩陣向量?</h3>
 <p>We can modify a vector using the assignment operator.</p>
 <p>We can use the techniques discussed above to access specific elements and modify them.</p>
 <p>If we want to truncate the elements, we can use reassignments.</p>
 <pre><code class="language-r">&gt; x
 #&gt; [1] -3 -2 -1  0  1  2
-&gt; x[2] &lt;- 0; x        # modify 2nd element
+&gt; x[2] &lt;- 0; x        # 只改變第二個元素
 #&gt; [1] -3  0 -1  0  1  2
-&gt; x[x&lt;0] &lt;- 5; x   # modify elements less than 0
+&gt; x[x&lt;0] &lt;- 5; x   # 將小於0的值,都改成5
 #&gt; [1] 5 0 5 0 1 2
-&gt; x &lt;- x[1:4]; x      # truncate x to first 4 elements
+&gt; x &lt;- x[1:4]; x      # 只要1到4
 #&gt; [1] 5 0 5 0
 </code></pre>
 <h3 id="how-to-delete-a-vector">How to delete a Vector?</h3>
@@ -1421,19 +1280,36 @@ a1$x
 #&gt; NULL
 
 </code></pre>
-<h2 id="型態操作">型態操作</h2>
-<h3 id="判定型態-is-family">判定型態 is family</h3>
-<p>is.numeric(), is.integer(), and is.double()</p>
-<h3 id="型態轉換-as-family">型態轉換 as family</h3>
-<pre><code class="language-r">a&lt;-c(TRUE,FALSE)
+<h3 id="練習">練習</h3>
+<p><div class="position-relative warning p-0">
+<p>❓怎樣產生下面的向量?</p>
+<pre><code class="language-r">x
+   a    b    a    b    a   &lt;NA&gt; 
+   1    2    3    4    5    6 
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-25749">提示</button>
+</div>    
+
+
+<div class="collapse" id="quiz-25749"><pre><code class="language-r">x&lt;-seq(1,5)
+names(x)&lt;-rep(c(&quot;a&quot;,&quot;b&quot;),2)
+</code></pre>
+</div>
+</p>
+<pre><code>
+## 型態操作
+### 判定型態 is family
+is.numeric(), is.integer(), and is.double()
+### 型態轉換 as family
+
+```r?lang=r?preclass=.code-source
+a&lt;-c(TRUE,FALSE)
 as.numeric(a)
-</code></pre>
-<pre><code>#&gt; [1] 1 0
-</code></pre>
-<pre><code class="language-r">an&lt;-as.logical(a)
+#&gt; [1] 1 0
+an&lt;-as.logical(a)
 an
-</code></pre>
-<pre><code>#&gt; [1]  TRUE FALSE
+#&gt; [1]  TRUE FALSE
 </code></pre>
 <h2 id="assignment">assignment</h2>
 <p>練習</p>
@@ -1503,8 +1379,8 @@ class(x)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632374882" rel="stylesheet">
-<script src="../js/quicknote.js?1632374882"></script>
+<link href="../css/quicknote.css?1632928432" rel="stylesheet">
+<script src="../js/quicknote.js?1632928432"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1522,7 +1398,7 @@ class(x)
           
 
   
-<script src="../js/packhtml.js?1632374882"></script>    
+<script src="../js/packhtml.js?1632928432"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1532,23 +1408,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632374882"></script>
-  <script src="../js/featherlight.gallery.min.js?1632374882"></script>
-  <link href="../css/featherlight.min.css?1632374882" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632374882" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632928432"></script>
+  <script src="../js/featherlight.gallery.min.js?1632928432"></script>
+  <link href="../css/featherlight.min.css?1632928432" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632928432" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632374882"></script>
+  <script src="../js/highlight.pack.js?1632928432"></script>
   
-  <script src="../js/hugohelper.js?1632374882"></script>
+  <script src="../js/hugohelper.js?1632928432"></script>
 
-  <link href="../css/rmd.css?1632374882" rel="stylesheet">
-  <link href="../css/mystyle.css?1632374882" rel="stylesheet">    
-  <script src='../js/variant.js?1632374882'></script>
+  <link href="../css/rmd.css?1632928432" rel="stylesheet">
+  <link href="../css/mystyle.css?1632928432" rel="stylesheet">    
+  <script src='../js/variant.js?1632928432'></script>
 
 <script>
-let idxfile = "\/index.json"  
+  
+    let idxfile = "\/blogR\/index.json"  
+  
 </script>
-<script src='../js/localsearch.js?1632374882'></script>
+<script src='../js/localsearch.js?1632928432'></script>
     
 
 

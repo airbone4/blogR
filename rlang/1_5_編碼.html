@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html><head>
+  <title>1.5 編碼</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <script src="../js/jquery-3.3.1.min.js?1632928432"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1632928432" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632928432" rel="stylesheet">
+    <link href="../css/syntax.css?1632928432" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1632928432" rel="stylesheet">
+    
+    <link href="../css/theme.css?1632928432" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#編碼">編碼</a></li>
+    <li><a href="#亂碼常用的判斷查詢">亂碼常用的判斷查詢</a>
+      <ul>
+        <li><a href="#readcsv">read.csv</a></li>
+      </ul>
+    </li>
+    <li><a href="#輔助">輔助</a></li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改September 29, 2021'>1.5 編碼</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_basic.html" data-bs-toggle="tooltip" title="4.1.1 type basic">4.1.1 type basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2_type練習">4.1.2_type練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_3_type_list.html" data-bs-toggle="tooltip" title="4.1.3 type list">4.1.3 type list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_string_function.html" data-bs-toggle="tooltip" title="4.4 type string">4.4 type string</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_1_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_vector.html" data-bs-toggle="tooltip" title="4.5 type vector">4.5 type vector</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_function_1.html" data-bs-toggle="tooltip" title="7 Function basic">7 Function basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_1_apply_family.html" data-bs-toggle="tooltip" title="7.1 function - apply family">7.1 function - apply family</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html" data-bs-toggle="tooltip" title="8.1. 自製套件">8.1. 自製套件</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_plot01.html" data-bs-toggle="tooltip" title="9. Plot 01">9. Plot 01</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot02.html" data-bs-toggle="tooltip" title="9.1 Plot more">9.1 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 09:38]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li><li><a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html"> <i class="far fa-clock" ></i>4.1.2_type練習[2021-09-25 PM 06:06]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="編碼">編碼</h2>
+<ul>
+<li>
+<p>每一種特定的語言，都存在一種或數種的 code page(但是在不同廠商(例如IBM), code page 的數字不同) 。 例如：</p>
+<ul>
+<li>code page = 950 : 正體中文big5</li>
+<li>windows-1252 的 code page = 1252 :西歐的英語系使用</li>
+<li>shift_jis 的 code page = 932 : 日語中的漢字使用。</li>
+</ul>
+</li>
+<li>
+<p><a href="https://rpubs.com/dcw102213006/R_textmining_chinese">textmining</a></p>
+</li>
+<li>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/279354_f552c4c41852439f910ad620763960b6.html">更多</a></p>
+</li>
+<li>
+<p><a href="http://vito-note.blogspot.com/2012/01/blog-post_86.html">參考</a></p>
+</li>
+<li>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/279354_f552c4c41852439f910ad620763960b6.html">最佳編碼👍</a></p>
+</li>
+</ul>
+<p>看看系統本身的編碼(Current Locale)</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">l10n_info()
+#&gt; $MBCS <span data-nopre data-atomic id='提示1'>⛳註解 </span>
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $`UTF-8` <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏在linux系統中,這兩個(UTF-8,Latin-1)有一個是真 </span></span>
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $`Latin-1`
+#&gt; [1] FALSE
+#&gt; 
+#&gt; $codepage
+#&gt; [1] 950
+#&gt; 
+#&gt; $system.codepage
+#&gt; [1] 950
+sessionInfo() # 裡的 local<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >因為傳回的是結構list因此sessionInfo()$local可以看到結果 </span></span>
+#&gt; R version 4.1.1 (2021-08-10)
+#&gt; Platform: x86_64-w64-mingw32/x64 (64-bit)
+#&gt; Running under: Windows 10 x64 (build 19043)
+#&gt; 
+#&gt; Matrix products: default
+#&gt; 
+#&gt; locale:
+#&gt; [1] LC_COLLATE=Chinese (Traditional)_Taiwan.950 <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏當前編碼的排序和比較規則 </span></span>
+#&gt; [2] LC_CTYPE=Chinese (Traditional)_Taiwan.950   <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏 用於字元分類和字串處理，控制所有字元的處理方式，包括字元編碼，字元是單字節還是多位元組，如何列印等</span></span>
+#&gt; [3] LC_MONETARY=Chinese (Traditional)_Taiwan.950 <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏貨幣格式 </span></span>
+#&gt; [4] LC_NUMERIC=C  <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏 非貨幣的數字顯示格式</span></span>
+#&gt; [5] LC_TIME=Chinese (Traditional)_Taiwan.950   <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏 時間和日期格式</span></span> 
+#&gt; 
+#&gt; attached base packages:
+#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     
+#&gt; 
+#&gt; loaded via a namespace (and not attached):
+#&gt; [1] compiler_4.1.1 magrittr_2.0.1 tools_4.1.1    glue_1.4.2     stringi_1.7.4 
+#&gt; [6] knitr_1.33     stringr_1.4.0  xfun_0.25      evaluate_0.14
+Sys.getlocale(&quot;LC_ALL&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔由開頭Sys，可以知道這是作業系統變數存取 </span></span> <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" > ✔也可以只打Sys.getlocale()</span></span>
+#&gt; [1] &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
+getOption(&quot;encoding&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔其實是從前面的options()中的鍵值encoding拿資料，所以options()$encoding也可以 </span></span> <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔這個選項是用來編碼串流(例如檔案,URL等等)而不是字串向量,內定是 &#34;native.enc&#34; 。白話文的意思就是通訊協定內定是ASCII或是UTF-8,考慮網路協定都是ASCII,因此,不用費腦筋在這裡了,除非要重寫系統 </span></span>
+
+#&gt; [1] &quot;native.enc&quot;
+</code></pre>
+<p>更改系統的語系，以下更改為 UTF-8</p>
+<pre><code class="language-r?preclass=.ms-5.w-75"># for mac
+Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;en_US.UTF-8&quot;)
+# for windows
+Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;UTF-8&quot;)
+x=&quot;hello&quot;
+# x is a vector
+Encoding(x) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔不是用來知道系統的編碼,而是變數中的資料編碼 </span></span>
+</code></pre>
+<div class="notices">
+    <div class= info>
+        <p><code>Encoding()</code>的使用範例</p>
+<blockquote>
+<p>👺ascii 字串例如 x=&quot;hello&quot; ,Encoding(x)的結果都是 unknown,因為ASCII不用編碼,在所有的編碼系統都一致。</p>
+</blockquote>
+<pre><code class="language-r">x&lt;- '非白馬' 
+Encoding(x) ## [1] &quot;unknown&quot; &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;a data-nopre  href=&quot;#%e6%8f%90%e7%a4%ba1&quot;&gt;註解&lt;/a&gt;&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;❓為甚麼是unknown❓❓按照說明書,非ASCII內定都是給目前指定的locale語系，就是l10n_info()為TRUE的那個 &lt;/span&gt;&lt;/span&gt;
+# 如果是big5
+x2&lt;- iconv(x, 'big5', 'UTF-8') #轉UTF-8
+# 如果是GB2312
+x2&lt;- iconv(x, 'GB2312', 'UTF-8') #轉UTF-8
+Encoding(x2) ## [1] &quot;UTF-8&quot; 
+</code></pre>
+<p>讀檔案的時候,如果要自行指定編碼,那麼下面是一些相關程式碼</p>
+<pre><code class="language-r">source(&quot;myRcode.R&quot;, encoding = &quot;utf-8&quot;)
+readLines(&quot;mydata.csv&quot;, encoding = &quot;big5&quot;)
+read.table(..., fileEncoding = &quot;&quot;, encoding = &quot;unknown&quot;,...)
+data &lt;- iconv(data, &quot;big5&quot;, &quot;utf8&quot;) # 將資料轉成 UTF-8
+</code></pre>
+
+    </div>
+</div>
+
+<h2 id="亂碼常用的判斷查詢">亂碼常用的判斷查詢</h2>
+<p>😒只在WIN上測試</p>
+<ul>
+<li>查看目前R使用的語系: 輸入 <code>Sys.getlocale()</code> 或</li>
+<li><code>Sys.getlocale(category = &quot;LC_ALL&quot;)</code>，
+<ul>
+<li><div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >我的系統上顯示的是</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r?preclass=.ms-5">Sys.getlocale()
+
+# &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
+# 😒有些系統是用/分隔，例如
+#.UTF-8/C/en_US.UTF-8/en_US.UTF-8&quot; 
+</code></pre>
+</div></div></li>
+</ul>
+</li>
+</ul>
+<p>如果不是 Chinese (Traditional)_Taiwan.950 者，可以輸入下列指令設定 RStudio/R 的語系</p>
+<ul>
+<li>英文：
+<ul>
+<li>Sys.setlocale(category = &quot;LC_ALL&quot;, locale = “UTF-8&quot;)</li>
+</ul>
+</li>
+<li>中文：
+<ul>
+<li><code>Sys.setlocale(&quot;LC_ALL&quot;,&quot;Chinese (Traditional)_Taiwan.950&quot;)</code></li>
+<li>或<code>Sys.setlocale(&quot;LC_ALL&quot;,&quot;cht&quot;)</code>
+<ul>
+<li><div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >執行結果</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code>😒設定的結果,就是預設的安裝環境,如下所示
+</code></pre>
+<pre><code class="language-r">&gt; Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;cht&quot;) # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏 等同於Sys.setlocale(&quot;LC_ALL&quot;,&quot;Chinese (Traditional)_Taiwan.950&quot;)  &lt;/span&gt;&lt;/span&gt;
+[1] &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
+</code></pre>
+</div></div></li>
+</ul>
+</li>
+<li>Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;zh_TW.UTF-8&quot;) 或  Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;zh_TW&quot;) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏這是linux在視窗中不行 </span></span>
+<ul>
+<li>這應該是linux 在windows 無作用,需要超級使用者</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>試試看(雖然也沒什麼用)</p>
+<ul>
+<li>找到Rconsole 檔案（用everything搜尋軟體,可能位置 R的安裝目錄\etc\Rconsole）,。這是一個文字檔。
+在其中找到 <code>language</code> 然後改成<code>language = English 或 zh_TW</code></li>
+</ul>
+<h3 id="readcsv">read.csv</h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/18789330/r-on-windows-character-encoding-hell">stack overflow</a></li>
+</ul>
+<p>在linux 中,如果是UTF-8,這樣就可以
+<code>read.csv(&quot;japanese_utf8.csv&quot;)</code>
+但是如果不是UTF-8,則指定編碼
+<code>read.csv(&quot;japanese_shiftjis.csv&quot;, fileEncoding = &quot;SHIFT-JIS&quot;)</code>
+問題是windows:</p>
+<pre><code class="language-r?lang=r?preclass=.ms-5">if(!require(readr)){
+    install.packages(&quot;readr&quot;,dependencies=T)
+}
+</code></pre>
+<pre><code>#&gt; 載入需要的套件：readr
+</code></pre>
+<pre><code class="language-r?lang=r?preclass=.ms-5">options(stringsAsFactors = FALSE)
+
+df&lt;-read_csv(&quot;resources/wh_zh_utf8.csv&quot;,
+             comment=&quot;#&quot;,
+             locale = locale(encoding = &quot;UTF-8&quot;))
+</code></pre>
+<pre><code>#&gt; Rows: 4 Columns: 3
+</code></pre>
+<pre><code>#&gt; -- Column specification ----------------------------------------------------------------------------------------------------------------------------
+#&gt; Delimiter: &quot;,&quot;
+#&gt; chr (1): 性別
+#&gt; dbl (2): 身高, 體重
+</code></pre>
+<pre><code>#&gt; 
+#&gt; i Use `spec()` to retrieve the full column specification for this data.
+#&gt; i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</code></pre>
+<pre><code class="language-r?lang=r?preclass=.ms-5">knitr::kable(df)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">身高</th>
+<th style="text-align:right">體重</th>
+<th style="text-align:left">性別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">156</td>
+<td style="text-align:right">56</td>
+<td style="text-align:left">男</td>
+</tr>
+<tr>
+<td style="text-align:right">167</td>
+<td style="text-align:right">66</td>
+<td style="text-align:left">女</td>
+</tr>
+<tr>
+<td style="text-align:right">189</td>
+<td style="text-align:right">70</td>
+<td style="text-align:left">男</td>
+</tr>
+<tr>
+<td style="text-align:right">180</td>
+<td style="text-align:right">NA</td>
+<td style="text-align:left">女</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-r?lang=r?preclass=.ms-5">df&lt;-read_csv(&quot;resources/wh_zh_950.csv&quot;,
+             comment=&quot;#&quot;,
+             locale = locale(encoding = &quot;big5&quot;) )
+</code></pre>
+<pre><code>#&gt; Rows: 4 Columns: 3
+</code></pre>
+<pre><code>#&gt; -- Column specification ----------------------------------------------------------------------------------------------------------------------------
+#&gt; Delimiter: &quot;,&quot;
+#&gt; chr (1): 性別
+#&gt; dbl (2): 身高, 體重
+</code></pre>
+<pre><code>#&gt; 
+#&gt; i Use `spec()` to retrieve the full column specification for this data.
+#&gt; i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</code></pre>
+<pre><code class="language-r?lang=r?preclass=.ms-5">#<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >❌zh_TW,cht, Chinese (Traditional)_Taiwan.950。✔:big5 </span></span>
+
+knitr::kable(df)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">身高</th>
+<th style="text-align:right">體重</th>
+<th style="text-align:left">性別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">156</td>
+<td style="text-align:right">56</td>
+<td style="text-align:left">男</td>
+</tr>
+<tr>
+<td style="text-align:right">167</td>
+<td style="text-align:right">66</td>
+<td style="text-align:left">女</td>
+</tr>
+<tr>
+<td style="text-align:right">189</td>
+<td style="text-align:right">70</td>
+<td style="text-align:left">男</td>
+</tr>
+<tr>
+<td style="text-align:right">180</td>
+<td style="text-align:right">NA</td>
+<td style="text-align:left">女</td>
+</tr>
+</tbody>
+</table>
+<h2 id="輔助">輔助</h2>
+<pre><code class="language-r?lang=r?preclass=.ms-5">iconvlist()
+#&gt;   [1] &quot;437&quot;                     &quot;850&quot;                    
+#&gt;   [3] &quot;852&quot;                     &quot;855&quot;                    
+#&gt;   [5] &quot;857&quot;                     &quot;860&quot;                    
+#&gt;   [7] &quot;861&quot;                     &quot;862&quot;                    
+#&gt;   [9] &quot;863&quot;                     &quot;865&quot;                    
+#&gt;  [11] &quot;866&quot;                     &quot;869&quot;                    
+#&gt;  [13] &quot;ANSI_X3.4-1968&quot;          &quot;ANSI_X3.4-1986&quot;         
+#&gt;  [15] &quot;ASCII&quot;                   &quot;ASMO-708&quot;               
+#&gt;  [17] &quot;BIG-5&quot;                   &quot;BIG-FIVE&quot;               
+#&gt;  [19] &quot;big5&quot;                    &quot;BIG5&quot;                   
+#&gt;  [21] &quot;big5-hkscs&quot;              &quot;BIG5-HKSCS&quot;             
+#&gt;  [23] &quot;big5hkscs&quot;               &quot;BIG5HKSCS&quot;              
+#&gt;  [25] &quot;CP-GR&quot;                   &quot;CP-IS&quot;                  
+#&gt;  [27] &quot;cp1025&quot;                  &quot;CP1125&quot;                 
+#&gt;  [29] &quot;CP1133&quot;                  &quot;CP1200&quot;                 
+#&gt;  [31] &quot;CP12000&quot;                 &quot;CP12001&quot;                
+#&gt;  [33] &quot;CP1201&quot;                  &quot;CP1250&quot;                 
+#&gt;  [35] &quot;CP1251&quot;                  &quot;CP1252&quot;                 
+#&gt;  [37] &quot;CP1253&quot;                  &quot;CP1254&quot;                 
+#&gt;  [39] &quot;CP1255&quot;                  &quot;CP1256&quot;                 
+#&gt;  [41] &quot;CP1257&quot;                  &quot;CP1258&quot;                 
+#&gt;  [43] &quot;CP1361&quot;                  &quot;CP154&quot;                  
+#&gt;  [45] &quot;CP367&quot;                   &quot;CP437&quot;                  
+#&gt;  [47] &quot;CP50221&quot;                 &quot;CP51932&quot;                
+#&gt;  [49] &quot;CP65001&quot;                 &quot;CP737&quot;                  
+#&gt;  [51] &quot;CP775&quot;                   &quot;CP819&quot;                  
+#&gt;  [53] &quot;CP850&quot;                   &quot;CP852&quot;                  
+#&gt;  [55] &quot;CP853&quot;                   &quot;CP855&quot;                  
+#&gt;  [57] &quot;CP857&quot;                   &quot;CP858&quot;                  
+#&gt;  [59] &quot;CP860&quot;                   &quot;CP861&quot;                  
+#&gt;  [61] &quot;CP862&quot;                   &quot;CP863&quot;                  
+#&gt;  [63] &quot;CP864&quot;                   &quot;CP865&quot;                  
+#&gt;  [65] &quot;cp866&quot;                   &quot;CP866&quot;                  
+#&gt;  [67] &quot;CP869&quot;                   &quot;CP874&quot;                  
+#&gt;  [69] &quot;cp875&quot;                   &quot;CP932&quot;                  
+#&gt;  [71] &quot;CP936&quot;                   &quot;CP949&quot;                  
+#&gt;  [73] &quot;CP950&quot;                   &quot;CSASCII&quot;                
+#&gt;  [75] &quot;CSIBM855&quot;                &quot;CSIBM857&quot;               
+#&gt;  [77] &quot;CSIBM860&quot;                &quot;CSIBM861&quot;               
+#&gt;  [79] &quot;CSIBM863&quot;                &quot;CSIBM864&quot;               
+#&gt;  [81] &quot;CSIBM865&quot;                &quot;CSIBM866&quot;               
+#&gt;  [83] &quot;CSIBM869&quot;                &quot;csISO2022JP&quot;            
+#&gt;  [85] &quot;CSISOLATIN1&quot;             &quot;CSPC775BALTIC&quot;          
+#&gt;  [87] &quot;CSPC850MULTILINGUAL&quot;     &quot;CSPC862LATINHEBREW&quot;     
+#&gt;  [89] &quot;CSPC8CODEPAGE437&quot;        &quot;CSPCP852&quot;               
+#&gt;  [91] &quot;CSPTCP154&quot;               &quot;CSWINDOWS31J&quot;           
+#&gt;  [93] &quot;CYRILLIC-ASIAN&quot;          &quot;DOS-720&quot;                
+#&gt;  [95] &quot;DOS-862&quot;                 &quot;EUC-CN&quot;                 
+#&gt;  [97] &quot;euc-jp&quot;                  &quot;euc-kr&quot;                 
+#&gt;  [99] &quot;EUC-KR&quot;                  &quot;EUCCN&quot;                  
+#&gt; [101] &quot;eucjp&quot;                   &quot;euckr&quot;                  
+#&gt; [103] &quot;GB18030&quot;                 &quot;gb2312&quot;                 
+#&gt; [105] &quot;GBK&quot;                     &quot;hz-gb-2312&quot;             
+#&gt; [107] &quot;IBM-CP1133&quot;              &quot;IBM-Thai&quot;               
+#&gt; [109] &quot;IBM00858&quot;                &quot;IBM00924&quot;               
+#&gt; [111] &quot;IBM01047&quot;                &quot;IBM01140&quot;               
+#&gt; [113] &quot;IBM01141&quot;                &quot;IBM01142&quot;               
+#&gt; [115] &quot;IBM01143&quot;                &quot;IBM01144&quot;               
+#&gt; [117] &quot;IBM01145&quot;                &quot;IBM01146&quot;               
+#&gt; [119] &quot;IBM01147&quot;                &quot;IBM01148&quot;               
+#&gt; [121] &quot;IBM01149&quot;                &quot;IBM037&quot;                 
+#&gt; [123] &quot;IBM1026&quot;                 &quot;IBM273&quot;                 
+#&gt; [125] &quot;IBM277&quot;                  &quot;IBM278&quot;                 
+#&gt; [127] &quot;IBM280&quot;                  &quot;IBM284&quot;                 
+#&gt; [129] &quot;IBM285&quot;                  &quot;IBM290&quot;                 
+#&gt; [131] &quot;IBM297&quot;                  &quot;IBM367&quot;                 
+#&gt; [133] &quot;IBM420&quot;                  &quot;IBM423&quot;                 
+#&gt; [135] &quot;IBM424&quot;                  &quot;IBM437&quot;                 
+#&gt; [137] &quot;IBM437&quot;                  &quot;IBM500&quot;                 
+#&gt; [139] &quot;ibm737&quot;                  &quot;ibm775&quot;                 
+#&gt; [141] &quot;IBM775&quot;                  &quot;IBM819&quot;                 
+#&gt; [143] &quot;ibm850&quot;                  &quot;IBM850&quot;                 
+#&gt; [145] &quot;ibm852&quot;                  &quot;IBM852&quot;                 
+#&gt; [147] &quot;IBM855&quot;                  &quot;IBM855&quot;                 
+#&gt; [149] &quot;ibm857&quot;                  &quot;IBM857&quot;                 
+#&gt; [151] &quot;IBM860&quot;                  &quot;IBM860&quot;                 
+#&gt; [153] &quot;ibm861&quot;                  &quot;IBM861&quot;                 
+#&gt; [155] &quot;IBM862&quot;                  &quot;IBM863&quot;                 
+#&gt; [157] &quot;IBM863&quot;                  &quot;IBM864&quot;                 
+#&gt; [159] &quot;IBM864&quot;                  &quot;IBM865&quot;                 
+#&gt; [161] &quot;IBM865&quot;                  &quot;IBM866&quot;                 
+#&gt; [163] &quot;ibm869&quot;                  &quot;IBM869&quot;                 
+#&gt; [165] &quot;IBM870&quot;                  &quot;IBM871&quot;                 
+#&gt; [167] &quot;IBM880&quot;                  &quot;IBM905&quot;                 
+#&gt; [169] &quot;iso-2022-jp&quot;             &quot;iso-2022-jp&quot;            
+#&gt; [171] &quot;ISO-2022-JP&quot;             &quot;ISO-2022-JP-MS&quot;         
+#&gt; [173] &quot;iso-2022-kr&quot;             &quot;ISO-8859-1&quot;             
+#&gt; [175] &quot;iso-8859-13&quot;             &quot;iso-8859-15&quot;            
+#&gt; [177] &quot;iso-8859-2&quot;              &quot;iso-8859-3&quot;             
+#&gt; [179] &quot;iso-8859-4&quot;              &quot;iso-8859-5&quot;             
+#&gt; [181] &quot;iso-8859-6&quot;              &quot;iso-8859-7&quot;             
+#&gt; [183] &quot;iso-8859-8&quot;              &quot;iso-8859-8-i&quot;           
+#&gt; [185] &quot;iso-8859-9&quot;              &quot;ISO-IR-100&quot;             
+#&gt; [187] &quot;ISO-IR-6&quot;                &quot;ISO_646.IRV:1991&quot;       
+#&gt; [189] &quot;iso_8859-1&quot;              &quot;ISO_8859-1&quot;             
+#&gt; [191] &quot;ISO_8859-1:1987&quot;         &quot;iso_8859-13&quot;            
+#&gt; [193] &quot;iso_8859-15&quot;             &quot;iso_8859-2&quot;             
+#&gt; [195] &quot;iso_8859-3&quot;              &quot;iso_8859-4&quot;             
+#&gt; [197] &quot;iso_8859-5&quot;              &quot;iso_8859-6&quot;             
+#&gt; [199] &quot;iso_8859-7&quot;              &quot;iso_8859-8&quot;             
+#&gt; [201] &quot;iso_8859-8-i&quot;            &quot;iso_8859-9&quot;             
+#&gt; [203] &quot;iso_8859_1&quot;              &quot;iso_8859_13&quot;            
+#&gt; [205] &quot;iso_8859_15&quot;             &quot;iso_8859_2&quot;             
+#&gt; [207] &quot;iso_8859_3&quot;              &quot;iso_8859_4&quot;             
+#&gt; [209] &quot;iso_8859_5&quot;              &quot;iso_8859_6&quot;             
+#&gt; [211] &quot;iso_8859_7&quot;              &quot;iso_8859_8&quot;             
+#&gt; [213] &quot;iso_8859_8-i&quot;            &quot;iso_8859_9&quot;             
+#&gt; [215] &quot;ISO2022-JP&quot;              &quot;ISO2022-JP-MS&quot;          
+#&gt; [217] &quot;iso2022-kr&quot;              &quot;ISO646-US&quot;              
+#&gt; [219] &quot;iso8859-1&quot;               &quot;ISO8859-1&quot;              
+#&gt; [221] &quot;iso8859-13&quot;              &quot;iso8859-15&quot;             
+#&gt; [223] &quot;iso8859-2&quot;               &quot;iso8859-3&quot;              
+#&gt; [225] &quot;iso8859-4&quot;               &quot;iso8859-5&quot;              
+#&gt; [227] &quot;iso8859-6&quot;               &quot;iso8859-7&quot;              
+#&gt; [229] &quot;iso8859-8&quot;               &quot;iso8859-8-i&quot;            
+#&gt; [231] &quot;iso8859-9&quot;               &quot;Johab&quot;                  
+#&gt; [233] &quot;JOHAB&quot;                   &quot;koi8-r&quot;                 
+#&gt; [235] &quot;koi8-u&quot;                  &quot;ks_c_5601-1987&quot;         
+#&gt; [237] &quot;L1&quot;                      &quot;latin-9&quot;                
+#&gt; [239] &quot;LATIN1&quot;                  &quot;latin2&quot;                 
+#&gt; [241] &quot;latin3&quot;                  &quot;latin4&quot;                 
+#&gt; [243] &quot;latin5&quot;                  &quot;latin7&quot;                 
+#&gt; [245] &quot;latin9&quot;                  &quot;mac&quot;                    
+#&gt; [247] &quot;mac-centraleurope&quot;       &quot;mac-is&quot;                 
+#&gt; [249] &quot;macarabic&quot;               &quot;maccentraleurope&quot;       
+#&gt; [251] &quot;maccroatian&quot;             &quot;maccyrillic&quot;            
+#&gt; [253] &quot;macgreek&quot;                &quot;machebrew&quot;              
+#&gt; [255] &quot;maciceland&quot;              &quot;macintosh&quot;              
+#&gt; [257] &quot;macis&quot;                   &quot;macroman&quot;               
+#&gt; [259] &quot;macromania&quot;              &quot;macthai&quot;                
+#&gt; [261] &quot;macturkish&quot;              &quot;macukraine&quot;             
+#&gt; [263] &quot;macukrainian&quot;            &quot;MS-ANSI&quot;                
+#&gt; [265] &quot;MS-ARAB&quot;                 &quot;MS-CYRL&quot;                
+#&gt; [267] &quot;MS-EE&quot;                   &quot;MS-GREEK&quot;               
+#&gt; [269] &quot;MS-HEBR&quot;                 &quot;MS-TURK&quot;                
+#&gt; [271] &quot;MS50221&quot;                 &quot;MS51932&quot;                
+#&gt; [273] &quot;MS932&quot;                   &quot;MS936&quot;                  
+#&gt; [275] &quot;PT154&quot;                   &quot;PTCP154&quot;                
+#&gt; [277] &quot;SHIFFT_JIS&quot;              &quot;SHIFFT_JIS-MS&quot;          
+#&gt; [279] &quot;shift-jis&quot;               &quot;shift_jis&quot;              
+#&gt; [281] &quot;SJIS&quot;                    &quot;SJIS-MS&quot;                
+#&gt; [283] &quot;SJIS-OPEN&quot;               &quot;SJIS-WIN&quot;               
+#&gt; [285] &quot;UCS-2&quot;                   &quot;UCS-2BE&quot;                
+#&gt; [287] &quot;UCS-2LE&quot;                 &quot;UCS-4&quot;                  
+#&gt; [289] &quot;UCS-4BE&quot;                 &quot;UCS-4BE&quot;                
+#&gt; [291] &quot;UCS-4LE&quot;                 &quot;UCS-4LE&quot;                
+#&gt; [293] &quot;UCS2&quot;                    &quot;UCS2BE&quot;                 
+#&gt; [295] &quot;UCS2LE&quot;                  &quot;UCS4&quot;                   
+#&gt; [297] &quot;UCS4BE&quot;                  &quot;UCS4LE&quot;                 
+#&gt; [299] &quot;UHC&quot;                     &quot;unicodeFFFE&quot;            
+#&gt; [301] &quot;US&quot;                      &quot;US-ASCII&quot;               
+#&gt; [303] &quot;UTF-16&quot;                  &quot;UTF-16BE&quot;               
+#&gt; [305] &quot;UTF-16LE&quot;                &quot;UTF-32&quot;                 
+#&gt; [307] &quot;UTF-32BE&quot;                &quot;UTF-32LE&quot;               
+#&gt; [309] &quot;UTF-8&quot;                   &quot;UTF16&quot;                  
+#&gt; [311] &quot;UTF16BE&quot;                 &quot;UTF16LE&quot;                
+#&gt; [313] &quot;UTF32&quot;                   &quot;UTF32BE&quot;                
+#&gt; [315] &quot;UTF32LE&quot;                 &quot;UTF8&quot;                   
+#&gt; [317] &quot;WINBALTRIM&quot;              &quot;windows-1250&quot;           
+#&gt; [319] &quot;windows-1251&quot;            &quot;windows-1252&quot;           
+#&gt; [321] &quot;windows-1253&quot;            &quot;windows-1254&quot;           
+#&gt; [323] &quot;windows-1255&quot;            &quot;windows-1256&quot;           
+#&gt; [325] &quot;windows-1257&quot;            &quot;windows-1258&quot;           
+#&gt; [327] &quot;WINDOWS-31J&quot;             &quot;WINDOWS-50221&quot;          
+#&gt; [329] &quot;WINDOWS-51932&quot;           &quot;windows-874&quot;            
+#&gt; [331] &quot;WINDOWS-932&quot;             &quot;WINDOWS-936&quot;            
+#&gt; [333] &quot;x-Chinese_CNS&quot;           &quot;x-cp20001&quot;              
+#&gt; [335] &quot;x-cp20003&quot;               &quot;x-cp20004&quot;              
+#&gt; [337] &quot;x-cp20005&quot;               &quot;x-cp20261&quot;              
+#&gt; [339] &quot;x-cp20269&quot;               &quot;x-cp20936&quot;              
+#&gt; [341] &quot;x-cp20949&quot;               &quot;x-cp50227&quot;              
+#&gt; [343] &quot;x-EBCDIC-KoreanExtended&quot; &quot;x-Europa&quot;               
+#&gt; [345] &quot;x-IA5&quot;                   &quot;x-IA5-German&quot;           
+#&gt; [347] &quot;x-IA5-Norwegian&quot;         &quot;x-IA5-Swedish&quot;          
+#&gt; [349] &quot;x-iscii-as&quot;              &quot;x-iscii-be&quot;             
+#&gt; [351] &quot;x-iscii-de&quot;              &quot;x-iscii-gu&quot;             
+#&gt; [353] &quot;x-iscii-ka&quot;              &quot;x-iscii-ma&quot;             
+#&gt; [355] &quot;x-iscii-or&quot;              &quot;x-iscii-pa&quot;             
+#&gt; [357] &quot;x-iscii-ta&quot;              &quot;x-iscii-te&quot;             
+#&gt; [359] &quot;x-mac-arabic&quot;            &quot;x-mac-ce&quot;               
+#&gt; [361] &quot;x-mac-chinesesimp&quot;       &quot;x-mac-chinesetrad&quot;      
+#&gt; [363] &quot;x-mac-croatian&quot;          &quot;x-mac-cyrillic&quot;         
+#&gt; [365] &quot;x-mac-greek&quot;             &quot;x-mac-hebrew&quot;           
+#&gt; [367] &quot;x-mac-icelandic&quot;         &quot;x-mac-japanese&quot;         
+#&gt; [369] &quot;x-mac-korean&quot;            &quot;x-mac-romanian&quot;         
+#&gt; [371] &quot;x-mac-thai&quot;              &quot;x-mac-turkish&quot;          
+#&gt; [373] &quot;x-mac-ukrainian&quot;         &quot;x_Chinese-Eten&quot;
+</code></pre>
+<p>和作業系統一致的編碼</p>
+<pre><code class="language-r?preclass=.ms-5">localeToCharset(locale =Sys.getlocale(&quot;LC_CTYPE&quot;))
+</code></pre>
+<p>工具程式</p>
+<pre><code class="language-r">native_encode = function(x) {
+  if (.Platform$OS.type == 'unix') return(x)
+  x2 = enc2native(x)
+  if (identical(enc2utf8(x2), x)) x2 else x
+}
+</code></pre>
+<p>工具程式</p>
+<pre><code class="language-r?lang=r?preclass=ms-5">details &lt;- function(x) {
+    details &lt;-
+        list(x=x,encoding=Encoding(x),bytes=nchar(x,&quot;b&quot;),chars=nchar(x,&quot;c&quot;),
+             width=nchar(x,&quot;w&quot;),raw=paste(charToRaw(x),collapse=&quot;:&quot;))
+    print(t(as.matrix(details)))
+}
+x &lt;- &quot;Maur\xEDcio&quot;
+Encoding(x) &lt;- &quot;latin1&quot;
+details(x)
+#&gt;      x          encoding bytes chars width raw                      
+#&gt; [1,] &quot;Mauricio&quot; &quot;latin1&quot; 8     8     8     &quot;4d:61:75:72:ed:63:69:6f&quot;
+
+x &lt;- &quot;你好&quot;
+Encoding(x) &lt;- &quot;UTF-8&quot;
+details(x)
+#&gt; Error in nchar(x, &quot;c&quot;): invalid multibyte string, element 1
+
+x &lt;- &quot;你好&quot;
+iconv(x,&quot;unknown&quot;,&quot;utf-8&quot;)
+#&gt; Error in iconv(x, &quot;unknown&quot;, &quot;utf-8&quot;): 在編碼頁 950 中不支援從 'unknown' 轉換到 'utf-8'
+Encoding(x) &lt;- &quot;UTF-8&quot;
+details(x)
+#&gt; Error in nchar(x, &quot;c&quot;): invalid multibyte string, element 1
+
+x &lt;- &quot;你好&quot;
+y&lt;-enc2utf8(x)
+details(y)
+#&gt;      x      encoding bytes chars width raw                
+#&gt; [1,] &quot;你好&quot; &quot;UTF-8&quot;  6     2     4     &quot;e4:bd:a0:e5:a5:bd&quot;
+</code></pre>
+<p>初步結論就是big5的雙位元,應該都是ASCII,因此轉換都出問題。用enc2utf8(),enc2native()應該是比較符合windows10系統的方法。</p>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1632928432" rel="stylesheet">
+<script src="../js/quicknote.js?1632928432"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=1.3&#32;執行>前</a>
+                   
+          
+            <a href="../rlang/11_environments.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=11&#32;Environments>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1632928432"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1632928432"></script>
+  <script src="../js/featherlight.gallery.min.js?1632928432"></script>
+  <link href="../css/featherlight.min.css?1632928432" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632928432" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1632928432"></script>
+  
+  <script src="../js/hugohelper.js?1632928432"></script>
+
+  <link href="../css/rmd.css?1632928432" rel="stylesheet">
+  <link href="../css/mystyle.css?1632928432" rel="stylesheet">    
+  <script src='../js/variant.js?1632928432'></script>
+
+<script>
+  
+    let idxfile = "\/blogR\/index.json"  
+  
+</script>
+<script src='../js/localsearch.js?1632928432'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']]  
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

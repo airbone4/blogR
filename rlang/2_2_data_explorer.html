@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632374882"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632928432"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632374882" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632374882" rel="stylesheet">
-    <link href="../css/syntax.css?1632374882" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632928432" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632928432" rel="stylesheet">
+    <link href="../css/syntax.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632374882" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme.css?1632374882" rel="stylesheet">
+    <link href="../css/theme.css?1632928432" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -66,7 +66,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 23, 2021'>2.2 data explorer</span>
+      title='最後修改September 25, 2021'>2.2 data explorer</span>
         
     
 
@@ -141,6 +141,13 @@
           <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
     
   
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
@@ -198,12 +205,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
@@ -242,6 +249,9 @@
   
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html" data-bs-toggle="tooltip" title="8.1. 自製套件">8.1. 自製套件</a></li>
     
   
         <li class="nav-item">
@@ -507,7 +517,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-09-23 PM 01:27]</a></li><li><a href="../rlang/2_2_data_explorer.html"> <i class="far fa-clock" ></i>2.2 data explorer[2021-09-23 PM 12:47]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-09-23 AM 11:48]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 09:38]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li><li><a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html"> <i class="far fa-clock" ></i>4.1.2_type練習[2021-09-25 PM 06:06]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -529,46 +539,29 @@
 <li>Skewness</li>
 <li>Kurtosis</li>
 </ul>
-<pre><code class="language-r">mean(mtcars$mpg)
-</code></pre>
-<pre><code>#&gt; [1] 20.09062
-</code></pre>
-<pre><code class="language-r">median(mtcars$mpg)
-</code></pre>
-<pre><code>#&gt; [1] 19.2
-</code></pre>
-<pre><code class="language-r">min(mtcars$mpg)
-</code></pre>
-<pre><code>#&gt; [1] 10.4
-</code></pre>
-<pre><code class="language-r">max(mtcars$mpg)
-</code></pre>
-<pre><code>#&gt; [1] 33.9
-</code></pre>
-<pre><code class="language-r">quantile(mtcars$mpg)
-</code></pre>
-<pre><code>#&gt;     0%    25%    50%    75%   100% 
+<pre><code class="language-r?lang=r?preclass=.code-source">mean(mtcars$mpg)
+#&gt; [1] 20.09062
+median(mtcars$mpg)
+#&gt; [1] 19.2
+min(mtcars$mpg)
+#&gt; [1] 10.4
+max(mtcars$mpg)
+#&gt; [1] 33.9
+quantile(mtcars$mpg)
+#&gt;     0%    25%    50%    75%   100% 
 #&gt; 10.400 15.425 19.200 22.800 33.900
-</code></pre>
-<pre><code class="language-r">quantile(mtcars$mpg,c(0.2))
-</code></pre>
-<pre><code>#&gt;  20% 
+quantile(mtcars$mpg,c(0.2))
+#&gt;  20% 
 #&gt; 15.2
-</code></pre>
-<pre><code class="language-r">if(!require(moments))
+if(!require(moments))
   install.packages(&quot;moment&quot;)
+#&gt; 載入需要的套件：moments
+skewness(mtcars$mpg)
+#&gt; [1] 0.6404399
+kurtosis(mtcars$mpg)
+#&gt; [1] 2.799467
 </code></pre>
-<pre><code>#&gt; 載入需要的套件：moments
-</code></pre>
-<pre><code class="language-r">skewness(mtcars$mpg)
-</code></pre>
-<pre><code>#&gt; [1] 0.6404399
-</code></pre>
-<pre><code class="language-r">kurtosis(mtcars$mpg)
-</code></pre>
-<pre><code>#&gt; [1] 2.799467
-</code></pre>
-<pre><code class="language-r">x &lt;- rnorm(100)
+<pre><code class="language-r?lang=r?preclass=.code-source">x &lt;- rnorm(100)
 quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1)) # quartile
 quantile(x, probs = seq(0, 1, by= 0.01)) # decile
 ecdf(x)
@@ -576,7 +569,7 @@ ecdf(x)
 <p>問題：ecdf()的結果和quantile()的結果是否一樣？</p>
 <h2 id="匯入其他格式的資料">匯入其他格式的資料</h2>
 <p>安裝package : <code>foreign</code>，以<code>stata</code> 為例(利用其中的函數<code>read.dta()</code>)：</p>
-<pre><code class="language-r">if (!file.exists('resources/ceosal1.RData')){
+<pre><code class="language-r?lang=r?preclass=.code-source">if (!file.exists('resources/ceosal1.RData')){
 ceosal1&lt;-read.dta(&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/ceosal1.dta&quot;)
 save(ceosal1, file='resources/ceosal1.RData')
 }
@@ -584,7 +577,9 @@ save(ceosal1, file='resources/ceosal1.RData')
 <h2 id="來自wooldridge-的資料集">來自wooldridge 的資料集</h2>
 <p><a href="https://www.povertyactionlab.org/sites/default/files/r-cheat-sheet.pdf">base cheat sheet</a></p>
 <p><a href="./resources/affairs.RData">資料 affairs</a></p>
-<pre><code class="language-r">load('resources/affairs.RData')
+<pre><code class="language-r?lang=r?preclass=.code-source">
+
+load('resources/affairs.RData')
 # 原始資料kid是整數，加入標籤成為factor 
 haskids &lt;- factor(affairs$kids,labels=c(&quot;no&quot;,&quot;yes&quot;))
 mlab &lt;- c(&quot;very unhappy&quot;,&quot;unhappy&quot;,&quot;average&quot;,&quot;happy&quot;, &quot;very happy&quot;)
@@ -592,44 +587,37 @@ marriage &lt;- factor(affairs$ratemarr, labels=mlab)
 
 # Frequencies for having kids:
 table(haskids)
-</code></pre>
-<pre><code>#&gt; haskids
+#&gt; haskids
 #&gt;  no yes 
 #&gt; 171 430
-</code></pre>
-<pre><code class="language-r"># Marriage ratings (share):
+# Marriage ratings (share):
 prop.table(table(marriage))
-</code></pre>
-<pre><code>#&gt; marriage
+#&gt; marriage
 #&gt; very unhappy      unhappy      average        happy   very happy 
 #&gt;    0.0266223    0.1098170    0.1547421    0.3227953    0.3860233
-</code></pre>
-<pre><code class="language-r"># Contigency table: counts (display &amp; store in var.)
+
+# Contigency table: counts (display &amp; store in var.)
 (countstab &lt;- table(marriage,haskids))
-</code></pre>
-<pre><code>#&gt;               haskids
+#&gt;               haskids
 #&gt; marriage        no yes
 #&gt;   very unhappy   3  13
 #&gt;   unhappy        8  58
 #&gt;   average       24  69
 #&gt;   happy         40 154
 #&gt;   very happy    96 136
-</code></pre>
-<pre><code class="language-r"># Share within &quot;marriage&quot; (i.e. within a row):
+
+# Share within &quot;marriage&quot; (i.e. within a row):
 prop.table(countstab, margin=1)
-</code></pre>
-<pre><code>#&gt;               haskids
+#&gt;               haskids
 #&gt; marriage              no       yes
 #&gt;   very unhappy 0.1875000 0.8125000
 #&gt;   unhappy      0.1212121 0.8787879
 #&gt;   average      0.2580645 0.7419355
 #&gt;   happy        0.2061856 0.7938144
 #&gt;   very happy   0.4137931 0.5862069
-</code></pre>
-<pre><code class="language-r"># Share within &quot;haskids&quot;  (i.e. within a column):
+# Share within &quot;haskids&quot;  (i.e. within a column):
 prop.table(countstab, margin=2)
-</code></pre>
-<pre><code>#&gt;               haskids
+#&gt;               haskids
 #&gt; marriage               no        yes
 #&gt;   very unhappy 0.01754386 0.03023256
 #&gt;   unhappy      0.04678363 0.13488372
@@ -639,9 +627,8 @@ prop.table(countstab, margin=2)
 </code></pre>
 <p>如果不知道函數<code>prop.table()</code></p>
 <p>看一下資料結構</p>
-<pre><code class="language-r">str(x&lt;-table(haskids))
-</code></pre>
-<pre><code>#&gt;  'table' int [1:2(1d)] 171 430
+<pre><code class="language-r?lang=r?preclass=.code-source">str(x&lt;-table(haskids))
+#&gt;  'table' int [1:2(1d)] 171 430
 #&gt;  - attr(*, &quot;dimnames&quot;)=List of 1
 #&gt;   ..$ haskids: chr [1:2] &quot;no&quot; &quot;yes&quot;
 </code></pre>
@@ -651,126 +638,98 @@ prop.table(countstab, margin=2)
 <li>可以由dimnames(x)得到一個list,裡面只有一個元素，這個元素又是一個char list(長度為2)。<br>
 因此可以試試看</li>
 </ul>
-<pre><code class="language-r">x/sum(x)
-</code></pre>
-<pre><code>#&gt; haskids
+<pre><code class="language-r?lang=r?preclass=.code-source">x/sum(x)
+#&gt; haskids
 #&gt;        no       yes 
 #&gt; 0.2845258 0.7154742
 </code></pre>
 <p>結果應該和<code>prop.table()</code>一樣。</p>
 <p>那麼2 way 呢？
 也是先看結構：</p>
-<pre><code class="language-r">str(countstab &lt;- table(marriage,haskids))
-</code></pre>
-<pre><code>#&gt;  'table' int [1:5, 1:2] 3 8 24 40 96 13 58 69 154 136
+<pre><code class="language-r?lang=r?preclass=.code-source">str(countstab &lt;- table(marriage,haskids))
+#&gt;  'table' int [1:5, 1:2] 3 8 24 40 96 13 58 69 154 136
 #&gt;  - attr(*, &quot;dimnames&quot;)=List of 2
 #&gt;   ..$ marriage: chr [1:5] &quot;very unhappy&quot; &quot;unhappy&quot; &quot;average&quot; &quot;happy&quot; ...
 #&gt;   ..$ haskids : chr [1:2] &quot;no&quot; &quot;yes&quot;
-</code></pre>
-<pre><code class="language-r"> countstab/rowSums(countstab)
-</code></pre>
-<pre><code>#&gt;               haskids
+ countstab/rowSums(countstab)
+#&gt;               haskids
 #&gt; marriage              no       yes
 #&gt;   very unhappy 0.1875000 0.8125000
 #&gt;   unhappy      0.1212121 0.8787879
 #&gt;   average      0.2580645 0.7419355
 #&gt;   happy        0.2061856 0.7938144
 #&gt;   very happy   0.4137931 0.5862069
-</code></pre>
-<pre><code class="language-r"> countstab/colSums(countstab)
-</code></pre>
-<pre><code>#&gt;               haskids
+ countstab/colSums(countstab)
+#&gt;               haskids
 #&gt; marriage               no        yes
 #&gt;   very unhappy 0.01754386 0.03023256
 #&gt;   unhappy      0.01860465 0.33918129
 #&gt;   average      0.14035088 0.16046512
 #&gt;   happy        0.09302326 0.90058480
 #&gt;   very happy   0.56140351 0.31627907
-</code></pre>
-<pre><code class="language-r">#??countstab/colsum(countstab)
+#??countstab/colsum(countstab)
 </code></pre>
 <p><a href="./resources/ceosal1.RData">ceosal1</a></p>
-<pre><code class="language-r">load('resources/ceosal1.RData')
+<pre><code class="language-r?lang=r?preclass=.code-source">load('resources/ceosal1.RData')
 # sample average:
 mean(ceosal1$salary)
-</code></pre>
-<pre><code>#&gt; [1] 1281.12
-</code></pre>
-<pre><code class="language-r"># sample median:
+#&gt; [1] 1281.12
+# sample median:
 median(ceosal1$salary)
-</code></pre>
-<pre><code>#&gt; [1] 1039
-</code></pre>
-<pre><code class="language-r">#standard deviation:
+#&gt; [1] 1039
+#standard deviation:
 sd(ceosal1$salary)
-</code></pre>
-<pre><code>#&gt; [1] 1372.345
-</code></pre>
-<pre><code class="language-r"># summary information:
+#&gt; [1] 1372.345
+# summary information:
 summary(ceosal1$salary)
-</code></pre>
-<pre><code>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #&gt;     223     736    1039    1281    1407   14822
-</code></pre>
-<pre><code class="language-r"># correlation with ROE:
+
+# correlation with ROE:
 cor(ceosal1$salary, ceosal1$roe)
+#&gt; [1] 0.1148417
+boxplot(ceosal1$roe,horizontal = T)
 </code></pre>
-<pre><code>#&gt; [1] 0.1148417
+<p><img src="2_2_data_explorer_files/figure-html/unnamed-chunk-9-1.pdf" alt="plot of chunk unnamed-chunk-9"></p>
+<pre><code class="language-r?lang=r?preclass=.code-source">boxplot(ceosal1$roe~ceosal1$consprod)
 </code></pre>
-<pre><code class="language-r">boxplot(ceosal1$roe,horizontal = T)
-</code></pre>
-<p><img src="2_2_data_explorer_files/figure-html/unnamed-chunk-8-1.pdf" alt="plot of chunk unnamed-chunk-8"></p>
-<pre><code class="language-r">boxplot(ceosal1$roe~ceosal1$consprod)
-</code></pre>
-<p><img src="2_2_data_explorer_files/figure-html/unnamed-chunk-8-2.pdf" alt="plot of chunk unnamed-chunk-8"></p>
+<p><img src="2_2_data_explorer_files/figure-html/unnamed-chunk-9-2.pdf" alt="plot of chunk unnamed-chunk-9"></p>
 <h2 id="t-test">t-test</h2>
 <h3 id="manually-enter-raw-data-from-wooldridge-table-c3">Manually enter raw data from Wooldridge, Table C.3:</h3>
-<pre><code class="language-r">SR87&lt;-c(10,1,6,.45,1.25,1.3,1.06,3,8.18,1.67,.98,1,.45,
+<pre><code class="language-r?lang=r?preclass=.code-source">SR87&lt;-c(10,1,6,.45,1.25,1.3,1.06,3,8.18,1.67,.98,1,.45,
                                       5.03,8,9,18,.28,7,3.97)
 SR88&lt;-c(3,1,5,.5,1.54,1.5,.8,2,.67,1.17,.51,.5,.61,6.7,
                                             4,7,19,.2,5,3.83)
 </code></pre>
 <h3 id="calculate-change-the-parentheses-just-display-the-results">Calculate Change (the parentheses just display the results):</h3>
-<pre><code class="language-r">(Change &lt;- SR88 - SR87)
-</code></pre>
-<pre><code>#&gt;  [1] -7.00  0.00 -1.00  0.05  0.29  0.20 -0.26 -1.00 -7.51 -0.50 -0.47 -0.50
+<pre><code class="language-r?lang=r?preclass=.code-source">(Change &lt;- SR88 - SR87)
+#&gt;  [1] -7.00  0.00 -1.00  0.05  0.29  0.20 -0.26 -1.00 -7.51 -0.50 -0.47 -0.50
 #&gt; [13]  0.16  1.67 -4.00 -2.00  1.00 -0.08 -2.00 -0.14
 </code></pre>
 <h3 id="ingredients-to-ci-formula">Ingredients to CI formula</h3>
-<pre><code class="language-r">(avgCh&lt;- mean(Change))
-</code></pre>
-<pre><code>#&gt; [1] -1.1545
-</code></pre>
-<pre><code class="language-r">(n    &lt;- length(Change))
-</code></pre>
-<pre><code>#&gt; [1] 20
-</code></pre>
-<pre><code class="language-r">(sdCh &lt;- sd(Change))
-</code></pre>
-<pre><code>#&gt; [1] 2.400639
-</code></pre>
-<pre><code class="language-r">(se   &lt;- sdCh/sqrt(n))
-</code></pre>
-<pre><code>#&gt; [1] 0.5367992
-</code></pre>
-<pre><code class="language-r">(c    &lt;- qt(.975, n-1))
-</code></pre>
-<pre><code>#&gt; [1] 2.093024
+<pre><code class="language-r?lang=r?preclass=.code-source">(avgCh&lt;- mean(Change))
+#&gt; [1] -1.1545
+(n    &lt;- length(Change))
+#&gt; [1] 20
+(sdCh &lt;- sd(Change))
+#&gt; [1] 2.400639
+(se   &lt;- sdCh/sqrt(n))
+#&gt; [1] 0.5367992
+(c    &lt;- qt(.975, n-1))
+#&gt; [1] 2.093024
 </code></pre>
 <h3 id="confidence-intervall">Confidence intervall:</h3>
-<pre><code class="language-r">c( avgCh - c*se, avgCh + c*se )
-</code></pre>
-<pre><code>#&gt; [1] -2.27803369 -0.03096631
+<pre><code class="language-r?lang=r?preclass=.code-source">c( avgCh - c*se, avgCh + c*se )
+#&gt; [1] -2.27803369 -0.03096631
 </code></pre>
 <p>驗證</p>
-<pre><code class="language-r">v.n &lt;- length(Change)
+<pre><code class="language-r?lang=r?preclass=.code-source">v.n &lt;- length(Change)
 v.mean &lt;- sum(Change)/v.n
 v.std &lt;-sqrt(sum((Change-v.mean)^2)/(v.n-1))
 v.se &lt;- v.std/sqrt(v.n)
 rst&lt;-list(v.n,v.mean,v.std,v.se)
 rst
-</code></pre>
-<pre><code>#&gt; [[1]]
+#&gt; [[1]]
 #&gt; [1] 20
 #&gt; 
 #&gt; [[2]]
@@ -784,10 +743,9 @@ rst
 </code></pre>
 <p>練習：黑白種，用同一個CV找工作。</p>
 <p><a href="./resources/audit.dta">audit</a></p>
-<pre><code class="language-r">load('resources/audit.dta')
+<pre><code class="language-r?lang=r?preclass=.code-source">load('resources/audit.dta')
 head(audit)
-</code></pre>
-<pre><code>#&gt;   w b y
+#&gt;   w b y
 #&gt; 1 1 1 0
 #&gt; 2 1 1 0
 #&gt; 3 1 1 0
@@ -799,11 +757,10 @@ head(audit)
 <h3 id="by-hand">by hand</h3>
 <p>t statistic for H0: mu=0:</p>
 <p>自由度(d.f.)為  n-1 =<code>240</code> 的t分配，其臨界值Critical values(如下):</p>
-<pre><code class="language-r">alpha.one.tailed = c(0.1, 0.05, 0.025, 0.01, 0.005, .001)
+<pre><code class="language-r?lang=r?preclass=.code-source">alpha.one.tailed = c(0.1, 0.05, 0.025, 0.01, 0.005, .001)
 CV &lt;- qt(1 - alpha.one.tailed, n-1)
 cbind(alpha.one.tailed, CV)
-</code></pre>
-<pre><code>#&gt;      alpha.one.tailed       CV
+#&gt;      alpha.one.tailed       CV
 #&gt; [1,]            0.100 1.285089
 #&gt; [2,]            0.050 1.651227
 #&gt; [3,]            0.025 1.969898
@@ -815,12 +772,13 @@ cbind(alpha.one.tailed, CV)
 <p>H0: y=5, H1:y&gt;5, 信賴區間0.99
 t.test(y, mu=5, alternative=&quot;greater&quot;, conf.level=0.99)
 利用函數算：</p>
-<pre><code class="language-r"># ex.C.3: two-sided CI
+<pre><code class="language-r?lang=r?preclass=.code-source"># ex.C.3: two-sided CI
 t.test(audit$y)
 # ex.C.5 &amp; C.7: 1-sided test:
 t.test(audit$y, alternative=&quot;less&quot;)
+
 </code></pre>
-<pre><code class="language-example">One Sample t-test
+<pre><code class="language-r?preclass=code-out.ms-5.w-75">One Sample t-test
 
 data:  audit$y
 t = -4.2768, df = 240, p-value = 2.739e-05
@@ -849,13 +807,12 @@ sample estimates:
 大綱是：先探索一下我們可能用到的R語言技巧，然後是寫成函數。</p>
 <h3 id="方法1-利用-for迴圈">方法1: 利用 for迴圈</h3>
 <p>如果不分組</p>
-<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+<pre><code class="language-r?lang=r?preclass=.code-source">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
            34.935,  35.2115, 35.2115,  5.2115, 36.7803)
 group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
 dframe = data.frame(age=age, group=group)
 summary(dframe)
-</code></pre>
-<pre><code>#&gt;       age             group    
+#&gt;       age             group    
 #&gt;  Min.   : 5.212   Min.   :1.0  
 #&gt;  1st Qu.:26.742   1st Qu.:1.0  
 #&gt;  Median :33.212   Median :1.0  
@@ -864,14 +821,13 @@ summary(dframe)
 #&gt;  Max.   :36.780   Max.   :2.0
 </code></pre>
 <p>data.frame  的record篩選，可以利用邏輯值索引來篩選分組，這裡的範例都是求得一組(以第一分類為例)：</p>
-<pre><code class="language-r">ft&lt;-factor(dframe$group)
+<pre><code class="language-r?lang=r?preclass=.code-source">ft&lt;-factor(dframe$group)
 gn&lt;-length(levels(ft)) # nlevels(ft)
 
 gf&lt;-ft==levels(ft)[1] # 第一組
 g1&lt;-dframe[gf,]
 g1
-</code></pre>
-<pre><code>#&gt;        age group
+#&gt;        age group
 #&gt; 1  23.0883     1
 #&gt; 2  25.8344     1
 #&gt; 3  29.4648     1
@@ -880,22 +836,19 @@ g1
 #&gt; 10 36.7803     1
 </code></pre>
 <p>除了上面的篩選方式以外，也可以利用<code>%in%</code></p>
-<pre><code class="language-r">ft&lt;-factor(dframe$group)
+<pre><code class="language-r?lang=r?preclass=.code-source">ft&lt;-factor(dframe$group)
 gn&lt;-length(levels(ft)) # nlevels(ft)
 
 gf&lt;-as.numeric(levels(ft)[1]) # 第一組
 g1&lt;-dframe[group %in% gf,] # 不是 gf %in% group
 rst&lt;-summary(g1)
 rst[4,1]
-</code></pre>
-<pre><code>#&gt; [1] &quot;Mean   :30.62  &quot;
-</code></pre>
-<pre><code class="language-r">rst[4,2]
-</code></pre>
-<pre><code>#&gt; [1] &quot;Mean   :1  &quot;
+#&gt; [1] &quot;Mean   :30.62  &quot;
+rst[4,2]
+#&gt; [1] &quot;Mean   :1  &quot;
 </code></pre>
 <p>最後的程式碼：</p>
-<pre><code class="language-r">ft&lt;-factor(dframe$group)
+<pre><code class="language-r?lang=r?preclass=.code-source">ft&lt;-factor(dframe$group)
 rst &lt;- as.list(numeric(nlevels(ft)))
 names(rst)&lt;-levels(ft)
 for (gi in levels(ft) ){
@@ -907,8 +860,7 @@ for (gi in levels(ft) ){
   
 }
 print(rst)
-</code></pre>
-<pre><code>#&gt; $`1`
+#&gt; $`1`
 #&gt; [1] &quot;Mean   :30.62  &quot;
 #&gt; 
 #&gt; $`2`
@@ -932,15 +884,12 @@ as.numeric(sub('.*:', '', summary(dframe)[4,1]))</p>
 </div>
 
 <h3 id="方法2函數aggregate">方法2:　函數aggregate()</h3>
-<pre><code class="language-r">aggregate(dframe$age, by=list(dframe$group), FUN=mean)
-</code></pre>
-<pre><code>#&gt;   Group.1        x
+<pre><code class="language-r?lang=r?preclass=.code-source">aggregate(dframe$age, by=list(dframe$group), FUN=mean)
+#&gt;   Group.1        x
 #&gt; 1       1 30.62333
 #&gt; 2       2 27.10507
-</code></pre>
-<pre><code class="language-r">aggregate(dframe$age, by=list(dframe$group), FUN=mean)[2]
-</code></pre>
-<pre><code>#&gt;          x
+aggregate(dframe$age, by=list(dframe$group), FUN=mean)[2]
+#&gt;          x
 #&gt; 1 30.62333
 #&gt; 2 27.10507
 </code></pre>
@@ -948,7 +897,7 @@ as.numeric(sub('.*:', '', summary(dframe)[4,1]))</p>
 <p><strong>練習</strong>：
 上面的範例是每組求得一個值，如果是多個呢？例如利用<code>aggregate()</code>求得每組min,max,median,q25,q75 ?</p>
 <h3 id="方法3-函數tapply">方法3: 函數　<code>tapply</code></h3>
-<pre><code class="language-r">f1&lt;-function(im)
+<pre><code class="language-r?lang=r?preclass=.code-source">f1&lt;-function(im)
 {
   c(min(im),median(im),mean(im),max(im))
 }
@@ -958,15 +907,14 @@ rstm&lt;-matrix(rstm,ncol=2) # hard code2 , try `length(levels(factor(dframe$gro
 rownames(rstm)&lt;-c(&quot;min&quot;,&quot;median&quot;,&quot;mean&quot;,&quot;max&quot;)
 colnames(rstm)&lt;-paste(&quot;組別:&quot;,levels(factor(dframe$group)))
 rstm
-</code></pre>
-<pre><code>#&gt;         組別: 1  組別: 2
+#&gt;         組別: 1  組別: 2
 #&gt; min    23.08830  5.21150
 #&gt; median 31.55100 33.99865
 #&gt; mean   30.62333 27.10507
 #&gt; max    36.78030 35.21150
 </code></pre>
 <h4 id="方法3-利用其他套件">方法3 利用其他套件</h4>
-<pre><code class="language-r">library(dplyr)
+<pre><code class="language-r?lang=r?preclass=.code-source">library(dplyr)
 dt &lt;- data.frame(age=rchisq(20,10), group=sample(1:2,20, rep=T))
 grp &lt;- group_by(dt, group)
 summarise(grp, mean=mean(age), sd=sd(age))
@@ -974,14 +922,12 @@ detach(&quot;package:dplyr&quot;, unload=TRUE)
 </code></pre>
 <h2 id="plot">plot</h2>
 <p>這裡的分組不能用之前的hard code 中提到的方法，因為各組可能數量不同。</p>
-<pre><code class="language-r">v1&lt;-c(1,2,3)
+<pre><code class="language-r?lang=r?preclass=.code-source">v1&lt;-c(1,2,3)
 v2&lt;-c(4,4)
 cbind(v1,v2)
-</code></pre>
-<pre><code>#&gt; Warning in cbind(v1, v2): number of rows of result is not a multiple of vector
+#&gt; Warning in cbind(v1, v2): number of rows of result is not a multiple of vector
 #&gt; length (arg 2)
-</code></pre>
-<pre><code>#&gt;      v1 v2
+#&gt;      v1 v2
 #&gt; [1,]  1  4
 #&gt; [2,]  2  4
 #&gt; [3,]  3  4
@@ -997,45 +943,42 @@ cbind(v1,v2)
 <p>練習:<br>
 已經知道boxplot()的參數如果傳進矩陣或資料集，將對每一個欄位作圖</p>
 <p>note:boxplot吃 y~x回歸式,例如</p>
-<pre><code class="language-r">boxplot(formula = Ozone ~ Month, # Y ~ X 
+<pre><code class="language-r?lang=r?preclass=.code-source">boxplot(formula = Ozone ~ Month, # Y ~ X 
         data = airquality,       # 資料
         xlab = &quot;Month&quot;,          
         ylab = &quot;Ozone (ppb)&quot;,    
         col =&quot;red&quot;)
 </code></pre>
-<pre><code class="language-r">boxplot(matrix(rnorm(100),ncol=2))
+<pre><code class="language-r?lang=r?preclass=.code-source">boxplot(matrix(rnorm(100),ncol=2))
 </code></pre>
-<p><img src="2_2_data_explorer_files/figure-html/unnamed-chunk-29-1.pdf" alt="plot of chunk unnamed-chunk-29"></p>
+<p><img src="2_2_data_explorer_files/figure-html/unnamed-chunk-30-1.pdf" alt="plot of chunk unnamed-chunk-30"></p>
 <p>現在要分組對年齡boxplot,請寫出程式碼，資料如下：</p>
-<pre><code class="language-example">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
            34.935,  35.2115, 35.2115,  5.2115, 36.7803)
 group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
 dframe = data.frame(age=age, group=group)
 </code></pre>
 <p>hint: 每組長度可能不一樣，需要補NA<br>
-<img src="2_2_data_explorer_files/figure-html/unnamed-chunk-30-1.pdf" alt="plot of chunk unnamed-chunk-30"></p>
+<img src="2_2_data_explorer_files/figure-html/unnamed-chunk-31-1.pdf" alt="plot of chunk unnamed-chunk-31"></p>
 <p>hint: 最簡單的寫法 <code>boxplot(age~group)</code></p>
 <p>&lt;1&gt; FUN.Name 會跑到mathch.fun() 這個函數，而這個函數是用字串搜尋</p>
 <p>m2: 
 現在想要把rst轉成data.frame。<br>
 先看一下示範，如何把list 轉成 data.frame</p>
-<pre><code class="language-r"># 解釋結果,問stringsAsFactors=F 有什麼效果？
+<pre><code class="language-r?lang=r?preclass=.code-source"># 解釋結果,問stringsAsFactors=F 有什麼效果？
 test1 &lt;- list( c(a='a',b='b',c='c'), 
                c(a='d',b='e',c='f'))
 d1&lt;-as.data.frame(test1)
 d1
-</code></pre>
-<pre><code>#&gt;   c.a....a...b....b...c....c.. c.a....d...b....e...c....f..
+#&gt;   c.a....a...b....b...c....c.. c.a....d...b....e...c....f..
 #&gt; a                            a                            d
 #&gt; b                            b                            e
 #&gt; c                            c                            f
-</code></pre>
-<pre><code class="language-r"># ok
+# ok
 test2 &lt;- list(a = c(1, 2, 3), b = c(4, 5, 6))
 d2&lt;-as.data.frame(test2)
 d2
-</code></pre>
-<pre><code>#&gt;   a b
+#&gt;   a b
 #&gt; 1 1 4
 #&gt; 2 2 5
 #&gt; 3 3 6
@@ -1068,8 +1011,8 @@ d2
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632374882" rel="stylesheet">
-<script src="../js/quicknote.js?1632374882"></script>
+<link href="../css/quicknote.css?1632928432" rel="stylesheet">
+<script src="../js/quicknote.js?1632928432"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1087,7 +1030,7 @@ d2
           
 
   
-<script src="../js/packhtml.js?1632374882"></script>    
+<script src="../js/packhtml.js?1632928432"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1097,23 +1040,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632374882"></script>
-  <script src="../js/featherlight.gallery.min.js?1632374882"></script>
-  <link href="../css/featherlight.min.css?1632374882" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632374882" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632928432"></script>
+  <script src="../js/featherlight.gallery.min.js?1632928432"></script>
+  <link href="../css/featherlight.min.css?1632928432" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632928432" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632374882"></script>
+  <script src="../js/highlight.pack.js?1632928432"></script>
   
-  <script src="../js/hugohelper.js?1632374882"></script>
+  <script src="../js/hugohelper.js?1632928432"></script>
 
-  <link href="../css/rmd.css?1632374882" rel="stylesheet">
-  <link href="../css/mystyle.css?1632374882" rel="stylesheet">    
-  <script src='../js/variant.js?1632374882'></script>
+  <link href="../css/rmd.css?1632928432" rel="stylesheet">
+  <link href="../css/mystyle.css?1632928432" rel="stylesheet">    
+  <script src='../js/variant.js?1632928432'></script>
 
 <script>
-let idxfile = "\/index.json"  
+  
+    let idxfile = "\/blogR\/index.json"  
+  
 </script>
-<script src='../js/localsearch.js?1632374882'></script>
+<script src='../js/localsearch.js?1632928432'></script>
     
 
 

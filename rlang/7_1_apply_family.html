@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632374882"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632928432"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632374882" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632374882" rel="stylesheet">
-    <link href="../css/syntax.css?1632374882" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632928432" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632928432" rel="stylesheet">
+    <link href="../css/syntax.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632374882" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632928432" rel="stylesheet">
     
-    <link href="../css/theme.css?1632374882" rel="stylesheet">
+    <link href="../css/theme.css?1632928432" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -37,18 +37,22 @@
     <div class="wrapper">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#apply-family">apply family</a>
+    <li><a href="#apply">apply</a></li>
+    <li><a href="#lapply函數">lapply函數</a></li>
+    <li><a href="#sapply函數">sapply函數</a></li>
+    <li><a href="#比較">比較</a></li>
+    <li><a href="#vapply函數">vapply函數</a>
       <ul>
-        <li><a href="#apply">apply</a></li>
-        <li><a href="#lapply函數">lapply函數</a></li>
-        <li><a href="#sapply函數">sapply函數</a></li>
-        <li><a href="#比較">比較</a></li>
-        <li><a href="#vapply函數">vapply函數</a></li>
-        <li><a href="#mapply函數">mapply函數</a></li>
-        <li><a href="#tapply函數">tapply函數</a></li>
-        <li><a href="#rapply函數">rapply函數</a></li>
-        <li><a href="#eapply函數">eapply函數</a></li>
-        <li><a href="#範例">範例</a></li>
+        <li><a href="#vapply練習">vapply練習❓</a></li>
+      </ul>
+    </li>
+    <li><a href="#mapply函數">mapply函數</a></li>
+    <li><a href="#tapply函數">tapply函數</a></li>
+    <li><a href="#rapply函數">rapply函數</a></li>
+    <li><a href="#eapply函數">eapply函數</a></li>
+    <li><a href="#範例">範例</a>
+      <ul>
+        <li><a href="#將每個rmd檔案中需要的函數庫列表">將每個rmd檔案中需要的函數庫列表</a></li>
       </ul>
     </li>
   </ul>
@@ -59,7 +63,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 16, 2021'>7.1 function - apply family</span>
+      title='最後修改September 25, 2021'>7.1 function - apply family</span>
         
     
 
@@ -134,6 +138,13 @@
           <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
     
   
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
@@ -191,12 +202,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
@@ -235,6 +246,9 @@
   
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html" data-bs-toggle="tooltip" title="8.1. 自製套件">8.1. 自製套件</a></li>
     
   
         <li class="nav-item">
@@ -500,15 +514,14 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-09-23 PM 01:27]</a></li><li><a href="../rlang/2_2_data_explorer.html"> <i class="far fa-clock" ></i>2.2 data explorer[2021-09-23 PM 12:47]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-09-23 AM 11:48]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 09:38]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li><li><a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html"> <i class="far fa-clock" ></i>4.1.2_type練習[2021-09-25 PM 06:06]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <h2 id="apply-family">apply family</h2>
-<ul>
+    <ul>
 <li><a href="https://kemushi54.github.io/R-basic/apply_family.html">其他參考</a></li>
 </ul>
-<h3 id="apply">apply</h3>
+<h2 id="apply">apply</h2>
 <p>可以處理的對象包括 矩陣、資料集、陣列(二維、多維)，可以指定直行、橫行。</p>
 <p>函數定義：</p>
 <pre><code>apply(X, MARGIN, FUN, ...)
@@ -522,7 +535,7 @@
 </ul>
 <p>在matlab 中,sum(矩陣,參數2) 參數2的可能值為1或2，分別指定欄位加總或是橫行加總,但是在R中sum(矩陣),卻是整個矩陣元素的加總。</p>
 <p>範例1: 橫行加總</p>
-<pre><code class="language-r">x&lt;-matrix(1,ncol=4,nrow=3);x
+<pre><code class="language-r?lang=r?preclass=.code-source">x&lt;-matrix(1,ncol=4,nrow=3);x
 #&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    1    1    1
 #&gt; [2,]    1    1    1    1
@@ -532,7 +545,7 @@ apply(x,1,sum)
 </code></pre>
 <p>範例：</p>
 <p>有一個list,裡面有2個欄位，分別是x1,x2,想要分別算出每個欄位的最小和最大</p>
-<pre><code class="language-r">
+<pre><code class="language-r?lang=r?preclass=.code-source">
 x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
 f1&lt;- function(col) {
    c(min(col),max(col)) 
@@ -545,7 +558,7 @@ f1&lt;- function(col) {
 </code></pre>
 <p>練習：如果用for loop?</p>
 <p>練習：哪種方式比較快？hint:利用 system.time(a function)</p>
-<h3 id="lapply函數">lapply函數</h3>
+<h2 id="lapply函數">lapply函數</h2>
 <p>大綱：lapply(),sapply(),vapply() 都參數都吃list 或者vector。</p>
 <p>函數定義：</p>
 <pre><code>lapply(X, FUN, ...)
@@ -600,48 +613,48 @@ f1&lt;- function(col) {
 <li>sapply(), vapply() 差別是，後者可以加入row names。</li>
 </ul>
 <p>範例:計算list中的每個KEY對應 的5個Tukey分位數 (minimum, lower-hinge, median, upper-hinge, maximum) 。利用<code>fivenum()</code></p>
-<pre><code class="language-r">x &lt;- list(a = 1:6, b = rnorm(2,6,8));x
+<pre><code class="language-r?lang=r?preclass=.code-source">x &lt;- list(a = 1:6, b = rnorm(2,6,8));x
 #&gt; $a
 #&gt; [1] 1 2 3 4 5 6
 #&gt; 
 #&gt; $b
-#&gt; [1] 19.09048 11.12270
+#&gt; [1]  8.92068 13.61534
 lapply(x,fivenum)
 #&gt; $a
 #&gt; [1] 1.0 2.0 3.5 5.0 6.0
 #&gt; 
 #&gt; $b
-#&gt; [1] 11.12270 11.12270 15.10659 19.09048 19.09048
+#&gt; [1]  8.92068  8.92068 11.26801 13.61534 13.61534
 </code></pre>
 <p>lapply 的參數如果是 list、data.frame，返回和參數長度同樣的list結構作為結果(欄位數)。</p>
 <p>例如，傳入的參數是data.frame(),如下，對資料集的每個欄位求和。</p>
-<pre><code class="language-r">lapply(data.frame(x), sum)
+<pre><code class="language-r?lang=r?preclass=.code-source">lapply(data.frame(x), sum)
 #&gt; $a
 #&gt; [1] 21
 #&gt; 
 #&gt; $b
-#&gt; [1] 90.63954
+#&gt; [1] 67.60805
 </code></pre>
 <p>apply不同的地方是,如果參數是<code>矩陣</code>沒辦法指定橫行或是直行的區別,只能是逐個元素運算。就是則會對每個元素求函數值。</p>
-<pre><code class="language-r">
+<pre><code class="language-r?lang=r?preclass=.code-source">
 x &lt;- matrix(rnorm(4,5,10),nrow=2);x
-#&gt;           [,1]      [,2]
-#&gt; [1,]  2.406308 -4.792351
-#&gt; [2,] -6.512301  3.234607
+#&gt;           [,1]     [,2]
+#&gt; [1,]  4.214953 8.275082
+#&gt; [2,] 22.287792 5.324959
  lapply(x, sum)
 #&gt; [[1]]
-#&gt; [1] 2.406308
+#&gt; [1] 4.214953
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] -6.512301
+#&gt; [1] 22.28779
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] -4.792351
+#&gt; [1] 8.275082
 #&gt; 
 #&gt; [[4]]
-#&gt; [1] 3.234607
+#&gt; [1] 5.324959
 </code></pre>
-<h3 id="sapply函數">sapply函數</h3>
+<h2 id="sapply函數">sapply函數</h2>
 <p>sapply函數包裹了一上面提到的<code>lapply()</code>，返回值為向量，而不是list對象。sapply增加了2個參數simplify和USE.NAMES，</p>
 <p>函數定義：</p>
 <pre><code>sapply(X, FUN, ..., simplify=TRUE, USE.NAMES = TRUE)
@@ -701,7 +714,8 @@ x &lt;- matrix(rnorm(4,5,10),nrow=2);x
     </div>
 </div>
 
-<pre><code class="language-r">sapply(2:4, seq)
+<p>常見範例</p>
+<pre><code class="language-r?lang=r?preclass=.ms-5">sapply(2:4, seq)
 #&gt; [[1]]
 #&gt; [1] 1 2
 #&gt; 
@@ -712,44 +726,44 @@ x &lt;- matrix(rnorm(4,5,10),nrow=2);x
 #&gt; [1] 1 2 3 4
 # data.frame
 sapply(data.frame(x), sum)
-#&gt;        X1        X2 
-#&gt; -4.105993 -1.557744
+#&gt;       X1       X2 
+#&gt; 26.50274 13.60004
 # 確認返回類別
 lapply(x, sum)
 #&gt; [[1]]
-#&gt; [1] 2.406308
+#&gt; [1] 4.214953
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] -6.512301
+#&gt; [1] 22.28779
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] -4.792351
+#&gt; [1] 8.275082
 #&gt; 
 #&gt; [[4]]
-#&gt; [1] 3.234607
+#&gt; [1] 5.324959
 class(lapply(x, sum))
 #&gt; [1] &quot;list&quot;
 sapply(x, sum)
-#&gt; [1]  2.406308 -6.512301 -4.792351  3.234607
+#&gt; [1]  4.214953 22.287792  8.275082  5.324959
 class(sapply(x, sum))
 #&gt; [1] &quot;numeric&quot;
 sapply(x, sum, simplify=FALSE, USE.NAMES=FALSE)
 #&gt; [[1]]
-#&gt; [1] 2.406308
+#&gt; [1] 4.214953
 #&gt; 
 #&gt; [[2]]
-#&gt; [1] -6.512301
+#&gt; [1] 22.28779
 #&gt; 
 #&gt; [[3]]
-#&gt; [1] -4.792351
+#&gt; [1] 8.275082
 #&gt; 
 #&gt; [[4]]
-#&gt; [1] 3.234607
+#&gt; [1] 5.324959
 class(sapply(x, sum, simplify=FALSE, USE.NAMES=FALSE))
 #&gt; [1] &quot;list&quot;
 </code></pre>
-<p>對欄位作統計運算的錯誤範例</p>
-<pre><code class="language-r">x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
+<p>❌對欄位作統計運算的錯誤範例</p>
+<pre><code class="language-r?lang=r?preclass=.code-source">x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
 x
 #&gt;      x1 x2
 #&gt; [1,]  3  1
@@ -769,16 +783,16 @@ sapply(x, quantile)
 #&gt; 100%    3    3    3    3    3    3    1    2    3     4     5     6
 </code></pre>
 <div class="position-relative warning p-0">
-解釋上面出錯的原因。<button type="button" class="btn btn-primary position-absolute top-0 end-0" 
+解釋上面出錯的原因。<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-09170">提示</button>
 </div>    
 
 
 <div class="collapse" id="quiz-09170"><p>hint: 
-sapply的調用函數lapply()，而已經知道lapply()的參數是矩陣的時候，每個元素都會被傳到函數。因此欄位有12個；</p>
+sapply會調用函數<code>lapply()</code>(<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >🐱‍👤簡化的sapply來自於複雜的lapply </span></span>)，而已經知道lapply()的參數是矩陣的時候，每個元素都會被傳到函數。因此欄位有12個；</p>
 <p>又，每個quantile()傳回5個元素，因此，橫行有5個。
 正確的作法是：</p>
-<pre><code class="language-r">x &lt;- list(x1 = 3, x2 = c(1:6))
+<pre><code class="language-r?lang=r?preclass=.code-source">x &lt;- list(x1 = 3, x2 = c(1:6))
 sapply(x, quantile)   
 #&gt;      x1   x2
 #&gt; 0%    3 1.00
@@ -789,8 +803,12 @@ sapply(x, quantile)
 </code></pre>
 </div>
 
+<p>另一個範例</p>
+<pre><code class="language-r">localeCategories &lt;- c(&quot;LC_COLLATE&quot;,&quot;LC_CTYPE&quot;,&quot;LC_MONETARY&quot;,&quot;LC_NUMERIC&quot;,&quot;LC_TIME&quot;)
+locales &lt;- setNames(sapply(localeCategories, Sys.getlocale), localeCategories)
+</code></pre>
 <p>範例：USE.NAMES=TRUE</p>
-<pre><code class="language-r">alist&lt;-list(a=c(1,1,1),b=c(2,2,2),c=c(3,3,3))
+<pre><code class="language-r?lang=r?preclass=.code-source">alist&lt;-list(a=c(1,1,1),b=c(2,2,2),c=c(3,3,3))
 f2&lt;-function(x)
 {
   mean(alist[[x]])
@@ -800,7 +818,7 @@ sapply(c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;),f2,USE.NAMES = T)
 #&gt; 1 2 3
 </code></pre>
 <p>對於simplify為array時，我們可以參考下面的例子，構建一個三維數組，其中二個維度為方陣。</p>
-<pre><code class="language-r">
+<pre><code class="language-r?lang=r?preclass=.code-source">
 a&lt;-1:2
 # 按數組分組
 sapply(a,function(x) matrix(x,2,2), simplify='array')
@@ -824,7 +842,7 @@ sapply(a,function(x) matrix(x,2,2))
 #&gt; [3,]    1    2
 #&gt; [4,]    1    2
 </code></pre>
-<h3 id="比較">比較</h3>
+<h2 id="比較">比較</h2>
 <table>
 <thead>
 <tr>
@@ -859,7 +877,7 @@ sapply(a,function(x) matrix(x,2,2))
 </tr>
 </tbody>
 </table>
-<pre><code class="language-r">m&lt;-matrix(1:4,4,3);m
+<pre><code class="language-r?lang=r?preclass=.code-source">m&lt;-matrix(1:4,4,3);m
 #&gt;      [,1] [,2] [,3]
 #&gt; [1,]    1    1    1
 #&gt; [2,]    2    2    2
@@ -868,7 +886,7 @@ sapply(a,function(x) matrix(x,2,2))
 sapply(1:3, function(x) mean(m[,x]))
 #&gt; [1] 2.5 2.5 2.5
 </code></pre>
-<pre><code class="language-r">m&lt;-matrix(1:4,4,3);
+<pre><code class="language-r?lang=r?preclass=.code-source">m&lt;-matrix(1:4,4,3);
 lapply(1:3, function(x) mean(m[,x]))
 #&gt; [[1]]
 #&gt; [1] 2.5
@@ -879,34 +897,65 @@ lapply(1:3, function(x) mean(m[,x]))
 #&gt; [[3]]
 #&gt; [1] 2.5
 </code></pre>
-<h3 id="vapply函數">vapply函數</h3>
+<h2 id="vapply函數">vapply函數</h2>
 <p>vapply類似於sapply，提供了FUN.VALUE參數，用來控制返回值的行名。</p>
 <p>note: <code>sapply()</code> 配上<code>rownames&lt;-</code> 可以達到一樣的效果。</p>
 <p>函數定義：</p>
 <pre><code>vapply(X, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)
 </code></pre>
-<p>參數列表：</p>
+<p>參數列表(前3個需要)：</p>
 <ul>
-<li>X:數組、矩陣、數據框</li>
-<li>FUN: 自定義的調用函數</li>
-<li>FUN.VALUE: 可以記為對每一紀錄給名稱(e.g. row.names)</li>
+<li>X:array、matrix、data.frame</li>
+<li>FUN: 使用者指定的函數,可以是自定義的函數</li>
+<li>FUN.VALUE:
+<ul>
+<li>例如,logistic(1),也就是對傳進來的每個參數,都要產生邏輯值向量,且長度為1。</li>
+<li>可以記為對每一紀錄給名稱(e.g. row.names)</li>
+</ul>
+</li>
 <li>…: 更多參數，可選</li>
 <li>USE.NAMES: 如果X為字符串，TRUE設置字符串為數據名，FALSE不設置</li>
 </ul>
-<pre><code class="language-r">x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
-x&lt;-data.frame(x) # 不能是矩陣
+<pre><code class="language-r?lang=r?preclass=.code-source">x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
+x&lt;-data.frame(x) # ✔因為在f1()中要對每個欄位求最小最大,不能是矩陣(會對整個矩陣找最小最大) 
 f1&lt;- function(col) {
    c(min(col),max(col)) 
   
 }
-vapply(x,f1,FUN.VALUE = c(&quot;min&quot;=0,&quot;max&quot;=0)) # FUN.VALUE 是一個named vector
+r1&lt;-vapply(x,f1, numeric(2)) # 
+# ❌vapply(x,f1, numeric(1)) # ❓為甚麼錯誤 
+# <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >#👏因為f1的返回值為向量,且長度為2 </span></span>
+r2&lt;-vapply(x,f1,c(&quot;min&quot;=0,&quot;max&quot;=0)) # FUN.VALUE 是一個named vector
+# ❌vapply(x,f1,FUN.VALUE = c(&quot;min&quot;,&quot;max&quot;)) # ❓為甚麼錯誤 
+# <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏因為這裡說返回值是長度為2的字串向量 </span></span>
+r1
+#&gt;      x1 x2
+#&gt; [1,]  3  1
+#&gt; [2,]  3  6
+r2
 #&gt;     x1 x2
 #&gt; min  3  1
 #&gt; max  3  6
-# vapply(x,f1,FUN.VALUE = c(&quot;min&quot;,&quot;max&quot;)) # 錯誤
-
 </code></pre>
-<h3 id="mapply函數">mapply函數</h3>
+<h3 id="vapply練習">vapply練習❓</h3>
+<p>想要列出每個欄位的類別,以內建資料集mtcars 作為練習。</p>
+<div class="collapse" id="unnamed-chunk-15"><pre><code class="language-r?lang=r?preclass=.code-source">fieldType&lt;-vapply(mtcars,class,character(1))
+print(fieldType)
+</code></pre>
+</div>
+
+<div class="position-relative warning p-0">
+<pre><code class="language-r?lang=r?preclass=.code-out">      mpg       cyl      disp        hp      drat        wt      qsec        vs 
+&quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; 
+       am      gear      carb 
+&quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; 
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#unnamed-chunk-15">提示</button>
+</div>    
+
+
+<h2 id="mapply函數">mapply函數</h2>
 <p>函數定義：</p>
 <pre><code>mapply(FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE,USE.NAMES = TRUE)
 </code></pre>
@@ -925,7 +974,7 @@ f(a1), f(a2)</li>
 f(a1, a2)</li>
 </ul>
 <p>比如，比較3個向量大小，按索引順序取較大的值。</p>
-<pre><code class="language-r">
+<pre><code class="language-r?lang=r?preclass=.code-source">
 set.seed(1)
 
 # 定義3個向量
@@ -938,7 +987,7 @@ mapply(max,x,y,z)
 #&gt;  [1]  5  4  3  4  5  6  7  8  9 10
 </code></pre>
 <p>再看一個例子，生成4個符合正態分佈的數據集，分別對應的均值和方差為c(1,10,100,1000)。</p>
-<pre><code class="language-r">
+<pre><code class="language-r?lang=r?preclass=.code-source">
 set.seed(1)
 
 # 長度為4
@@ -955,7 +1004,7 @@ mapply(rnorm,n,m,v)
 #&gt; [3,] 0.1643714 14.874291 251.17812  2124.9309
 #&gt; [4,] 2.5952808 17.383247 138.98432   955.0664
 </code></pre>
-<h3 id="tapply函數">tapply函數</h3>
+<h2 id="tapply函數">tapply函數</h2>
 <p>tapply用於分組的循環計算，通過INDEX參數可以把數據集X進行分組，相當於group by的操作。</p>
 <p>函數定義：</p>
 <pre><code>tapply(X, INDEX, FUN = NULL, ..., simplify = TRUE)
@@ -969,14 +1018,14 @@ mapply(rnorm,n,m,v)
 <li>simplify : 是否數組化，當值array時，輸出結果按數組進行分組</li>
 </ul>
 <p>比如，計算不同品種的鳶尾花的花瓣(iris)長度的均值。</p>
-<pre><code class="language-r">
+<pre><code class="language-r?lang=r?preclass=.code-source">
 # 通過iris$Species品種進行分組
 tapply(iris$Petal.Length,iris$Species,mean)
 #&gt;     setosa versicolor  virginica 
 #&gt;      1.462      4.260      5.552
 </code></pre>
 <p>分組求和的範例。</p>
-<pre><code class="language-r">
+<pre><code class="language-r?lang=r?preclass=.code-source">
 set.seed(1)
 x&lt;-1:10
 
@@ -989,16 +1038,16 @@ tapply(x,t,sum)
 #&gt;  0  1  2 
 #&gt;  8 36 11
 </code></pre>
-<h3 id="rapply函數">rapply函數</h3>
-<h3 id="eapply函數">eapply函數</h3>
+<h2 id="rapply函數">rapply函數</h2>
+<h2 id="eapply函數">eapply函數</h2>
 <p>函數定義：</p>
 <pre><code>eapply(env, FUN, ..., all.names = FALSE, USE.NAMES = TRUE)
 </code></pre>
 <p>練習：<br>
 1 把iris 每個欄位的加總列出
 iris 有一個欄位是factor</p>
-<h3 id="範例">範例</h3>
-<h4 id="將每個rmd檔案中需要的函數庫列表">將每個rmd檔案中需要的函數庫列表</h4>
+<h2 id="範例">範例</h2>
+<h3 id="將每個rmd檔案中需要的函數庫列表">將每個rmd檔案中需要的函數庫列表</h3>
 <pre><code class="language-r">#setwd(~/directory1/)
 libs = lapply(list.files(pattern = &quot;\\.Rmd$&quot;),
               function(x){
@@ -1039,8 +1088,8 @@ gsub :　只拿取library(&quot;函數庫名稱&quot;)中的&quot;函數庫名�
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632374882" rel="stylesheet">
-<script src="../js/quicknote.js?1632374882"></script>
+<link href="../css/quicknote.css?1632928432" rel="stylesheet">
+<script src="../js/quicknote.js?1632928432"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1058,7 +1107,7 @@ gsub :　只拿取library(&quot;函數庫名稱&quot;)中的&quot;函數庫名�
           
 
   
-<script src="../js/packhtml.js?1632374882"></script>    
+<script src="../js/packhtml.js?1632928432"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1068,23 +1117,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632374882"></script>
-  <script src="../js/featherlight.gallery.min.js?1632374882"></script>
-  <link href="../css/featherlight.min.css?1632374882" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632374882" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632928432"></script>
+  <script src="../js/featherlight.gallery.min.js?1632928432"></script>
+  <link href="../css/featherlight.min.css?1632928432" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632928432" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632374882"></script>
+  <script src="../js/highlight.pack.js?1632928432"></script>
   
-  <script src="../js/hugohelper.js?1632374882"></script>
+  <script src="../js/hugohelper.js?1632928432"></script>
 
-  <link href="../css/rmd.css?1632374882" rel="stylesheet">
-  <link href="../css/mystyle.css?1632374882" rel="stylesheet">    
-  <script src='../js/variant.js?1632374882'></script>
+  <link href="../css/rmd.css?1632928432" rel="stylesheet">
+  <link href="../css/mystyle.css?1632928432" rel="stylesheet">    
+  <script src='../js/variant.js?1632928432'></script>
 
 <script>
-let idxfile = "\/index.json"  
+  
+    let idxfile = "\/blogR\/index.json"  
+  
 </script>
-<script src='../js/localsearch.js?1632374882'></script>
+<script src='../js/localsearch.js?1632928432'></script>
     
 
 
