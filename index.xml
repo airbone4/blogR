@@ -492,7 +492,7 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
  在R語言中,型態不須經過宣告(declared)。 一個變數的型態經由assignment的過程決定,即&amp;lt;-右邊的R-Objects。也就是在指派變數值的時候,同時決定了型態。
 基本的 R-object有 −
  Vectors Lists Matrices Arrays Factors Data Frames  最簡單的是vector物件,atomic vector 有6種data types(有時也叫做 6 個classes)
- Data Type Example     Logical TRUE, FALSE   Numeric 1.3, 5, 99   Integer 3L, 24L, 0L   Complex 5 + 4i   Character &#39;b&#39; , &amp;quot;good&amp;quot;, &amp;quot;TRUE&amp;quot;, &#39;23.4&#39;   Raw &amp;quot;Hello&amp;quot; is stored as 48 65 6c 6c 6f    💡: H-&amp;gt;48怎麼來的?</description>
+ Data Type Example     Logical TRUE, FALSE   Numeric 1.3, 5, 99   Integer 3L, 24L, 0L   Complex 5 + 4i   Character &#39;b&#39; , &amp;quot;good&amp;quot;, &amp;quot;TRUE&amp;quot;, &#39;23.4&#39;   Raw &amp;quot;Hello&amp;quot; is stored as 48 65 6c 6c 6f    💡: 字元H對應的48怎麼來的?</description>
     </item>
     
     <item>

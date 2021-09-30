@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632928432"></script>
+    <script src="../js/jquery-3.3.1.min.js?1632978697"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632928432" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632928432" rel="stylesheet">
-    <link href="../css/syntax.css?1632928432" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1632978697" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1632978697" rel="stylesheet">
+    <link href="../css/syntax.css?1632978697" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632928432" rel="stylesheet">
+    <link href="../css/theme-mine.css?1632978697" rel="stylesheet">
     
-    <link href="../css/theme.css?1632928432" rel="stylesheet">
+    <link href="../css/theme.css?1632978697" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
@@ -503,7 +503,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 09:38]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li><li><a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html"> <i class="far fa-clock" ></i>4.1.2_type練習[2021-09-25 PM 06:06]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-30 PM 01:10]</a></li><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 11:26]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -531,11 +531,11 @@
 </li>
 </ul>
 <p>看看系統本身的編碼(Current Locale)</p>
-<pre><code class="language-r?preclass=.ms-5.w-75">l10n_info()
+<pre><code class="language-r?preclass=.ms-5">l10n_info()
 #&gt; $MBCS <span data-nopre data-atomic id='提示1'>⛳註解 </span>
 #&gt; [1] TRUE
 #&gt; 
-#&gt; $`UTF-8` <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏在linux系統中,這兩個(UTF-8,Latin-1)有一個是真 </span></span>
+#&gt; $`UTF-8` <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏在linux系統中,這兩個(UTF-8,Latin-1)有一個是真，意思就是說，不是這個，就是那個，但是在windows中，都是Ｆ🤷‍♀️ </span></span>
 #&gt; [1] FALSE
 #&gt; 
 #&gt; $`Latin-1`
@@ -568,7 +568,7 @@ sessionInfo() # 裡的 local<span data-nopre class="codenote nopre">🏷<span da
 #&gt; [6] knitr_1.33     stringr_1.4.0  xfun_0.25      evaluate_0.14
 Sys.getlocale(&quot;LC_ALL&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔由開頭Sys，可以知道這是作業系統變數存取 </span></span> <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" > ✔也可以只打Sys.getlocale()</span></span>
 #&gt; [1] &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
-getOption(&quot;encoding&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔其實是從前面的options()中的鍵值encoding拿資料，所以options()$encoding也可以 </span></span> <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔這個選項是用來編碼串流(例如檔案,URL等等)而不是字串向量,內定是 &#34;native.enc&#34; 。白話文的意思就是通訊協定內定是ASCII或是UTF-8,考慮網路協定都是ASCII,因此,不用費腦筋在這裡了,除非要重寫系統 </span></span>
+getOption(&quot;encoding&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔其實是從前面的options()中的鍵值encoding拿資料，所以options()$encoding也可以 </span></span> <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔這個選項是用來編碼串流(例如檔案,URL等等)而不是解讀程式碼中的字串向量。內定是 &#34;native.enc&#34; 。白話文的意思就是通訊協定內定是ASCII（因此需要將各種不是ASCII的字元編碼，可以利用UTF-8）,考慮網路協定都是ASCII,因此,不用費腦筋在這裡了,除非要重寫系統 </span></span>
 
 #&gt; [1] &quot;native.enc&quot;
 </code></pre>
@@ -579,7 +579,7 @@ Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;en_US.UTF-8&quot;)
 Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;UTF-8&quot;)
 x=&quot;hello&quot;
 # x is a vector
-Encoding(x) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔不是用來知道系統的編碼,而是變數中的資料編碼 </span></span>
+Encoding(x) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >✔不是用來知道系統的編碼,而是Ｒ程式碼變數（例如這裡的x)中的資料編碼 </span></span>
 </code></pre>
 <div class="notices">
     <div class= info>
@@ -590,7 +590,7 @@ Encoding(x) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class
 <pre><code class="language-r">x&lt;- '非白馬' 
 Encoding(x) ## [1] &quot;unknown&quot; &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;a data-nopre  href=&quot;#%e6%8f%90%e7%a4%ba1&quot;&gt;註解&lt;/a&gt;&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;❓為甚麼是unknown❓❓按照說明書,非ASCII內定都是給目前指定的locale語系，就是l10n_info()為TRUE的那個 &lt;/span&gt;&lt;/span&gt;
 # 如果是big5
-x2&lt;- iconv(x, 'big5', 'UTF-8') #轉UTF-8
+x2&lt;- iconv(x, 'big5', 'UTF-8') #轉UTF-8，轉完以後可以用Encoding(x)再次驗證
 # 如果是GB2312
 x2&lt;- iconv(x, 'GB2312', 'UTF-8') #轉UTF-8
 Encoding(x2) ## [1] &quot;UTF-8&quot; 
@@ -1036,8 +1036,8 @@ details(y)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632928432" rel="stylesheet">
-<script src="../js/quicknote.js?1632928432"></script>
+<link href="../css/quicknote.css?1632978697" rel="stylesheet">
+<script src="../js/quicknote.js?1632978697"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1055,7 +1055,7 @@ details(y)
           
 
   
-<script src="../js/packhtml.js?1632928432"></script>    
+<script src="../js/packhtml.js?1632978697"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1065,25 +1065,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632928432"></script>
-  <script src="../js/featherlight.gallery.min.js?1632928432"></script>
-  <link href="../css/featherlight.min.css?1632928432" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632928432" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1632978697"></script>
+  <script src="../js/featherlight.gallery.min.js?1632978697"></script>
+  <link href="../css/featherlight.min.css?1632978697" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1632978697" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632928432"></script>
+  <script src="../js/highlight.pack.js?1632978697"></script>
   
-  <script src="../js/hugohelper.js?1632928432"></script>
+  <script src="../js/hugohelper.js?1632978697"></script>
 
-  <link href="../css/rmd.css?1632928432" rel="stylesheet">
-  <link href="../css/mystyle.css?1632928432" rel="stylesheet">    
-  <script src='../js/variant.js?1632928432'></script>
+  <link href="../css/rmd.css?1632978697" rel="stylesheet">
+  <link href="../css/mystyle.css?1632978697" rel="stylesheet">    
+  <script src='../js/variant.js?1632978697'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1632928432'></script>
+<script src='../js/localsearch.js?1632978697'></script>
     
 
 
