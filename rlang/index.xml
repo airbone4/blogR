@@ -149,12 +149,9 @@ b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/1_2_filesystem.html</guid>
-      <description>分解、合成檔案路徑 在R語言中,路徑名稱不是 character string 而是 system-specific character string。例如,R函數file.path()的執行結果就是system-specific file names.
-workingdir &amp;lt;- &amp;quot;projects&amp;quot;projectdir &amp;lt;- &amp;quot;warandpeace&amp;quot;datadir &amp;lt;- &amp;quot;data&amp;quot;file.path(workingdir, projectdir, datadir) 結果
-[1] &amp;quot;projects/warandpeace/data&amp;quot;上面是windows 10系統上的結果,比較 Linux-based OS: [1] &amp;quot;projects/warandpeace/data&amp;quot;注意斜線都一樣。 合成路徑 利用函數 file.path()合成檔案路徑，其分隔是斜線,而不是反斜線 (例如for example C:/Program Files/R/R-3.5.1)?
-file.path(&amp;quot;c:/temp&amp;quot;,&amp;quot;test.txt&amp;quot;) ## [1] &amp;quot;c:/temp/test.txt&amp;quot; 路徑分解  dirname() :分解路徑用，例如＂c:/temp/text.txt&amp;quot; 得到&amp;quot;c:/temp&amp;quot;，但是&amp;quot;c:/temp/&amp;quot;,&amp;quot;c:/temp&amp;quot;, &amp;quot;c:/temp.txt&amp;quot;都得到&amp;quot;c:/&amp;quot;。😒🏷有時候有後綴&amp;#34;/&amp;#34;,有時候沒有  basename()  檔案系統相關操作  dir():包括資料夾、檔案名稱 list.files() : 僅檔案 list.dirs():僅資料夾  判別是否目標檔案或資料夾已經存在(我們不希望刪除或更動已經存在的檔案):
-  file.exists(&amp;quot;xx.txt&amp;quot;): 是否存在xx.txt
-  dir.</description>
+      <description>分解、合成檔案路徑 合成路徑 workingdir &amp;lt;- &amp;quot;work&amp;quot;projectdir &amp;lt;- &amp;quot;demo&amp;quot;datadir &amp;lt;- &amp;quot;data&amp;quot;y&amp;lt;-file.path(workingdir, projectdir, datadir)y#&amp;gt; [1] &amp;quot;work/demo/data&amp;quot;typeof(y)#&amp;gt; [1] &amp;quot;character&amp;quot; 上面是windows 10系統上的結果,在 Linux-based 的作業系統執行結果一樣,注意斜線都一樣。
+利用函數 file.path()合成檔案路徑，其分隔是斜線,而不是反斜線 (例如for example C:/Program Files/R/R-3.5.1)?
+路徑分解  dirname() :分解路徑用，例如＂c:/temp/text.txt&amp;quot; 得到&amp;quot;c:/temp&amp;quot;，但是&amp;quot;c:/temp/&amp;quot;,&amp;quot;c:/temp&amp;quot;, &amp;quot;c:/temp.txt&amp;quot;都得到&amp;quot;c:/&amp;quot;。😒🏷有時候有後綴&amp;#34;/&amp;#34;,有時候沒有  basename()  dirname(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;c:/temp&amp;quot;basename(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;demo.txt&amp;quot;dirname(&amp;quot;c:/temp/&amp;quot;) #🏷👏沒有正確拿出DIR #&amp;gt; [1] &amp;quot;c:/&amp;quot;dirname(&amp;quot;c:/temp&amp;quot;) #🏷👏沒有正確拿出DIR #&amp;gt; [1] &amp;quot;c:/&amp;quot; 檔案系統相關操作  dir():包括資料夾、檔案名稱 list.files() : 僅檔案 list.dirs():僅資料夾  判別是否目標檔案或資料夾已經存在(我們不希望刪除或更動已經存在的檔案):</description>
     </item>
     
     <item>
@@ -173,32 +170,6 @@ attr(baskets.team,&#39;season&#39;) &amp;lt;- NULL attr() &amp;amp; attributes(
 使用方法
 範例 載入資料集然後利用函數看看data.frame有甚麼attribute。
 data(cars) # Load head(cars) attributes(cars) attr(x = cars, which = &amp;quot;names&amp;quot;)  #&amp;gt; [1] &amp;quot;speed&amp;quot; &amp;quot;dist&amp;quot; 也可以寫成</description>
-    </item>
-    
-    <item>
-      <title>6. Programming 1</title>
-      <link>/rlang/6_programming_1.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/6_programming_1.html</guid>
-      <description>programming in R 條件指令 if 一般來講，通用寫法如下：
-if(判斷式){成功}else{失敗} 例如
-多行寫法 if(4 &amp;gt; 3){TRUE}else{FALSE} 另外，如果區塊內只有一行
-if(4 &amp;gt; 3) TRUE else FALSE
-ifelse的寫法 ifelse(&#39;判斷式&#39;,&#39;成功&#39;,&#39;失敗&#39;)
-例如， ifelse(4 &amp;gt; 3, T, F)
-switch的寫法 switch(&#39;判斷式&#39;, &#39;動作1&#39;, &#39;動作2&#39;, ... ) ** 指定第幾行 **
-switch(2, 1, 2, #因為判斷式為2，因此，執行動作23)   也可以利用字串  switch(&amp;quot;a&amp;quot;, a = 1, b = 2, c = &amp;quot;why&amp;quot;)#&amp;gt; [1] 1 這個switch 並不是一個語法，而是一個函數，原理大概是 第1個參數以後的東西，會被變成是一個named list。 例如上面的例子中</description>
-    </item>
-    
-    <item>
-      <title>7 Function basic</title>
-      <link>/rlang/7_function_1.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/7_function_1.html</guid>
-      <description>普通函數範例 fivenum function (x, na.rm = TRUE) {xna &amp;lt;- is.na(x)if (any(xna)) {if (na.rm) x &amp;lt;- x[!xna]else return(rep.int(NA, 5))}x &amp;lt;- sort(x)n &amp;lt;- length(x)if (n == 0) rep.int(NA, 5)else {n4 &amp;lt;- floor((n + 3)/2)/2d &amp;lt;- c(1, n4, (n + 1)/2, n + 1 - n4, n)0.5 * (x[floor(d)] + x[ceiling(d)])}} 自己寫一個類似which()的函數。3個逗點 (dots) 3個逗點可以利用?dots查詢。
-範例</description>
     </item>
     
     <item>
@@ -395,6 +366,33 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/4_4_1_json.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>6.1 Programming basic</title>
+      <link>/rlang/6_1_programming.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/6_1_programming.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>6.2 Programming</title>
+      <link>/rlang/6_2_programming.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/6_2_programming.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7 Function basic</title>
+      <link>/rlang/7_function_1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_function_1.html</guid>
       <description></description>
     </item>
     

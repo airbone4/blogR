@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632978697"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1633579087" rel="stylesheet">
+    <link href="../css/syntax.css?1633579087" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1633579087"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632978697" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632978697" rel="stylesheet">
-    <link href="../css/syntax.css?1632978697" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632978697" rel="stylesheet">
+    <link href="../css/theme-mine.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme.css?1632978697" rel="stylesheet">
+    <link href="../css/theme.css?1633579087" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
 
     
   </head><body><div id="top-pane" class="navbar  fixed-top ">
@@ -235,12 +235,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
@@ -264,7 +264,9 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
     
   
         <li class="nav-item">
@@ -547,7 +549,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-30 PM 01:10]</a></li><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 11:26]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_2_programming.html"> <i class="far fa-clock" ></i>6.2 Programming[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/7_function_1.html"> <i class="far fa-clock" ></i>7 Function basic[2021-10-07 AM 11:44]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -620,32 +622,28 @@ e1 &lt;- env( <code>a &lt;- FALSE</code> ) # error
 </div>
 
 <p>environment物件可以想成是一個袋子,或是names集合。因為沒有次序關係</p>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/bindings.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/bindings.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
 <p>就像在 <a href="#env-modify">names and values</a>, 討論的,這個物件是參考為基礎.(in C concept) 不會有copy on modifying。而且,環境物件可以自己指向自己(recursion)</p>
 <pre><code class="language-r">e1$d &lt;- e1
 </code></pre>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/loop.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/loop.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -709,16 +707,14 @@ You can set the parent environment by supplying an unnamed argument to <code>env
 <pre><code class="language-r">e2a &lt;- env(d = 4, e = 5)
 e2b &lt;- env(e2a, a = 1, b = 2, c = 3)
 </code></pre>
-<p>
-  <figure  class="figure mx-auto">
+<p><figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-
-    <img src="diagrams/environments/parents.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/parents.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -739,16 +735,14 @@ env_parent(e2a)
 <pre><code class="language-r">e2c &lt;- env(empty_env(), d = 4, e = 5)
 e2d &lt;- env(e2c, a = 1, b = 2, c = 3)
 </code></pre>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/parents-empty.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/parents-empty.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -904,30 +898,26 @@ z2 &lt;- 3
 <ol>
 <li>List three ways in which an environment differs from a list.</li>
 <li>Create an environment as illustrated by this picture.
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/recursive-1.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/recursive-1.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 </li>
 <li>Create a pair of environments as illustrated by this picture.
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/recursive-2.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/recursive-2.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 </li>
@@ -974,16 +964,14 @@ where(&quot;mean&quot;)
 <pre><code class="language-r">e4a &lt;- env(empty_env(), a = 1, b = 2)
 e4b &lt;- env(e4a, x = 10, a = 11)
 </code></pre>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/where-ex.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/where-ex.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1115,30 +1103,26 @@ the parents or only looks in one environment.</p>
 </li>
 </ul>
 <p>利用圖型表示:</p>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/search-path.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/search-path.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
 <p>當利用 <code>library()</code> attach其他套件的時候, 總體環境的parent馬上改變:</p>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/search-path-2.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/search-path-2.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1157,16 +1141,14 @@ fn_env(f)
 </div>
 
 <p>在圖形中,函數被畫成類似子彈,而彈頭的部分繫結環境。</p>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/bindings.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/bindings.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1174,16 +1156,14 @@ fn_env(f)
 <pre><code class="language-r">e &lt;- env()
 e$g &lt;- function() 1
 </code></pre>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/binding-2.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/binding-2.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1204,16 +1184,14 @@ e$g &lt;- function() 1
 <li>namespace environment:是套件的內部介面。package environment 控制我們如何找到函數,而namespace environment控制函數如何找到變數。</li>
 </ul>
 <p>在package environment的每個繫結也可以在namespace environment中找到。這樣可以確保每個函數可以使用套件中的其他函數。但是有些繫結只能在namespace 中找到(例如內部或非輸出物件),這種內部物件通常是用來隱藏一些繁瑣的且不需要給使用者看到的細節。;</p>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/namespace-bind.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/namespace-bind.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1231,30 +1209,26 @@ e$g &lt;- function() 1
 <ul>
 <li><em>base namespace</em> 的parent是總體環境(#global environment).參考下圖,這種設計導致在import environment中找不到繫結時,會開始再總體環境中尋找,而之前提過總體環境通常是互動環境下名稱搜尋的開始路徑,這也導致搜尋的方式受到套件載入順序的影響。因此,R提供了了<code>R CMD check</code>來警告此種情況的發生。(雖然有麻煩,但是由於S3 方法的dispatch 關係,此種方式仍然留著)</li>
 </ul>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/namespace-env.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/namespace-env.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
 <p>綜合上述,可以得到下圖::
-  
-<figure  class="figure">
+<figure  class="figure text-center d-block w-50 m-auto">
 
 
 
 
 
 
-
-    <img src="diagrams/environments/namespace.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/namespace.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 </p>
@@ -1293,16 +1267,14 @@ g(11)
 }
 y &lt;- h(1) # 3.
 </code></pre>
-  
-<figure  class="figure">
+<figure  class="figure text-center d-block w-50 m-auto">
 
 
 
 
 
 
-
-    <img src="diagrams/environments/execution.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/execution.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1333,16 +1305,14 @@ plus_one
 #&gt; function(y) x + y
 #&gt; &lt;environment: 0x000000001d7333a0&gt;
 </code></pre>
-  
-<figure  class="figure">
+<figure  class="figure text-center d-block w-50 m-auto">
 
 
 
 
 
 
-
-    <img src="diagrams/environments/closure.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/closure.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1350,16 +1320,14 @@ plus_one
 <pre><code class="language-r">plus_one(2)
 #&gt; [1] 3
 </code></pre>
-  
-<figure  class="figure">
+<figure  class="figure text-center d-block w-50 m-auto">
 
 
 
 
 
 
-
-    <img src="diagrams/environments/closure-call.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/closure-call.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1468,16 +1436,14 @@ generates frames, where the environment can be anything.</p>
 <p>A parent, the previous call in the call stack (shown by a grey arrow).</p>
 </li>
 </ul>
-
-  <figure  class="figure mx-auto">
-
+<figure  class="figure text-center d-block w-50 m-auto mx-auto">
 
 
 
 
 
 
-    <img src="diagrams/environments/calling.png" class="figure-img" width="300px"/> 
+    <img src="diagrams/environments/calling.png" class="figure-img w-100 " width="300px"/> 
 
 </figure>
 
@@ -1629,8 +1595,8 @@ This is for consistency: <code>_set()</code> functions return a modified copy;
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632978697" rel="stylesheet">
-<script src="../js/quicknote.js?1632978697"></script>
+<link href="../css/quicknote.css?1633579087" rel="stylesheet">
+<script src="../js/quicknote.js?1633579087"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1648,7 +1614,7 @@ This is for consistency: <code>_set()</code> functions return a modified copy;
           
 
   
-<script src="../js/packhtml.js?1632978697"></script>    
+<script src="../js/packhtml.js?1633579087"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1658,25 +1624,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632978697"></script>
-  <script src="../js/featherlight.gallery.min.js?1632978697"></script>
-  <link href="../css/featherlight.min.css?1632978697" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632978697" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1633579087"></script>
+  <script src="../js/featherlight.gallery.min.js?1633579087"></script>
+  <link href="../css/featherlight.min.css?1633579087" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1633579087" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632978697"></script>
+  <script src="../js/highlight.pack.js?1633579087"></script>
   
-  <script src="../js/hugohelper.js?1632978697"></script>
+  <script src="../js/hugohelper.js?1633579087"></script>
 
-  <link href="../css/rmd.css?1632978697" rel="stylesheet">
-  <link href="../css/mystyle.css?1632978697" rel="stylesheet">    
-  <script src='../js/variant.js?1632978697'></script>
+  <link href="../css/rmd.css?1633579087" rel="stylesheet">
+  <link href="../css/mystyle.css?1633579087" rel="stylesheet">    
+  <script src='../js/variant.js?1633579087'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1632978697'></script>
+<script src='../js/localsearch.js?1633579087'></script>
     
 
 

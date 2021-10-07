@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632978697"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1633579087" rel="stylesheet">
+    <link href="../css/syntax.css?1633579087" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1633579087"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632978697" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632978697" rel="stylesheet">
-    <link href="../css/syntax.css?1632978697" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632978697" rel="stylesheet">
+    <link href="../css/theme-mine.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme.css?1632978697" rel="stylesheet">
+    <link href="../css/theme.css?1633579087" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
 
     
   </head><body><div id="top-pane" class="navbar  fixed-top ">
@@ -56,6 +56,7 @@
         <li><a href="#列出目前工作目錄上的檔案">列出目前工作目錄上的檔案</a></li>
       </ul>
     </li>
+    <li><a href="#進階">進階</a></li>
   </ul>
 </nav>
     </div>
@@ -64,7 +65,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 24, 2021'>1.2 檔案系統</span>
+      title='最後修改October 7, 2021'>1.2 檔案系統</span>
         
     
 
@@ -203,12 +204,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
@@ -232,7 +233,9 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
     
   
         <li class="nav-item">
@@ -515,34 +518,38 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-30 PM 01:10]</a></li><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 11:26]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_2_programming.html"> <i class="far fa-clock" ></i>6.2 Programming[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/7_function_1.html"> <i class="far fa-clock" ></i>7 Function basic[2021-10-07 AM 11:44]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
     <h2 id="分解合成檔案路徑">分解、合成檔案路徑</h2>
-<p>在R語言中,路徑名稱不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
-<pre><code class="language-r?preclass=.code-source.ms-5.w-75">workingdir &lt;- &quot;projects&quot;
-projectdir &lt;- &quot;warandpeace&quot;
-datadir    &lt;- &quot;data&quot;
-file.path(workingdir, projectdir, datadir)
-</code></pre>
-<p>結果</p>
-<pre><code class="language-r?preclass=.code-source.ms-5.w-75">[1] &quot;projects/warandpeace/data&quot;
-上面是windows 10系統上的結果,比較 Linux-based OS:  
-[1] &quot;projects/warandpeace/data&quot;
-注意斜線都一樣。
-</code></pre>
 <h3 id="合成路徑">合成路徑</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5.w-75">workingdir &lt;- &quot;work&quot;
+projectdir &lt;- &quot;demo&quot;
+datadir    &lt;- &quot;data&quot;
+y&lt;-file.path(workingdir, projectdir, datadir)
+y
+#&gt; [1] &quot;work/demo/data&quot;
+typeof(y)
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<p>上面是windows 10系統上的結果,在 Linux-based 的作業系統執行結果一樣,注意斜線都一樣。</p>
 <p>利用函數 <code>file.path()</code>合成檔案路徑，其分隔是斜線,而不是反斜線  (例如for example <code>C:/Program Files/R/R-3.5.1</code>)?</p>
-<pre><code class="language-r">file.path(&quot;c:/temp&quot;,&quot;test.txt&quot;)
-</code></pre>
-<pre><code>## [1] &quot;c:/temp/test.txt&quot;
-</code></pre>
 <h3 id="路徑分解">路徑分解</h3>
 <ul>
 <li><code>dirname()</code> :分解路徑用，例如＂c:/temp/text.txt&quot; 得到&quot;c:/temp&quot;，但是&quot;c:/temp/&quot;,&quot;c:/temp&quot;, &quot;c:/temp.txt&quot;都得到&quot;c:/&quot;。😒<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >有時候有後綴&#34;/&#34;,有時候沒有 </span></span></li>
 <li><code>basename()</code></li>
 </ul>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5.w-75">dirname(&quot;c:\\temp\\demo.txt&quot;)
+#&gt; [1] &quot;c:/temp&quot;
+basename(&quot;c:\\temp\\demo.txt&quot;)
+#&gt; [1] &quot;demo.txt&quot;
+
+dirname(&quot;c:/temp/&quot;) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏沒有正確拿出DIR </span></span>
+#&gt; [1] &quot;c:/&quot;
+dirname(&quot;c:/temp&quot;) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏沒有正確拿出DIR </span></span>
+#&gt; [1] &quot;c:/&quot;
+</code></pre>
 <h2 id="檔案系統相關操作">檔案系統相關操作</h2>
 <ul>
 <li><code>dir()</code>:包括資料夾、檔案名稱</li>
@@ -589,6 +596,16 @@ dir(&quot;../..&quot;, pattern = &quot;^[a-lr]&quot;, full.names = TRUE, ignore.
 </code></pre>
 <h3 id="練習">練習</h3>
 <p><div class="position-relative warning p-0">
+按照上面的結果,如果我要判斷我拿到是檔案而不是資料夾,怎麼做?<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-0742">提示</button>
+</div>    
+
+
+<div class="collapse" id="quiz-0742"><pre><code class="language-r">file.exists(f) &amp;&amp; !dir.exists(f)
+</code></pre>
+</div>
+</p>
+<p><div class="position-relative warning p-0">
 問題:
 利用<code>.libPaths()</code> 、 <code>list.files()</code>問題:列出所有套件<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-2268">提示</button>
@@ -605,16 +622,13 @@ dir(&quot;../..&quot;, pattern = &quot;^[a-lr]&quot;, full.names = TRUE, ignore.
 <p>暫時子目錄的路徑<code>tempdir()</code>，暫時檔案<code>tempfile()</code></p>
 <ul>
 <li>函數 tempfile() 不是真正的建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。</li>
-<li><div data-nopre class="expand">
-    <div data-nopre class="expand-label" onclick="vexpand(this)">
-        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
-        <span data-nopre >展開</span>
-    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r?preclass=.code-source.ms-5.w-75">mydirname &lt;- tempfile(pattern = &quot;mydir&quot;)
+<li>
+<pre><code class="language-r">mydirname &lt;- tempfile(pattern = &quot;mydir&quot;)
 mydirname
 
 #&gt; C:\\Users\\使用者名稱\\AppData\\Local\\Temp\\RtmpSg2qRA\\mydir326845a02140
 </code></pre>
-</div></div></li>
+</li>
 </ul>
 </li>
 <li>
@@ -628,7 +642,7 @@ mydirname
     <div data-nopre class="expand-label" onclick="vexpand(this)">
         <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
         <span data-nopre >範例</span>
-    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r?preclass=.code-source.ms-5.w-75">s&lt;-&quot;C:\\Users\\使用者名稱\\AppData\\Local\\Temp&quot;
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">s&lt;-&quot;C:\\Users\\使用者名稱\\AppData\\Local\\Temp&quot;
 dir(s)
 </code></pre>
 </div></div>
@@ -704,6 +718,69 @@ checkdir(folderlist)
     </div>
 </div>
 
+<h2 id="進階">進階</h2>
+<p>use RStudio to open the file if possible</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">
+open_file = function(x, open = interactive(), line = -1L) {
+  if (open) tryCatch(rstudioapi::navigateToFile(x, line), error = function(e) file.edit(x))
+}
+
+</code></pre>
+<pre><code class="language-r?preclass=.ms-5.w-75">pkg_file = function(..., mustWork = TRUE) {
+  system.file(..., package = 'blogdown', mustWork = mustWork)
+}
+
+
+# tempfile under the current working directory
+wd_tempfile = function(..., pattern = '') {
+  basename(tempfile(pattern, '.', ...))
+}
+
+# only copy files/dirs if they exist
+file.copy2 = function(from, to, ...) {
+  i = file.exists(from); from = from[i]
+  if (length(from) == 0) return()
+  if (length(to) &gt; 1) {
+    to = to[i]
+    if (length(unique(to)) == 1) to = unique(to)
+  }
+  if (length(to) == 1) {
+    file.copy(from, to, ...)
+  } else mapply(file.copy, from, to, ...)
+}
+
+dir_rename = function(from, to, clean = FALSE) {
+  if (!dir_exists(from)) return()
+  if (clean) unlink(to, recursive = TRUE)
+  dir_create(dirname(to))
+  # I don't know why file.rename() might fail, but if it fails, fall back to
+  # file.copy(): https://github.com/rstudio/blogdown/issues/232
+  suppressWarnings(file.rename(from, to)) || {
+    file.copy(from, dirname(to), recursive = TRUE) &amp;&amp; unlink(from, recursive = TRUE)
+  }
+}
+
+dirs_rename = function(from, to, ...) {
+  n = length(from); if (n == 0) return()
+  if (length(to) != n) stop(
+    'The number of source dirs must be equal to the number of target dirs'
+  )
+  for (i in seq_len(n)) dir_rename(from[i], to[i], ...)
+}
+
+# relative path with '/' as the path separator
+rel_path = function(x) {
+  xfun::relative_path(xfun::normalize_path(x))
+}
+
+# change the default of full.names and recursive in list.files() because these
+# values are used much more frequently than the original defaults
+list_files = function(..., full.names = TRUE, recursive = TRUE) {
+  list.files(..., full.names = full.names, recursive = recursive, no.. = TRUE)
+}
+
+
+</code></pre>
 
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
@@ -732,8 +809,8 @@ checkdir(folderlist)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632978697" rel="stylesheet">
-<script src="../js/quicknote.js?1632978697"></script>
+<link href="../css/quicknote.css?1633579087" rel="stylesheet">
+<script src="../js/quicknote.js?1633579087"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -751,7 +828,7 @@ checkdir(folderlist)
           
 
   
-<script src="../js/packhtml.js?1632978697"></script>    
+<script src="../js/packhtml.js?1633579087"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -761,25 +838,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632978697"></script>
-  <script src="../js/featherlight.gallery.min.js?1632978697"></script>
-  <link href="../css/featherlight.min.css?1632978697" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632978697" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1633579087"></script>
+  <script src="../js/featherlight.gallery.min.js?1633579087"></script>
+  <link href="../css/featherlight.min.css?1633579087" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1633579087" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632978697"></script>
+  <script src="../js/highlight.pack.js?1633579087"></script>
   
-  <script src="../js/hugohelper.js?1632978697"></script>
+  <script src="../js/hugohelper.js?1633579087"></script>
 
-  <link href="../css/rmd.css?1632978697" rel="stylesheet">
-  <link href="../css/mystyle.css?1632978697" rel="stylesheet">    
-  <script src='../js/variant.js?1632978697'></script>
+  <link href="../css/rmd.css?1633579087" rel="stylesheet">
+  <link href="../css/mystyle.css?1633579087" rel="stylesheet">    
+  <script src='../js/variant.js?1633579087'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1632978697'></script>
+<script src='../js/localsearch.js?1633579087'></script>
     
 
 

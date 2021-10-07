@@ -12,17 +12,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/rmd/01_rmd_basic.html</guid>
-      <description>rbook 提要 markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。
+      <description>rmd 提要 Chunk Options opts_chunk 這個函數控制整張RMD的chunk選項， e.g. opts_chunk$set(tidy = FALSE)
+ 選項 描述     include 是否在輸出中顯示結果和源碼   eval 執行R   echo 顯示源碼   results &#39;markup&#39;, &#39;asis&#39;, &#39;hold&#39;, &#39;hide&#39;   tidy 是否重新排列R code   cache 是否緩衝結果   g.width, g.height, out.width, out.height    child 子文件的名稱   engine 引擎名稱(R,python,...)     更多選項可以參考//yihui.org/knitr/options/
+markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。
 在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)參考下節。
 相關指令和流程可以參考這裡
-如果有共用的yaml ,可以參考這裡
- 程式員會比較想知道相關的的流程:
-The script is converted to Rmd through knitr::spin(); then rmarkdown::render() will render the Rmd。 也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。
-  Convert Rmd to R script knitr::purl(&amp;quot;03-purl.Rmd&amp;quot;) # output: 03-purl.R
- 資料探索和RMD 範例:
- mtcars 中的資料筆數有 32。
- 我比較常用的格式 這裡稍微解釋一下RMD文件表頭中的yaml:
----title: &amp;quot;處理2003(92R)變數AB v1&amp;quot;author: &amp;quot;lin&amp;quot;date: &amp;quot;16 九月, 2021, 13:12&amp;quot;header-includes:- \usepackage{xeCJK}- \setCJKmainfont{標楷體}output:html_document: toc: yestoc_float:collapsed: false# smooth_scroll: true # df_print: pagedhighlight: tango css: [&amp;quot;adv-r.</description>
+如果有共用的yaml ,可以參考這裡</description>
     </item>
     
     <item>

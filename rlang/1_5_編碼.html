@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632978697"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1633579087" rel="stylesheet">
+    <link href="../css/syntax.css?1633579087" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1633579087"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632978697" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632978697" rel="stylesheet">
-    <link href="../css/syntax.css?1632978697" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632978697" rel="stylesheet">
+    <link href="../css/theme-mine.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme.css?1632978697" rel="stylesheet">
+    <link href="../css/theme.css?1633579087" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
 
     
   </head><body><div id="top-pane" class="navbar  fixed-top ">
@@ -52,7 +52,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 29, 2021'>1.5 編碼</span>
+      title='最後修改October 1, 2021'>1.5 編碼</span>
         
     
 
@@ -191,12 +191,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
@@ -220,7 +220,9 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
     
   
         <li class="nav-item">
@@ -503,7 +505,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-30 PM 01:10]</a></li><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 11:26]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_2_programming.html"> <i class="far fa-clock" ></i>6.2 Programming[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/7_function_1.html"> <i class="far fa-clock" ></i>7 Function basic[2021-10-07 AM 11:44]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -531,7 +533,7 @@
 </li>
 </ul>
 <p>看看系統本身的編碼(Current Locale)</p>
-<pre><code class="language-r?preclass=.ms-5">l10n_info()
+<pre><code class="language-r?preclass=.ms-5.w-75">l10n_info()
 #&gt; $MBCS <span data-nopre data-atomic id='提示1'>⛳註解 </span>
 #&gt; [1] TRUE
 #&gt; 
@@ -778,194 +780,201 @@ knitr::kable(df)
 </tbody>
 </table>
 <h2 id="輔助">輔助</h2>
-<pre><code class="language-r?lang=r?preclass=.ms-5">iconvlist()
-#&gt;   [1] &quot;437&quot;                     &quot;850&quot;                    
-#&gt;   [3] &quot;852&quot;                     &quot;855&quot;                    
-#&gt;   [5] &quot;857&quot;                     &quot;860&quot;                    
-#&gt;   [7] &quot;861&quot;                     &quot;862&quot;                    
-#&gt;   [9] &quot;863&quot;                     &quot;865&quot;                    
-#&gt;  [11] &quot;866&quot;                     &quot;869&quot;                    
-#&gt;  [13] &quot;ANSI_X3.4-1968&quot;          &quot;ANSI_X3.4-1986&quot;         
-#&gt;  [15] &quot;ASCII&quot;                   &quot;ASMO-708&quot;               
-#&gt;  [17] &quot;BIG-5&quot;                   &quot;BIG-FIVE&quot;               
-#&gt;  [19] &quot;big5&quot;                    &quot;BIG5&quot;                   
-#&gt;  [21] &quot;big5-hkscs&quot;              &quot;BIG5-HKSCS&quot;             
-#&gt;  [23] &quot;big5hkscs&quot;               &quot;BIG5HKSCS&quot;              
-#&gt;  [25] &quot;CP-GR&quot;                   &quot;CP-IS&quot;                  
-#&gt;  [27] &quot;cp1025&quot;                  &quot;CP1125&quot;                 
-#&gt;  [29] &quot;CP1133&quot;                  &quot;CP1200&quot;                 
-#&gt;  [31] &quot;CP12000&quot;                 &quot;CP12001&quot;                
-#&gt;  [33] &quot;CP1201&quot;                  &quot;CP1250&quot;                 
-#&gt;  [35] &quot;CP1251&quot;                  &quot;CP1252&quot;                 
-#&gt;  [37] &quot;CP1253&quot;                  &quot;CP1254&quot;                 
-#&gt;  [39] &quot;CP1255&quot;                  &quot;CP1256&quot;                 
-#&gt;  [41] &quot;CP1257&quot;                  &quot;CP1258&quot;                 
-#&gt;  [43] &quot;CP1361&quot;                  &quot;CP154&quot;                  
-#&gt;  [45] &quot;CP367&quot;                   &quot;CP437&quot;                  
-#&gt;  [47] &quot;CP50221&quot;                 &quot;CP51932&quot;                
-#&gt;  [49] &quot;CP65001&quot;                 &quot;CP737&quot;                  
-#&gt;  [51] &quot;CP775&quot;                   &quot;CP819&quot;                  
-#&gt;  [53] &quot;CP850&quot;                   &quot;CP852&quot;                  
-#&gt;  [55] &quot;CP853&quot;                   &quot;CP855&quot;                  
-#&gt;  [57] &quot;CP857&quot;                   &quot;CP858&quot;                  
-#&gt;  [59] &quot;CP860&quot;                   &quot;CP861&quot;                  
-#&gt;  [61] &quot;CP862&quot;                   &quot;CP863&quot;                  
-#&gt;  [63] &quot;CP864&quot;                   &quot;CP865&quot;                  
-#&gt;  [65] &quot;cp866&quot;                   &quot;CP866&quot;                  
-#&gt;  [67] &quot;CP869&quot;                   &quot;CP874&quot;                  
-#&gt;  [69] &quot;cp875&quot;                   &quot;CP932&quot;                  
-#&gt;  [71] &quot;CP936&quot;                   &quot;CP949&quot;                  
-#&gt;  [73] &quot;CP950&quot;                   &quot;CSASCII&quot;                
-#&gt;  [75] &quot;CSIBM855&quot;                &quot;CSIBM857&quot;               
-#&gt;  [77] &quot;CSIBM860&quot;                &quot;CSIBM861&quot;               
-#&gt;  [79] &quot;CSIBM863&quot;                &quot;CSIBM864&quot;               
-#&gt;  [81] &quot;CSIBM865&quot;                &quot;CSIBM866&quot;               
-#&gt;  [83] &quot;CSIBM869&quot;                &quot;csISO2022JP&quot;            
-#&gt;  [85] &quot;CSISOLATIN1&quot;             &quot;CSPC775BALTIC&quot;          
-#&gt;  [87] &quot;CSPC850MULTILINGUAL&quot;     &quot;CSPC862LATINHEBREW&quot;     
-#&gt;  [89] &quot;CSPC8CODEPAGE437&quot;        &quot;CSPCP852&quot;               
-#&gt;  [91] &quot;CSPTCP154&quot;               &quot;CSWINDOWS31J&quot;           
-#&gt;  [93] &quot;CYRILLIC-ASIAN&quot;          &quot;DOS-720&quot;                
-#&gt;  [95] &quot;DOS-862&quot;                 &quot;EUC-CN&quot;                 
-#&gt;  [97] &quot;euc-jp&quot;                  &quot;euc-kr&quot;                 
-#&gt;  [99] &quot;EUC-KR&quot;                  &quot;EUCCN&quot;                  
-#&gt; [101] &quot;eucjp&quot;                   &quot;euckr&quot;                  
-#&gt; [103] &quot;GB18030&quot;                 &quot;gb2312&quot;                 
-#&gt; [105] &quot;GBK&quot;                     &quot;hz-gb-2312&quot;             
-#&gt; [107] &quot;IBM-CP1133&quot;              &quot;IBM-Thai&quot;               
-#&gt; [109] &quot;IBM00858&quot;                &quot;IBM00924&quot;               
-#&gt; [111] &quot;IBM01047&quot;                &quot;IBM01140&quot;               
-#&gt; [113] &quot;IBM01141&quot;                &quot;IBM01142&quot;               
-#&gt; [115] &quot;IBM01143&quot;                &quot;IBM01144&quot;               
-#&gt; [117] &quot;IBM01145&quot;                &quot;IBM01146&quot;               
-#&gt; [119] &quot;IBM01147&quot;                &quot;IBM01148&quot;               
-#&gt; [121] &quot;IBM01149&quot;                &quot;IBM037&quot;                 
-#&gt; [123] &quot;IBM1026&quot;                 &quot;IBM273&quot;                 
-#&gt; [125] &quot;IBM277&quot;                  &quot;IBM278&quot;                 
-#&gt; [127] &quot;IBM280&quot;                  &quot;IBM284&quot;                 
-#&gt; [129] &quot;IBM285&quot;                  &quot;IBM290&quot;                 
-#&gt; [131] &quot;IBM297&quot;                  &quot;IBM367&quot;                 
-#&gt; [133] &quot;IBM420&quot;                  &quot;IBM423&quot;                 
-#&gt; [135] &quot;IBM424&quot;                  &quot;IBM437&quot;                 
-#&gt; [137] &quot;IBM437&quot;                  &quot;IBM500&quot;                 
-#&gt; [139] &quot;ibm737&quot;                  &quot;ibm775&quot;                 
-#&gt; [141] &quot;IBM775&quot;                  &quot;IBM819&quot;                 
-#&gt; [143] &quot;ibm850&quot;                  &quot;IBM850&quot;                 
-#&gt; [145] &quot;ibm852&quot;                  &quot;IBM852&quot;                 
-#&gt; [147] &quot;IBM855&quot;                  &quot;IBM855&quot;                 
-#&gt; [149] &quot;ibm857&quot;                  &quot;IBM857&quot;                 
-#&gt; [151] &quot;IBM860&quot;                  &quot;IBM860&quot;                 
-#&gt; [153] &quot;ibm861&quot;                  &quot;IBM861&quot;                 
-#&gt; [155] &quot;IBM862&quot;                  &quot;IBM863&quot;                 
-#&gt; [157] &quot;IBM863&quot;                  &quot;IBM864&quot;                 
-#&gt; [159] &quot;IBM864&quot;                  &quot;IBM865&quot;                 
-#&gt; [161] &quot;IBM865&quot;                  &quot;IBM866&quot;                 
-#&gt; [163] &quot;ibm869&quot;                  &quot;IBM869&quot;                 
-#&gt; [165] &quot;IBM870&quot;                  &quot;IBM871&quot;                 
-#&gt; [167] &quot;IBM880&quot;                  &quot;IBM905&quot;                 
-#&gt; [169] &quot;iso-2022-jp&quot;             &quot;iso-2022-jp&quot;            
-#&gt; [171] &quot;ISO-2022-JP&quot;             &quot;ISO-2022-JP-MS&quot;         
-#&gt; [173] &quot;iso-2022-kr&quot;             &quot;ISO-8859-1&quot;             
-#&gt; [175] &quot;iso-8859-13&quot;             &quot;iso-8859-15&quot;            
-#&gt; [177] &quot;iso-8859-2&quot;              &quot;iso-8859-3&quot;             
-#&gt; [179] &quot;iso-8859-4&quot;              &quot;iso-8859-5&quot;             
-#&gt; [181] &quot;iso-8859-6&quot;              &quot;iso-8859-7&quot;             
-#&gt; [183] &quot;iso-8859-8&quot;              &quot;iso-8859-8-i&quot;           
-#&gt; [185] &quot;iso-8859-9&quot;              &quot;ISO-IR-100&quot;             
-#&gt; [187] &quot;ISO-IR-6&quot;                &quot;ISO_646.IRV:1991&quot;       
-#&gt; [189] &quot;iso_8859-1&quot;              &quot;ISO_8859-1&quot;             
-#&gt; [191] &quot;ISO_8859-1:1987&quot;         &quot;iso_8859-13&quot;            
-#&gt; [193] &quot;iso_8859-15&quot;             &quot;iso_8859-2&quot;             
-#&gt; [195] &quot;iso_8859-3&quot;              &quot;iso_8859-4&quot;             
-#&gt; [197] &quot;iso_8859-5&quot;              &quot;iso_8859-6&quot;             
-#&gt; [199] &quot;iso_8859-7&quot;              &quot;iso_8859-8&quot;             
-#&gt; [201] &quot;iso_8859-8-i&quot;            &quot;iso_8859-9&quot;             
-#&gt; [203] &quot;iso_8859_1&quot;              &quot;iso_8859_13&quot;            
-#&gt; [205] &quot;iso_8859_15&quot;             &quot;iso_8859_2&quot;             
-#&gt; [207] &quot;iso_8859_3&quot;              &quot;iso_8859_4&quot;             
-#&gt; [209] &quot;iso_8859_5&quot;              &quot;iso_8859_6&quot;             
-#&gt; [211] &quot;iso_8859_7&quot;              &quot;iso_8859_8&quot;             
-#&gt; [213] &quot;iso_8859_8-i&quot;            &quot;iso_8859_9&quot;             
-#&gt; [215] &quot;ISO2022-JP&quot;              &quot;ISO2022-JP-MS&quot;          
-#&gt; [217] &quot;iso2022-kr&quot;              &quot;ISO646-US&quot;              
-#&gt; [219] &quot;iso8859-1&quot;               &quot;ISO8859-1&quot;              
-#&gt; [221] &quot;iso8859-13&quot;              &quot;iso8859-15&quot;             
-#&gt; [223] &quot;iso8859-2&quot;               &quot;iso8859-3&quot;              
-#&gt; [225] &quot;iso8859-4&quot;               &quot;iso8859-5&quot;              
-#&gt; [227] &quot;iso8859-6&quot;               &quot;iso8859-7&quot;              
-#&gt; [229] &quot;iso8859-8&quot;               &quot;iso8859-8-i&quot;            
-#&gt; [231] &quot;iso8859-9&quot;               &quot;Johab&quot;                  
-#&gt; [233] &quot;JOHAB&quot;                   &quot;koi8-r&quot;                 
-#&gt; [235] &quot;koi8-u&quot;                  &quot;ks_c_5601-1987&quot;         
-#&gt; [237] &quot;L1&quot;                      &quot;latin-9&quot;                
-#&gt; [239] &quot;LATIN1&quot;                  &quot;latin2&quot;                 
-#&gt; [241] &quot;latin3&quot;                  &quot;latin4&quot;                 
-#&gt; [243] &quot;latin5&quot;                  &quot;latin7&quot;                 
-#&gt; [245] &quot;latin9&quot;                  &quot;mac&quot;                    
-#&gt; [247] &quot;mac-centraleurope&quot;       &quot;mac-is&quot;                 
-#&gt; [249] &quot;macarabic&quot;               &quot;maccentraleurope&quot;       
-#&gt; [251] &quot;maccroatian&quot;             &quot;maccyrillic&quot;            
-#&gt; [253] &quot;macgreek&quot;                &quot;machebrew&quot;              
-#&gt; [255] &quot;maciceland&quot;              &quot;macintosh&quot;              
-#&gt; [257] &quot;macis&quot;                   &quot;macroman&quot;               
-#&gt; [259] &quot;macromania&quot;              &quot;macthai&quot;                
-#&gt; [261] &quot;macturkish&quot;              &quot;macukraine&quot;             
-#&gt; [263] &quot;macukrainian&quot;            &quot;MS-ANSI&quot;                
-#&gt; [265] &quot;MS-ARAB&quot;                 &quot;MS-CYRL&quot;                
-#&gt; [267] &quot;MS-EE&quot;                   &quot;MS-GREEK&quot;               
-#&gt; [269] &quot;MS-HEBR&quot;                 &quot;MS-TURK&quot;                
-#&gt; [271] &quot;MS50221&quot;                 &quot;MS51932&quot;                
-#&gt; [273] &quot;MS932&quot;                   &quot;MS936&quot;                  
-#&gt; [275] &quot;PT154&quot;                   &quot;PTCP154&quot;                
-#&gt; [277] &quot;SHIFFT_JIS&quot;              &quot;SHIFFT_JIS-MS&quot;          
-#&gt; [279] &quot;shift-jis&quot;               &quot;shift_jis&quot;              
-#&gt; [281] &quot;SJIS&quot;                    &quot;SJIS-MS&quot;                
-#&gt; [283] &quot;SJIS-OPEN&quot;               &quot;SJIS-WIN&quot;               
-#&gt; [285] &quot;UCS-2&quot;                   &quot;UCS-2BE&quot;                
-#&gt; [287] &quot;UCS-2LE&quot;                 &quot;UCS-4&quot;                  
-#&gt; [289] &quot;UCS-4BE&quot;                 &quot;UCS-4BE&quot;                
-#&gt; [291] &quot;UCS-4LE&quot;                 &quot;UCS-4LE&quot;                
-#&gt; [293] &quot;UCS2&quot;                    &quot;UCS2BE&quot;                 
-#&gt; [295] &quot;UCS2LE&quot;                  &quot;UCS4&quot;                   
-#&gt; [297] &quot;UCS4BE&quot;                  &quot;UCS4LE&quot;                 
-#&gt; [299] &quot;UHC&quot;                     &quot;unicodeFFFE&quot;            
-#&gt; [301] &quot;US&quot;                      &quot;US-ASCII&quot;               
-#&gt; [303] &quot;UTF-16&quot;                  &quot;UTF-16BE&quot;               
-#&gt; [305] &quot;UTF-16LE&quot;                &quot;UTF-32&quot;                 
-#&gt; [307] &quot;UTF-32BE&quot;                &quot;UTF-32LE&quot;               
-#&gt; [309] &quot;UTF-8&quot;                   &quot;UTF16&quot;                  
-#&gt; [311] &quot;UTF16BE&quot;                 &quot;UTF16LE&quot;                
-#&gt; [313] &quot;UTF32&quot;                   &quot;UTF32BE&quot;                
-#&gt; [315] &quot;UTF32LE&quot;                 &quot;UTF8&quot;                   
-#&gt; [317] &quot;WINBALTRIM&quot;              &quot;windows-1250&quot;           
-#&gt; [319] &quot;windows-1251&quot;            &quot;windows-1252&quot;           
-#&gt; [321] &quot;windows-1253&quot;            &quot;windows-1254&quot;           
-#&gt; [323] &quot;windows-1255&quot;            &quot;windows-1256&quot;           
-#&gt; [325] &quot;windows-1257&quot;            &quot;windows-1258&quot;           
-#&gt; [327] &quot;WINDOWS-31J&quot;             &quot;WINDOWS-50221&quot;          
-#&gt; [329] &quot;WINDOWS-51932&quot;           &quot;windows-874&quot;            
-#&gt; [331] &quot;WINDOWS-932&quot;             &quot;WINDOWS-936&quot;            
-#&gt; [333] &quot;x-Chinese_CNS&quot;           &quot;x-cp20001&quot;              
-#&gt; [335] &quot;x-cp20003&quot;               &quot;x-cp20004&quot;              
-#&gt; [337] &quot;x-cp20005&quot;               &quot;x-cp20261&quot;              
-#&gt; [339] &quot;x-cp20269&quot;               &quot;x-cp20936&quot;              
-#&gt; [341] &quot;x-cp20949&quot;               &quot;x-cp50227&quot;              
-#&gt; [343] &quot;x-EBCDIC-KoreanExtended&quot; &quot;x-Europa&quot;               
-#&gt; [345] &quot;x-IA5&quot;                   &quot;x-IA5-German&quot;           
-#&gt; [347] &quot;x-IA5-Norwegian&quot;         &quot;x-IA5-Swedish&quot;          
-#&gt; [349] &quot;x-iscii-as&quot;              &quot;x-iscii-be&quot;             
-#&gt; [351] &quot;x-iscii-de&quot;              &quot;x-iscii-gu&quot;             
-#&gt; [353] &quot;x-iscii-ka&quot;              &quot;x-iscii-ma&quot;             
-#&gt; [355] &quot;x-iscii-or&quot;              &quot;x-iscii-pa&quot;             
-#&gt; [357] &quot;x-iscii-ta&quot;              &quot;x-iscii-te&quot;             
-#&gt; [359] &quot;x-mac-arabic&quot;            &quot;x-mac-ce&quot;               
-#&gt; [361] &quot;x-mac-chinesesimp&quot;       &quot;x-mac-chinesetrad&quot;      
-#&gt; [363] &quot;x-mac-croatian&quot;          &quot;x-mac-cyrillic&quot;         
-#&gt; [365] &quot;x-mac-greek&quot;             &quot;x-mac-hebrew&quot;           
-#&gt; [367] &quot;x-mac-icelandic&quot;         &quot;x-mac-japanese&quot;         
-#&gt; [369] &quot;x-mac-korean&quot;            &quot;x-mac-romanian&quot;         
-#&gt; [371] &quot;x-mac-thai&quot;              &quot;x-mac-turkish&quot;          
-#&gt; [373] &quot;x-mac-ukrainian&quot;         &quot;x_Chinese-Eten&quot;
+<pre><code class="language-r?lang=r?preclass=.ms-5.w-75">hugocmd(&quot;expand&quot; ,'title=&quot;&quot; incode=true')
+#&gt; <div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >展開</span>
+    </div><div data-nopre class="expand-content incode" style="overflow-x:auto">iconvlist()
+#&gt;   [1] &#34;437&#34;                     &#34;850&#34;                    
+#&gt;   [3] &#34;852&#34;                     &#34;855&#34;                    
+#&gt;   [5] &#34;857&#34;                     &#34;860&#34;                    
+#&gt;   [7] &#34;861&#34;                     &#34;862&#34;                    
+#&gt;   [9] &#34;863&#34;                     &#34;865&#34;                    
+#&gt;  [11] &#34;866&#34;                     &#34;869&#34;                    
+#&gt;  [13] &#34;ANSI_X3.4-1968&#34;          &#34;ANSI_X3.4-1986&#34;         
+#&gt;  [15] &#34;ASCII&#34;                   &#34;ASMO-708&#34;               
+#&gt;  [17] &#34;BIG-5&#34;                   &#34;BIG-FIVE&#34;               
+#&gt;  [19] &#34;big5&#34;                    &#34;BIG5&#34;                   
+#&gt;  [21] &#34;big5-hkscs&#34;              &#34;BIG5-HKSCS&#34;             
+#&gt;  [23] &#34;big5hkscs&#34;               &#34;BIG5HKSCS&#34;              
+#&gt;  [25] &#34;CP-GR&#34;                   &#34;CP-IS&#34;                  
+#&gt;  [27] &#34;cp1025&#34;                  &#34;CP1125&#34;                 
+#&gt;  [29] &#34;CP1133&#34;                  &#34;CP1200&#34;                 
+#&gt;  [31] &#34;CP12000&#34;                 &#34;CP12001&#34;                
+#&gt;  [33] &#34;CP1201&#34;                  &#34;CP1250&#34;                 
+#&gt;  [35] &#34;CP1251&#34;                  &#34;CP1252&#34;                 
+#&gt;  [37] &#34;CP1253&#34;                  &#34;CP1254&#34;                 
+#&gt;  [39] &#34;CP1255&#34;                  &#34;CP1256&#34;                 
+#&gt;  [41] &#34;CP1257&#34;                  &#34;CP1258&#34;                 
+#&gt;  [43] &#34;CP1361&#34;                  &#34;CP154&#34;                  
+#&gt;  [45] &#34;CP367&#34;                   &#34;CP437&#34;                  
+#&gt;  [47] &#34;CP50221&#34;                 &#34;CP51932&#34;                
+#&gt;  [49] &#34;CP65001&#34;                 &#34;CP737&#34;                  
+#&gt;  [51] &#34;CP775&#34;                   &#34;CP819&#34;                  
+#&gt;  [53] &#34;CP850&#34;                   &#34;CP852&#34;                  
+#&gt;  [55] &#34;CP853&#34;                   &#34;CP855&#34;                  
+#&gt;  [57] &#34;CP857&#34;                   &#34;CP858&#34;                  
+#&gt;  [59] &#34;CP860&#34;                   &#34;CP861&#34;                  
+#&gt;  [61] &#34;CP862&#34;                   &#34;CP863&#34;                  
+#&gt;  [63] &#34;CP864&#34;                   &#34;CP865&#34;                  
+#&gt;  [65] &#34;cp866&#34;                   &#34;CP866&#34;                  
+#&gt;  [67] &#34;CP869&#34;                   &#34;CP874&#34;                  
+#&gt;  [69] &#34;cp875&#34;                   &#34;CP932&#34;                  
+#&gt;  [71] &#34;CP936&#34;                   &#34;CP949&#34;                  
+#&gt;  [73] &#34;CP950&#34;                   &#34;CSASCII&#34;                
+#&gt;  [75] &#34;CSIBM855&#34;                &#34;CSIBM857&#34;               
+#&gt;  [77] &#34;CSIBM860&#34;                &#34;CSIBM861&#34;               
+#&gt;  [79] &#34;CSIBM863&#34;                &#34;CSIBM864&#34;               
+#&gt;  [81] &#34;CSIBM865&#34;                &#34;CSIBM866&#34;               
+#&gt;  [83] &#34;CSIBM869&#34;                &#34;csISO2022JP&#34;            
+#&gt;  [85] &#34;CSISOLATIN1&#34;             &#34;CSPC775BALTIC&#34;          
+#&gt;  [87] &#34;CSPC850MULTILINGUAL&#34;     &#34;CSPC862LATINHEBREW&#34;     
+#&gt;  [89] &#34;CSPC8CODEPAGE437&#34;        &#34;CSPCP852&#34;               
+#&gt;  [91] &#34;CSPTCP154&#34;               &#34;CSWINDOWS31J&#34;           
+#&gt;  [93] &#34;CYRILLIC-ASIAN&#34;          &#34;DOS-720&#34;                
+#&gt;  [95] &#34;DOS-862&#34;                 &#34;EUC-CN&#34;                 
+#&gt;  [97] &#34;euc-jp&#34;                  &#34;euc-kr&#34;                 
+#&gt;  [99] &#34;EUC-KR&#34;                  &#34;EUCCN&#34;                  
+#&gt; [101] &#34;eucjp&#34;                   &#34;euckr&#34;                  
+#&gt; [103] &#34;GB18030&#34;                 &#34;gb2312&#34;                 
+#&gt; [105] &#34;GBK&#34;                     &#34;hz-gb-2312&#34;             
+#&gt; [107] &#34;IBM-CP1133&#34;              &#34;IBM-Thai&#34;               
+#&gt; [109] &#34;IBM00858&#34;                &#34;IBM00924&#34;               
+#&gt; [111] &#34;IBM01047&#34;                &#34;IBM01140&#34;               
+#&gt; [113] &#34;IBM01141&#34;                &#34;IBM01142&#34;               
+#&gt; [115] &#34;IBM01143&#34;                &#34;IBM01144&#34;               
+#&gt; [117] &#34;IBM01145&#34;                &#34;IBM01146&#34;               
+#&gt; [119] &#34;IBM01147&#34;                &#34;IBM01148&#34;               
+#&gt; [121] &#34;IBM01149&#34;                &#34;IBM037&#34;                 
+#&gt; [123] &#34;IBM1026&#34;                 &#34;IBM273&#34;                 
+#&gt; [125] &#34;IBM277&#34;                  &#34;IBM278&#34;                 
+#&gt; [127] &#34;IBM280&#34;                  &#34;IBM284&#34;                 
+#&gt; [129] &#34;IBM285&#34;                  &#34;IBM290&#34;                 
+#&gt; [131] &#34;IBM297&#34;                  &#34;IBM367&#34;                 
+#&gt; [133] &#34;IBM420&#34;                  &#34;IBM423&#34;                 
+#&gt; [135] &#34;IBM424&#34;                  &#34;IBM437&#34;                 
+#&gt; [137] &#34;IBM437&#34;                  &#34;IBM500&#34;                 
+#&gt; [139] &#34;ibm737&#34;                  &#34;ibm775&#34;                 
+#&gt; [141] &#34;IBM775&#34;                  &#34;IBM819&#34;                 
+#&gt; [143] &#34;ibm850&#34;                  &#34;IBM850&#34;                 
+#&gt; [145] &#34;ibm852&#34;                  &#34;IBM852&#34;                 
+#&gt; [147] &#34;IBM855&#34;                  &#34;IBM855&#34;                 
+#&gt; [149] &#34;ibm857&#34;                  &#34;IBM857&#34;                 
+#&gt; [151] &#34;IBM860&#34;                  &#34;IBM860&#34;                 
+#&gt; [153] &#34;ibm861&#34;                  &#34;IBM861&#34;                 
+#&gt; [155] &#34;IBM862&#34;                  &#34;IBM863&#34;                 
+#&gt; [157] &#34;IBM863&#34;                  &#34;IBM864&#34;                 
+#&gt; [159] &#34;IBM864&#34;                  &#34;IBM865&#34;                 
+#&gt; [161] &#34;IBM865&#34;                  &#34;IBM866&#34;                 
+#&gt; [163] &#34;ibm869&#34;                  &#34;IBM869&#34;                 
+#&gt; [165] &#34;IBM870&#34;                  &#34;IBM871&#34;                 
+#&gt; [167] &#34;IBM880&#34;                  &#34;IBM905&#34;                 
+#&gt; [169] &#34;iso-2022-jp&#34;             &#34;iso-2022-jp&#34;            
+#&gt; [171] &#34;ISO-2022-JP&#34;             &#34;ISO-2022-JP-MS&#34;         
+#&gt; [173] &#34;iso-2022-kr&#34;             &#34;ISO-8859-1&#34;             
+#&gt; [175] &#34;iso-8859-13&#34;             &#34;iso-8859-15&#34;            
+#&gt; [177] &#34;iso-8859-2&#34;              &#34;iso-8859-3&#34;             
+#&gt; [179] &#34;iso-8859-4&#34;              &#34;iso-8859-5&#34;             
+#&gt; [181] &#34;iso-8859-6&#34;              &#34;iso-8859-7&#34;             
+#&gt; [183] &#34;iso-8859-8&#34;              &#34;iso-8859-8-i&#34;           
+#&gt; [185] &#34;iso-8859-9&#34;              &#34;ISO-IR-100&#34;             
+#&gt; [187] &#34;ISO-IR-6&#34;                &#34;ISO_646.IRV:1991&#34;       
+#&gt; [189] &#34;iso_8859-1&#34;              &#34;ISO_8859-1&#34;             
+#&gt; [191] &#34;ISO_8859-1:1987&#34;         &#34;iso_8859-13&#34;            
+#&gt; [193] &#34;iso_8859-15&#34;             &#34;iso_8859-2&#34;             
+#&gt; [195] &#34;iso_8859-3&#34;              &#34;iso_8859-4&#34;             
+#&gt; [197] &#34;iso_8859-5&#34;              &#34;iso_8859-6&#34;             
+#&gt; [199] &#34;iso_8859-7&#34;              &#34;iso_8859-8&#34;             
+#&gt; [201] &#34;iso_8859-8-i&#34;            &#34;iso_8859-9&#34;             
+#&gt; [203] &#34;iso_8859_1&#34;              &#34;iso_8859_13&#34;            
+#&gt; [205] &#34;iso_8859_15&#34;             &#34;iso_8859_2&#34;             
+#&gt; [207] &#34;iso_8859_3&#34;              &#34;iso_8859_4&#34;             
+#&gt; [209] &#34;iso_8859_5&#34;              &#34;iso_8859_6&#34;             
+#&gt; [211] &#34;iso_8859_7&#34;              &#34;iso_8859_8&#34;             
+#&gt; [213] &#34;iso_8859_8-i&#34;            &#34;iso_8859_9&#34;             
+#&gt; [215] &#34;ISO2022-JP&#34;              &#34;ISO2022-JP-MS&#34;          
+#&gt; [217] &#34;iso2022-kr&#34;              &#34;ISO646-US&#34;              
+#&gt; [219] &#34;iso8859-1&#34;               &#34;ISO8859-1&#34;              
+#&gt; [221] &#34;iso8859-13&#34;              &#34;iso8859-15&#34;             
+#&gt; [223] &#34;iso8859-2&#34;               &#34;iso8859-3&#34;              
+#&gt; [225] &#34;iso8859-4&#34;               &#34;iso8859-5&#34;              
+#&gt; [227] &#34;iso8859-6&#34;               &#34;iso8859-7&#34;              
+#&gt; [229] &#34;iso8859-8&#34;               &#34;iso8859-8-i&#34;            
+#&gt; [231] &#34;iso8859-9&#34;               &#34;Johab&#34;                  
+#&gt; [233] &#34;JOHAB&#34;                   &#34;koi8-r&#34;                 
+#&gt; [235] &#34;koi8-u&#34;                  &#34;ks_c_5601-1987&#34;         
+#&gt; [237] &#34;L1&#34;                      &#34;latin-9&#34;                
+#&gt; [239] &#34;LATIN1&#34;                  &#34;latin2&#34;                 
+#&gt; [241] &#34;latin3&#34;                  &#34;latin4&#34;                 
+#&gt; [243] &#34;latin5&#34;                  &#34;latin7&#34;                 
+#&gt; [245] &#34;latin9&#34;                  &#34;mac&#34;                    
+#&gt; [247] &#34;mac-centraleurope&#34;       &#34;mac-is&#34;                 
+#&gt; [249] &#34;macarabic&#34;               &#34;maccentraleurope&#34;       
+#&gt; [251] &#34;maccroatian&#34;             &#34;maccyrillic&#34;            
+#&gt; [253] &#34;macgreek&#34;                &#34;machebrew&#34;              
+#&gt; [255] &#34;maciceland&#34;              &#34;macintosh&#34;              
+#&gt; [257] &#34;macis&#34;                   &#34;macroman&#34;               
+#&gt; [259] &#34;macromania&#34;              &#34;macthai&#34;                
+#&gt; [261] &#34;macturkish&#34;              &#34;macukraine&#34;             
+#&gt; [263] &#34;macukrainian&#34;            &#34;MS-ANSI&#34;                
+#&gt; [265] &#34;MS-ARAB&#34;                 &#34;MS-CYRL&#34;                
+#&gt; [267] &#34;MS-EE&#34;                   &#34;MS-GREEK&#34;               
+#&gt; [269] &#34;MS-HEBR&#34;                 &#34;MS-TURK&#34;                
+#&gt; [271] &#34;MS50221&#34;                 &#34;MS51932&#34;                
+#&gt; [273] &#34;MS932&#34;                   &#34;MS936&#34;                  
+#&gt; [275] &#34;PT154&#34;                   &#34;PTCP154&#34;                
+#&gt; [277] &#34;SHIFFT_JIS&#34;              &#34;SHIFFT_JIS-MS&#34;          
+#&gt; [279] &#34;shift-jis&#34;               &#34;shift_jis&#34;              
+#&gt; [281] &#34;SJIS&#34;                    &#34;SJIS-MS&#34;                
+#&gt; [283] &#34;SJIS-OPEN&#34;               &#34;SJIS-WIN&#34;               
+#&gt; [285] &#34;UCS-2&#34;                   &#34;UCS-2BE&#34;                
+#&gt; [287] &#34;UCS-2LE&#34;                 &#34;UCS-4&#34;                  
+#&gt; [289] &#34;UCS-4BE&#34;                 &#34;UCS-4BE&#34;                
+#&gt; [291] &#34;UCS-4LE&#34;                 &#34;UCS-4LE&#34;                
+#&gt; [293] &#34;UCS2&#34;                    &#34;UCS2BE&#34;                 
+#&gt; [295] &#34;UCS2LE&#34;                  &#34;UCS4&#34;                   
+#&gt; [297] &#34;UCS4BE&#34;                  &#34;UCS4LE&#34;                 
+#&gt; [299] &#34;UHC&#34;                     &#34;unicodeFFFE&#34;            
+#&gt; [301] &#34;US&#34;                      &#34;US-ASCII&#34;               
+#&gt; [303] &#34;UTF-16&#34;                  &#34;UTF-16BE&#34;               
+#&gt; [305] &#34;UTF-16LE&#34;                &#34;UTF-32&#34;                 
+#&gt; [307] &#34;UTF-32BE&#34;                &#34;UTF-32LE&#34;               
+#&gt; [309] &#34;UTF-8&#34;                   &#34;UTF16&#34;                  
+#&gt; [311] &#34;UTF16BE&#34;                 &#34;UTF16LE&#34;                
+#&gt; [313] &#34;UTF32&#34;                   &#34;UTF32BE&#34;                
+#&gt; [315] &#34;UTF32LE&#34;                 &#34;UTF8&#34;                   
+#&gt; [317] &#34;WINBALTRIM&#34;              &#34;windows-1250&#34;           
+#&gt; [319] &#34;windows-1251&#34;            &#34;windows-1252&#34;           
+#&gt; [321] &#34;windows-1253&#34;            &#34;windows-1254&#34;           
+#&gt; [323] &#34;windows-1255&#34;            &#34;windows-1256&#34;           
+#&gt; [325] &#34;windows-1257&#34;            &#34;windows-1258&#34;           
+#&gt; [327] &#34;WINDOWS-31J&#34;             &#34;WINDOWS-50221&#34;          
+#&gt; [329] &#34;WINDOWS-51932&#34;           &#34;windows-874&#34;            
+#&gt; [331] &#34;WINDOWS-932&#34;             &#34;WINDOWS-936&#34;            
+#&gt; [333] &#34;x-Chinese_CNS&#34;           &#34;x-cp20001&#34;              
+#&gt; [335] &#34;x-cp20003&#34;               &#34;x-cp20004&#34;              
+#&gt; [337] &#34;x-cp20005&#34;               &#34;x-cp20261&#34;              
+#&gt; [339] &#34;x-cp20269&#34;               &#34;x-cp20936&#34;              
+#&gt; [341] &#34;x-cp20949&#34;               &#34;x-cp50227&#34;              
+#&gt; [343] &#34;x-EBCDIC-KoreanExtended&#34; &#34;x-Europa&#34;               
+#&gt; [345] &#34;x-IA5&#34;                   &#34;x-IA5-German&#34;           
+#&gt; [347] &#34;x-IA5-Norwegian&#34;         &#34;x-IA5-Swedish&#34;          
+#&gt; [349] &#34;x-iscii-as&#34;              &#34;x-iscii-be&#34;             
+#&gt; [351] &#34;x-iscii-de&#34;              &#34;x-iscii-gu&#34;             
+#&gt; [353] &#34;x-iscii-ka&#34;              &#34;x-iscii-ma&#34;             
+#&gt; [355] &#34;x-iscii-or&#34;              &#34;x-iscii-pa&#34;             
+#&gt; [357] &#34;x-iscii-ta&#34;              &#34;x-iscii-te&#34;             
+#&gt; [359] &#34;x-mac-arabic&#34;            &#34;x-mac-ce&#34;               
+#&gt; [361] &#34;x-mac-chinesesimp&#34;       &#34;x-mac-chinesetrad&#34;      
+#&gt; [363] &#34;x-mac-croatian&#34;          &#34;x-mac-cyrillic&#34;         
+#&gt; [365] &#34;x-mac-greek&#34;             &#34;x-mac-hebrew&#34;           
+#&gt; [367] &#34;x-mac-icelandic&#34;         &#34;x-mac-japanese&#34;         
+#&gt; [369] &#34;x-mac-korean&#34;            &#34;x-mac-romanian&#34;         
+#&gt; [371] &#34;x-mac-thai&#34;              &#34;x-mac-turkish&#34;          
+#&gt; [373] &#34;x-mac-ukrainian&#34;         &#34;x_Chinese-Eten&#34;
+hugocmd(m=&#34;expand&#34; ,end=T)
+#&gt; </div></div>
 </code></pre>
 <p>和作業系統一致的編碼</p>
 <pre><code class="language-r?preclass=.ms-5">localeToCharset(locale =Sys.getlocale(&quot;LC_CTYPE&quot;))
@@ -1036,8 +1045,8 @@ details(y)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632978697" rel="stylesheet">
-<script src="../js/quicknote.js?1632978697"></script>
+<link href="../css/quicknote.css?1633579087" rel="stylesheet">
+<script src="../js/quicknote.js?1633579087"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1055,7 +1064,7 @@ details(y)
           
 
   
-<script src="../js/packhtml.js?1632978697"></script>    
+<script src="../js/packhtml.js?1633579087"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1065,25 +1074,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632978697"></script>
-  <script src="../js/featherlight.gallery.min.js?1632978697"></script>
-  <link href="../css/featherlight.min.css?1632978697" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632978697" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1633579087"></script>
+  <script src="../js/featherlight.gallery.min.js?1633579087"></script>
+  <link href="../css/featherlight.min.css?1633579087" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1633579087" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632978697"></script>
+  <script src="../js/highlight.pack.js?1633579087"></script>
   
-  <script src="../js/hugohelper.js?1632978697"></script>
+  <script src="../js/hugohelper.js?1633579087"></script>
 
-  <link href="../css/rmd.css?1632978697" rel="stylesheet">
-  <link href="../css/mystyle.css?1632978697" rel="stylesheet">    
-  <script src='../js/variant.js?1632978697'></script>
+  <link href="../css/rmd.css?1633579087" rel="stylesheet">
+  <link href="../css/mystyle.css?1633579087" rel="stylesheet">    
+  <script src='../js/variant.js?1633579087'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1632978697'></script>
+<script src='../js/localsearch.js?1633579087'></script>
     
 
 

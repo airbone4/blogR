@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <script src="../js/jquery-3.3.1.min.js?1632978697"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1633579087" rel="stylesheet">
+    <link href="../css/syntax.css?1633579087" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1633579087"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1632978697" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1632978697" rel="stylesheet">
-    <link href="../css/syntax.css?1632978697" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1632978697" rel="stylesheet">
+    <link href="../css/theme-mine.css?1633579087" rel="stylesheet">
     
-    <link href="../css/theme.css?1632978697" rel="stylesheet">
+    <link href="../css/theme.css?1633579087" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="../scss/notice.32c96872d0db2364b666008c0f71550ae9c2554b32a9475a28780f3696539df4.css" integrity="sha256-MsloctDbI2S2ZgCMD3FVCunCVUsyqUdaKHgPNpZTnfQ=">
+    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
 
     
   </head><body><div id="top-pane" class="navbar  fixed-top ">
@@ -53,7 +53,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 21, 2021'>3.02.regular練習</span>
+      title='最後修改October 4, 2021'>3.02.regular練習</span>
         
     
 
@@ -192,12 +192,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_3_a_type_matrix.html" data-bs-toggle="tooltip" title="4.3-a type matrix">4.3-a type matrix</a></li>
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 type matrix">4.3 type matrix</a></li>
     
   
         <li class="nav-item">
@@ -221,7 +221,9 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/6_programming_1.html" data-bs-toggle="tooltip" title="6. Programming 1">6. Programming 1</a></li>
+          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
     
   
         <li class="nav-item">
@@ -504,15 +506,11 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-09-30 PM 01:10]</a></li><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-09-29 PM 11:26]</a></li><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-09-25 PM 10:54]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_2_programming.html"> <i class="far fa-clock" ></i>6.2 Programming[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/7_function_1.html"> <i class="far fa-clock" ></i>7 Function basic[2021-10-07 AM 11:44]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <pre><code class="language-r">#source(&quot;../../themes/variant/utils/r/hugoup.R&quot;)
-#knitr::opts_chunk$set(hugomd=T)
-#knitr::opts_chunk$set(collapse=T)
-</code></pre>
-<ul class="d-none">
+    <ul>
 <li><a href="https://stackoverflow.com/questions/32792047/regex-to-capture-key-value-comma-separated-values">參考</a></li>
 <li><a href="https://hugodown.r-lib.org/articles/config.html">不相關hugodown</a></li>
 </ul>
@@ -524,10 +522,10 @@
 <li>display=none</li>
 </ul>
 <h2 id="有問題的示範">有問題的示範</h2>
-<pre><code class="language-r">x.source=&quot;class=.w-75.ms-5,display=none&quot;
+<pre><code class="language-r?preclass=.ms-5?class=.btn-danger">x.source=&quot;class=.w-75.ms-5,display=none&quot;
 regexec(&quot;(.*)=(.*)[ |,]?&quot;, x.source) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >❌ </span></span>
 </code></pre>
-<pre><code class="language-r">#&gt; [[1]]
+<pre><code class="language-r?preclass=.ms-5">#&gt; [[1]]
 #&gt; [1]  1  1 26
 #&gt; attr(,&quot;match.length&quot;)
 #&gt; [1] 29 24  4
@@ -537,10 +535,122 @@ regexec(&quot;(.*)=(.*)[ |,]?&quot;, x.source) #<span data-nopre class="codenote
 #&gt; [1] TRUE
 </code></pre>
 <p>對照</p>
-<pre><code class="language-r">class=.w-75.ms-5,display=none
+<pre><code class="language-r?preclass=.ms-5">class=.w-75.ms-5,display=none
 12345678901234567890123456789
          1         2
 </code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">x.source=&quot;class=.w-75.ms-5,display=none&quot;
+nchar(x.source) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >不是length() </span></span>
+#&gt; [1] 29
+matches = regexec(&quot;(.*)=(.*)[ |,]?&quot;, x.source) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >❌ </span></span>
+
+x.source=&quot;class=.w-75.ms-5,display=none&quot;
+   matches=regexec(&quot;(.*)=(.*)[ |,]?&quot;, x.source)
+   for( m in matches){
+     start&lt;-m
+     len&lt;-attr(m,&quot;match.length&quot;)
+     for (idx in 1:length(start)){
+     print(substr(x.source,start[idx],start[idx]+len[idx]-1))
+     }
+   }
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; [1] &quot;class=.w-75.ms-5,display=none&quot;
+#&gt; [1] &quot;class=.w-75.ms-5,display&quot;
+#&gt; [1] &quot;none&quot;
+</code></pre>
+<h2 id="這裡只找到一個">這裡只找到一個</h2>
+<p>正確的樣式之一:<code>([^=,]+)=([^=,]+)</code></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">x.source=&quot;class=.w-75.ms-5,display=none&quot;
+matches = regexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
+hugocmd(&quot;expand&quot; ,'title=&quot;matches的內容&quot; incode=true')
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; <div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >matches的內容</span>
+    </div><div data-nopre class="expand-content incode" style="overflow-x:auto">matches    
+#&gt; [[1]]
+#&gt; [1] 1 1 7
+#&gt; attr(,&#34;match.length&#34;)
+#&gt; [1] 16  5 10
+#&gt; attr(,&#34;index.type&#34;)
+#&gt; [1] &#34;chars&#34;
+#&gt; attr(,&#34;useBytes&#34;)
+#&gt; [1] TRUE
+hugocmd(m=&#34;expand&#34; ,end=T)
+#&gt; </div></div>
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">   for( m in matches){
+     start&lt;-m
+     len&lt;-attr(m,&quot;match.length&quot;)
+     for (idx in 1:length(start)){
+     print(substr(x.source,start[idx],start[idx]+len[idx]-1))
+     }
+   }
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; [1] &quot;class=.w-75.ms-5&quot;
+#&gt; [1] &quot;class&quot;
+#&gt; [1] &quot;.w-75.ms-5&quot;
+</code></pre>
+<pre><code class="language-r?class=.ms-5.w-50">class=.w-75.ms-5,display=none
+12345678901234567890123456789
+         1         2
+</code></pre>
+<figure  class="figure text-center d-block w-50 m-auto text-center d-block border border-primary w-75">
+
+
+
+
+
+
+    <img src="3_02_regular%e7%b7%b4%e7%bf%92.files/keypair%e6%90%9c%e5%b0%8b.png" class="figure-img w-100 "
+         alt="圖" width="100%"/> <figcaption class="figure-caption">
+            圖
+        </figcaption>
+
+</figure>
+
+<p>❓只找到一個keypair, 但是知道應該有兩個Key pair</p>
+<h3 id="太麻煩利用regmatches">太麻煩,利用<code>regmatches</code></h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">x.source=&quot;class=.w-75.ms-5,display=none&quot;
+matches = regexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
+regmatches(x.source, matches)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; [[1]]
+#&gt; [1] &quot;class=.w-75.ms-5&quot; &quot;class&quot;            &quot;.w-75.ms-5&quot;
+</code></pre>
+<h2 id="全部找出來">全部找出來</h2>
+<pre><code class="language-r?preclass=.ms-5">x.source=&quot;class=.w-75.ms-5,display=none&quot;
+matches = gregexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
+matches 
+
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">x.source=&quot;class=.w-75.ms-5,display=none&quot;
+nchar(x.source) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >不是length() </span></span>
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; [1] 29
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">matches = gregexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
+regmatches(x.source, matches)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; [[1]]
+#&gt;      [,1]               [,2]          
+#&gt; [1,] &quot;class=.w-75.ms-5&quot; &quot;display=none&quot;
+#&gt; [2,] &quot;class&quot;            &quot;display&quot;     
+#&gt; [3,] &quot;.w-75.ms-5&quot;       &quot;none&quot;
+</code></pre>
+<p>看看上面的matches,以欄位為1組</p>
+<pre><code class="language-r?preclass=.ms-5">matches
+#&gt; [[1]]
+#&gt;      [,1] [,2] # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏以欄位為1組,兩個欄位,所以兩組 </span></span>
+#&gt; [1,]    1   18   #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >keypair 2個,分別在位置1,18 </span></span>
+#&gt; [2,]    1   18   #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >每組的KEY位置在1,18 </span></span>
+#&gt; [3,]    7   26   #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >每組的value位置在7 26 </span></span>
+</code></pre>
+<p>下面這個表</p>
+<ul>
+<li>因為有2個等號,所以找到2個符合,下表一個符合表示成1個直行(欄位),因為有兩個等號,所以下表有兩個欄位。</li>
+<li>在R上有兩個矩陣,一個是開始的位置,一個是長度(在attr中)。
 
 
 
@@ -558,139 +668,70 @@ regexec(&quot;(.*)=(.*)[ |,]?&quot;, x.source) #<span data-nopre class="codenote
 <table class="w-50 m-auto">
 <thead class="">
 <tr>
-<th style="text-align:center">全部</th>
-<th style="text-align:center">第一組</th>
-<th style="text-align:center">第二組</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">符合1</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">符合2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center">全部</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">26</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">18</td>
 </tr>
 <tr>
-<td style="text-align:center">29</td>
-<td style="text-align:center">24</td>
-<td style="text-align:center">4</td>
+<td style="text-align:center">第1括號</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">18</td>
+</tr>
+<tr>
+<td style="text-align:center">第2括號</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">26</td>
 </tr>
 </tbody>
 </table>
 
-</div>
-<pre><code class="language-r">x.source=&quot;class=.w-75.ms-5,display=none&quot;
-nchar(x.source) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >不是length() </span></span>
-</code></pre>
-<pre><code>#&gt; [1] 29
-</code></pre>
-<pre><code class="language-r">matches = regexec(&quot;(.*)=(.*)[ |,]?&quot;, x.source) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >❌ </span></span>
+</div></li>
+</ul>
+<p><div class="position-relative warning p-0">
+問題:
+只要KEYVALUE ?<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-04147">提示</button>
+</div>    
 
-x.source=&quot;class=.w-75.ms-5,display=none&quot;
-   matches=regexec(&quot;(.*)=(.*)[ |,]?&quot;, x.source)
-   for( m in matches){
-     start&lt;-m
-     len&lt;-attr(m,&quot;match.length&quot;)
-     for (idx in 1:length(start)){
-     print(substr(x.source,start[idx],start[idx]+len[idx]-1))
-     }
-   }
-</code></pre>
-<pre><code>#&gt; [1] &quot;class=.w-75.ms-5,display=none&quot;
-#&gt; [1] &quot;class=.w-75.ms-5,display&quot;
-#&gt; [1] &quot;none&quot;
-</code></pre>
-<h2 id="這裡只找到一個">這裡只找到一個</h2>
-<p>正確的樣式之一:<code>([^=,]+)=([^=,]+)</code></p>
-<pre><code class="language-r">x.source=&quot;class=.w-75.ms-5,display=none&quot;
-matches = regexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
-hugocmd(&quot;expand&quot; ,'title=&quot;matches的內容&quot; incode=true')
-</code></pre>
-<pre><code>#&gt; <div data-nopre class="expand">
-    <div data-nopre class="expand-label" onclick="vexpand(this)">
-        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
-        <span data-nopre >matches的內容</span>
-    </div><div data-nopre class="expand-content incode" style="overflow-x:auto">```
 
-```r
-matches    
-```
-
-```
-#&gt; [[1]]
-#&gt; [1] 1 1 7
-#&gt; attr(,&#34;match.length&#34;)
-#&gt; [1] 16  5 10
-#&gt; attr(,&#34;index.type&#34;)
-#&gt; [1] &#34;chars&#34;
-#&gt; attr(,&#34;useBytes&#34;)
-#&gt; [1] TRUE
-```
-
-```r
-hugocmd(m=&#34;expand&#34; ,end=T)
-```
-
-```
-#&gt; </div></div>
-</code></pre>
-<pre><code class="language-r">   for( m in matches){
-     start&lt;-m
-     len&lt;-attr(m,&quot;match.length&quot;)
-     for (idx in 1:length(start)){
-     print(substr(x.source,start[idx],start[idx]+len[idx]-1))
-     }
-   }
-</code></pre>
-<pre><code>#&gt; [1] &quot;class=.w-75.ms-5&quot;
-#&gt; [1] &quot;class&quot;
-#&gt; [1] &quot;.w-75.ms-5&quot;
-</code></pre>
-<pre><code class="language-r?class=.w-50">class=.w-75.ms-5,display=none
-12345678901234567890123456789
-         1         2
-</code></pre>
-<p><img src="3_02_regular%E7%B7%B4%E7%BF%92.files/keypair%E6%90%9C%E5%B0%8B.png" alt=""></p>
-<p>❓只找到一個keypair, 但是知道應該有兩個Key pair</p>
-<h3 id="太麻煩利用regmatches">太麻煩,利用<code>regmatches</code></h3>
-<pre><code class="language-r">x.source=&quot;class=.w-75.ms-5,display=none&quot;
-matches = regexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
-regmatches(x.source, matches)
-</code></pre>
-<pre><code>#&gt; [[1]]
-#&gt; [1] &quot;class=.w-75.ms-5&quot; &quot;class&quot;            &quot;.w-75.ms-5&quot;
-</code></pre>
-<h2 id="全部找出來">全部找出來</h2>
-<pre><code class="language-r">x.source=&quot;class=.w-75.ms-5,display=none&quot;
-matches = gregexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
-matches 
-
-</code></pre>
-<pre><code class="language-r">x.source=&quot;class=.w-75.ms-5,display=none&quot;
-nchar(x.source) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >不是length() </span></span>
-</code></pre>
-<pre><code>#&gt; [1] 29
-</code></pre>
-<pre><code class="language-r">matches = gregexec(&quot;([^=,]+)=([^=,]+)&quot;, x.source)
-regmatches(x.source, matches)
-</code></pre>
-<pre><code>#&gt; [[1]]
-#&gt;      [,1]               [,2]          
-#&gt; [1,] &quot;class=.w-75.ms-5&quot; &quot;display=none&quot;
-#&gt; [2,] &quot;class&quot;            &quot;display&quot;     
-#&gt; [3,] &quot;.w-75.ms-5&quot;       &quot;none&quot;
-</code></pre>
-<pre><code class="language-r">#&gt; [[1]]
-#&gt;      [,1] [,2]
-#&gt; [1,]    1   18   #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >keypair 2個,分別在位置1,18 </span></span>
-#&gt; [2,]    1   18   #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >每組的KEY位置在1,18 </span></span>
-#&gt; [3,]    7   26   #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >每組的value位置在7 26 </span></span>
-</code></pre>
-<p>問題:
-只要KEYVALUE ?</p>
-<pre><code class="language-r">   token&lt;-regmatches(x.source, matches)
+<div class="collapse" id="quiz-04147"><pre><code class="language-r?preclass=.ms-5">   token&lt;-regmatches(x.source, matches)
    token&lt;-unlist(token)
    keyvalue= token[c(F,T,T)]
 </code></pre>
+</div>
+</p>
+<p><div class="position-relative warning p-0">
+<p>練習: x=&quot;.a.b c&quot;</p>
+<p>要將上述字串分解成 &quot;.a&quot;,&quot;.b&quot;,&quot;.c&quot;
+hint: 遇到點和空格就要分解</p>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-04146">提示</button>
+</div>    
+
+
+<div class="collapse" id="quiz-04146"><pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">x=&quot;.a.b c&quot;
+unlist(strsplit(x, '\\s+'))
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; [1] &quot;.a.b&quot; &quot;c&quot;
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=.ms-5">y=unlist(strsplit(x, '\\s+|[.]'))
+ y[sapply(y,function(m){nchar(m)&gt;0})]
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=.ms-5">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
+</code></pre>
+</div>
+</p>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -718,8 +759,8 @@ regmatches(x.source, matches)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1632978697" rel="stylesheet">
-<script src="../js/quicknote.js?1632978697"></script>
+<link href="../css/quicknote.css?1633579087" rel="stylesheet">
+<script src="../js/quicknote.js?1633579087"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -737,7 +778,7 @@ regmatches(x.source, matches)
           
 
   
-<script src="../js/packhtml.js?1632978697"></script>    
+<script src="../js/packhtml.js?1633579087"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -747,25 +788,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1632978697"></script>
-  <script src="../js/featherlight.gallery.min.js?1632978697"></script>
-  <link href="../css/featherlight.min.css?1632978697" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1632978697" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1633579087"></script>
+  <script src="../js/featherlight.gallery.min.js?1633579087"></script>
+  <link href="../css/featherlight.min.css?1633579087" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1633579087" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1632978697"></script>
+  <script src="../js/highlight.pack.js?1633579087"></script>
   
-  <script src="../js/hugohelper.js?1632978697"></script>
+  <script src="../js/hugohelper.js?1633579087"></script>
 
-  <link href="../css/rmd.css?1632978697" rel="stylesheet">
-  <link href="../css/mystyle.css?1632978697" rel="stylesheet">    
-  <script src='../js/variant.js?1632978697'></script>
+  <link href="../css/rmd.css?1633579087" rel="stylesheet">
+  <link href="../css/mystyle.css?1633579087" rel="stylesheet">    
+  <script src='../js/variant.js?1633579087'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1632978697'></script>
+<script src='../js/localsearch.js?1633579087'></script>
     
 
 

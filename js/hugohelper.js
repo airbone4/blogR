@@ -92,7 +92,7 @@ function hugo_unescape3(html) {
 
 
 
-ptn_quote = /&lt;(span)[\s]*?class[\s]*?=".*?nopre.*?"&gt;.*&lt;\/\1&gt;/g
+
 function htmlUnescape(str){
   var map = {amp: '&', lt: '<', gt: '>', quot: '"', '#039': "'"}
 str = str.replace(/&([^;]+);/g, (m, c) => map[c])
@@ -112,7 +112,7 @@ function htmlEscape(str) {
 }
 /*
 只取代quote 部分,抽取後轉HTML,只有這樣。
-
+ptn_quote = /&lt;(span)[\s]*?class[\s]*?=".*?nopre.*?"&gt;.*&lt;\/\1&gt;/g
 function hugo_unescape4(str){
   rst= str.replace(ptn_quote,(c)=>{
     return(htmlUnescape(c))
@@ -155,17 +155,23 @@ function hugo_unescape(str){
   let area = document.createElement("div");
   area.style.display = 'none'
   area.innerHTML=htmlstr;
-  //area=temparea.querySelector("code")
+  //area=temparea.querySelector("code") 
+  // 1) 這裡利用outerHTML和innerHTML找出頭尾標籤的開始和結束位置。
+  // 2) 然後利用這些位置，區分這個區域的字串為是否要處理
   let npblock = Array.from(area.querySelectorAll("[data-nopre]"))
   let pairs = [];
+  oheadidx=0
   npblock.forEach(element => {
-    oheadidx = area.innerHTML.indexOf(element.outerHTML)
+    oheadidx = area.innerHTML.indexOf(element.outerHTML,oheadidx)
     olen= element.outerHTML.length;
+    
     iheadidx= element.outerHTML.indexOf(element.innerHTML)
     ilen = element.innerHTML.length;
     if (iheadidx>0) //沒有子節點
       pairs.push( pair(oheadidx,oheadidx+iheadidx-1))
     pairs.push( pair(oheadidx+iheadidx+ilen,oheadidx+olen-1))
+    oheadidx=oheadidx+iheadidx
+    iheadidx=oheadidx+iheadidx+ilen
   });
   pairs.sort((a,b)=>a.head-b.head)
   ustr = area.innerHTML;
@@ -233,7 +239,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (obj["class"]) {
       obj["class"].split(".").forEach(ee =>{
         if (ee.length>0){
-         parent.classList.add(ee);    
+         //parent.classList.add(ee);    //原先放在PRE
+         codenode.classList.add(ee)
         }
      }) 
     }

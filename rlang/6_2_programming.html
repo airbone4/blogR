@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-  <title>4.2 type post</title>  
+  <title>6.2 Programming</title>  
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,18 +37,25 @@
     <div class="wrapper">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#相關操作">相關操作</a>
+    <li><a href="#in-operator"><code>%in%</code> operator</a>
       <ul>
-        <li><a href="#問題想要知道有甚麼資料庫可以用">問題:想要知道有甚麼資料庫可以用?</a></li>
+        <li><a href="#範例-detach_package">範例 detach_package()</a></li>
+        <li><a href="#範例2libpaths">範例2：.libPaths()</a></li>
       </ul>
     </li>
-    <li><a href="#常見錯誤">常見錯誤</a>
+    <li><a href="#r語言的-meta-計算">R語言的 meta 計算。</a>
       <ul>
-        <li><a href="#error">error</a></li>
-        <li><a href="#error-1">error</a></li>
-        <li><a href="#error-2">error</a></li>
+        <li><a href="#deparse">deparse</a></li>
+        <li><a href="#quote">quote</a></li>
+        <li><a href="#eval">eval</a></li>
       </ul>
     </li>
+    <li><a href="#討論">討論</a>
+      <ul>
+        <li><a href="#測試紀錄">測試紀錄</a></li>
+      </ul>
+    </li>
+    <li><a href="#練習">練習</a></li>
   </ul>
 </nav>
     </div>
@@ -57,7 +64,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 16, 2021'>4.2 type post</span>
+      title='最後修改October 7, 2021'>6.2 Programming</span>
         
     
 
@@ -189,7 +196,7 @@
           <a class="nav-link" href="../rlang/4_1_4_type_more.html" data-bs-toggle="tooltip" title="4.1.4 type more">4.1.4 type more</a></li>
     
   
-        <li class="nav-item active">
+        <li class="nav-item">
           
           <a class="nav-link" href="../rlang/4_2_type_post.html" data-bs-toggle="tooltip" title="4.2 type post">4.2 type post</a></li>
     
@@ -514,127 +521,150 @@
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <h2 id="相關操作">相關操作</h2>
-<p><a href="resources/practice1.R">practice1.R</a></p>
-<h3 id="問題想要知道有甚麼資料庫可以用">問題:想要知道有甚麼資料庫可以用?</h3>
-<p>例如， 想要知道資料庫裏面有沒有'mtcars'<br>
-hint:
-grep('pattern',target)</p>
-<pre><code class="language-r">l&lt;-list('a','b','c')
-grep('a',l)
-#&gt; [1] 1
+    <h2 id="in-operator"><code>%in%</code> operator</h2>
+<h3 id="範例-detach_package">範例 detach_package()</h3>
+<p>討論內建函數<code>detach_package()</code><br>
+使用方法：</p>
+<pre><code class="language-r">detach_package(vegan)
+detach_package(&quot;vegan&quot;, TRUE)
 </code></pre>
-<p>利用指令<code>data()</code>可以列出內建資料：</p>
-<pre><code class="language-r">xx&lt;-data()
+<p>注意一下第2個使用方式，第2個參數`character.only'：</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">detach_package &lt;- function(pkg, character.only = FALSE)
+{
+  if(!character.only) #如果沒有指定參數是字串
+  {
+    pkg &lt;- deparse(substitute(pkg)) # 轉字串
+  }
+  search_item &lt;- paste(&quot;package&quot;, pkg, sep = &quot;:&quot;)
+  while(search_item %in% search())
+  {
+    detach(search_item, unload = TRUE, character.only = TRUE)
+  }
+}
 </code></pre>
-<p>xx 是甚麼?直接打入xx並沒有像其他變數一樣，在console顯示內容：</p>
-<pre><code class="language-r">xx
+<h3 id="範例2libpaths">範例2：.libPaths()</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">.libPaths
+#&gt; function (new, include.site = TRUE) 
+#&gt; {
+#&gt;     if (!missing(new)) {
+#&gt;         new &lt;- Sys.glob(path.expand(new))
+#&gt;         paths &lt;- c(new, if (include.site) .Library.site, .Library)
+#&gt;         paths &lt;- paths[dir.exists(paths)]
+#&gt;         .lib.loc &lt;&lt;- unique(normalizePath(paths, &quot;/&quot;))
+#&gt;     }
+#&gt;     else .lib.loc
+#&gt; }
+#&gt; &lt;bytecode: 0x00000000170d5d30&gt;
+#&gt; &lt;environment: 0x00000000170d12b8&gt;
 </code></pre>
-<pre><code class="language-r">str(xx)
-#&gt; List of 4
-#&gt;  $ title  : chr &quot;Data sets&quot;
-#&gt;  $ header : NULL
-#&gt;  $ results: chr [1:104, 1:4] &quot;datasets&quot; &quot;datasets&quot; &quot;datasets&quot; &quot;datasets&quot; ...
-#&gt;   ..- attr(*, &quot;dimnames&quot;)=List of 2
-#&gt;   .. ..$ : NULL
-#&gt;   .. ..$ : chr [1:4] &quot;Package&quot; &quot;LibPath&quot; &quot;Item&quot; &quot;Title&quot;
-#&gt;  $ footer : chr &quot;Use 'data(package = .packages(all.available = TRUE))'\nto list the data sets in all *available* packages.&quot;
-#&gt;  - attr(*, &quot;class&quot;)= chr &quot;packageIQR&quot;
-is.data.frame(xx)
-#&gt; [1] FALSE
-is.list(xx)
-#&gt; [1] TRUE
-is.table(xx)
-#&gt; [1] FALSE
-class(xx)
-#&gt; [1] &quot;packageIQR&quot;
+<h2 id="r語言的-meta-計算">R語言的 meta 計算。</h2>
+<ul>
+<li>assign()</li>
+<li>語法解析：substitute(), parse(), deparse()</li>
+<li>表達式構造：quote()</li>
+<li>表達式求值：eval(), source()</li>
+<li>表達式：expression()</li>
+</ul>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">parse(text='x&lt;-1+2')
+#&gt; expression(x &lt;- 1 + 2)
 </code></pre>
-<p><code>class()</code>函數說明xx是一個packageIQR物件。<code>str()</code>可以看出是一個長度為4的list，其中results標籤，是一個字串矩陣，大小為104 x 4。其中4個欄位的名稱為：&quot;Package&quot; &quot;LibPath&quot; &quot;Item&quot; &quot;Title&quot;（如下）：</p>
-<pre><code class="language-r">head(xx$results)
-#&gt;      Package    LibPath                              Item                    
-#&gt; [1,] &quot;datasets&quot; &quot;C:/Program Files/R/R-4.1.1/library&quot; &quot;AirPassengers&quot;         
-#&gt; [2,] &quot;datasets&quot; &quot;C:/Program Files/R/R-4.1.1/library&quot; &quot;BJsales&quot;               
-#&gt; [3,] &quot;datasets&quot; &quot;C:/Program Files/R/R-4.1.1/library&quot; &quot;BJsales.lead (BJsales)&quot;
-#&gt; [4,] &quot;datasets&quot; &quot;C:/Program Files/R/R-4.1.1/library&quot; &quot;BOD&quot;                   
-#&gt; [5,] &quot;datasets&quot; &quot;C:/Program Files/R/R-4.1.1/library&quot; &quot;CO2&quot;                   
-#&gt; [6,] &quot;datasets&quot; &quot;C:/Program Files/R/R-4.1.1/library&quot; &quot;ChickWeight&quot;           
-#&gt;      Title                                           
-#&gt; [1,] &quot;Monthly Airline Passenger Numbers 1949-1960&quot;   
-#&gt; [2,] &quot;Sales Data with Leading Indicator&quot;             
-#&gt; [3,] &quot;Sales Data with Leading Indicator&quot;             
-#&gt; [4,] &quot;Biochemical Oxygen Demand&quot;                     
-#&gt; [5,] &quot;Carbon Dioxide Uptake in Grass Plants&quot;         
-#&gt; [6,] &quot;Weight versus age of chicks on different diets&quot;
+<p>在R中解析有 <strong>三種不同的變種</strong>：</p>
+<ul>
+<li>The read-eval-print loop</li>
+<li>Parsing of text files</li>
+<li>Parsing of character strings</li>
+</ul>
+<p>read-eval-print 是讀入文本，然後進行解析，然後求值，最後打印，這個就是我們日常看到的命令行操作。</p>
+<p>解析文件是parse函數來完成。</p>
+<p>解析字符串就是parse中用text參數來表示。</p>
+<h3 id="deparse">deparse</h3>
+<p>相對於parse,deparse 把<code>expression</code> 轉為字串。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> deparse(expression(1+2))
+#&gt; [1] &quot;expression(1 + 2)&quot;
 </code></pre>
-<p>如果覺得混亂,可以利用</p>
-<pre><code class="language-r">View(xx$results)
+<h3 id="quote">quote</h3>
+<p>quote() 的參數也是<code>expression</code>，返回類別<code>class</code>，可以再給<code>eval()</code>計算。
+<code>quote()</code>的參數雖然是<code>expression</code>但是不會進行計算，而是token分解。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> quote(1+2)
+#&gt; 1 + 2
+ typeof(quote(1+2)) 
+#&gt; [1] &quot;language&quot;
+ class(quote(1+2))
+#&gt; [1] &quot;call&quot;
 </code></pre>
-<p>因為是矩陣,所以不能以「$」得到Item的內容?</p>
-<pre><code class="language-r">xx$results$Item
-#&gt; Error in xx$results$Item: $ operator is invalid for atomic vectors
+<h3 id="eval">eval</h3>
+<h4 id="parse-和eval">parse() 和eval()</h4>
+<p>text --&gt;parse()--&gt; expression---&gt;eval()</p>
+<h4 id="quote-和eval">quote() 和eval()</h4>
+<p>expression --&gt;quote()--&gt; call---&gt;eval()</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> eval(quote(1+2))
+#&gt; [1] 3
 </code></pre>
-<pre><code class="language-r">head(xx$results[,'item'])
-#&gt; Error in xx$results[, &quot;item&quot;]: 下標超出邊界
+<p>一般是用parse從字符串（或者是硬盤上的文件）解析成一個expression對象，是表達式列表，不是一個表達式。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> eval(parse(text=&quot;1+2&quot;))
+#&gt; [1] 3
 </code></pre>
-<p>為甚麼錯誤?<br>
-因為大小寫,所以正確寫法為：</p>
-<pre><code class="language-r">head(xx$results[,'Item'])
-#&gt; [1] &quot;AirPassengers&quot;          &quot;BJsales&quot;                &quot;BJsales.lead (BJsales)&quot;
-#&gt; [4] &quot;BOD&quot;                    &quot;CO2&quot;                    &quot;ChickWeight&quot;
-</code></pre>
-<p>利用<code>grep()</code>可以拿到<code>mtcars</code>的位置：</p>
-<pre><code class="language-r">idx&lt;-grep('mtcars',xx$results[,'Item'])
-idx
-#&gt; [1] 72
-</code></pre>
-<p>確認</p>
-<pre><code class="language-r">xx$results[idx,'Item']
-#&gt;     Item 
-#&gt; &quot;mtcars&quot;
-</code></pre>
-<h2 id="常見錯誤">常見錯誤</h2>
-<h3 id="error">error</h3>
-<pre><code class="language-r">l0 &lt;- list(1, c(TRUE, FALSE), c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
-l0
-</code></pre>
-<blockquote>
-<p>正確念法：<br>
-正確念法 指派一個list給變數l0，裡面有三個元素，第一個元素是純量1，第二個元素是邏輯向量，長度為2，內容分別是TRUE, FALSE，第三個元素是字元向量，長度為3，內容分別是&quot;a&quot;, &quot;b&quot;, &quot;c&quot;</p>
-</blockquote>
-<pre><code class="language-r">names(l1) &lt;- c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;)
-</code></pre>
-<blockquote>
-<p>錯誤念法<br>
-設定names(li)等於集合(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;)</p>
-</blockquote>
-<blockquote>
-<p>正確念法：<br>
-將l1 這個list 的<strong>前3個</strong>元素名稱，分別指定為 A,B,C</p>
-</blockquote>
-<h3 id="error-1">error</h3>
-<pre><code class="language-r">l1$x &lt;- NULL
-</code></pre>
-<blockquote>
-<p>正確念法：<br>
-刪除元素名為x的元素。</p>
-</blockquote>
-<h3 id="error-2">error</h3>
-<pre><code class="language-r">l0 &lt;- list(1, c(TRUE, FALSE), c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
+<p>首先使用parse()函數將字符串轉化為表達式（expression），而後使用eval()函數對表達式求解。</p>
+<pre><code class="language-text">?eval
+# Evaluate an R expression in a specified environment.
+# Usage
+# eval(expr, envir = parent.frame(),
+#      enclos = if(is.list(envir) || is.pairlist(envir))
+#          parent.frame() else baseenv())
+# evalq(expr, envir, enclos)
+# eval.parent(expr, n = 1)
+# local(expr, envir = new.env())
 
-l1 &lt;- list(x = 1, y = c(TRUE, FALSE), z = c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))
-l1$x
-l1$y
-l1$z
-l1$m
 </code></pre>
-<blockquote>
-<p>念法
-建立list變數<code>l1</code>,名稱分別是x,y,z,內容分別是.......<br>
-l1$y 為邏輯向量<br>
-l1$z 為字元向量<br>
-🏷: <code>l1$x</code> === <code>l1[[1]]</code></p>
-</blockquote>
-
+<h4 id="substitue">substitue()</h4>
+<p>如果沒有第二個參數，是否substitue()==quote()?</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">(s.e &lt;- substitute(expression(a + b), list(a = 1)))  #&gt; expression(1 + b)
+#&gt; expression(1 + b)
+(s.s &lt;- substitute( a + b,            list(a = 1)))  #&gt; 1 + b
+#&gt; 1 + b
+</code></pre>
+<h2 id="討論">討論</h2>
+<h3 id="測試紀錄">測試紀錄</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">test1&lt;-function (..., list = character() ) 
+{
+    names &lt;- c(as.character(substitute(list(...))[-1L]), list)
+    return (names)
+}
+test1(x,y,list=&quot;data&quot;)
+#&gt; [1] &quot;x&quot;    &quot;y&quot;    &quot;data&quot;
+</code></pre>
+<p><code>names &lt;- c(as.character(substitute(list(...))[-1L]), list)</code></p>
+<ul>
+<li>list(...) 把傳進來的參數打包成list</li>
+<li>在執行list(...)的時候，如果傳進的參數是還沒有初值的變數，會出錯，因此用<code>substitute()</code>打包。
+<ul>
+<li>為什麼用substitute()就不會出錯，因為它不執行這個expression(e.g. list(...))。
+-為什麼可以不執行？因為<code>substitue()</code>有把它變成匿名函數(和call這個類別有關，自推論），這樣當然不會有問題。
+-為什麼有-1L?接續之前的推論，第一個元素應該是匿名函數的內建名稱。</li>
+</ul>
+</li>
+</ul>
+<p>所以整個函數，就是把使用者所有的參數，打成字串向量。如範例結果。</p>
+<h2 id="練習">練習</h2>
+<ol>
+<li>zeros(3,2),ones(2,3)</li>
+</ol>
+<p>hint:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">sapply(a,function(x) matrix(x,2,2), simplify='array')
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">zeros&lt;-function (nrow,ncol)
+{
+rst&lt;-sapply(c(0),function(x) matrix(x,nrow,ncol),simplify='array')
+  return(rst[,,1])
+}
+x&lt;-zeros(4,5)
+x
+#&gt;      [,1] [,2] [,3] [,4] [,5]
+#&gt; [1,]    0    0    0    0    0
+#&gt; [2,]    0    0    0    0    0
+#&gt; [3,]    0    0    0    0    0
+#&gt; [4,]    0    0    0    0    0
+</code></pre>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -668,15 +698,15 @@ l1$z 為字元向量<br>
   
     
           
-          <a href="../rlang/4_1_4_type_more.html" 
+          <a href="../rlang/6_1_programming.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=4.1.4&#32;type&#32;more>前</a>
+                   data-bs-placement="left" title=6.1&#32;Programming&#32;basic>前</a>
                    
           
-            <a href="../rlang/4_3_type_matrix.html" 
+            <a href="../rlang/7_function_1.html" 
                class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
-               title=4.3&#32;type&#32;matrix>後</a>            
+               title=7&#32;Function&#32;basic>後</a>            
           
           
 

@@ -407,23 +407,28 @@ td.lntd pre.chroma{
 }
 
 pre {
-    
-    
     line-height: 1.5rem;
     padding:0px;
     font-size:1rem; 
-    
+    overflow:hidden;
+    min-width:75%;
   }
-pre code {
-      color: inherit;
-      background: inherit;
-      white-space: inherit;
-      border: none; 
+pre code.hljs {
+      /*color: inherit;
+      background: inherit;*/ /*mytag:1 原先這是為了變換theme*/
+      white-space: inherit; 
+      /* border: none; mytag:1 warning 在前面,會蓋過去*/
       margin: 0;
       display:block;
-      
+      overflow:inherit;
+      width:100%;
 }
 
+pre:hover, pre:focus { 
+    overflow:visible;
+    min-width: 100%;
+    width: max-content!important; 
+}
  
   table:not(.lntable) {
     border: 1px solid #1C6EA4;

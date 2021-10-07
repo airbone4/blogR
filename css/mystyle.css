@@ -18,12 +18,12 @@ visibility:visible;
 padding: .2em;
 background-color: #ffc107;
 }
-
+/*
+mytag:1
 #body-inner pre code.hljs {
-
-background: black;
+background: #282c34;
 }
-
+*/
 #body-inner ul {
 list-style-type: none;
 padding-left: 20px;
@@ -125,9 +125,9 @@ opacity: 100;
 
 .tooltiptext {
 visibility: hidden;
-max-width: 240px;
+max-width: 480px;
+min-width: 250px;
 width: max-content;
-/*width: fit-content;*/
 color: #fff !important;
 background-color: red !important;
 font-weight: bold;
@@ -137,9 +137,10 @@ padding: 2px 0;
 
 /* Position the tooltip */
 position: absolute;
-z-index: 1;
-left: 4.5rem;
+z-index: 1000;
+left: 1.8rem;
 top: 0rem;
+
 }
 .tooltiptext span{
   color:#fff !important;
