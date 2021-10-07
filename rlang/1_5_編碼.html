@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1633579087" rel="stylesheet">
-    <link href="../css/syntax.css?1633579087" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1633579087"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1633583899" rel="stylesheet">
+    <link href="../css/syntax.css?1633583899" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1633583899"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1633579087" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1633583899" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1633579087" rel="stylesheet">
+    <link href="../css/theme-mine.css?1633583899" rel="stylesheet">
     
-    <link href="../css/theme.css?1633579087" rel="stylesheet">
+    <link href="../css/theme.css?1633583899" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -52,7 +52,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 1, 2021'>1.5 編碼</span>
+      title='最後修改October 7, 2021'>1.5 編碼</span>
         
     
 
@@ -505,7 +505,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/6_2_programming.html"> <i class="far fa-clock" ></i>6.2 Programming[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-07 AM 11:48]</a></li><li><a href="../rlang/7_function_1.html"> <i class="far fa-clock" ></i>7 Function basic[2021-10-07 AM 11:44]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/4_1_1_type_basic.html"> <i class="far fa-clock" ></i>4.1.1 type basic[2021-10-07 PM 01:18]</a></li><li><a href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-10-07 PM 12:37]</a></li><li><a href="../rlang/6_2_programming.html"> <i class="far fa-clock" ></i>6.2 Programming[2021-10-07 AM 11:48]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -673,13 +673,13 @@ data &lt;- iconv(data, &quot;big5&quot;, &quot;utf8&quot;) # 將資料轉成 UTF
 但是如果不是UTF-8,則指定編碼
 <code>read.csv(&quot;japanese_shiftjis.csv&quot;, fileEncoding = &quot;SHIFT-JIS&quot;)</code>
 問題是windows:</p>
-<pre><code class="language-r?lang=r?preclass=.ms-5">if(!require(readr)){
+<pre><code class="language-r?lang=r?class=.ms-5.source">if(!require(readr)){
     install.packages(&quot;readr&quot;,dependencies=T)
 }
 </code></pre>
 <pre><code>#&gt; 載入需要的套件：readr
 </code></pre>
-<pre><code class="language-r?lang=r?preclass=.ms-5">options(stringsAsFactors = FALSE)
+<pre><code class="language-r?lang=r?class=.ms-5.source">options(stringsAsFactors = FALSE)
 
 df&lt;-read_csv(&quot;resources/wh_zh_utf8.csv&quot;,
              comment=&quot;#&quot;,
@@ -696,7 +696,7 @@ df&lt;-read_csv(&quot;resources/wh_zh_utf8.csv&quot;,
 #&gt; i Use `spec()` to retrieve the full column specification for this data.
 #&gt; i Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </code></pre>
-<pre><code class="language-r?lang=r?preclass=.ms-5">knitr::kable(df)
+<pre><code class="language-r?lang=r?class=.ms-5.source">knitr::kable(df)
 </code></pre>
 <table>
 <thead>
@@ -729,7 +729,7 @@ df&lt;-read_csv(&quot;resources/wh_zh_utf8.csv&quot;,
 </tr>
 </tbody>
 </table>
-<pre><code class="language-r?lang=r?preclass=.ms-5">df&lt;-read_csv(&quot;resources/wh_zh_950.csv&quot;,
+<pre><code class="language-r?lang=r?class=.ms-5.source">df&lt;-read_csv(&quot;resources/wh_zh_950.csv&quot;,
              comment=&quot;#&quot;,
              locale = locale(encoding = &quot;big5&quot;) )
 </code></pre>
@@ -744,7 +744,7 @@ df&lt;-read_csv(&quot;resources/wh_zh_utf8.csv&quot;,
 #&gt; i Use `spec()` to retrieve the full column specification for this data.
 #&gt; i Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </code></pre>
-<pre><code class="language-r?lang=r?preclass=.ms-5">#<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >❌zh_TW,cht, Chinese (Traditional)_Taiwan.950。✔:big5 </span></span>
+<pre><code class="language-r?lang=r?class=.ms-5.source">#<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >❌zh_TW,cht, Chinese (Traditional)_Taiwan.950。✔:big5 </span></span>
 
 knitr::kable(df)
 </code></pre>
@@ -780,7 +780,7 @@ knitr::kable(df)
 </tbody>
 </table>
 <h2 id="輔助">輔助</h2>
-<pre><code class="language-r?lang=r?preclass=.ms-5.w-75">hugocmd(&quot;expand&quot; ,'title=&quot;&quot; incode=true')
+<pre><code class="language-r?lang=r?class=.ms-5.w-75.source">hugocmd(&quot;expand&quot; ,'title=&quot;&quot; incode=true')
 #&gt; <div data-nopre class="expand">
     <div data-nopre class="expand-label" onclick="vexpand(this)">
         <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
@@ -987,7 +987,7 @@ hugocmd(m=&#34;expand&#34; ,end=T)
 }
 </code></pre>
 <p>工具程式</p>
-<pre><code class="language-r?lang=r?preclass=ms-5">details &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.ms-5.source">details &lt;- function(x) {
     details &lt;-
         list(x=x,encoding=Encoding(x),bytes=nchar(x,&quot;b&quot;),chars=nchar(x,&quot;c&quot;),
              width=nchar(x,&quot;w&quot;),raw=paste(charToRaw(x),collapse=&quot;:&quot;))
@@ -1017,7 +1017,7 @@ details(y)
 #&gt;      x      encoding bytes chars width raw                
 #&gt; [1,] &quot;你好&quot; &quot;UTF-8&quot;  6     2     4     &quot;e4:bd:a0:e5:a5:bd&quot;
 </code></pre>
-<p>初步結論就是big5的雙位元,應該都是ASCII,因此轉換都出問題。用enc2utf8(),enc2native()應該是比較符合windows10系統的方法。</p>
+<p>初步結論就是系統使用big5的雙位元。用enc2utf8(),enc2native()應該是比較符合windows10系統的方法。</p>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -1045,8 +1045,8 @@ details(y)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1633579087" rel="stylesheet">
-<script src="../js/quicknote.js?1633579087"></script>
+<link href="../css/quicknote.css?1633583900" rel="stylesheet">
+<script src="../js/quicknote.js?1633583900"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1064,7 +1064,7 @@ details(y)
           
 
   
-<script src="../js/packhtml.js?1633579087"></script>    
+<script src="../js/packhtml.js?1633583900"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1074,25 +1074,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1633579087"></script>
-  <script src="../js/featherlight.gallery.min.js?1633579087"></script>
-  <link href="../css/featherlight.min.css?1633579087" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1633579087" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1633583900"></script>
+  <script src="../js/featherlight.gallery.min.js?1633583900"></script>
+  <link href="../css/featherlight.min.css?1633583900" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1633583900" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1633579087"></script>
+  <script src="../js/highlight.pack.js?1633583900"></script>
   
-  <script src="../js/hugohelper.js?1633579087"></script>
+  <script src="../js/hugohelper.js?1633583900"></script>
 
-  <link href="../css/rmd.css?1633579087" rel="stylesheet">
-  <link href="../css/mystyle.css?1633579087" rel="stylesheet">    
-  <script src='../js/variant.js?1633579087'></script>
+  <link href="../css/rmd.css?1633583900" rel="stylesheet">
+  <link href="../css/mystyle.css?1633583900" rel="stylesheet">    
+  <script src='../js/variant.js?1633583900'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1633579087'></script>
+<script src='../js/localsearch.js?1633583900'></script>
     
 
 
