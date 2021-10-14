@@ -29,27 +29,29 @@ list-style-type: none;
 padding-left: 20px;
 margin-left: 2rem;
 }
-#body-inner ul ul{
+
+#body-inner ul  ul{
 margin-left:unset;
 }
+
 #body-inner ul p {
 padding:0px;
 margin:0px;
 }
-#body-inner ul li {
+#body-inner ul > li {
 position: relative;
 padding-left: 5px;
-padding-bottom: 0.5rem;
+padding-bottom: 0.2rem;
 }
-#body-inner ul li::marker {
+#body-inner ul > li::marker {
 content: "📌";
 font-size:60%;
 }
-#body-inner ul li li::marker{
+#body-inner ul > li > ul > li::marker{
 content: "✔";
 font-size:60%;
 }
-#body-inner ul li li li::marker{
+#body-inner ul > li > ul > li > ul > li::marker{
 content: "✔";
 font-size:60%;
 }
@@ -125,7 +127,7 @@ opacity: 100;
 
 .tooltiptext {
 visibility: hidden;
-max-width: 480px;
+max-width: 100%;
 min-width: 250px;
 width: max-content;
 color: #fff !important;
@@ -138,8 +140,8 @@ padding: 2px 0;
 /* Position the tooltip */
 position: absolute;
 z-index: 1000;
-left: 1.8rem;
-top: 0rem;
+left: 1rem;
+top: 1rem;
 
 }
 .tooltiptext span{
@@ -150,7 +152,7 @@ top: 0rem;
   color: inherit !important;
   border:none !important;
 }
-.codenote:hover .tooltiptext {
+.codenote:hover .tooltiptext, .tooltiptext:focus {
 visibility: visible;
 }
 #body-inner a.mynote {

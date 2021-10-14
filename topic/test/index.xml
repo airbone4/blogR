@@ -25,7 +25,24 @@ Keywords These are all keywords with more than one emoji associated with them.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/test/testpage.html</guid>
-      <description> By default, the publish directory is the public/ directory. However, when hosting a website on GitHub, GitHub can only recognize website files within the docs/ folder. We need to change the default publish directory from public/ to docs/.</description>
+      <description>&lt;script src=&#34;testpage_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;testpage_files/dygraphs-1.1.1/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;testpage_files/dygraphs-1.1.1/dygraph-combined.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/dygraphs-1.1.1/shapes.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/moment-2.8.4/moment.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/moment-timezone-0.2.5/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/moment-fquarter-1.0.0/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/dygraphs-binding-1.1.1.6/dygraphs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;testpage_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;testpage_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;testpage_files/jquery-3.6.0/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;testpage_files/dt-core-1.10.20/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;testpage_files/dt-core-1.10.20/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;testpage_files/dt-core-1.10.20/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;testpage_files/crosstalk-1.1.1/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;testpage_files/crosstalk-1.1.1/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;</description>
     </item>
     
   </channel>

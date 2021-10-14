@@ -213,9 +213,10 @@ function hugo_unescape(str){
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  //var list = document.querySelectorAll("code[class^='language-.?']");
-  var list = document.querySelectorAll("pre code");
   
+  //var list = document.querySelectorAll("pre code");
+  
+  var list = document.querySelectorAll("pre:not(.chroma) code");
   for (let i = 0; i < list.length; i++) {
     codenode = list[i]
     let parent = codenode.closest("pre");

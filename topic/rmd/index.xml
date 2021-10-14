@@ -26,7 +26,7 @@ markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/rmd/04_rmd_hook.html</guid>
-      <description>快遞 knitr::opts_chunk$set(echo = FALSE, collapse = TRUE,comment = &amp;quot;#&amp;gt;&amp;quot;,fig.path = &amp;quot;graphics/knitr-&amp;quot;,fig.retina = 2, # Control using dpifig.width = 6, # generated imagesfig.pos = &amp;quot;t&amp;quot;, # pdf modefig.align = &amp;quot;center&amp;quot;,dpi = if (knitr::is_latex_output()) 72 else 300, out.width = &amp;quot;100%&amp;quot;,dev = &amp;quot;svg&amp;quot;,dev.args = list(png = list(type = &amp;quot;cairo-png&amp;quot;)), #🏷註解👏 optipng = &amp;quot;-o1 -quiet&amp;quot;) ⛳Graphics Device  The graphics device is the default device for used to create and provide graphics.</description>
+      <description>快遞 knitr::opts_chunk$set(echo = FALSE, collapse = TRUE,comment = &amp;quot;#&amp;gt;&amp;quot;,fig.path = &amp;quot;graphics/knitr-&amp;quot;,fig.retina = 2, # Control using dpifig.width = 6, # generated imagesfig.pos = &amp;quot;t&amp;quot;, # pdf modefig.align = &amp;quot;center&amp;quot;,dpi = if (knitr::is_latex_output()) 72 else 300, out.width = &amp;quot;100%&amp;quot;,dev = &amp;quot;svg&amp;quot;,dev.args = list(png = list(type = &amp;quot;cairo-png&amp;quot;)), #🏷註解👏optipng = &amp;quot;-o1 -quiet&amp;quot;) ⛳Graphics Device  The graphics device is the default device for used to create and provide graphics.</description>
     </item>
     
     <item>

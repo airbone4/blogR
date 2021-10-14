@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html><head>
+  <title>6.3 function - apply family</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <link href="../css/atom-one-dark-reasonable.css?1634183274" rel="stylesheet">
+    <link href="../css/syntax.css?1634183274" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634183274"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1634183274" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1634183274" rel="stylesheet">
+    
+    <link href="../css/theme.css?1634183274" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#apply">apply</a></li>
+    <li><a href="#lapply函數">lapply函數</a></li>
+    <li><a href="#sapply函數">sapply函數</a></li>
+    <li><a href="#比較">比較</a></li>
+    <li><a href="#vapply函數">vapply函數</a>
+      <ul>
+        <li><a href="#vapply練習">vapply練習❓</a></li>
+      </ul>
+    </li>
+    <li><a href="#mapply函數">mapply函數</a></li>
+    <li><a href="#tapply函數">tapply函數</a></li>
+    <li><a href="#rapply函數">rapply函數</a></li>
+    <li><a href="#eapply函數">eapply函數</a></li>
+    <li><a href="#範例">範例</a>
+      <ul>
+        <li><a href="#將每個rmd檔案中需要的函數庫列表">將每個rmd檔案中需要的函數庫列表</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改October 10, 2021'>6.3 function - apply family</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" title="1.4 R Package">1.4 R Package</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" title="2.0 基本輸出輸入">2.0 基本輸出輸入</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="4.1 基本">4.1 基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2 練習">4.1.2 練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" title="4.2 向量">4.2 向量</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 矩陣">4.3 矩陣</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 list">4.4 list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串">4.5 字串</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 更多">4.7 更多</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_objectbasic.html" data-bs-toggle="tooltip" title="5 R的物件相關概念">5 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="5.1 物件導向S3">5.1 物件導向S3</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot.html" data-bs-toggle="tooltip" title="9.1 基本繪圖">9.1 基本繪圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" title="9.2 多圖疊圖">9.2 多圖疊圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 Plot more">9.3 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/xx.html" data-bs-toggle="tooltip" title="Inverse Transform Sampling">Inverse Transform Sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/4_5_type_string_function.html"> <i class="far fa-clock" ></i>4.5 字串[2021-10-14 AM 11:32]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <ul>
+<li><a href="https://kemushi54.github.io/R-basic/apply_family.html">其他參考</a></li>
+</ul>
+<h2 id="apply">apply</h2>
+<p>可以處理的對象包括 矩陣、資料集、陣列(二維、多維)，可以指定直行、橫行。</p>
+<p>函數定義：</p>
+<pre><code>apply(X, MARGIN, FUN, ...)
+</code></pre>
+<p>參數列表：</p>
+<ul>
+<li>X : 矩陣matrix、資料集dataframe  、陣列 array</li>
+<li>MARGIN :  1表示橫行，2表示直行</li>
+<li>FUN : the function to be applied</li>
+<li>... : optional arguments to FUN</li>
+</ul>
+<p>在matlab 中,sum(矩陣,參數2) 參數2的可能值為1或2，分別指定欄位加總或是橫行加總,但是在R中sum(矩陣),卻是整個矩陣元素的加總。</p>
+<p>範例1: 橫行加總</p>
+<pre><code class="language-r?lang=r?class=.source">x&lt;-matrix(1,ncol=4,nrow=3);x
+#&gt;      [,1] [,2] [,3] [,4]
+#&gt; [1,]    1    1    1    1
+#&gt; [2,]    1    1    1    1
+#&gt; [3,]    1    1    1    1
+apply(x,1,sum)
+#&gt; [1] 4 4 4
+</code></pre>
+<p>範例：</p>
+<p>有一個list,裡面有2個欄位，分別是x1,x2,想要分別算出每個欄位的最小和最大</p>
+<pre><code class="language-r?lang=r?class=.source">
+x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
+f1&lt;- function(col) {
+   c(min(col),max(col)) 
+ }
+
+ apply(x,2,f1)
+#&gt;      x1 x2
+#&gt; [1,]  3  1
+#&gt; [2,]  3  6
+</code></pre>
+<p>練習：如果用for loop?</p>
+<p>練習：哪種方式比較快？hint:利用 system.time(a function)</p>
+<h2 id="lapply函數">lapply函數</h2>
+<p>大綱：lapply(),sapply(),vapply() 都參數都吃list 或者vector。</p>
+<p>函數定義：</p>
+<pre><code>lapply(X, FUN, ...)
+</code></pre>
+<p>參數列表：</p>
+<ul>
+<li>X: list、vector、data.frame</li>
+<li>FUN: 自定義的調用函數</li>
+<li>…: 更多參數，可選</li>
+</ul>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="w-50 m-auto">
+<thead class="">
+<tr>
+<th style="text-align:right">輸入</th>
+<th style="text-align:left">輸出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">vector</td>
+<td style="text-align:left">list</td>
+</tr>
+<tr>
+<td style="text-align:right">list</td>
+<td style="text-align:left">list</td>
+</tr>
+<tr>
+<td style="text-align:right">data.frame</td>
+<td style="text-align:left">list</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>函數比較</p>
+<ul>
+<li>lapply(), sapply()差別是 前者返回list,後者返回matrix;</li>
+<li>sapply(), vapply() 差別是，後者可以加入row names。</li>
+</ul>
+<p>範例:計算list中的每個KEY對應 的5個Tukey分位數 (minimum, lower-hinge, median, upper-hinge, maximum) 。利用<code>fivenum()</code></p>
+<pre><code class="language-r?lang=r?class=.source">x &lt;- list(a = 1:6, b = rnorm(2,6,8));x
+#&gt; $a
+#&gt; [1] 1 2 3 4 5 6
+#&gt; 
+#&gt; $b
+#&gt; [1]  8.390067 12.241047
+lapply(x,fivenum)
+#&gt; $a
+#&gt; [1] 1.0 2.0 3.5 5.0 6.0
+#&gt; 
+#&gt; $b
+#&gt; [1]  8.390067  8.390067 10.315557 12.241047 12.241047
+</code></pre>
+<p>lapply 的參數如果是 list、data.frame，返回和參數長度同樣的list結構作為結果(欄位數)。</p>
+<p>例如，傳入的參數是data.frame(),如下，對資料集的每個欄位求和。</p>
+<pre><code class="language-r?lang=r?class=.source">lapply(data.frame(x), sum)
+#&gt; $a
+#&gt; [1] 21
+#&gt; 
+#&gt; $b
+#&gt; [1] 61.89334
+</code></pre>
+<p>apply不同的地方是,如果參數是<code>矩陣</code>沒辦法指定橫行或是直行的區別,只能是逐個元素運算。就是則會對每個元素求函數值。</p>
+<pre><code class="language-r?lang=r?class=.source">
+x &lt;- matrix(rnorm(4,5,10),nrow=2);x
+#&gt;           [,1]      [,2]
+#&gt; [1,]  9.312188 17.361502
+#&gt; [2,] -1.090958 -5.001089
+ lapply(x, sum)
+#&gt; [[1]]
+#&gt; [1] 9.312188
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] -1.090958
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 17.3615
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] -5.001089
+</code></pre>
+<h2 id="sapply函數">sapply函數</h2>
+<p>sapply函數包裹了一上面提到的<code>lapply()</code>，返回值為向量，而不是list對象。sapply增加了2個參數simplify和USE.NAMES，</p>
+<p>函數定義：</p>
+<pre><code>sapply(X, FUN, ..., simplify=TRUE, USE.NAMES = TRUE)
+</code></pre>
+<p>參數列表：</p>
+<ul>
+<li>X: list、matrix、data.frame</li>
+<li>FUN: 自定義的調用函數</li>
+<li>…: 更多參數，可選</li>
+<li>simplify: 預設為T,返為值為向量；如果是F成list。? 設定為&quot;array&quot;時，輸出結果按數組進行分組</li>
+<li>USE.NAMES: 如果X為字符串，TRUE設置字符串為數據名，FALSE不設置</li>
+</ul>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="w-50 m-auto">
+<thead class="">
+<tr>
+<th style="text-align:right">輸入</th>
+<th style="text-align:left">輸出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">vector</td>
+<td style="text-align:left">vector,matrix,array,list</td>
+</tr>
+<tr>
+<td style="text-align:right">list</td>
+<td style="text-align:left">vector,matrix,array,list</td>
+</tr>
+<tr>
+<td style="text-align:right">data.frame</td>
+<td style="text-align:left">vector,matrix,array,list</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div class="notices  m-auto w-75">
+    <div class="info">
+        <p>simplify=FALSE和USE.NAMES=FALSE，則 sapply函數 ＝lapply函數。</p>
+<p>如果我們利用函數<code>unlist</code> 配合 lapply 的返回值，也可以得到向量，例如：
+<code>unlist(lapply(1:3, function(x) x^2))</code></p>
+
+    </div>
+</div>
+
+<p>常見範例</p>
+<pre><code class="language-r?lang=r?class=.ms-5.source">sapply(2:4, seq)
+#&gt; [[1]]
+#&gt; [1] 1 2
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] 1 2 3
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 1 2 3 4
+# data.frame
+sapply(data.frame(x), sum)
+#&gt;        X1        X2 
+#&gt;  8.221229 12.360413
+# 確認返回類別
+lapply(x, sum)
+#&gt; [[1]]
+#&gt; [1] 9.312188
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] -1.090958
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 17.3615
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] -5.001089
+class(lapply(x, sum))
+#&gt; [1] &quot;list&quot;
+sapply(x, sum)
+#&gt; [1]  9.312188 -1.090958 17.361502 -5.001089
+class(sapply(x, sum))
+#&gt; [1] &quot;numeric&quot;
+sapply(x, sum, simplify=FALSE, USE.NAMES=FALSE)
+#&gt; [[1]]
+#&gt; [1] 9.312188
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] -1.090958
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 17.3615
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] -5.001089
+class(sapply(x, sum, simplify=FALSE, USE.NAMES=FALSE))
+#&gt; [1] &quot;list&quot;
+</code></pre>
+<p>❌對欄位作統計運算的錯誤範例</p>
+<pre><code class="language-r?lang=r?class=.source">x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
+x
+#&gt;      x1 x2
+#&gt; [1,]  3  1
+#&gt; [2,]  3  2
+#&gt; [3,]  3  3
+#&gt; [4,]  3  4
+#&gt; [5,]  3  5
+#&gt; [6,]  3  6
+sapply(x, sum)  #結果類似lapply() <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >將陣列元素帶入函數</span></span>
+#&gt;  [1] 3 3 3 3 3 3 1 2 3 4 5 6
+sapply(x, quantile)   
+#&gt;      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12]
+#&gt; 0%      3    3    3    3    3    3    1    2    3     4     5     6
+#&gt; 25%     3    3    3    3    3    3    1    2    3     4     5     6
+#&gt; 50%     3    3    3    3    3    3    1    2    3     4     5     6
+#&gt; 75%     3    3    3    3    3    3    1    2    3     4     5     6
+#&gt; 100%    3    3    3    3    3    3    1    2    3     4     5     6
+</code></pre>
+<div class="position-relative warning ms-5">
+解釋上面出錯的原因。<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-09170">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-09170"><p>hint: 
+sapply會調用函數<code>lapply()</code>(<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >🐱‍👤簡化的sapply來自於複雜的lapply</span></span>)，而已經知道lapply()的參數是矩陣的時候，每個元素都會被傳到函數。因此欄位有12個；</p>
+<p>又，每個quantile()傳回5個元素，因此，橫行有5個。
+正確的作法是：</p>
+<pre><code class="language-r?lang=r?class=.source">x &lt;- list(x1 = 3, x2 = c(1:6))
+sapply(x, quantile)   
+#&gt;      x1   x2
+#&gt; 0%    3 1.00
+#&gt; 25%   3 2.25
+#&gt; 50%   3 3.50
+#&gt; 75%   3 4.75
+#&gt; 100%  3 6.00
+</code></pre>
+</div>
+
+<p>另一個範例</p>
+<pre><code class="language-r">localeCategories &lt;- c(&quot;LC_COLLATE&quot;,&quot;LC_CTYPE&quot;,&quot;LC_MONETARY&quot;,&quot;LC_NUMERIC&quot;,&quot;LC_TIME&quot;)
+locales &lt;- setNames(sapply(localeCategories, Sys.getlocale), localeCategories)
+</code></pre>
+<p>範例：USE.NAMES=TRUE</p>
+<pre><code class="language-r?lang=r?class=.source">alist&lt;-list(a=c(1,1,1),b=c(2,2,2),c=c(3,3,3))
+f2&lt;-function(x)
+{
+  mean(alist[[x]])
+}
+sapply(c(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;),f2,USE.NAMES = T)
+#&gt; a b c 
+#&gt; 1 2 3
+</code></pre>
+<p>對於simplify為array時，我們可以參考下面的例子，構建一個三維數組，其中二個維度為方陣。</p>
+<pre><code class="language-r?lang=r?class=.source">
+a&lt;-1:2
+# 按數組分組
+sapply(a,function(x) matrix(x,2,2), simplify='array')
+#&gt; , , 1
+#&gt; 
+#&gt;      [,1] [,2]
+#&gt; [1,]    1    1
+#&gt; [2,]    1    1
+#&gt; 
+#&gt; , , 2
+#&gt; 
+#&gt;      [,1] [,2]
+#&gt; [1,]    2    2
+#&gt; [2,]    2    2
+
+# 默認情況，則自動合併分組
+sapply(a,function(x) matrix(x,2,2))
+#&gt;      [,1] [,2]
+#&gt; [1,]    1    2
+#&gt; [2,]    1    2
+#&gt; [3,]    1    2
+#&gt; [4,]    1    2
+</code></pre>
+<h2 id="比較">比較</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Arguments</th>
+<th>Objective</th>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apply</td>
+<td>apply(x, MARGIN, FUN)</td>
+<td>Apply a function to the rows or columns or both</td>
+<td>Data frame or matrix</td>
+<td>vector, list, array</td>
+</tr>
+<tr>
+<td>lapply</td>
+<td>lapply(X, FUN)</td>
+<td>Apply a function to all the elements of the input</td>
+<td>List, vector or data frame</td>
+<td>list</td>
+</tr>
+<tr>
+<td>sapply</td>
+<td>sappy(X FUN)</td>
+<td>Apply a function to all the elements of the input</td>
+<td>List, vector or data frame</td>
+<td>vector or matrix</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-r?lang=r?class=.source">m&lt;-matrix(1:4,4,3);m
+#&gt;      [,1] [,2] [,3]
+#&gt; [1,]    1    1    1
+#&gt; [2,]    2    2    2
+#&gt; [3,]    3    3    3
+#&gt; [4,]    4    4    4
+sapply(1:3, function(x) mean(m[,x]))
+#&gt; [1] 2.5 2.5 2.5
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source">m&lt;-matrix(1:4,4,3);
+lapply(1:3, function(x) mean(m[,x]))
+#&gt; [[1]]
+#&gt; [1] 2.5
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] 2.5
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] 2.5
+</code></pre>
+<h2 id="vapply函數">vapply函數</h2>
+<p>vapply類似於sapply，提供了FUN.VALUE參數，用來控制返回值的行名。</p>
+<p>note: <code>sapply()</code> 配上<code>rownames&lt;-</code> 可以達到一樣的效果。</p>
+<p>函數定義：</p>
+<pre><code>vapply(X, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)
+</code></pre>
+<p>參數列表(前3個需要)：</p>
+<ul>
+<li>X:array、matrix、data.frame</li>
+<li>FUN: 使用者指定的函數,可以是自定義的函數</li>
+<li>FUN.VALUE:
+<ul>
+<li>例如,logistic(1),也就是對傳進來的每個參數,都要產生邏輯值向量,且長度為1。</li>
+<li>可以記為對每一紀錄給名稱(e.g. row.names)</li>
+</ul>
+</li>
+<li>…: 更多參數，可選</li>
+<li>USE.NAMES: 如果X為字符串，TRUE設置字符串為數據名，FALSE不設置</li>
+</ul>
+<pre><code class="language-r?lang=r?class=.source">x &lt;- cbind(x1 = 3, x2 = c(1:6)); # x 是矩陣
+x&lt;-data.frame(x) # ✔因為在f1()中要對每個欄位求最小最大,不能是矩陣(會對整個矩陣找最小最大) 
+f1&lt;- function(col) {
+   c(min(col),max(col)) 
+  
+}
+r1&lt;-vapply(x,f1, numeric(2)) # 
+# ❌vapply(x,f1, numeric(1)) # ❓為甚麼錯誤 
+# <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >#👏因為f1的返回值為向量,且長度為2</span></span>
+r2&lt;-vapply(x,f1,c(&quot;min&quot;=0,&quot;max&quot;=0)) # FUN.VALUE 是一個named vector
+# ❌vapply(x,f1,FUN.VALUE = c(&quot;min&quot;,&quot;max&quot;)) # ❓為甚麼錯誤 
+# <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏因為這裡說返回值是長度為2的字串向量</span></span>
+r1
+#&gt;      x1 x2
+#&gt; [1,]  3  1
+#&gt; [2,]  3  6
+r2
+#&gt;     x1 x2
+#&gt; min  3  1
+#&gt; max  3  6
+</code></pre>
+<h3 id="vapply練習">vapply練習❓</h3>
+<p>想要列出每個欄位的類別,以內建資料集mtcars 作為練習。</p>
+<div class="collapse info" id="unnamed-chunk-15"><pre><code class="language-r?lang=r?class=.source">fieldType&lt;-vapply(mtcars,class,character(1))
+print(fieldType)
+</code></pre>
+</div>
+
+<div class="position-relative warning ms-5">
+<pre><code class="language-r?lang=r?class=.output">      mpg       cyl      disp        hp      drat        wt      qsec        vs 
+&quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; 
+       am      gear      carb 
+&quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot; 
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#unnamed-chunk-15">提示</button>
+</div>    
+
+
+<h2 id="mapply函數">mapply函數</h2>
+<p>函數定義：</p>
+<pre><code>mapply(FUN, ..., MoreArgs = NULL, SIMPLIFY = TRUE,USE.NAMES = TRUE)
+</code></pre>
+<p>參數列表：</p>
+<ul>
+<li>FUN: 自定義的調用函數</li>
+<li>…: 接收多個數據</li>
+<li>MoreArgs: 參數列表</li>
+<li>SIMPLIFY: 是否轉矩陣，當值array時，輸出結果按數組進行分組</li>
+<li>USE.NAMES: 如果X為字符串，TRUE設置字符串為數據名，FALSE不設置</li>
+</ul>
+<ul>
+<li>如果Fun=f(x)，則 mapply(f,a1,a2)的執行是：<br>
+f(a1), f(a2)</li>
+<li>如果Fun=f(x,y)，則 mapply(f,a1,a2)的執行是：<br>
+f(a1, a2)</li>
+</ul>
+<p>比如，比較3個向量大小，按索引順序取較大的值。</p>
+<pre><code class="language-r?lang=r?class=.source">
+set.seed(1)
+
+# 定義3個向量
+x&lt;-1:10
+y&lt;-5:-4
+z&lt;-round(runif(10,-5,5))
+
+# 按索引順序取較大的值。
+mapply(max,x,y,z)
+#&gt;  [1]  5  4  3  4  5  6  7  8  9 10
+</code></pre>
+<p>再看一個例子，生成4個符合正態分佈的數據集，分別對應的均值和方差為c(1,10,100,1000)。</p>
+<pre><code class="language-r?lang=r?class=.source">
+set.seed(1)
+
+# 長度為4
+n&lt;-rep(4,4)
+
+# m為均值，v為方差
+m&lt;-v&lt;-c(1,10,100,1000)
+
+# 生成4組數據，按列分組
+mapply(rnorm,n,m,v)
+#&gt;           [,1]      [,2]      [,3]       [,4]
+#&gt; [1,] 0.3735462 13.295078 157.57814   378.7594
+#&gt; [2,] 1.1836433  1.795316  69.46116 -1214.6999
+#&gt; [3,] 0.1643714 14.874291 251.17812  2124.9309
+#&gt; [4,] 2.5952808 17.383247 138.98432   955.0664
+</code></pre>
+<h2 id="tapply函數">tapply函數</h2>
+<p>tapply用於分組的循環計算，通過INDEX參數可以把數據集X進行分組，相當於group by的操作。</p>
+<p>函數定義：</p>
+<pre><code>tapply(X, INDEX, FUN = NULL, ..., simplify = TRUE)
+</code></pre>
+<p>參數列表：</p>
+<ul>
+<li>X: 向量</li>
+<li>INDEX: 用於分組的索引</li>
+<li>FUN: 自定義的調用函數</li>
+<li>…: 接收多個數據</li>
+<li>simplify : 是否數組化，當值array時，輸出結果按數組進行分組</li>
+</ul>
+<p>比如，計算不同品種的鳶尾花的花瓣(iris)長度的均值。</p>
+<pre><code class="language-r?lang=r?class=.source">
+# 通過iris$Species品種進行分組
+tapply(iris$Petal.Length,iris$Species,mean)
+#&gt;     setosa versicolor  virginica 
+#&gt;      1.462      4.260      5.552
+</code></pre>
+<p>分組求和的範例。</p>
+<pre><code class="language-r?lang=r?class=.source">
+set.seed(1)
+x&lt;-1:10
+
+# 亂術分成3組，分別是0,1,2 
+t&lt;-round(runif(10,1,100)%%2);t
+#&gt;  [1] 1 2 2 1 1 2 1 0 1 1
+
+# 對x進行分組求和
+tapply(x,t,sum)
+#&gt;  0  1  2 
+#&gt;  8 36 11
+</code></pre>
+<h2 id="rapply函數">rapply函數</h2>
+<h2 id="eapply函數">eapply函數</h2>
+<p>函數定義：</p>
+<pre><code>eapply(env, FUN, ..., all.names = FALSE, USE.NAMES = TRUE)
+</code></pre>
+<p>練習：<br>
+1 把iris 每個欄位的加總列出
+iris 有一個欄位是factor</p>
+<h2 id="範例">範例</h2>
+<h3 id="將每個rmd檔案中需要的函數庫列表">將每個rmd檔案中需要的函數庫列表</h3>
+<pre><code class="language-r">#setwd(~/directory1/)
+libs = lapply(list.files(pattern = &quot;\\.Rmd$&quot;),
+              function(x){
+                  d = readLines(x)
+                  d = d[grepl(&quot;library\\(.*\\)&quot;, d)]
+                  gsub(&quot;library\\((.*)\\)&quot;, &quot;\\1&quot;, d)
+              })
+unique(unlist(libs))
+</code></pre>
+<p>note:<br>
+grepl :　邏輯值<br>
+gsub :　只拿取library(&quot;函數庫名稱&quot;)中的&quot;函數庫名稱&quot;。</p>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1634183274" rel="stylesheet">
+<script src="../js/quicknote.js?1634183274"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/6_2_programming.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=6.2&#32;Programming>前</a>
+                   
+          
+            <a href="../rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=8.1.&#32;自製套件>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1634183274"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1634183274"></script>
+  <script src="../js/featherlight.gallery.min.js?1634183274"></script>
+  <link href="../css/featherlight.min.css?1634183274" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634183274" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1634183274"></script>
+  
+  <script src="../js/hugohelper.js?1634183274"></script>
+
+  <link href="../css/rmd.css?1634183274" rel="stylesheet">
+  <link href="../css/mystyle.css?1634183274" rel="stylesheet">    
+  <script src='../js/variant.js?1634183274'></script>
+
+<script>
+  
+    let idxfile = "\/blogR\/index.json"  
+  
+</script>
+<script src='../js/localsearch.js?1634183274'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']  , ['\\[','\\]']] 
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      
+      
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

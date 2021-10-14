@@ -52,14 +52,14 @@
   }
 
 :root {
-    --Font-Family: "Noto Sans TC", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif,"Segoe UI Emoji"
+    --Font-Family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif,"Segoe UI Emoji"
 }  
-
+/*我把 "Noto Sans TC", 暫時移出--Font-Family不好看阿*/
 body {
 /*    background: #fff;
     color: #777; */
     /*width:100%; 需要這個,否則縮小的時候,會出現垂直捲動軸*/    
-    font-family: var(--Font-Family) ;
+    /*font-family: var(--Font-Family) ; 不知道為甚麼字很醜*/
     font-weight: 500;
     line-height: 1.6;
     font-size: 1.2rem !important;
@@ -392,18 +392,25 @@ td.lntd pre.chroma{
 }
 
 .chroma {
-    background-color: black;
+    background: #282c34; /*same as .hljs*/
     overflow:auto;
     border-radius: 5px;
   }
 
  code {
+
     border-radius: 5px;
-    /*white-space: nowrap; */
-    line-break: anywhere;
+    /* white-space: nowrap; */
+    line-break: auto;
     padding: 0px 2px;
-     color: var(--theme-color);
-    border:1px solid var(--theme-color);
+    color: var(--theme-color);
+    /* border: 1px solid var(--theme-color); */
+    background-color: #dcdcdc;
+    box-shadow: 1px 2px 2px 0px #808080;    
+}
+pre.chroma code {
+    background: #282c34; /*same as .hljs*/
+    box-shadow: unset;
 }
 
 pre {
@@ -428,6 +435,7 @@ pre:hover, pre:focus {
     overflow:visible;
     min-width: 100%;
     width: max-content!important; 
+    box-shadow: 11px 7px 8px 2px #dc3545;
 }
  
   table:not(.lntable) {

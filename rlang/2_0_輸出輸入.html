@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html><head>
+  <title>2.0 基本輸出輸入</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <link href="../css/atom-one-dark-reasonable.css?1634183274" rel="stylesheet">
+    <link href="../css/syntax.css?1634183274" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634183274"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1634183274" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1634183274" rel="stylesheet">
+    
+    <link href="../css/theme.css?1634183274" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#r-輸出提要">R 輸出提要</a></li>
+    <li><a href="#specifics-of-output">Specifics of Output</a>
+      <ul>
+        <li><a href="#sprintf">sprintf</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改October 10, 2021'>2.0 基本輸出輸入</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" title="1.4 R Package">1.4 R Package</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" title="2.0 基本輸出輸入">2.0 基本輸出輸入</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="4.1 基本">4.1 基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2 練習">4.1.2 練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" title="4.2 向量">4.2 向量</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 矩陣">4.3 矩陣</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 list">4.4 list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串">4.5 字串</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 更多">4.7 更多</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_objectbasic.html" data-bs-toggle="tooltip" title="5 R的物件相關概念">5 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="5.1 物件導向S3">5.1 物件導向S3</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot.html" data-bs-toggle="tooltip" title="9.1 基本繪圖">9.1 基本繪圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" title="9.2 多圖疊圖">9.2 多圖疊圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 Plot more">9.3 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/xx.html" data-bs-toggle="tooltip" title="Inverse Transform Sampling">Inverse Transform Sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/4_5_type_string_function.html"> <i class="far fa-clock" ></i>4.5 字串[2021-10-14 AM 11:32]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="r-輸出提要">R 輸出提要</h2>
+<p>總之
+You should use cat() when making the print.*() functions for S3 objects. For everything else, you should use message() unless the state of the program is problematic. e.g. bad error that is recoverable gives warning() vs. show stopping error uses stop().</p>
+<p>Goal
+The objective of this post is to provide feedback on the different output options a package developer has access to and how one should structure output that is potentially on a new object or based upon strings.</p>
+<p>大概有這幾種：</p>
+<ul>
+<li>print()</li>
+<li>cat()</li>
+<li>message()</li>
+<li>warning()</li>
+<li>stop()</li>
+</ul>
+<p>前兩個輸出到標準輸出裝置(standard output)，後三個會顯示在標準錯誤裝置上(standard error)。</p>
+<p>Designing for Users and External Packages
+Now, the above is framed more in a I/O mindset and not necessarily a user-facing frameset. So, let's provide some motivation for it in the context of an everyday R user. In particular, by using 3-5 or the stderr functions, their output is able to be suppressed without tinkering with the console text via <code>sink()</code> or <code>capture.output()</code>. The suppression normally comes in the form of <code>suppressWarnings()</code>, suppressMessages(), suppressPackageStartupMessages(), and so on. Thus, users are only confronted with result facing output. This is particularly important if you plan to allow users the flexibility of turning off text-based output when creating dynamic documents via either knitr, rmarkdown, or Sweave.</p>
+<p>In particular, knitr offers chunk options such as error = F, message = F, and warning = F. This enables the reduction of text accompanying a command in the document. Furthermore, this prevents the need from using the results = &quot;hide&quot; option that would disable all output.</p>
+<h2 id="specifics-of-output">Specifics of Output</h2>
+<ul>
+<li><code>print()</code> - 無法連結字串，會帶有[1]，例如：
+<pre><code class="language-r">print(paste(&quot;Hello&quot;,&quot;World!&quot;))
+
+[1] &quot;Hello World!&quot;
+</code></pre>
+</li>
+<li><code>cat()</code> 帶有類似paste()的參數，sep=&quot; &quot;，所以連結字串比較方便，但是必須自行寫換行符號<code>\n</code>。要不然就是<code>fill=T</code>
+<pre><code class="language-r">cat(&quot;Hello!\n&quot;)
+Hello!
+
+cat(&quot;Hello&quot;,&quot;World!\n&quot;)
+Hello World!
+
+cat(&quot;Hello&quot;,&quot;World!\n&quot;, sep = &quot;&quot;)
+HelloWorld!
+</code></pre>
+</li>
+<li><code>message()</code> 帶紅字的輸出，基本上是到標準錯誤裝置。
+<pre><code class="language-r">message(&quot;Hello &quot;,&quot;World!&quot;) # Note the space after Hello
+#&gt; &quot;Hello World!&quot;
+</code></pre>
+<ul>
+<li>更方便的是能用來配合<code>tryCatch()</code>e.g.
+<pre><code class="language-r">tryCatch(message(&quot;hello\n&quot;), message=function(e){cat(&quot;goodbye\n&quot;)})
+goodbye
+</code></pre>
+</li>
+</ul>
+</li>
+<li><code>warning()</code> : The warning() function is not something to use casually. The warning function is differentiated from the message function primarily by having a line prefixed to it (&quot;Warning message:&quot;) and its state is consider to be problematic.</li>
+<li><code>stop()</code>: Last but not least, we have stop(). This takes warnings to the next level by completely killing the task at hand and returning control back to the user. Furthermore, it has the most serious prefix with the term &quot;Error:&quot; being added.</li>
+</ul>
+<h3 id="sprintf">sprintf</h3>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="w-50 m-auto">
+<thead class="">
+<tr>
+<th style="text-align:right">Specifier</th>
+<th style="text-align:left">Value Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">%c</td>
+<td style="text-align:left">Character</td>
+</tr>
+<tr>
+<td style="text-align:right">%d or %i</td>
+<td style="text-align:left">Signed Decimal Integer</td>
+</tr>
+<tr>
+<td style="text-align:right">%e or %E</td>
+<td style="text-align:left">Scientific notation</td>
+</tr>
+<tr>
+<td style="text-align:right">%f</td>
+<td style="text-align:left">Decimal Floating Point</td>
+</tr>
+<tr>
+<td style="text-align:right">%u</td>
+<td style="text-align:left">Unsigned Decimal Integer</td>
+</tr>
+<tr>
+<td style="text-align:right">%p</td>
+<td style="text-align:left">Pointer address</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1634183274" rel="stylesheet">
+<script src="../js/quicknote.js?1634183274"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/11_environments.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=11&#32;Environments>前</a>
+                   
+          
+            <a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=2.1&#32;讀檔寫檔>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1634183274"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1634183274"></script>
+  <script src="../js/featherlight.gallery.min.js?1634183274"></script>
+  <link href="../css/featherlight.min.css?1634183274" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634183274" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1634183274"></script>
+  
+  <script src="../js/hugohelper.js?1634183274"></script>
+
+  <link href="../css/rmd.css?1634183274" rel="stylesheet">
+  <link href="../css/mystyle.css?1634183274" rel="stylesheet">    
+  <script src='../js/variant.js?1634183274'></script>
+
+<script>
+  
+    let idxfile = "\/blogR\/index.json"  
+  
+</script>
+<script src='../js/localsearch.js?1634183274'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']  , ['\\[','\\]']] 
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      
+      
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

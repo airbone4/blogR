@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html><head>
+  <title>4.1 基本</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../images/favicon.ico'/>
+      
+    <link href="../css/atom-one-dark-reasonable.css?1634183274" rel="stylesheet">
+    <link href="../css/syntax.css?1634183274" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634183274"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../css/fontawesome-all.min.css?1634183274" rel="stylesheet">
+    
+    <link href="../css/theme-mine.css?1634183274" rel="stylesheet">
+    
+    <link href="../css/theme.css?1634183274" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基本操作">基本操作</a>
+      <ul>
+        <li><a href="#指派">指派</a></li>
+      </ul>
+    </li>
+    <li><a href="#運算">運算</a>
+      <ul>
+        <li><a href="#四則運算">四則運算</a></li>
+        <li><a href="#logical">Logical</a></li>
+        <li><a href="#r語言常用邏輯運算子">R語言常用邏輯運算子</a></li>
+        <li><a href="#邏輯函數">邏輯函數</a></li>
+        <li><a href="#實數的比較">實數的比較</a></li>
+        <li><a href="#是不是na-null">是不是NA, NULL</a></li>
+      </ul>
+    </li>
+    <li><a href="#vector">vector</a></li>
+    <li><a href="#字串">字串</a>
+      <ul>
+        <li><a href="#建立字串">建立字串</a></li>
+        <li><a href="#空字串">空字串</a></li>
+        <li><a href="#字串和vector">字串和vector</a></li>
+        <li><a href="#更多vector-相關的運算">更多vector 相關的運算</a></li>
+        <li><a href="#練習範例">練習範例</a></li>
+        <li><a href="#如何存取vector中的元素">如何存取vector中的元素</a></li>
+        <li><a href="#篩選">篩選</a></li>
+        <li><a href="#實際寫程式示範">實際寫程式示範</a></li>
+        <li><a href="#利用字串-character-vector-作為索引">利用字串( character vector) 作為索引</a></li>
+        <li><a href="#怎樣變動矩陣向量">怎樣變動矩陣向量?</a></li>
+        <li><a href="#how-to-delete-a-vector">How to delete a Vector?</a></li>
+        <li><a href="#練習">練習</a></li>
+      </ul>
+    </li>
+    <li><a href="#型態操作">型態操作</a></li>
+    <li><a href="#assignment">assignment</a></li>
+    <li><a href="#structure--attributes">structure &amp; attributes</a></li>
+    <li><a href="#使用方法">使用方法</a></li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改October 14, 2021'>4.1 基本</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+     
+
+  <a class="nav-link" 
+    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" title="1.4 R Package">1.4 R Package</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" title="2.0 基本輸出輸入">2.0 基本輸出輸入</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="4.1 基本">4.1 基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2 練習">4.1.2 練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" title="4.2 向量">4.2 向量</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 矩陣">4.3 矩陣</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 list">4.4 list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串">4.5 字串</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 更多">4.7 更多</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_objectbasic.html" data-bs-toggle="tooltip" title="5 R的物件相關概念">5 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="5.1 物件導向S3">5.1 物件導向S3</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_1_plot.html" data-bs-toggle="tooltip" title="9.1 基本繪圖">9.1 基本繪圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" title="9.2 多圖疊圖">9.2 多圖疊圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 Plot more">9.3 Plot more</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+
+        
+          
+          
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+   
+  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/xx.html" data-bs-toggle="tooltip" title="Inverse Transform Sampling">Inverse Transform Sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+  
+
+</li>   
+     
+  
+</li>
+    
+  
+    </ul>
+  
+
+</li>   
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/4_5_type_string_function.html"> <i class="far fa-clock" ></i>4.5 字串[2021-10-14 AM 11:32]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="基本操作">基本操作</h2>
+<blockquote>
+<p>操作通常和資料結構相關,可以參考 <a href="http://adv-r.had.co.nz/Data-structures.html">資料結構</a></p>
+</blockquote>
+<p>在R語言中,型態不須經過宣告(declared)。 一個變數的型態經由assignment的過程決定,即&lt;-右邊的R-Objects。也就是在指派變數值的時候,同時決定了型態。</p>
+<p>基本的 R-object有 −</p>
+<ul>
+<li>Vectors</li>
+<li>Lists</li>
+<li>Matrices</li>
+<li>Arrays</li>
+<li>Factors</li>
+<li>Data Frames</li>
+</ul>
+<p>最簡單的是vector物件,atomic vector 有6種data types(有時也叫做 6 個classes)</p>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="w-50 m-auto">
+<thead class="">
+<tr>
+<th style="text-align:right">Data Type</th>
+<th style="text-align:left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">Logical</td>
+<td style="text-align:left">TRUE, FALSE</td>
+</tr>
+<tr>
+<td style="text-align:right">Numeric</td>
+<td style="text-align:left">1.3, 5, 99</td>
+</tr>
+<tr>
+<td style="text-align:right">Integer</td>
+<td style="text-align:left">3L, 24L, 0L</td>
+</tr>
+<tr>
+<td style="text-align:right">Complex</td>
+<td style="text-align:left">5 + 4i</td>
+</tr>
+<tr>
+<td style="text-align:right">Character</td>
+<td style="text-align:left">'b' , &quot;good&quot;, &quot;TRUE&quot;, '23.4'</td>
+</tr>
+<tr>
+<td style="text-align:right">Raw</td>
+<td style="text-align:left">&quot;Hello&quot; is stored as 48 65 6c 6c 6f</td>
+</tr>
+<tr>
+<td style="text-align:right">💡: 字元H對應的48怎麼來的? 利用JS驗證 &quot;H&quot;.charCodeAt(0).toString(16) ，在Ｒ中可以利用charToRaw(範例中)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>數字(3種,例如整數、浮點、複數）,邏輯,字元(2種，character, raw)</p>
+<pre><code class="language-r?lang=r?preclass=.ms-5.w-75">v &lt;- TRUE 
+print(class(v))
+#&gt; [1] &quot;logical&quot;
+
+v &lt;- 23.5
+print(class(v))
+#&gt; [1] &quot;numeric&quot;
+
+v &lt;- 2L
+print(class(v))
+#&gt; [1] &quot;integer&quot;
+
+v &lt;- 2+5i
+print(class(v))
+#&gt; [1] &quot;complex&quot;
+
+v &lt;- &quot;TRUE&quot;
+print(class(v))
+#&gt; [1] &quot;character&quot;
+
+v &lt;- charToRaw(&quot;Hello&quot;)　#<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏同樣的中文字利用charToRaw()找出來的１６進位，會因為編碼而不同</span></span>
+print(class(v))
+#&gt; [1] &quot;raw&quot;
+</code></pre>
+<p>💡 數字３不是真也不是假</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">isTRUE(3)
+#&gt; [1] FALSE
+isFALSE(3)
+#&gt; [1] FALSE
+</code></pre>
+<p><div class="position-relative warning ms-5">
+class(3),class(3.1) 的類別是甚麼？<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-3071">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-3071">numeric</div>
+</p>
+<h3 id="指派">指派</h3>
+<ul>
+<li><code>&lt;-</code>, <code>&lt;&lt;-</code>, <code>=</code>	向左指派值。</li>
+<li><code>-&gt;</code>, <code>-&gt;&gt;</code>	向右指派值。</li>
+</ul>
+<p>指派運算子雖然也可以用<code>=</code>但是，R的設計是使用<code>&lt;-</code>。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a &lt;- 3
+</code></pre>
+<p><code>a&lt;-3</code>是一個指派的敘述句,不會回饋資訊到螢幕上。如果要知道a的內容是甚麼,就打入<code>a</code> 或者<code>(a&lt;-3)</code></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">    a
+#&gt; [1] 3
+(a&lt;-3)
+#&gt; [1] 3
+</code></pre>
+<p>一般的數學函數</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">b &lt;- sqrt(a * a + 5)
+b
+#&gt; [1] 3.741657
+</code></pre>
+<div class="notices  m-auto w-75">
+    <div class="info">
+        <p><code>&lt;-</code> vs <code>=</code>(例如a&lt;-3 vs. a=3) 的簡化說明</p>
+<ul>
+<li>
+<p>大部分情況下<code>&lt;-</code> 和 <code>=</code> 在相同的環境下等價。</p>
+<ul>
+<li>另外,<code>&lt;&lt;-</code> 用來指派值給親代環境下的變數。</li>
+</ul>
+</li>
+<li>
+<p>按照R的說明,等號只能用在top level,或是函數參數的指定。<a href="https://stackoverflow.com/questions/1741820/what-are-the-differences-between-and-assignment-operators-in-r">參考</a></p>
+<pre><code class="language-r?preclass=.ms-5">‹function_name›(‹argname› = ‹value›, …) #&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏這裡用&lt;-有不一樣的意思&lt;/span&gt;&lt;/span&gt;
+‹function_name›(‹args›, ‹argname› = ‹value›, …)
+</code></pre>
+</li>
+</ul>
+<p>例如
+在主控台執行下面程式碼</p>
+<pre><code class="language-r?preclass=.ms-5">
+rm(list=ls()) # (🐞會刪掉我自己的單頁編譯變數) 
+ls() # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏工作區是空的,沒有x變數&lt;/span&gt;&lt;/span&gt;
+mean(x&lt;-1:10) 
+#&gt; [1] 5.5
+ls() # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏在工作區會出現x變數&lt;/span&gt;&lt;/span&gt;
+rm(x)　# &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏從工作區移除變數x&lt;/span&gt;&lt;/span&gt;
+
+mean(x=1:10) 
+#&gt; [1] 5.5
+ls() # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏工作區沒有x變數，這裡只是參數指定，在主控台敲入？mean可以看到參數有x&lt;/span&gt;&lt;/span&gt;
+
+</code></pre>
+<div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >補充函數ls()的說明</span>
+    </div><div data-nopre class="expand-content" style="overflow-x:auto"><p>在session中的如果要列出已經定義過的變數,可以利用ls（相關函數rm）</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">ls()
+#> [1] "a" "b"
+</code></pre>
+</div></div>
+
+    </div>
+</div>
+
+<h2 id="運算">運算</h2>
+<h3 id="四則運算">四則運算</h3>
+<p>參考實際操作</p>
+<h3 id="logical">Logical</h3>
+<p>邏輯類只有兩個值 TRUE and FALSE或是簡寫Ｔ，Ｆ:</p>
+<pre><code class="language-r?lang=r?preclass=.ms-5.w-75">a = TRUE
+typeof(a)
+#&gt; [1] &quot;logical&quot;
+b = FALSE
+typeof(b)
+#&gt; [1] &quot;logical&quot;
+</code></pre>
+<h3 id="r語言常用邏輯運算子">R語言常用邏輯運算子</h3>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-responsive">
+<table class="w-50 m-auto">
+<thead class="">
+<tr>
+<th style="text-align:right">operator</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td style="text-align:right">&gt;</td>
+<td>great than</td>
+</tr>
+<tr>
+<td style="text-align:right">&lt;=</td>
+<td>less than or equal</td>
+</tr>
+<tr>
+<td style="text-align:right">&gt;=</td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td style="text-align:right">==</td>
+<td>equal to</td>
+</tr>
+<tr>
+<td style="text-align:right">!=</td>
+<td>not equal to</td>
+</tr>
+<tr>
+<td style="text-align:right">|</td>
+<td>entry wise or</td>
+</tr>
+<tr>
+<td style="text-align:right">||</td>
+<td>or</td>
+</tr>
+<tr>
+<td style="text-align:right">!</td>
+<td>not</td>
+</tr>
+<tr>
+<td style="text-align:right">&amp;</td>
+<td>entry wise and</td>
+</tr>
+<tr>
+<td style="text-align:right">&amp;&amp;</td>
+<td>and</td>
+</tr>
+<tr>
+<td style="text-align:right">xor(a,b)</td>
+<td>exclusive or</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>範例：不同的運算子，在個別元素和整個向量的運算結果不一樣：</p>
+<pre><code class="language-r?lang=r?preclass=.ms-5.w-75">a = c(TRUE, FALSE)
+b = c(FALSE, F)
+a | b
+#&gt; [1]  TRUE FALSE
+a || b
+#&gt; [1] TRUE
+a &amp; b
+#&gt; [1] FALSE FALSE
+a &amp;&amp; b
+#&gt; [1] FALSE
+
+xor(a, b)
+#&gt; [1]  TRUE FALSE
+</code></pre>
+<p>a||b, a&amp;&amp;b 只比對a,b中的第一個元素。因此長度只有1個。✔如果是流程控制,大體上用的這兩種。</p>
+<p>&amp; 和 | 比對元素,傳回長度為大小最長的那個。</p>
+<p>0為FALSE,而1為TRUE。在R中,判斷一個變數是否TRUE,要檢查好幾個地方,因此有提供內定的檢查函數✔<code>isTRUE()</code></p>
+<div class="position-relative warning ms-5">
+<pre><code class="language-r">x &lt;- c(TRUE,FALSE,0,6)
+y &lt;- c(FALSE,TRUE,FALSE,TRUE)
+!x
+x&amp;y
+x&amp;&amp;y
+x|y
+x||y #&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏常用於邏輯判斷式&lt;/span&gt;&lt;/span&gt;
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-2499">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-2499"><pre><code class="language-r">&gt; x &lt;- c(TRUE,FALSE,0,6)
+#&gt; [1] 1 0 0 6
+&gt; y &lt;- c(FALSE,TRUE,FALSE,TRUE)
+#&gt; [1] FALSE  TRUE FALSE  TRUE
+&gt; !x
+#&gt; [1] FALSE  TRUE  TRUE FALSE
+&gt; x&amp;y
+#&gt; [1] FALSE FALSE FALSE  TRUE
+&gt; x&amp;&amp;y
+#&gt; [1] FALSE
+&gt; x|y
+#&gt; [1]  TRUE  TRUE FALSE  TRUE
+&gt; x||y
+#&gt; [1] TRUE
+</code></pre>
+</div>
+
+<p><div class="position-relative warning ms-5">
+<pre><code class="language-r">x &lt;- c(TRUE,FALSE,0,6,0) # 個數有５個
+y &lt;- c(T,TRUE,FALSE,TRUE)　#　個數有４個
+x| y
+</code></pre>
+<p>解釋上面的結果</p>
+<ol>
+<li>長度為甚麼是５</li>
+<li>最後一個為甚麼是Ｔ</li>
+<li>如果x &lt;- c(TRUE,FALSE,0,6,3) 然後問 x &amp; y</li>
+</ol>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30228">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-30228">💡循環補足</div>
+</p>
+<h3 id="邏輯函數">邏輯函數</h3>
+<p><code>is.family</code> 函數，可以用來判定變數是什麼型態，傳回真假值，例如</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a = c(1, 2, 3)
+is.numeric(a)
+#&gt; [1] TRUE
+is.factor(a)
+#&gt; [1] FALSE
+is.character(a)
+#&gt; [1] FALSE
+</code></pre>
+<p>函數<code>which()</code>哪些元素不一致</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">A&lt;-c(T,F,T,F)
+C&lt;-c(F,F,F,T)
+which(A)
+#&gt; [1] 1 3
+which(A != C)
+#&gt; [1] 1 3 4
+</code></pre>
+<p>函數<code>all()</code>  是不是向量內所有元素都是Ｔ</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">all(A==B)
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'B'
+all(A==C)
+#&gt; [1] FALSE
+all(A==A)
+#&gt; [1] TRUE
+</code></pre>
+<div class="notices  m-auto w-75">
+    <div class="tip">
+        <code>which()</code>,<code>all()</code>裡面的參數其實都是邏輯向量。
+    </div>
+</div>
+
+<p>註解：但是R語言的向量運算，涉及自動填充循環，因此注意下面的計算結果</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">D &lt;- c(&quot;A&quot;,&quot;B&quot;,&quot;A&quot;,&quot;B&quot;)
+E &lt;- c(&quot;A&quot;,&quot;B&quot;)
+all(D==E)
+#&gt; [1] TRUE
+all(length(D)==length(E)) &amp;&amp; all(D==E)
+#&gt; [1] FALSE
+</code></pre>
+<p>函數<code>identical(a,b)</code>
+a,b 是否相等,比較的是除了a,b的內容以外,💡還有a b 的型態。例如，identical(1,as.integer(1)) 結果是F,因為 前者是double,後者是整數。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">identical(1,as.integer(1)) 
+#&gt; [1] FALSE
+typeof(1)
+#&gt; [1] &quot;double&quot;
+identical(1L,as.integer(1)) 
+#&gt; [1] TRUE
+</code></pre>
+<ol>
+<li>
+<p>比對數字3和字串3</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">3==&quot;3&quot;
+#&gt; [1] TRUE
+identical(3,&quot;3&quot;)
+#&gt; [1] FALSE
+</code></pre>
+</li>
+<li>
+<p>函數identical()</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">A &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;)
+B &lt;- A
+C &lt;- c(&quot;A&quot;, &quot;C&quot;, &quot;C&quot;, &quot;E&quot;)
+
+A==B
+#&gt; [1] TRUE TRUE TRUE TRUE
+A==C 
+#&gt; [1]  TRUE FALSE  TRUE FALSE
+identical(A,B) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏只有一個真假值</span></span>
+#&gt; [1] TRUE
+identical(A,C)
+#&gt; [1] FALSE
+</code></pre>
+</li>
+<li>
+<p>實數的比較👺</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">0.1+0.2 == 0.3 #F
+#&gt; [1] FALSE
+identical(0.1+0.2 , 0.3) #F
+#&gt; [1] FALSE
+</code></pre>
+</li>
+</ol>
+<p>identical  可以和後面的函數<a href="#allequal">all.equal</a>函數比較。</p>
+<h3 id="實數的比較">實數的比較</h3>
+<p>函數all.equal()</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">0.1+0.2 == 0.3 #<span data-nopre data-atomic id='allequal'>⛳註解 </span>
+#&gt; [1] FALSE
+all.equal(0.1+0.2,0.3)
+#&gt; [1] TRUE
+</code></pre>
+<div class="notices  m-auto w-75">
+    <div class="info">
+        <p>在EXCEL中利用有效位數15來解0.1+0.2==0.3 是否相等的問題。</p>
+<p>在R中，可以用<code>signif()</code>示範(😒<code>options()$digits</code>預設是7,可以用(<code>options(digits=15)</code>改變設定)但是好像只是用來控制顯示的有效位元)</p>
+<pre><code class="language-r?lang=r?class=.primary.source?preclass=ms-5">x&lt;-runif(1)
+signif(x,3)
+#&gt; [1] 0.354
+
+signif(0.1+0.2, 15)==signif(0.3,15)
+#&gt; [1] TRUE
+
+signif(0.1,15)+signif(0.2,15)==signif(0.3,15) # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏 + 以後的結果也要&lt;/span&gt;&lt;/span&gt;
+#&gt; [1] FALSE
+</code></pre>
+
+    </div>
+</div>
+
+<p>這是另一個例子,跟我們說實數的比較很不穩定</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># 先看我們應該知道的部分
+1-0.4 ==0.6 # TRUE
+#&gt; [1] TRUE
+1-0.6==0.4 # TRUE
+#&gt; [1] TRUE
+x &lt;- seq(0, 1, by = 0.2)
+y &lt;- seq(0, 1, by = 0.2)
+y[4]
+#&gt; [1] 0.6
+x[3]
+#&gt; [1] 0.4
+1 - x[3]
+#&gt; [1] 0.6
+y[4] == 1 - x[3]
+#&gt; [1] FALSE
+y[4] &gt; 1 - x[3]
+#&gt; [1] TRUE
+## note:
+all.equal(y[4], 1 - x[3])　
+#&gt; [1] TRUE
+</code></pre>
+<p><div class="position-relative warning ms-5">
+函數練習：<br>
+將上面可能造成誤判的情況，寫成函數先判斷是否長度相等，然後判斷元素相等，可以和<code>identical()</code>比較。<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30315">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-30315"><p>hint: 利用length</p>
+<pre><code class="language-r">a &lt;- character(0)
+identical(a, character(0))  # returns TRUE
+
+identical(a, &quot;&quot;)           # returns FALSE
+identical(a, numeric(0))   # returns also FALSE
+</code></pre>
+</div>
+</p>
+<h3 id="是不是na-null">是不是NA, NULL</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">nx1&lt;-numeric(0)
+nx2&lt;-3
+is.null(nx1) # F,因為nx1是空向量(長度為0的數字向量)
+#&gt; [1] FALSE
+is.na(nx1)   # logical(0),每個元素檢查是不是NA,但是現在是空向量,所以結果是logical(0)
+#&gt; logical(0)
+typeof(nx1)  # double
+#&gt; [1] &quot;double&quot;
+typeof(nx2)  # double
+#&gt; [1] &quot;double&quot;
+length(nx1)  # 0 
+#&gt; [1] 0
+length(nx2)  # 1
+#&gt; [1] 1
+</code></pre>
+<div class="position-relative warning ms-5">
+甚麼時候用到is.null<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-24276">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-24276"><pre><code class="language-r?lang=r?class=.source?preclass=ms-5">config &lt;- list()
+is.null(config) # &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏是empty(空的)list物件,但不是null(虛的)&lt;/span&gt;&lt;/span&gt;
+#&gt; [1] FALSE
+is.null(config$name)
+#&gt; [1] TRUE
+</code></pre>
+<div class="notices  m-auto w-75">
+    <div class="tip">
+        空的和虛的有甚麼差別? 一個是在記憶體有位置,一個是沒有。
+    </div>
+</div>
+</div>
+
+<div class="notices  m-auto w-75">
+    <div class="info">
+        <p>如何判斷是否NA</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x == NA
+#&gt; [1] NA NA NA NA NA NA
+</code></pre>
+<p>上面的比較沒有意義,和NA的任何運算都是NA</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">r = x == NA
+r
+#&gt; [1] NA NA NA NA NA NA
+</code></pre>
+<p>結論:任何變數和NA運算,結果還是NA<br>
+另一種方法</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">print(x == NA)
+#&gt; [1] NA NA NA NA NA NA
+</code></pre>
+<p>如何判斷NA ? <code>is.na()</code></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">    is.na(a[6])
+#&gt; [1] TRUE
+</code></pre>
+
+    </div>
+</div>
+
+<h2 id="vector">vector</h2>
+<p>利用<code>c</code>函數，可以使用vector存放一個以上的數字。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a = c(1, 2, 3, 4, 5)
+a1 = 1:5
+</code></pre>
+<p>有關vector的運算:加減乘除等等</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a = c(1, 2, 3, 4, 5)
+a+1
+#&gt; [1] 2 3 4 5 6
+a-1
+#&gt; [1] 0 1 2 3 4
+a/2
+#&gt; [1] 0.5 1.0 1.5 2.0 2.5
+a*3
+#&gt; [1]  3  6  9 12 15
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">mean(a)
+#&gt; [1] 3
+var(a)
+#&gt; [1] 2.5
+summary(a)
+#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;       1       2       3       3       4       5
+</code></pre>
+<p>note:
+對比stata sum a 指令,summary(a) 返回的是一個table物件。可以指派給變數,因此計算結果可以經由變數(類別為table)存取。</p>
+<p>list的元素,利用中括號</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a = 2:6
+a[1]
+#&gt; [1] 2
+a[2]
+#&gt; [1] 3
+a[0]
+#&gt; integer(0)
+a[6]
+#&gt; [1] NA
+</code></pre>
+<p>在R中,的最小的索引值為1base.如果給索引為0,可以知道資料是否被排序。 超出索引範圍得到&quot;NA。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a=2:6
+x = a[6]
+</code></pre>
+<p>初始化向量,可以利用a&lt;-10 或指定numeric(double)型態</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a &lt;- numeric(10) 
+a
+#&gt;  [1] 0 0 0 0 0 0 0 0 0 0
+</code></pre>
+<p>如果想要知到變數的資料型別,利用函數typeof()</p>
+<p>typeof()函數回傳的結果是&quot;字串&quot;</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">typeof(a) # 結果是&quot;double&quot;
+#&gt; [1] &quot;double&quot;
+s = typeof(a)
+s
+#&gt; [1] &quot;double&quot;
+typeof(s) #結果是 &quot;character&quot;
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<h2 id="字串">字串</h2>
+<blockquote>
+<p><a href="https://www.gastonsanchez.com/r4strings/chars.html">參考</a></p>
+</blockquote>
+<h3 id="建立字串">建立字串</h3>
+<p>可以是 雙引號中<code>&quot;</code> 或 單引號中<code>'</code>。
+字串中如果有雙引號,或單引號，則如下表示:<br>
+&quot;'這個'來自'那個'&quot;</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a &lt;- &quot;hello&quot;
+a
+#&gt; [1] &quot;hello&quot;
+typeof(a)   #[1]  &quot;character&quot; 
+#&gt; [1] &quot;character&quot;
+is.vector(a) #[1] TRUE
+#&gt; [1] TRUE
+</code></pre>
+<p>利用函數:character() 這個函數的參數為整數,建立一個vector(不是list),裡面的元素都是空字串,例如<code>character(5)</code>。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># 變數ex初始化為character vector,參看後面的討論
+(ex &lt;- character(0))
+#&gt; character(0)
+is.null(ex) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >不是null,這是一個指標</span></span>
+#&gt; [1] FALSE
+length(ex)
+#&gt; [1] 0
+class(ex)
+#&gt; [1] &quot;character&quot;
+
+# 如果剛剛沒有設定ex &lt;- character(0),這裡會發生錯誤
+(ex[1] &lt;- &quot;first&quot;)
+#&gt; [1] &quot;first&quot;
+
+# check its length again
+length(ex)
+#&gt; [1] 1
+
+(ex[4] &lt;- &quot;fourth&quot;) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >索引可以用跳的:</span></span>
+#&gt; [1] &quot;fourth&quot;
+length(ex)
+#&gt; [1] 4
+typeof(ex)
+#&gt; [1] &quot;character&quot;
+ex
+#&gt; [1] &quot;first&quot;  NA       NA       &quot;fourth&quot;
+</code></pre>
+<p>跳過的索引,內容自動為<code>NA</code>.</p>
+<h3 id="空字串">空字串</h3>
+<p>引號內連空白都沒有的字串:
+(比較上面利用character(5)可以建立5個元素為空字串的vector。)</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># empty string
+empty_str &lt;- &quot;&quot;
+empty_str
+#&gt; [1] &quot;&quot;
+
+# class
+class(empty_str)
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<h4 id="探討character0">探討character(0)</h4>
+<p>前面說character(2),可以傳回長度2,每個元素都是空白字串&quot;&quot;的向量,那麼character(0)是甚麼?
+除了前面提到的變數初始化為向量(也許可以說是向量宣告)
+例如,整數也是這樣</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">zz&lt;-integer(0)
+zz[4]=6
+zz
+#&gt; [1] NA NA NA  6
+</code></pre>
+<p>這裡利用分別使用<code>typeof</code>, <code>str</code>,<code>class</code>,<code>is</code>對character(0)做一些測試:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">ex1&lt;-character(0) 
+ex2&lt;-&quot;&quot;
+
+typeof(ex1) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >都是向量</span></span>
+#&gt; [1] &quot;character&quot;
+typeof(ex2)
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<p>函數str()用來顯示R物件的結構:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">str(ex1) 
+#&gt;  chr(0)
+str(ex2) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >前面看起來都是向量,但是這裡有更多資訊 chr(0),&quot;&quot;</span></span>
+#&gt;  chr &quot;&quot;
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">class(ex1)
+#&gt; [1] &quot;character&quot;
+class(ex2)
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">is.list(ex1)
+#&gt; [1] FALSE
+is.list(ex2)
+#&gt; [1] FALSE
+</code></pre>
+<p>👹 0或１個字元也是向量。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">is.vector(ex1)　#T
+#&gt; [1] TRUE
+is.vector(ex2)  #T
+#&gt; [1] TRUE
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">length(ex1)
+#&gt; [1] 0
+length(ex2)
+#&gt; [1] 1
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">is.null(ex1) #F
+#&gt; [1] FALSE
+is.null(ex2) #F
+#&gt; [1] FALSE
+
+is.na(ex1) #&gt; <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >logical(0) 說這是邏輯向量,但是長度0</span></span>
+#&gt; logical(0)
+is.na(ex2) #&gt; FALSE
+#&gt; [1] FALSE
+</code></pre>
+<p>最後,這兩個是不是相等</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">ex1==ex2
+#&gt; logical(0)
+</code></pre>
+<h3 id="字串和vector">字串和vector</h3>
+<blockquote>
+<p>vector 一般指的是只放元素為數字的陣列(array)，在EXCEL中利用陣列表示vector;而陣列是可以存數字和文字的區域。(EXCEL 的table是有欄位的陣列)。
+但是在R語言中,vector 只是元素型態相同即可(後述)[#whatisvector]</p>
+</blockquote>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a &lt;- &quot;hello&quot;
+a
+#&gt; [1] &quot;hello&quot;
+typeof(a)
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">b &lt;- c(&quot;hello&quot;, &quot;there&quot;)
+b
+#&gt; [1] &quot;hello&quot; &quot;there&quot;
+b[1]
+#&gt; [1] &quot;hello&quot;
+
+typeof(b)
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">(a = character(5)) # 產生5個空字串
+#&gt; [1] &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot;
+(b = letters[1:4]) # 注意,letters不是函數
+#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;
+letters
+#&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot; &quot;s&quot;
+#&gt; [20] &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; &quot;y&quot; &quot;z&quot;
+typeof(letters)
+#&gt; [1] &quot;character&quot;
+class(letters)
+#&gt; [1] &quot;character&quot;
+</code></pre>
+<p><span data-nopre data-atomic id='whatisvector'>⛳註解 </span> 因為c函數的運算結果為vector,因此下例中,其元素都是字串（前面講過在Ｒ中的vector必須是同類）</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> (a&lt;-c(&quot;d&quot;,4,TRUE))
+#&gt; [1] &quot;d&quot;    &quot;4&quot;    &quot;TRUE&quot;
+</code></pre>
+<p>問題:
+怎樣知道r是空集合?</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">
+y &lt;- letters[1:3] 
+z &lt;- letters[4:6] 
+r&lt;-intersect(y,z) 
+r
+#&gt; character(0)
+is.na(r)
+#&gt; logical(0)
+length(r)
+#&gt; [1] 0
+</code></pre>
+<p>另外,當vector有多個字串,而使用索引0的時候,也會出現 <code>character(0)</code>,例如:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">string &lt;- c('sun', 'sky', 'clouds')
+string[0]
+#&gt; character(0)
+</code></pre>
+<h3 id="更多vector-相關的運算">更多vector 相關的運算</h3>
+<p>連續數字可以利用操作元<code>:</code>,例如:</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">x &lt;- 1:7; x
+y &lt;- 2:-2; y
+</code></pre>
+<p>比較複雜的序列可以利用函數 seq() ,例如</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">seq(1, 3, by=0.2)          # specify step size
+#&gt;  [1] 1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0
+
+seq(1, 5, length.out=4)    # specify length of the vector
+#&gt; [1] 1.000000 2.333333 3.666667 5.000000
+</code></pre>
+<h3 id="練習範例">練習範例</h3>
+<p><div class="position-relative warning ms-5">
+<p>Q1. a,a1,a2 屬於甚麼型態</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a = 1:4
+a1 = c(1, 2, 3, 4)
+a2 = numeric(4)
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30674">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-30674"><p>A1: 只是要記住函數<code>typeof</code></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a = 1:4
+a1 = c(1, 2, 3, 4)
+a2 = numeric(4)
+typeof(a)
+#&gt; [1] &quot;integer&quot;
+typeof(a1)
+#&gt; [1] &quot;double&quot;
+typeof(a2)
+#&gt; [1] &quot;double&quot;
+</code></pre>
+</div>
+</p>
+<p><div class="position-relative warning ms-5">
+<p>Q2:a3的長度是甚麼?2,或6</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a1&lt;-c(1,2,3)
+a2&lt;-c(2,3,4)
+a3&lt;-c(a1,a2)
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30695">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-30695">HINT: 只是要記住函數length
+a1
+a2
+a3;length(a3)</div>
+</p>
+<p><div class="position-relative warning ms-5">
+<pre><code class="language-r">a = character(5)
+b&lt;-&quot;12345&quot;
+c&lt;-c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;)
+</code></pre>
+<p>問</p>
+<ul>
+<li>length(a),length(b),length(c)分別是多少？</li>
+<li>nchar(a),nchar(b),nchar(c)?</li>
+</ul>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30656">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-30656">提示
+length: 5,1,5
+nzchar: <code>0,0,0,0,0</code>, 5,<code>0,0,0,0,0</code></div>
+</p>
+<h3 id="如何存取vector中的元素">如何存取vector中的元素</h3>
+<p>元素索引可以利用 logical, integer or character vector.</p>
+<p>如果利用整數索引,則從1開始.但是,如果索引值給的是負數(例如-2),則除了2號元素以外,都會被傳回。但是不能同時有正負。同時,浮點數會被truncated。</p>
+<pre><code class="language-r">&gt; x
+[1]  0  2  4  6  8 10
+&gt; x[3]           # access 3rd element
+[1] 4
+&gt; x[c(2, 4)]     # access 2nd and 4th element
+[1] 2 6
+&gt; x[-1]          # access all but 1st element
+[1]  2  4  6  8 10
+&gt; x[c(2, -4)]    # 不能混合正負
+Error in x[c(2, -4)] : only 0's may be mixed with negative subscripts
+&gt; x[c(2.4, 3.54)]    # real numbers are truncated to integers
+[1] 2 4
+</code></pre>
+<h3 id="篩選">篩選</h3>
+<p>篩選陣列中的元素<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏可以應用在抽樣</span></span>。例如</p>
+<pre><code class="language-r">&gt; x[c(TRUE, FALSE, FALSE, TRUE)]
+[1] -3  3
+&gt; x[x &lt; 0]  # filtering vectors based on conditions
+[1] -3 -1
+&gt; x[x &gt; 0]
+[1] 3
+</code></pre>
+<h3 id="實際寫程式示範">實際寫程式示範</h3>
+<p>我想要從兩個項目重複抽樣(如下),重複抽10個。我的打算是利用真假值過濾,例如我的設想是這樣</p>
+<pre><code class="language-r">kind&lt;-c(&quot;水壺&quot;,&quot;鐵網&quot;)
+kind[c(T,F,T,T,F,T,F,T,F,F)]
+</code></pre>
+<p>😜其實上面的程式碼是matlab的寫法,我直接套在R上。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">kind&lt;-c(&quot;水壺&quot;,&quot;鐵網&quot;)
+x&lt;-rnorm(10)　#10 random number
+kind[x&lt;0.5] # 預計小於５可以抽出來（因為我記得可以循環補）
+#&gt; [1] &quot;水壺&quot; NA     NA     NA     NA     NA
+</code></pre>
+<p>這是甚麼？👺😒 我知道ＮＡ是超出範圍的意思，可是不知道為甚麼他超出範圍</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">#&gt; [1] &quot;鐵網&quot; NA     NA     NA     NA     NA     NA     NA
+</code></pre>
+<p>可是我記得數字可以，例如</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">kind&lt;-c(&quot;水壺&quot;,&quot;鐵網&quot;)
+x&lt;-c(1,2,1,2,1,1)
+kind[x] 
+</code></pre>
+<p>執行結果 💯</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">[1] &quot;水壺&quot; &quot;鐵網&quot; &quot;水壺&quot; &quot;鐵網&quot; &quot;水壺&quot; &quot;水壺&quot;
+</code></pre>
+<p>❓❓❓❓❓
+那我記得，真假值可以轉０，１成位數字，所以</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">kind[as.numeric(x&lt;0.5)]
+</code></pre>
+<p>結果</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">[1] &quot;水壺&quot; &quot;水壺&quot; &quot;水壺&quot; &quot;水壺&quot; &quot;水壺&quot; &quot;水壺&quot; &quot;水壺&quot;
+</code></pre>
+<p><div class="position-relative warning ms-5">
+為甚麼❓<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30794">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-30794"><p>因為Ｒ是１為基底</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">kind[as.numeric(x&lt;0.5)+1]
+#&gt; [1] &quot;鐵網&quot; &quot;水壺&quot; &quot;水壺&quot; &quot;鐵網&quot; &quot;鐵網&quot; &quot;鐵網&quot; &quot;鐵網&quot; &quot;鐵網&quot; &quot;鐵網&quot; &quot;水壺&quot;
+</code></pre>
+</div>
+</p>
+<h3 id="利用字串-character-vector-作為索引">利用字串( character vector) 作為索引</h3>
+<p>每個元素可以有名稱:</p>
+<pre><code class="language-r">&gt; x &lt;- c(&quot;first&quot;=3, &quot;second&quot;=0, &quot;third&quot;=9)
+&gt; x
+#&gt; first second  third 
+#&gt;      3      0      9 
+
+&gt; class(x)  # 注意:不是list 
+#&gt; [1] &quot;numeric&quot;
+
+&gt; names(x)
+#&gt; [1] &quot;first&quot;  &quot;second&quot; &quot;third&quot; 
+&gt; x[&quot;second&quot;]
+#&gt; second 
+#&gt; 0 
+&gt; x[c(&quot;first&quot;, &quot;third&quot;)]
+#&gt; first third 
+#&gt; 3     9
+
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a&lt;-c(x=1:2,y=3:4)
+a[&quot;x1&quot;] # 不是a[x1]
+#&gt; x1 
+#&gt;  1
+</code></pre>
+<p><div class="position-relative warning ms-5">
+❓ a[&quot;x1&quot;]哪裡來的x1?<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-24666">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-24666"><pre><code>&gt; a
+#&gt; x1 x2 y1 y2 
+#&gt;  1  2  3  4
+&gt; names(a)
+&gt; # [1] &quot;x1&quot; &quot;x2&quot; &quot;y1&quot; &quot;y2&quot;
+</code></pre>
+</div>
+</p>
+<p>[] 和[[]]的差別:<br>
+原來的type是甚麼(例如,list 或vector),[]只是返回子集合(仍然是list或vector),但是[[]]則是返回內容.</p>
+<pre><code class="language-r">&gt; x &lt;- c(a = 1, b = 2, c = 3)
+&gt; x[&quot;a&quot;]
+#&gt; a 
+#&gt; 1 
+&gt; x[[&quot;a&quot;]]
+#&gt; [1] 1
+
+&gt; x[1]
+#&gt; a 
+#&gt; 1 
+
+&gt; x[[1]]
+#&gt; [1] 1
+
+</code></pre>
+<p>💡例如,我只要陣列的值,則x[[1]]可以用來去掉names。
+<div class="notices  m-auto w-75">
+    <div class="info">
+        <p>和list的區別是</p>
+<ol>
+<li>$</li>
+<li>不必有&quot;&quot;</li>
+</ol>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a1&lt;-list(x=1:2,y=3:4)
+a1$x
+#&gt; [1] 1 2
+</code></pre>
+
+    </div>
+</div>
+</p>
+<h3 id="怎樣變動矩陣向量">怎樣變動矩陣向量?</h3>
+<p>We can modify a vector using the assignment operator.</p>
+<p>We can use the techniques discussed above to access specific elements and modify them.</p>
+<p>If we want to truncate the elements, we can use reassignments.</p>
+<pre><code class="language-r">&gt; x
+#&gt; [1] -3 -2 -1  0  1  2
+&gt; x[2] &lt;- 0; x        # 只改變第二個元素
+#&gt; [1] -3  0 -1  0  1  2
+&gt; x[x&lt;0] &lt;- 5; x   # 將小於0的值,都改成5
+#&gt; [1] 5 0 5 0 1 2
+&gt; x &lt;- x[1:4]; x      # 只要1到4
+#&gt; [1] 5 0 5 0
+</code></pre>
+<h3 id="how-to-delete-a-vector">How to delete a Vector?</h3>
+<p>We can delete a vector by simply assigning a NULL to it.</p>
+<pre><code class="language-r">&gt; x
+#&gt; [1] -3 -2 -1  0  1  2
+&gt; x &lt;- NULL
+&gt; x
+#&gt; NULL
+&gt; x[4]
+#&gt; NULL
+
+</code></pre>
+<h3 id="練習">練習</h3>
+<p><div class="position-relative warning ms-5">
+<p>❓怎樣產生下面的向量?</p>
+<pre><code class="language-r">x
+   a    b    a    b    a   &lt;NA&gt; 
+   1    2    3    4    5    6 
+</code></pre>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-25749">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-25749"><pre><code class="language-r">x&lt;-seq(1,5)
+names(x)&lt;-rep(c(&quot;a&quot;,&quot;b&quot;),2)
+</code></pre>
+</div>
+</p>
+<h2 id="型態操作">型態操作</h2>
+<ul>
+<li>判定型態 is family
+<ul>
+<li>is.numeric(), is.integer(), and is.double()</li>
+</ul>
+</li>
+<li>型態轉換 as family</li>
+</ul>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">a&lt;-c(TRUE,FALSE)
+as.numeric(a)
+#&gt; [1] 1 0
+an&lt;-as.logical(a)
+an
+#&gt; [1]  TRUE FALSE
+</code></pre>
+<h2 id="assignment">assignment</h2>
+<p>練習</p>
+<p><a href="hw/assignment-1.html">hw1</a></p>
+<h2 id="structure--attributes">structure &amp; attributes</h2>
+<p>函數<code>structure(data, ...)</code></p>
+<h2 id="使用方法">使用方法</h2>
+<p>先看一下範例</p>
+<pre><code class="language-r">code=&quot;這是範例&quot;
+x=structure(list(src = code), ddd = 'source')     
+x
+#&gt; $src
+#&gt; [1] &quot;這是範例&quot;
+
+#&gt; attr(,&quot;ddd&quot;)  <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >這是第二個參數添進來的</span></span>
+#&gt; [1] &quot;source&quot;
+ 
+</code></pre>
+<p>再看另一個範例</p>
+<pre><code class="language-r">data=&quot;這是範例&quot; <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >只是字串</span></span>
+x=structure(data, ddd = 'source') <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >添加屬性ddd</span></span>
+x <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >看內容</span></span>
+#&gt; [1] &quot;這是範例&quot;
+#&gt; attr(,&quot;ddd&quot;)
+#&gt; [1] &quot;source&quot;
+attributes(data) <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >看看屬性</span></span>
+#&gt; NULL <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >data仍然是data,沒有新增的屬性</span></span>
+attributes(x) <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >傳回來的不僅有原來的data,還多了一個屬性</span></span>
+#&gt; $ddd
+#&gt; [1] &quot;source&quot;
+
+</code></pre>
+<p>白話文就是 假設<code>data</code>是一個物件,則<code>structure(data,xxx=&quot;dd&quot;)</code>,會根據這個物件再添加一個屬性<code>xxx</code>,然後傳回這個物件。</p>
+<p>因此要注意的是<code>class</code>這個attribute。在Ｒ中，<code>class</code>有另一個意思，用來代表物件類別（例如要自訂類別，可以利用這個class)</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">data=&quot;string&quot;
+class(data)
+#&gt; character <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >這是字串</span></span>
+x=structure(data,class=&quot;risk&quot;) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏現在物件x的類別不再是字串，而是類別risk</span></span>
+class(x)
+#&gt; risk  <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >此時的類別被變更成risk</span></span>
+</code></pre>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../css/quicknote.css?1634183274" rel="stylesheet">
+<script src="../js/quicknote.js?1634183274"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../rlang/3_01_regular_expression.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=3.1&#32;Regular&#32;expression&#32;syntax>前</a>
+                   
+          
+            <a href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=4.1.2&#32;練習>後</a>            
+          
+          
+
+  
+<script src="../js/packhtml.js?1634183274"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../js/featherlight.min.js?1634183274"></script>
+  <script src="../js/featherlight.gallery.min.js?1634183274"></script>
+  <link href="../css/featherlight.min.css?1634183274" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634183274" rel="stylesheet">
+
+  <script src="../js/highlight.pack.js?1634183274"></script>
+  
+  <script src="../js/hugohelper.js?1634183274"></script>
+
+  <link href="../css/rmd.css?1634183274" rel="stylesheet">
+  <link href="../css/mystyle.css?1634183274" rel="stylesheet">    
+  <script src='../js/variant.js?1634183274'></script>
+
+<script>
+  
+    let idxfile = "\/blogR\/index.json"  
+  
+</script>
+<script src='../js/localsearch.js?1634183274'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']  , ['\\[','\\]']] 
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      
+      
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

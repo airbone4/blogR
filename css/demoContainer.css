@@ -19,11 +19,23 @@
 }
 .demoContainer pre{
   height:30px;
-  overflow: hidden;
+  
+  /*overflow: hidden;*/
 }
 .demoContainer pre.full{
   height:-webkit-fill-available;
+  
 }
+
+.demoContainer pre:hover, 
+.demoContainer pre:focus,
+.demoContainer pre.full:hover, 
+.demoContainer pre.full:focus { 
+  overflow:auto;
+  min-width: unset;
+  width:unset!important; 
+}
+
 
 .demoContainer div[contentEditable] {
     white-space: pre;
