@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634183274" rel="stylesheet">
-    <link href="../css/syntax.css?1634183274" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634183274"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634189020" rel="stylesheet">
+    <link href="../css/syntax.css?1634189020" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634189020"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634183274" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634189020" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634183274" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634189020" rel="stylesheet">
     
-    <link href="../css/theme.css?1634183274" rel="stylesheet">
+    <link href="../css/theme.css?1634189020" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -45,7 +45,7 @@
       </ul>
     </li>
     <li><a href="#逆矩陣">逆矩陣</a></li>
-    <li><a href="#練習利用上面的m1-回答下面的問題">練習:利用上面的m1 回答下面的問題:</a></li>
+    <li><a href="#練習">練習</a></li>
   </ul>
 </nav>
     </div>
@@ -531,7 +531,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/4_5_type_string_function.html"> <i class="far fa-clock" ></i>4.5 字串[2021-10-14 AM 11:32]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/4_2_type_vector.html"> <i class="far fa-clock" ></i>4.2 向量[2021-10-14 PM 01:22]</a></li><li><a href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html"> <i class="far fa-clock" ></i>4.1 基本[2021-10-14 PM 01:03]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-14 PM 12:49]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -697,17 +697,37 @@ print(ii)
 </code></pre>
 </li>
 <li>
-<p><code>inv()</code> <code>det()</code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">print(det(A))
+<p><code>inv()</code> <code>det()</code> 😒<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏library(matlab)</span></span></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">print(det(A)) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏det!=0 所以有逆矩陣</span></span>
 </code></pre>
 <pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt; [1] -28
 </code></pre>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">print(inv(A))
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">print(solve(A))
 </code></pre>
-<pre><code class="language-r?lang=r?class=.error?preclass=ms-5">#&gt; Error in inv(A): 沒有這個函式 &quot;inv&quot;
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;              a1         a2         a3
+#&gt; [1,] -0.2857143 -0.2857143  0.7142857
+#&gt; [2,]  0.5000000  1.0000000 -1.5000000
+#&gt; [3,]  0.1071429 -0.1428571  0.1071429
 </code></pre>
 </li>
 </ol>
+<p><div class="position-relative warning ms-5">
+<p>我想要知道上面的ii到底是不是單位矩陣,而我知道實數的比對可以用<code>all.equal()</code></p>
+<pre><code class="language-r?preclass=.ms-5.w-75">      all.equal(ii,diag(3)) 
+</code></pre>
+<p>但是出現這個訊息
+#&gt; [1] &quot;Attributes: &lt; Length mismatch: comparison on first 1 components &gt;&quot;</p>
+<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-14137">提示</button>
+</div>    
+
+
+<div class="collapse info" id="quiz-14137"><pre><code class="language-r?lang=r?class=.source?preclass=ms-5">all.equal(unname(ii),diag(3))
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt; [1] TRUE
+</code></pre>
+</div>
+</p>
 <p><div class="position-relative warning ms-5">
 <p>練習:解方程
 $$ \mathbf{A x} = \mathbf{b} \Rightarrow \mathbf{A}^{-1} \mathbf{A x} = \mathbf{A}^{-1} \mathbf{b} \Rightarrow \mathbf{x} = \mathbf{A}^{-1} \mathbf{b} $$</p>
@@ -726,8 +746,99 @@ solve(m2,b)
 </code></pre>
 </div>
 </p>
-<p>#all.equal(c(ii),c(diag(3)))</p>
-<h2 id="練習利用上面的m1-回答下面的問題">練習:利用上面的m1 回答下面的問題:</h2>
+<p>常數項<em>矩陣的逆: inv( k</em>A ) = (1/k) * inv(A)</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   if(!require(&quot;matlib&quot;)){
+      install.packages(&quot;matlab&quot;,repos = &quot;http://cran.us.r-project.org&quot;)
+   }
+</code></pre>
+<pre><code>#&gt; 載入需要的套件：matlib
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   library(matlib)
+
+   A &lt;- matrix( c(5, 1, 0,
+                   3,-1, 2,
+                   4, 0,-1), nrow=3, byrow=TRUE)
+   solve(5 * A)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;        [,1]    [,2]   [,3]
+#&gt; [1,] 0.0125  0.0125  0.025
+#&gt; [2,] 0.1375 -0.0625 -0.125
+#&gt; [3,] 0.0500  0.0500 -0.100
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   (1/5) * solve(A)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;        [,1]    [,2]   [,3]
+#&gt; [1,] 0.0125  0.0125  0.025
+#&gt; [2,] 0.1375 -0.0625 -0.125
+#&gt; [3,] 0.0500  0.0500 -0.100
+</code></pre>
+<p>inverse of diagonal matrix = diag( 1/ diagonal)
+因為是分數, 所以可以考慮使用 MASS::fractions().</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   D &lt;- diag(c(1, 2, 4))
+   solve(D)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;      [,1] [,2] [,3]
+#&gt; [1,]    1  0.0 0.00
+#&gt; [2,]    0  0.5 0.00
+#&gt; [3,]    0  0.0 0.25
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   MASS::fractions( diag(1 / c(1, 2, 4)) )
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;      [,1] [,2] [,3]
+#&gt; [1,]   1    0    0 
+#&gt; [2,]   0  1/2    0 
+#&gt; [3,]   0    0  1/4
+</code></pre>
+<p>inv(A) is symmetric if and only if A is symmetric</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">inv( t(A) )  
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;        [,1]    [,2]  [,3]
+#&gt; [1,] 0.0625  0.6875  0.25
+#&gt; [2,] 0.0625 -0.3125  0.25
+#&gt; [3,] 0.1250 -0.6250 -0.50
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">is_symmetric_matrix(A)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt; [1] FALSE
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">is_symmetric_matrix( inv( t(A) ) )
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt; [1] FALSE
+</code></pre>
+<p>Here is a symmetric case:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">B &lt;- matrix( c(4, 2, 2,
+               2, 3, 1,
+               2, 1, 3), nrow=3, byrow=TRUE)
+inv(B)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;       [,1]  [,2]  [,3]
+#&gt; [1,]  0.50 -0.25 -0.25
+#&gt; [2,] -0.25  0.50  0.00
+#&gt; [3,] -0.25  0.00  0.50
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   inv( t(B) )
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt;       [,1]  [,2]  [,3]
+#&gt; [1,]  0.50 -0.25 -0.25
+#&gt; [2,] -0.25  0.50  0.00
+#&gt; [3,] -0.25  0.00  0.50
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   is_symmetric_matrix(B)
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt; [1] TRUE
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   is_symmetric_matrix( inv( t(B) ) )
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt; [1] TRUE
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">   all.equal( inv(B), inv( t(B) ) ) 
+</code></pre>
+<pre><code class="language-r?lang=r?class=.output?preclass=ms-5">#&gt; [1] TRUE
+</code></pre>
+<h2 id="練習">練習</h2>
+<ol>
+<li>
+<p>利用上面的m1 回答下面的問題:</p>
 <pre><code class="language-r">m1[1, 2]
 
 m1[1:2, 2:3]
@@ -760,6 +871,20 @@ m1 %*% m1
 
 t(m1)
 </code></pre>
+</li>
+<li>
+<p>利用A,B,C證明: inverse of a matrix product: <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏注意等號後面的順序</span></span>
+$$ (ABC)^{-1} = C^{-1} \times B^{-1} \times A^{-1} $$
+ABC如下:</p>
+<pre><code class="language-r">A &lt;- matrix( c(5, 1, 0,
+                3,-1, 2,
+                4, 0,-1), nrow=3, byrow=TRUE)
+
+B &lt;- matrix(c(1, 2, 3, 1, 3, 2, 2, 4, 1), nrow=3, byrow=TRUE)
+C &lt;- B[, 3:1]
+</code></pre>
+</li>
+</ol>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -787,8 +912,8 @@ t(m1)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634183274" rel="stylesheet">
-<script src="../js/quicknote.js?1634183274"></script>
+<link href="../css/quicknote.css?1634189020" rel="stylesheet">
+<script src="../js/quicknote.js?1634189020"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -806,7 +931,7 @@ t(m1)
           
 
   
-<script src="../js/packhtml.js?1634183274"></script>    
+<script src="../js/packhtml.js?1634189020"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -816,25 +941,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634183274"></script>
-  <script src="../js/featherlight.gallery.min.js?1634183274"></script>
-  <link href="../css/featherlight.min.css?1634183274" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634183274" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634189020"></script>
+  <script src="../js/featherlight.gallery.min.js?1634189020"></script>
+  <link href="../css/featherlight.min.css?1634189020" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634189020" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634183274"></script>
+  <script src="../js/highlight.pack.js?1634189020"></script>
   
-  <script src="../js/hugohelper.js?1634183274"></script>
+  <script src="../js/hugohelper.js?1634189020"></script>
 
-  <link href="../css/rmd.css?1634183274" rel="stylesheet">
-  <link href="../css/mystyle.css?1634183274" rel="stylesheet">    
-  <script src='../js/variant.js?1634183274'></script>
+  <link href="../css/rmd.css?1634189020" rel="stylesheet">
+  <link href="../css/mystyle.css?1634189020" rel="stylesheet">    
+  <script src='../js/variant.js?1634189020'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634183274'></script>
+<script src='../js/localsearch.js?1634189020'></script>
     
 
 

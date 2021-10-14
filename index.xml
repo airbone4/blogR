@@ -75,8 +75,9 @@ mtcars #&amp;gt; mpg cyl disp hp drat wt qsec vs am gear carb#&amp;gt; Mazda R
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/4_2_type_vector.html</guid>
-      <description>vector 函數範例 cbind,rbind x&amp;lt;-runif(5)y&amp;lt;-runif(6)cbind(x,y) #&amp;gt; Warning in cbind(x, y): number of rows of result is not a multiple of vector#&amp;gt; length (arg 1) #&amp;gt; x y#&amp;gt; [1,] 0.4316869 0.3398929#&amp;gt; [2,] 0.9598154 0.1264328#&amp;gt; [3,] 0.1225892 0.3599933#&amp;gt; [4,] 0.6249614 0.5366486#&amp;gt; [5,] 0.5310026 0.9179331#&amp;gt; [6,] 0.4316869 0.1533237 函數diff Arguments
- x: a numeric vector or matrix containing the values to be differenced.</description>
+      <description>vector 函數範例 cbind,rbind x&amp;lt;-runif(5)y&amp;lt;-runif(6)cbind(x,y)#&amp;gt; Warning in cbind(x, y): number of rows of result is not a multiple of vector#&amp;gt; length (arg 1)#&amp;gt; x y#&amp;gt; [1,] 0.05555426 0.81078837#&amp;gt; [2,] 0.39638526 0.83144706#&amp;gt; [3,] 0.26659782 0.42948876#&amp;gt; [4,] 0.14729596 0.21873952#&amp;gt; [5,] 0.50746265 0.03657459#&amp;gt; [6,] 0.05555426 0.50790482 函數diff 可以用在差分計算
+Arguments
+ x: a numeric vector or matrix containing the values to be differenced. lag: an integer indicating which lag to use.</description>
     </item>
     
     <item>

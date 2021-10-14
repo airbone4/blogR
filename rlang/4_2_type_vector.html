@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634183274" rel="stylesheet">
-    <link href="../css/syntax.css?1634183274" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634183274"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634189020" rel="stylesheet">
+    <link href="../css/syntax.css?1634189020" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634189020"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634183274" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634189020" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634183274" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634189020" rel="stylesheet">
     
-    <link href="../css/theme.css?1634183274" rel="stylesheet">
+    <link href="../css/theme.css?1634189020" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -533,71 +533,70 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/4_5_type_string_function.html"> <i class="far fa-clock" ></i>4.5 字串[2021-10-14 AM 11:32]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/4_2_type_vector.html"> <i class="far fa-clock" ></i>4.2 向量[2021-10-14 PM 01:22]</a></li><li><a href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html"> <i class="far fa-clock" ></i>4.1 基本[2021-10-14 PM 01:03]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-14 PM 12:49]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
     <h2 id="vector-函數範例">vector 函數範例</h2>
 <h3 id="cbindrbind">cbind,rbind</h3>
-<pre><code class="language-r">x&lt;-runif(5)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x&lt;-runif(5)
 y&lt;-runif(6)
 cbind(x,y)
-</code></pre>
-<pre><code>#&gt; Warning in cbind(x, y): number of rows of result is not a multiple of vector
+#&gt; Warning in cbind(x, y): number of rows of result is not a multiple of vector
 #&gt; length (arg 1)
-</code></pre>
-<pre><code>#&gt;              x         y
-#&gt; [1,] 0.4316869 0.3398929
-#&gt; [2,] 0.9598154 0.1264328
-#&gt; [3,] 0.1225892 0.3599933
-#&gt; [4,] 0.6249614 0.5366486
-#&gt; [5,] 0.5310026 0.9179331
-#&gt; [6,] 0.4316869 0.1533237
+#&gt;               x          y
+#&gt; [1,] 0.05555426 0.81078837
+#&gt; [2,] 0.39638526 0.83144706
+#&gt; [3,] 0.26659782 0.42948876
+#&gt; [4,] 0.14729596 0.21873952
+#&gt; [5,] 0.50746265 0.03657459
+#&gt; [6,] 0.05555426 0.50790482
 </code></pre>
 <h3 id="函數diff">函數diff</h3>
+<p>可以用在差分計算</p>
 <p>Arguments</p>
 <ul>
 <li>x: a numeric vector or matrix containing the values to be differenced.</li>
 <li>lag: an integer indicating which lag to use.</li>
 <li>differences: an integer indicating the order of the difference.<br>
-例如
-diff(x,lag=d,differences=n)
-x[(1+d):n] - x[1:(n-d)]</li>
+例如</li>
 </ul>
+<pre><code class="language-r?preclass=.ms-5.w-75">diff(x,lag=d,differences=n)
+x[(1+d):n] - x[1:(n-d)]
+
+</code></pre>
 <h2 id="練習-刪除向量中的一個元素">練習: 刪除向量中的一個元素</h2>
-<pre><code class="language-r">x&lt;-c(1,2,3)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x&lt;-c(1,2,3)
 </code></pre>
 <p>如何刪除x中的第2個元素 ?</p>
 <p>hint:<br>
 數字向量元素的刪除 ，不能像是list[2]&lt;-NULL ，請問你的解法？ 並說明</p>
 <p>物件元素的刪除，簡單一點的像是list，</p>
-<pre><code class="language-r">x&lt;-list(1,2,3)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x&lt;-list(1,2,3)
 x[2]&lt;-NULL
 x
 </code></pre>
 <p>但是向量元素的刪除沒有捷徑</p>
-<pre><code class="language-r">x&lt;-c(1,2,3)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x&lt;-c(1,2,3)
 x[2]&lt;-NULL
-</code></pre>
-<pre><code>#&gt; Error in x[2] &lt;- NULL: 置換的長度為零
+#&gt; Error in x[2] &lt;- NULL: 置換的長度為零
 </code></pre>
 <p>因此，需要變通的辦法<br>
 方法1：</p>
-<pre><code class="language-r">x&lt;-c(1,2,3)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x&lt;-c(1,2,3)
 t&lt;-as.list(x) # note: 使用list(x)而不是as.list(x)會有什麼不同
 t[2]&lt;-NULL
 x&lt;-unlist(t)
 x
-</code></pre>
-<pre><code>#&gt; [1] 1 3
+#&gt; [1] 1 3
 </code></pre>
 <p>方法2：</p>
-<pre><code class="language-r">x&lt;-c(1,2,3)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x&lt;-c(1,2,3)
 y&lt;-x[-2]
 x&lt;-y
 </code></pre>
 <p>練習：改為函數</p>
-<pre><code class="language-r">delElement&lt;-function(x,idx){
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">delElement&lt;-function(x,idx){
   if (is.vector(x)){
     t&lt;-as.list(x)
     t[idx]&lt;-NULL
@@ -611,89 +610,82 @@ x&lt;-y
 x&lt;-c(1,2,3)
 x&lt;-delElement(x,2)
 x
-</code></pre>
-<pre><code>#&gt; [1] 1 3
+#&gt; [1] 1 3
 </code></pre>
 <h3 id="adding-attributes-to-vectorshttpuc-rgithubiovectors_attributes"><a href="http://uc-r.github.io/vectors_attributes">Adding Attributes to Vectors</a></h3>
-<p>The attributes that you can add to vectors includes names and comments. If we continue with our vector v1 we can see that the vector currently has no attributes:</p>
-<pre><code class="language-r">v1 &lt;- 8:17
+<p>函數<code>attributes()</code> 可以讓我們有能力給一個普通的物件加入一些註解或是名稱。以向量為例,如下,一開始設定向量的時候,內定屬性是NULL</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">v1 &lt;- 8:17
 attributes(v1)
+#&gt; NULL
 </code></pre>
-<pre><code>#&gt; NULL
-</code></pre>
-<p>We can add names to vectors using two approaches. The first uses names() to assign names to each element of the vector. The second approach is to assign names when creating the vector.</p>
-<pre><code class="language-r"># assigning names to a pre-existing vector
-names(v1) &lt;- letters[1:length(v1)]
+<p>現在可以給元素名稱</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># assigning names to a pre-existing vector
+names(v1) &lt;- letters[1:length(v1)] #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏根據實際長度給定a,b,c,d...</span></span>
 v1
-</code></pre>
-<pre><code>#&gt;  a  b  c  d  e  f  g  h  i  j 
+#&gt;  a  b  c  d  e  f  g  h  i  j 
 #&gt;  8  9 10 11 12 13 14 15 16 17
 </code></pre>
-<pre><code class="language-r">attributes(v1)
-</code></pre>
-<pre><code>#&gt; $names
+<p>然後看看屬性</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">attributes(v1)
+#&gt; $names
 #&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot;
 </code></pre>
 <p>那，什麼是<code>names(v1)</code></p>
-<pre><code class="language-r">names(v1)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">names(v1)
+#&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot;
 </code></pre>
-<pre><code>#&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot;
-</code></pre>
-<p>也就是說names()函數返回每個元素的名子，而<code>attributes()</code>返回的是有什麼屬性，也是函數名稱字面上的意思。但是再仔細看看，可以發現指派attribute 給</p>
-<pre><code class="language-r">attributes(v1)&lt;-list(x='',y='',z='')
+<p>也就是說names()函數返回每個元素的名子，而<code>attributes()</code>返回的是有什麼屬性。但是再仔細看看，可以發現指派attribute 給</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">attributes(v1)&lt;-list(x='',y='',z='')
 v1
-</code></pre>
-<pre><code>#&gt;  [1]  8  9 10 11 12 13 14 15 16 17
+#&gt;  [1]  8  9 10 11 12 13 14 15 16 17
 #&gt; attr(,&quot;x&quot;)
 #&gt; [1] &quot;&quot;
 #&gt; attr(,&quot;y&quot;)
 #&gt; [1] &quot;&quot;
 #&gt; attr(,&quot;z&quot;)
 #&gt; [1] &quot;&quot;
+attributes(v1)
+#&gt; $x
+#&gt; [1] &quot;&quot;
+#&gt; 
+#&gt; $y
+#&gt; [1] &quot;&quot;
+#&gt; 
+#&gt; $z
+#&gt; [1] &quot;&quot;
 </code></pre>
 <p>測試是否可以自行加入attributes，然後讓<code>names()</code>可以運作，如下：</p>
-<pre><code class="language-r">attributes(v1)&lt;-list(names=letters[1:10])
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">attributes(v1)&lt;-list(names=letters[1:10])
 v1
-</code></pre>
-<pre><code>#&gt;  a  b  c  d  e  f  g  h  i  j 
+#&gt;  a  b  c  d  e  f  g  h  i  j 
 #&gt;  8  9 10 11 12 13 14 15 16 17
-</code></pre>
-<pre><code class="language-r">attributes(v1)
-</code></pre>
-<pre><code>#&gt; $names
+attributes(v1)
+#&gt; $names
 #&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot;
-</code></pre>
-<pre><code class="language-r">names(v1)
-</code></pre>
-<pre><code>#&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot;
+names(v1)
+#&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot;
 </code></pre>
 <p>上面這個程式暗示了什麼？</p>
 <blockquote>
 <p>函數<code>names()</code>只是<code>attributes()&lt;-</code>的一個特例，我們總是可以自行加入一個屬性，名稱為<code>names</code>讓函數<code>names()</code>可以把每個元素的名稱列印出來。</p>
 </blockquote>
 <p>後面這段程式碼只是對照一下之前每個元素加入名稱的作法，本身沒意義：</p>
-<pre><code class="language-r"># adding names when creating vectors
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># adding names when creating vectors
 v2 &lt;- c(name1 = 1, name2 = 2, name3 = 3)
 v2
-</code></pre>
-<pre><code>#&gt; name1 name2 name3 
+#&gt; name1 name2 name3 
 #&gt;     1     2     3
-</code></pre>
-<pre><code class="language-r">attributes(v2)
-</code></pre>
-<pre><code>#&gt; $names
+attributes(v2)
+#&gt; $names
 #&gt; [1] &quot;name1&quot; &quot;name2&quot; &quot;name3&quot;
 </code></pre>
 <p>也可以加入註解：</p>
-<pre><code class="language-r">comment(v1) &lt;- &quot;This is a comment on a vector&quot;
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">comment(v1) &lt;- &quot;This is a comment on a vector&quot;
 v1
-</code></pre>
-<pre><code>#&gt;  a  b  c  d  e  f  g  h  i  j 
+#&gt;  a  b  c  d  e  f  g  h  i  j 
 #&gt;  8  9 10 11 12 13 14 15 16 17
-</code></pre>
-<pre><code class="language-r">attributes(v1)
-</code></pre>
-<pre><code>#&gt; $names
+attributes(v1)
+#&gt; $names
 #&gt;  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot;
 #&gt; 
 #&gt; $comment
@@ -727,8 +719,8 @@ v1
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634183274" rel="stylesheet">
-<script src="../js/quicknote.js?1634183274"></script>
+<link href="../css/quicknote.css?1634189020" rel="stylesheet">
+<script src="../js/quicknote.js?1634189020"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -746,7 +738,7 @@ v1
           
 
   
-<script src="../js/packhtml.js?1634183274"></script>    
+<script src="../js/packhtml.js?1634189020"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -756,25 +748,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634183274"></script>
-  <script src="../js/featherlight.gallery.min.js?1634183274"></script>
-  <link href="../css/featherlight.min.css?1634183274" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634183274" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634189020"></script>
+  <script src="../js/featherlight.gallery.min.js?1634189020"></script>
+  <link href="../css/featherlight.min.css?1634189020" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634189020" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634183274"></script>
+  <script src="../js/highlight.pack.js?1634189020"></script>
   
-  <script src="../js/hugohelper.js?1634183274"></script>
+  <script src="../js/hugohelper.js?1634189020"></script>
 
-  <link href="../css/rmd.css?1634183274" rel="stylesheet">
-  <link href="../css/mystyle.css?1634183274" rel="stylesheet">    
-  <script src='../js/variant.js?1634183274'></script>
+  <link href="../css/rmd.css?1634189020" rel="stylesheet">
+  <link href="../css/mystyle.css?1634189020" rel="stylesheet">    
+  <script src='../js/variant.js?1634189020'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634183274'></script>
+<script src='../js/localsearch.js?1634189020'></script>
     
 
 

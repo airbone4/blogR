@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634183274" rel="stylesheet">
-    <link href="../css/syntax.css?1634183274" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634183274"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634189020" rel="stylesheet">
+    <link href="../css/syntax.css?1634189020" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634189020"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634183274" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634189020" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634183274" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634189020" rel="stylesheet">
     
-    <link href="../css/theme.css?1634183274" rel="stylesheet">
+    <link href="../css/theme.css?1634189020" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -558,7 +558,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html"> <i class="far fa-clock" ></i>2.1 讀檔寫檔[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/6_1_programming.html"> <i class="far fa-clock" ></i>6.1 Programming basic[2021-10-14 AM 11:47]</a></li><li><a href="../rlang/4_5_type_string_function.html"> <i class="far fa-clock" ></i>4.5 字串[2021-10-14 AM 11:32]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/4_2_type_vector.html"> <i class="far fa-clock" ></i>4.2 向量[2021-10-14 PM 01:22]</a></li><li><a href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html"> <i class="far fa-clock" ></i>4.1 基本[2021-10-14 PM 01:03]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-14 PM 12:49]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -625,14 +625,13 @@
 <td style="text-align:right">Raw</td>
 <td style="text-align:left">&quot;Hello&quot; is stored as 48 65 6c 6c 6f</td>
 </tr>
-<tr>
-<td style="text-align:right">💡: 字元H對應的48怎麼來的? 利用JS驗證 &quot;H&quot;.charCodeAt(0).toString(16) ，在Ｒ中可以利用charToRaw(範例中)</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 
 </div>
+<blockquote>
+<p>💡: 上表中,字元H對應的48怎麼來的? 利用JS驗證 &quot;H&quot;.charCodeAt(0).toString(16) ，在Ｒ中可以利用charToRaw(範例中)</p>
+</blockquote>
 <p>數字(3種,例如整數、浮點、複數）,邏輯,字元(2種，character, raw)</p>
 <pre><code class="language-r?lang=r?preclass=.ms-5.w-75">v &lt;- TRUE 
 print(class(v))
@@ -829,13 +828,13 @@ typeof(b)
 <pre><code class="language-r?lang=r?preclass=.ms-5.w-75">a = c(TRUE, FALSE)
 b = c(FALSE, F)
 a | b
-#&gt; [1]  TRUE FALSE
+#&gt; [1]  TRUE FALSE # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏全部元素</span></span>
 a || b
-#&gt; [1] TRUE
+#&gt; [1] TRUE # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏只有第一個元素</span></span>
 a &amp; b
-#&gt; [1] FALSE FALSE
+#&gt; [1] FALSE FALSE # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏全部元素</span></span>
 a &amp;&amp; b
-#&gt; [1] FALSE
+#&gt; [1] FALSE # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏只有第一個元素</span></span>
 
 xor(a, b)
 #&gt; [1]  TRUE FALSE
@@ -862,7 +861,7 @@ x||y #&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-
 &gt; y &lt;- c(FALSE,TRUE,FALSE,TRUE)
 #&gt; [1] FALSE  TRUE FALSE  TRUE
 &gt; !x
-#&gt; [1] FALSE  TRUE  TRUE FALSE
+#&gt; [1] FALSE  TRUE  TRUE FALSE #👺👺&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👺和C家族的非0為真不一樣🤷‍♀️&lt;/span&gt;&lt;/span&gt;
 &gt; x&amp;y
 #&gt; [1] FALSE FALSE FALSE  TRUE
 &gt; x&amp;&amp;y
@@ -989,7 +988,7 @@ all.equal(0.1+0.2,0.3)
 <p>在R中，可以用<code>signif()</code>示範(😒<code>options()$digits</code>預設是7,可以用(<code>options(digits=15)</code>改變設定)但是好像只是用來控制顯示的有效位元)</p>
 <pre><code class="language-r?lang=r?class=.primary.source?preclass=ms-5">x&lt;-runif(1)
 signif(x,3)
-#&gt; [1] 0.354
+#&gt; [1] 0.111
 
 signif(0.1+0.2, 15)==signif(0.3,15)
 #&gt; [1] TRUE
@@ -1002,26 +1001,26 @@ signif(0.1,15)+signif(0.2,15)==signif(0.3,15) # &lt;span data-nopre class=&quot;
 </div>
 
 <p>這是另一個例子,跟我們說實數的比較很不穩定</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># 先看我們應該知道的部分
-1-0.4 ==0.6 # TRUE
+<pre><code class="language-r?preclass=.ms-5.w-75">
+# 先看我們應該知道的部分
+1-0.4 ==0.6 # TRUE 👏
 #&gt; [1] TRUE
 1-0.6==0.4 # TRUE
 #&gt; [1] TRUE
 x &lt;- seq(0, 1, by = 0.2)
 y &lt;- seq(0, 1, by = 0.2)
-y[4]
-#&gt; [1] 0.6
-x[3]
-#&gt; [1] 0.4
-1 - x[3]
-#&gt; [1] 0.6
-y[4] == 1 - x[3]
-#&gt; [1] FALSE
-y[4] &gt; 1 - x[3]
-#&gt; [1] TRUE
-## note:
+y[4]  #&gt; [1] 0.6
+x[3]  #&gt; [1] 0.4
+1 - x[3] #&gt; [1] 0.6
+y[4] == 1 - x[3] #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >前面的1-0.4==0.6 為真</span></span>
+#&gt; [1] FALSE 👏
+
+## 💯
 all.equal(y[4], 1 - x[3])　
 #&gt; [1] TRUE
+##  💯
+all.equal(y[4], 1 - x[3])　
+
 </code></pre>
 <p><div class="position-relative warning ms-5">
 函數練習：<br>
@@ -1078,17 +1077,17 @@ is.null(config$name)
     <div class="info">
         <p>如何判斷是否NA</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x == NA
-#&gt; [1] NA NA NA NA NA NA
+#&gt; [1] NA
 </code></pre>
 <p>上面的比較沒有意義,和NA的任何運算都是NA</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">r = x == NA
 r
-#&gt; [1] NA NA NA NA NA NA
+#&gt; [1] NA
 </code></pre>
 <p>結論:任何變數和NA運算,結果還是NA<br>
 另一種方法</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">print(x == NA)
-#&gt; [1] NA NA NA NA NA NA
+#&gt; [1] NA
 </code></pre>
 <p>如何判斷NA ? <code>is.na()</code></p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">    is.na(a[6])
@@ -1430,7 +1429,7 @@ kind[c(T,F,T,T,F,T,F,T,F,F)]
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">kind&lt;-c(&quot;水壺&quot;,&quot;鐵網&quot;)
 x&lt;-rnorm(10)　#10 random number
 kind[x&lt;0.5] # 預計小於５可以抽出來（因為我記得可以循環補）
-#&gt; [1] &quot;水壺&quot; NA     NA     NA     NA     NA
+#&gt; [1] &quot;鐵網&quot; NA     NA     NA     NA     NA     NA
 </code></pre>
 <p>這是甚麼？👺😒 我知道ＮＡ是超出範圍的意思，可是不知道為甚麼他超出範圍</p>
 <pre><code class="language-r?preclass=.ms-5.w-75">#&gt; [1] &quot;鐵網&quot; NA     NA     NA     NA     NA     NA     NA
@@ -1658,8 +1657,8 @@ class(x)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634183274" rel="stylesheet">
-<script src="../js/quicknote.js?1634183274"></script>
+<link href="../css/quicknote.css?1634189020" rel="stylesheet">
+<script src="../js/quicknote.js?1634189020"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1677,7 +1676,7 @@ class(x)
           
 
   
-<script src="../js/packhtml.js?1634183274"></script>    
+<script src="../js/packhtml.js?1634189020"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1687,25 +1686,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634183274"></script>
-  <script src="../js/featherlight.gallery.min.js?1634183274"></script>
-  <link href="../css/featherlight.min.css?1634183274" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634183274" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634189020"></script>
+  <script src="../js/featherlight.gallery.min.js?1634189020"></script>
+  <link href="../css/featherlight.min.css?1634189020" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634189020" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634183274"></script>
+  <script src="../js/highlight.pack.js?1634189020"></script>
   
-  <script src="../js/hugohelper.js?1634183274"></script>
+  <script src="../js/hugohelper.js?1634189020"></script>
 
-  <link href="../css/rmd.css?1634183274" rel="stylesheet">
-  <link href="../css/mystyle.css?1634183274" rel="stylesheet">    
-  <script src='../js/variant.js?1634183274'></script>
+  <link href="../css/rmd.css?1634189020" rel="stylesheet">
+  <link href="../css/mystyle.css?1634189020" rel="stylesheet">    
+  <script src='../js/variant.js?1634189020'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634183274'></script>
+<script src='../js/localsearch.js?1634189020'></script>
     
 
 
