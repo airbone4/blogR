@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634789915" rel="stylesheet">
-    <link href="../css/syntax.css?1634789915" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634789915"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634793271" rel="stylesheet">
+    <link href="../css/syntax.css?1634793271" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634793271"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634789915" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634789915" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme.css?1634789915" rel="stylesheet">
+    <link href="../css/theme.css?1634793271" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -594,12 +594,11 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:18]</a></li><li><a href="../rlang/4_4_type_list.html"> <i class="far fa-clock" ></i>4.4 串列 list[2021-10-21 PM 12:13]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-21 AM 11:27]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-10-21 PM 01:14]</a></li><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:36]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-10-21 PM 12:30]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <h1 id="functions">Functions</h1>
-<h2 id="introduction">Introduction</h2>
+    <h2 id="introduction">Introduction</h2>
 <p>簡單測試</p>
 <h3 id="quiz">Quiz</h3>
 <p>Answer the following questions to see if you can safely skip this chapter. You can find the answers in <a href="#function-answer">function-answer</a>.</p>
@@ -661,42 +660,40 @@ function, the three main components of a function, and the exception to many fun
 <p>但是規則都會被打破,例外大概都利用C寫成的 &quot;primitive&quot; base functions。</p>
 <h3 id="first-class-functions">First-class functions</h3>
 <p>在R中,函數也是物件,這種特性也叫做 &quot;first-class functions&quot;. 如下:</p>
-<pre><code class="language-r">f01 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f01 &lt;- function(x) {
   sin(1 / x ^ 2)
 }
 </code></pre>
 
-<figure  class="figure text-center d-block w-50 m-auto   ">
+<figure  class="figure text-center d-block w-50 m-auto text-center d-block border border-primary w-25">
 
 
 
 
 
     <img src="diagrams/functions/first-class.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
+         alt="圖" width="100%"/> <figcaption class="figure-caption">
+            圖
         </figcaption>
 </figure>
 
 <p>匿名函數:</p>
-<pre><code class="language-r">lapply(mtcars, function(x) length(unique(x)))
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">lapply(mtcars, function(x) length(unique(x)))
 Filter(function(x) !is.numeric(x), mtcars)
 integrate(function(x) sin(x) ^ 2, 0, pi)
 </code></pre>
 <p>在list中,也可以放入函數:</p>
-<pre><code class="language-r">funs &lt;- list(
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">funs &lt;- list(
   half = function(x) x / 2,
   double = function(x) x * 2
 )
 
 funs$double(10)
-</code></pre>
-<pre><code>#&gt; [1] 20
+#&gt; [1] 20
 </code></pre>
 <p>在R語言中,函數有時叫做closure因為,R函數包含(enclose)它們的環境 environments.</p>
-<pre><code class="language-r">typeof(f01)
-</code></pre>
-<pre><code>#&gt; [1] &quot;closure&quot;
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">typeof(f01)
+#&gt; [1] &quot;closure&quot;
 </code></pre>
 <h3 id="function-components">Function components</h3>
 <p>1個函數有3個部分:</p>
@@ -719,24 +716,21 @@ funs$double(10)
 </figure>
 
 <p>測試3部分</p>
-<pre><code class="language-r">f02 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f02 &lt;- function(x) {
   # A comment
   x ^ 2
 }
 
 formals(f02)
-</code></pre>
-<pre><code>#&gt; $x
-</code></pre>
-<pre><code class="language-r">body(f02)
-</code></pre>
-<pre><code>#&gt; {
+#&gt; $x
+
+body(f02)
+#&gt; {
 #&gt;     x^2
 #&gt; }
-</code></pre>
-<pre><code class="language-r">environment(f02)
-</code></pre>
-<pre><code>#&gt; &lt;environment: 0x0000000019cbbfb0&gt;
+
+environment(f02)
+#&gt; &lt;environment: 0x0000000019ccbf58&gt;
 </code></pre>
 <div data-nopre class="expand">
     <div data-nopre class="expand-label" onclick="vexpand(this)">
@@ -745,45 +739,33 @@ formals(f02)
     </div><div data-nopre class="expand-content incode" style="overflow-x:auto"> 函數的environment 都會存在,但是在整體環境中定義的函數,不會被顯示。
 上面的environment(f02)有顯示environment. why()?</div></div>
 <p>👍就像所以其他R的物件,函數也有很多 <code>attributes()</code>. 其中一個 &quot;srcref&quot;, 是 source reference的縮寫。 　</p>
-<pre><code class="language-r">attr(f02, &quot;srcref&quot;)
-</code></pre>
-<pre><code>#&gt; function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">attr(f02, &quot;srcref&quot;)
+#&gt; function(x) {
 #&gt;   # A comment
 #&gt;   x ^ 2
 #&gt; }
 </code></pre>
 <h3 id="primitive-functions">Primitive functions</h3>
 <p>３個組件的規則有例外，像是 Primitive functions, like <code>sum()</code> and <code>[</code>, 直接調用Ｃ語言。</p>
-<pre><code class="language-r">sum
-</code></pre>
-<pre><code>#&gt; function (..., na.rm = FALSE)  .Primitive(&quot;sum&quot;)
-</code></pre>
-<pre><code class="language-r">`[`
-</code></pre>
-<pre><code>#&gt; .Primitive(&quot;[&quot;)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">sum
+#&gt; function (..., na.rm = FALSE)  .Primitive(&quot;sum&quot;)
+`[`
+#&gt; .Primitive(&quot;[&quot;)
 </code></pre>
 <p>看一下type
 分別屬於 &quot;builtin&quot; or &quot;special&quot;:</p>
-<pre><code class="language-r">typeof(sum)
-</code></pre>
-<pre><code>#&gt; [1] &quot;builtin&quot;
-</code></pre>
-<pre><code class="language-r">typeof(`[`)
-</code></pre>
-<pre><code>#&gt; [1] &quot;special&quot;
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">typeof(sum)
+#&gt; [1] &quot;builtin&quot;
+typeof(`[`)
+#&gt; [1] &quot;special&quot;
 </code></pre>
 <p>因此， <code>formals()</code>, <code>body()</code>, and <code>environment()</code> 都回傳 <code>NULL</code>:</p>
-<pre><code class="language-r">formals(sum)
-</code></pre>
-<pre><code>#&gt; NULL
-</code></pre>
-<pre><code class="language-r">body(sum)
-</code></pre>
-<pre><code>#&gt; NULL
-</code></pre>
-<pre><code class="language-r">environment(sum)
-</code></pre>
-<pre><code>#&gt; NULL
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">formals(sum)
+#&gt; NULL
+body(sum)
+#&gt; NULL
+environment(sum)
+#&gt; NULL
 </code></pre>
 <p>這些所謂的原始函數，只存在於基本套件(base packages) 。.</p>
 <h3 id="exercises">Exercises</h3>
@@ -791,14 +773,11 @@ formals(f02)
 <li>
 <p>It's possible (although typically not useful) to call an anonymous function.
 Which of the two approaches below is correct? Why?</p>
-<pre><code class="language-r">function(x) 3()
-</code></pre>
-<pre><code>#&gt; function(x) 3()
-#&gt; &lt;environment: 0x0000000019cbbfb0&gt;
-</code></pre>
-<pre><code class="language-r">(function(x) 3)()
-</code></pre>
-<pre><code>#&gt; [1] 3
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">function(x) 3()
+#&gt; function(x) 3()
+#&gt; &lt;environment: 0x0000000019ccbf58&gt;
+(function(x) 3)()
+#&gt; [1] 3
 </code></pre>
 </li>
 <li>
@@ -806,7 +785,7 @@ Which of the two approaches below is correct? Why?</p>
 </li>
 <li>
 <p>This code makes a list of all functions in the base package.</p>
-<pre><code class="language-r">objs &lt;- mget(ls(&quot;package:base&quot;), inherits = TRUE)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">objs &lt;- mget(ls(&quot;package:base&quot;), inherits = TRUE)
 funs &lt;- Filter(is.function, objs)
 </code></pre>
 <p>Use it to answer the following questions:</p>
@@ -829,7 +808,7 @@ a. How could you adapt the code to find all primitive functions?</p>
         <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
         <span data-nopre >answer</span>
     </div><div data-nopre class="expand-content incode" style="overflow-x:auto"> `20`.</div></div>
-<pre><code class="language-r">x &lt;- 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 10
 g01 &lt;- function() {
   x &lt;- 20
   x
@@ -848,7 +827,7 @@ g01()
 </ul>
 <h3 id="name-masking">Name masking</h3>
 <p>內部範圍的宣告(第一次使用)覆蓋外部範圍的宣告。.</p>
-<pre><code class="language-r">x &lt;- 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 10
 y &lt;- 20
 g02 &lt;- function() {
   x &lt;- 1
@@ -856,22 +835,20 @@ g02 &lt;- function() {
   c(x, y)
 }
 g02()
-</code></pre>
-<pre><code>#&gt; [1] 1 2
+#&gt; [1] 1 2
 </code></pre>
 <p>如果在內部宣告找不到,就找外一層，一直到global environment。</p>
-<pre><code class="language-r">x &lt;- 2
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 2
 g03 &lt;- function() {
   y &lt;- 1
   c(x, y)
 }
 g03()
-</code></pre>
-<pre><code>#&gt; [1] 2 1
+#&gt; [1] 2 1
 </code></pre>
 <p>上面的規則仍然適用於函數中的函數.</p>
 <p>測試:下面的R程式會有甚麼結果 ? <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<pre><code class="language-r">x &lt;- 1
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 1
 g04 &lt;- function() {
   y &lt;- 2
   i &lt;- function() {
@@ -883,7 +860,7 @@ g04 &lt;- function() {
 g04()
 </code></pre>
 <p>同樣也適用於建立函數的函數( <strong>closures</strong>).參考 [closures]; 這裡只是用來說明上述規則的使用。 <code>g05()</code>, 傳回函數,猜猜執行結果?<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<pre><code class="language-r">x &lt;- 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 10
 y &lt;- 20
 
 g05 &lt;- function() {
@@ -898,30 +875,29 @@ g06()
 <p>This seems a little magical: how does R know what the value of <code>y</code> is after <code>j()</code> has returned? It works because <code>k</code> preserves the environment in which it was defined and because the environment includes the value of <code>y</code>. You'll learn more about how environments work in <a href="#environments">Environments</a>.</p>
 <h3 id="functions-vs-variables">Functions vs. variables</h3>
 <p>既然函數也只是普通的物件,那麼同樣的名稱尋找規則也適用於函數:這個例子中,g07在外部和內部皆有定義。</p>
-<pre><code class="language-r">g07 &lt;- function(x) x + 1
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">g07 &lt;- function(x) x + 1
 g08 &lt;- function() {
   g07 &lt;- function(x) x + 100
   g07(10)
 }
 g08()
-</code></pre>
-<pre><code>#&gt; [1] 110
+#&gt; [1] 110
 </code></pre>
 <p>但是如果同一個名稱,在不同範圍有不一樣的型態呢?例如g9一個是變數,一個是函數:</p>
-<pre><code class="language-r">g09 &lt;- function(x) x + 100
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">g09 &lt;- function(x) x + 100
 g10 &lt;- function() {
   g09 &lt;- 10
   g09(g09)
 }
 g10()
-</code></pre>
-<pre><code>#&gt; [1] 110
+#&gt; [1] 110
 </code></pre>
 <p>一般來講,上面的用法在語法上是沒問題,但是最好避免。</p>
 <h3 id="fresh-start">A fresh start</h3>
 <p>第一次執行和第二次執行有甚麼不同?<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
 <p>函數 <code>exists(x)</code> :會尋找變數名稱x是否存在,存在則無回 <code>TRUE</code>,否則傳回 <code>FALSE</code>.)</p>
-<pre><code class="language-r">g11 &lt;- function() {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
+g11 &lt;- function() {
   if (!exists(&quot;a&quot;)) {
     a &lt;- 1
   } else {
@@ -936,16 +912,14 @@ g11()
 <p>每次執行g11()的時候,一個新的environment會被建立,也就是這個函數的<strong>局部空間</strong>。 這個局部空間會在函數結束的時候消失。</p>
 <h3 id="dynamic-lookup">Dynamic lookup</h3>
 <p>但是如果函數執行的時候用倒在局部環境找不到的變數的時候,會目前的總體環境(也就是函數所在的環境)找變數值。</p>
-<pre><code class="language-r">g12 &lt;- function() x + 1
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">g12 &lt;- function() x + 1
 x &lt;- 15
 g12()
-</code></pre>
-<pre><code>#&gt; [1] 16
-</code></pre>
-<pre><code class="language-r">x &lt;- 20
+#&gt; [1] 16
+
+x &lt;- 20
 g12()
-</code></pre>
-<pre><code>#&gt; [1] 21
+#&gt; [1] 21
 </code></pre>
 <p>上面的總體環境包含了兩個變數,一個是函數<code>g12()</code>,一個是變數<code>x</code>:</p>
 <ul>
@@ -953,22 +927,20 @@ g12()
 <li>x</li>
 </ul>
 <p>如果要檢查函數的變數參考是不是有問題,可以使用工具 <code>codetools::findGlobals()</code>. This function lists all the external dependencies (unbound symbols) within a function:</p>
-<pre><code class="language-r">codetools::findGlobals(g12)
-</code></pre>
-<pre><code>#&gt; [1] &quot;+&quot; &quot;x&quot;
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">codetools::findGlobals(g12)
+#&gt; [1] &quot;+&quot; &quot;x&quot;
 </code></pre>
 <p>Another way to solve the problem would be to manually change the environment of the function to the <code>emptyenv()</code>, an environment which contains nothing:</p>
-<pre><code class="language-r">environment(g12) &lt;- emptyenv()
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">environment(g12) &lt;- emptyenv()
 g12()
-</code></pre>
-<pre><code>#&gt; Error in x + 1: 沒有這個函式 &quot;+&quot;
+#&gt; Error in x + 1: 沒有這個函式 &quot;+&quot;
 </code></pre>
 <h3 id="exercises-1">Exercises</h3>
 <ol>
 <li>
 <p>What does the following code return? Why? Describe how each of the three
 <code>c</code>'s is interpreted.</p>
-<pre><code class="language-r">c &lt;- 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">c &lt;- 10
 c(c = c)
 </code></pre>
 </li>
@@ -978,7 +950,7 @@ c(c = c)
 <li>
 <p>What does the following function return? Make a prediction before 
 running the code yourself.</p>
-<pre><code class="language-r">f &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f &lt;- function(x) {
   f &lt;- function(x) {
     f &lt;- function() {
       x ^ 2
@@ -993,58 +965,51 @@ f(10)
 </ol>
 <h2 id="lazy-evaluation">Lazy evaluation</h2>
 <p>In R, function arguments are <strong>lazily evaluated</strong>: they're only evaluated if accessed. For example, this code doesn't generate an error because <code>x</code> is never used:</p>
-<pre><code class="language-r">h01 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">h01 &lt;- function(x) {
   10
 }
 h01(stop(&quot;This is an error!&quot;))
-</code></pre>
-<pre><code>#&gt; [1] 10
+#&gt; [1] 10
 </code></pre>
 <p>This is an important feature because it allows you to do things like include potentially expensive computations in function arguments that will only be evaluated if needed.</p>
 <h3 id="forcing-evaluation">Forcing evaluation</h3>
 <p>To <strong>compel</strong> the evaluation of an argument, use <code>force()</code>:</p>
-<pre><code class="language-r">h02 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">h02 &lt;- function(x) {
   force(x)
   10
 }
 h02(stop(&quot;This is an error!&quot;))
-</code></pre>
-<pre><code>#&gt; Error in force(x): This is an error!
+#&gt; Error in force(x): This is an error!
 </code></pre>
 <p>It is usually not necessary to force evaluation. It's needed primarily for certain functional programming techniques which we'll cover in detail in [function operators]. Here, I want to show you the basic issue.</p>
 <p>Take this small but surprisingly tricky function. It takes a single argument <code>x</code>, and returns a function that returns <code>x</code> when called.</p>
-<pre><code class="language-r">capture1 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">capture1 &lt;- function(x) {
   function() {
     x
   }
 }
 </code></pre>
 <p>There's a subtle issue with this function: the value of <code>x</code> will be captured not when you call <code>capture()</code>, but when you call the function that <code>capture()</code> returns:</p>
-<pre><code class="language-r">x &lt;- 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 10
 h03 &lt;- capture1(x)
 h04 &lt;- capture1(x)
 
 h03()
-</code></pre>
-<pre><code>#&gt; [1] 10
-</code></pre>
-<pre><code class="language-r">x &lt;- 20
+#&gt; [1] 10
+
+x &lt;- 20
 h04()
-</code></pre>
-<pre><code>#&gt; [1] 20
+#&gt; [1] 20
 </code></pre>
 <p>Even more confusingly this only happens once: the value is locked in after you have called <code>h03()</code>/<code>h04()</code> for the first time.</p>
-<pre><code class="language-r">x &lt;- 30
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 30
 h03()
-</code></pre>
-<pre><code>#&gt; [1] 10
-</code></pre>
-<pre><code class="language-r">h04()
-</code></pre>
-<pre><code>#&gt; [1] 20
+#&gt; [1] 10
+h04()
+#&gt; [1] 20
 </code></pre>
 <p>This behaviour is a consequence of lazy evaluation. The <code>x</code> argument is evaluated once <code>h03()</code>/<code>h04()</code> is called, and then its value is cached.  We can avoid the confusion by forcing <code>x</code>:</p>
-<pre><code class="language-r">capture2 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">capture2 &lt;- function(x) {
   force(x)
   
   function() {
@@ -1057,8 +1022,7 @@ h05 &lt;- capture2(x)
 
 x &lt;- 20
 h05()
-</code></pre>
-<pre><code>#&gt; [1] 10
+#&gt; [1] 10
 </code></pre>
 <h3 id="promises-skip">Promises (skip)</h3>
 <p>Lazy evaluation is powered by a data structure called a <strong>promise</strong>, or (less commonly) a thunk. We'll come back to this data structure in <a href="#meta">metaprogramming</a> because it's one of the features of R that makes it most interesting as a programming language.</p>
@@ -1076,51 +1040,42 @@ by evaluating the expression in the specified environment.</p>
 </li>
 </ul>
 <p>The value cache ensures that accessing the promise multiple times always returns the same value. For example, you can see in the following code that <code>runif(1)</code> is only evaluated once:</p>
-<pre><code class="language-r">h06 &lt;- function(x) { 
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">h06 &lt;- function(x) { 
   c(x, x, x)  
 }
 
 h06(runif(1))
-</code></pre>
-<pre><code>#&gt; [1] 0.7602891 0.7602891 0.7602891
+#&gt; [1] 0.6488364 0.6488364 0.6488364
 </code></pre>
 <p>You can also create promises &quot;by hand&quot; using <code>delayedAssign()</code>:</p>
-<pre><code class="language-r">delayedAssign(&quot;x&quot;, {print(&quot;Executing code&quot;); runif(1)})
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">delayedAssign(&quot;x&quot;, {print(&quot;Executing code&quot;); runif(1)})
 x
-</code></pre>
-<pre><code>#&gt; [1] &quot;Executing code&quot;
-</code></pre>
-<pre><code>#&gt; [1] 0.654247
-</code></pre>
-<pre><code class="language-r">x
-</code></pre>
-<pre><code>#&gt; [1] 0.654247
+#&gt; [1] &quot;Executing code&quot;
+#&gt; [1] 0.5168684
+x
+#&gt; [1] 0.5168684
 </code></pre>
 <p>You'll see this idea again in [advanced bindings].</p>
 <h3 id="default-arguments">Default arguments</h3>
-<pre><code class="language-r">h07 &lt;- function(x = 1, y = x * 2) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">h07 &lt;- function(x = 1, y = x * 2) {
 
   c(x, y)
 }
 
 h07()
-</code></pre>
-<pre><code>#&gt; [1] 1 2
+#&gt; [1] 1 2
 </code></pre>
 <h3 id="missing-arguments">Missing arguments</h3>
 <p>判斷參數內容來自使用者或者預設的函數: <code>missing()</code>:</p>
-<pre><code class="language-r">h09 &lt;- function(x = 10) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">h09 &lt;- function(x = 10) {
   list(missing(x), x)
 }
 str(h09()) # 預設
-</code></pre>
-<pre><code>#&gt; List of 2
+#&gt; List of 2
 #&gt;  $ : logi TRUE
 #&gt;  $ : num 10
-</code></pre>
-<pre><code class="language-r">str(h09(10)) # 使用者
-</code></pre>
-<pre><code>#&gt; List of 2
+str(h09(10)) # 使用者
+#&gt; List of 2
 #&gt;  $ : logi FALSE
 #&gt;  $ : num 10
 </code></pre>
@@ -1132,7 +1087,7 @@ str(h09()) # 預設
 <li>
 <p>Implicitly, where the last evaluated expression becomes the return 
 value:</p>
-<pre><code class="language-r">j01 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">j01 &lt;- function(x) {
   if (x &lt; 10) {
     0
   } else {
@@ -1140,17 +1095,14 @@ value:</p>
   }
 }
 f(5)
-</code></pre>
-<pre><code>#&gt; [1] 52
-</code></pre>
-<pre><code class="language-r">f(15)
-</code></pre>
-<pre><code>#&gt; [1] 452
+#&gt; [1] 52
+f(15)
+#&gt; [1] 452
 </code></pre>
 </li>
 <li>
 <p>Explicitly, by calling <code>return()</code>:</p>
-<pre><code class="language-r">j02 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">j02 &lt;- function(x) {
   if (x &lt; 10) {
     return(0)
   } else {
@@ -1162,55 +1114,49 @@ f(5)
 </ul>
 <h3 id="invisible-values">Invisible values</h3>
 <p>大部分函數再傳回值的時候都會顯示在主控台上:</p>
-<pre><code class="language-r">j03 &lt;- function() 1
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">j03 &lt;- function() 1
 j03()
-</code></pre>
-<pre><code>#&gt; [1] 1
+#&gt; [1] 1
 </code></pre>
 <p>但是也可以不用顯示:利用函數 <code>invisible()</code>。</p>
-<pre><code class="language-r">j04 &lt;- function() invisible(1)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">j04 &lt;- function() invisible(1)
 j04()
 </code></pre>
 <p>這種不會顯示傳回值的函數,可以用下面的方法驗證:</p>
-<pre><code class="language-r">print(j04())
-</code></pre>
-<pre><code>#&gt; [1] 1
-</code></pre>
-<pre><code class="language-r">(j04())
-</code></pre>
-<pre><code>#&gt; [1] 1
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">print(j04())
+#&gt; [1] 1
+
+(j04())
+#&gt; [1] 1
 </code></pre>
 <p>或者利用函數 `withVisible():</p>
-<pre><code class="language-r">str(withVisible(j04()))
-</code></pre>
-<pre><code>#&gt; List of 2
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">str(withVisible(j04()))
+#&gt; List of 2
 #&gt;  $ value  : num 1
 #&gt;  $ visible: logi FALSE
 </code></pre>
 <p>最常用的方法是 <code>&lt;-</code>:</p>
-<pre><code class="language-r">a &lt;- 2
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">a &lt;- 2
 (a &lt;- 2)
-</code></pre>
-<pre><code>#&gt; [1] 2
+#&gt; [1] 2
 </code></pre>
 <p>也因此可以利用下面的串聯指派:</p>
-<pre><code class="language-r">a &lt;- b &lt;- c &lt;- d &lt;- 2
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">a &lt;- b &lt;- c &lt;- d &lt;- 2
 </code></pre>
 <p>一般而言，像是 (like <code>&lt;-</code>, <code>print()</code>, or <code>plot()</code>) 都是傳回不可見結果。</p>
 <h3 id="errors">Errors</h3>
 <p>函數可以利用函數 <code>stop()</code>結束一個函數的執行。</p>
-<pre><code class="language-r">j05 &lt;- function() {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">j05 &lt;- function() {
   stop(&quot;I'm an error&quot;)
   return(10)
 }
 j05()
-</code></pre>
-<pre><code>#&gt; Error in j05(): I'm an error
+#&gt; Error in j05(): I'm an error
 </code></pre>
 <h3 id="on-exit">Exit handlers</h3>
 <p>Sometimes a function needs to make a temporary change to global state and you want to ensure those changes are restored when the function completes. It's painful to make sure you cleanup before any explicit return, and what happens if there's an error? Instead, you can set up an <strong>exiting handler</strong> that is called when the function terminates, regardless of whether it returns a value or throws an error.</p>
 <p>To setup an exiting handler, call <code>on.exit()</code> with the code to be run. It will execute when the function exits, regardless of what causes it to exit:</p>
-<pre><code class="language-r">j06 &lt;- function(x) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">j06 &lt;- function(x) {
   cat(&quot;Hello\n&quot;)
   on.exit(cat(&quot;Goodbye!\n&quot;), add = TRUE)
   
@@ -1222,12 +1168,10 @@ j05()
 }
 
 f(TRUE)
-</code></pre>
-<pre><code>#&gt; [1] 4
-</code></pre>
-<pre><code class="language-r">f(FALSE)
-</code></pre>
-<pre><code>#&gt; [1] 2
+#&gt; [1] 4
+
+f(FALSE)
+#&gt; [1] 2
 </code></pre>
 <div class="notices m-auto w-75">
     <div class="sidebar">
@@ -1236,7 +1180,7 @@ f(TRUE)
 </div>
 
 <p><code>on.exit()</code> is important because it allows you to place clean-up actions next to actions with their cleanup operations.</p>
-<pre><code class="language-r">cleanup &lt;- function(dir, code) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">cleanup &lt;- function(dir, code) {
   old_dir &lt;- setwd(dir)
   on.exit(setwd(old), add = TRUE)
   
@@ -1245,7 +1189,7 @@ f(TRUE)
 }
 </code></pre>
 <p>When coupled with lazy evaluation, this leads to a very useful pattern for running a block of code in an altered environment:</p>
-<pre><code class="language-r">with_dir &lt;- function(dir, code) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">with_dir &lt;- function(dir, code) {
   old &lt;- setwd(dir)
   on.exit(setwd(old), add = TRUE)
 
@@ -1253,35 +1197,28 @@ f(TRUE)
 }
 
 getwd()
-</code></pre>
-<pre><code>#&gt; [1] &quot;D:/work/rmi_r/content/rlang&quot;
-</code></pre>
-<pre><code class="language-r">with_dir(&quot;~&quot;, getwd())
-</code></pre>
-<pre><code>#&gt; [1] &quot;C:/Users/linchao/Documents&quot;
+#&gt; [1] &quot;D:/work/rmi_r/content/rlang&quot;
+with_dir(&quot;~&quot;, getwd())
+#&gt; [1] &quot;C:/Users/linchao/Documents&quot;
 </code></pre>
 <p>See the <a href="http://withr.r-lib.org">withr package</a> for a collection of functions of this nature.</p>
 <p>In R 3.4 and prior, <code>on.exit()</code> expressions are always run in the order in which they are created:</p>
-<pre><code class="language-r">f &lt;- function() {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f &lt;- function() {
   on.exit(message(&quot;a&quot;), add = TRUE)
   on.exit(message(&quot;b&quot;), add = TRUE)
 }
 f()
-</code></pre>
-<pre><code>#&gt; a
-</code></pre>
-<pre><code>#&gt; b
+#&gt; a
+#&gt; b
 </code></pre>
 <p>This can make cleanup a little tricky if some actions need to happen in a specific order; typically you want the most recent added expression to be run first. In R 3.5 and later, you can control this by setting <code>after = FALSE</code>:</p>
-<pre><code class="language-r">f &lt;- function() {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f &lt;- function() {
   on.exit(message(&quot;a&quot;), add = TRUE, after = FALSE)
   on.exit(message(&quot;b&quot;), add = TRUE, after = FALSE)
 }
 f()
-</code></pre>
-<pre><code>#&gt; b
-</code></pre>
-<pre><code>#&gt; a
+#&gt; b
+#&gt; a
 </code></pre>
 <h3 id="exercises-2">Exercises</h3>
 <ol>
@@ -1302,7 +1239,7 @@ code worked).</p>
 </li>
 <li>
 <p>We can use <code>on.exit()</code> to implement a simple version of <code>capture.output()</code>.</p>
-<pre><code class="language-r">capture.output2 &lt;- function(code) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">capture.output2 &lt;- function(code) {
   temp &lt;- tempfile()
   on.exit(file.remove(temp), add = TRUE, after = TRUE)
 
@@ -1313,12 +1250,10 @@ code worked).</p>
   readLines(temp)
 }
 capture.output2(cat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, sep = &quot;\n&quot;))
-</code></pre>
-<pre><code>#&gt; Warning in file.remove(temp): 無法移除檔案 'C:
-#&gt; \Users\linchao\AppData\Local\Temp\RtmpukIjbJ\file55703a2d59e1' ，原因是
+#&gt; Warning in file.remove(temp): 無法移除檔案 'C:
+#&gt; \Users\linchao\AppData\Local\Temp\RtmpYruy1w\file13f02c656176' ，原因是
 #&gt; 'Permission denied'
-</code></pre>
-<pre><code>#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
+#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
 </code></pre>
 <p>Compare <code>capture.output()</code> to <code>capture.output2()</code>. How do the functions 
 differ? What features have I removed to make the key ideas easier to see? 
@@ -1353,7 +1288,7 @@ How have I rewritten the key ideas to be easier to understand?</p>
 <h3 id="rewriting-to-prefix-form">Rewriting to prefix form</h3>
 <p>An interesting property of R is every infix, replacement, or special form can be rewritten in prefix form. Rewriting in prefix form is useful because it helps you better understand the structure of the language, and it gives you the real name of every function. Knowing the real name of non-prefix functions is useful because it allows you to modify them for fun and profit.</p>
 <p>The following example shows three pairs of equivalent calls, rewriting an infix form, replacement form, and a special form into prefix form.</p>
-<pre><code class="language-r">x + y
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x + y
 `+`(x, y)
 
 names(df) &lt;- c(&quot;x&quot;, &quot;y&quot;, &quot;z&quot;)
@@ -1363,7 +1298,7 @@ for(i in 1:10) print(i)
 `for`(i, 1:10, print(i))
 </code></pre>
 <p>Knowing the function name of a non-prefix function allows you to override its behaviour. For example, if you're ever feeling particularly evil, run the following code while a friend is away from their computer. It will introduce a fun bug: 10% of the time, 1 will be added to any numeric calculation inside of parentheses.</p>
-<pre><code class="language-r">`(` &lt;- function(e1) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`(` &lt;- function(e1) {
   if (is.numeric(e1) &amp;&amp; runif(1) &lt; 0.1) {
     e1 + 1
   } else {
@@ -1371,23 +1306,19 @@ for(i in 1:10) print(i)
   }
 }
 replicate(50, (1 + 2))
-</code></pre>
-<pre><code>#&gt;  [1] 3 3 3 3 3 3 3 4 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 4 3
-#&gt; [39] 3 4 3 4 3 3 3 3 3 3 3 3
-</code></pre>
-<pre><code class="language-r">rm(&quot;(&quot;)
+#&gt;  [1] 3 3 3 3 4 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 4 3 3 3 3 3 3 3 3 3 3
+#&gt; [39] 3 3 3 3 3 3 3 3 3 4 3 3
+rm(&quot;(&quot;)
 </code></pre>
 <p>Of course, overriding built-in functions like this is a bad idea, but, as you'll learn about in [metaprogramming], it's possible to apply it only to selected code blocks. This provides a clean and elegant approach to writing domain specific languages and translators to other languages.</p>
 <p>A more useful technique is to use this knowledge when using functional programming tools. For example, you could use <code>sapply()</code> to add 3 to every element of a list by first defining a function <code>add()</code>, like this:</p>
-<pre><code class="language-r">add &lt;- function(x, y) x + y
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">add &lt;- function(x, y) x + y
 sapply(1:10, add, 3)
-</code></pre>
-<pre><code>#&gt;  [1]  4  5  6  7  8  9 10 11 12 13
+#&gt;  [1]  4  5  6  7  8  9 10 11 12 13
 </code></pre>
 <p>But we can also get the same effect more simply by relying on the existing <code>+</code> function:</p>
-<pre><code class="language-r">sapply(1:5, `+`, 3)
-</code></pre>
-<pre><code>#&gt; [1] 4 5 6 7 8
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">sapply(1:5, `+`, 3)
+#&gt; [1] 4 5 6 7 8
 </code></pre>
 <p>We'll explore this idea in detail in [functionals].</p>
 <h3 id="prefix-form">Prefix form</h3>
@@ -1398,88 +1329,74 @@ sapply(1:10, add, 3)
 <li>By name, like <code>help(topic = mean)</code>.</li>
 </ul>
 <p>As illustrated by the following chunk, arguments are matched by exact name, then with unique prefixes, and finally by position.</p>
-<pre><code class="language-r">k01 &lt;- function(abcdef, bcde1, bcde2) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">k01 &lt;- function(abcdef, bcde1, bcde2) {
   list(a = abcdef, b1 = bcde1, b2 = bcde2)
 }
 str(k01(1, 2, 3))
-</code></pre>
-<pre><code>#&gt; List of 3
+#&gt; List of 3
 #&gt;  $ a : num 1
 #&gt;  $ b1: num 2
 #&gt;  $ b2: num 3
-</code></pre>
-<pre><code class="language-r">str(k01(2, 3, abcdef = 1))
-</code></pre>
-<pre><code>#&gt; List of 3
+str(k01(2, 3, abcdef = 1))
+#&gt; List of 3
 #&gt;  $ a : num 1
 #&gt;  $ b1: num 2
 #&gt;  $ b2: num 3
-</code></pre>
-<pre><code class="language-r"># Can abbreviate long argument names:
+
+# Can abbreviate long argument names:
 str(k01(2, 3, a = 1))
-</code></pre>
-<pre><code>#&gt; List of 3
+#&gt; List of 3
 #&gt;  $ a : num 1
 #&gt;  $ b1: num 2
 #&gt;  $ b2: num 3
-</code></pre>
-<pre><code class="language-r"># But this doesn't work because abbreviation is ambiguous
+
+# But this doesn't work because abbreviation is ambiguous
 str(k01(1, 3, b = 1))
-</code></pre>
-<pre><code>#&gt; Error in k01(1, 3, b = 1): 引數 3 有多個與之相對應的形式引數
+#&gt; Error in k01(1, 3, b = 1): 引數 3 有多個與之相對應的形式引數
 </code></pre>
 <p>Generally, only use positional matching for the first one or two arguments; they will be the most commonly used, and most readers will know what they are. Avoid using positional matching for less commonly used arguments, and never use partial matching. See the tidyverse style guide, <a href="http://style.tidyverse.org/syntax.html#argument-names">http://style.tidyverse.org/syntax.html#argument-names</a>, for more advice.</p>
 <h3 id="infix-functions">Infix functions</h3>
 <p>R的內建 infix operators: <code>:</code>, <code>::</code>, <code>:::</code>, <code>$</code>, <code>@</code>, <code>^</code>, <code>*</code>, <code>/</code>, <code>+</code>, <code>-</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code>, <code>!</code>, <code>&amp;</code>, <code>&amp;&amp;</code>, <code>|</code>, <code>||</code>, <code>~</code>, <code>&lt;-</code>, and <code>&lt;&lt;-</code>.</p>
 <p>建立infix函數,1)兩個參數,2)函數名稱兩邊有<code>%</code>, base R 也額外定義了 <code>%%</code>, <code>%*%</code>, <code>%/%</code>, <code>%in%</code>, <code>%o%</code>, and <code>%x%</code>.</p>
-<pre><code class="language-r">`%+%` &lt;- function(a, b) paste0(a, b)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`%+%` &lt;- function(a, b) paste0(a, b)
 &quot;new &quot; %+% &quot;string&quot;
-</code></pre>
-<pre><code>#&gt; [1] &quot;new string&quot;
+#&gt; [1] &quot;new string&quot;
 </code></pre>
 <p>The names of infix functions are more flexible than regular R functions: they can contain any sequence of characters except &quot;%&quot;. You will need to escape any special characters in the string used to define the function, but not when you call it:</p>
-<pre><code class="language-r">`% %` &lt;- function(a, b) paste(a, b) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >定義新函數<code>% %</code></span></span>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`% %` &lt;- function(a, b) paste(a, b) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >定義新函數<code>% %</code></span></span>
 `%/\\%` &lt;- function(a, b) paste(a, b) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >定義新函數<code>%/\%</code></span></span>
 
 &quot;a&quot; % % &quot;b&quot;
-</code></pre>
-<pre><code>#&gt; [1] &quot;a b&quot;
-</code></pre>
-<pre><code class="language-r">&quot;a&quot; %/\% &quot;b&quot;
-</code></pre>
-<pre><code>#&gt; [1] &quot;a b&quot;
+#&gt; [1] &quot;a b&quot;
+&quot;a&quot; %/\% &quot;b&quot;
+#&gt; [1] &quot;a b&quot;
 </code></pre>
 <p>R's default precedence rules mean that infix operators are composed from left to right:</p>
-<pre><code class="language-r">`%-%` &lt;- function(a, b) paste0(&quot;(&quot;, a, &quot; %-% &quot;, b, &quot;)&quot;)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`%-%` &lt;- function(a, b) paste0(&quot;(&quot;, a, &quot; %-% &quot;, b, &quot;)&quot;)
 &quot;a&quot; %-% &quot;b&quot; %-% &quot;c&quot;
-</code></pre>
-<pre><code>#&gt; [1] &quot;((a %-% b) %-% c)&quot;
+#&gt; [1] &quot;((a %-% b) %-% c)&quot;
 </code></pre>
 <p>兩個例外的INFIX函數可以只有一參數: <code>+</code> and <code>-</code>.</p>
-<pre><code class="language-r">-1
-</code></pre>
-<pre><code>#&gt; [1] -1
-</code></pre>
-<pre><code class="language-r">+10
-</code></pre>
-<pre><code>#&gt; [1] 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">-1
+#&gt; [1] -1
++10
+#&gt; [1] 10
 </code></pre>
 <h3 id="replacement-functions">Replacement functions</h3>
 <p>Replacement functions 的函數名稱必須是類似 <code>xxx&lt;-</code>. 必須要有兩個參數 <code>x</code> 和 <code>value</code>, 且必須回傳更改過的物件。例如下面的例子,允選我們更改向量的第二個元素:  :</p>
-<pre><code class="language-r">`second&lt;-` &lt;- function(x, value) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`second&lt;-` &lt;- function(x, value) {
   x[2] &lt;- value
   x
 }
 </code></pre>
 <p>使用方法:利用 <code>&lt;-</code> 的LHS:</p>
-<pre><code class="language-r">x &lt;- 1:10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 1:10
 second(x) &lt;- 5L
 x
-</code></pre>
-<pre><code>#&gt;  [1]  1  5  3  4  5  6  7  8  9 10
+#&gt;  [1]  1  5  3  4  5  6  7  8  9 10
 </code></pre>
 <p>I say they &quot;act&quot; like they modify their arguments in place, because, as discussed in [Modify-in-place], they actually create a modified copy. We can see that by using <code>tracemem()</code>:</p>
-<pre><code class="language-r">x &lt;- 1:10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- 1:10
 tracemem(x)
 #&gt; &lt;0x7ffae71bd880&gt;
 
@@ -1488,31 +1405,28 @@ second(x) &lt;- 6L
 #&gt; tracemem[0x7ffae61b5480 -&gt; 0x7ffae73f0408]: second&lt;- 
 </code></pre>
 <p>If you want to supply additional arguments, they go inbetween <code>x</code> and <code>value</code>:</p>
-<pre><code class="language-r">`modify&lt;-` &lt;- function(x, position, value) {
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`modify&lt;-` &lt;- function(x, position, value) {
   x[position] &lt;- value
   x
 }
 modify(x, 1) &lt;- 10
 x
-</code></pre>
-<pre><code>#&gt;  [1] 10  5  3  4  5  6  7  8  9 10
+#&gt;  [1] 10  5  3  4  5  6  7  8  9 10
 </code></pre>
 <p>When you write <code>modify(x, 1) &lt;- 10</code>, behind the scenes R turns it into:</p>
-<pre><code class="language-r">x &lt;- `modify&lt;-`(x, 1, 10)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- `modify&lt;-`(x, 1, 10)
 </code></pre>
 <p>Combining replacement with other functions requires more complex translation. For example, this:</p>
-<pre><code class="language-r">x &lt;- c(a = 1, b = 2, c = 3)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- c(a = 1, b = 2, c = 3)
 names(x)
-</code></pre>
-<pre><code>#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
-</code></pre>
-<pre><code class="language-r">names(x)[2] &lt;- &quot;two&quot;
+#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
+
+names(x)[2] &lt;- &quot;two&quot;
 names(x)
-</code></pre>
-<pre><code>#&gt; [1] &quot;a&quot;   &quot;two&quot; &quot;c&quot;
+#&gt; [1] &quot;a&quot;   &quot;two&quot; &quot;c&quot;
 </code></pre>
 <p>Is translated into:</p>
-<pre><code class="language-r">`*tmp*` &lt;- x
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`*tmp*` &lt;- x
 x &lt;- `names&lt;-`(`*tmp*`, `[&lt;-`(names(`*tmp*`), 2, &quot;two&quot;))
 rm(`*tmp*`)
 </code></pre>
@@ -1544,30 +1458,26 @@ rm(`*tmp*`)
 </ul>
 <p>Knowing the name of the function that underlies the special form is useful for getting documentation. <code>?(</code> is a syntax error; <code>?`(`</code> will give you the documentation for parentheses.</p>
 <p>Note that all special forms are implemented as primitive functions (i.e. in C); that means printing these functions is not informative:</p>
-<pre><code class="language-r">`for`
-</code></pre>
-<pre><code>#&gt; .Primitive(&quot;for&quot;)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`for`
+#&gt; .Primitive(&quot;for&quot;)
 </code></pre>
 <h2 id="invoking-a-function">Invoking a function</h2>
 <p><a href="https://www.cnblogs.com/Demo1589/p/6984537.html">另一個do.call()的參考</a></p>
 <p>Suppose you had a list of function arguments:</p>
-<pre><code class="language-r">args &lt;- list(1:10, na.rm = TRUE)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">args &lt;- list(1:10, na.rm = TRUE)
 </code></pre>
 <p>How could you then send that list to <code>mean()</code>?  In base R, you need <code>do.call()</code>:</p>
-<pre><code class="language-r">do.call(mean, args)
-</code></pre>
-<pre><code>#&gt; [1] 5.5
-</code></pre>
-<pre><code class="language-r"># Equivalent to
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">do.call(mean, args)
+#&gt; [1] 5.5
+# Equivalent to
 mean(1:10, na.rm = TRUE)
-</code></pre>
-<pre><code>#&gt; [1] 5.5
+#&gt; [1] 5.5
 </code></pre>
 <h3 id="exercises-3">Exercises</h3>
 <ol>
 <li>
 <p>Rewrite the following code snippets into prefix form:</p>
-<pre><code class="language-r">1 + 2 + 3
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">1 + 2 + 3
 
 1 + (2 + 3)
 
@@ -1576,7 +1486,7 @@ if (length(x) &lt;= 5) x[[5]] else x[[n]]
 </li>
 <li>
 <p>Clarify the following list of odd function calls:</p>
-<pre><code class="language-r">x &lt;- sample(replace = TRUE, 20, x = c(1:10, NA))
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- sample(replace = TRUE, 20, x = c(1:10, NA))
 y &lt;- runif(min = 0, max = 1, 20)
 cor(m = &quot;k&quot;, y = y, u = &quot;p&quot;, x = x)
 </code></pre>
@@ -1594,7 +1504,7 @@ if method is &quot;kendall&quot; or &quot;spearman&quot;, Kendall's tau or Spear
 <ol>
 <li>
 <p>Explain why the following code fails:</p>
-<pre><code class="language-r">modify(get(&quot;x&quot;), 1) &lt;- 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">modify(get(&quot;x&quot;), 1) &lt;- 10
 #&gt; Error: target of assignment expands to non-language object
 </code></pre>
 </li>
@@ -1605,7 +1515,7 @@ if method is &quot;kendall&quot; or &quot;spearman&quot;, Kendall's tau or Spear
 <p>Write your own version of <code>+</code> that will paste its inputs together if
 they are character vectors but behaves as usual otherwise. In other words,
 make this code work:</p>
-<pre><code class="language-r">1 + 2
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">1 + 2
 #&gt; [1] 3
 
 &quot;a&quot; + &quot;b&quot;
@@ -1703,8 +1613,8 @@ so it's never evaluated.</p>
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634789915" rel="stylesheet">
-<script src="../js/quicknote.js?1634789915"></script>
+<link href="../css/quicknote.css?1634793271" rel="stylesheet">
+<script src="../js/quicknote.js?1634793271"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1722,7 +1632,7 @@ so it's never evaluated.</p>
           
 
   
-<script src="../js/packhtml.js?1634789915"></script>    
+<script src="../js/packhtml.js?1634793271"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1732,25 +1642,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634789915"></script>
-  <script src="../js/featherlight.gallery.min.js?1634789915"></script>
-  <link href="../css/featherlight.min.css?1634789915" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634789915" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634793271"></script>
+  <script src="../js/featherlight.gallery.min.js?1634793271"></script>
+  <link href="../css/featherlight.min.css?1634793271" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634793271" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634789915"></script>
+  <script src="../js/highlight.pack.js?1634793271"></script>
   
-  <script src="../js/hugohelper.js?1634789915"></script>
+  <script src="../js/hugohelper.js?1634793271"></script>
 
-  <link href="../css/rmd.css?1634789915" rel="stylesheet">
-  <link href="../css/mystyle.css?1634789915" rel="stylesheet">    
-  <script src='../js/variant.js?1634789915'></script>
+  <link href="../css/rmd.css?1634793271" rel="stylesheet">
+  <link href="../css/mystyle.css?1634793271" rel="stylesheet">    
+  <script src='../js/variant.js?1634793271'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634789915'></script>
+<script src='../js/localsearch.js?1634793271'></script>
     
 
 

@@ -50,19 +50,6 @@ The script is converted to Rmd through knitr::spin(); then rmarkdown::render() w
     </item>
     
     <item>
-      <title>3. Quick view 1</title>
-      <link>/rlang/3_quickview1.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/3_quickview1.html</guid>
-      <description>快速指令
-目前有哪些資料集可以測試 data() attach() 一般是
-library(sample)data(&amp;quot;mydata&amp;quot;) attach(&amp;quot;mydata&amp;quot;) 就不用打入mydata$欄位名稱
-幾個常用的統計量: x&amp;lt;-c(1,2,3)median(x)mean(x)min(x)sd(x)range(x)diff(x) 資料型態和內容 可以先看看資料描述 ?mtcars
-mtcars #&amp;gt; mpg cyl disp hp drat wt qsec vs am gear carb#&amp;gt; Mazda RX4 21.0 6 160.0 110 3.90 2.620 16.46 0 1 4 4#&amp;gt; Mazda RX4 Wag 21.0 6 160.0 110 3.90 2.875 17.02 0 1 4 4#&amp;gt; Datsun 710 22.8 4 108.</description>
-    </item>
-    
-    <item>
       <title>4.2 向量</title>
       <link>/rlang/4_2_type_vector.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -112,7 +99,7 @@ b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/7_8_function_2.html</guid>
-      <description>Functions Introduction 簡單測試
+      <description>Introduction 簡單測試
 Quiz Answer the following questions to see if you can safely skip this chapter. You can find the answers in function-answer.
   What are the three components of a function?
   What does the following code return?
@@ -399,6 +386,15 @@ Overview Inverse transform sampling is a method for generating random numbers fr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/test/3_testrun_htmlpreserve.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3. Quick view 1</title>
+      <link>/rlang/3_quickview1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/3_quickview1.html</guid>
       <description></description>
     </item>
     

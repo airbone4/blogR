@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634789915" rel="stylesheet">
-    <link href="../css/syntax.css?1634789915" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634789915"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634793271" rel="stylesheet">
+    <link href="../css/syntax.css?1634793271" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634793271"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634789915" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634789915" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme.css?1634789915" rel="stylesheet">
+    <link href="../css/theme.css?1634793271" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -47,7 +47,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 22, 2021'>2.3 data explorer</span>
+      title='最後修改October 21, 2021'>2.3 data explorer</span>
         
     
 
@@ -541,11 +541,11 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:18]</a></li><li><a href="../rlang/4_4_type_list.html"> <i class="far fa-clock" ></i>4.4 串列 list[2021-10-21 PM 12:13]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-21 AM 11:27]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-10-21 PM 01:14]</a></li><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:36]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-10-21 PM 12:30]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <pre><code class="language-example">
+    <pre><code class="language-r">
 age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
            34.935,  35.2115, 35.2115,  5.2115, 36.7803)
 group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
@@ -594,7 +594,19 @@ dframe = data.frame(age=age, group=group)
   mtx&lt;-cbind(g1,g2)
   boxplot(mtx)
 </code></pre>
-<p><img src="2_3_data_explorer_files/figure-html/unnamed-chunk-2-1.pdf" alt="plot of chunk unnamed-chunk-2"></p>
+
+<figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+    <img src="2_3_data_explorer_files/figure-html/unnamed-chunk-2-1.png" class="figure-img w-100 "
+         alt="figure"/> <figcaption class="figure-caption">
+            figure
+        </figcaption>
+</figure>
+
 <pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
            34.935,  35.2115, 35.2115,  5.2115, 36.7803)
 group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
@@ -612,7 +624,19 @@ vl&lt;-lapply(vl,`length&lt;-`,gn) # 補NA
 mtx&lt;-matrix(unlist(vl),nrow=gn)
 boxplot(mtx)
 </code></pre>
-<p><img src="2_3_data_explorer_files/figure-html/unnamed-chunk-3-1.pdf" alt="plot of chunk unnamed-chunk-3"></p>
+
+<figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+    <img src="2_3_data_explorer_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "
+         alt="figure"/> <figcaption class="figure-caption">
+            figure
+        </figcaption>
+</figure>
+
 <p>summary(dframe)</p>
 <p>ft&lt;-factor(dframe$group)
 gn&lt;-length(levels(ft)) # nlevels(ft)</p>
@@ -661,8 +685,8 @@ print(summary(x))
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634789915" rel="stylesheet">
-<script src="../js/quicknote.js?1634789915"></script>
+<link href="../css/quicknote.css?1634793271" rel="stylesheet">
+<script src="../js/quicknote.js?1634793271"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -673,14 +697,14 @@ print(summary(x))
                    data-bs-placement="left" title=1&#32;Requirement>前</a>
                    
           
-            <a href="../rlang/3_quickview1.html" 
+            <a href="../rlang/4_2_type_vector.html" 
                class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
-               title=3.&#32;Quick&#32;view&#32;1>後</a>            
+               title=4.2&#32;向量>後</a>            
           
           
 
   
-<script src="../js/packhtml.js?1634789915"></script>    
+<script src="../js/packhtml.js?1634793271"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -690,25 +714,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634789915"></script>
-  <script src="../js/featherlight.gallery.min.js?1634789915"></script>
-  <link href="../css/featherlight.min.css?1634789915" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634789915" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634793271"></script>
+  <script src="../js/featherlight.gallery.min.js?1634793271"></script>
+  <link href="../css/featherlight.min.css?1634793271" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634793271" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634789915"></script>
+  <script src="../js/highlight.pack.js?1634793271"></script>
   
-  <script src="../js/hugohelper.js?1634789915"></script>
+  <script src="../js/hugohelper.js?1634793271"></script>
 
-  <link href="../css/rmd.css?1634789915" rel="stylesheet">
-  <link href="../css/mystyle.css?1634789915" rel="stylesheet">    
-  <script src='../js/variant.js?1634789915'></script>
+  <link href="../css/rmd.css?1634793271" rel="stylesheet">
+  <link href="../css/mystyle.css?1634793271" rel="stylesheet">    
+  <script src='../js/variant.js?1634793271'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634789915'></script>
+<script src='../js/localsearch.js?1634793271'></script>
     
 
 

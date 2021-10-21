@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634789915" rel="stylesheet">
-    <link href="../css/syntax.css?1634789915" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634789915"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634793271" rel="stylesheet">
+    <link href="../css/syntax.css?1634793271" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634793271"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634789915" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634789915" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme.css?1634789915" rel="stylesheet">
+    <link href="../css/theme.css?1634793271" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -55,7 +55,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 23, 2021'>3. Quick view 1</span>
+      title='最後修改October 21, 2021'>3. Quick view 1</span>
         
     
 
@@ -549,11 +549,13 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:18]</a></li><li><a href="../rlang/4_4_type_list.html"> <i class="far fa-clock" ></i>4.4 串列 list[2021-10-21 PM 12:13]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-21 AM 11:27]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-10-21 PM 01:14]</a></li><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:36]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-10-21 PM 12:30]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <p class="d-none"><a href="http://www3.nccu.edu.tw/~99354011/R%20commands%2811.09.13%29.pdf">快速指令</a></p>
+    <p>參考帖
+<a href="http://www.questionflow.org/2018/08/21/transformers-glue/">package glu</a></p>
+<p class="d-none"><a href="http://www3.nccu.edu.tw/~99354011/R%20commands%2811.09.13%29.pdf">快速指令</a></p>
 <h2 id="目前有哪些資料集可以測試">目前有哪些資料集可以測試</h2>
 <p><code>data()</code>
 <code>attach()</code>
@@ -573,66 +575,761 @@ diff(x)
 </code></pre>
 <h2 id="資料型態和內容">資料型態和內容</h2>
 <p>可以先看看資料描述 <code>?mtcars</code></p>
-<pre><code class="language-r">mtcars
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">mtcars
 </code></pre>
-<pre><code>#&gt;                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-#&gt; Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-#&gt; Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-#&gt; Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-#&gt; Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
-#&gt; Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
-#&gt; Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-#&gt; Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-#&gt; Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
-#&gt; Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
-#&gt; Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-#&gt; Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-#&gt; Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
-#&gt; Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
-#&gt; Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
-#&gt; Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
-#&gt; Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
-#&gt; Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
-#&gt; Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
-#&gt; Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
-#&gt; Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
-#&gt; Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
-#&gt; Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
-#&gt; AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
-#&gt; Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
-#&gt; Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
-#&gt; Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
-#&gt; Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
-#&gt; Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
-#&gt; Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
-#&gt; Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
-#&gt; Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
-#&gt; Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  data-nopre class="table-responsive">
+<table data-nopre class="w-50 m-auto">
+<thead data-nopre class="">
+<tr data-nopre>
+<th data-nopre style="text-align:left"></th>
+<th data-nopre style="text-align:right">mpg</th>
+<th data-nopre style="text-align:right">cyl</th>
+<th data-nopre style="text-align:right">disp</th>
+<th data-nopre style="text-align:right">hp</th>
+<th data-nopre style="text-align:right">drat</th>
+<th data-nopre style="text-align:right">wt</th>
+<th data-nopre style="text-align:right">qsec</th>
+<th data-nopre style="text-align:right">vs</th>
+<th data-nopre style="text-align:right">am</th>
+<th data-nopre style="text-align:right">gear</th>
+<th data-nopre style="text-align:right">carb</th>
+</tr>
+</thead>
+<tbody data-nopre>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Mazda RX4</td>
+<td data-nopre style="text-align:right">21.0</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">160.0</td>
+<td data-nopre style="text-align:right">110</td>
+<td data-nopre style="text-align:right">3.90</td>
+<td data-nopre style="text-align:right">2.620</td>
+<td data-nopre style="text-align:right">16.46</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Mazda RX4 Wag</td>
+<td data-nopre style="text-align:right">21.0</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">160.0</td>
+<td data-nopre style="text-align:right">110</td>
+<td data-nopre style="text-align:right">3.90</td>
+<td data-nopre style="text-align:right">2.875</td>
+<td data-nopre style="text-align:right">17.02</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Datsun 710</td>
+<td data-nopre style="text-align:right">22.8</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">108.0</td>
+<td data-nopre style="text-align:right">93</td>
+<td data-nopre style="text-align:right">3.85</td>
+<td data-nopre style="text-align:right">2.320</td>
+<td data-nopre style="text-align:right">18.61</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Hornet 4 Drive</td>
+<td data-nopre style="text-align:right">21.4</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">258.0</td>
+<td data-nopre style="text-align:right">110</td>
+<td data-nopre style="text-align:right">3.08</td>
+<td data-nopre style="text-align:right">3.215</td>
+<td data-nopre style="text-align:right">19.44</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Hornet Sportabout</td>
+<td data-nopre style="text-align:right">18.7</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">360.0</td>
+<td data-nopre style="text-align:right">175</td>
+<td data-nopre style="text-align:right">3.15</td>
+<td data-nopre style="text-align:right">3.440</td>
+<td data-nopre style="text-align:right">17.02</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Valiant</td>
+<td data-nopre style="text-align:right">18.1</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">225.0</td>
+<td data-nopre style="text-align:right">105</td>
+<td data-nopre style="text-align:right">2.76</td>
+<td data-nopre style="text-align:right">3.460</td>
+<td data-nopre style="text-align:right">20.22</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Duster 360</td>
+<td data-nopre style="text-align:right">14.3</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">360.0</td>
+<td data-nopre style="text-align:right">245</td>
+<td data-nopre style="text-align:right">3.21</td>
+<td data-nopre style="text-align:right">3.570</td>
+<td data-nopre style="text-align:right">15.84</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Merc 240D</td>
+<td data-nopre style="text-align:right">24.4</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">146.7</td>
+<td data-nopre style="text-align:right">62</td>
+<td data-nopre style="text-align:right">3.69</td>
+<td data-nopre style="text-align:right">3.190</td>
+<td data-nopre style="text-align:right">20.00</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Merc 230</td>
+<td data-nopre style="text-align:right">22.8</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">140.8</td>
+<td data-nopre style="text-align:right">95</td>
+<td data-nopre style="text-align:right">3.92</td>
+<td data-nopre style="text-align:right">3.150</td>
+<td data-nopre style="text-align:right">22.90</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Merc 280</td>
+<td data-nopre style="text-align:right">19.2</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">167.6</td>
+<td data-nopre style="text-align:right">123</td>
+<td data-nopre style="text-align:right">3.92</td>
+<td data-nopre style="text-align:right">3.440</td>
+<td data-nopre style="text-align:right">18.30</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Merc 280C</td>
+<td data-nopre style="text-align:right">17.8</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">167.6</td>
+<td data-nopre style="text-align:right">123</td>
+<td data-nopre style="text-align:right">3.92</td>
+<td data-nopre style="text-align:right">3.440</td>
+<td data-nopre style="text-align:right">18.90</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Merc 450SE</td>
+<td data-nopre style="text-align:right">16.4</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">275.8</td>
+<td data-nopre style="text-align:right">180</td>
+<td data-nopre style="text-align:right">3.07</td>
+<td data-nopre style="text-align:right">4.070</td>
+<td data-nopre style="text-align:right">17.40</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">3</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Merc 450SL</td>
+<td data-nopre style="text-align:right">17.3</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">275.8</td>
+<td data-nopre style="text-align:right">180</td>
+<td data-nopre style="text-align:right">3.07</td>
+<td data-nopre style="text-align:right">3.730</td>
+<td data-nopre style="text-align:right">17.60</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">3</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Merc 450SLC</td>
+<td data-nopre style="text-align:right">15.2</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">275.8</td>
+<td data-nopre style="text-align:right">180</td>
+<td data-nopre style="text-align:right">3.07</td>
+<td data-nopre style="text-align:right">3.780</td>
+<td data-nopre style="text-align:right">18.00</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">3</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Cadillac Fleetwood</td>
+<td data-nopre style="text-align:right">10.4</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">472.0</td>
+<td data-nopre style="text-align:right">205</td>
+<td data-nopre style="text-align:right">2.93</td>
+<td data-nopre style="text-align:right">5.250</td>
+<td data-nopre style="text-align:right">17.98</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Lincoln Continental</td>
+<td data-nopre style="text-align:right">10.4</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">460.0</td>
+<td data-nopre style="text-align:right">215</td>
+<td data-nopre style="text-align:right">3.00</td>
+<td data-nopre style="text-align:right">5.424</td>
+<td data-nopre style="text-align:right">17.82</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Chrysler Imperial</td>
+<td data-nopre style="text-align:right">14.7</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">440.0</td>
+<td data-nopre style="text-align:right">230</td>
+<td data-nopre style="text-align:right">3.23</td>
+<td data-nopre style="text-align:right">5.345</td>
+<td data-nopre style="text-align:right">17.42</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Fiat 128</td>
+<td data-nopre style="text-align:right">32.4</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">78.7</td>
+<td data-nopre style="text-align:right">66</td>
+<td data-nopre style="text-align:right">4.08</td>
+<td data-nopre style="text-align:right">2.200</td>
+<td data-nopre style="text-align:right">19.47</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Honda Civic</td>
+<td data-nopre style="text-align:right">30.4</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">75.7</td>
+<td data-nopre style="text-align:right">52</td>
+<td data-nopre style="text-align:right">4.93</td>
+<td data-nopre style="text-align:right">1.615</td>
+<td data-nopre style="text-align:right">18.52</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Toyota Corolla</td>
+<td data-nopre style="text-align:right">33.9</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">71.1</td>
+<td data-nopre style="text-align:right">65</td>
+<td data-nopre style="text-align:right">4.22</td>
+<td data-nopre style="text-align:right">1.835</td>
+<td data-nopre style="text-align:right">19.90</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Toyota Corona</td>
+<td data-nopre style="text-align:right">21.5</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">120.1</td>
+<td data-nopre style="text-align:right">97</td>
+<td data-nopre style="text-align:right">3.70</td>
+<td data-nopre style="text-align:right">2.465</td>
+<td data-nopre style="text-align:right">20.01</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Dodge Challenger</td>
+<td data-nopre style="text-align:right">15.5</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">318.0</td>
+<td data-nopre style="text-align:right">150</td>
+<td data-nopre style="text-align:right">2.76</td>
+<td data-nopre style="text-align:right">3.520</td>
+<td data-nopre style="text-align:right">16.87</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">AMC Javelin</td>
+<td data-nopre style="text-align:right">15.2</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">304.0</td>
+<td data-nopre style="text-align:right">150</td>
+<td data-nopre style="text-align:right">3.15</td>
+<td data-nopre style="text-align:right">3.435</td>
+<td data-nopre style="text-align:right">17.30</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Camaro Z28</td>
+<td data-nopre style="text-align:right">13.3</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">350.0</td>
+<td data-nopre style="text-align:right">245</td>
+<td data-nopre style="text-align:right">3.73</td>
+<td data-nopre style="text-align:right">3.840</td>
+<td data-nopre style="text-align:right">15.41</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Pontiac Firebird</td>
+<td data-nopre style="text-align:right">19.2</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">400.0</td>
+<td data-nopre style="text-align:right">175</td>
+<td data-nopre style="text-align:right">3.08</td>
+<td data-nopre style="text-align:right">3.845</td>
+<td data-nopre style="text-align:right">17.05</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Fiat X1-9</td>
+<td data-nopre style="text-align:right">27.3</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">79.0</td>
+<td data-nopre style="text-align:right">66</td>
+<td data-nopre style="text-align:right">4.08</td>
+<td data-nopre style="text-align:right">1.935</td>
+<td data-nopre style="text-align:right">18.90</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Porsche 914-2</td>
+<td data-nopre style="text-align:right">26.0</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">120.3</td>
+<td data-nopre style="text-align:right">91</td>
+<td data-nopre style="text-align:right">4.43</td>
+<td data-nopre style="text-align:right">2.140</td>
+<td data-nopre style="text-align:right">16.70</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Lotus Europa</td>
+<td data-nopre style="text-align:right">30.4</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">95.1</td>
+<td data-nopre style="text-align:right">113</td>
+<td data-nopre style="text-align:right">3.77</td>
+<td data-nopre style="text-align:right">1.513</td>
+<td data-nopre style="text-align:right">16.90</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Ford Pantera L</td>
+<td data-nopre style="text-align:right">15.8</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">351.0</td>
+<td data-nopre style="text-align:right">264</td>
+<td data-nopre style="text-align:right">4.22</td>
+<td data-nopre style="text-align:right">3.170</td>
+<td data-nopre style="text-align:right">14.50</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Ferrari Dino</td>
+<td data-nopre style="text-align:right">19.7</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">145.0</td>
+<td data-nopre style="text-align:right">175</td>
+<td data-nopre style="text-align:right">3.62</td>
+<td data-nopre style="text-align:right">2.770</td>
+<td data-nopre style="text-align:right">15.50</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">6</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Maserati Bora</td>
+<td data-nopre style="text-align:right">15.0</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">301.0</td>
+<td data-nopre style="text-align:right">335</td>
+<td data-nopre style="text-align:right">3.54</td>
+<td data-nopre style="text-align:right">3.570</td>
+<td data-nopre style="text-align:right">14.60</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">8</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Volvo 142E</td>
+<td data-nopre style="text-align:right">21.4</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">121.0</td>
+<td data-nopre style="text-align:right">109</td>
+<td data-nopre style="text-align:right">4.11</td>
+<td data-nopre style="text-align:right">2.780</td>
+<td data-nopre style="text-align:right">18.60</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">head(mtcars)
 </code></pre>
-<pre><code class="language-r">head(mtcars)
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  data-nopre class="table-responsive">
+<table data-nopre class="w-50 m-auto">
+<thead data-nopre class="">
+<tr data-nopre>
+<th data-nopre style="text-align:left"></th>
+<th data-nopre style="text-align:right">mpg</th>
+<th data-nopre style="text-align:right">cyl</th>
+<th data-nopre style="text-align:right">disp</th>
+<th data-nopre style="text-align:right">hp</th>
+<th data-nopre style="text-align:right">drat</th>
+<th data-nopre style="text-align:right">wt</th>
+<th data-nopre style="text-align:right">qsec</th>
+<th data-nopre style="text-align:right">vs</th>
+<th data-nopre style="text-align:right">am</th>
+<th data-nopre style="text-align:right">gear</th>
+<th data-nopre style="text-align:right">carb</th>
+</tr>
+</thead>
+<tbody data-nopre>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Mazda RX4</td>
+<td data-nopre style="text-align:right">21.0</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">160</td>
+<td data-nopre style="text-align:right">110</td>
+<td data-nopre style="text-align:right">3.90</td>
+<td data-nopre style="text-align:right">2.620</td>
+<td data-nopre style="text-align:right">16.46</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Mazda RX4 Wag</td>
+<td data-nopre style="text-align:right">21.0</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">160</td>
+<td data-nopre style="text-align:right">110</td>
+<td data-nopre style="text-align:right">3.90</td>
+<td data-nopre style="text-align:right">2.875</td>
+<td data-nopre style="text-align:right">17.02</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Datsun 710</td>
+<td data-nopre style="text-align:right">22.8</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">108</td>
+<td data-nopre style="text-align:right">93</td>
+<td data-nopre style="text-align:right">3.85</td>
+<td data-nopre style="text-align:right">2.320</td>
+<td data-nopre style="text-align:right">18.61</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Hornet 4 Drive</td>
+<td data-nopre style="text-align:right">21.4</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">258</td>
+<td data-nopre style="text-align:right">110</td>
+<td data-nopre style="text-align:right">3.08</td>
+<td data-nopre style="text-align:right">3.215</td>
+<td data-nopre style="text-align:right">19.44</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Hornet Sportabout</td>
+<td data-nopre style="text-align:right">18.7</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">360</td>
+<td data-nopre style="text-align:right">175</td>
+<td data-nopre style="text-align:right">3.15</td>
+<td data-nopre style="text-align:right">3.440</td>
+<td data-nopre style="text-align:right">17.02</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Valiant</td>
+<td data-nopre style="text-align:right">18.1</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">225</td>
+<td data-nopre style="text-align:right">105</td>
+<td data-nopre style="text-align:right">2.76</td>
+<td data-nopre style="text-align:right">3.460</td>
+<td data-nopre style="text-align:right">20.22</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">3</td>
+<td data-nopre style="text-align:right">1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">tail(mtcars)
 </code></pre>
-<pre><code>#&gt;                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
-#&gt; Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-#&gt; Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-#&gt; Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-#&gt; Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
-#&gt; Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
-#&gt; Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
-</code></pre>
-<pre><code class="language-r">tail(mtcars)
-</code></pre>
-<pre><code>#&gt;                 mpg cyl  disp  hp drat    wt qsec vs am gear carb
-#&gt; Porsche 914-2  26.0   4 120.3  91 4.43 2.140 16.7  0  1    5    2
-#&gt; Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.9  1  1    5    2
-#&gt; Ford Pantera L 15.8   8 351.0 264 4.22 3.170 14.5  0  1    5    4
-#&gt; Ferrari Dino   19.7   6 145.0 175 3.62 2.770 15.5  0  1    5    6
-#&gt; Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
-#&gt; Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2
-</code></pre>
-<p>head 前幾筆資料
+<p>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  data-nopre class="table-responsive">
+<table data-nopre class="w-50 m-auto">
+<thead data-nopre class="">
+<tr data-nopre>
+<th data-nopre style="text-align:left"></th>
+<th data-nopre style="text-align:right">mpg</th>
+<th data-nopre style="text-align:right">cyl</th>
+<th data-nopre style="text-align:right">disp</th>
+<th data-nopre style="text-align:right">hp</th>
+<th data-nopre style="text-align:right">drat</th>
+<th data-nopre style="text-align:right">wt</th>
+<th data-nopre style="text-align:right">qsec</th>
+<th data-nopre style="text-align:right">vs</th>
+<th data-nopre style="text-align:right">am</th>
+<th data-nopre style="text-align:right">gear</th>
+<th data-nopre style="text-align:right">carb</th>
+</tr>
+</thead>
+<tbody data-nopre>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Porsche 914-2</td>
+<td data-nopre style="text-align:right">26.0</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">120.3</td>
+<td data-nopre style="text-align:right">91</td>
+<td data-nopre style="text-align:right">4.43</td>
+<td data-nopre style="text-align:right">2.140</td>
+<td data-nopre style="text-align:right">16.7</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Lotus Europa</td>
+<td data-nopre style="text-align:right">30.4</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">95.1</td>
+<td data-nopre style="text-align:right">113</td>
+<td data-nopre style="text-align:right">3.77</td>
+<td data-nopre style="text-align:right">1.513</td>
+<td data-nopre style="text-align:right">16.9</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Ford Pantera L</td>
+<td data-nopre style="text-align:right">15.8</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">351.0</td>
+<td data-nopre style="text-align:right">264</td>
+<td data-nopre style="text-align:right">4.22</td>
+<td data-nopre style="text-align:right">3.170</td>
+<td data-nopre style="text-align:right">14.5</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">4</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Ferrari Dino</td>
+<td data-nopre style="text-align:right">19.7</td>
+<td data-nopre style="text-align:right">6</td>
+<td data-nopre style="text-align:right">145.0</td>
+<td data-nopre style="text-align:right">175</td>
+<td data-nopre style="text-align:right">3.62</td>
+<td data-nopre style="text-align:right">2.770</td>
+<td data-nopre style="text-align:right">15.5</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">6</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Maserati Bora</td>
+<td data-nopre style="text-align:right">15.0</td>
+<td data-nopre style="text-align:right">8</td>
+<td data-nopre style="text-align:right">301.0</td>
+<td data-nopre style="text-align:right">335</td>
+<td data-nopre style="text-align:right">3.54</td>
+<td data-nopre style="text-align:right">3.570</td>
+<td data-nopre style="text-align:right">14.6</td>
+<td data-nopre style="text-align:right">0</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">5</td>
+<td data-nopre style="text-align:right">8</td>
+</tr>
+<tr data-nopre>
+<td data-nopre style="text-align:left">Volvo 142E</td>
+<td data-nopre style="text-align:right">21.4</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">121.0</td>
+<td data-nopre style="text-align:right">109</td>
+<td data-nopre style="text-align:right">4.11</td>
+<td data-nopre style="text-align:right">2.780</td>
+<td data-nopre style="text-align:right">18.6</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">1</td>
+<td data-nopre style="text-align:right">4</td>
+<td data-nopre style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+head 前幾筆資料
 tail 後幾筆資料</p>
 <h3 id="編輯瀏覽資料">編輯/瀏覽資料</h3>
-<pre><code class="language-r">edit(mtcars)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">edit(mtcars)
 data.entry(mtcars)
 View(mtcars)
 </code></pre>
@@ -644,58 +1341,72 @@ mpg
 </code></pre>
 <h3 id="質性數據的分析">質性數據的分析</h3>
 <p>欄位<code>cyl</code>為質性變數,可以利用table分析</p>
-<pre><code class="language-r">attach(mtcars)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">attach(mtcars)
 table(mtcars$cyl)
-</code></pre>
-<pre><code>#&gt; 
+#&gt; 
 #&gt;  4  6  8 
 #&gt; 11  7 14
 </code></pre>
 <p>頻率圖</p>
-<pre><code class="language-r">attach(mtcars)
-</code></pre>
-<pre><code>#&gt; 下列物件被遮斷自 mtcars (pos = 3):
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">attach(mtcars)
+#&gt; 下列物件被遮斷自 mtcars (pos = 3):
 #&gt; 
 #&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
+barplot(table(mtcars$cyl))
 </code></pre>
-<pre><code class="language-r">barplot(table(mtcars$cyl))
-</code></pre>
-<p><img src="3_quickview1_files/figure-html/unnamed-chunk-5-1.pdf" alt="plot of chunk unnamed-chunk-5"></p>
+
+<figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+    <img src="3_quickview1_files/figure-html/unnamed-chunk-6-1.png" class="figure-img w-100 "
+         alt="figure"/> <figcaption class="figure-caption">
+            figure
+        </figcaption>
+</figure>
+
 <div class="notices m-auto w-75">
     <div class="info">
         <p>解釋下面兩個圖為甚麼不一樣?</p>
-<pre><code class="language-r">attach(mtcars)
-</code></pre>
-<pre><code>#&gt; 下列物件被遮斷自 mtcars (pos = 3):
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">attach(mtcars)
+#&gt; 下列物件被遮斷自 mtcars (pos = 3):
 #&gt; 
 #&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
-</code></pre>
-<pre><code>#&gt; 下列物件被遮斷自 mtcars (pos = 4):
+#&gt; 下列物件被遮斷自 mtcars (pos = 4):
 #&gt; 
 #&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
-</code></pre>
-<pre><code class="language-r">v&lt;-as.vector(table(mtcars$cyl))
+v&lt;-as.vector(table(mtcars$cyl))
 barplot(v)
 </code></pre>
-<p><img src="3_quickview1_files/figure-html/unnamed-chunk-6-1.pdf" alt="plot of chunk unnamed-chunk-6"></p>
-<pre><code class="language-r">attach(mtcars)
+<figure  class="figure text-center d-block w-50 m-auto   ">
+<pre><code>&lt;img src=&quot;3_quickview1_files/figure-html/unnamed-chunk-7-1.png&quot; class=&quot;figure-img w-100 &quot;
+     alt=&quot;figure&quot;/&gt; &lt;figcaption class=&quot;figure-caption&quot;&gt;
+        figure
+    &lt;/figcaption&gt;
 </code></pre>
-<pre><code>#&gt; 下列物件被遮斷自 mtcars (pos = 3):
+</figure>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">attach(mtcars)
+#&gt; 下列物件被遮斷自 mtcars (pos = 3):
 #&gt; 
 #&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
-</code></pre>
-<pre><code>#&gt; 下列物件被遮斷自 mtcars (pos = 4):
+#&gt; 下列物件被遮斷自 mtcars (pos = 4):
 #&gt; 
 #&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
-</code></pre>
-<pre><code>#&gt; 下列物件被遮斷自 mtcars (pos = 5):
+#&gt; 下列物件被遮斷自 mtcars (pos = 5):
 #&gt; 
 #&gt;     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
-</code></pre>
-<pre><code class="language-r">m&lt;-as.matrix(table(mtcars$cyl))
+m&lt;-as.matrix(table(mtcars$cyl))
 barplot(m)
 </code></pre>
-<p><img src="3_quickview1_files/figure-html/unnamed-chunk-7-1.pdf" alt="plot of chunk unnamed-chunk-7"></p>
+<figure  class="figure text-center d-block w-50 m-auto   ">
+<pre><code>&lt;img src=&quot;3_quickview1_files/figure-html/unnamed-chunk-8-1.png&quot; class=&quot;figure-img w-100 &quot;
+     alt=&quot;figure&quot;/&gt; &lt;figcaption class=&quot;figure-caption&quot;&gt;
+        figure
+    &lt;/figcaption&gt;
+</code></pre>
+</figure>
 <p>上面兩個圖不一樣,因為table()的定義,所以轉成矩陣以後是3x1。</p>
 <pre><code class="language-r?preclass=.ms-5">x&lt;-c(1,1,1)
 x1&lt;-as.matrix(x)
@@ -725,44 +1436,73 @@ x
     </div>
 </div>
 
-<pre><code class="language-r">barplot(c(11,7,4))
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">barplot(c(11,7,4))
 </code></pre>
-<p><img src="3_quickview1_files/figure-html/unnamed-chunk-8-1.pdf" alt="plot of chunk unnamed-chunk-8"></p>
-<pre><code class="language-r">barplot(mtcars$mpg)
+
+<figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+    <img src="3_quickview1_files/figure-html/unnamed-chunk-9-1.png" class="figure-img w-100 "
+         alt="figure"/> <figcaption class="figure-caption">
+            figure
+        </figcaption>
+</figure>
+
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">barplot(mtcars$mpg)
 </code></pre>
-<p><img src="3_quickview1_files/figure-html/unnamed-chunk-9-1.pdf" alt="plot of chunk unnamed-chunk-9"></p>
-<pre><code class="language-r">barplot(mtcars$cyl)
+
+<figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+    <img src="3_quickview1_files/figure-html/unnamed-chunk-10-1.png" class="figure-img w-100 "
+         alt="figure"/> <figcaption class="figure-caption">
+            figure
+        </figcaption>
+</figure>
+
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">barplot(mtcars$cyl)
 </code></pre>
-<p><img src="3_quickview1_files/figure-html/unnamed-chunk-9-2.pdf" alt="plot of chunk unnamed-chunk-9"></p>
+
+<figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+    <img src="3_quickview1_files/figure-html/unnamed-chunk-10-2.png" class="figure-img w-100 "
+         alt="figure"/> <figcaption class="figure-caption">
+            figure
+        </figcaption>
+</figure>
+
 <h2 id="assignment">assignment</h2>
 <ul>
 <li>&lt;-和 -&gt; 是一對 ，可以向左和向右賦值</li>
 <li>= 是單向的 ，作用和&lt;-基本相同，但對函數中的變數通常使用=</li>
 <li>&lt;&lt;- 這個是全域賦值 ，跟變數的作用域有關，開發自己的套件(package)的時候,常用。</li>
 </ul>
-<pre><code class="language-r">##Delete x (if it exists)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
+##Delete x (if it exists)
 rm(x)
-</code></pre>
-<pre><code>#&gt; Warning in rm(x): 找不到物件 'x'
-</code></pre>
-<pre><code class="language-r">mean(x = 1:10) #[1] 5.5
-</code></pre>
-<pre><code>#&gt; [1] 5.5
-</code></pre>
-<pre><code class="language-r">x #Error: object 'x' not found
-</code></pre>
-<pre><code>#&gt; Error in eval(expr, envir, enclos): 找不到物件 'x'
+#&gt; Warning in rm(x): 找不到物件 'x'
+mean(x = 1:10) #[1] 5.5
+#&gt; [1] 5.5
+x #Error: object 'x' not found
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'x'
 </code></pre>
 <p>觀察上面的x,第一行指令從環境中去掉變數x的定義。
 第2行中的x是在block 中定義，因此執行完以後,會被殺掉。因此第三行指令,出現找不到x的提示。</p>
 <p>後面測試<code>&lt;-</code> operator:</p>
-<pre><code class="language-r">mean(x &lt;- 1:10) # [1] 5.5
-</code></pre>
-<pre><code>#&gt; [1] 5.5
-</code></pre>
-<pre><code class="language-r">x
-</code></pre>
-<pre><code>#&gt;  [1]  1  2  3  4  5  6  7  8  9 10
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">mean(x &lt;- 1:10) # [1] 5.5
+#&gt; [1] 5.5
+x
+#&gt;  [1]  1  2  3  4  5  6  7  8  9 10
 </code></pre>
 <blockquote>
 <p>x # [1] 1 2 3 4 5 6 7 8 9 10</p>
@@ -772,27 +1512,25 @@ When does the assignment take place ?
 In the code above, you may be tempted to thin that we “assign 1:10 to x, then calculate the mean.
 ” This would be true for
 #languages such as C, but it isn ’t true in R. Consider the following function:</p>
-<pre><code class="language-r">a &lt;- 1
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">a &lt;- 1
 f &lt;- function(a) return(TRUE)
 f &lt;- f(a &lt;- a + 1);
 # 輸出:TRUE
 a # 結果=1 
-</code></pre>
-<pre><code>#&gt; [1] 1
+#&gt; [1] 1
 </code></pre>
 <p>注意上面a的值,仍然是1。原因是因為R的編譯器,在最佳化的時候,知道函數中沒用到參數,因此根本沒有存取到變數<code>a</code>,因此，原來的a是甚麼,a仍然是甚麼。<br>
 <strong>簡單講就是<code>f(a&lt;-a+1)</code>中的<code>a&lt;-a+1</code> 被去掉不會被執行</strong></p>
 <p><code>f(a&lt;-a+1)</code>  =&gt; <code>f()</code></p>
 <p><strong>rewrite</strong></p>
-<pre><code class="language-r">f &lt;- function(a) 
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f &lt;- function(a) 
 {
   if (runif(1) &gt; 0.5) TRUE else a
 }  
 f(a &lt;- a + 1);
 
 a # result 2
-</code></pre>
-<pre><code>#&gt; [1] 2
+#&gt; [1] 2
 </code></pre>
 <p>這個函數<code>f</code>用到了參數a,但是編譯器這次沒那麼聰明,知道使用者用a來做甚麼,雖然這個函數的<code>body</code>仍然沒有動到a,但是這次<code>f(a&lt;-a+1)</code>中的<code>a&lt;-a+1</code> 會被執行。</p>
 <p><div class="position-relative warning ms-5">
@@ -810,115 +1548,75 @@ a # result 2
 
 <div class="collapse info" id="quiz-22210"></div>
 </p>
-<pre><code class="language-r">f(a &lt;- a + 1);
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r"># TRUE
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f(a &lt;- a + 1);
+#&gt; [1] TRUE
+# TRUE
 a # 2
+#&gt; [1] 2
 </code></pre>
-<pre><code>#&gt; [1] 2
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">f(a &lt;- a + 1);
+#&gt; [1] TRUE
+a #3
+#&gt; [1] 2
 </code></pre>
-<pre><code class="language-r">f(a &lt;- a + 1);
-</code></pre>
-<pre><code>#&gt; [1] TRUE
-</code></pre>
-<pre><code class="language-r">a #3
-</code></pre>
-<pre><code>#&gt; [1] 2
-</code></pre>
-<pre><code class="language-r">a&lt;-1;
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">a&lt;-1;
 f &lt;- function(a)   return(a);
 invisible(f(a=a+1)) 
 a
-</code></pre>
-<pre><code>#&gt; [1] 1
-</code></pre>
-<pre><code class="language-r">invisible(f(a&lt;-a+1))
+#&gt; [1] 1
+invisible(f(a&lt;-a+1))
 a
-</code></pre>
-<pre><code>#&gt; [1] 2
+#&gt; [1] 2
 </code></pre>
 <p>上面程式中,invisible函數在這裡的說明不重要,只是用來隱藏計算結果。</p>
-<pre><code class="language-r">a&lt;-1;
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">a&lt;-1;
 f &lt;- function(a)   return(3);
 invisible(f(a=a+1))
 a
-</code></pre>
-<pre><code>#&gt; [1] 1
-</code></pre>
-<pre><code class="language-r">invisible(f(a&lt;-a+1))
+#&gt; [1] 1
+invisible(f(a&lt;-a+1))
 a
-</code></pre>
-<pre><code>#&gt; [1] 1
+#&gt; [1] 1
 </code></pre>
 <p>=用在參數指派
 例如</p>
-<pre><code class="language-r">matrix(1:20, ncol = 4)
-</code></pre>
-<pre><code>#&gt;      [,1] [,2] [,3] [,4]
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">matrix(1:20, ncol = 4)
+#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    6   11   16
 #&gt; [2,]    2    7   12   17
 #&gt; [3,]    3    8   13   18
 #&gt; [4,]    4    9   14   19
 #&gt; [5,]    5   10   15   20
-</code></pre>
-<pre><code class="language-r">ncol
-</code></pre>
-<pre><code>#&gt; function (x) 
+ncol
+#&gt; function (x) 
 #&gt; dim(x)[2L]
-#&gt; &lt;bytecode: 0x0000000018946ad8&gt;
+#&gt; &lt;bytecode: 0x00000000189cc6a8&gt;
 #&gt; &lt;environment: namespace:base&gt;
 </code></pre>
 <p>產生5X4矩陣。如果</p>
-<pre><code class="language-r">matrix(1:20, ncol &lt;- 4)
-</code></pre>
-<pre><code>#&gt;      [,1] [,2] [,3] [,4] [,5]
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">matrix(1:20, ncol &lt;- 4)
+#&gt;      [,1] [,2] [,3] [,4] [,5]
 #&gt; [1,]    1    5    9   13   17
 #&gt; [2,]    2    6   10   14   18
 #&gt; [3,]    3    7   11   15   19
 #&gt; [4,]    4    8   12   16   20
-</code></pre>
-<pre><code class="language-r">ncol
-</code></pre>
-<pre><code>#&gt; [1] 4
+ncol
+#&gt; [1] 4
 </code></pre>
 <p>會產生一個變數 ncol，這裡產生的為4x5的矩陣。為甚麼?因為這裡的第2個參數ncol&lt;-4,指派給變數ncol,然後這個expression會return 4,而4就被當成第2個參數,也就是<code>matrix(1:20, ncol &lt;- 4)</code>等同於<code>matrix(1:20, 4)</code>,也就是指定ROW的維度。</p>
 <p>結論:x&lt;-3 &lt;-會在全局產生變數x然後指派3</p>
-<pre><code class="language-r">(x &lt;- 3)
-</code></pre>
-<pre><code>#&gt; [1] 3
-</code></pre>
-<pre><code class="language-r">#rm(list = ls())
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">(x &lt;- 3)
+#&gt; [1] 3
+#rm(list = ls())
 rm(x)
 ls()
-</code></pre>
-<pre><code>#&gt;  [1] &quot;a&quot;                  &quot;base_name&quot;          &quot;cachepath&quot;         
-#&gt;  [4] &quot;collectOutputClass&quot; &quot;collectSourceClass&quot; &quot;debugp&quot;            
-#&gt;  [7] &quot;f&quot;                  &quot;hugocmd&quot;            &quot;indir&quot;             
-#&gt; [10] &quot;infile&quot;             &quot;m&quot;                  &quot;ncol&quot;              
-#&gt; [13] &quot;ohook_chunk&quot;        &quot;ohook_output&quot;       &quot;ohook_source&quot;      
-#&gt; [16] &quot;one_string&quot;         &quot;outfile&quot;            &quot;parseOutputHead&quot;   
-#&gt; [19] &quot;parseSourceHead&quot;    &quot;relativePath&quot;       &quot;splitLines&quot;        
-#&gt; [22] &quot;v&quot;                  &quot;wprint&quot;
-</code></pre>
-<pre><code class="language-r">(x = 3)
-</code></pre>
-<pre><code>#&gt; [1] 3
-</code></pre>
-<pre><code class="language-r">ls()
-</code></pre>
-<pre><code>#&gt;  [1] &quot;a&quot;                  &quot;base_name&quot;          &quot;cachepath&quot;         
-#&gt;  [4] &quot;collectOutputClass&quot; &quot;collectSourceClass&quot; &quot;debugp&quot;            
-#&gt;  [7] &quot;f&quot;                  &quot;hugocmd&quot;            &quot;indir&quot;             
-#&gt; [10] &quot;infile&quot;             &quot;m&quot;                  &quot;ncol&quot;              
-#&gt; [13] &quot;ohook_chunk&quot;        &quot;ohook_output&quot;       &quot;ohook_source&quot;      
-#&gt; [16] &quot;one_string&quot;         &quot;outfile&quot;            &quot;parseOutputHead&quot;   
-#&gt; [19] &quot;parseSourceHead&quot;    &quot;relativePath&quot;       &quot;splitLines&quot;        
-#&gt; [22] &quot;v&quot;                  &quot;wprint&quot;             &quot;x&quot;
+#&gt; [1] &quot;a&quot;    &quot;f&quot;    &quot;m&quot;    &quot;ncol&quot; &quot;v&quot;
+(x = 3)
+#&gt; [1] 3
+ls()
+#&gt; [1] &quot;a&quot;    &quot;f&quot;    &quot;m&quot;    &quot;ncol&quot; &quot;v&quot;    &quot;x&quot;
 </code></pre>
 <p>因為x是參數名稱不是變數,看mean help</p>
-
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -946,26 +1644,26 @@ ls()
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634789915" rel="stylesheet">
-<script src="../js/quicknote.js?1634789915"></script>
+<link href="../css/quicknote.css?1634793271" rel="stylesheet">
+<script src="../js/quicknote.js?1634793271"></script>
 <div id="page-guide" class="bg-dark">  
   
     
           
-          <a href="../rlang/2_3_data_explorer.html" 
+          <a href="../rlang/2_2_data_explorer.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=2.3&#32;data&#32;explorer>前</a>
+                   data-bs-placement="left" title=2.2&#32;資料探索>前</a>
                    
           
-            <a href="../rlang/4_2_type_vector.html" 
+            <a href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" 
                class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
-               title=4.2&#32;向量>後</a>            
+               title=3.02.regular練習>後</a>            
           
           
 
   
-<script src="../js/packhtml.js?1634789915"></script>    
+<script src="../js/packhtml.js?1634793271"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -975,25 +1673,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634789915"></script>
-  <script src="../js/featherlight.gallery.min.js?1634789915"></script>
-  <link href="../css/featherlight.min.css?1634789915" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634789915" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634793271"></script>
+  <script src="../js/featherlight.gallery.min.js?1634793271"></script>
+  <link href="../css/featherlight.min.css?1634793271" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634793271" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634789915"></script>
+  <script src="../js/highlight.pack.js?1634793271"></script>
   
-  <script src="../js/hugohelper.js?1634789915"></script>
+  <script src="../js/hugohelper.js?1634793271"></script>
 
-  <link href="../css/rmd.css?1634789915" rel="stylesheet">
-  <link href="../css/mystyle.css?1634789915" rel="stylesheet">    
-  <script src='../js/variant.js?1634789915'></script>
+  <link href="../css/rmd.css?1634793271" rel="stylesheet">
+  <link href="../css/mystyle.css?1634793271" rel="stylesheet">    
+  <script src='../js/variant.js?1634793271'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634789915'></script>
+<script src='../js/localsearch.js?1634793271'></script>
     
 
 

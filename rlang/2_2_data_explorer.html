@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634789915" rel="stylesheet">
-    <link href="../css/syntax.css?1634789915" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634789915"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634793271" rel="stylesheet">
+    <link href="../css/syntax.css?1634793271" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634793271"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634789915" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634789915" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634793271" rel="stylesheet">
     
-    <link href="../css/theme.css?1634789915" rel="stylesheet">
+    <link href="../css/theme.css?1634793271" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -66,7 +66,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 20, 2021'>2.2 資料探索</span>
+      title='最後修改October 21, 2021'>2.2 資料探索</span>
         
     
 
@@ -113,7 +113,7 @@
     </span>
    
   <ul id="menu_item_"  
-  class="submenu collapse" 
+  class="submenu collapse show" 
   data-bs-parent="#home-topics"> 
     
 
@@ -161,7 +161,7 @@
           <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
     
   
-        <li class="nav-item">
+        <li class="nav-item active">
           
           <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 資料探索">2.2 資料探索</a></li>
     
@@ -560,7 +560,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:18]</a></li><li><a href="../rlang/4_4_type_list.html"> <i class="far fa-clock" ></i>4.4 串列 list[2021-10-21 PM 12:13]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-21 AM 11:27]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-10-21 PM 01:14]</a></li><li><a href="../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:36]</a></li><li><a href="../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-10-21 PM 12:30]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -902,6 +902,9 @@ avgy + qnorm(.995) * c(-se,+se)
 </code></pre>
 <h3 id="by-hand">by hand</h3>
 <p>t statistic for H0: mu=0:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">(t &lt;- avgy/se)
+#&gt; [1] -4.276816
+</code></pre>
 <p>自由度(d.f.)為  n-1 =<code>240</code> 的t分配，其臨界值Critical values(如下):</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">alpha.one.tailed = c(0.1, 0.05, 0.025, 0.01, 0.005, .001)
 CV &lt;- qt(1 - alpha.one.tailed, n-1)
@@ -915,9 +918,9 @@ cbind(alpha.one.tailed, CV)
 #&gt; [6,]            0.001 3.124536
 </code></pre>
 <h2 id="by-函數ttest">by 函數<code>t.test()</code></h2>
-<p>H0: y=5, H1:y&gt;5, 信賴區間0.99
-t.test(y, mu=5, alternative=&quot;greater&quot;, conf.level=0.99)
-利用函數算：</p>
+<p>H0: y=5, H1:y&gt;5, 信賴區間0.99</p>
+<p>t.test(y, mu=5, alternative=&quot;greater&quot;, conf.level=0.99)</p>
+<p>利用函數算：</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># ex.C.3: two-sided CI
 t.test(audit$y)
 # ex.C.5 &amp; C.7: 1-sided test:
@@ -1072,7 +1075,7 @@ print(rst)
 <div class="notices m-auto w-75">
     <div class="sidebar">
         <p>函數<code>summary()</code>的結果是一個table，但是而且裡面的元素是「字串」，例如</p>
-<pre><code class="language-result">      age             group    
+<pre><code class="language-r?preclass=.ms-5.w-75">      age             group    
  Min.   : 5.212   Min.   :1.0  
  1st Qu.:26.742   1st Qu.:1.0  
  Median :33.212   Median :1.0  
@@ -1242,7 +1245,7 @@ cbind(v1,v2)
 </figure>
 
 <p>現在要分組對年齡boxplot,請寫出程式碼，資料如下：</p>
-<pre><code class="language-r">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+<pre><code class="language-r?preclass=.ms-5.w-75">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
            34.935,  35.2115, 35.2115,  5.2115, 36.7803)
 group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
 dframe = data.frame(age=age, group=group)
@@ -1398,8 +1401,8 @@ d2
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634789915" rel="stylesheet">
-<script src="../js/quicknote.js?1634789915"></script>
+<link href="../css/quicknote.css?1634793271" rel="stylesheet">
+<script src="../js/quicknote.js?1634793271"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1410,14 +1413,14 @@ d2
                    data-bs-placement="left" title=2.1&#32;讀檔寫檔>前</a>
                    
           
-            <a href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" 
+            <a href="../rlang/3_quickview1.html" 
                class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
-               title=3.02.regular練習>後</a>            
+               title=3.&#32;Quick&#32;view&#32;1>後</a>            
           
           
 
   
-<script src="../js/packhtml.js?1634789915"></script>    
+<script src="../js/packhtml.js?1634793271"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1427,25 +1430,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634789915"></script>
-  <script src="../js/featherlight.gallery.min.js?1634789915"></script>
-  <link href="../css/featherlight.min.css?1634789915" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634789915" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634793271"></script>
+  <script src="../js/featherlight.gallery.min.js?1634793271"></script>
+  <link href="../css/featherlight.min.css?1634793271" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634793271" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634789915"></script>
+  <script src="../js/highlight.pack.js?1634793271"></script>
   
-  <script src="../js/hugohelper.js?1634789915"></script>
+  <script src="../js/hugohelper.js?1634793271"></script>
 
-  <link href="../css/rmd.css?1634789915" rel="stylesheet">
-  <link href="../css/mystyle.css?1634789915" rel="stylesheet">    
-  <script src='../js/variant.js?1634789915'></script>
+  <link href="../css/rmd.css?1634793271" rel="stylesheet">
+  <link href="../css/mystyle.css?1634793271" rel="stylesheet">    
+  <script src='../js/variant.js?1634793271'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634789915'></script>
+<script src='../js/localsearch.js?1634793271'></script>
     
 
 
