@@ -89,10 +89,10 @@ b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取�
       <guid>/rlang/7_8_function_2.html</guid>
       <description>Functions Introduction 簡單測試
 Quiz Answer the following questions to see if you can safely skip this chapter. You can find the answers in function-answer.
-What are the three components of a function?
- What does the following code return?
-x &amp;lt;- 10 f1 &amp;lt;- function(x) {  function() {  x + 10  } } f1(1)() How would you usually write this code?
-`+`(1, `*`(2, 3)) How could you make this call easier to read?</description>
+  What are the three components of a function?
+  What does the following code return?
+x &amp;lt;- 10f1 &amp;lt;- function(x) {function() {x + 10}}f1(1)()   How would you usually write this code?
+`+`(1, `*`(2, 3))   How could you make this call easier to read?</description>
     </item>
     
     <item>
