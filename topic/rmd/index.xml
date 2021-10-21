@@ -13,11 +13,13 @@
       
       <guid>/topic/rmd/01_rmd_basic.html</guid>
       <description>rmd 提要 Chunk Options opts_chunk 這個函數控制整張RMD的chunk選項， e.g. opts_chunk$set(tidy = FALSE)
- 選項 描述     include 是否在輸出中顯示結果和源碼   eval 執行R   echo 顯示源碼   results &#39;markup&#39;, &#39;asis&#39;, &#39;hold&#39;, &#39;hide&#39;   tidy 是否重新排列R code   cache 是否緩衝結果   g.width, g.height, out.width, out.height    child 子文件的名稱   engine 引擎名稱(R,python,...)     更多選項可以參考//yihui.org/knitr/options/
+選項 描述   include 是否在輸出中顯示結果和源碼  eval 執行R  echo 顯示源碼  results &#39;markup&#39;, &#39;asis&#39;, &#39;hold&#39;, &#39;hide&#39;  tidy 是否重新排列R code  cache 是否緩衝結果  g.width, g.height, out.width, out.height   child 子文件的名稱  engine 引擎名稱(R,python,...)     更多選項可以參考//yihui.org/knitr/options/
 markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。
 在RSTUDIO中,可以建立web book. 或僅僅是一個web網站(static)參考下節。
 相關指令和流程可以參考這裡
-如果有共用的yaml ,可以參考這裡</description>
+如果有共用的yaml ,可以參考這裡
+ 程式員會比較想知道相關的的流程:
+The script is converted to Rmd through knitr::spin(); then rmarkdown::render() will render the Rmd。 也就是說,knitr會先判斷CHUNK需要的引擎是誰,如果是R,就傳給rmakrown::render()。</description>
     </item>
     
     <item>
@@ -44,26 +46,6 @@ meta data 上的pdf 設定,常見版本 ---title: &amp;quot;Habits&amp;quot;au
     </item>
     
     <item>
-      <title>05 rmd topic 1</title>
-      <link>/topic/rmd/05_rmd_topic_1.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/topic/rmd/05_rmd_topic_1.html</guid>
-      <description>討論   hook
-  Verbatim Chunks in R Markdow
-  HTML widgets
-  R Notebook HTML FOrmat
-  Render option hook example
-  more
-dynamic book
-  TOC 問題
-  publish to github tutorial
-在chunk中，顯示RMD語法 讓inline code 不作用 inline 讓內籤R程式碼不作用:方法是兩邊打上”``空白”。例如:
-inline(&amp;quot;dd&amp;quot;)===&amp;gt; `` `r dd` `` &amp;lt;/div&amp;gt; 測試 執行下面的程式,無法阻止hugo shortcode,但是仍然會列表
-```{r, comment = &amp;quot;&amp;quot;,result=&amp;quot;asis&amp;quot;}cat(readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;))# 我想要前後加上```,但是顯示的結果不換行# txt&amp;lt;-readr::read_file(&amp;quot;rmd_topic_1.Rmd&amp;quot;)# cat(paste0(c(&amp;quot;```rmd&amp;quot;,txt,&amp;quot;```&amp;quot;,collapse=&amp;quot;\n&amp;quot;)))``` 留著測試</description>
-    </item>
-    
-    <item>
       <title>02 git book note</title>
       <link>/topic/rmd/02_git-book-note.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -72,6 +54,15 @@ inline(&amp;quot;dd&amp;quot;)===&amp;gt; `` `r dd` `` &amp;lt;/div&amp;gt; 
       <description>gitbook introduction 3個地方需要注意: _output.yml _bookdown.yml index.rmd
 _output.yml: bookdown::gitbook:css: style.csssplit_by: chapterconfig:toc:collapse: subsectionbefore: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;after: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;bookdown::pdf_book:includes:in_header: preamble.texlatex_engine: xelatexcitation_package: natbibbookdown::epub_book:stylesheet: style.css 上面要修改的部分只有書名(title of book)
 _bookdown.yml: book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp;quot;Chapter &amp;quot;repo: https://github.com/seankross/bookdown-startoutput_dir: docsrmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;]clean: [packages.bib, bookdown.bbl]new_session: yes  欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.pdf。 欄位 chapter_name:每個章節的前綴,例如 01-Introduction.</description>
+    </item>
+    
+    <item>
+      <title>5 rmd topic 1</title>
+      <link>/topic/rmd/05_rmd_topic_1.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/05_rmd_topic_1.html</guid>
+      <description></description>
     </item>
     
   </channel>

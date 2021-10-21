@@ -7,6 +7,59 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/topic/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>1 Test Run - chunk</title>
+      <link>/topic/test/1_testrun_chunk.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/test/1_testrun_chunk.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2 總體變數</title>
+      <link>/topic/test/2_testrun.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/test/2_testrun.html</guid>
+      <description>&lt;script src=&#34;2_TestRun_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;2_TestRun_files/dygraphs-1.1.1/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;2_TestRun_files/dygraphs-1.1.1/dygraph-combined.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/dygraphs-1.1.1/shapes.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/moment-2.8.4/moment.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/moment-timezone-0.2.5/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/moment-fquarter-1.0.0/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/dygraphs-binding-1.1.1.6/dygraphs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;2_TestRun_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;2_TestRun_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;2_TestRun_files/jquery-3.6.0/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;2_TestRun_files/dt-core-1.10.20/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;2_TestRun_files/dt-core-1.10.20/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;2_TestRun_files/dt-core-1.10.20/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;2_TestRun_files/crosstalk-1.1.1/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;2_TestRun_files/crosstalk-1.1.1/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>3 htmlpreserve</title>
+      <link>/topic/test/3_testrun_htmlpreserve.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/test/3_testrun_htmlpreserve.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4 Tibble Table Test</title>
+      <link>/topic/test/4_tibbletable.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/test/4_tibbletable.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>emoji_test</title>
       <link>/topic/test/emo_test.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -20,29 +73,12 @@ Keywords These are all keywords with more than one emoji associated with them.
     </item>
     
     <item>
-      <title>testpage</title>
-      <link>/topic/test/testpage.html</link>
+      <title>顯示求助檔案</title>
+      <link>/topic/test/beta_show_help.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/test/testpage.html</guid>
-      <description>&lt;script src=&#34;testpage_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;testpage_files/dygraphs-1.1.1/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;testpage_files/dygraphs-1.1.1/dygraph-combined.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/dygraphs-1.1.1/shapes.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/moment-2.8.4/moment.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/moment-timezone-0.2.5/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/moment-fquarter-1.0.0/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/dygraphs-binding-1.1.1.6/dygraphs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;testpage_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;testpage_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;testpage_files/jquery-3.6.0/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;testpage_files/dt-core-1.10.20/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;testpage_files/dt-core-1.10.20/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;testpage_files/dt-core-1.10.20/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;testpage_files/crosstalk-1.1.1/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;testpage_files/crosstalk-1.1.1/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;</description>
+      <guid>/topic/test/beta_show_help.html</guid>
+      <description></description>
     </item>
     
   </channel>

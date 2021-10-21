@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1634189020" rel="stylesheet">
-    <link href="../css/syntax.css?1634189020" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1634189020"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1634784489" rel="stylesheet">
+    <link href="../css/syntax.css?1634784489" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1634784489"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1634189020" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1634784489" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1634189020" rel="stylesheet">
+    <link href="../css/theme-mine.css?1634784489" rel="stylesheet">
     
-    <link href="../css/theme.css?1634189020" rel="stylesheet">
+    <link href="../css/theme.css?1634784489" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -37,12 +37,7 @@
     <div class="wrapper">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#in-operator"><code>%in%</code> operator</a>
-      <ul>
-        <li><a href="#範例-detach_package">範例 detach_package()</a></li>
-        <li><a href="#範例2libpaths">範例2：.libPaths()</a></li>
-      </ul>
-    </li>
+    <li><a href="#heading"></a></li>
     <li><a href="#r語言的-meta-計算">R語言的 meta 計算。</a>
       <ul>
         <li><a href="#deparse">deparse</a></li>
@@ -65,7 +60,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 10, 2021'>6.2 Programming</span>
+      title='最後修改October 17, 2021'>6.2 Programming</span>
         
     
 
@@ -162,7 +157,7 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 data explorer">2.2 data explorer</a></li>
+          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 資料探索">2.2 資料探索</a></li>
     
   
         <li class="nav-item">
@@ -180,9 +175,6 @@
           <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/3_02_regular%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="3.02.regular練習">3.02.regular練習</a></li>
     
   
         <li class="nav-item">
@@ -207,7 +199,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 list">4.4 list</a></li>
+          <a class="nav-link" href="../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 串列 list">4.4 串列 list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/4_11_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
     
   
         <li class="nav-item">
@@ -287,6 +284,11 @@
           <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
     
   
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/xxx.html" data-bs-toggle="tooltip" title="xxx">xxx</a></li>
     
   
     
@@ -399,13 +401,13 @@
      
 
   <a class="nav-link" 
-    href="../economics.html"><i class="far fa-folder"></i>基礎計量  </a>
-    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e" aria-expanded="false">
+    href="../econometrics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_c59a6b16a979dae063e00e4a916e3284" aria-expanded="false">
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
    
-  <ul id="menu_item_730f0eb5dc4c58ad3a9e95566d43ba9e"  
+  <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
   class="submenu collapse" 
   data-bs-parent="#home-topics"> 
     
@@ -416,17 +418,22 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../economics/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+          <a class="nav-link" href="../econometrics/1_t%E6%AA%A2%E5%AE%9A.html" data-bs-toggle="tooltip" title="1.0 t檢定">1.0 t檢定</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../economics/mpg.html" data-bs-toggle="tooltip" title="mpg">mpg</a></li>
+          <a class="nav-link" href="../econometrics/2_anova.html" data-bs-toggle="tooltip" title="2. ANOVA">2. ANOVA</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../economics/%E5%89%8D%E7%BD%AE.html" data-bs-toggle="tooltip" title="前置準備">前置準備</a></li>
+          <a class="nav-link" href="../econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html" data-bs-toggle="tooltip" title="A.a 資料處理">A.a 資料處理</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" title="A.b mpg為例的ggplot">A.b mpg為例的ggplot</a></li>
     </ul>
   
 
@@ -479,13 +486,13 @@
      
 
   <a class="nav-link" 
-    href="../topic/experiment.html"><i class="far fa-folder"></i>實驗  </a>
-    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_0978ab1a6384269bbc2979cd5798a24f" aria-expanded="false">
+    href="../topic/simulation.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_e617bdc52da54290f99855ac9d5037aa" aria-expanded="false">
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
    
-  <ul id="menu_item_0978ab1a6384269bbc2979cd5798a24f"  
+  <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
   class="submenu collapse" 
   data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
     
@@ -496,27 +503,32 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/experiment/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
+          <a class="nav-link" href="../topic/simulation/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/experiment/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
+          <a class="nav-link" href="../topic/simulation/simulation_1.html" data-bs-toggle="tooltip" title="simulation_1">simulation_1</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/experiment/xx.html" data-bs-toggle="tooltip" title="Inverse Transform Sampling">Inverse Transform Sampling</a></li>
+          <a class="nav-link" href="../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/experiment/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+          <a class="nav-link" href="../topic/simulation/xx.html" data-bs-toggle="tooltip" title="Inverse Transform Sampling">Inverse Transform Sampling</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/experiment/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+          <a class="nav-link" href="../topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
     </ul>
   
 
@@ -542,46 +554,17 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_2_type_vector.html"> <i class="far fa-clock" ></i>4.2 向量[2021-10-14 PM 01:22]</a></li><li><a href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html"> <i class="far fa-clock" ></i>4.1 基本[2021-10-14 PM 01:03]</a></li><li><a href="../rlang/4_3_type_matrix.html"> <i class="far fa-clock" ></i>4.3 矩陣[2021-10-14 PM 12:49]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/4_4_type_list.html"> <i class="far fa-clock" ></i>4.4 串列 list[2021-10-20 PM 11:37]</a></li><li><a href="../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-10-20 PM 10:44]</a></li><li><a href="../topic/rmd/05_rmd_topic_1.html"> <i class="far fa-clock" ></i>5 rmd topic 1[2021-10-20 PM 10:42]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <h2 id="in-operator"><code>%in%</code> operator</h2>
-<h3 id="範例-detach_package">範例 detach_package()</h3>
-<p>討論內建函數<code>detach_package()</code><br>
-使用方法：</p>
-<pre><code class="language-r">detach_package(vegan)
-detach_package(&quot;vegan&quot;, TRUE)
-</code></pre>
-<p>注意一下第2個使用方式，第2個參數`character.only'：</p>
-<pre><code class="language-r?preclass=.ms-5.w-75">detach_package &lt;- function(pkg, character.only = FALSE)
-{
-  if(!character.only) #如果沒有指定參數是字串
-  {
-    pkg &lt;- deparse(substitute(pkg)) # 轉字串
-  }
-  search_item &lt;- paste(&quot;package&quot;, pkg, sep = &quot;:&quot;)
-  while(search_item %in% search())
-  {
-    detach(search_item, unload = TRUE, character.only = TRUE)
-  }
-}
-</code></pre>
-<h3 id="範例2libpaths">範例2：.libPaths()</h3>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">.libPaths
-#&gt; function (new, include.site = TRUE) 
-#&gt; {
-#&gt;     if (!missing(new)) {
-#&gt;         new &lt;- Sys.glob(path.expand(new))
-#&gt;         paths &lt;- c(new, if (include.site) .Library.site, .Library)
-#&gt;         paths &lt;- paths[dir.exists(paths)]
-#&gt;         .lib.loc &lt;&lt;- unique(normalizePath(paths, &quot;/&quot;))
-#&gt;     }
-#&gt;     else .lib.loc
-#&gt; }
-#&gt; &lt;bytecode: 0x00000000170c5c70&gt;
-#&gt; &lt;environment: 0x00000000170c11f8&gt;
-</code></pre>
+    <h2 id="heading"></h2>
+<p><code>language objects</code> <a href="https://colinfay.me/r-language-definition/computing-on-the-language.html">ref</a></p>
+<ul>
+<li>calls</li>
+<li>expressions</li>
+<li>functions.</li>
+</ul>
 <h2 id="r語言的-meta-計算">R語言的 meta 計算。</h2>
 <ul>
 <li>assign()</li>
@@ -590,7 +573,7 @@ detach_package(&quot;vegan&quot;, TRUE)
 <li>表達式求值：eval(), source()</li>
 <li>表達式：expression()</li>
 </ul>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">parse(text='x&lt;-1+2')
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">parse(text='x&lt;-1+2')
 #&gt; expression(x &lt;- 1 + 2)
 </code></pre>
 <p>在R中解析有 <strong>三種不同的變種</strong>：</p>
@@ -604,33 +587,37 @@ detach_package(&quot;vegan&quot;, TRUE)
 <p>解析字符串就是parse中用text參數來表示。</p>
 <h3 id="deparse">deparse</h3>
 <p>相對於parse,deparse 把<code>expression</code> 轉為字串。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> deparse(expression(1+2))
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"> deparse(expression(1+2))
 #&gt; [1] &quot;expression(1 + 2)&quot;
 </code></pre>
 <h3 id="quote">quote</h3>
 <p>quote() 的參數也是<code>expression</code>，返回類別<code>class</code>，可以再給<code>eval()</code>計算。
 <code>quote()</code>的參數雖然是<code>expression</code>但是不會進行計算，而是token分解。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> quote(1+2)
-#&gt; 1 + 2
- typeof(quote(1+2)) 
-#&gt; [1] &quot;language&quot;
- class(quote(1+2))
-#&gt; [1] &quot;call&quot;
+<pre><code class="language-r?preclass=.ms-5.w-75">e &lt;- quote(1+2) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏e不是3,也就是沒有執行</span></span>
+typeof(e) #&gt; [1] &quot;language&quot;
+class(e)  #&gt; [1] &quot;call&quot;
+str(e)    #&gt;  language 1 + 2
+length(e) #&gt; [1] 3 <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏這個物件的長度是3</span></span>
+e[[1]]    #&gt; `+`
+e[[2]]    #&gt; [1] 1
+e[[3]]    #&gt; [1] 2
 </code></pre>
 <h3 id="eval">eval</h3>
-<h4 id="parse-和eval">parse() 和eval()</h4>
-<p>text --&gt;parse()--&gt; expression---&gt;eval()</p>
-<h4 id="quote-和eval">quote() 和eval()</h4>
-<p>expression --&gt;quote()--&gt; call---&gt;eval()</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> eval(quote(1+2))
+<ul>
+<li>parse() 和eval()
+text --&gt;parse()--&gt; expression---&gt;eval()</li>
+<li>quote() 和eval()
+expression --&gt;quote()--&gt; call---&gt;eval()</li>
+</ul>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"> eval(quote(1+2)) # <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏這裡的1+2 是 expression</span></span> 
 #&gt; [1] 3
 </code></pre>
 <p>一般是用parse從字符串（或者是硬盤上的文件）解析成一個expression對象，是表達式列表，不是一個表達式。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"> eval(parse(text=&quot;1+2&quot;))
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"> eval(parse(text=&quot;1+2&quot;))
 #&gt; [1] 3
 </code></pre>
 <p>首先使用parse()函數將字符串轉化為表達式（expression），而後使用eval()函數對表達式求解。</p>
-<pre><code class="language-text">?eval
+<pre><code class="language-r?preclass=.ms-5.w-75">?eval
 # Evaluate an R expression in a specified environment.
 # Usage
 # eval(expr, envir = parent.frame(),
@@ -642,42 +629,82 @@ detach_package(&quot;vegan&quot;, TRUE)
 
 </code></pre>
 <h4 id="substitue">substitue()</h4>
-<p>如果沒有第二個參數，是否substitue()==quote()?</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">(s.e &lt;- substitute(expression(a + b), list(a = 1)))  #&gt; expression(1 + b)
+<pre><code class="language-r?preclass=.ms-5.w-75">(s.e &lt;- substitute(expression(a + b), list(a = 1)))  
 #&gt; expression(1 + b)
-(s.s &lt;- substitute( a + b,            list(a = 1)))  #&gt; 1 + b
+(s.s &lt;- substitute( a + b, list(a = 1)))  
 #&gt; 1 + b
 </code></pre>
+<p>第二個參數,可以是環境變數,</p>
+<ul>
+<li>如果只是<code>substitute(expression(a + b)</code>，會在當前的變數環境(工作區)把找變數a,b的值代入。</li>
+<li>如果<code>substitute(expression(a + b),parent.frame</code> 則是在親代環境中找變數a,b。</li>
+</ul>
+<p>❓ 如果沒有第二個參數，是否substitue()==quote()?</p>
 <h2 id="討論">討論</h2>
 <h3 id="測試紀錄">測試紀錄</h3>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">test1&lt;-function (..., list = character() ) 
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">test1&lt;-function (..., xx = character() ) 
 {
-    names &lt;- c(as.character(substitute(list(...))[-1L]), list)
+    #print(substitute(xx(...))) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏結果是&quot;data&quot;(x, y),把參數值代入xx</span></span>
+    #print(substitute(xx(...))[-1L]) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏x(y)</span></span>
+    #print(length(substitute(xx(...)))) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏3</span></span>
+    names &lt;- c(as.character(substitute(xx(...))[-1L]), xx)
     return (names)
 }
-test1(x,y,list=&quot;data&quot;)
+test1(x,y,xx=&quot;data&quot;)
 #&gt; [1] &quot;x&quot;    &quot;y&quot;    &quot;data&quot;
 </code></pre>
 <p><code>names &lt;- c(as.character(substitute(list(...))[-1L]), list)</code></p>
-<ul>
-<li>list(...) 把傳進來的參數打包成list</li>
-<li>在執行list(...)的時候，如果傳進的參數是還沒有初值的變數，會出錯，因此用<code>substitute()</code>打包。
-<ul>
-<li>為什麼用substitute()就不會出錯，因為它不執行這個expression(e.g. list(...))。
--為什麼可以不執行？因為<code>substitue()</code>有把它變成匿名函數(和call這個類別有關，自推論），這樣當然不會有問題。
--為什麼有-1L?接續之前的推論，第一個元素應該是匿名函數的內建名稱。</li>
-</ul>
-</li>
-</ul>
+<ol>
+<li>xx(...) 是一個express</li>
+<li>把參數值代入 <code>xx(...)</code>  結果是 &quot;data&quot;(x,y) <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏 目前的串列應該是<code>&quot;data&quot; x y</code></span></span></li>
+<li>去掉&quot;data&quot;(因為-1L))，因為是類別<code>call</code>因此變成x(y) <span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏所以目前的串列應該是<code>x y</code></span></span></li>
+</ol>
+<div class="notices m-auto w-75">
+    <div class="info">
+        <p>subset() 用來分隔組別資料
+subset(data.frame,group==&quot;F&quot;,欄位名稱)</p>
+<pre><code class="language-r">#&gt;                                                   
+#&gt;  subset&lt;-function (x, subset, select, drop = FALSE, ...) 
+#&gt;  {                                               
+#&gt;     r &lt;- if (missing(subset)) 
+#&gt;         rep_len(TRUE, nrow(x))
+#&gt;     else {
+#&gt;         e &lt;- substitute(subset)
+#&gt;         r &lt;- eval(e, x, parent.frame())
+#&gt;         if (!is.logical(r)) 
+#&gt;             stop(&quot;'subset' must be logical&quot;)
+#&gt;         r &amp; !is.na(r)
+#&gt;     }
+#&gt;     vars &lt;- if (missing(select)) 
+#&gt;         rep_len(TRUE, ncol(x))
+#&gt;     else {
+#&gt;         nl &lt;- as.list(seq_along(x))
+#&gt;         names(nl) &lt;- names(x)
+#&gt;         eval(substitute(select), nl, parent.frame())
+#&gt;     }
+#&gt;     x[r, vars, drop = drop]
+#&gt; }
+</code></pre>
+<p>測試</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">df&lt;-data.frame(x=1,y=2)
+eval(substitute(x==1),df) # 不能eval(x==1,df) 出錯
+#&gt; [1] TRUE
+eval(quote(x==1),df)
+#&gt; [1] TRUE
+</code></pre>
+
+    </div>
+</div>
+
 <p>所以整個函數，就是把使用者所有的參數，打成字串向量。如範例結果。</p>
 <h2 id="練習">練習</h2>
 <ol>
 <li>zeros(3,2),ones(2,3)</li>
 </ol>
 <p>hint:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">sapply(a,function(x) matrix(x,2,2), simplify='array')
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">sapply(a,function(x) matrix(x,2,2), simplify='array')
 </code></pre>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">zeros&lt;-function (nrow,ncol)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">zeros&lt;-function (nrow,ncol)
 {
 rst&lt;-sapply(c(0),function(x) matrix(x,nrow,ncol),simplify='array')
   return(rst[,,1])
@@ -705,7 +732,7 @@ iris %&gt;% head()
 5          5.0         3.6          1.4         0.2  setosa
 6          5.4         3.9          1.7         0.4  setosa
 </code></pre>
-<div class="notices  m-auto w-75">
+<div class="notices m-auto w-75">
     <div class="info">
         也就是說 iris %&gt;% head() 相當於 head(iris).
     </div>
@@ -742,8 +769,8 @@ iris %&gt;% head()
     </div>
 </div>
 
-<link href="../css/quicknote.css?1634189020" rel="stylesheet">
-<script src="../js/quicknote.js?1634189020"></script>
+<link href="../css/quicknote.css?1634784489" rel="stylesheet">
+<script src="../js/quicknote.js?1634784489"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -761,7 +788,7 @@ iris %&gt;% head()
           
 
   
-<script src="../js/packhtml.js?1634189020"></script>    
+<script src="../js/packhtml.js?1634784489"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -771,25 +798,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1634189020"></script>
-  <script src="../js/featherlight.gallery.min.js?1634189020"></script>
-  <link href="../css/featherlight.min.css?1634189020" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1634189020" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1634784489"></script>
+  <script src="../js/featherlight.gallery.min.js?1634784489"></script>
+  <link href="../css/featherlight.min.css?1634784489" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1634784489" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1634189020"></script>
+  <script src="../js/highlight.pack.js?1634784489"></script>
   
-  <script src="../js/hugohelper.js?1634189020"></script>
+  <script src="../js/hugohelper.js?1634784489"></script>
 
-  <link href="../css/rmd.css?1634189020" rel="stylesheet">
-  <link href="../css/mystyle.css?1634189020" rel="stylesheet">    
-  <script src='../js/variant.js?1634189020'></script>
+  <link href="../css/rmd.css?1634784489" rel="stylesheet">
+  <link href="../css/mystyle.css?1634784489" rel="stylesheet">    
+  <script src='../js/variant.js?1634784489'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1634189020'></script>
+<script src='../js/localsearch.js?1634784489'></script>
     
 
 

@@ -16,15 +16,6 @@
     </item>
     
     <item>
-      <title>2.2 data explorer</title>
-      <link>/rlang/2_2_data_explorer.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/2_2_data_explorer.html</guid>
-      <description>資料探索 常用函數  Mean Median Quartile Percentile Range Interquartile Range Box Plot Variance Standard Deviation Covariance Correlation Coefficient Central Moment Skewness Kurtosis  mean(mtcars$mpg)#&amp;gt; [1] 20.09062median(mtcars$mpg)#&amp;gt; [1] 19.2min(mtcars$mpg)#&amp;gt; [1] 10.4max(mtcars$mpg)#&amp;gt; [1] 33.9quantile(mtcars$mpg)#&amp;gt; 0% 25% 50% 75% 100% #&amp;gt; 10.400 15.425 19.200 22.800 33.900quantile(mtcars$mpg,c(0.2))#&amp;gt; 20% #&amp;gt; 15.2if(!require(moments))install.packages(&amp;quot;moment&amp;quot;)#&amp;gt; 載入需要的套件：momentsskewness(mtcars$mpg)#&amp;gt; [1] 0.6404399kurtosis(mtcars$mpg)#&amp;gt; [1] 2.799467 x &amp;lt;- rnorm(100)quantile(x, probs = c(0, 0.</description>
-    </item>
-    
-    <item>
       <title>2.3 data explorer</title>
       <link>/rlang/2_3_data_explorer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -105,13 +96,13 @@ x &amp;lt;- 10 f1 &amp;lt;- function(x) {  function() {  x + 10  } } f1(1)() How
     </item>
     
     <item>
-      <title>10. TidyBasic01</title>
+      <title>10. Tidy basic</title>
       <link>/rlang/10_00_tidybasic01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/10_00_tidybasic01.html</guid>
-      <description>需要安裝babynames,ggplot2  title: Tidy basic 01 Tidy Basic 01 require(tidyr)require(dplyr) # data_frame From http://stackoverflow.com/questions/1181060
-require(tidyr)#&amp;gt; 載入需要的套件：tidyrrequire(dplyr) # data_frame#&amp;gt; 載入需要的套件：dplyr#&amp;gt; #&amp;gt; 載入套件：&#39;dplyr&#39;#&amp;gt; 下列物件被遮斷自 &#39;package:stats&#39;:#&amp;gt; #&amp;gt; filter, lag#&amp;gt; 下列物件被遮斷自 &#39;package:base&#39;:#&amp;gt; #&amp;gt; intersect, setdiff, setequal, unionstocks &amp;lt;- data_frame(time = as.Date(&#39;2009-01-01&#39;) + 0:9,X = rnorm(10, 0, 1),Y = rnorm(10, 0, 2),Z = rnorm(10, 0, 4))#&amp;gt; Warning: `data_frame()` was deprecated in tibble 1.</description>
+      <description>需要安裝babynames,ggplot2 Tidy Basic 01 require(tidyr)require(dplyr) # data_frame From http://stackoverflow.com/questions/1181060
+require(tidyr)## 載入需要的套件：tidyrrequire(dplyr) # data_frame## 載入需要的套件：dplyr## ## 載入套件：&#39;dplyr&#39;## 下列物件被遮斷自 &#39;package:stats&#39;:## ## filter, lag## 下列物件被遮斷自 &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionstocks &amp;lt;- data_frame(time = as.Date(&#39;2009-01-01&#39;) + 0:9,X = rnorm(10, 0, 1),Y = rnorm(10, 0, 2),Z = rnorm(10, 0, 4))## Warning: `data_frame()` was deprecated in tibble 1.</description>
     </item>
     
     <item>
@@ -212,6 +203,15 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
+      <title>2.2 資料探索</title>
+      <link>/rlang/2_2_data_explorer.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/2_2_data_explorer.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>3.02.regular練習</title>
       <link>/rlang/3_02_regular%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -267,11 +267,20 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
-      <title>4.4 list</title>
+      <title>4.4 串列 list</title>
       <link>/rlang/4_4_type_list.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/4_4_type_list.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4.4.1 json</title>
+      <link>/rlang/4_11_json.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/4_11_json.html</guid>
       <description></description>
     </item>
     
@@ -371,6 +380,15 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/blogdown_debug.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xxx</title>
+      <link>/rlang/xxx.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/xxx.html</guid>
       <description></description>
     </item>
     
