@@ -21,7 +21,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/2_3_data_explorer.html</guid>
-      <description>age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group) 分組列出summary:利用函數 age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group)mygroup&amp;lt;-function(df,g,idx){ft&amp;lt;-factor(df$g)gf&amp;lt;-ft==levels(ft)[idx] # 第一組g1&amp;lt;-df[gf,]return(g1) }x&amp;lt;-mygroup(dframe,&amp;quot;group&amp;quot;,1) 問題： 現在把某個欄位依據分組畫出boxplot A:age B:group(1,2) 不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na， 最後 boxplot(mtx)</description>
+      <description>目的 練習撰寫函數,利用data.frame,levels,factor
+練習問題 從現有資料集中, 分出各組資料。
+💡可以使用管道方式,比較簡潔。
+age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group) 分組列出summary:利用自己的函數 age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group)mygroup&amp;lt;-function(df,g,idx){ft&amp;lt;-factor(df$g)gf&amp;lt;-ft==levels(ft)[idx] # 第一組g1&amp;lt;-df[gf,]return(g1) }x&amp;lt;-mygroup(dframe,&amp;quot;group&amp;quot;,1) 問題： 現在把某個欄位依據分組畫出boxplot A:age B:group(1,2) 不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na， 最後 boxplot(mtx)</description>
     </item>
     
     <item>
@@ -47,16 +50,6 @@ strtrim accepts both a vector of strings and a vector of truncation positions.
     </item>
     
     <item>
-      <title>4.6 topic data frame</title>
-      <link>/rlang/4_6_topic_dataframe.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/4_6_topic_dataframe.html</guid>
-      <description>Bootstrap method for mixed-model 
-b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取樣boot.data &amp;lt;-dataset[, .SD[sample(.N, min(.N,200), replace = FALSE)],by = list(ZONE8, Year)]# 用boot.data來跑GLMMboot.logit &amp;lt;-glmer(Count.F ~ Year.s + (0 + Year.s|ZONE8),data = boot.data,family = poisson)# 輸出斜率與截距，輸出到 b.coef 裡面b.coef[[i]] &amp;lt;- fixef(boot.logit)}b.coef &amp;lt;- do.call(rbind, b.coef) %&amp;gt;% data.table L3 &amp;lt;- LETTERS[1:3]fac &amp;lt;- sample(L3, 10, replace = TRUE)(d &amp;lt;- data.</description>
-    </item>
-    
-    <item>
       <title>1.2 檔案系統</title>
       <link>/rlang/1_2_filesystem.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -66,20 +59,6 @@ b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取�
 利用函數 file.path()合成檔案路徑，其分隔是斜線,而不是反斜線 (例如for example C:/Program Files/R/R-3.5.1)?
 路徑分解  dirname() :分解路徑用，例如＂c:/temp/text.txt&amp;quot; 得到&amp;quot;c:/temp&amp;quot;，但是&amp;quot;c:/temp/&amp;quot;,&amp;quot;c:/temp&amp;quot;, &amp;quot;c:/temp.txt&amp;quot;都得到&amp;quot;c:/&amp;quot;。😒🏷有時候有後綴&amp;quot;/&amp;quot;,有時候沒有 basename()  dirname(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;c:/temp&amp;quot;basename(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;demo.txt&amp;quot;dirname(&amp;quot;c:/temp/&amp;quot;) #🏷👏沒有正確拿出DIR#&amp;gt; [1] &amp;quot;c:/&amp;quot;dirname(&amp;quot;c:/temp&amp;quot;) #🏷👏沒有正確拿出DIR#&amp;gt; [1] &amp;quot;c:/&amp;quot; 檔案系統相關操作  dir():包括資料夾、檔案名稱 list.files() : 僅檔案 list.dirs():僅資料夾  判別是否目標檔案或資料夾已經存在(我們不希望刪除或更動已經存在的檔案):
   file.</description>
-    </item>
-    
-    <item>
-      <title>7.8 Function more</title>
-      <link>/rlang/7_8_function_2.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/7_8_function_2.html</guid>
-      <description>Introduction 簡單測試
-Quiz Answer the following questions to see if you can safely skip this chapter. You can find the answers in function-answer.
-  What are the three components of a function?
-  What does the following code return?
-x &amp;lt;- 10f1 &amp;lt;- function(x) {function() {x + 10}}f1(1)()   How would you usually write this code?
-`+`(1, `*`(2, 3))   How could you make this call easier to read?</description>
     </item>
     
     <item>
@@ -281,7 +260,16 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
-      <title>4.7 更多</title>
+      <title>4.6 資料集 data frame</title>
+      <link>/rlang/4_6_topic_dataframe.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/4_6_topic_dataframe.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4.7 data.frame, table, data,table</title>
       <link>/rlang/4_7_type_more.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -331,6 +319,33 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/6_3_apply_family.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7.1 R 函數的基本撰寫</title>
+      <link>/rlang/7_1_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_1_function.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7.2 更多R函數</title>
+      <link>/rlang/7_2_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_2_function.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7.3 R 函數定義的幾種分類</title>
+      <link>/rlang/7_3_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_3_function.html</guid>
       <description></description>
     </item>
     
@@ -389,11 +404,11 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
-      <title>測試工具</title>
-      <link>/rlang/%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</link>
+      <title>資料處理</title>
+      <link>/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</guid>
+      <guid>/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</guid>
       <description></description>
     </item>
     

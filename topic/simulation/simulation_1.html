@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../../images/favicon.ico'/>
       
-    <link href="../../css/atom-one-dark-reasonable.css?1634793271" rel="stylesheet">
-    <link href="../../css/syntax.css?1634793271" rel="stylesheet">
-    <script src="../../js/jquery-3.3.1.min.js?1634793271"></script>
+    <link href="../../css/atom-one-dark-reasonable.css?1635398991" rel="stylesheet">
+    <link href="../../css/syntax.css?1635398991" rel="stylesheet">
+    <script src="../../js/jquery-3.3.1.min.js?1635398991"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../../css/fontawesome-all.min.css?1634793271" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1635398991" rel="stylesheet">
     
-    <link href="../../css/theme-mine.css?1634793271" rel="stylesheet">
+    <link href="../../css/theme-mine.css?1635398991" rel="stylesheet">
     
-    <link href="../../css/theme.css?1634793271" rel="stylesheet">
+    <link href="../../css/theme.css?1635398991" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -37,8 +37,7 @@
     <div class="wrapper">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#均勻分配抽樣">均勻分配抽樣</a></li>
-    <li><a href="#sampling-from-a-normal-distribution">Sampling from a normal distribution</a></li>
+    <li><a href="#r的亂數函數">R的亂數函數</a></li>
     <li><a href="#simulating-a-coin-toss">Simulating a coin toss</a></li>
     <li><a href="#t-test">t-test</a>
       <ul>
@@ -81,9 +80,20 @@
       <ul>
         <li><a href="#prettier-results-using-kable-and-broom">Prettier results using kable and broom</a></li>
         <li><a href="#writing-up-the-results">Writing up the results</a></li>
+      </ul>
+    </li>
+    <li><a href="#running-a-between-subjects-anova-for-a-2x2-factorial-design">Running a between subjects ANOVA for a 2x2 Factorial design</a>
+      <ul>
         <li><a href="#writing-up-the-results-section">Writing up the results section</a></li>
       </ul>
     </li>
+    <li><a href="#practice-problems">Practice Problems</a>
+      <ul>
+        <li><a href="#single-factor-design-with-a-within-subjects-factor">Single factor design with a within-subjects factor</a></li>
+        <li><a href="#2x2-within-subjects-design">2x2 within-subjects design</a></li>
+      </ul>
+    </li>
+    <li><a href="#loading-raw-data-into-r">Loading raw-data into R</a></li>
   </ul>
 </nav>
     </div>
@@ -92,7 +102,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 18, 2021'>simulation_1</span>
+      title='最後修改October 24, 2021'>simulation_1</span>
         
     
 
@@ -244,11 +254,14 @@
           <a class="nav-link" href="../../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串">4.5 字串</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_6_topic_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 更多">4.7 更多</a></li>
+          <a class="nav-link" href="../../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 data.frame, table, data,table">4.7 data.frame, table, data,table</a></li>
     
   
     
@@ -275,6 +288,19 @@
           <a class="nav-link" href="../../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_function.html" data-bs-toggle="tooltip" title="7.1 R 函數的基本撰寫">7.1 R 函數的基本撰寫</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_2_function.html" data-bs-toggle="tooltip" title="7.2 更多R函數">7.2 更多R函數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
     
   
     
@@ -466,6 +492,18 @@
         <li class="nav-item">
           
           <a class="nav-link" href="../../econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" title="A.b mpg為例的ggplot">A.b mpg為例的ggplot</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/statatest.html" data-bs-toggle="tooltip" title="statatest">statatest</a></li>
+    
+  
     </ul>
   
 
@@ -550,7 +588,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../../topic/simulation/xx.html" data-bs-toggle="tooltip" title="Inverse Transform Sampling">Inverse Transform Sampling</a></li>
+          <a class="nav-link" href="../../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
     
   
         <li class="nav-item">
@@ -586,14 +629,26 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../../rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-10-21 PM 01:14]</a></li><li><a href="../../rlang/7_8_function_2.html"> <i class="far fa-clock" ></i>7.8 Function more[2021-10-21 PM 12:36]</a></li><li><a href="../../rlang/3_quickview1.html"> <i class="far fa-clock" ></i>3. Quick view 1[2021-10-21 PM 12:30]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../../rlang/4_7_type_more.html"> <i class="far fa-clock" ></i>4.7 data.frame, table, data,table[2021-10-28 PM 01:29]</a></li><li><a href="../../rlang/4_6_topic_dataframe.html"> <i class="far fa-clock" ></i>4.6 資料集 data frame[2021-10-28 PM 12:41]</a></li><li><a href="../../rlang/2_3_data_explorer.html"> <i class="far fa-clock" ></i>2.3 data explorer[2021-10-28 PM 12:30]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <h2 id="均勻分配抽樣">均勻分配抽樣</h2>
-<p><code>runif(n, min = 0, max = 1)</code>
-<code>runif(100, min = 0, max = 100)</code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">RandomNumbers &lt;- runif(10000, min = 0, max = 100)
+    <h2 id="r的亂數函數">R的亂數函數</h2>
+<ul>
+<li>均勻分配抽樣
+<ul>
+<li>
+<p>標準均勻亂數</p>
+</li>
+<li>
+<p><code>runif(n, min = 0, max = 1)</code></p>
+</li>
+<li>
+<p>0到100的均勻分配</p>
+</li>
+<li>
+<p><code>runif(100, min = 0, max = 100)</code></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">RandomNumbers &lt;- runif(10000, min = 0, max = 100)
 hist(RandomNumbers)
 </code></pre>
 
@@ -609,9 +664,14 @@ hist(RandomNumbers)
         </figcaption>
 </figure>
 
-<h2 id="sampling-from-a-normal-distribution">Sampling from a normal distribution</h2>
+</li>
+</ul>
+</li>
+<li>常態分配亂數
+<ul>
+<li>
 <p><code>rnorm(n, mean = 0, sd = 1)</code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">normalSample &lt;- rnorm(10000, mean = 100, sd = 50)
+<pre><code class="language-r?lang=r?class=.source?preclass=">normalSample &lt;- rnorm(10000, mean = 100, sd = 50)
 hist(normalSample)
 </code></pre>
 
@@ -627,6 +687,10 @@ hist(normalSample)
         </figcaption>
 </figure>
 
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="simulating-a-coin-toss">Simulating a coin toss</h2>
 <p>擲硬幣10次,5H:5T,4H:6T的機率是多少?</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">
@@ -635,7 +699,8 @@ for (i in 1:10000) {
   totalHeads &lt;- sum(round(runif(10, min = 0, max = 1)))
   allHeads &lt;- c(allHeads,totalHeads)
 }
-x&lt;-hist(allHeads) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏如果要probability density function則 hist(allHeads,✔freq=FALSE)</span></span>
+x&lt;-hist(allHeads) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏如果要probability density function則 hist(allHeads,✔freq=FALSE)</span></span><!--/html_preserve-->
 </code></pre>
 
 <figure  class="figure text-center d-block w-50 m-auto   ">
@@ -650,15 +715,16 @@ x&lt;-hist(allHeads) #<span data-nopre class="codenote nopre">🏷<span data-nop
         </figcaption>
 </figure>
 
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏如果只要圖形,不用指派給變數x,就是說只要✔hist(allHeads)</span></span>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏如果只要圖形,不用指派給變數x,就是說只要✔hist(allHeads)</span></span><!--/html_preserve-->
 #&gt; $breaks
 #&gt;  [1]  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5  4.0  4.5  5.0  5.5  6.0  6.5  7.0  7.5  8.0  8.5  9.0  9.5 10.0
 #&gt; 
 #&gt; $counts
-#&gt;  [1]   15   76    0  469    0 1109    0 2139    0 2400    0 2032    0 1237    0  423    0   98    0    2
+#&gt;  [1]   14   86    0  462    0 1160    0 2027    0 2568    0 2000    0 1149    0  423    0  102    0    9
 #&gt; 
 #&gt; $density
-#&gt;  [1] 0.0030 0.0152 0.0000 0.0938 0.0000 0.2218 0.0000 0.4278 0.0000 0.4800 0.0000 0.4064 0.0000 0.2474 0.0000 0.0846 0.0000 0.0196 0.0000 0.0004
+#&gt;  [1] 0.0028 0.0172 0.0000 0.0924 0.0000 0.2320 0.0000 0.4054 0.0000 0.5136 0.0000 0.4000 0.0000 0.2298 0.0000 0.0846 0.0000 0.0204 0.0000 0.0018
 #&gt; 
 #&gt; $mids
 #&gt;  [1] 0.25 0.75 1.25 1.75 2.25 2.75 3.25 3.75 4.25 4.75 5.25 5.75 6.25 6.75 7.25 7.75 8.25 8.75 9.25 9.75
@@ -672,27 +738,42 @@ x&lt;-hist(allHeads) #<span data-nopre class="codenote nopre">🏷<span data-nop
 #&gt; attr(,&quot;class&quot;)
 #&gt; [1] &quot;histogram&quot;
 </code></pre>
-<p>上圖是10次中出現H的0,1,2..次數。
-<div class="position-relative warning ms-5">
+<p>上圖是10次中出現H的0,1,2..次數。</p>
+<div class="notices  ms-5 w-75 ">
+    <div class="info">
+        <pre><code class="language-r">round(0.1)
+#&gt; [1] 0
+round(0.6)
+#&gt; [1] 1
+</code></pre>
+
+    </div>
+</div>
+
+<p><div class="position-relative warning ms-5 w-75">
 但是為甚麼柱狀之間有空格?<button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-1552">提示</button>
 </div>    
 
 
-<div class="collapse info" id="quiz-1552"><pre><code class="language-r">#&gt; $breaks &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏0到10中的分割點&lt;/span&gt;&lt;/span&gt;
+<div class="collapse info ms-5 w-75" id="quiz-1552"><pre><code class="language-r">#&gt; $breaks &lt;!--html_preserve--&gt;&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;
+      👏0到10中的分割點&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
 #&gt;  [1]  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5  4.0  4.5  5.0  5.5  6.0  6.5  7.0  7.5  8.0  8.5  9.0  9.5 10.0
 #&gt; 
-#&gt; $counts &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏每個分割的H個數&lt;/span&gt;&lt;/span&gt;
+#&gt; $counts &lt;!--html_preserve--&gt;&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;
+      👏每個分割的H個數&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
 #&gt;  [1]   12  104    0  464    0 1163    0 2005    0 2443    0 2045    0 1207    0  449    0  102    0    6
 #&gt; 
-#&gt; $density &lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;👏每個BIN的密度&lt;/span&gt;&lt;/span&gt;
+#&gt; $density &lt;!--html_preserve--&gt;&lt;span data-nopre class=&quot;codenote nopre&quot;&gt;🏷&lt;span data-nopre  class=&quot;tooltiptext&quot; &gt;
+      👏每個BIN的密度&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
 #&gt;  [1] 0.0024 0.0208 0.0000 0.0928 0.0000 0.2326 0.0000 0.4010 0.0000 0.4886 0.0000 0.4090 0.0000 0.2414 0.0000 0.0898 0.0000 0.0204 0.0000 0.0012
 </code></pre>
 <p>因為輸出為整數,而分隔以0.5為單位,導致有些地方沒有資料=0。</p>
 </div>
 
 修正圖中不應該有的空白間隙。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">hist(allHeads, freq = FALSE, breaks = 11) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏自行指定分割點</span></span>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">hist(allHeads, freq = FALSE, breaks = 11) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏自行指定分割點</span></span><!--/html_preserve-->
 </code></pre>
 
 <figure  class="figure text-center d-block w-50 m-auto   ">
@@ -719,24 +800,27 @@ x&lt;-hist(allHeads) #<span data-nopre class="codenote nopre">🏷<span data-nop
 如果一個班級有10個學生餐與T/F考試,現在</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">testScores &lt;- rnorm(10, mean = 50, sd = 20)
  
-testScores[testScores &gt; 100] &lt;- 100 #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏但是現在問題是常態分配抽到的可能小於0,也可能大於100。修正方法是&gt;100的設定為100,小於0的設定為0。</span></span>
+testScores[testScores &gt; 100] &lt;- 100 #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏但是現在問題是常態分配抽到的可能小於0,也可能大於100。修正方法是&gt;100的設定為100,小於0的設定為0。</span></span><!--/html_preserve-->
 testScores[testScores &lt; 0] &lt;- 0
 
-mean(testScores) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏看一下這次抽樣的平均</span></span>
-#&gt; [1] 60.69769
+mean(testScores) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏看一下這次抽樣的平均</span></span><!--/html_preserve-->
+#&gt; [1] 57.77865
 
-t.test(testScores,mu=50) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏one-sample t-test</span></span>
+t.test(testScores,mu=50) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏one-sample t-test</span></span><!--/html_preserve-->
 #&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
 #&gt; data:  testScores
-#&gt; t = 2.0432, df = 9, p-value = 0.07139
+#&gt; t = 1.1499, df = 9, p-value = 0.2798
 #&gt; alternative hypothesis: true mean is not equal to 50
 #&gt; 95 percent confidence interval:
-#&gt;  48.85358 72.54181
+#&gt;  42.47624 73.08106
 #&gt; sample estimates:
 #&gt; mean of x 
-#&gt;  60.69769
+#&gt;  57.77865
 </code></pre>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">testScores &lt;- rnorm(10, mean = 80, sd = 20)
 testScores[testScores &gt; 100] &lt;- 100
@@ -746,13 +830,13 @@ t.test(testScores, mu = 50)
 #&gt; 	One Sample t-test
 #&gt; 
 #&gt; data:  testScores
-#&gt; t = 7.0639, df = 9, p-value = 5.895e-05
+#&gt; t = 6.9193, df = 9, p-value = 6.916e-05
 #&gt; alternative hypothesis: true mean is not equal to 50
 #&gt; 95 percent confidence interval:
-#&gt;  73.01384 94.69806
+#&gt;  65.02323 79.61786
 #&gt; sample estimates:
 #&gt; mean of x 
-#&gt;  83.85595
+#&gt;  72.32055
 </code></pre>
 <h3 id="獨立樣本的t-testindependent-samples-t-test---two-groups-between-subjects">獨立樣本的t-test(independent samples t-test - two groups, between-subjects</h3>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">Alcohol &lt;- rnorm(20, mean = 250, sd = 100)
@@ -765,13 +849,13 @@ t.test(Alcohol,Control)
 #&gt; 	Welch Two Sample t-test
 #&gt; 
 #&gt; data:  Alcohol and Control
-#&gt; t = 3.5651, df = 35.619, p-value = 0.001059
+#&gt; t = 3.9426, df = 37.992, p-value = 0.0003348
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;   45.0944 164.2015
+#&gt;   52.21204 162.41892
 #&gt; sample estimates:
 #&gt; mean of x mean of y 
-#&gt;  241.9983  137.3503
+#&gt;  247.1613  139.8458
 </code></pre>
 <p>在R中的t檢定,使用的是 Welch Two Sample t-test。如果要得到像是EXCEL,SPSS的類似數值,可以</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">t.test(Alcohol,Control, var.equal = TRUE)
@@ -779,13 +863,13 @@ t.test(Alcohol,Control)
 #&gt; 	Two Sample t-test
 #&gt; 
 #&gt; data:  Alcohol and Control
-#&gt; t = 3.5651, df = 38, p-value = 0.001002
+#&gt; t = 3.9426, df = 38, p-value = 0.0003347
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;   45.22513 164.07077
+#&gt;   52.21242 162.41853
 #&gt; sample estimates:
 #&gt; mean of x mean of y 
-#&gt;  241.9983  137.3503
+#&gt;  247.1613  139.8458
 </code></pre>
 <h3 id="成對樣本paired-samples的t檢定t-test-two-conditions-within-subjects">成對樣本(paired samples)的t檢定t-test (two conditions, within-subjects)</h3>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">day1&lt;-rnorm(20, mean = 20, sd = 5)
@@ -794,22 +878,22 @@ day1[day1&lt;0]&lt;-0
 day2[day2&lt;0]&lt;-0
 
 mean(day1)
-#&gt; [1] 18.73943
+#&gt; [1] 20.64265
 mean(day2)
-#&gt; [1] 30.63218
+#&gt; [1] 30.43925
 
 t.test(day1, day2, var.equal=TRUE, paired=TRUE)
 #&gt; 
 #&gt; 	Paired t-test
 #&gt; 
 #&gt; data:  day1 and day2
-#&gt; t = -6.0841, df = 19, p-value = 7.514e-06
+#&gt; t = -5.8911, df = 19, p-value = 1.132e-05
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;  -15.984027  -7.801472
+#&gt;  -13.277162  -6.316032
 #&gt; sample estimates:
 #&gt; mean of the differences 
-#&gt;               -11.89275
+#&gt;               -9.796597
 </code></pre>
 <p>Finally, compute the paired-samples t-test using the t.test function. This will be the same as before, except the option for a paired test will be set to TRUE.</p>
 <h2 id="generality-of-the-t-test-examples">Generality of the t-test examples</h2>
@@ -818,13 +902,13 @@ t.test(day1, day2, var.equal=TRUE, paired=TRUE)
 <p>產生用來分析個體之間、之內的(between,within subject) 單/多 因子設計(single/multi factor design)
 跑ANOVA利用的函數是<code>aov()</code>。這個函數需要資料整理成long-format的型態(在R中,使用data farme)
 )</p>
-<div data-nopre class="expand d-none ">
+<!--html_preserve--><div data-nopre class="expand d-none ">
     <div data-nopre class="expand-label" onclick="vexpand(this)">
         <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
         <span data-nopre >展開</span>
-    </div><div data-nopre class="expand-content" style="overflow-x:auto">🎶Experimental designs involve manipulations and measurements. The manipulations are described by independent variables, and the measurements refer to dependent variables. Every independent variable has at least two levels, and possibly many more. In balanced designs there is one measurement (DV) for each of the levels of the independent variables. Thus, in order to represent the results of an experiment, it is necessary to organize the data so that the measurement for each level of each independent variable can be identified. Data is typically organized either in wide or long-format.
+    </div><!--html_preserve--><div data-nopre class="expand-content" style="overflow-x:auto"><!--html_preserve-->🎶Experimental designs involve manipulations and measurements. The manipulations are described by independent variables, and the measurements refer to dependent variables. Every independent variable has at least two levels, and possibly many more. In balanced designs there is one measurement (DV) for each of the levels of the independent variables. Thus, in order to represent the results of an experiment, it is necessary to organize the data so that the measurement for each level of each independent variable can be identified. Data is typically organized either in wide or long-format.
 實驗設計包含處理和測量(manipulations and measurements)。處理就是IV,測量就是DV。每個IV可能至少有2個到多個level。在balanced designs 中,IV中的每個LEVEL有一個測量(DV)。
-配合上述的實驗結果,資料紀錄的方式有寬(wide)和長(long)兩種格式。</div></div>
+配合上述的實驗結果,資料紀錄的方式有寬(wide)和長(long)兩種格式。<!--html_preserve--></div><!--/html_preserve--><!--html_preserve--></div><!--/html_preserve-->
 <p>寬資料
 
   
@@ -844,9 +928,7 @@ t.test(day1, day2, var.equal=TRUE, paired=TRUE)
 
 
 
-
-
-<div  data-nopre class="table-responsive">
+<!--html_preserve--><div  data-nopre class="table-responsive kable">
 <table data-nopre class="w-25 ms-5">
 <thead data-nopre class="">
 <tr data-nopre>
@@ -890,7 +972,7 @@ t.test(day1, day2, var.equal=TRUE, paired=TRUE)
 </tbody>
 </table>
 
-</div>
+</div><!--/html_preserve-->
 長資料
 
   
@@ -910,9 +992,7 @@ t.test(day1, day2, var.equal=TRUE, paired=TRUE)
 
 
 
-
-
-<div  data-nopre class="table-responsive">
+<!--html_preserve--><div  data-nopre class="table-responsive kable">
 <table data-nopre class="w-25 ms-5">
 <thead data-nopre class="">
 <tr data-nopre>
@@ -1000,373 +1080,293 @@ t.test(day1, day2, var.equal=TRUE, paired=TRUE)
 </tbody>
 </table>
 
-</div> 
+</div><!--/html_preserve--> 
 長寬資料指的是個體號碼是否有重複。</p>
-<p>For each of the following simulations we will be constructing our own sets of data in long format. For each simulation it will be necessary to determine the total number of subjects, the total number of levels for each IV, and the total number of observations of the DV. These constraints will be used to create and organize each of the data sets.</p>
+<p>產生的資料大概考慮後幾點(這裡用的都是長資料)</p>
+<ul>
+<li>個體有幾個</li>
+<li>每個IV的level</li>
+<li>DV的觀察值個數</li>
+</ul>
 <h2 id="single-factor-anovas-data-simulation-and-analysis">Single Factor ANOVAs: Data-Simulation and Analysis</h2>
 <h3 id="simulating-data-for-a-one-way-within-subjects-anova-with-3-levels">Simulating data for a one-way within subjects ANOVA with 3 levels</h3>
 <p>打字速度是否隨著教學時間而變化。20個受測者,DV是每分鐘的字數。IV是第1,2,3天3個LEVEL。</p>
 <p>產生模擬資料</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">day1 &lt;- rnorm(20, mean = 20, sd = 5)
+<ol>
+<li>
+<p>產生DV,命名為WPM,表示第一、二、三天的打字速度:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">day1 &lt;- rnorm(20, mean = 20, sd = 5)
 day2 &lt;- rnorm(20, mean = 30, sd = 5)
 day3 &lt;- rnorm(20, mean = 40, sd = 5)
 
-day1[day1 &lt; 0] &lt;- 0 #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏讓負數成為0</span></span>
+day1[day1 &lt; 0] &lt;- 0 #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏讓負數成為0</span></span><!--/html_preserve-->
 day2[day2 &lt; 0] &lt;- 0
 day3[day3 &lt; 0] &lt;- 0
 WPM &lt;- c(day1,day2,day3)
 </code></pre>
-<p>因為要產生長資料:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">Subjects &lt;- c(seq(1,20), seq(1,20), seq(1,20)) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏 也可以利用seq()函數: Subjects&lt;-rep(seq(1,20),3)</span></span>
+</li>
+<li>
+<p>subjects代表個體(因子)</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">Subjects &lt;- c(seq(1,20), seq(1,20), seq(1,20)) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏 也可以利用seq()函數: Subjects&lt;-rep(seq(1,20),3)</span></span><!--/html_preserve-->
 
-Subjects&lt;-factor(Subjects) #<span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >👏因為要進行ANOVA,所以個體變數必須是因子(在R中的對應為factor 類別)</span></span>
+Subjects&lt;-factor(Subjects) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
+      👏因為要進行ANOVA,所以個體變數必須是因子(在R中的對應為factor 類別)</span></span><!--/html_preserve-->
 </code></pre>
-<p>We now have a variable called WPM that represents the DV, and a variable Subjects that represents the subject factor. The remaining factor is the IV for practice. This has three levels, day1, day2, and day3. Given the way we have organized the data in the WPM variable, we know that the first 20 numbers are for day1, the second 20 numbers are for day 2, and the final set of 20 numbers are for day 3. Thus, we need to create a variable with the term day1 listed 20 times, followed by the term day2 listed 20 times, and then the term day3 listed 20 times. It is easy to do this using the function rep.</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">rep(&quot;day1&quot;,20)
-#&gt;  [1] &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot; &quot;day1&quot;
+</li>
+<li>
+<p>目前有WPM(DV) 和Subjects(subject factor),還少了一個IV代表練習的level(1天,2天,3天),這裡用變數Practice代表</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">Practice &lt;- c(rep(&quot;day1&quot;,20), rep(&quot;day2&quot;,20), rep(&quot;day3&quot;,20))
 </code></pre>
-<p>The Practice factor can be created in the following way:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">Practice &lt;- c(rep(&quot;day1&quot;,20), rep(&quot;day2&quot;,20), rep(&quot;day3&quot;,20))
+</li>
+<li>
+<p>整合上面三個變數為data.frame,然後命名為AllData</p>
+<ul>
+<li>第1個欄位是個體變數(1-20號)</li>
+<li>第2個欄位是The second column should show the Practice variable, with the names of each of the levels repeated 20 times each, and the</li>
+<li>第3第3個欄位是每分鐘打字個數。</li>
+</ul>
+<pre><code class="language-r?lang=r?class=.source?preclass=">AllData&lt;-data.frame(WPM,Subjects,Practice)
+AllData #
 </code></pre>
-<p>We have now created variables for every aspect of the design (Subjects, Practice, WPM). The next step is to combine these variables into a long-format table. This is done using the data.frame function. Data needs to be converted into a data frame format before using the aov function to compute the ANOVA. Fortunately, this is very easy. Let’s create the data frame and put it into a new variable called AllData</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">AllData &lt;- data.frame(Subjects,Practice,WPM)
-</code></pre>
-<p>第1個欄位是個體變數(1-20號) 
-第2個欄位是The second column should show the Practice variable, with the names of each of the levels repeated 20 times each, and the 第3第3個欄位是每分鐘打字個數。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">AllData #
-</code></pre>
-<div data-nopre class="expand">
+<!--html_preserve--><div data-nopre class="expand ms-5 w-75 ">
     <div data-nopre class="expand-label" onclick="vexpand(this)">
         <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
         <span data-nopre >展開</span>
-    </div><div data-nopre class="expand-content" style="overflow-x:auto"><div  data-nopre class="table-responsive">
+    </div><!--html_preserve--><div data-nopre class="expand-content" style="overflow-x:auto"><!--html_preserve--><!--html_preserve--><div  data-nopre class="table-responsive kable">
 <table data-nopre class="w-50 m-auto">
 <thead data-nopre class="">
 <tr data-nopre>
+<th data-nopre style="text-align:right">WPM</th>
 <th data-nopre style="text-align:left">Subjects</th>
 <th data-nopre style="text-align:left">Practice</th>
-<th data-nopre style="text-align:right">WPM</th>
 </tr>
 </thead>
 <tbody data-nopre>
 <tr data-nopre>
+<td data-nopre style="text-align:right">19.02960</td>
 <td data-nopre style="text-align:left">1</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">23.93267</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">22.88419</td>
 <td data-nopre style="text-align:left">2</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">26.56774</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">16.50249</td>
 <td data-nopre style="text-align:left">3</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">18.34906</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">16.79173</td>
 <td data-nopre style="text-align:left">4</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">24.72847</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">22.64055</td>
 <td data-nopre style="text-align:left">5</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">15.87122</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">22.52934</td>
 <td data-nopre style="text-align:left">6</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">17.80156</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">34.37175</td>
 <td data-nopre style="text-align:left">7</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">18.81558</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">24.68770</td>
 <td data-nopre style="text-align:left">8</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">21.43063</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">20.85668</td>
 <td data-nopre style="text-align:left">9</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">17.20837</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">24.24775</td>
 <td data-nopre style="text-align:left">10</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">16.30356</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">19.75090</td>
 <td data-nopre style="text-align:left">11</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">15.50422</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">24.60240</td>
 <td data-nopre style="text-align:left">12</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">29.43814</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">16.52909</td>
 <td data-nopre style="text-align:left">13</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">14.03841</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">16.70058</td>
 <td data-nopre style="text-align:left">14</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">18.78427</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">30.11708</td>
 <td data-nopre style="text-align:left">15</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">22.72366</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">26.06019</td>
 <td data-nopre style="text-align:left">16</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">19.32137</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">28.17544</td>
 <td data-nopre style="text-align:left">17</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">20.20619</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">16.66638</td>
 <td data-nopre style="text-align:left">18</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">22.03055</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">10.01176</td>
 <td data-nopre style="text-align:left">19</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">25.62661</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">24.40399</td>
 <td data-nopre style="text-align:left">20</td>
 <td data-nopre style="text-align:left">day1</td>
-<td data-nopre style="text-align:right">17.10438</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">33.96546</td>
 <td data-nopre style="text-align:left">1</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">28.07132</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">20.83018</td>
 <td data-nopre style="text-align:left">2</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">32.13748</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">19.96851</td>
 <td data-nopre style="text-align:left">3</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">34.29204</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">22.70068</td>
 <td data-nopre style="text-align:left">4</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">29.09682</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">33.82548</td>
 <td data-nopre style="text-align:left">5</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">24.61844</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">23.15560</td>
 <td data-nopre style="text-align:left">6</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">26.59760</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">31.84264</td>
 <td data-nopre style="text-align:left">7</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">24.51737</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">29.82255</td>
 <td data-nopre style="text-align:left">8</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">29.48648</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">34.46807</td>
 <td data-nopre style="text-align:left">9</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">42.25616</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">31.07370</td>
 <td data-nopre style="text-align:left">10</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">31.73995</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">28.38186</td>
 <td data-nopre style="text-align:left">11</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">33.70681</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">28.06041</td>
 <td data-nopre style="text-align:left">12</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">31.84762</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">28.75290</td>
 <td data-nopre style="text-align:left">13</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">35.88310</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">27.48191</td>
 <td data-nopre style="text-align:left">14</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">30.76246</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">27.55109</td>
 <td data-nopre style="text-align:left">15</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">28.30401</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">19.00274</td>
 <td data-nopre style="text-align:left">16</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">45.64188</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">31.13235</td>
 <td data-nopre style="text-align:left">17</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">35.44798</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">29.86227</td>
 <td data-nopre style="text-align:left">18</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">28.38226</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">31.65473</td>
 <td data-nopre style="text-align:left">19</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">28.74083</td>
 </tr>
 <tr data-nopre>
+<td data-nopre style="text-align:right">36.76688</td>
 <td data-nopre style="text-align:left">20</td>
 <td data-nopre style="text-align:left">day2</td>
-<td data-nopre style="text-align:right">28.82634</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">1</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">36.40064</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">2</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">39.35185</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">3</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">42.09603</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">4</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">41.48042</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">5</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">32.77653</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">6</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">37.06247</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">7</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">39.23680</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">8</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">43.31603</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">9</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">29.86623</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">10</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">33.93805</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">11</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">37.58570</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">12</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">46.68936</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">13</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">38.55405</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">14</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">35.34527</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">15</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">35.75756</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">16</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">43.64483</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">17</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">36.46253</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">18</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">37.89225</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">19</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">46.44139</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:left">20</td>
-<td data-nopre style="text-align:left">day3</td>
-<td data-nopre style="text-align:right">36.25436</td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>#</div></div>
-<p>The final step is to perform the one-way ANOVA. This will provide a test to determine whether there is a significant difference between the levels of the practice factor. Luckily, once the data has been formatted into a data frame, the ANOVA can be computed in one line of code using the aov function. Just like we did with the hist function, let’s store the results of aov function into a variable called ANOVAresults.</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">ANOVAresults &lt;- aov(WPM~Practice + Error(Subjects/Practice), AllData)
+</div><!--/html_preserve-->
+<pre><code>#</code></pre>
+<!--html_preserve--></div><!--/html_preserve--><!--html_preserve--></div><!--/html_preserve-->
+</li>
+<li>
+<p>執行ANOVA</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">ANOVAresults &lt;- aov(WPM~Practice + Error(Subjects/Practice), AllData)
 </code></pre>
-<p>Next, use the summary function to print the results of ANOVA to the terminal.</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">summary(ANOVAresults)
+</li>
+<li>
+<p>報表</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">summary(ANOVAresults)
 #&gt; 
 #&gt; Error: Subjects
 #&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)
-#&gt; Residuals 19  503.5    26.5               
+#&gt; Residuals 19  607.2   31.96               
 #&gt; 
 #&gt; Error: Subjects:Practice
 #&gt;           Df Sum Sq Mean Sq F value   Pr(&gt;F)    
-#&gt; Practice   2   3379  1689.5   87.98 5.49e-15 ***
-#&gt; Residuals 38    730    19.2                     
+#&gt; Practice   2   3071  1535.4   57.68 3.07e-12 ***
+#&gt; Residuals 38   1012    26.6                     
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -1374,15 +1374,20 @@ model.tables(ANOVAresults,&quot;means&quot;)
 #&gt; Tables of means
 #&gt; Grand mean
 #&gt;          
-#&gt; 30.10493 
+#&gt; 29.87823 
 #&gt; 
 #&gt;  Practice 
 #&gt; Practice
 #&gt;  day1  day2  day3 
-#&gt; 20.29 31.52 38.51
+#&gt; 21.88 28.52 39.24
 </code></pre>
-<p>Here is all the code for the simulation in one complete script:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">day1&lt;-rnorm(20, mean = 20, sd = 5)
+</li>
+</ol>
+<!--html_preserve--><div data-nopre class="expand">
+    <div data-nopre class="expand-label" onclick="vexpand(this)">
+        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+        <span data-nopre >全部程式碼</span>
+    </div><!--html_preserve--><div data-nopre class="expand-content" style="overflow-x:auto"><!--html_preserve--><pre><code class="language-r">day1&lt;-rnorm(20, mean = 20, sd = 5)
 day2&lt;-rnorm(20, mean = 30, sd = 5)
 day3&lt;-rnorm(20, mean = 40, sd = 5)
 day1[day1&lt;0]&lt;-0
@@ -1395,33 +1400,10 @@ Practice&lt;-c(rep(&quot;day1&quot;,20), rep(&quot;day2&quot;,20), rep(&quot;day
 AllData&lt;-data.frame(Subjects,Practice,WPM)
 ANOVAresults&lt;-aov(WPM~Practice + Error(Subjects/Practice), AllData)
 summary(ANOVAresults)
-#&gt; 
-#&gt; Error: Subjects
-#&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)
-#&gt; Residuals 19  627.3   33.02               
-#&gt; 
-#&gt; Error: Subjects:Practice
-#&gt;           Df Sum Sq Mean Sq F value   Pr(&gt;F)    
-#&gt; Practice   2   4802    2401   96.02 1.39e-15 ***
-#&gt; Residuals 38    950      25                     
-#&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 model.tables(ANOVAresults,&quot;means&quot;) 
-#&gt; Tables of means
-#&gt; Grand mean
-#&gt;          
-#&gt; 30.02964 
-#&gt; 
-#&gt;  Practice 
-#&gt; Practice
-#&gt;  day1  day2  day3 
-#&gt; 18.72 30.76 40.60
 </code></pre>
-<div data-nopre class="expand">
-    <div data-nopre class="expand-label" onclick="vexpand(this)">
-        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
-        <span data-nopre >寫緊湊點</span>
-    </div><div data-nopre class="expand-content" style="overflow-x:auto"><pre><code class="language-r">WPM&lt;-rnorm(60,c(20,30,40),5)
+<p>寫緊湊點</p>
+<pre><code class="language-r">WPM&lt;-rnorm(60,c(20,30,40),5)
 WPM[WPM&lt;0]&lt;-0
 Subjects&lt;-factor(rep(seq(1,20),each=3))
 Practice&lt;-rep(c(&quot;day1&quot;,&quot;day2&quot;,&quot;day3&quot;),20)
@@ -1430,9 +1412,14 @@ ANOVAresults&lt;-aov(WPM~Practice + Error(Subjects/Practice), AllData)
 summary(ANOVAresults)
 model.tables(ANOVAresults,&quot;means&quot;) 
 </code></pre>
-</div></div>
+<!--html_preserve--></div><!--/html_preserve--><!--html_preserve--></div><!--/html_preserve-->
 <h3 id="simulating-data-for-a-one-way-between-subjects-design-with-3-levels">Simulating data for a one-way between subjects design with 3 levels</h3>
-<p>Consider the following between-subjects design with 60 subjects. The task is a memory experiment. Participants in the encoding phase read a list of 20 words, and are given a later test to recall as many words from the list as possible. The IV is the amount of time between the encoding phase and the test phase, and termed Delay. Group 1 is given the memory test immediately after reading the word list. Group 2 is given the memory test 1 hour after reading the word list. Group 3 is given the memory test 2 hours after reading the word list. Each group is composed of 20 different subjects. The prediction is that memory recall performance should decrease with longer delays. Group 1 should perform better than Group 2. And Group 2 should perform better than Group 3.</p>
+<p>between-subjects design with 60 subjects</p>
+<p>設計一個記憶實驗,個體60個分成三組,受測者讀20個字的列表。然後分為馬上,1小時,2小時候默寫出來看到的字。
+預測是延遲愈久,正確率愈差
+DV是正確的字。
+IV是延遲的小時數。
+個體編號從1到60。</p>
 <p>The DV could be the number of words recalled, this number would range between 0 and 20. There are 20 subjects and 2 conditions, so the DV should have 60 observations. The variables for the DV, and Subjects and Delay factors can be constructed in a similar manner to the previous example. The major difference being that the Subjects factor will contain the numbers 1-60, reflecting the fact that 60 different subjects completed the experiment. The following code creates the complete data frame and runs the ANOVA.</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">
 Recall&lt;-c(rnorm(20,mean=17,sd=3),rnorm(20,mean=15,sd=3),rnorm(20,mean=12, sd=3))
@@ -1444,25 +1431,26 @@ AllData&lt;-data.frame(Subjects,Recall,Delay)
 ANOVAresults&lt;-aov(Recall~Delay, AllData)
 summary(ANOVAresults)
 #&gt;             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
-#&gt; Delay        2  298.0  148.98   20.64 1.81e-07 ***
-#&gt; Residuals   57  411.4    7.22                     
+#&gt; Delay        2  233.7  116.83   15.03 5.73e-06 ***
+#&gt; Residuals   57  443.1    7.77                     
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 model.tables(ANOVAresults,&quot;means&quot;)
 #&gt; Tables of means
 #&gt; Grand mean
 #&gt;          
-#&gt; 13.89419 
+#&gt; 14.70889 
 #&gt; 
 #&gt;  Delay 
 #&gt; Delay
 #&gt;     1Hour     2Hour Immediate 
-#&gt;    14.098    11.069    16.516
+#&gt;    14.962    12.175    16.989
 </code></pre>
 <h2 id="using-the-aov-function-for-within-or-between-subjects-designs">Using the aov function for within or between-subjects designs</h2>
 <p>The aov function is used for within, between and mixed design ANOVAs. The aov formula has the following syntax:</p>
-<p>aov(formula,dataframe)
-dataframe refers to the name of the variable containing the data. The formula parameter defines the nature of the ANOVA. Here are some examples of the formula for different single and multi-factor between subject designs. The term DV will refer the name of the dependent variable, and IV for the name of the independent variable.</p>
+<pre><code class="language-r">aov(formula,dataframe)
+</code></pre>
+<p>dataframe refers to the name of the variable containing the data. The formula parameter defines the nature of the ANOVA. Here are some examples of the formula for different single and multi-factor between subject designs. The term DV will refer the name of the dependent variable, and IV for the name of the independent variable.</p>
 <h3 id="between-subjects-anova-formulas">Between subjects ANOVA formulas</h3>
 <ul>
 <li>Single-factor design
@@ -1531,33 +1519,33 @@ AllData&lt;-data.frame(DV,IV1,IV2)
 ANOVAresults&lt;-aov(DV~IV1*IV2, AllData)
 summary(ANOVAresults)
 #&gt;             Df Sum Sq Mean Sq  F value Pr(&gt;F)    
-#&gt; IV1          1 792525  792525 8502.143 &lt;2e-16 ***
-#&gt; IV2          1 200700  200700 2153.089 &lt;2e-16 ***
-#&gt; IV1:IV2      1    134     134    1.443  0.233    
-#&gt; Residuals   76   7084      93                    
+#&gt; IV1          1 813999  813999 8849.953 &lt;2e-16 ***
+#&gt; IV2          1 207721  207721 2258.387 &lt;2e-16 ***
+#&gt; IV1:IV2      1      1       1    0.012  0.912    
+#&gt; Residuals   76   6990      92                    
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 model.tables(ANOVAresults,&quot;means&quot;)
 #&gt; Tables of means
 #&gt; Grand mean
 #&gt;          
-#&gt; 248.8962 
+#&gt; 251.0736 
 #&gt; 
 #&gt;  IV1 
 #&gt; IV1
 #&gt; level1 level2 
-#&gt;  149.4  348.4 
+#&gt;  150.2  351.9 
 #&gt; 
 #&gt;  IV2 
 #&gt; IV2
 #&gt; level1 level2 
-#&gt; 198.81 298.98 
+#&gt; 200.12 302.03 
 #&gt; 
 #&gt;  IV1:IV2 
 #&gt;         IV2
 #&gt; IV1      level1 level2
-#&gt;   level1  98.0  200.7 
-#&gt;   level2 299.6  397.2
+#&gt;   level1  99.1  201.3 
+#&gt;   level2 301.1  402.8
 </code></pre>
 <h3 id="2x2-within-subjects-designs">2x2 within subjects designs</h3>
 <p>The following code assumes 20 subjects participating in each condition. IV1 has two levels. IV2 has two levels.</p>
@@ -1571,47 +1559,47 @@ summary(ANOVAresults)
 #&gt; 
 #&gt; Error: Subjects
 #&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)
-#&gt; Residuals 19   2254   118.6               
+#&gt; Residuals 19   1659   87.31               
 #&gt; 
 #&gt; Error: Subjects:IV1
 #&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)    
-#&gt; IV1        1 753595  753595    6330 &lt;2e-16 ***
-#&gt; Residuals 19   2262     119                   
+#&gt; IV1        1 800034  800034    8449 &lt;2e-16 ***
+#&gt; Residuals 19   1799      95                   
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #&gt; 
 #&gt; Error: Subjects:IV2
 #&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)    
-#&gt; IV2        1 211097  211097    2574 &lt;2e-16 ***
-#&gt; Residuals 19   1558      82                   
+#&gt; IV2        1 195433  195433    2422 &lt;2e-16 ***
+#&gt; Residuals 19   1533      81                   
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #&gt; 
 #&gt; Error: Subjects:IV1:IV2
 #&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)
-#&gt; IV1:IV2    1    3.6    3.59   0.033  0.858
-#&gt; Residuals 19 2071.5  109.03
+#&gt; IV1:IV2    1    2.4    2.42   0.031  0.862
+#&gt; Residuals 19 1473.1   77.53
 model.tables(ANOVAresults,&quot;means&quot;)
 #&gt; Tables of means
 #&gt; Grand mean
-#&gt;          
-#&gt; 250.9521 
+#&gt;         
+#&gt; 248.966 
 #&gt; 
 #&gt;  IV1 
 #&gt; IV1
 #&gt; level1 level2 
-#&gt;  153.9  348.0 
+#&gt;    149    349 
 #&gt; 
 #&gt;  IV2 
 #&gt; IV2
 #&gt; level1 level2 
-#&gt; 199.58 302.32 
+#&gt; 199.54 298.39 
 #&gt; 
 #&gt;  IV1:IV2 
 #&gt;         IV2
 #&gt; IV1      level1 level2
-#&gt;   level1 102.7  205.1 
-#&gt;   level2 296.4  399.6
+#&gt;   level1  99.7  198.2 
+#&gt;   level2 299.4  398.6
 </code></pre>
 <h3 id="2x2-mixed-design-1-within-1-between">2x2 mixed design (1 within, 1 between)</h3>
 <p>The following code assumes 40 total subjects. 20 participate in each level of IVB, and all participate in each level of IVW. IVB has two levels, IVW has two levels</p>
@@ -1625,39 +1613,39 @@ summary(ANOVAresults)
 #&gt; 
 #&gt; Error: Subjects
 #&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)    
-#&gt; IVB        1 803558  803558    7620 &lt;2e-16 ***
-#&gt; Residuals 38   4007     105                   
+#&gt; IVB        1 800568  800568   10502 &lt;2e-16 ***
+#&gt; Residuals 38   2897      76                   
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #&gt; 
 #&gt; Error: Subjects:IVW
 #&gt;           Df Sum Sq Mean Sq  F value Pr(&gt;F)    
-#&gt; IVW        1 183146  183146 1244.440 &lt;2e-16 ***
-#&gt; IVB:IVW    1      2       2    0.017  0.897    
-#&gt; Residuals 38   5593     147                    
+#&gt; IVW        1 209711  209711 2072.414 &lt;2e-16 ***
+#&gt; IVB:IVW    1     73      73    0.722  0.401    
+#&gt; Residuals 38   3845     101                    
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 model.tables(ANOVAresults,&quot;means&quot;)
 #&gt; Tables of means
 #&gt; Grand mean
 #&gt;          
-#&gt; 250.7176 
+#&gt; 250.6973 
 #&gt; 
 #&gt;  IVB 
 #&gt; IVB
 #&gt; level1 level2 
-#&gt;  150.5  350.9 
+#&gt;  150.7  350.7 
 #&gt; 
 #&gt;  IVW 
 #&gt; IVW
 #&gt; level1 level2 
-#&gt; 202.87 298.56 
+#&gt;  199.5  301.9 
 #&gt; 
 #&gt;  IVB:IVW 
 #&gt;         IVW
 #&gt; IVB      level1 level2
-#&gt;   level1 102.5  198.5 
-#&gt;   level2 303.3  398.6
+#&gt;   level1 100.4  200.9 
+#&gt;   level2 298.6  402.9
 </code></pre>
 <h2 id="power-analysis-and-sample-size-planning-by-monte-carlo-simulation">Power analysis and sample-size planning by Monte Carlo simulation</h2>
 <p>The above code blocks show examples of simulating data in a few different designs, and then analyzing the simulated data with an ANOVA. By repeating this process many times for any given design, we can estimate statistical properties of the design that should hold over the long run. For example, how often does the design produce a ‘significant’ (p&lt;.05) effect? This can be estimated by running 1000s of independent simulations, computing and saving the p-value from each simulation, and then determining the proportion of p-values less than .05 from the distribution of simulated p-values. In principle, long-run expectations for any other statistic of a simulated design could be estimated in this way as well. In addition, design simulations can be constructed down to the level of individual trial data for individual subjects, which can aid in sample-size and cell-size planning. Some example monte-carlo simulations are presented below.</p>
@@ -1682,7 +1670,7 @@ hist(save_p)
 
 
 
-    <img src="simulation_1_files/figure-html/unnamed-chunk-24-1.png" class="figure-img w-100 "
+    <img src="simulation_1_files/figure-html/unnamed-chunk-21-1.png" class="figure-img w-100 "
          alt="figure"/> <figcaption class="figure-caption">
             figure
         </figcaption>
@@ -1692,7 +1680,7 @@ hist(save_p)
 
 proportion_sig&lt;-length(save_p[save_p&lt;.05])/sims_to_run
 proportion_sig
-#&gt; [1] 0.05
+#&gt; [1] 0.037
 </code></pre>
 <p>As expected, the histogram of simulated p-values is roughly uniform, indicating that all possible p-values are equally likely. In other words, chance would be expected to produce p&lt;.05 about 5% of the time. The calculated proportion of significant values was 0.043. In general, as the number of simulated runs increases toward infinity, the estimated parameter should settle on it’s true expected value.</p>
 <h3 id="monte-carlo-paired-t-test-simulation">Monte-Carlo paired T-test Simulation</h3>
@@ -1716,7 +1704,7 @@ hist(save_p)
 
 
 
-    <img src="simulation_1_files/figure-html/unnamed-chunk-25-1.png" class="figure-img w-100 "
+    <img src="simulation_1_files/figure-html/unnamed-chunk-22-1.png" class="figure-img w-100 "
          alt="figure"/> <figcaption class="figure-caption">
             figure
         </figcaption>
@@ -1726,7 +1714,7 @@ hist(save_p)
 
 proportion_sig&lt;-length(save_p[save_p&lt;.05])/sims_to_run
 proportion_sig
-#&gt; [1] 0.215
+#&gt; [1] 0.21
 </code></pre>
 <p>[1] 0.223</p>
 <p>The histogram of p-values is skewed left, so this design is more likely to produce p&lt;.05 than not, but the statistical power (or proportion of significant simulations) is only 0.223.</p>
@@ -1761,31 +1749,31 @@ kable(power_table)
 <tbody>
 <tr>
 <td style="text-align:right">25</td>
-<td style="text-align:right">0.211</td>
+<td style="text-align:right">0.226</td>
 </tr>
 <tr>
 <td style="text-align:right">50</td>
-<td style="text-align:right">0.369</td>
+<td style="text-align:right">0.360</td>
 </tr>
 <tr>
 <td style="text-align:right">75</td>
-<td style="text-align:right">0.517</td>
+<td style="text-align:right">0.509</td>
 </tr>
 <tr>
 <td style="text-align:right">100</td>
-<td style="text-align:right">0.636</td>
+<td style="text-align:right">0.640</td>
 </tr>
 <tr>
 <td style="text-align:right">125</td>
-<td style="text-align:right">0.732</td>
+<td style="text-align:right">0.745</td>
 </tr>
 <tr>
 <td style="text-align:right">150</td>
-<td style="text-align:right">0.795</td>
+<td style="text-align:right">0.809</td>
 </tr>
 <tr>
 <td style="text-align:right">175</td>
-<td style="text-align:right">0.881</td>
+<td style="text-align:right">0.891</td>
 </tr>
 <tr>
 <td style="text-align:right">200</td>
@@ -1830,7 +1818,7 @@ qplot(stroop_effects)+xlab(&quot;Simulated Stroop Effects&quot;)+geom_bar(fill=&
 
 
 
-    <img src="simulation_1_files/figure-html/unnamed-chunk-27-1.png" class="figure-img w-100 "
+    <img src="simulation_1_files/figure-html/unnamed-chunk-24-1.png" class="figure-img w-100 "
          alt="figure"/> <figcaption class="figure-caption">
             figure
         </figcaption>
@@ -1966,9 +1954,7 @@ kable(data.frame(n_trials,proportion_sig))
 
 
 
-
-
-<div  data-nopre class="table-responsive">
+<!--html_preserve--><div  data-nopre class="table-responsive kable">
 <table data-nopre class="w-50 m-auto">
 <thead data-nopre class="">
 <tr data-nopre>
@@ -1979,34 +1965,34 @@ kable(data.frame(n_trials,proportion_sig))
 </thead>
 <tbody data-nopre>
 <tr data-nopre>
-<td data-nopre style="text-align:right">103.36478</td>
+<td data-nopre style="text-align:right">106.22342</td>
 <td data-nopre style="text-align:left">level1</td>
 <td data-nopre style="text-align:left">level1</td>
 </tr>
 <tr data-nopre>
-<td data-nopre style="text-align:right">196.51718</td>
+<td data-nopre style="text-align:right">200.02755</td>
 <td data-nopre style="text-align:left">level1</td>
 <td data-nopre style="text-align:left">level2</td>
 </tr>
 <tr data-nopre>
-<td data-nopre style="text-align:right">305.92203</td>
+<td data-nopre style="text-align:right">289.55212</td>
 <td data-nopre style="text-align:left">level2</td>
 <td data-nopre style="text-align:left">level1</td>
 </tr>
 <tr data-nopre>
-<td data-nopre style="text-align:right">390.26036</td>
+<td data-nopre style="text-align:right">395.79800</td>
 <td data-nopre style="text-align:left">level2</td>
 <td data-nopre style="text-align:left">level2</td>
 </tr>
 <tr data-nopre>
-<td data-nopre style="text-align:right">92.85307</td>
+<td data-nopre style="text-align:right">96.66461</td>
 <td data-nopre style="text-align:left">level1</td>
 <td data-nopre style="text-align:left">level1</td>
 </tr>
 </tbody>
 </table>
 
-</div>
+</div><!--/html_preserve-->
 <p>The Subjects column refers to individual subjects in the data file. Each number corresponds to a unique subject. The IV1 column refers to the single independent variable or factor in this data file. There are three levels: Group1, Group2, and Group3. If you scroll down the lines of the data file you will see that subjects 1-20 are associated with Group1, subjects 21-40 are associated with Group2, and subjects 41-60 are associated with Group3. The final column DV stands for the dependent variable, and the numbers in this column represent mean values for each subject in each condition.</p>
 <h2 id="reading-data-into-r">Reading data into R</h2>
 <p>There are several ways to import data into R. We focus on using the read.table function (but see also scan). To use read.table you will need to tell R where it can find your data files. In R studio look at the bottom right panel, and find the “Files” tab. When you click on the “Files” tab you should see the current working directory. Use the file section to navigate to the folder on your computer that contains the data files. When you have succesfully done this you will see the data files listed in the bottom-right window. Now you want to set the current working directoy to this folder (that contains the data files). Choose the option “More”, listed underneath the “files” tab. You should see an option to “set as working directory”. Click this option. Now R will be able to find your data files.</p>
@@ -2017,8 +2003,8 @@ You should now see a variable called AllData appear in the workspace (top right 
 We have already used the aov function to conduct ANOVAs on our simulated data sets. The same function is used to anlayse data inputted into R. In this case, the data file that we have inputted is already structured in long-format, and R reads the data in as a dataframe object. So, to conduct the ANOVA we simply need to write the following:</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">summary(aov(DV~IV1,AllData))
 #&gt;             Df Sum Sq Mean Sq F value Pr(&gt;F)    
-#&gt; IV1          1 803558  803558   325.2 &lt;2e-16 ***
-#&gt; Residuals   78 192748    2471                   
+#&gt; IV1          1 800568  800568   288.4 &lt;2e-16 ***
+#&gt; Residuals   78 216526    2776                   
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 </code></pre>
@@ -2045,9 +2031,7 @@ We have already used the aov function to conduct ANOVAs on our simulated data se
 
 
 
-
-
-<div  data-nopre class="table-responsive">
+<!--html_preserve--><div  data-nopre class="table-responsive kable">
 <table data-nopre class="w-50 m-auto">
 <thead data-nopre class="">
 <tr data-nopre>
@@ -2058,28 +2042,28 @@ We have already used the aov function to conduct ANOVAs on our simulated data se
 <tbody data-nopre>
 <tr data-nopre>
 <td data-nopre style="text-align:left">level1</td>
-<td data-nopre style="text-align:right">150.4954</td>
+<td data-nopre style="text-align:right">150.6618</td>
 </tr>
 <tr data-nopre>
 <td data-nopre style="text-align:left">level2</td>
-<td data-nopre style="text-align:right">350.9397</td>
+<td data-nopre style="text-align:right">350.7328</td>
 </tr>
 </tbody>
 </table>
 
-</div>
+</div><!--/html_preserve-->
 It is worth pointing out that although the summary function does not immediately display the means for each condition, it does create a data structure that represents this information. And, the means can be found using model.tables in the following way.</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5">aovResults&lt;-aov(DV~IV1,AllData)
 print(model.tables(aovResults,&quot;means&quot;),digits=6)
 #&gt; Tables of means
 #&gt; Grand mean
 #&gt;          
-#&gt; 250.7176 
+#&gt; 250.6973 
 #&gt; 
 #&gt;  IV1 
 #&gt; IV1
 #&gt;  level1  level2 
-#&gt; 150.495 350.940
+#&gt; 150.662 350.733
 </code></pre>
 <p>We see that the mean for Group 1 is numerically smaller than the mean for Group 2, which is numerically smaller than the mean for Group 3. We can conclude, based on the ANOVA, that the largest and smallest means are different from each other, so we know that the mean for Group 1 was significantly smaller than the mean for Group 3. We need to perform a follow-up t-test to determine whether Group 1 is different from Group 2, and yet another test to determine if Group 2 is different from Group 3.</p>
 <p>The design is between-subjects, so the appropriate t-test is an independent samples t-test. We can conduct this test comparing groups 1 and 2 using the t.test function as follows:</p>
@@ -2114,16 +2098,16 @@ kable(xtable(aov.out),format='markdown')
 <tr>
 <td style="text-align:left">IV1</td>
 <td style="text-align:right">1</td>
-<td style="text-align:right">803558.0</td>
-<td style="text-align:right">803557.970</td>
-<td style="text-align:right">325.1783</td>
+<td style="text-align:right">800567.7</td>
+<td style="text-align:right">800567.691</td>
+<td style="text-align:right">288.3919</td>
 <td style="text-align:right">0</td>
 </tr>
 <tr>
 <td style="text-align:left">Residuals</td>
 <td style="text-align:right">78</td>
-<td style="text-align:right">192748.2</td>
-<td style="text-align:right">2471.131</td>
+<td style="text-align:right">216525.8</td>
+<td style="text-align:right">2775.971</td>
 <td style="text-align:right">NA</td>
 <td style="text-align:right">NA</td>
 </tr>
@@ -2170,8 +2154,8 @@ kable(tidy(t.test(DV~IV1,AllData[AllData$IV1!=&quot;Group1&quot;,], paired=TRUE)
 <h3 id="writing-up-the-results">Writing up the results</h3>
 <p>The preceding section covered the steps of loading a data-file into R. The data-file was for a single-factor between subjects design with 3 levels, and 20 subjects per level. An ANOVA revealed a significant effect, and the post-hoc t-tests showed that the only significant result was between Group 1 and 2. With all of this information in hand it is now possible to write-up a complete results section for this analysis. Here is an example:</p>
 <p>Mean reaction times for each subject in each condition were submitted to a one-way ANOVA. The main effect of group was significant, F(2,57) = 4.405, MSE = 11552, p&lt;.016. The mean reaction times were 490 ms, 555 ms, and 589 ms, for groups one, two, and three, respectively. Follow-up comparisons showed that group one was not significantly different from group two, t(38)=1.876, p=.068. Similarly, group 2 was not significantly different from group 3, t(38)=1.086, p=.284.</p>
-<p>5.12 Running a between subjects ANOVA for a 2x2 Factorial design
-The data file 2x2Factorial_Between.txt contains simulated data for a classic memory experiment performed by Godden &amp; Baddeley (1975). The purpose of their experiment was to test the role of contextual information in guiding memory retrieval. They had different groups of subjects encode a list of words for a later memory test in one of two contexts, either on land or under water (the subjects were expert divers). Thus, the first IV was encoding context (land vs. water). In a later memory test the subjects were asked to recall as many words as possible from the list. For the subjects who encoded the words in the land context, half of the subjects performed the recall test on land, and half performed under water. The same was true for the subjects who encoded the words in the under water context. Thus, the second IV was the context of the memory test (Land vs. Water). The purpose of the experiment was to determine whether memory performance would be better when the encoding and test contexts matched (e.g., encoded and tested on land, or encoded and tested under water), compared to when the encoding and test contexts mismathced (e.g., encoded on land but tested under water, or encoded under water but tested on land).</p>
+<h2 id="running-a-between-subjects-anova-for-a-2x2-factorial-design">Running a between subjects ANOVA for a 2x2 Factorial design</h2>
+<p>The data file 2x2Factorial_Between.txt contains simulated data for a classic memory experiment performed by Godden &amp; Baddeley (1975). The purpose of their experiment was to test the role of contextual information in guiding memory retrieval. They had different groups of subjects encode a list of words for a later memory test in one of two contexts, either on land or under water (the subjects were expert divers). Thus, the first IV was encoding context (land vs. water). In a later memory test the subjects were asked to recall as many words as possible from the list. For the subjects who encoded the words in the land context, half of the subjects performed the recall test on land, and half performed under water. The same was true for the subjects who encoded the words in the under water context. Thus, the second IV was the context of the memory test (Land vs. Water). The purpose of the experiment was to determine whether memory performance would be better when the encoding and test contexts matched (e.g., encoded and tested on land, or encoded and tested under water), compared to when the encoding and test contexts mismathced (e.g., encoded on land but tested under water, or encoded under water but tested on land).</p>
 <p>The file contains simulated data for 80 subjects. There were four total conditions, and twenty subjects completed each condition. For example, 20 subjects encoded on land and tested on land, 20 subjects encoded on land and tested under water, 20 subjects encoded on land tested under water, and 20 subjects encoded under water and tested under water. The design can be described as a 2 (Encoding context: land vs. water) x 2 (Testing context: land vs. water) between subjects experiment. The dependent variable was proportion of words correctly recalled. The proportion ranges from 0 (no words recalled) to 1 (all words correctly recalled).</p>
 <p>Let’s load the data file into R, then perform the necessary statistical tests to interpret the results. The final product will be a complete results section.</p>
 <p>Load the data into R</p>
@@ -2210,81 +2194,52 @@ Perform a 2x2 ANOVA Note: Accuracy is the name of the column in the data file re
 <p>The preceding section produced ANOVA results for a 2x2 between-subjects design, and means for each main effect and interaction, as well as follow-up tests to explain the significant interaction. With all of this information in place it is possible to write-up a complete results section. Here is an example:</p>
 <p>The mean proportions of correctly recalled words for each subject in each condition were submitted to a 2 (encoding context: land vs. water) x 2 (test context: land vs. water) between-subjects ANOVA. The main effect of encoding context was not significant, F&lt;1. The main effect of test context not significant, F(1,76) = 1.190, MSE = .011, p = .279. The two-way interaction between encoding and test context was significant, F(1,76) = 73.495, MSE = .011, p &lt; .001 . Planned comparisons showed that for participants who encoded words on land, proportion recall was higher when they tested on land (.83) than under water (.61), t(38) = 7.00, p&lt; .001. Similarly, for participants who encoded words under water, proportion recall was higher when they tested under water (.79) than on land (.60), t(38) = 5.23, p&lt; .001.</p>
 <p>Note: The above results section is written with a few guidelines in mind. When a result is not significant some authors decide to simply state that the result was not significant. Some journals may require the author to fully report the F-value, the MSE, and the p-value for all non-significant effects. In the above example, the full report is not given for the first non-significant effect because the F-value was less than 1. In this case, it is often appropriate to simply report that F was less than one. Also notice that the means for the nonsignificant effects were not given. Some journals may require that these means are listed. At the very least it is important that all of the important means can be reconstructed. In this case, the four means from the interaction effect are individually listed; thus, it is is possible for the reader to reconstruct the means for both of the main effects.</p>
-<p>5.13 Practice Problems
-5.13.1 Single factor design with a within-subjects factor
-The datafile is titled SingleFactor_Within.txt</p>
+<h2 id="practice-problems">Practice Problems</h2>
+<h3 id="single-factor-design-with-a-within-subjects-factor">Single factor design with a within-subjects factor</h3>
+<p>The datafile is titled SingleFactor_Within.txt</p>
 <p>The data file contains simulated data for 20 subjects in a sequence learning task. The dependent variable is ReactionTime. The single independent variable is called Practice, and it has four levels, 1, 2, 3, and 4. Each level represents four different blocks of practicing the sequence. The general prediction is that reaction time should decrease across the four practice blocks. Use R to load the data file and conduct a repeated-measures ANOVA, compute the means for each of the practice blocks, and conduct the necessary paired-samples t-tests. Then write a complete results section for the example data.</p>
 <p>To get you started the necessary R commands are listed below</p>
-<p>AllData&lt;-read.table(&quot;RFiles/SingleFactor_Within.txt&quot;,header=TRUE,sep=&quot;\t&quot;)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">
+AllData&lt;-read.table(&quot;RFiles/SingleFactor_Within.txt&quot;,header=TRUE,sep=&quot;\t&quot;)
 summary(aov(ReactionTime~Practice + Error(as.character(Subjects)/Practice),AllData))
 aggregate(ReactionTime~Practice,AllData,mean)
 t.test(AllData[AllData$Practice==&quot;Block1&quot;,]$ReactionTime,AllData[AllData$Practice==&quot;Block2&quot;,]$ReactionTime, paired=TRUE,var.equal=TRUE)
-note: for the t-test, change the terms Block1 and Block2 to make other comparisons (e.g., Block3 or Block4).</p>
-<p>5.13.2 2x2 within-subjects design
-The datafile is titled 2x2Factorial_Within.txt</p>
+note: for the t-test, change the terms Block1 and Block2 to make other comparisons (e.g., Block3 or Block4).
+#&gt; Error: &lt;text&gt;:6:11: 未預期的符號
+#&gt; 5: t.test(AllData[AllData$Practice==&quot;Block1&quot;,]$ReactionTime,AllData[AllData$Practice==&quot;Block2&quot;,]$ReactionTime, paired=TRUE,var.equal=TRUE)
+#&gt; 6: note: for the
+#&gt;              ^
+</code></pre>
+<h3 id="2x2-within-subjects-design">2x2 within-subjects design</h3>
+<p>The datafile is titled 2x2Factorial_Within.txt</p>
 <p>The data file contains simulated for 20 subjects in a Stroop task. In a Stroop task, participants are presented with color words printed in congruent or incongruent ink-colors. For example, the word blue printed in BLUE color is a congruent item. The word red printed in BLUE is an incongruent item. In the standard task, participants are instructed to identify the ink-color and ignore the word. Typically, reactions are faster for congruent than incongruent items. In this experiment, participants completed the Stroop task with two different instructions. In one phase they were presented with congruent and incongruent items, and were told to identify the ink-color and ignore the word, this is called the NameColor condition. In the other phase, participants were presented with congruent and incongruent items, and were told to identify the word and ignore the ink-color, this is called the NameWord condition. The predictions are that RTs should generally be faster for congruent than incongruent trials. Also, RTs should generally be faster for the word naming task than the color naming task. Finally, there should be an interaction between congruency and task, such that the Stroop effect (difference between incongruent and congruent items) is larger for the name color task than the name word task.</p>
 <p>There are two IVS. The first IV is Congruency, with the levels Congruent and Incongruent. The second IV is Task, with the levels NameColor and and Name Word. The DV is ReactionTime. Use R to load the data file, then conduct a repeated-measures ANOVA, compute the means for each of the main effects and the interaction, and conduct any necessary paired-sample t-tests. Then write a complete results section for the example data.</p>
 <p>To get you started here are the neccessary R commands:</p>
-<p>AllData&lt;-read.table(&quot;RFiles/2x2Factorial_Within.txt&quot;,header=TRUE,sep=&quot;\t&quot;)
-summary(aov(ReactionTime~Task<em>Congruency + Error(as.character(Subjects)/(Task</em>Congruency)),AllData))
-You can also put the results of the aov into a variable</p>
-<p>aovResult&lt;-aov(ReactionTime~Task<em>Congruency + Error(as.character(Subjects)/(Task</em>Congruency)),AllData)
-Then you can print all of the means for the main effects and interactions using the following:</p>
-<p>model.tables(aovResult,&quot;means&quot;) 
-5.14 Loading raw-data into R
-Using R to analyze the results from real experiments requires that raw data-files are loaded into R and then transformed into a long-format data frame. Depending on how the raw data is formatted this process can be fairly straightforward, or not. The following provides an example of how to load multiple subjects data files into R and then complete an analysis. The example is taken from a Stroop experiment conducted in PsychoPy. Each subject’s data file is saved as separate .csv files (comma separated value). Each .csv file contains the raw data from a 24 trial Stroop experiment with 12 congruent and 12 incongruent items. The data files are already organized in long-format. The first row contains the columns headers, and each remaining row contains the raw data for each trial. The data files are named Subject1.csv, Subject2.csv, and so on.</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">AllData&lt;-read.table(&quot;RFiles/2x2Factorial_Within.txt&quot;,header=TRUE,sep=&quot;\t&quot;)
+summary(aov(ReactionTime~Task*Congruency + Error(as.character(Subjects)/(Task*Congruency)),AllData))
+</code></pre>
+<p>You can also put the results of the aov into a variable</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">aovResult&lt;-aov(ReactionTime~Task*Congruency + Error(as.character(Subjects)/(Task*Congruency)),AllData)
+</code></pre>
+<p>Then you can print all of the means for the main effects and interactions using the following:</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">model.tables(aovResult,&quot;means&quot;) 
+</code></pre>
+<h2 id="loading-raw-data-into-r">Loading raw-data into R</h2>
+<p>Using R to analyze the results from real experiments requires that raw data-files are loaded into R and then transformed into a long-format data frame. Depending on how the raw data is formatted this process can be fairly straightforward, or not. The following provides an example of how to load multiple subjects data files into R and then complete an analysis. The example is taken from a Stroop experiment conducted in PsychoPy. Each subject’s data file is saved as separate .csv files (comma separated value). Each .csv file contains the raw data from a 24 trial Stroop experiment with 12 congruent and 12 incongruent items. The data files are already organized in long-format. The first row contains the columns headers, and each remaining row contains the raw data for each trial. The data files are named Subject1.csv, Subject2.csv, and so on.</p>
 <p>The following read.table will load a single file into a datafram. However, the working directory must first be set to the location of the file.</p>
-<p>Subject1&lt;-read.table(&quot;RFiles/PsychoPyStroop.csv&quot;,header=TRUE,sep=&quot;,&quot;)
-The ultimate goal here is to load in all 8 subjects worth of data into a single dataframe. This is done using a for loop in R.</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">fnames&lt;-c(&quot;RFiles/Subject1.csv&quot;,&quot;RFiles/Subject2.csv&quot;,&quot;RFiles/Subject3.csv&quot;,&quot;RFiles/Subject4.csv&quot;,&quot;RFiles/Subject5.csv&quot;,&quot;RFiles/Subject6.csv&quot;,&quot;RFiles/Subject7.csv&quot;,&quot;RFiles/Subject8.csv&quot;)
+<pre><code class="language-r?preclass=.ms-5.w-75">Subject1&lt;-read.table(&quot;RFiles/PsychoPyStroop.csv&quot;,header=TRUE,sep=&quot;,&quot;)
+</code></pre>
+<p>The ultimate goal here is to load in all 8 subjects worth of data into a single dataframe. This is done using a for loop in R.</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">fnames&lt;-c(&quot;RFiles/Subject1.csv&quot;,&quot;RFiles/Subject2.csv&quot;,&quot;RFiles/Subject3.csv&quot;,&quot;RFiles/Subject4.csv&quot;,&quot;RFiles/Subject5.csv&quot;,&quot;RFiles/Subject6.csv&quot;,&quot;RFiles/Subject7.csv&quot;,&quot;RFiles/Subject8.csv&quot;)
 AllSubjectData&lt;-data.frame()
 for (i in 1:length(fnames)){
   SubjectData&lt;-read.table(fnames[i],header=TRUE,sep=&quot;,&quot;)
   AllSubjectData&lt;-rbind(AllSubjectData,SubjectData)
 }
-#&gt; Warning in file(file, &quot;rt&quot;): 無法開啟檔案 'RFiles/Subject1.csv' ：No such file or directory
-#&gt; Error in file(file, &quot;rt&quot;): 無法開啟連接
 CongruencyMeans&lt;-aggregate(KeypressTime.rt~participant*congruency,data=AllSubjectData,mean)
-#&gt; Error in eval(predvars, data, env): 找不到物件 'KeypressTime.rt'
 ANOVAresults&lt;-aov(KeypressTime.rt~factor(congruency) + Error(as.character(participant)/factor(congruency)),CongruencyMeans)
-#&gt; Error in terms.formula(formula, &quot;Error&quot;, data = data): 找不到物件 'CongruencyMeans'
 summary(ANOVAresults)
-#&gt; 
-#&gt; Error: Subjects
-#&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)    
-#&gt; IVB        1 803558  803558    7620 &lt;2e-16 ***
-#&gt; Residuals 38   4007     105                   
-#&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-#&gt; 
-#&gt; Error: Subjects:IVW
-#&gt;           Df Sum Sq Mean Sq  F value Pr(&gt;F)    
-#&gt; IVW        1 183146  183146 1244.440 &lt;2e-16 ***
-#&gt; IVB:IVW    1      2       2    0.017  0.897    
-#&gt; Residuals 38   5593     147                    
-#&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 model.tables(ANOVAresults,&quot;means&quot;)
-#&gt; Tables of means
-#&gt; Grand mean
-#&gt;          
-#&gt; 250.7176 
-#&gt; 
-#&gt;  IVB 
-#&gt; IVB
-#&gt; level1 level2 
-#&gt;  150.5  350.9 
-#&gt; 
-#&gt;  IVW 
-#&gt; IVW
-#&gt; level1 level2 
-#&gt; 202.87 298.56 
-#&gt; 
-#&gt;  IVB:IVW 
-#&gt;         IVW
-#&gt; IVB      level1 level2
-#&gt;   level1 102.5  198.5 
-#&gt;   level2 303.3  398.6
 </code></pre>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
@@ -2313,8 +2268,8 @@ model.tables(ANOVAresults,&quot;means&quot;)
     </div>
 </div>
 
-<link href="../../css/quicknote.css?1634793271" rel="stylesheet">
-<script src="../../js/quicknote.js?1634793271"></script>
+<link href="../../css/quicknote.css?1635398991" rel="stylesheet">
+<script src="../../js/quicknote.js?1635398991"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -2332,7 +2287,7 @@ model.tables(ANOVAresults,&quot;means&quot;)
           
 
   
-<script src="../../js/packhtml.js?1634793271"></script>    
+<script src="../../js/packhtml.js?1635398991"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -2342,25 +2297,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../../js/featherlight.min.js?1634793271"></script>
-  <script src="../../js/featherlight.gallery.min.js?1634793271"></script>
-  <link href="../../css/featherlight.min.css?1634793271" rel="stylesheet">
-  <link href="../../css/featherlight.gallery.min.css?1634793271" rel="stylesheet">
+  <script src="../../js/featherlight.min.js?1635398991"></script>
+  <script src="../../js/featherlight.gallery.min.js?1635398991"></script>
+  <link href="../../css/featherlight.min.css?1635398991" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1635398991" rel="stylesheet">
 
-  <script src="../../js/highlight.pack.js?1634793271"></script>
+  <script src="../../js/highlight.pack.js?1635398991"></script>
   
-  <script src="../../js/hugohelper.js?1634793271"></script>
+  <script src="../../js/hugohelper.js?1635398991"></script>
 
-  <link href="../../css/rmd.css?1634793271" rel="stylesheet">
-  <link href="../../css/mystyle.css?1634793271" rel="stylesheet">    
-  <script src='../../js/variant.js?1634793271'></script>
+  <link href="../../css/rmd.css?1635398991" rel="stylesheet">
+  <link href="../../css/mystyle.css?1635398991" rel="stylesheet">    
+  <script src='../../js/variant.js?1635398991'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../../js/localsearch.js?1634793271'></script>
+<script src='../../js/localsearch.js?1635398991'></script>
     
 
 

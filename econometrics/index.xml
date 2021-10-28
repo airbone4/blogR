@@ -42,5 +42,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>lmm</title>
+      <link>/econometrics/lmm.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/econometrics/lmm.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statatest</title>
+      <link>/econometrics/statatest.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/econometrics/statatest.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>備忘錄</title>
+      <link>/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

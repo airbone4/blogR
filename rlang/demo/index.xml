@@ -24,8 +24,8 @@ new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) )predict(model, newdata 
       
       <guid>/rlang/demo/citation.html</guid>
       <description>introduction Goal: Estimate the effect of the price per citation on the number of library subscriptions
-Journals.csv &amp;lt;ol class=&amp;quot;attachments-files&amp;quot;&amp;gt;&amp;lt;li&amp;gt;&amp;lt;a id=&amp;quot;f_0a6a004dccc39cd502246d648eb99b09&amp;quot; href=&amp;quot;/rlang/resources/Journals.csv&amp;quot; class=&amp;quot;toa-item&amp;quot; &amp;gt;Journals.csv&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt; initial options(prompt = &amp;quot;R&amp;gt; &amp;quot;, continue = &amp;quot;+ &amp;quot;, width = 64, digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE) library(&amp;quot;AER&amp;quot;) set.seed(1071)
-library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt; 載入需要的套件：carData#&amp;gt; 載入需要的套件：lmtest#&amp;gt; 載入需要的套件：zoo#&amp;gt; #&amp;gt; 載入套件：&#39;zoo&#39;#&amp;gt; 下列物件被遮斷自 &#39;package:base&#39;:#&amp;gt; #&amp;gt; as.Date, as.</description>
+ &amp;lt;label&amp;gt;&amp;lt;i class=&amp;quot;fas fa-paperclip&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Journals.csv&amp;lt;/label&amp;gt;&amp;lt;ol class=&amp;quot;attachments-files&amp;quot;&amp;gt;&amp;lt;li&amp;gt;&amp;lt;a id=&amp;quot;f_0a6a004dccc39cd502246d648eb99b09&amp;quot; href=&amp;quot;/rlang/resources/Journals.csv&amp;quot; class=&amp;quot;toa-item&amp;quot; &amp;gt;Journals.csv&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt; initial options(prompt = &amp;quot;R&amp;gt; &amp;quot;, continue = &amp;quot;+ &amp;quot;, width = 64, digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE) library(&amp;quot;AER&amp;quot;) set.seed(1071)
+library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt; 載入需要的套件：carData#&amp;gt; 載入需要的套件：lmtest#&amp;gt; 載入需要的套件：zoo#&amp;gt; #&amp;gt; 載入套件：&#39;zoo&#39;#&amp;gt; 下列物件被遮斷自 &#39;package:base&#39;:#&amp;gt; #&amp;gt; as.</description>
     </item>
     
   </channel>

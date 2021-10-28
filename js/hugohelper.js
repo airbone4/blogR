@@ -91,11 +91,17 @@ function hugo_unescape3(html) {
 }
 
 
-
-
 function htmlUnescape(str){
+    //re = /(<!--html_preserve-->)((\s|\S)*?)(?:^\1|<!--\/html_preserve-->)/g;
+    re = /(&lt;!--html_preserve--&gt;)((\s|\S)*?)(?:^\1|&lt;!--\/html_preserve--&gt;)/g
+    str=str.replace(re,(m)=>htmlUnescape_ok(m))
+    return( str);
+    
+}
+
+function htmlUnescape_ok(str){
   var map = {amp: '&', lt: '<', gt: '>', quot: '"', '#039': "'"}
-str = str.replace(/&([^;]+);/g, (m, c) => map[c])
+str = str.replaceAll(/&([^;]+);/g, (m, c) => map[c])
 return( str);
 }
 
@@ -157,7 +163,7 @@ function hugo_unescape(str){
   area.innerHTML=htmlstr;
   //area=temparea.querySelector("code") 
   // 1) 這裡利用outerHTML和innerHTML找出頭尾標籤的開始和結束位置。
-  // 2) 然後利用這些位置，區分這個區域的字串為是否要處理
+  // 2) 然後利用這些位置，區分這個區域的字串為是否要處理成HTML
   let npblock = Array.from(area.querySelectorAll("[data-nopre]"))
   let pairs = [];
   oheadidx=0
@@ -213,7 +219,9 @@ function hugo_unescape(str){
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  
+  //這個函數的功能有2
+  // 1) 處理pre 區塊屬性,利用分解問號達成
+  // 2) 打光
   //var list = document.querySelectorAll("pre code");
   
   var list = document.querySelectorAll("pre:not(.chroma) code");
@@ -255,9 +263,9 @@ prechunks=Array.from(document.querySelectorAll("pre code:not(.language-html)"));
   prechunks.forEach(apre=>{
     {
       precode = apre.querySelector("code")
-      s=hugo_unescape(precode.innerHTML)
-      //s=s.replace(RegExp("hugocmd.*\\n.*\#>","gm"),"")
-      s=s.replace(RegExp("\\n?hugocmd.*?\\n\#(>|&gt;)","gm"),"")
+      //s=hugo_unescape(precode.innerHTML)
+      s=htmlUnescape(precode.innerHTML)
+      s=s.replace(RegExp("\\n?hugocmd.*?\\n\#(>|&gt;)","gm"),"") //殺掉指令hugocmd,有需要這個嗎?好像已經不需要了,stata可能需要
       
       precode.innerHTML=s
       

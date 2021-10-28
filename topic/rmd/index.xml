@@ -57,6 +57,15 @@ _bookdown.yml: book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp
     </item>
     
     <item>
+      <title>21_roxygen</title>
+      <link>/topic/rmd/21_roxygen.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/21_roxygen.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>5 rmd topic 1</title>
       <link>/topic/rmd/05_rmd_topic_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

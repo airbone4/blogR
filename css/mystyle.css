@@ -201,9 +201,10 @@ h2,h3,h4,h5,h6 {
     }
     
 h3 {
-/* font-size: 1.5rem; */
-font-weight:600;
-margin: 32px 0px 8px 0px;
+font-size: 1.5rem; 
+font-weight:400;
+margin: 24px 0px 16px 0px;
+color: #0a58ca!important;
 }
 
 h2 {
@@ -408,4 +409,7 @@ div.sidebar, div.base {
 
 .file-tree li:last-child::before {
   content: '\2514\2500\2500\0020';
+}
+.tooltiptext code{
+  background-color: #001dffd4;
 }

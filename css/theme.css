@@ -373,7 +373,9 @@ ol.attachments-files{
     color:unset;
  }
 
-
+div.kable td{
+  width:1%;
+}
  
 
 hr {
@@ -420,7 +422,15 @@ pre {
     overflow:hidden;
     min-width:75%;
   }
-pre code.hljs {
+  pre code{
+    background: #282c34; 
+    white-space: inherit; 
+    margin: 0;
+    display:block;
+    overflow:inherit;
+    width:100%;
+  } 
+ pre code.hljs {
       /*color: inherit;
       background: inherit;*/ /*mytag:1 原先這是為了變換theme*/
       white-space: inherit; 

@@ -46,7 +46,10 @@ The script is converted to Rmd through knitr::spin(); then rmarkdown::render() w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/2_3_data_explorer.html</guid>
-      <description>age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group) 分組列出summary:利用函數 age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group)mygroup&amp;lt;-function(df,g,idx){ft&amp;lt;-factor(df$g)gf&amp;lt;-ft==levels(ft)[idx] # 第一組g1&amp;lt;-df[gf,]return(g1) }x&amp;lt;-mygroup(dframe,&amp;quot;group&amp;quot;,1) 問題： 現在把某個欄位依據分組畫出boxplot A:age B:group(1,2) 不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na， 最後 boxplot(mtx)</description>
+      <description>目的 練習撰寫函數,利用data.frame,levels,factor
+練習問題 從現有資料集中, 分出各組資料。
+💡可以使用管道方式,比較簡潔。
+age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group) 分組列出summary:利用自己的函數 age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group)mygroup&amp;lt;-function(df,g,idx){ft&amp;lt;-factor(df$g)gf&amp;lt;-ft==levels(ft)[idx] # 第一組g1&amp;lt;-df[gf,]return(g1) }x&amp;lt;-mygroup(dframe,&amp;quot;group&amp;quot;,1) 問題： 現在把某個欄位依據分組畫出boxplot A:age B:group(1,2) 不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na， 最後 boxplot(mtx)</description>
     </item>
     
     <item>
@@ -72,16 +75,6 @@ strtrim accepts both a vector of strings and a vector of truncation positions.
     </item>
     
     <item>
-      <title>4.6 topic data frame</title>
-      <link>/rlang/4_6_topic_dataframe.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/4_6_topic_dataframe.html</guid>
-      <description>Bootstrap method for mixed-model 
-b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取樣boot.data &amp;lt;-dataset[, .SD[sample(.N, min(.N,200), replace = FALSE)],by = list(ZONE8, Year)]# 用boot.data來跑GLMMboot.logit &amp;lt;-glmer(Count.F ~ Year.s + (0 + Year.s|ZONE8),data = boot.data,family = poisson)# 輸出斜率與截距，輸出到 b.coef 裡面b.coef[[i]] &amp;lt;- fixef(boot.logit)}b.coef &amp;lt;- do.call(rbind, b.coef) %&amp;gt;% data.table L3 &amp;lt;- LETTERS[1:3]fac &amp;lt;- sample(L3, 10, replace = TRUE)(d &amp;lt;- data.</description>
-    </item>
-    
-    <item>
       <title>1.2 檔案系統</title>
       <link>/rlang/1_2_filesystem.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -91,20 +84,6 @@ b.coef &amp;lt;- list()for (i in 1:1000){ # 1:1000 = 執行1000次# 隨機取�
 利用函數 file.path()合成檔案路徑，其分隔是斜線,而不是反斜線 (例如for example C:/Program Files/R/R-3.5.1)?
 路徑分解  dirname() :分解路徑用，例如＂c:/temp/text.txt&amp;quot; 得到&amp;quot;c:/temp&amp;quot;，但是&amp;quot;c:/temp/&amp;quot;,&amp;quot;c:/temp&amp;quot;, &amp;quot;c:/temp.txt&amp;quot;都得到&amp;quot;c:/&amp;quot;。😒🏷有時候有後綴&amp;quot;/&amp;quot;,有時候沒有 basename()  dirname(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;c:/temp&amp;quot;basename(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;demo.txt&amp;quot;dirname(&amp;quot;c:/temp/&amp;quot;) #🏷👏沒有正確拿出DIR#&amp;gt; [1] &amp;quot;c:/&amp;quot;dirname(&amp;quot;c:/temp&amp;quot;) #🏷👏沒有正確拿出DIR#&amp;gt; [1] &amp;quot;c:/&amp;quot; 檔案系統相關操作  dir():包括資料夾、檔案名稱 list.files() : 僅檔案 list.dirs():僅資料夾  判別是否目標檔案或資料夾已經存在(我們不希望刪除或更動已經存在的檔案):
   file.</description>
-    </item>
-    
-    <item>
-      <title>7.8 Function more</title>
-      <link>/rlang/7_8_function_2.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/7_8_function_2.html</guid>
-      <description>Introduction 簡單測試
-Quiz Answer the following questions to see if you can safely skip this chapter. You can find the answers in function-answer.
-  What are the three components of a function?
-  What does the following code return?
-x &amp;lt;- 10f1 &amp;lt;- function(x) {function() {x + 10}}f1(1)()   How would you usually write this code?
-`+`(1, `*`(2, 3))   How could you make this call easier to read?</description>
     </item>
     
     <item>
@@ -197,15 +176,6 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
-      <title>檔案系統</title>
-      <link>/rlang/hw/hw_filesystem.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/hw/hw_filesystem.html</guid>
-      <description>❓ 1  要知道目前有哪些套件  View 列表(datatable) 寫入檔案(3個欄位,套件名稱、套件路徑和套件版本,按照名稱排序) 如果不要row.names,而且欄位名稱是中文。   分析  主要版本第2版的有幾個,有哪些? 平均每個套件有幾個檔案?    pkgs&amp;lt;-installed.packages()str(pkgs) #&amp;gt; chr [1:206, 1:16] &amp;quot;abind&amp;quot; &amp;quot;AER&amp;quot; &amp;quot;askpass&amp;quot; &amp;quot;assertthat&amp;quot; &amp;quot;babynames&amp;quot; ...#&amp;gt; - attr(*, &amp;quot;dimnames&amp;quot;)=List of 2#&amp;gt; ..$ : chr [1:206] &amp;quot;abind&amp;quot; &amp;quot;AER&amp;quot; &amp;quot;askpass&amp;quot; &amp;quot;assertthat&amp;quot; ...#&amp;gt; ..$ : chr [1:16] &amp;quot;Package&amp;quot; &amp;quot;LibPath&amp;quot; &amp;quot;Version&amp;quot; &amp;quot;Priority&amp;quot; .</description>
-    </item>
-    
-    <item>
       <title>predict</title>
       <link>/rlang/demo/car.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -223,18 +193,17 @@ new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) )predict(model, newdata 
       
       <guid>/rlang/demo/citation.html</guid>
       <description>introduction Goal: Estimate the effect of the price per citation on the number of library subscriptions
-Journals.csv &amp;lt;ol class=&amp;quot;attachments-files&amp;quot;&amp;gt;&amp;lt;li&amp;gt;&amp;lt;a id=&amp;quot;f_0a6a004dccc39cd502246d648eb99b09&amp;quot; href=&amp;quot;/rlang/resources/Journals.csv&amp;quot; class=&amp;quot;toa-item&amp;quot; &amp;gt;Journals.csv&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt; initial options(prompt = &amp;quot;R&amp;gt; &amp;quot;, continue = &amp;quot;+ &amp;quot;, width = 64, digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE) library(&amp;quot;AER&amp;quot;) set.seed(1071)
-library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt; 載入需要的套件：carData#&amp;gt; 載入需要的套件：lmtest#&amp;gt; 載入需要的套件：zoo#&amp;gt; #&amp;gt; 載入套件：&#39;zoo&#39;#&amp;gt; 下列物件被遮斷自 &#39;package:base&#39;:#&amp;gt; #&amp;gt; as.Date, as.</description>
+ &amp;lt;label&amp;gt;&amp;lt;i class=&amp;quot;fas fa-paperclip&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;Journals.csv&amp;lt;/label&amp;gt;&amp;lt;ol class=&amp;quot;attachments-files&amp;quot;&amp;gt;&amp;lt;li&amp;gt;&amp;lt;a id=&amp;quot;f_0a6a004dccc39cd502246d648eb99b09&amp;quot; href=&amp;quot;/rlang/resources/Journals.csv&amp;quot; class=&amp;quot;toa-item&amp;quot; &amp;gt;Journals.csv&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt; initial options(prompt = &amp;quot;R&amp;gt; &amp;quot;, continue = &amp;quot;+ &amp;quot;, width = 64, digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE) library(&amp;quot;AER&amp;quot;) set.seed(1071)
+library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt; 載入需要的套件：carData#&amp;gt; 載入需要的套件：lmtest#&amp;gt; 載入需要的套件：zoo#&amp;gt; #&amp;gt; 載入套件：&#39;zoo&#39;#&amp;gt; 下列物件被遮斷自 &#39;package:base&#39;:#&amp;gt; #&amp;gt; as.</description>
     </item>
     
     <item>
-      <title>Inverse Transform Sampling</title>
-      <link>/topic/simulation/xx.html</link>
-      <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
+      <title>0. 測試工具</title>
+      <link>/topic/test/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/simulation/xx.html</guid>
-      <description>Pre-requisites This document assumes basic familiarity with probability theory.
-Overview Inverse transform sampling is a method for generating random numbers from any probability distribution by using its inverse cumulative distribution $F^{-1}(x)$. Recall that the cumulative distribution for a random variable $X$ is $F_X(x) = P(X \leq x)$. In what follows, we assume that our computer can, on demand, generate independent realizations of a random variable $U$ uniformly distributed on $[0,1]$.</description>
+      <guid>/topic/test/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</guid>
+      <description></description>
     </item>
     
     <item>
@@ -372,11 +341,29 @@ Overview Inverse transform sampling is a method for generating random numbers fr
     </item>
     
     <item>
+      <title>2.1.1 亂數函數練習</title>
+      <link>/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>2.2 資料探索</title>
       <link>/rlang/2_2_data_explorer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/2_2_data_explorer.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>21_roxygen</title>
+      <link>/topic/rmd/21_roxygen.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/21_roxygen.html</guid>
       <description></description>
     </item>
     
@@ -481,7 +468,16 @@ Overview Inverse transform sampling is a method for generating random numbers fr
     </item>
     
     <item>
-      <title>4.7 更多</title>
+      <title>4.6 資料集 data frame</title>
+      <link>/rlang/4_6_topic_dataframe.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/4_6_topic_dataframe.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4.7 data.frame, table, data,table</title>
       <link>/rlang/4_7_type_more.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -540,6 +536,33 @@ Overview Inverse transform sampling is a method for generating random numbers fr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/6_3_apply_family.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7.1 R 函數的基本撰寫</title>
+      <link>/rlang/7_1_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_1_function.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7.2 更多R函數</title>
+      <link>/rlang/7_2_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_2_function.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7.3 R 函數定義的幾種分類</title>
+      <link>/rlang/7_3_function.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_3_function.html</guid>
       <description></description>
     </item>
     
@@ -647,6 +670,24 @@ Keywords These are all keywords with more than one emoji associated with them.
     </item>
     
     <item>
+      <title>lmm</title>
+      <link>/econometrics/lmm.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/econometrics/lmm.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MC_基本</title>
+      <link>/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Poisson分配</title>
       <link>/topic/simulation/poisson%E5%88%86%E9%85%8D.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -677,6 +718,24 @@ str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)
     </item>
     
     <item>
+      <title>statatest</title>
+      <link>/econometrics/statatest.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/econometrics/statatest.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Viewer</title>
+      <link>/topic/test/viewer.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/test/viewer.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>xxx</title>
       <link>/rlang/xxx.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -695,12 +754,47 @@ str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)
     </item>
     
     <item>
-      <title>測試工具</title>
-      <link>/rlang/%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</link>
+      <title>備忘錄</title>
+      <link>/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</guid>
+      <guid>/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>檔案系統</title>
+      <link>/rlang/hw/hw_filesystem.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/hw/hw_filesystem.html</guid>
+      <description>&lt;script src=&#34;hw_filesystem_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;hw_filesystem_files/jquery-3.6.0/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/dt-core-1.10.20/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;hw_filesystem_files/dt-core-1.10.20/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/dt-core-1.10.20/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/crosstalk-1.1.1/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/crosstalk-1.1.1/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;hw_filesystem_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;hw_filesystem_files/jquery-3.6.0/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/dt-core-1.10.20/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;hw_filesystem_files/dt-core-1.10.20/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/dt-core-1.10.20/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/crosstalk-1.1.1/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/crosstalk-1.1.1/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;hw_filesystem_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;hw_filesystem_files/jquery-3.6.0/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/dt-core-1.10.20/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;hw_filesystem_files/dt-core-1.10.20/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/dt-core-1.10.20/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;hw_filesystem_files/crosstalk-1.1.1/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;hw_filesystem_files/crosstalk-1.1.1/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;</description>
     </item>
     
     <item>
@@ -712,6 +806,15 @@ str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)
       <description>暫時 http://www2.nkfust.edu.tw/~shanhuen/JavaScript/js1.html
 git note 在ubuntu 中，git push 要避免一直輸入帳號密碼的方式為：
    git config --global credential.helper &#39;store --file ~/.my-credentials&#39; 然後在git push 的時候，輸入帳號和密碼（只要一次，就會被紀錄在上面指定的檔案，這裡的例子是,`.my-credentials&#39;。  </description>
+    </item>
+    
+    <item>
+      <title>資料處理</title>
+      <link>/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</guid>
+      <description></description>
     </item>
     
     <item>
