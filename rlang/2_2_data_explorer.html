@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1635398991" rel="stylesheet">
-    <link href="../css/syntax.css?1635398991" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1635398991"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1636003356" rel="stylesheet">
+    <link href="../css/syntax.css?1636003356" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1636003356"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1635398991" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1636003356" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1635398991" rel="stylesheet">
+    <link href="../css/theme-mine.css?1636003356" rel="stylesheet">
     
-    <link href="../css/theme.css?1635398991" rel="stylesheet">
+    <link href="../css/theme.css?1636003356" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -38,18 +38,7 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#常用函數">常用函數</a></li>
-    <li><a href="#匯入其他格式的資料">匯入其他格式的資料</a></li>
     <li><a href="#來自wooldridge-的資料集">來自wooldridge 的資料集</a></li>
-    <li><a href="#t-test">t-test</a>
-      <ul>
-        <li><a href="#manually-enter-raw-data-from-wooldridge-table-c3">Manually enter raw data from Wooldridge, Table C.3:</a></li>
-        <li><a href="#calculate-change-the-parentheses-just-display-the-results">Calculate Change (the parentheses just display the results):</a></li>
-        <li><a href="#ingredients-to-ci-formula">Ingredients to CI formula</a></li>
-        <li><a href="#confidence-intervall">Confidence intervall:</a></li>
-        <li><a href="#by-hand">by hand</a></li>
-      </ul>
-    </li>
-    <li><a href="#by-函數ttest">by 函數<code>t.test()</code></a></li>
     <li><a href="#分組">分組</a>
       <ul>
         <li><a href="#方法1-利用-for迴圈">方法1: 利用 for迴圈</a></li>
@@ -66,13 +55,15 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 21, 2021'>2.2 資料探索</span>
+      title='最後修改October 30, 2021'>2.2 資料探索</span>
         
     
 
     </span>
   
-  <span></span><span >
+  <span><a class="btn btn-outline-dark p-0" style="font-size:12px" href="../tags/t-test.html">
+    <i class="fas fa-tag"></i>t-test
+</a></span><span >
     <span >
     <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
     <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
@@ -101,18 +92,18 @@
 
  
 
+ 
 
-<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎R">
      
 
   <a class="nav-link" 
-    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
-    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+    href="../rlang.html"><i class="far fa-folder"></i>基礎R  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_92db98bffe2d6697b3536cbbf7b00074" aria-expanded="false">
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
-  <ul id="menu_item_"  
+  <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
   class="submenu collapse show" 
   data-bs-parent="#home-topics"> 
     
@@ -168,19 +159,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 資料探索">2.3 資料探索</a></li>
     
   
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
-    
-  
     
   
         <li class="nav-item">
@@ -210,34 +194,26 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_11_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串處理函數">4.5 字串處理函數</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串">4.5 字串</a></li>
+          <a class="nav-link" href="../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_6_topic_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
+          <a class="nav-link" href="../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" title="4.7 因子">4.7 因子</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 data.frame, table, data,table">4.7 data.frame, table, data,table</a></li>
     
   
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/5_objectbasic.html" data-bs-toggle="tooltip" title="5 R的物件相關概念">5 R的物件相關概念</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="5.1 物件導向S3">5.1 物件導向S3</a></li>
+          <a class="nav-link" href="../rlang/4_15_json.html" data-bs-toggle="tooltip" title="4.15 json">4.15 json</a></li>
     
   
         <li class="nav-item">
@@ -267,6 +243,14 @@
           <a class="nav-link" href="../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" title="7.8 R的物件相關概念">7.8 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="7.9 物件導向S3">7.9 物件導向S3</a></li>
     
   
         <li class="nav-item">
@@ -281,9 +265,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 Plot more">9.3 Plot more</a></li>
+          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 畫圖練習">9.3 畫圖練習</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" title="10. tidyr, dplyr basic">10. tidyr, dplyr basic</a></li>
     
   
         <li class="nav-item">
@@ -296,21 +283,6 @@
           <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
-    
-  
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/xxx.html" data-bs-toggle="tooltip" title="xxx">xxx</a></li>
     
   
     
@@ -318,6 +290,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="暫時">
      
@@ -328,10 +301,9 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_"> 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
     
 
   
@@ -344,9 +316,7 @@
           
           <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
@@ -355,6 +325,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="練習用">
      
@@ -365,10 +336,9 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_"> 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
     
 
   
@@ -394,9 +364,7 @@
           
           <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
@@ -406,9 +374,7 @@
           
           <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -418,6 +384,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
      
@@ -428,7 +395,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
   class="submenu collapse" 
   data-bs-parent="#home-topics"> 
@@ -437,6 +403,11 @@
   
   
   
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../econometrics/0_prerequest.html" data-bs-toggle="tooltip" title="0 前置準備">0 前置準備</a></li>
+    
   
         <li class="nav-item">
           
@@ -463,15 +434,8 @@
           <a class="nav-link" href="../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/statatest.html" data-bs-toggle="tooltip" title="statatest">statatest</a></li>
-    
-  
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -481,6 +445,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="專題">
      
@@ -491,7 +456,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
   class="submenu collapse" 
   data-bs-parent="#home-topics"> 
@@ -502,19 +466,11 @@
   
   
     
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
-    
-  
-    
-  
-    
   <li>
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="實驗">
      
@@ -525,7 +481,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
   class="submenu collapse" 
   data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
@@ -537,22 +492,22 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/simulation/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/simulation_1.html" data-bs-toggle="tooltip" title="simulation_1">simulation_1</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
     
   
         <li class="nav-item">
           
           <a class="nav-link" href="../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" title="4.1 模擬基本 1">4.1 模擬基本 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" title="4.2 模擬基本 2">4.2 模擬基本 2</a></li>
     
   
         <li class="nav-item">
@@ -569,18 +524,14 @@
           
           <a class="nav-link" href="../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
     
   
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -593,7 +544,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_7_type_more.html"> <i class="far fa-clock" ></i>4.7 data.frame, table, data,table[2021-10-28 PM 01:29]</a></li><li><a href="../rlang/4_6_topic_dataframe.html"> <i class="far fa-clock" ></i>4.6 資料集 data frame[2021-10-28 PM 12:41]</a></li><li><a href="../rlang/2_3_data_explorer.html"> <i class="far fa-clock" ></i>2.3 data explorer[2021-10-28 PM 12:30]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-04 PM 01:00]</a></li><li><a href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-04 PM 12:37]</a></li><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -611,8 +562,8 @@
 <li>Covariance</li>
 <li>Correlation Coefficient</li>
 <li>Central Moment</li>
-<li>Skewness</li>
-<li>Kurtosis</li>
+<li>Skewness : 套件 <code>moments</code></li>
+<li>Kurtosis : 套件 <code>moments</code></li>
 </ul>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">mean(mtcars$mpg)
 #&gt; [1] 20.09062
@@ -637,20 +588,25 @@ kurtosis(mtcars$mpg)
 #&gt; [1] 2.799467
 </code></pre>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- rnorm(100)
-quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1)) # quartile
-quantile(x, probs = seq(0, 1, by= 0.01)) # decile
-ecdf(x)
+quantile(x, probs = c(0, 0.25, 0.5, 0.75, 1)) # quantile of 0% 25% 50% ..
+#&gt;          0%         25%         50%         75%        100% 
+#&gt; -2.98699656 -0.49087057  0.08812317  0.79885838  2.03939058
 </code></pre>
-<p>問題：ecdf()的結果和quantile()的結果是否一樣？</p>
-<h2 id="匯入其他格式的資料">匯入其他格式的資料</h2>
-<p>安裝package : <code>foreign</code>，以<code>stata</code> 為例(利用其中的函數<code>read.dta()</code>)：</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">if (!file.exists('resources/ceosal1.RData')){
+<p>quantile(x, probs = seq(0, 1, by= 0.01)) # decile
+ecdf(x)</p>
+<pre><code>問題：ecdf()的結果和quantile()的結果是否一樣？ 
+
+
+## 匯入其他格式的資料
+安裝package : `foreign`，以`stata` 為例(利用其中的函數`read.dta()`)： 
+
+```r?lang=r?class=.source?preclass=ms-5.w-75
+if (!file.exists('resources/ceosal1.RData')){
 ceosal1&lt;-read.dta(&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/ceosal1.dta&quot;)
 save(ceosal1, file='resources/ceosal1.RData')
 }
 </code></pre>
 <h2 id="來自wooldridge-的資料集">來自wooldridge 的資料集</h2>
-<p><a href="https://www.povertyactionlab.org/sites/default/files/r-cheat-sheet.pdf">base cheat sheet</a></p>
 <p><a href="./resources/affairs.RData">資料 affairs</a></p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
 
@@ -765,223 +721,26 @@ cor(ceosal1$salary, ceosal1$roe)
 #&gt; [1] 0.1148417
 boxplot(ceosal1$roe,horizontal = T)
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="2_2_data_explorer_files/figure-html/unnamed-chunk-9-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
 
+<img src="2_2_data_explorer_files/figure-html/unnamed-chunk-9-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">boxplot(ceosal1$roe~ceosal1$consprod)
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-    <img src="2_2_data_explorer_files/figure-html/unnamed-chunk-9-2.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-
-<h2 id="t-test">t-test</h2>
-<h3 id="manually-enter-raw-data-from-wooldridge-table-c3">Manually enter raw data from Wooldridge, Table C.3:</h3>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">SR87&lt;-c(10,1,6,.45,1.25,1.3,1.06,3,8.18,1.67,.98,1,.45,
-                                      5.03,8,9,18,.28,7,3.97)
-SR88&lt;-c(3,1,5,.5,1.54,1.5,.8,2,.67,1.17,.51,.5,.61,6.7,
-                                            4,7,19,.2,5,3.83)
-</code></pre>
-<h3 id="calculate-change-the-parentheses-just-display-the-results">Calculate Change (the parentheses just display the results):</h3>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">(Change &lt;- SR88 - SR87)
-#&gt;  [1] -7.00  0.00 -1.00  0.05  0.29  0.20 -0.26 -1.00 -7.51 -0.50 -0.47 -0.50
-#&gt; [13]  0.16  1.67 -4.00 -2.00  1.00 -0.08 -2.00 -0.14
-</code></pre>
-<h3 id="ingredients-to-ci-formula">Ingredients to CI formula</h3>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">(avgCh&lt;- mean(Change))
-#&gt; [1] -1.1545
-(n    &lt;- length(Change))
-#&gt; [1] 20
-(sdCh &lt;- sd(Change))
-#&gt; [1] 2.400639
-(se   &lt;- sdCh/sqrt(n))
-#&gt; [1] 0.5367992
-(c    &lt;- qt(.975, n-1))
-#&gt; [1] 2.093024
-</code></pre>
-<h3 id="confidence-intervall">Confidence intervall:</h3>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">c( avgCh - c*se, avgCh + c*se )
-#&gt; [1] -2.27803369 -0.03096631
-</code></pre>
-<p>驗證</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">v.n &lt;- length(Change)
-v.mean &lt;- sum(Change)/v.n
-v.std &lt;-sqrt(sum((Change-v.mean)^2)/(v.n-1))
-v.se &lt;- v.std/sqrt(v.n)
-rst&lt;-list(v.n,v.mean,v.std,v.se)
-rst
-#&gt; [[1]]
-#&gt; [1] 20
-#&gt; 
-#&gt; [[2]]
-#&gt; [1] -1.1545
-#&gt; 
-#&gt; [[3]]
-#&gt; [1] 2.400639
-#&gt; 
-#&gt; [[4]]
-#&gt; [1] 0.5367992
-</code></pre>
-<p>練習：黑白種，用同一個CV找工作。</p>
-<p><a href="./resources/audit.dta">audit</a></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">#library(readr)
-library(haven)
-audit&lt;-read_dta('resources/audit.dta')
-head(audit)
-</code></pre>
-<p>
-  
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<!--html_preserve--><div  data-nopre class="table-responsive kable">
-<table data-nopre class="w-50 m-auto">
-<thead data-nopre class="">
-<tr data-nopre>
-<th data-nopre style="text-align:right">w</th>
-<th data-nopre style="text-align:right">b</th>
-<th data-nopre style="text-align:right">y</th>
-</tr>
-</thead>
-<tbody data-nopre>
-<tr data-nopre>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">0</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">0</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">0</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">0</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">1</td>
-<td data-nopre style="text-align:right">0</td>
-</tr>
-<tr data-nopre>
-<td data-nopre style="text-align:right">0</td>
-<td data-nopre style="text-align:right">0</td>
-<td data-nopre style="text-align:right">0</td>
-</tr>
-</tbody>
-</table>
-
-</div><!--/html_preserve-->
-y是前兩個欄位相減。以第1筆資料為例，兩個都是1，沒差別(y=0)。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">audit&lt;-read_dta('resources/audit.dta')
-
-# Ingredients to CI formula
-(avgy&lt;- mean(audit$y))
-#&gt; [1] -0.1327801
-(n   &lt;- length(audit$y))
-#&gt; [1] 241
-(sdy &lt;- sd(audit$y))
-#&gt; [1] 0.4819709
-(se  &lt;- sdy/sqrt(n))
-#&gt; [1] 0.03104648
-(c   &lt;- qnorm(.975))
-#&gt; [1] 1.959964
-
-# 95% Confidence intervall:
-avgy + c * c(-se,+se)
-#&gt; [1] -0.19363006 -0.07193011
-# 99% Confidence intervall:
-avgy + qnorm(.995) * c(-se,+se)
-#&gt; [1] -0.21275051 -0.05280966
-</code></pre>
-<h3 id="by-hand">by hand</h3>
-<p>t statistic for H0: mu=0:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">(t &lt;- avgy/se)
-#&gt; [1] -4.276816
-</code></pre>
-<p>自由度(d.f.)為  n-1 =<code>240</code> 的t分配，其臨界值Critical values(如下):</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">alpha.one.tailed = c(0.1, 0.05, 0.025, 0.01, 0.005, .001)
-CV &lt;- qt(1 - alpha.one.tailed, n-1)
-cbind(alpha.one.tailed, CV)
-#&gt;      alpha.one.tailed       CV
-#&gt; [1,]            0.100 1.285089
-#&gt; [2,]            0.050 1.651227
-#&gt; [3,]            0.025 1.969898
-#&gt; [4,]            0.010 2.341985
-#&gt; [5,]            0.005 2.596469
-#&gt; [6,]            0.001 3.124536
-</code></pre>
-<h2 id="by-函數ttest">by 函數<code>t.test()</code></h2>
-<p>H0: y=5, H1:y&gt;5, 信賴區間0.99</p>
-<p>t.test(y, mu=5, alternative=&quot;greater&quot;, conf.level=0.99)</p>
-<p>利用函數算：</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># ex.C.3: two-sided CI
-t.test(audit$y)
-# ex.C.5 &amp; C.7: 1-sided test:
-t.test(audit$y, alternative=&quot;less&quot;)
-
-</code></pre>
-<pre><code class="language-r?preclass=code-out.ms-5.w-75">One Sample t-test
-
-data:  audit$y
-t = -4.2768, df = 240, p-value = 2.739e-05
-alternative hypothesis: true mean is not equal to 0
-95 percent confidence interval:
- -0.1939385 -0.0716217  **說明：mu +/- c.level*(se) 見手算例   **
-sample estimates:
- mean of x 
--0.1327801 
-
-
-	One Sample t-test
-
-data:  audit$y
-t = -4.2768, df = 240, p-value = 1.369e-05
-alternative hypothesis: true mean is less than 0
-95 percent confidence interval:
-        -Inf -0.08151529
-sample estimates:
- mean of x 
--0.1327801
-
-</code></pre>
+<img src="2_2_data_explorer_files/figure-html/unnamed-chunk-9-2.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
 <h2 id="分組">分組</h2>
 <p>目的：分組求統計量
 大綱是：先探索一下我們可能用到的R語言技巧，然後是寫成函數。</p>
@@ -1027,7 +786,7 @@ g1
 
 
 <!--html_preserve--><div  data-nopre class="table-responsive kable">
-<table data-nopre class="w-50 m-auto">
+<table data-nopre class="ms-5 w-75">
 <thead data-nopre class="">
 <tr data-nopre>
 <th data-nopre style="text-align:left"></th>
@@ -1101,7 +860,7 @@ print(rst)
 #&gt; $`2`
 #&gt; [1] &quot;Mean   :27.105  &quot;
 </code></pre>
-<div class="notices m-auto w-75">
+<div class="notices ms-5 w-75">
     <div class="sidebar">
         <p>函數<code>summary()</code>的結果是一個table，但是而且裡面的元素是「字串」，例如</p>
 <pre><code class="language-r?preclass=.ms-5.w-75">      age             group    
@@ -1140,7 +899,7 @@ as.numeric(sub('.*:', '', summary(dframe)[4,1]))</p>
 
 
 <!--html_preserve--><div  data-nopre class="table-responsive kable">
-<table data-nopre class="w-50 m-auto">
+<table data-nopre class="ms-5 w-75">
 <thead data-nopre class="">
 <tr data-nopre>
 <th data-nopre style="text-align:right">Group.1</th>
@@ -1181,7 +940,7 @@ as.numeric(sub('.*:', '', summary(dframe)[4,1]))</p>
 
 
 <!--html_preserve--><div  data-nopre class="table-responsive kable">
-<table data-nopre class="w-50 m-auto">
+<table data-nopre class="ms-5 w-75">
 <thead data-nopre class="">
 <tr data-nopre>
 <th data-nopre style="text-align:right">x</th>
@@ -1256,19 +1015,15 @@ cbind(v1,v2)
 </code></pre>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">boxplot(matrix(rnorm(100),ncol=2))
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="2_2_data_explorer_files/figure-html/unnamed-chunk-30-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
 
+<img src="2_2_data_explorer_files/figure-html/unnamed-chunk-20-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
 <p>現在要分組對年齡boxplot,請寫出程式碼，資料如下：</p>
 <pre><code class="language-r?preclass=.ms-5.w-75">age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
            34.935,  35.2115, 35.2115,  5.2115, 36.7803)
@@ -1276,19 +1031,15 @@ group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
 dframe = data.frame(age=age, group=group)
 </code></pre>
 <p>hint: 每組長度可能不一樣，需要補NA<br>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="2_2_data_explorer_files/figure-html/unnamed-chunk-31-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-</p>
+
+<img src="2_2_data_explorer_files/figure-html/unnamed-chunk-21-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve--></p>
 <p>hint: 最簡單的寫法 <code>boxplot(age~group)</code></p>
 <p>&lt;1&gt; FUN.Name 會跑到mathch.fun() 這個函數，而這個函數是用字串搜尋</p>
 <p>m2: 
@@ -1319,29 +1070,29 @@ d1
 
 
 <!--html_preserve--><div  data-nopre class="table-responsive kable">
-<table data-nopre class="w-50 m-auto">
+<table data-nopre class="ms-5 w-75">
 <thead data-nopre class="">
 <tr data-nopre>
 <th data-nopre style="text-align:left"></th>
-<th data-nopre style="text-align:left">c.a....a...b....b...c....c..</th>
-<th data-nopre style="text-align:left">c.a....d...b....e...c....f..</th>
+<th data-nopre style="text-align:right">c.a....a...b....b...c....c..</th>
+<th data-nopre style="text-align:right">c.a....d...b....e...c....f..</th>
 </tr>
 </thead>
 <tbody data-nopre>
 <tr data-nopre>
 <td data-nopre style="text-align:left">a</td>
-<td data-nopre style="text-align:left">a</td>
-<td data-nopre style="text-align:left">d</td>
+<td data-nopre style="text-align:right">a</td>
+<td data-nopre style="text-align:right">d</td>
 </tr>
 <tr data-nopre>
 <td data-nopre style="text-align:left">b</td>
-<td data-nopre style="text-align:left">b</td>
-<td data-nopre style="text-align:left">e</td>
+<td data-nopre style="text-align:right">b</td>
+<td data-nopre style="text-align:right">e</td>
 </tr>
 <tr data-nopre>
 <td data-nopre style="text-align:left">c</td>
-<td data-nopre style="text-align:left">c</td>
-<td data-nopre style="text-align:left">f</td>
+<td data-nopre style="text-align:right">c</td>
+<td data-nopre style="text-align:right">f</td>
 </tr>
 </tbody>
 </table>
@@ -1371,7 +1122,7 @@ d2
 
 
 <!--html_preserve--><div  data-nopre class="table-responsive kable">
-<table data-nopre class="w-50 m-auto">
+<table data-nopre class="ms-5 w-75">
 <thead data-nopre class="">
 <tr data-nopre>
 <th data-nopre style="text-align:right">a</th>
@@ -1422,8 +1173,8 @@ d2
     </div>
 </div>
 
-<link href="../css/quicknote.css?1635398991" rel="stylesheet">
-<script src="../js/quicknote.js?1635398991"></script>
+<link href="../css/quicknote.css?1636003356" rel="stylesheet">
+<script src="../js/quicknote.js?1636003356"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1434,14 +1185,14 @@ d2
                    data-bs-placement="left" title=2.1&#32;讀檔寫檔>前</a>
                    
           
-            <a href="../rlang/3_quickview1.html" 
+            <a href="../rlang/2_3_data_explorer.html" 
                class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
-               title=3.&#32;Quick&#32;view&#32;1>後</a>            
+               title=2.3&#32;資料探索>後</a>            
           
           
 
   
-<script src="../js/packhtml.js?1635398991"></script>    
+<script src="../js/packhtml.js?1636003356"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1451,25 +1202,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1635398991"></script>
-  <script src="../js/featherlight.gallery.min.js?1635398991"></script>
-  <link href="../css/featherlight.min.css?1635398991" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1635398991" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1636003356"></script>
+  <script src="../js/featherlight.gallery.min.js?1636003356"></script>
+  <link href="../css/featherlight.min.css?1636003356" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1636003356" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1635398991"></script>
+  <script src="../js/highlight.pack.js?1636003356"></script>
   
-  <script src="../js/hugohelper.js?1635398991"></script>
+  <script src="../js/hugohelper.js?1636003356"></script>
 
-  <link href="../css/rmd.css?1635398991" rel="stylesheet">
-  <link href="../css/mystyle.css?1635398991" rel="stylesheet">    
-  <script src='../js/variant.js?1635398991'></script>
+  <link href="../css/rmd.css?1636003356" rel="stylesheet">
+  <link href="../css/mystyle.css?1636003356" rel="stylesheet">    
+  <script src='../js/variant.js?1636003356'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1635398991'></script>
+<script src='../js/localsearch.js?1636003356'></script>
     
 
 

@@ -11,14 +11,8 @@
     <loc>/topic/rmd/04_rmd_hook.html</loc>
     <lastmod>2021-09-24T23:58:28+08:00</lastmod>
   </url><url>
-    <loc>/rlang/2_3_data_explorer.html</loc>
-    <lastmod>2021-10-28T12:30:14+08:00</lastmod>
-  </url><url>
     <loc>/rlang/4_2_type_vector.html</loc>
     <lastmod>2021-10-14T13:22:49+08:00</lastmod>
-  </url><url>
-    <loc>/rlang/4_5_type_string_function.html</loc>
-    <lastmod>2021-10-14T11:32:24+08:00</lastmod>
   </url><url>
     <loc>/rlang/1_2_filesystem.html</loc>
     <lastmod>2021-10-07T11:03:15+08:00</lastmod>
@@ -26,20 +20,11 @@
     <loc>/topic/rmd/03_rmd_pdf.html</loc>
     <lastmod>2021-09-16T13:12:53+08:00</lastmod>
   </url><url>
-    <loc>/rlang/10_00_tidybasic01.html</loc>
-    <lastmod>2021-10-19T11:07:52+08:00</lastmod>
-  </url><url>
     <loc>/topic/rmd/02_git-book-note.html</loc>
     <lastmod>2021-09-16T13:12:50+08:00</lastmod>
   </url><url>
     <loc>/rlang/11_00_sampling.html</loc>
     <lastmod>2021-09-16T13:09:29+08:00</lastmod>
-  </url><url>
-    <loc>/rlang/13_0_eco_01_intro.html</loc>
-    <lastmod>2021-09-16T13:09:37+08:00</lastmod>
-  </url><url>
-    <loc>/rlang/14_00_sim_1.html</loc>
-    <lastmod>2021-09-16T13:09:48+08:00</lastmod>
   </url><url>
     <loc>/hugo_shortcode.html</loc>
     <lastmod>2021-09-04T08:07:05+08:00</lastmod>
@@ -62,74 +47,80 @@
     <loc>/rlang/demo/citation.html</loc>
     <lastmod>2021-09-16T13:12:00+08:00</lastmod>
   </url><url>
-    <loc>/topic/test/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</loc>
+    <loc>/econometrics/0_prerequest.html</loc>
+    <lastmod>2021-11-01T13:10:19+08:00</lastmod>
+  </url><url>
+    <loc>/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</loc>
     <lastmod>2021-10-25T14:40:58+08:00</lastmod>
   </url><url>
-    <loc>/topic/test/1_testrun_chunk.html</loc>
+    <loc>/topic/testrun/1_testrun_chunk.html</loc>
     <lastmod>2021-10-24T23:28:07+08:00</lastmod>
   </url><url>
     <loc>/econometrics/1_t%E6%AA%A2%E5%AE%9A.html</loc>
-    <lastmod>2021-10-28T12:17:27+08:00</lastmod>
+    <lastmod>2021-10-31T10:05:42+08:00</lastmod>
   </url><url>
     <loc>/rlang/1_1_%E7%B3%BB%E7%B5%B1.html</loc>
-    <lastmod>2021-10-10T10:38:48+08:00</lastmod>
+    <lastmod>2021-11-04T10:11:37+08:00</lastmod>
   </url><url>
     <loc>/rlang/1_3_%E5%9F%B7%E8%A1%8C.html</loc>
     <lastmod>2021-10-10T10:35:11+08:00</lastmod>
   </url><url>
     <loc>/rlang/1_4_rpackages.html</loc>
-    <lastmod>2021-10-17T14:55:30+08:00</lastmod>
+    <lastmod>2021-10-28T23:55:52+08:00</lastmod>
   </url><url>
     <loc>/rlang/1_5_%E7%B7%A8%E7%A2%BC.html</loc>
     <lastmod>2021-10-20T22:02:56+08:00</lastmod>
   </url><url>
+    <loc>/rlang/10_00_dplyrbasic01.html</loc>
+    <lastmod>2021-11-03T22:31:59+08:00</lastmod>
+  </url><url>
     <loc>/rlang/11_environments.html</loc>
     <lastmod>2021-09-16T13:09:34+08:00</lastmod>
   </url><url>
-    <loc>/topic/js/1_0_firstjs.html</loc>
-    <lastmod>2021-10-10T12:27:33+08:00</lastmod>
-  </url><url>
-    <loc>/topic/test/2_testrun.html</loc>
+    <loc>/topic/testrun/2_testrun.html</loc>
     <lastmod>2021-10-24T23:28:32+08:00</lastmod>
   </url><url>
     <loc>/econometrics/2_anova.html</loc>
     <lastmod>2021-10-28T11:27:46+08:00</lastmod>
   </url><url>
     <loc>/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</loc>
-    <lastmod>2021-10-28T11:37:38+08:00</lastmod>
+    <lastmod>2021-10-29T12:02:37+08:00</lastmod>
   </url><url>
     <loc>/rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html</loc>
-    <lastmod>2021-10-20T22:39:17+08:00</lastmod>
+    <lastmod>2021-10-30T14:02:31+08:00</lastmod>
   </url><url>
     <loc>/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</loc>
-    <lastmod>2021-10-24T23:58:30+08:00</lastmod>
+    <lastmod>2021-10-30T14:54:50+08:00</lastmod>
   </url><url>
     <loc>/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</loc>
-    <lastmod>2021-10-24T23:58:35+08:00</lastmod>
+    <lastmod>2021-10-30T14:56:38+08:00</lastmod>
   </url><url>
     <loc>/rlang/2_2_data_explorer.html</loc>
-    <lastmod>2021-10-21T12:28:22+08:00</lastmod>
+    <lastmod>2021-10-30T22:31:29+08:00</lastmod>
+  </url><url>
+    <loc>/rlang/2_3_data_explorer.html</loc>
+    <lastmod>2021-10-28T21:39:38+08:00</lastmod>
+  </url><url>
+    <loc>/topic/rmd/20_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</loc>
+    <lastmod>2021-10-31T08:59:55+08:00</lastmod>
   </url><url>
     <loc>/topic/rmd/21_roxygen.html</loc>
     <lastmod>2021-10-24T16:06:21+08:00</lastmod>
   </url><url>
-    <loc>/topic/test/3_testrun_htmlpreserve.html</loc>
+    <loc>/topic/testrun/3_testrun_htmlpreserve.html</loc>
     <lastmod>2021-10-25T16:02:28+08:00</lastmod>
   </url><url>
     <loc>/rlang/3_quickview1.html</loc>
-    <lastmod>2021-10-21T12:30:22+08:00</lastmod>
+    <lastmod>2021-10-28T21:35:45+08:00</lastmod>
   </url><url>
-    <loc>/rlang/3_02_regular%E7%B7%B4%E7%BF%92.html</loc>
-    <lastmod>2021-10-25T14:17:02+08:00</lastmod>
-  </url><url>
-    <loc>/rlang/3_01_regular_expression.html</loc>
-    <lastmod>2021-10-08T18:15:22+08:00</lastmod>
-  </url><url>
-    <loc>/topic/test/4_tibbletable.html</loc>
+    <loc>/topic/testrun/4_tibbletable.html</loc>
     <lastmod>2021-10-24T23:28:50+08:00</lastmod>
   </url><url>
     <loc>/rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html</loc>
     <lastmod>2021-10-14T13:03:25+08:00</lastmod>
+  </url><url>
+    <loc>/topic/simulation/4_01_sim.html</loc>
+    <lastmod>2021-11-01T13:17:30+08:00</lastmod>
   </url><url>
     <loc>/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</loc>
     <lastmod>2021-10-14T11:23:52+08:00</lastmod>
@@ -137,29 +128,35 @@
     <loc>/rlang/4_10_type_%E5%B8%B8%E8%A6%8B%E5%92%8C%E8%A4%87%E7%BF%92.html</loc>
     <lastmod>2021-10-14T11:20:40+08:00</lastmod>
   </url><url>
+    <loc>/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</loc>
+    <lastmod>2021-10-31T09:37:43+08:00</lastmod>
+  </url><url>
+    <loc>/rlang/4_15_json.html</loc>
+    <lastmod>2021-10-31T09:36:57+08:00</lastmod>
+  </url><url>
+    <loc>/topic/simulation/4_02_sim.html</loc>
+    <lastmod>2021-11-01T13:18:44+08:00</lastmod>
+  </url><url>
     <loc>/rlang/4_3_type_matrix.html</loc>
     <lastmod>2021-10-21T11:27:16+08:00</lastmod>
   </url><url>
     <loc>/rlang/4_4_type_list.html</loc>
     <lastmod>2021-10-25T12:48:08+08:00</lastmod>
   </url><url>
-    <loc>/rlang/4_11_json.html</loc>
-    <lastmod>2021-10-17T22:30:37+08:00</lastmod>
+    <loc>/rlang/4_5_type_string_function.html</loc>
+    <lastmod>2021-10-29T10:31:59+08:00</lastmod>
   </url><url>
-    <loc>/rlang/4_6_topic_dataframe.html</loc>
-    <lastmod>2021-10-28T12:41:29+08:00</lastmod>
+    <loc>/rlang/4_6_type_dataframe.html</loc>
+    <lastmod>2021-10-31T17:58:16+08:00</lastmod>
   </url><url>
-    <loc>/rlang/4_7_type_more.html</loc>
-    <lastmod>2021-10-28T13:29:25+08:00</lastmod>
+    <loc>/rlang/4_7_type_factor.html</loc>
+    <lastmod>2021-10-31T11:29:31+08:00</lastmod>
   </url><url>
     <loc>/topic/rmd/05_rmd_topic_1.html</loc>
     <lastmod>2021-10-20T22:42:52+08:00</lastmod>
   </url><url>
-    <loc>/rlang/5_objectbasic.html</loc>
-    <lastmod>2021-10-10T15:18:43+08:00</lastmod>
-  </url><url>
-    <loc>/rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</loc>
-    <lastmod>2021-10-10T17:07:10+08:00</lastmod>
+    <loc>/topic/testrun/5_statatest.html</loc>
+    <lastmod>2021-11-01T11:37:31+08:00</lastmod>
   </url><url>
     <loc>/rlang/6_1_programming.html</loc>
     <lastmod>2021-10-14T11:47:03+08:00</lastmod>
@@ -171,7 +168,7 @@
     <lastmod>2021-10-21T13:14:05+08:00</lastmod>
   </url><url>
     <loc>/rlang/7_1_function.html</loc>
-    <lastmod>2021-10-22T11:31:32+08:00</lastmod>
+    <lastmod>2021-11-01T23:28:44+08:00</lastmod>
   </url><url>
     <loc>/rlang/7_2_function.html</loc>
     <lastmod>2021-10-22T13:29:53+08:00</lastmod>
@@ -179,20 +176,23 @@
     <loc>/rlang/7_3_function.html</loc>
     <lastmod>2021-10-22T13:26:33+08:00</lastmod>
   </url><url>
-    <loc>/rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</loc>
-    <lastmod>2021-10-11T23:40:02+08:00</lastmod>
+    <loc>/rlang/7_8_objectbasic.html</loc>
+    <lastmod>2021-10-31T09:25:41+08:00</lastmod>
+  </url><url>
+    <loc>/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</loc>
+    <lastmod>2021-10-31T09:25:47+08:00</lastmod>
   </url><url>
     <loc>/rlang/9_1_plot.html</loc>
-    <lastmod>2021-10-20T22:44:09+08:00</lastmod>
+    <lastmod>2021-11-04T13:00:38+08:00</lastmod>
   </url><url>
     <loc>/rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html</loc>
-    <lastmod>2021-10-09T22:20:52+08:00</lastmod>
+    <lastmod>2021-11-04T12:37:18+08:00</lastmod>
   </url><url>
     <loc>/rlang/9_3_plot.html</loc>
-    <lastmod>2021-10-09T22:14:08+08:00</lastmod>
+    <lastmod>2021-11-04T00:05:54+08:00</lastmod>
   </url><url>
     <loc>/econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</loc>
-    <lastmod>2021-10-19T10:43:00+08:00</lastmod>
+    <lastmod>2021-10-31T10:06:37+08:00</lastmod>
   </url><url>
     <loc>/econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html</loc>
     <lastmod>2021-10-19T10:42:07+08:00</lastmod>
@@ -200,23 +200,14 @@
     <loc>/rlang/hw/hw_basic.html</loc>
     <lastmod>2021-09-16T13:12:07+08:00</lastmod>
   </url><url>
-    <loc>/topic/simulation/bays1.html</loc>
-    <lastmod>2021-10-25T00:01:12+08:00</lastmod>
-  </url><url>
     <loc>/categories.html</loc>
-    <lastmod>2021-10-10T10:38:48+08:00</lastmod>
+    <lastmod>2021-11-04T10:11:37+08:00</lastmod>
   </url><url>
     <loc>/</loc>
     <lastmod>2021-09-04T08:07:05+08:00</lastmod>
   </url><url>
     <loc>/rlang/blogdown_debug.html</loc>
     <lastmod>2021-10-08T10:40:53+08:00</lastmod>
-  </url><url>
-    <loc>/topic/test/emo_test.html</loc>
-    <lastmod>2021-09-16T13:13:02+08:00</lastmod>
-  </url><url>
-    <loc>/topic/interesting.html</loc>
-    <lastmod>2021-09-16T13:12:44+08:00</lastmod>
   </url><url>
     <loc>/econometrics/lmm.html</loc>
     <lastmod>2021-10-28T11:15:57+08:00</lastmod>
@@ -228,31 +219,22 @@
     <lastmod>2021-10-24T23:59:03+08:00</lastmod>
   </url><url>
     <loc>/categories/r.html</loc>
-    <lastmod>2021-10-10T10:38:48+08:00</lastmod>
+    <lastmod>2021-11-04T10:11:37+08:00</lastmod>
   </url><url>
     <loc>/rlang/hw/hw_regexp.html</loc>
     <lastmod>2021-09-16T13:12:20+08:00</lastmod>
   </url><url>
-    <loc>/rlang.html</loc>
-    <lastmod>2021-10-28T13:29:25+08:00</lastmod>
-  </url><url>
     <loc>/topic/rmd.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
-    <loc>/topic/simulation/simulation_1.html</loc>
-    <lastmod>2021-10-24T23:59:14+08:00</lastmod>
-  </url><url>
-    <loc>/econometrics/statatest.html</loc>
-    <lastmod>2021-10-24T23:26:56+08:00</lastmod>
+    <loc>/tags/t-test.html</loc>
+    <lastmod>2021-10-31T10:05:42+08:00</lastmod>
   </url><url>
     <loc>/tags.html</loc>
-    <lastmod>2021-10-10T10:38:48+08:00</lastmod>
+    <lastmod>2021-11-04T10:11:37+08:00</lastmod>
   </url><url>
-    <loc>/topic/test/viewer.html</loc>
+    <loc>/topic/testrun/viewer.html</loc>
     <lastmod>2021-10-24T16:06:28+08:00</lastmod>
-  </url><url>
-    <loc>/rlang/xxx.html</loc>
-    <lastmod>2021-10-20T21:57:07+08:00</lastmod>
   </url><url>
     <loc>/topic/simulation/central.html</loc>
     <lastmod>2021-10-24T23:58:54+08:00</lastmod>
@@ -260,8 +242,14 @@
     <loc>/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</loc>
     <lastmod>2021-10-24T11:31:52+08:00</lastmod>
   </url><url>
+    <loc>/rlang.html</loc>
+    <lastmod>2021-11-01T11:36:34+08:00</lastmod>
+  </url><url>
     <loc>/econometrics.html</loc>
     <lastmod>2021-09-05T00:21:39+08:00</lastmod>
+  </url><url>
+    <loc>/tags/%E5%AD%97%E4%B8%B2.html</loc>
+    <lastmod>2021-10-29T12:02:37+08:00</lastmod>
   </url><url>
     <loc>/topic/simulation.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
@@ -273,18 +261,15 @@
     <lastmod>2021-10-25T14:49:32+08:00</lastmod>
   </url><url>
     <loc>/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8.html</loc>
-    <lastmod>2021-10-10T10:38:48+08:00</lastmod>
+    <lastmod>2021-11-04T10:11:37+08:00</lastmod>
   </url><url>
-    <loc>/topic/sitetecnote/site-note.html</loc>
-    <lastmod>2021-09-04T08:07:06+08:00</lastmod>
-  </url><url>
-    <loc>/topic/test.html</loc>
+    <loc>/topic/testrun.html</loc>
     <lastmod>2021-09-04T08:07:06+08:00</lastmod>
   </url><url>
     <loc>/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</loc>
     <lastmod>2021-10-24T16:06:18+08:00</lastmod>
   </url><url>
-    <loc>/topic/test/beta_show_help.html</loc>
+    <loc>/topic/testrun/beta_show_help.html</loc>
     <lastmod>2021-10-18T23:08:00+08:00</lastmod>
   </url>
 </urlset>

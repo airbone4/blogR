@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html><head>
+  <title>4.2 模擬基本 2</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../../images/favicon.ico'/>
+      
+    <link href="../../css/atom-one-dark-reasonable.css?1636003356" rel="stylesheet">
+    <link href="../../css/syntax.css?1636003356" rel="stylesheet">
+    <script src="../../js/jquery-3.3.1.min.js?1636003356"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../../css/fontawesome-all.min.css?1636003356" rel="stylesheet">
+    
+    <link href="../../css/theme-mine.css?1636003356" rel="stylesheet">
+    
+    <link href="../../css/theme.css?1636003356" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic">basic</a>
+      <ul>
+        <li><a href="#cdf">cdf</a></li>
+        <li><a href="#pdf">pdf</a></li>
+        <li><a href="#pnorm">pnorm</a></li>
+        <li><a href="#compare">compare</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#利用套件sm">利用套件<code>sm</code></a></li>
+        <li><a href="#sm-範例">sm 範例</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改November 1, 2021'>4.2 模擬基本 2</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎R">
+     
+
+  <a class="nav-link" 
+    href="../../rlang.html"><i class="far fa-folder"></i>基礎R  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_92db98bffe2d6697b3536cbbf7b00074" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" title="1.4 R Package">1.4 R Package</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" title="2.0 基本輸出輸入">2.0 基本輸出輸入</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 資料探索">2.2 資料探索</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 資料探索">2.3 資料探索</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="4.1 基本">4.1 基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2 練習">4.1.2 練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" title="4.2 向量">4.2 向量</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 矩陣">4.3 矩陣</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 串列 list">4.4 串列 list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串處理函數">4.5 字串處理函數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" title="4.7 因子">4.7 因子</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_15_json.html" data-bs-toggle="tooltip" title="4.15 json">4.15 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_function.html" data-bs-toggle="tooltip" title="7.1 R 函數的基本撰寫">7.1 R 函數的基本撰寫</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_2_function.html" data-bs-toggle="tooltip" title="7.2 更多R函數">7.2 更多R函數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" title="7.8 R的物件相關概念">7.8 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="7.9 物件導向S3">7.9 物件導向S3</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_1_plot.html" data-bs-toggle="tooltip" title="9.1 基本繪圖">9.1 基本繪圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" title="9.2 多圖疊圖">9.2 多圖疊圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 畫圖練習">9.3 畫圖練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" title="10. tidyr, dplyr basic">10. tidyr, dplyr basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../../econometrics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_c59a6b16a979dae063e00e4a916e3284" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/0_prerequest.html" data-bs-toggle="tooltip" title="0 前置準備">0 前置準備</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/1_t%E6%AA%A2%E5%AE%9A.html" data-bs-toggle="tooltip" title="1.0 t檢定">1.0 t檢定</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/2_anova.html" data-bs-toggle="tooltip" title="2. ANOVA">2. ANOVA</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html" data-bs-toggle="tooltip" title="A.a 資料處理">A.a 資料處理</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" title="A.b mpg為例的ggplot">A.b mpg為例的ggplot</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
+    
+  
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../../topic/simulation.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_e617bdc52da54290f99855ac9d5037aa" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
+  class="submenu collapse show" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" title="4.1 模擬基本 1">4.1 模擬基本 1</a></li>
+    
+  
+        <li class="nav-item active">
+          
+          <a class="nav-link" href="../../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" title="4.2 模擬基本 2">4.2 模擬基本 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  
+    </ul>
+</li>
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-04 PM 01:00]</a></li><li><a href="../../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-04 PM 12:37]</a></li><li><a href="../../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="basic">basic</h2>
+<p><code>dnorm</code> : PDF
+<code>pnorm</code> : CDF
+<code>qnorm</code> : inverse CDF
+<code>rnorm</code> : random</p>
+<h3 id="cdf">cdf</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">z_scores &lt;- seq(-3, 3, by = .1)
+pvalues &lt;- pnorm(z_scores)
+
+# Now we'll plot these values
+plot(pvalues, # Plot where y = values and x = index of the value in the vector
+     xaxt = &quot;n&quot;, # Don't label the x-axis
+     type = &quot;l&quot;, # Make it a line plot
+     main = &quot;cdf of the Standard Normal&quot;,
+     xlab= &quot;Quantiles&quot;,
+     ylab=&quot;Probability Density&quot;) 
+
+# These commands label the x-axis
+axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2))
+axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2))
+axis(1, at=which(pvalues == pnorm(0)), labels=c(.5))
+axis(1, at=which(pvalues == pnorm(1)), labels=round(pnorm(1), 2))
+axis(1, at=which(pvalues == pnorm(2)), labels=round(pnorm(2), 2))
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-2-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<p>👍 
+<code>axis</code>下左上又(1,2,3,4)
+第2個參數用的是要顯示的號碼值,對樣每個樣本點。
+如果是x,y plot這個axis()無作用,這裡只用到Y。</p>
+<h3 id="pdf">pdf</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">z_scores &lt;- seq(-3, 3, by = .1)
+dvalues &lt;- dnorm(z_scores)
+plot(dvalues, # Plot where y = values and x = index of the value in the vector
+     xaxt = &quot;n&quot;, # Don't label the x-axis
+     type = &quot;l&quot;, # Make it a line plot
+     main = &quot;pdf of the Standard Normal&quot;,
+     xlab= &quot;Z-score&quot;) 
+
+# These commands label the x-axis
+axis(1, at=which(dvalues == dnorm(0)), labels=c(0))
+axis(1, at=which(dvalues == dnorm(1)), labels=c(-1, 1))
+axis(1, at=which(dvalues == dnorm(2)), labels=c(-2, 2))
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<h3 id="pnorm">pnorm</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">pnorm(2) ## [1] 0.9772499
+#&gt; [1] 0.9772499
+pnorm(2, mean = 5, sd = 3) ## [1] 0.1586553
+#&gt; [1] 0.1586553
+pnorm(2, mean = 5, sd = 3, lower.tail = FALSE)
+#&gt; [1] 0.8413447
+</code></pre>
+<h3 id="compare">compare</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">oldpar &lt;- par()
+par(mfrow=c(1,2))
+z_scores &lt;- seq(-3, 3, by = .1)
+pvalues &lt;- pnorm(z_scores)
+quantiles &lt;- seq(0, 1, by = .05)
+qvalues &lt;- qnorm(quantiles)
+# Plot the z_scores
+plot(qvalues,
+     type = &quot;l&quot;, # We want a line graph
+     xaxt = &quot;n&quot;, # No x-axis
+     xlab=&quot;Probability Density&quot;,
+     ylab=&quot;Z-scores&quot;)
+
+# Same pnorm plot from before
+plot(pvalues, # Plot where y = values and x = index of the value in the vector
+     xaxt = &quot;n&quot;, # Don't label the x-axis
+     type = &quot;l&quot;, # Make it a line plot
+     main = &quot;cdf of the Standard Normal&quot;,
+     xlab= &quot;Quantiles&quot;,
+     ylab=&quot;Probability Density&quot;) 
+
+# These commands label the x-axis
+axis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2))
+axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2))
+axis(1, at=which(pvalues == pnorm(0)), labels=c(.5))
+axis(1, at=which(pvalues == pnorm(1)), labels=round(pnorm(1), 2))
+axis(1, at=which(pvalues == pnorm(2)), labels=round(pnorm(2), 2))
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-5-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<div class="notices ms-5 w-75">
+    <div class="quiz">
+        <ol>
+<li>qnorm(0.95) ?</li>
+<li>一個標準差占了佔了多少百分比?</li>
+</ol>
+
+    </div>
+</div>
+
+<!--html_preserve--><div  class="expand ms-5 w-75 ">
+<div  class="expand-label" onclick="vexpand(this)">
+<i  style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+<span  >hint</span>
+</div><div  class="expand-content incode" style="overflow-x:auto"><!--/html_preserve-->1. zscore of 95 percent 
+1. percent&lt;-pnorm(1)-pnorm(-1)<!--html_preserve--></div></div><!--/html_preserve-->
+<h1 id="simulate-1">simulate 1</h1>
+<table>
+<thead>
+<tr>
+<th>身高</th>
+<th style="text-align:left">女生</th>
+<th style="text-align:left">男生</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td>平均</td>
+<td style="text-align:left">180</td>
+<td style="text-align:left">170</td>
+</tr>
+<tr>
+<td>標準差</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">10</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">fn_num&lt;-100
+fh&lt;-rnorm(fn_num,180,10)
+fm&lt;-rnorm(200-fn_num,170,10)
+height&lt;-c(fh,fm)
+sex&lt;-c(rep(1,fn_num),rep(0,200-fn_num))
+r1&lt;-tapply(height, sex,mean)
+r1
+#&gt;        0        1 
+#&gt; 172.0062 179.6464
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">fn_num_set&lt;-sample(1:199,1000,replace=T) #先抽出female的個數
+rst&lt;-matrix(rep(0,2000),ncol=2) #每一次抽樣男生/女生的平均值
+for(idx in 1:1000)
+{
+  fn_num &lt;-fn_num_set[idx]
+fh&lt;-rnorm(fn_num,180,10)
+fm&lt;-rnorm(200-fn_num,170,10)
+height&lt;-c(fh,fm)
+sex&lt;-c(rep(1,fn_num),rep(0,200-fn_num))
+r1&lt;-tapply(height, sex,mean)
+rst[idx,1]=r1[1]
+rst[idx,2]=r1[2]
+}
+summary(rst)
+#&gt;        V1              V2       
+#&gt;  Min.   :159.1   Min.   :162.6  
+#&gt;  1st Qu.:169.3   1st Qu.:179.3  
+#&gt;  Median :170.0   Median :180.0  
+#&gt;  Mean   :170.0   Mean   :180.0  
+#&gt;  3rd Qu.:170.7   3rd Qu.:180.8  
+#&gt;  Max.   :183.7   Max.   :198.5
+</code></pre>
+<p>下面這個,好像在rmarkdown 畫不出來
+unknown reason !!</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">alist&lt;-list(rst[,1],rst[,2])
+  dinfo&lt;-lapply(alist,density)
+  t1&lt;-sapply(dinfo,function(item){range(item$x)})
+  rx&lt;-range(t1)
+  t2&lt;-sapply(dinfo,function(item){range(item$y)})
+  ry&lt;-range(t2)
+  plot(dinfo[[1]], xlim = rx, ylim = ry, main = &quot;&quot;)
+    for(i in 1:length(dinfo)) {
+        lines(dinfo[[i]], xlim = rx, ylim = ry, col = i)
+    }  
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-8-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<p><em>轉函數</em></p>
+<p>總體而言，轉成函數的考慮就是如何避免hard coding。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">plot.multi.density&lt;-function (alist)
+{
+  dinfo&lt;-lapply(alist,density)#每組資料，求density
+  # 每組資料的x範圍
+  t1&lt;-sapply(dinfo,function(item){range(item$x)})
+  rx&lt;-range(t1)
+  # 每組資料的y範圍
+  t2&lt;-sapply(dinfo,function(item){range(item$y)})
+  ry&lt;-range(t2)
+  plot(dinfo[[1]],xlim = rx, ylim = ry, main = &quot;&quot;)
+    for(i in 1:length(dinfo)) {
+        lines(dinfo[[i]],xlim = rx, ylim = ry, col = i)
+        
+    }  
+} 
+</code></pre>
+<p>討論：上面函數的限制？
+第一個限制，先看看有沒有預設組別</p>
+<p>問題：如果要加上區域顏色？
+簡單一點的話，可以用選項type=&quot;h&quot;, (plot, line兩個函數都吃)</p>
+<p>應用自己的函數</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">alist&lt;-list(rst[,1],rst[,2])
+plot.multi.density(alist)
+</code></pre>
+<p><!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-11-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+上面的函數，預設參數是傳入使用者指定的list，裡面有使用者指定的組別
+但是如果因為需要，發現傳入矩陣比較方便（例如每一個欄位代表每一組的模擬結果，那樣怎樣避免hard coding?</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">elist&lt;-vector(&quot;list&quot;,ncol(rst))#指定大小的list,如果空集合elist&lt;-list()
+for(i in 1:ncol(rst)){
+  elist[[i]]&lt;-rst[,i] #注意雙括號
+}
+</code></pre>
+<div class="notices ms-5 w-75">
+    <div class="sidebar">
+        之前有提過，大部分的文件都是說單/雙括號的差別是前者拿到的仍然是list,後者拿到的是內容。
+但是以程式語言的眼光來看，我們先說凡是陣列，其元素的型態都只能放一樣（也就是大小固定），但是現在list的元素型態可以不單一，因此，編譯器無法知道如何指派大小，解決辦法就是每一個元素其實都是一個指標。
+（todo: 需要一個圖）
+    </div>
+</div>
+
+<h3 id="利用套件sm">利用套件<code>sm</code></h3>
+<p>The sm package also includes a way of doing multiple density plots. The data must be in a data frame.</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">library(sm)
+#&gt; Package 'sm', version 2.2-5.6: type help(sm) for summary information
+rstdf&lt;-data.frame(rst)
+colnames(rstdf)&lt;-c(&quot;male&quot;,&quot;female&quot;)
+sm.density.compare(rstdf$male, rstdf$female)
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-13-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># Add a legend (the color numbers start from 2 and go up)
+#legend(&quot;topright&quot;, levels(data$cond), fill=2+(0:nlevels(data$cond)))
+</code></pre>
+<h3 id="sm-範例">sm 範例</h3>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">sm.density.compare(iris$Sepal.Length, iris$Species, xlab=&quot;Species&quot;)
+title(main=&quot;Distributions of Species&quot;)
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-14-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- seq(from = 110, to = 174, by = 0.5)
+y1 &lt;- dnorm(x, mean = 145, sd = 9)
+y2 &lt;- dnorm(x, mean = 138, sd = 8)
+plot(x, y1, type=&quot;l&quot;, lwd=2, col=&quot;red&quot;,
+     main=&quot;Systolic Blood Pressure Before and After Treatment&quot;,
+     xlab = &quot;Systolic Blood Pressure (mmHg)&quot;,
+     ylab = &quot;Frequency&quot;, yaxt=&quot;n&quot;,
+     xlim = c(110, 175), ylim = c(0, 0.05))
+lines(x, y2)
+polygon(c(110,x,175),c(0,y2,0), col=&quot;firebrick3&quot;,
+     border = &quot;black&quot;)
+polygon(c(117,x,175),c(0,y1,0), col=&quot;dodgerblue4&quot;,
+     border = &quot;black&quot;)
+ylab=c(seq(from=0, to=175, by=25))
+y=c(seq(from=0, to=0.05, length.out = 8))
+axis(2,at=y,labels=ylab, las=1)#下左（2），在y向量上標ylab,las 文字和座標的角度
+text(x = 120, y = 0.045, &quot;- Pre-Treatment BP&quot;, col = &quot;dodgerblue4&quot;, cex = 0.9)
+text(x = 120, y = 0.04, &quot; - Post-Treatment BP&quot;, col = &quot;firebrick3&quot;, cex = 0.9)
+points(109, 0.0445, pch = 15, col = &quot;dodgerblue4&quot;)
+points(109, 0.0395, pch = 15, col = &quot;firebrick3&quot;)
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-15-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<p>其他測試</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x  &lt;- seq(-2, 2, 0.05)
+y1 &lt;- pnorm(x)
+y2 &lt;- pnorm(x,1,1)
+plot(x,y1,type=&quot;l&quot;,col=&quot;red&quot;)
+lines(x,y2,col=&quot;green&quot;)
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-16-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">plot( x, y1, type=&quot;l&quot;, col=&quot;red&quot; )
+par(new=TRUE)
+plot( x, y2, type=&quot;l&quot;, col=&quot;green&quot; )
+</code></pre>
+<p><!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-17-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+note: add=TRUE 有時候不作用，例如plot</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">hist( y1 ,col=&quot;red&quot;  )
+hist( y2, add=TRUE,col=&quot;blue&quot;  )
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="4_02_sim_files/figure-html/unnamed-chunk-18-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../../css/quicknote.css?1636003356" rel="stylesheet">
+<script src="../../js/quicknote.js?1636003356"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../../topic/simulation/4_01_sim.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=4.1&#32;模擬基本&#32;1>前</a>
+                   
+          
+            <a href="../../topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=MC_基本>後</a>            
+          
+          
+
+  
+<script src="../../js/packhtml.js?1636003356"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../../js/featherlight.min.js?1636003356"></script>
+  <script src="../../js/featherlight.gallery.min.js?1636003356"></script>
+  <link href="../../css/featherlight.min.css?1636003356" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1636003356" rel="stylesheet">
+
+  <script src="../../js/highlight.pack.js?1636003356"></script>
+  
+  <script src="../../js/hugohelper.js?1636003356"></script>
+
+  <link href="../../css/rmd.css?1636003356" rel="stylesheet">
+  <link href="../../css/mystyle.css?1636003356" rel="stylesheet">    
+  <script src='../../js/variant.js?1636003356'></script>
+
+<script>
+  
+    let idxfile = "\/blogR\/index.json"  
+  
+</script>
+<script src='../../js/localsearch.js?1636003356'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']  , ['\\[','\\]']] 
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      
+      
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

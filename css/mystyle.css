@@ -40,11 +40,10 @@ margin:0px;
 }
 #body-inner ul > li {
 position: relative;
-padding-left: 5px;
-padding-bottom: 0.2rem;
+padding-left: 2px;
 }
 #body-inner ul > li::marker {
-content: "📌";
+content: "🦠"; /*📌*/
 font-size:60%;
 }
 #body-inner ul > li > ul > li::marker{
@@ -121,40 +120,58 @@ a[data-role-posix]:after{
 position: relative;
 display: inline-block;
 visibility: visible;
-
 opacity: 100;
+/*width:400px;*/
+
 }
 
 .tooltiptext {
 visibility: hidden;
 max-width: 100%;
-min-width: 250px;
-width: max-content;
+/*min-width: 250px; 
+width: max-content; */
+
 color: #fff !important;
-background-color: red !important;
-font-weight: bold;
+background-color: #dc3545 !important;
 text-align: left;
 border-radius: 6px;
 padding: 2px 0;
-
+box-sizing: border-box;
 /* Position the tooltip */
 position: absolute;
 z-index: 1000;
 left: 1rem;
 top: 1rem;
-
+padding:0.5rem;
 }
 .tooltiptext span{
   color:#fff !important;
 }
+.tooltiptext code{
+  background-color: transparent;
+  border: #282c34 solid 2px;
+  box-shadow: unset;  
+  display:inline;
+
+}
+
 .codenote a{
   /*color: #fff !important;*/
-  color: inherit !important;
+  color: inherit !important; 
   border:none !important;
+  
+}
+
+.codenote:hover{
+  width: 400px;
+  
 }
 .codenote:hover .tooltiptext, .tooltiptext:focus {
 visibility: visible;
+
 }
+
+
 #body-inner a.mynote {
 border-bottom: 1px solid #CBF8DF;
 box-shadow: none;
@@ -254,13 +271,11 @@ min-width: 160px;
 
 #body-inner ol:not([class]) {
 list-style: none;
-margin: 32px 0;
-position: relative
-}
+margin: 1rem 0;
 
-#body-inner ol:not([class]) {
+padding-left: 32px;
 counter-reset: ol-step-counter;
-padding-left: 32px
+position: relative
 }
 
 #body-inner ol:not([class])>li {
@@ -410,6 +425,7 @@ div.sidebar, div.base {
 .file-tree li:last-child::before {
   content: '\2514\2500\2500\0020';
 }
-.tooltiptext code{
-  background-color: #001dffd4;
+figure a{
+  background-color: #8ce9e400 !important;
+  border: none!important;
 }

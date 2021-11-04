@@ -25,11 +25,20 @@
     </item>
     
     <item>
-      <title>bays1</title>
-      <link>/topic/simulation/bays1.html</link>
+      <title>4.1 模擬基本 1</title>
+      <link>/topic/simulation/4_01_sim.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/simulation/bays1.html</guid>
+      <guid>/topic/simulation/4_01_sim.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4.2 模擬基本 2</title>
+      <link>/topic/simulation/4_02_sim.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/simulation/4_02_sim.html</guid>
       <description></description>
     </item>
     
@@ -48,15 +57,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/simulation/poisson%E5%88%86%E9%85%8D.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>simulation_1</title>
-      <link>/topic/simulation/simulation_1.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/topic/simulation/simulation_1.html</guid>
       <description></description>
     </item>
     

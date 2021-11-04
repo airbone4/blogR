@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rlangs on R in Class</title>
+    <title>基礎R on R in Class</title>
     <link>/rlang.html</link>
-    <description>Recent content in Rlangs on R in Class</description>
+    <description>Recent content in 基礎R on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/rlang/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -16,18 +16,6 @@
     </item>
     
     <item>
-      <title>2.3 data explorer</title>
-      <link>/rlang/2_3_data_explorer.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/2_3_data_explorer.html</guid>
-      <description>目的 練習撰寫函數,利用data.frame,levels,factor
-練習問題 從現有資料集中, 分出各組資料。
-💡可以使用管道方式,比較簡潔。
-age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group) 分組列出summary:利用自己的函數 age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5.2115, 36.7803)group = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)dframe = data.frame(age=age, group=group)mygroup&amp;lt;-function(df,g,idx){ft&amp;lt;-factor(df$g)gf&amp;lt;-ft==levels(ft)[idx] # 第一組g1&amp;lt;-df[gf,]return(g1) }x&amp;lt;-mygroup(dframe,&amp;quot;group&amp;quot;,1) 問題： 現在把某個欄位依據分組畫出boxplot A:age B:group(1,2) 不足的補NA,每一欄成為矩陣，例如共兩組，那麼矩陣欄位就是2，比數為各組資料，長度不夠補na， 最後 boxplot(mtx)</description>
-    </item>
-    
-    <item>
       <title>4.2 向量</title>
       <link>/rlang/4_2_type_vector.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -36,17 +24,6 @@ age = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,34.935, 35.2115, 35.2115, 5
       <description>vector 函數範例 cbind,rbind x&amp;lt;-runif(5)y&amp;lt;-runif(6)cbind(x,y)#&amp;gt; Warning in cbind(x, y): number of rows of result is not a multiple of vector#&amp;gt; length (arg 1)#&amp;gt; x y#&amp;gt; [1,] 0.05555426 0.81078837#&amp;gt; [2,] 0.39638526 0.83144706#&amp;gt; [3,] 0.26659782 0.42948876#&amp;gt; [4,] 0.14729596 0.21873952#&amp;gt; [5,] 0.50746265 0.03657459#&amp;gt; [6,] 0.05555426 0.50790482 函數diff 可以用在差分計算
 Arguments
  x: a numeric vector or matrix containing the values to be differenced. lag: an integer indicating which lag to use.</description>
-    </item>
-    
-    <item>
-      <title>4.5 字串</title>
-      <link>/rlang/4_5_type_string_function.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/4_5_type_string_function.html</guid>
-      <description>字串函數 R提供的字串函數(ascii)  nchar: string length paste: concatenate strings substr: substring toupper: convert entire string to uppercase tolower: convert entire string to lowercase chartr: character map replacement (like &amp;quot;tr&amp;quot;) strtrim：trunates string  nchar, substr, toupper, tolower will accept string vectors as arguments and return vector results.
-strtrim accepts both a vector of strings and a vector of truncation positions.
- \&#39;: 等同於 &amp;quot;&#39;&amp;quot; . \&amp;quot;: 等同於 &#39;&amp;quot;&#39;. \n: newline. \r: carriage return.</description>
     </item>
     
     <item>
@@ -62,16 +39,6 @@ strtrim accepts both a vector of strings and a vector of truncation positions.
     </item>
     
     <item>
-      <title>10. Tidy basic</title>
-      <link>/rlang/10_00_tidybasic01.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/10_00_tidybasic01.html</guid>
-      <description>需要安裝babynames,ggplot2 Tidy Basic 01 require(tidyr)require(dplyr) # data_frame From http://stackoverflow.com/questions/1181060
-require(tidyr)## 載入需要的套件：tidyrrequire(dplyr) # data_frame## 載入需要的套件：dplyr## ## 載入套件：&#39;dplyr&#39;## 下列物件被遮斷自 &#39;package:stats&#39;:## ## filter, lag## 下列物件被遮斷自 &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionstocks &amp;lt;- data_frame(time = as.Date(&#39;2009-01-01&#39;) + 0:9,X = rnorm(10, 0, 1),Y = rnorm(10, 0, 2),Z = rnorm(10, 0, 4))## Warning: `data_frame()` was deprecated in tibble 1.</description>
-    </item>
-    
-    <item>
       <title>11. sampling</title>
       <link>/rlang/11_00_sampling.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -81,28 +48,6 @@ require(tidyr)## 載入需要的套件：tidyrrequire(dplyr) # data_frame## �
  no replacement, 等機率:  例如從52張撲克牌中抽取5張:
 sample(1:52, 5)#&amp;gt; [1] 15 7 10 12 23 replacement: 例如拋一枚均勻的硬幣10次  sample(c(&amp;quot;H&amp;quot;, &amp;quot;T&amp;quot;), 10, replace=T)#&amp;gt; [1] &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; 練習:一棵骰子擲10次可表示為:
 不等可能的隨機抽樣: sample(x, n, replace=TRUE, prob=y) prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機取出成功的概率為0.</description>
-    </item>
-    
-    <item>
-      <title>13. Econometrics</title>
-      <link>/rlang/13_0_eco_01_intro.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/13_0_eco_01_intro.html</guid>
-      <description>package recommended package foreign 可以用來導入外部資料例如，
- stata 的資料 dta, SPSS SAS Systat Mini tab . mtp  利用foreign讀入stata 的資料檔：
-require(foreign)#&amp;gt; 載入需要的套件：foreignaffairs&amp;lt;- read.dta(&amp;quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&amp;quot;)save(affairs,file=&#39;./resources/affairs.RData&#39;) 測試
-rm(affairs)load(&#39;./resources/affairs.RData&#39;)head(affairs)#&amp;gt; id male age yrsmarr kids relig educ occup ratemarr naffairs affair vryhap#&amp;gt; 1 4 1 37 10.0 0 3 18 7 4 0 0 0#&amp;gt; 2 5 0 27 4.0 0 4 14 6 4 0 0 0#&amp;gt; 3 6 1 27 1.</description>
-    </item>
-    
-    <item>
-      <title>14. simulation 1</title>
-      <link>/rlang/14_00_sim_1.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/14_00_sim_1.html</guid>
-      <description>basic dnorm : PDF pnorm : CDF qnorm : inverse CDF rnorm : random
-cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# Now we&#39;ll plot these valuesplot(pvalues, # Plot where y = values and x = index of the value in the vectorxaxt = &amp;quot;n&amp;quot;, # Don&#39;t label the x-axistype = &amp;quot;l&amp;quot;, # Make it a line plotmain = &amp;quot;cdf of the Standard Normal&amp;quot;,xlab= &amp;quot;Quantiles&amp;quot;,ylab=&amp;quot;Probability Density&amp;quot;) # These commands label the x-axisaxis(1, at=which(pvalues == pnorm(-2)), labels=round(pnorm(-2), 2))axis(1, at=which(pvalues == pnorm(-1)), labels=round(pnorm(-1), 2))axis(1, at=which(pvalues == pnorm(0)), labels=c(.</description>
     </item>
     
     <item>
@@ -142,6 +87,17 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
+      <title>10. tidyr, dplyr basic</title>
+      <link>/rlang/10_00_dplyrbasic01.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/10_00_dplyrbasic01.html</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf&#34;&gt;cheat sheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>11 Environments</title>
       <link>/rlang/11_environments.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -178,31 +134,21 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
+      <title>2.3 資料探索</title>
+      <link>/rlang/2_3_data_explorer.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/2_3_data_explorer.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>3. Quick view 1</title>
       <link>/rlang/3_quickview1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/3_quickview1.html</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>3.02.regular練習</title>
-      <link>/rlang/3_02_regular%E7%B7%B4%E7%BF%92.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/3_02_regular%E7%B7%B4%E7%BF%92.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>3.1 Regular expression syntax</title>
-      <link>/rlang/3_01_regular_expression.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/3_01_regular_expression.html</guid>
-      <description>&lt;p&gt;這裡只是正規表達式(Regular expressions)簡短的介紹:總之就是利用一些特殊字元，例如 &lt;code&gt;$ * + . ? [ ] ^ { } | ( ) \&lt;/code&gt;，用來在文字中表達某些搜尋樣式(pattern)
-的語法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -233,6 +179,24 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
+      <title>4.12 regular練習</title>
+      <link>/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>4.15 json</title>
+      <link>/rlang/4_15_json.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/4_15_json.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>4.3 矩陣</title>
       <link>/rlang/4_3_type_matrix.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -251,47 +215,29 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
-      <title>4.4.1 json</title>
-      <link>/rlang/4_11_json.html</link>
+      <title>4.5 字串處理函數</title>
+      <link>/rlang/4_5_type_string_function.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_11_json.html</guid>
+      <guid>/rlang/4_5_type_string_function.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.6 資料集 data frame</title>
-      <link>/rlang/4_6_topic_dataframe.html</link>
+      <link>/rlang/4_6_type_dataframe.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_6_topic_dataframe.html</guid>
+      <guid>/rlang/4_6_type_dataframe.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>4.7 data.frame, table, data,table</title>
-      <link>/rlang/4_7_type_more.html</link>
+      <title>4.7 因子</title>
+      <link>/rlang/4_7_type_factor.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_7_type_more.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>5 R的物件相關概念</title>
-      <link>/rlang/5_objectbasic.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/5_objectbasic.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>5.1 物件導向S3</title>
-      <link>/rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</guid>
+      <guid>/rlang/4_7_type_factor.html</guid>
       <description></description>
     </item>
     
@@ -350,11 +296,20 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
-      <title>8.1. 自製套件</title>
-      <link>/rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</link>
+      <title>7.8 R的物件相關概念</title>
+      <link>/rlang/7_8_objectbasic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</guid>
+      <guid>/rlang/7_8_objectbasic.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7.9 物件導向S3</title>
+      <link>/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</guid>
       <description></description>
     </item>
     
@@ -377,7 +332,7 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
     </item>
     
     <item>
-      <title>9.3 Plot more</title>
+      <title>9.3 畫圖練習</title>
       <link>/rlang/9_3_plot.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -391,15 +346,6 @@ cdf z_scores &amp;lt;- seq(-3, 3, by = .1)pvalues &amp;lt;- pnorm(z_scores)# N
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/rlang/blogdown_debug.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>xxx</title>
-      <link>/rlang/xxx.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/rlang/xxx.html</guid>
       <description></description>
     </item>
     

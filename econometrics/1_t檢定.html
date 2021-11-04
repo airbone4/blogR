@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1635398991" rel="stylesheet">
-    <link href="../css/syntax.css?1635398991" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1635398991"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1636003356" rel="stylesheet">
+    <link href="../css/syntax.css?1636003356" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1636003356"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1635398991" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1636003356" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1635398991" rel="stylesheet">
+    <link href="../css/theme-mine.css?1636003356" rel="stylesheet">
     
-    <link href="../css/theme.css?1635398991" rel="stylesheet">
+    <link href="../css/theme.css?1636003356" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -37,14 +37,22 @@
     <div class="wrapper">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#formula-of-paired-samples-t-test">Formula of paired samples t-test</a>
+    <li><a href="#t檢定">t檢定</a></li>
+    <li><a href="#t檢定--單樣本">t檢定- 單樣本</a></li>
+    <li><a href="#t檢定---配對">t檢定 - 配對</a>
       <ul>
-        <li><a href="#plot-weight-by-group-and-color-by-group">Plot weight by group and color by group</a></li>
         <li><a href="#preleminary-test-to-check-paired-t-test-assumptions">Preleminary test to check paired t-test assumptions</a></li>
         <li><a href="#how-to-check-the-normality">❓How to check the normality?</a></li>
+        <li><a href="#練習">練習</a></li>
       </ul>
     </li>
-    <li><a href="#paired-t-test--is-there-any-significant-changes-in-the-weights-of-mice-after-treatment">paired t-test:  Is there any significant changes in the weights of mice after treatment?</a></li>
+    <li><a href="#t檢定---獨立樣本">t檢定 - 獨立樣本</a></li>
+    <li><a href="#利用管道">利用管道</a>
+      <ul>
+        <li><a href="#準備材料">準備材料</a></li>
+        <li><a href="#視覺探索">視覺探索</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -53,13 +61,15 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 28, 2021'>1.0 t檢定</span>
+      title='最後修改October 31, 2021'>1.0 t檢定</span>
         
     
 
     </span>
   
-  <span></span><span >
+  <span><a class="btn btn-outline-dark p-0" style="font-size:12px" href="../tags/t-test.html">
+    <i class="fas fa-tag"></i>t-test
+</a></span><span >
     <span >
     <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
     <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
@@ -88,18 +98,18 @@
 
  
 
+ 
 
-<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎R">
      
 
   <a class="nav-link" 
-    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
-    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+    href="../rlang.html"><i class="far fa-folder"></i>基礎R  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_92db98bffe2d6697b3536cbbf7b00074" aria-expanded="false">
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
-  <ul id="menu_item_"  
+  <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
   class="submenu collapse" 
   data-bs-parent="#home-topics"> 
     
@@ -155,19 +165,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 資料探索">2.3 資料探索</a></li>
     
   
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
-    
-  
     
   
         <li class="nav-item">
@@ -197,34 +200,26 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_11_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串處理函數">4.5 字串處理函數</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串">4.5 字串</a></li>
+          <a class="nav-link" href="../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_6_topic_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
+          <a class="nav-link" href="../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" title="4.7 因子">4.7 因子</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 data.frame, table, data,table">4.7 data.frame, table, data,table</a></li>
     
   
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/5_objectbasic.html" data-bs-toggle="tooltip" title="5 R的物件相關概念">5 R的物件相關概念</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="5.1 物件導向S3">5.1 物件導向S3</a></li>
+          <a class="nav-link" href="../rlang/4_15_json.html" data-bs-toggle="tooltip" title="4.15 json">4.15 json</a></li>
     
   
         <li class="nav-item">
@@ -254,6 +249,14 @@
           <a class="nav-link" href="../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" title="7.8 R的物件相關概念">7.8 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="7.9 物件導向S3">7.9 物件導向S3</a></li>
     
   
         <li class="nav-item">
@@ -268,9 +271,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 Plot more">9.3 Plot more</a></li>
+          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 畫圖練習">9.3 畫圖練習</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" title="10. tidyr, dplyr basic">10. tidyr, dplyr basic</a></li>
     
   
         <li class="nav-item">
@@ -283,21 +289,6 @@
           <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
-    
-  
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/xxx.html" data-bs-toggle="tooltip" title="xxx">xxx</a></li>
     
   
     
@@ -305,6 +296,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="暫時">
      
@@ -315,10 +307,9 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_"> 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
     
 
   
@@ -331,9 +322,7 @@
           
           <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
@@ -342,6 +331,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="練習用">
      
@@ -352,10 +342,9 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_"> 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
     
 
   
@@ -381,9 +370,7 @@
           
           <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
@@ -393,9 +380,7 @@
           
           <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -405,6 +390,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
      
@@ -415,7 +401,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
   class="submenu collapse show" 
   data-bs-parent="#home-topics"> 
@@ -424,6 +409,11 @@
   
   
   
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../econometrics/0_prerequest.html" data-bs-toggle="tooltip" title="0 前置準備">0 前置準備</a></li>
+    
   
         <li class="nav-item active">
           
@@ -450,15 +440,8 @@
           <a class="nav-link" href="../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/statatest.html" data-bs-toggle="tooltip" title="statatest">statatest</a></li>
-    
-  
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -468,6 +451,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="專題">
      
@@ -478,7 +462,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
   class="submenu collapse" 
   data-bs-parent="#home-topics"> 
@@ -489,19 +472,11 @@
   
   
     
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
-    
-  
-    
-  
-    
   <li>
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="實驗">
      
@@ -512,7 +487,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
   class="submenu collapse" 
   data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
@@ -524,22 +498,22 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/simulation/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/simulation_1.html" data-bs-toggle="tooltip" title="simulation_1">simulation_1</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
     
   
         <li class="nav-item">
           
           <a class="nav-link" href="../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" title="4.1 模擬基本 1">4.1 模擬基本 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" title="4.2 模擬基本 2">4.2 模擬基本 2</a></li>
     
   
         <li class="nav-item">
@@ -556,18 +530,14 @@
           
           <a class="nav-link" href="../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
     
   
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -580,33 +550,26 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_7_type_more.html"> <i class="far fa-clock" ></i>4.7 data.frame, table, data,table[2021-10-28 PM 01:29]</a></li><li><a href="../rlang/4_6_topic_dataframe.html"> <i class="far fa-clock" ></i>4.6 資料集 data frame[2021-10-28 PM 12:41]</a></li><li><a href="../rlang/2_3_data_explorer.html"> <i class="far fa-clock" ></i>2.3 data explorer[2021-10-28 PM 12:30]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-04 PM 01:00]</a></li><li><a href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-04 PM 12:37]</a></li><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <p>需要套件</p>
-<pre><code class="language-r?preclass=.ms-5.w-75">if(!require(devtools)) install.packages(&quot;devtools&quot;)
-devtools::install_github(&quot;kassambara/ggpubr&quot;) # Or, install from CRAN as follow: install.packages(&quot;ggpubr&quot;)
-
-install.packages(&quot;PairedData&quot;) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏Box plots show you the increase, but lose the paired information. You can use the function plot.paired() [in pairedData package] to plot paired data (“before - after” plot).</span></span><!--/html_preserve-->
-</code></pre>
-<h2 id="formula-of-paired-samples-t-test">Formula of paired samples t-test</h2>
-<p>計算t-test statistisc 的公式:</p>
-<p>$$ t = \frac{m}{s/\sqrt{n}} $$</p>
-<p>where,</p>
+    <p>暫時
+<a href="https://statistics.berkeley.edu/computing/r-t-tests"></a></p>
+<h2 id="t檢定">t檢定</h2>
+<p>t檢定</p>
 <ul>
-<li>m is the mean differences</li>
-<li>n is the sample size (i.e., size of d).</li>
-<li>s is the standard deviation of d</li>
+<li>單一樣本</li>
+<li>獨立樣本</li>
+<li>配對樣本
+在R中,配對樣本的平均比較 可以用函數<code>t.test()</code></li>
 </ul>
-<p>在R中,配對樣本的平均比較 可以用函數<code>t.test()</code></p>
-<pre><code class="language-r?preclass=.ms-5.w-75">t.test(x, y, paired = TRUE, alternative = &quot;two.sided&quot;)
+<pre><code class="language-r">t.test(x, y, paired = TRUE, alternative = &quot;two.sided&quot;)
 </code></pre>
 <ul>
-<li>x,y: numeric vectors</li>
-<li>paired: a logical value specifying that we want to compute a paired t-test</li>
-<li>alternative: the alternative hypothesis.
+<li>x,y: 數字向量</li>
+<li>paired: 是否計算配對t檢定.</li>
+<li>對立假設alternative hypothesis.
 <ul>
 <li><code>two.sided</code> (*),</li>
 <li><code>greater</code></li>
@@ -614,78 +577,129 @@ install.packages(&quot;PairedData&quot;) #<!--html_preserve--><span data-nopre c
 </ul>
 </li>
 </ul>
+<h2 id="t檢定--單樣本">t檢定- 單樣本</h2>
+<pre><code class="language-r?preclass=code-out.ms-5.w-75">One Sample t-test
+
+data:  audit$y
+t = -4.2768, df = 240, p-value = 2.739e-05
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ -0.1939385 -0.0716217  **說明：mu +/- c.level*(se) 見手算例   **
+sample estimates:
+ mean of x 
+-0.1327801 
+
+</code></pre>
+<h2 id="t檢定---配對">t檢定 - 配對</h2>
+<p>Is there any significant changes in the weights of mice after treatment?</p>
+<ol>
+<li>
 <p>產生資料</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
-before &lt;-c(200.1, 190.9, 192.7, 213, 241.4, 196.9, 172.2, 185.5, 205.2, 193.7)
+<pre><code class="language-r?lang=r?class=.source?preclass=">before &lt;-c(200.1, 190.9, 192.7, 213, 241.4, 196.9, 172.2, 185.5, 205.2, 193.7)
 after &lt;-c(392.9, 393.2, 345.1, 393, 434, 427.9, 422, 383.9, 392.3, 352.2)
-my_data &lt;- data.frame( 
-                group = rep(c(&quot;before&quot;, &quot;after&quot;), each = 10), 
-                weight = c(before,  after)
-                ) # <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏rep() 中的each,表示每個元素重複10次,否則就是b,a重複10次</span></span><!--/html_preserve-->
-# We want to know, if there is any significant difference in the mean weights after treatment?
-# Compute summary statistics (mean and sd) by groups using the dplyr package.
-
-library(&quot;dplyr&quot;)
-group_by(my_data, group) %&gt;%
-  summarise(
-    count = n(),
-    mean = mean(weight, na.rm = TRUE),
-    sd = sd(weight, na.rm = TRUE)
-  )
-#&gt; # A tibble: 2 x 4
-#&gt;   group  count  mean    sd
-#&gt;   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
-#&gt; 1 after     10  394.  29.4
-#&gt; 2 before    10  199.  18.5
 </code></pre>
-<h3 id="plot-weight-by-group-and-color-by-group">Plot weight by group and color by group</h3>
-<p>Visualize your data using box plots</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">library(&quot;ggpubr&quot;)
-ggboxplot(my_data, x = &quot;group&quot;, y = &quot;weight&quot;, 
-          color = &quot;group&quot;, palette = c(&quot;#00AFBB&quot;, &quot;#E7B800&quot;),
-          order = c(&quot;before&quot;, &quot;after&quot;),
-          ylab = &quot;Weight&quot;, xlab = &quot;Groups&quot;)
+</li>
+<li>
+<p>是否有差異</p>
+<ol>
+<li>
+<p>方法1: 資料被分成兩個資料集。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass="># Compute t-test
+res &lt;- t.test(before, after, paired = TRUE)
+res
+#&gt; 
+#&gt; 	Paired t-test
+#&gt; 
+#&gt; data:  before and after
+#&gt; t = -20.883, df = 9, p-value = 6.2e-09
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -215.5581 -173.4219
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                 -194.49
 </code></pre>
+</li>
+<li>
+<p>方法2:長資料</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">my_data &lt;- data.frame( 
+        group = rep(c(&quot;before&quot;, &quot;after&quot;), each = 10), 
+        weight = c(before,  after)
+        ) # <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏rep() 中的each,表示每個元素重複10次,否則就是b,a重複10次</span></span><!--/html_preserve-->    
 
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-    <img src="1_t%e6%aa%a2%e5%ae%9a_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-
-<p>Plot paired data:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
-# Subset weight data before treatment
-before &lt;- subset(my_data,  group == &quot;before&quot;, weight,  drop = TRUE)
-# subset weight data after treatment
-after &lt;- subset(my_data,  group == &quot;after&quot;, weight,  drop = TRUE)
-# Plot paired data
-library(PairedData)
-pd &lt;- paired(before, after)
-
-plot(pd, type = &quot;profile&quot;) + theme_bw() #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏theme_bw()黑白主題</span></span><!--/html_preserve-->
+# Compute t-test
+res &lt;- t.test(weight ~ group, data = my_data, paired = TRUE)
+res
+#&gt; 
+#&gt; 	Paired t-test
+#&gt; 
+#&gt; data:  weight by group
+#&gt; t = 20.883, df = 9, p-value = 6.2e-09
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  173.4219 215.5581
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                  194.49
 </code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>之前的平均小於之後的平均</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">t.test(weight ~ group, data = my_data, paired = TRUE, alternative = &quot;less&quot;)
+#&gt; 
+#&gt; 	Paired t-test
+#&gt; 
+#&gt; data:  weight by group
+#&gt; t = 20.883, df = 9, p-value = 1
+#&gt; alternative hypothesis: true difference in means is less than 0
+#&gt; 95 percent confidence interval:
+#&gt;      -Inf 211.5623
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                  194.49
+</code></pre>
+</li>
+<li>
+<p>之前的平均大於之後的平均</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">t.test(weight ~ group, data = my_data, paired = TRUE, alternative = &quot;greater&quot;)
+#&gt; 
+#&gt; 	Paired t-test
+#&gt; 
+#&gt; data:  weight by group
+#&gt; t = 20.883, df = 9, p-value = 3.1e-09
+#&gt; alternative hypothesis: true difference in means is greater than 0
+#&gt; 95 percent confidence interval:
+#&gt;  177.4177      Inf
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                  194.49
+</code></pre>
+</li>
+</ol>
+<p>最後因為這個p值 6.210^{-9}, 小於 significance level alpha = 0.05. 因此之後顯著異於之前。</p>
+<p>看一下檢定的結果,例子中的<code>res</code></p>
+<pre><code class="language-r?preclass=.ms-5.w-75">str(res)
+#&gt; List of 10
+#&gt;  $ statistic  : Named num 20.9 <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏the value of the t test statistics</span></span><!--/html_preserve-->
+#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;t&quot;
+#&gt;  $ parameter  : Named num 9  <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏the degrees of freedom for the t test statistics</span></span><!--/html_preserve-->
+#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;df&quot;
+#&gt;  $ p.value    : num 6.2e-09 <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏the p-value for the test</span></span><!--/html_preserve-->
+#&gt;  $ conf.int   : num [1:2] 173 216 <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏a confidence interval for the mean appropriate to the specified alternative hypothesis.</span></span><!--/html_preserve-->
+#&gt;   ..- attr(*, &quot;conf.level&quot;)= num 0.95
+#&gt;  $ estimate   : Named num 194 <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏the means of the two groups being compared (in the case of independent t test) or difference in means (in the case of paired t test)</span></span><!--/html_preserve-->
+#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;mean of the differences&quot;
+#&gt;  $ null.value : Named num 0
+#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;difference in means&quot;
+#&gt;  $ stderr     : num 9.31
+#&gt;  $ alternative: chr &quot;two.sided&quot;
+#&gt;  $ method     : chr &quot;Paired t-test&quot;
+#&gt;  $ data.name  : chr &quot;weight by group&quot;
+#&gt;  - attr(*, &quot;class&quot;)= chr &quot;htest&quot;
 
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-    <img src="1_t%e6%aa%a2%e5%ae%9a_files/figure-html/unnamed-chunk-4-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-
+</code></pre>
 <h3 id="preleminary-test-to-check-paired-t-test-assumptions">Preleminary test to check paired t-test assumptions</h3>
 <ol>
 <li>Assumption 1: Are the two samples paired?</li>
@@ -705,7 +719,7 @@ plot(pd, type = &quot;profile&quot;) + theme_bw() #<!--html_preserve--><span dat
 <li>Null hypothesis: the data are normally distributed</li>
 <li>Alternative hypothesis: the data are not normally distributed</li>
 </ul>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># compute the difference
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># 計算前後差距
 d &lt;- with(my_data, 
         weight[group == &quot;before&quot;] - weight[group == &quot;after&quot;])
 # Shapiro-Wilk normality test for the differences
@@ -716,90 +730,305 @@ shapiro.test(d) # =&gt; p-value = 0.6141
 #&gt; data:  d
 #&gt; W = 0.94536, p-value = 0.6141
 </code></pre>
-<p>p值&gt; significance level 0.05 差異(d)的分配沒有顯著異於常態分配,因此可以假設是常態分配。
-<div class="notices m-auto w-75">
+<p>p值&gt; significance level 0.05 差異的分配沒有顯著異於常態分配,因此可以假設是常態分配。
+<div class="notices ms-5 w-75">
     <div class="info">
         如果不是常態分配,可以考慮使用non parametric paired two-samples Wilcoxon test.
     </div>
 </div>
 </p>
-<h2 id="paired-t-test--is-there-any-significant-changes-in-the-weights-of-mice-after-treatment">paired t-test:  Is there any significant changes in the weights of mice after treatment?</h2>
-<p>paired t-test</p>
-<ol>
+<h3 id="練習">練習</h3>
+<p>練習目的 : 熟悉R語言而已。
+<!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve-->❓問題: 不用<code>sd()</code>,<code>mean()</code>計算平均值,標準差,標準誤差<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30203">提示</button>
+</div><!--/html_preserve-->
+<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-30203"><!--/html_preserve--><pre><code>```r?lang=r?class=.source?preclass=
+v.n &lt;- length(Change)
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'Change'
+v.mean &lt;- sum(Change)/v.n
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'Change'
+v.std &lt;-sqrt(sum((Change-v.mean)^2)/(v.n-1))
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'Change'
+v.se &lt;- v.std/sqrt(v.n)
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'v.std'
+rst&lt;-list(v.n,v.mean,v.std,v.se)
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'v.n'
+rst
+#&gt; Error in eval(expr, envir, enclos): 找不到物件 'rst'
+```
+</code></pre>
+<!--html_preserve--></div><!--/html_preserve--></p>
+<!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve--><p>❓利用公式 計算配對樣本的t-test</p>
+<p>計算t-test statistisc 的公式:</p>
+<p>$$ t = \frac{m}{s/\sqrt{n}} $$</p>
+<p>其中,</p>
+<ul>
+<li>m 組平均差值</li>
+<li>n 資料大小</li>
+<li>s 資料的standard deviation</li>
+</ul>
+<p>練習需要的資料</p>
+<pre><code class="language-r">SR87&lt;-c(10,1,6,.45,1.25,1.3,1.06,3,8.18,1.67,.98,1,.45, 5.03,8,9,18,.28,7,3.97)
+SR88&lt;-c(3,1,5,.5,1.54,1.5,.8,2,.67,1.17,.51,.5,.61,6.7, 4,7,19,.2,5,3.83)
+</code></pre>
+<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-30118">提示</button>
+</div><!--/html_preserve-->
+<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-30118"><!--/html_preserve--><ol>
 <li>
-<p>方法1: 資料被分成兩個資料集。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># Compute t-test
-res &lt;- t.test(before, after, paired = TRUE)
-res
-#&gt; 
-#&gt; 	Paired t-test
-#&gt; 
-#&gt; data:  before and after
-#&gt; t = -20.883, df = 9, p-value = 6.2e-09
-#&gt; alternative hypothesis: true difference in means is not equal to 0
-#&gt; 95 percent confidence interval:
-#&gt;  -215.5581 -173.4219
-#&gt; sample estimates:
-#&gt; mean of the differences 
-#&gt;                 -194.49
+<p>直接打入資料( Wooldridge, Table C.3):</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">SR87&lt;-c(10,1,6,.45,1.25,1.3,1.06,3,8.18,1.67,.98,1,.45, 5.03,8,9,18,.28,7,3.97)
+SR88&lt;-c(3,1,5,.5,1.54,1.5,.8,2,.67,1.17,.51,.5,.61,6.7, 4,7,19,.2,5,3.83)
 </code></pre>
 </li>
 <li>
-<p>方法2:長資料</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># Compute t-test
-res &lt;- t.test(weight ~ group, data = my_data, paired = TRUE)
-res
+<p>Calculate Change (the parentheses just display the results):</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">(Change &lt;- SR88 - SR87)
+#&gt;  [1] -7.00  0.00 -1.00  0.05  0.29  0.20 -0.26 -1.00 -7.51 -0.50 -0.47 -0.50
+#&gt; [13]  0.16  1.67 -4.00 -2.00  1.00 -0.08 -2.00 -0.14
+</code></pre>
+</li>
+<li>
+<p>Ingredients to CI formula</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">(avgCh&lt;- mean(Change)) # Change的平均
+#&gt; [1] -1.1545
+(n    &lt;- length(Change))
+#&gt; [1] 20
+(sdCh &lt;- sd(Change)) # Change的標準差
+#&gt; [1] 2.400639
+(se   &lt;- sdCh/sqrt(n)) # 標準誤
+#&gt; [1] 0.5367992
+(c    &lt;- qt(.975, n-1)) #quantile of t dist
+#&gt; [1] 2.093024
+</code></pre>
+</li>
+<li>
+<p>avgCh的95%信賴區間</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">c( avgCh - c*se, avgCh + c*se )
+#&gt; [1] -2.27803369 -0.03096631
+</code></pre>
+</li>
+<li>
+<p>t statistic for H0: mu=0:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">(t &lt;- avgCh/se)
+#&gt; [1] -2.150711
+</code></pre>
+</li>
+<li>
+<p>驗證</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">t.test(SR88,SR87,paired=T)
 #&gt; 
 #&gt; 	Paired t-test
 #&gt; 
-#&gt; data:  weight by group
-#&gt; t = 20.883, df = 9, p-value = 6.2e-09
+#&gt; data:  SR88 and SR87
+#&gt; t = -2.1507, df = 19, p-value = 0.04458
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;  173.4219 215.5581
+#&gt;  -2.27803369 -0.03096631
 #&gt; sample estimates:
 #&gt; mean of the differences 
-#&gt;                  194.49
+#&gt;                 -1.1545
+t.test(SR87,SR88)
+#&gt; 
+#&gt; 	Welch Two Sample t-test
+#&gt; 
+#&gt; data:  SR87 and SR88
+#&gt; t = 0.82325, df = 37.843, p-value = 0.4155
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -1.684837  3.993837
+#&gt; sample estimates:
+#&gt; mean of x mean of y 
+#&gt;    4.3810    3.2265
 </code></pre>
 </li>
 </ol>
-<ul>
-<li>之前的平均小於之後的平均
-<pre><code class="language-r?preclass=.ms-5.w-75">t.test(weight ~ group, data = my_data, paired = TRUE, alternative = &quot;less&quot;)
+<!--html_preserve--></div><!--/html_preserve-->
+<!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve--><p>❓黑白人士，用同一個CV找工作。
+A data.frame with 241 observations on 3 variables:</p>
+<p>w: =1 if white app. got job offer
+b: =1 if black app. got job offer
+y: b - w</p>
+<p><a href="../data/audit.dta">audit</a></p>
+<ol>
+<li>
+<p>看一下資料</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">library(haven) # library(readr)
+audit&lt;-read_dta('../data/audit.dta')
+head(audit)
+#&gt; # A tibble: 6 x 3
+#&gt;       w     b     y
+#&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1     1     1     0
+#&gt; 2     1     1     0
+#&gt; 3     1     1     0
+#&gt; 4     1     1     0
+#&gt; 5     1     1     0
+#&gt; 6     0     0     0
 </code></pre>
+<p>y是前兩個欄位相減。以第1筆資料為例，兩個都是1，沒差別(y=0)。</p>
 </li>
-<li>之前的平均大於之後的平均
-<pre><code class="language-r?preclass=.ms-5.w-75">t.test(weight ~ group, data = my_data, paired = TRUE, alternative = &quot;greater&quot;)
-</code></pre>
-</li>
-</ul>
-<p>最後因為這個p值 6.210^{-9}, 小於 significance level alpha = 0.05. 因此之後顯著異於之前。</p>
-<p>看一下檢定的結果,例子中的<code>res</code></p>
-<pre><code class="language-r?preclass=.ms-5.w-75">str(res)
-#&gt; List of 10
-#&gt;  $ statistic  : Named num 20.9 <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏the value of the t test statistics</span></span><!--/html_preserve-->
-#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;t&quot;
-#&gt;  $ parameter  : Named num 9  <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏the degrees of freedom for the t test statistics</span></span><!--/html_preserve-->
-#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;df&quot;
-#&gt;  $ p.value    : num 6.2e-09 <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏the p-value for the test</span></span><!--/html_preserve-->
-#&gt;  $ conf.int   : num [1:2] 173 216 <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏a confidence interval for the mean appropriate to the specified alternative hypothesis.</span></span><!--/html_preserve-->
-#&gt;   ..- attr(*, &quot;conf.level&quot;)= num 0.95
-#&gt;  $ estimate   : Named num 194 <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏the means of the two groups being compared (in the case of independent t test) or difference in means (in the case of paired t test)</span></span><!--/html_preserve-->
-#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;mean of the differences&quot;
-#&gt;  $ null.value : Named num 0
-#&gt;   ..- attr(*, &quot;names&quot;)= chr &quot;difference in means&quot;
-#&gt;  $ stderr     : num 9.31
-#&gt;  $ alternative: chr &quot;two.sided&quot;
-#&gt;  $ method     : chr &quot;Paired t-test&quot;
-#&gt;  $ data.name  : chr &quot;weight by group&quot;
-#&gt;  - attr(*, &quot;class&quot;)= chr &quot;htest&quot;
+</ol>
+<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-31220">提示</button>
+</div><!--/html_preserve-->
+<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-31220"><!--/html_preserve--><ol>
+<li>
+<p>計算</p>
+<pre><code class="language-r?lang=r?class=.source?preclass="># Ingredients to CI formula
+(avgy&lt;- mean(audit$y))
+#&gt; [1] -0.1327801
+(n   &lt;- length(audit$y))
+#&gt; [1] 241
+(sdy &lt;- sd(audit$y))
+#&gt; [1] 0.4819709
+(se  &lt;- sdy/sqrt(n))
+#&gt; [1] 0.03104648
+(c   &lt;- qnorm(.975))
+#&gt; [1] 1.959964
 
+# 95% Confidence intervall:
+avgy + c * c(-se,+se)
+#&gt; [1] -0.19363006 -0.07193011
+# 99% Confidence intervall:
+avgy + qnorm(.995) * c(-se,+se)
+#&gt; [1] -0.21275051 -0.05280966
 </code></pre>
+</li>
+<li>
+<p>t statistic for H0: mu=0:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">(t &lt;- avgy/se)
+#&gt; [1] -4.276816
+</code></pre>
+<p>自由度(d.f.)為  n-1 =<code>240</code> 的t分配，其臨界值Critical values(如下):</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">alpha.one.tailed = c(0.1, 0.05, 0.025, 0.01, 0.005, .001)
+CV &lt;- qt(1 - alpha.one.tailed, n-1)
+cbind(alpha.one.tailed, CV)
+#&gt;      alpha.one.tailed       CV
+#&gt; [1,]            0.100 1.285089
+#&gt; [2,]            0.050 1.651227
+#&gt; [3,]            0.025 1.969898
+#&gt; [4,]            0.010 2.341985
+#&gt; [5,]            0.005 2.596469
+#&gt; [6,]            0.001 3.124536
+</code></pre>
+</li>
+<li>
+<p>函數<code>t.test()</code>
+H0: y=5, H1:y&gt;5, 信賴區間0.99</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">t.test(y, mu=5, alternative=&quot;greater&quot;, conf.level=0.99)
+#&gt; Error in t.test(y, mu = 5, alternative = &quot;greater&quot;, conf.level = 0.99): 找不到物件 'y'
+</code></pre>
+</li>
+<li>
+<p>驗證利用函數t.test()算：</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">#  two-sided CI
+t.test(audit$y) #&lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;👏只有一個參數,看起來很像one-sample t-test 和0的比較&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
+#&gt; 
+#&gt; 	One Sample t-test
+#&gt; 
+#&gt; data:  audit$y
+#&gt; t = -4.2768, df = 240, p-value = 2.739e-05
+#&gt; alternative hypothesis: true mean is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -0.1939385 -0.0716217
+#&gt; sample estimates:
+#&gt;  mean of x 
+#&gt; -0.1327801
+#  1-sided test:
+t.test(audit$y, alternative=&quot;less&quot;)
+#&gt; 
+#&gt; 	One Sample t-test
+#&gt; 
+#&gt; data:  audit$y
+#&gt; t = -4.2768, df = 240, p-value = 1.369e-05
+#&gt; alternative hypothesis: true mean is less than 0
+#&gt; 95 percent confidence interval:
+#&gt;         -Inf -0.08151529
+#&gt; sample estimates:
+#&gt;  mean of x 
+#&gt; -0.1327801
+</code></pre>
+</li>
+</ol>
+<!--html_preserve--></div><!--/html_preserve-->
+<h2 id="t檢定---獨立樣本">t檢定 - 獨立樣本</h2>
+<p>合併標準差(pooled standard deviation)
+$$ s_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}} $$
+$$ s_p = \sqrt{\frac{(n_1 - 1) \times s_1^2 + (n_2 - 1) \times s_2^2}{n_1 + n_2 - 2}} $$</p>
+<h2 id="利用管道">利用管道</h2>
+<h3 id="準備材料">準備材料</h3>
+<p>需要套件</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">
+if(!reuire(ggpubr)) install.packages(&quot;ggpubr&quot;) 
+<!--html_preserve--><div  class="expand ms-5 w-75 ">
+<div  class="expand-label" onclick="vexpand(this)">
+<i  style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+<span  >利用devtools安裝</span>
+</div><div  class="expand-content" style="overflow-x:auto"><!--/html_preserve-->install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;kassambara/ggpubr&quot;)<!--html_preserve--></div></div><!--/html_preserve-->
+install.packages(&quot;PairedData&quot;) #<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏Box plots lose the paired information. You can use the function plot.paired() [in pairedData package] to plot paired data (“before - after” plot).</span></span><!--/html_preserve-->
+</code></pre>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
+before &lt;-c(200.1, 190.9, 192.7, 213, 241.4, 196.9, 172.2, 185.5, 205.2, 193.7)
+after &lt;-c(392.9, 393.2, 345.1, 393, 434, 427.9, 422, 383.9, 392.3, 352.2)
+my_data &lt;- data.frame( 
+                group = rep(c(&quot;before&quot;, &quot;after&quot;), each = 10), 
+                weight = c(before,  after)
+                ) # <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏rep() 中的each,表示每個元素重複10次,否則就是b,a重複10次</span></span><!--/html_preserve-->
+
+library(&quot;dplyr&quot;)
+# 先計算各組統計輛
+group_by(my_data, group) %&gt;%
+  summarise(
+    count = n(),
+    mean = mean(weight, na.rm = TRUE),
+    sd = sd(weight, na.rm = TRUE)
+  )
+#&gt; # A tibble: 2 x 4
+#&gt;   group  count  mean    sd
+#&gt;   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1 after     10  394.  29.4
+#&gt; 2 before    10  199.  18.5
+</code></pre>
+<h3 id="視覺探索">視覺探索</h3>
+<p>Visualize your data using box plots</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">library(&quot;ggpubr&quot;)
+ggboxplot(my_data, x = &quot;group&quot;, y = &quot;weight&quot;, 
+          color = &quot;group&quot;, palette = c(&quot;#00AFBB&quot;, &quot;#E7B800&quot;),
+          order = c(&quot;before&quot;, &quot;after&quot;),
+          ylab = &quot;Weight&quot;, xlab = &quot;Groups&quot;)
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="1_t%e6%aa%a2%e5%ae%9a_files/figure-html/unnamed-chunk-22-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<p>Plot paired data:</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
+# 假設my_data是從CSV讀入,要分組
+before &lt;- subset(my_data,  group == &quot;before&quot;, weight,  drop = TRUE)
+after &lt;- subset(my_data,  group == &quot;after&quot;, weight,  drop = TRUE)
+
+# Plot paired data
+library(PairedData)
+pd &lt;- paired(before, after)
+
+plot(pd, type = &quot;profile&quot;) + theme_bw() #<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏theme_bw()黑白主題</span></span><!--/html_preserve-->
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="1_t%e6%aa%a2%e5%ae%9a_files/figure-html/unnamed-chunk-23-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -827,11 +1056,16 @@ res
     </div>
 </div>
 
-<link href="../css/quicknote.css?1635398991" rel="stylesheet">
-<script src="../js/quicknote.js?1635398991"></script>
+<link href="../css/quicknote.css?1636003356" rel="stylesheet">
+<script src="../js/quicknote.js?1636003356"></script>
 <div id="page-guide" class="bg-dark">  
   
     
+          
+          <a href="../econometrics/0_prerequest.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=0&#32;前置準備>前</a>
                    
           
             <a href="../econometrics/2_anova.html" 
@@ -841,7 +1075,7 @@ res
           
 
   
-<script src="../js/packhtml.js?1635398991"></script>    
+<script src="../js/packhtml.js?1636003356"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -851,25 +1085,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1635398991"></script>
-  <script src="../js/featherlight.gallery.min.js?1635398991"></script>
-  <link href="../css/featherlight.min.css?1635398991" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1635398991" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1636003356"></script>
+  <script src="../js/featherlight.gallery.min.js?1636003356"></script>
+  <link href="../css/featherlight.min.css?1636003356" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1636003356" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1635398991"></script>
+  <script src="../js/highlight.pack.js?1636003356"></script>
   
-  <script src="../js/hugohelper.js?1635398991"></script>
+  <script src="../js/hugohelper.js?1636003356"></script>
 
-  <link href="../css/rmd.css?1635398991" rel="stylesheet">
-  <link href="../css/mystyle.css?1635398991" rel="stylesheet">    
-  <script src='../js/variant.js?1635398991'></script>
+  <link href="../css/rmd.css?1636003356" rel="stylesheet">
+  <link href="../css/mystyle.css?1636003356" rel="stylesheet">    
+  <script src='../js/variant.js?1636003356'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1635398991'></script>
+<script src='../js/localsearch.js?1636003356'></script>
     
 
 

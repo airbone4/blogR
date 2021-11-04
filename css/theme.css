@@ -67,11 +67,11 @@ body {
      
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4 {
     
     text-rendering: optimizeLegibility;
     color: var(--MAIN-TEXT-color);
-    font-weight: 400;
+    font-weight: 200;
     letter-spacing: -1px;
 }
 h1 {
@@ -189,7 +189,10 @@ ol.attachments-files{
     flex:10 1 55rem;
     padding: 0px 3rem;
 } 
-
+#body-inner p{
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 #page-guide{
     /*flex:1 1 48px;*/
     flex:1 1 2rem;
@@ -422,15 +425,16 @@ pre {
     overflow:hidden;
     min-width:75%;
   }
-  pre code{
+pre code{
     background: #282c34; 
     white-space: inherit; 
     margin: 0;
     display:block;
     overflow:inherit;
     width:100%;
+    color: #abb2bf;
   } 
- pre code.hljs {
+pre  code.hljs {
       /*color: inherit;
       background: inherit;*/ /*mytag:1 原先這是為了變換theme*/
       white-space: inherit; 
@@ -447,8 +451,9 @@ pre:hover, pre:focus {
     width: max-content!important; 
     box-shadow: 11px 7px 8px 2px #dc3545;
 }
- 
-  table:not(.lntable) {
+
+
+table:not(.lntable) {
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
     width: 100%;

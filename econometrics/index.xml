@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/econometrics/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>0 前置準備</title>
+      <link>/econometrics/0_prerequest.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/econometrics/0_prerequest.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>1.0 t檢定</title>
       <link>/econometrics/1_t%E6%AA%A2%E5%AE%9A.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -48,15 +57,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/econometrics/lmm.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>statatest</title>
-      <link>/econometrics/statatest.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/econometrics/statatest.html</guid>
       <description></description>
     </item>
     

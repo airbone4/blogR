@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html><head>
+  <title>20 自製套件</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../../images/favicon.ico'/>
+      
+    <link href="../../css/atom-one-dark-reasonable.css?1636003356" rel="stylesheet">
+    <link href="../../css/syntax.css?1636003356" rel="stylesheet">
+    <script src="../../js/jquery-3.3.1.min.js?1636003356"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../../css/fontawesome-all.min.css?1636003356" rel="stylesheet">
+    
+    <link href="../../css/theme-mine.css?1636003356" rel="stylesheet">
+    
+    <link href="../../css/theme.css?1636003356" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#相關">相關</a>
+      <ul>
+        <li><a href="#自製-package">自製 package</a></li>
+        <li><a href="#測試debug">測試debug</a></li>
+        <li><a href="#自製-package-範例">自製 package 範例</a></li>
+        <li><a href="#套件的目錄結構">套件的目錄結構</a></li>
+      </ul>
+    </li>
+    <li><a href="#工作流程">工作流程</a>
+      <ul>
+        <li><a href="#測試">測試</a></li>
+        <li><a href="#installed-package-workflow">Installed package workflow</a></li>
+      </ul>
+    </li>
+    <li><a href="#documentation-and-exports">Documentation and exports</a></li>
+    <li><a href="#資料放入套件">資料放入套件</a></li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改October 31, 2021'>20 自製套件</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎R">
+     
+
+  <a class="nav-link" 
+    href="../../rlang.html"><i class="far fa-folder"></i>基礎R  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_92db98bffe2d6697b3536cbbf7b00074" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" title="1.4 R Package">1.4 R Package</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" title="2.0 基本輸出輸入">2.0 基本輸出輸入</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 資料探索">2.2 資料探索</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 資料探索">2.3 資料探索</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="4.1 基本">4.1 基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2 練習">4.1.2 練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" title="4.2 向量">4.2 向量</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 矩陣">4.3 矩陣</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 串列 list">4.4 串列 list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串處理函數">4.5 字串處理函數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" title="4.7 因子">4.7 因子</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_15_json.html" data-bs-toggle="tooltip" title="4.15 json">4.15 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_function.html" data-bs-toggle="tooltip" title="7.1 R 函數的基本撰寫">7.1 R 函數的基本撰寫</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_2_function.html" data-bs-toggle="tooltip" title="7.2 更多R函數">7.2 更多R函數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" title="7.8 R的物件相關概念">7.8 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="7.9 物件導向S3">7.9 物件導向S3</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_1_plot.html" data-bs-toggle="tooltip" title="9.1 基本繪圖">9.1 基本繪圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" title="9.2 多圖疊圖">9.2 多圖疊圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 畫圖練習">9.3 畫圖練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" title="10. tidyr, dplyr basic">10. tidyr, dplyr basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../../econometrics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_c59a6b16a979dae063e00e4a916e3284" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/0_prerequest.html" data-bs-toggle="tooltip" title="0 前置準備">0 前置準備</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/1_t%E6%AA%A2%E5%AE%9A.html" data-bs-toggle="tooltip" title="1.0 t檢定">1.0 t檢定</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/2_anova.html" data-bs-toggle="tooltip" title="2. ANOVA">2. ANOVA</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html" data-bs-toggle="tooltip" title="A.a 資料處理">A.a 資料處理</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" title="A.b mpg為例的ggplot">A.b mpg為例的ggplot</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
+    
+  
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../../topic/simulation.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_e617bdc52da54290f99855ac9d5037aa" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" title="4.1 模擬基本 1">4.1 模擬基本 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" title="4.2 模擬基本 2">4.2 模擬基本 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  
+    </ul>
+</li>
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-04 PM 01:00]</a></li><li><a href="../../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-04 PM 12:37]</a></li><li><a href="../../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="相關">相關</h2>
+<h3 id="自製-package">自製 package</h3>
+<ul>
+<li><a href="https://yulongniu.bionutshell.org/blog/2012/05/30/r-package-and-roxygen2/">R 包製作</a></li>
+<li><a href="https://github.com/kleinschmidt/r-packages/blob/c5e57de0b7ddc7968c8819fa904d00249934c055/tutorial.Rmd">package example</a></li>
+<li><a href="http://r-pkgs.had.co.nz/man.html">R packages book on documentation</a><br>
+(<a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">Hilary Parker's</a> is the classic), and if you're in the second camp you probably already know what you're doing (and if not, Hadley Wickham's <a href="http://r-pkgs.had.co.nz/">R packages book</a> is an excellent and thorough guide).</li>
+<li><a href="https://blog.r-hub.io/2020/01/27/examples/">撰寫HELP</a></li>
+</ul>
+<h3 id="測試debug">測試debug</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/zh-tw/visualstudio/rtvs/debugging-r-in-visual-studio?view=vs-2017">RTVS debug</a></li>
+<li><a href="https://www.rdocumentation.org/packages/base/versions/3.5.1/topics/attributes">互動R document</a></li>
+</ul>
+<h3 id="自製-package-範例">自製 package 範例</h3>
+<ol>
+<li>本範例中package 只有一個data.frame,一個函數.</li>
+<li>執行完package.seleton()以後,必須在man子目錄中修改每個RD檔案,title裡面必須有內容。</li>
+<li>然後才執行build()</li>
+</ol>
+<p>範例需要的檔案： <a href="./resources/trees91.csv">trees91.csv</a></p>
+<pre><code class="language-r?preclass=ms-5.w-75">rm(list = ls())
+ufc &lt;- read.csv('./resource/trees91.csv')
+vol.m3 &lt;- function(dbh.cm, height.m, multiplier = 0.5) {
+    vol.m3 &lt;- pi * (dbh.cm / 200) ^ 2 * height.m * multiplier
+     return(vol.m3)
+    
+}
+package.skeleton(name = &quot;xxx&quot;, path = &quot;./packages&quot;, force = TRUE)
+
+library(devtools)
+build(&quot;./packages/xxx&quot;)
+build(&quot;./packages/xxx&quot;, binary = TRUE)
+</code></pre>
+<h3 id="套件的目錄結構">套件的目錄結構</h3>
+<p>Rstudio, package <code>devtools</code> , RMD 常識。</p>
+<ul>
+<li>最少須需要兩個子目錄</li>
+<li>最小的套件一般包括一個根目錄，下有一個子目錄<code>R\</code>，一個檔案 <code>DESCRIPTION</code>(package叫什麼名子，依賴於哪些其他套件).</li>
+<li>當載入套件的時候，會執行套件中位於子目錄<code>R/</code>中的<code>.R</code>。</li>
+<li>也可以包含資料
+<ul>
+<li>資料一般位於子目錄 <code>data/</code> 中。副檔名一般是<code>.RData</code>, <code>.csv</code>, <code>.R</code>。但是不受限制。</li>
+</ul>
+</li>
+</ul>
+<p>note: 2,3 的不同是，後者直接導入<code>global</code>空間。</p>
+<p>上面的做法，可以藉由套件的幫助達成達成，例如利用<code>devtools</code> 建立骨架(package skeleton)</p>
+<ol>
+<li>建立套件骨架 <code>devtools::create('~/mypackage')</code>.</li>
+<li>編輯 <code>DESCRIPTION</code>.</li>
+<li>程式碼放入子目錄 <code>R/</code>.</li>
+</ol>
+<h2 id="工作流程">工作流程</h2>
+<h3 id="測試">測試</h3>
+<p>如果目前的工作目錄就是套件根目錄，那麼加入資料和寫完程式碼以後，就可以使用指令<code>devtools::load_all()</code>，如果是在Rstudio中,直接利用install and restart 就可以載入修改完以後的惡驗。。可以參考<a href="http://r-pkgs.had.co.nz/r.html#r-workflow">這裡</a>。</p>
+<h3 id="installed-package-workflow">Installed package workflow</h3>
+<p>如果套件已經安裝，並且被其他的專案中使用，那麼程式碼變動的話，就必須3個步驟</p>
+<ol>
+<li>Edit code (or add data).</li>
+<li>Re-generate documentation and namespace: <code>devtools::document('/path/to/pkg')</code></li>
+<li>Install: <code>devtools::install('/path/to/pkg')</code>.</li>
+<li>Reload: <code>devtools::reload(inst('pkg'))</code>.</li>
+</ol>
+<p>但是我都用rsudio的按鈕<code>build &amp; install</code></p>
+<h2 id="documentation-and-exports">Documentation and exports</h2>
+<p>當套件用指令<code>library()</code>載入時，預設上，所有的變數和函數都是 <strong>private</strong> 並不會被加入到 <strong>global</strong>環境。 而檔案<code>NAMESPACE</code> 則是用來指定要 <strong>public</strong> 的函數。
+如果不想要手動編輯檔案<code>NAMESPACE</code>，則可以使用特殊指令，產生如下的格式：</p>
+<pre><code class="language-r?preclass=ms-5.w-75">
+#' Short description of what this does
+#'
+#' Longer description of what this does. Approximately a paragraph.
+#'
+#' @param x The first thing
+#' @param y The second thing.
+#' @return The thing that comes out of this function
+#'
+#' @export (do export this in NAMESPACE) #<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏這一行配合指令devtools::document()會自動更新NAMESPACE</span></span><!--/html_preserve-->
+a_function &lt;- function(x,y) {
+  return x+y
+}
+
+</code></pre>
+<p>然後利用指令， <code>devtools::document()</code>, 會自動更新 <code>NAMESPACE</code> 並建立函數相關的說明檔。例如， <code>man/a_function.Rd</code>. 這樣這個函數，就像其他一般的函數一樣，可以求助，也可以在指令<code>library()</code>之後呼叫調用。</p>
+<p>如果只是自行測試，指令 <code>devtools::load_all()</code>就可以了。
+但是通常要散發，也就是利用 <code>devtools::install()</code> 安裝套件。</p>
+<!--html_preserve--><div  class="expand w-50 m-auto ">
+<div  class="expand-label" onclick="vexpand(this)">
+<i  style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
+<span  >roxygen2</span>
+</div><div  class="expand-content" style="overflow-x:auto"><!--/html_preserve--><p>一些常用roxygen2指令</p>
+<pre><code class="language-r">#' @title 
+#' @description
+#' @param
+#' @return
+#' @example
+#' @examples
+</code></pre>
+<p><code>roxygenize()</code>會在man上產生對應的Rd檔案。</p>
+<!--html_preserve--></div></div><!--/html_preserve-->
+<h2 id="資料放入套件">資料放入套件</h2>
+<p>最簡單的方法，直接將資料檔 (<code>.RData</code>, <code>.csv</code>, etc.)置於 <code>data/</code>子目錄。</p>
+<p>比較不會出錯的方式是利用<code>usethis</code>套件（取代舊版 <code>devtools</code> )。
+基本上用到兩個函數</p>
+<pre><code class="language-r?preclass=ms-5.w-75">userthis::use_data_raw()
+userthis::use_data()
+</code></pre>
+<ol>
+<li><code>usethis::use_data_raw()</code>，會建立子目錄<code>data-raw/</code>:</li>
+<li>在<code>data-raw/</code>子目錄中，放進非R格式的資料，例如，csv檔案。</li>
+<li>處理資料的程式碼，任意Rscript 名稱，然後手動執行，（不會被自動執行）置於 <code>data-raw/</code> ，如下：
+<pre><code class="language-r">experiment1 &lt;- read.csv('expt1.csv') 
+usethis::use_data(experiment1)
+</code></pre>
+</li>
+</ol>
+<p>This saves <code>data/experiment1.RData</code> in your package directory (make sure you've <code>setwd()</code> to the package directory...)</p>
+<ol start="3">
+<li>測試:</li>
+</ol>
+<pre><code class="language-r?preclass=ms-5.w-75.w75">#library(dplyr)
+#library(devtools)
+
+devtools::load_all()
+experiment1 %&gt;% head()
+## or use data() to put it in the global environment
+data(&quot;experiment1&quot;)
+</code></pre>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../../css/quicknote.css?1636003356" rel="stylesheet">
+<script src="../../js/quicknote.js?1636003356"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../../topic/rmd/02_git-book-note.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=02&#32;git&#32;book&#32;note>前</a>
+                   
+          
+            <a href="../../topic/rmd/21_roxygen.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=21_roxygen>後</a>            
+          
+          
+
+  
+<script src="../../js/packhtml.js?1636003356"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../../js/featherlight.min.js?1636003356"></script>
+  <script src="../../js/featherlight.gallery.min.js?1636003356"></script>
+  <link href="../../css/featherlight.min.css?1636003356" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1636003356" rel="stylesheet">
+
+  <script src="../../js/highlight.pack.js?1636003356"></script>
+  
+  <script src="../../js/hugohelper.js?1636003356"></script>
+
+  <link href="../../css/rmd.css?1636003356" rel="stylesheet">
+  <link href="../../css/mystyle.css?1636003356" rel="stylesheet">    
+  <script src='../../js/variant.js?1636003356'></script>
+
+<script>
+  
+    let idxfile = "\/blogR\/index.json"  
+  
+</script>
+<script src='../../js/localsearch.js?1636003356'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']  , ['\\[','\\]']] 
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      
+      
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>

@@ -28,7 +28,7 @@ The script is converted to Rmd through knitr::spin(); then rmarkdown::render() w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/topic/rmd/04_rmd_hook.html</guid>
-      <description>快遞 knitr::opts_chunk$set(echo = FALSE, collapse = TRUE,comment = &amp;quot;#&amp;gt;&amp;quot;,fig.path = &amp;quot;graphics/knitr-&amp;quot;,fig.retina = 2, # Control using dpifig.width = 6, # generated imagesfig.pos = &amp;quot;t&amp;quot;, # pdf modefig.align = &amp;quot;center&amp;quot;,dpi = if (knitr::is_latex_output()) 72 else 300, out.width = &amp;quot;100%&amp;quot;,dev = &amp;quot;svg&amp;quot;,dev.args = list(png = list(type = &amp;quot;cairo-png&amp;quot;)), #🏷註解👏optipng = &amp;quot;-o1 -quiet&amp;quot;) ⛳Graphics Device  The graphics device is the default device for used to create and provide graphics.</description>
+      <description>快遞 knitr::opts_chunk$set(echo = FALSE, collapse = TRUE,comment = &amp;quot;#&amp;gt;&amp;quot;,fig.path = &amp;quot;graphics/knitr-&amp;quot;,fig.retina = 2, # Control using dpifig.width = 6, # generated imagesfig.pos = &amp;quot;t&amp;quot;, # pdf modefig.align = &amp;quot;center&amp;quot;,dpi = if (knitr::is_latex_output()) 72 else 300, out.width = &amp;quot;100%&amp;quot;,dev = &amp;quot;svg&amp;quot;,dev.args = list(png = list(type = &amp;quot;cairo-png&amp;quot;)), #🏷註解👏optipng = &amp;quot;-o1 -quiet&amp;quot;) ⛳ Graphics Device  The graphics device is the default device for used to create and provide graphics.</description>
     </item>
     
     <item>
@@ -54,6 +54,15 @@ meta data 上的pdf 設定,常見版本 ---title: &amp;quot;Habits&amp;quot;au
       <description>gitbook introduction 3個地方需要注意: _output.yml _bookdown.yml index.rmd
 _output.yml: bookdown::gitbook:css: style.csssplit_by: chapterconfig:toc:collapse: subsectionbefore: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;after: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;bookdown::pdf_book:includes:in_header: preamble.texlatex_engine: xelatexcitation_package: natbibbookdown::epub_book:stylesheet: style.css 上面要修改的部分只有書名(title of book)
 _bookdown.yml: book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp;quot;Chapter &amp;quot;repo: https://github.com/seankross/bookdown-startoutput_dir: docsrmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;]clean: [packages.bib, bookdown.bbl]new_session: yes  欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.pdf。 欄位 chapter_name:每個章節的前綴,例如 01-Introduction.</description>
+    </item>
+    
+    <item>
+      <title>20 自製套件</title>
+      <link>/topic/rmd/20_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/topic/rmd/20_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</guid>
+      <description></description>
     </item>
     
     <item>

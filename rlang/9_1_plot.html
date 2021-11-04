@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1635398991" rel="stylesheet">
-    <link href="../css/syntax.css?1635398991" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1635398991"></script>
+    <link href="../css/atom-one-dark-reasonable.css?1636003356" rel="stylesheet">
+    <link href="../css/syntax.css?1636003356" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1636003356"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1635398991" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1636003356" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1635398991" rel="stylesheet">
+    <link href="../css/theme-mine.css?1636003356" rel="stylesheet">
     
-    <link href="../css/theme.css?1635398991" rel="stylesheet">
+    <link href="../css/theme.css?1636003356" rel="stylesheet">
     
     
     <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
@@ -47,14 +47,15 @@
         <li><a href="#顏色-col">顏色 col</a></li>
       </ul>
     </li>
+    <li><a href="#paired">paired</a></li>
     <li><a href="#函數畫圖">函數畫圖</a>
       <ul>
         <li><a href="#line-範例">line() 範例</a></li>
-        <li><a href="#scatterplot-範例">scatterplot() 範例</a></li>
         <li><a href="#histograms">Histograms</a></li>
         <li><a href="#kernel-density-plot">Kernel Density Plot</a></li>
       </ul>
     </li>
+    <li><a href="#其他">其他</a></li>
   </ul>
 </nav>
     </div>
@@ -63,7 +64,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 20, 2021'>9.1 基本繪圖</span>
+      title='最後修改November 4, 2021'>9.1 基本繪圖</span>
         
     
 
@@ -98,18 +99,18 @@
 
  
 
+ 
 
-<li class="nav-item" data-bs-toggle="tooltip" title="Rlangs">
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎R">
      
 
   <a class="nav-link" 
-    href="../rlang.html"><i class="far fa-folder"></i>Rlangs  </a>
-    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_" aria-expanded="false">
+    href="../rlang.html"><i class="far fa-folder"></i>基礎R  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_92db98bffe2d6697b3536cbbf7b00074" aria-expanded="false">
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
-  <ul id="menu_item_"  
+  <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
   class="submenu collapse show" 
   data-bs-parent="#home-topics"> 
     
@@ -165,19 +166,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 data explorer">2.3 data explorer</a></li>
+          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 資料探索">2.3 資料探索</a></li>
     
   
         <li class="nav-item">
           
           <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/3_01_regular_expression.html" data-bs-toggle="tooltip" title="3.1 Regular expression syntax">3.1 Regular expression syntax</a></li>
-    
-  
     
   
         <li class="nav-item">
@@ -207,34 +201,26 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_11_json.html" data-bs-toggle="tooltip" title="4.4.1 json">4.4.1 json</a></li>
+          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串處理函數">4.5 字串處理函數</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串">4.5 字串</a></li>
+          <a class="nav-link" href="../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/4_6_topic_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
+          <a class="nav-link" href="../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" title="4.7 因子">4.7 因子</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_7_type_more.html" data-bs-toggle="tooltip" title="4.7 data.frame, table, data,table">4.7 data.frame, table, data,table</a></li>
     
   
     
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/5_objectbasic.html" data-bs-toggle="tooltip" title="5 R的物件相關概念">5 R的物件相關概念</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/5_1_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="5.1 物件導向S3">5.1 物件導向S3</a></li>
+          <a class="nav-link" href="../rlang/4_15_json.html" data-bs-toggle="tooltip" title="4.15 json">4.15 json</a></li>
     
   
         <li class="nav-item">
@@ -264,6 +250,14 @@
           <a class="nav-link" href="../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" title="7.8 R的物件相關概念">7.8 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="7.9 物件導向S3">7.9 物件導向S3</a></li>
     
   
         <li class="nav-item active">
@@ -278,9 +272,12 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 Plot more">9.3 Plot more</a></li>
+          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 畫圖練習">9.3 畫圖練習</a></li>
     
   
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" title="10. tidyr, dplyr basic">10. tidyr, dplyr basic</a></li>
     
   
         <li class="nav-item">
@@ -293,21 +290,6 @@
           <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/13_0_eco_01_intro.html" data-bs-toggle="tooltip" title="13. Econometrics">13. Econometrics</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/14_00_sim_1.html" data-bs-toggle="tooltip" title="14. simulation 1">14. simulation 1</a></li>
-    
-  
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/xxx.html" data-bs-toggle="tooltip" title="xxx">xxx</a></li>
     
   
     
@@ -315,6 +297,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="暫時">
      
@@ -325,10 +308,9 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_"> 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
     
 
   
@@ -341,9 +323,7 @@
           
           <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
@@ -352,6 +332,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="練習用">
      
@@ -362,10 +343,9 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_"> 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
     
 
   
@@ -391,9 +371,7 @@
           
           <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
@@ -403,9 +381,7 @@
           
           <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -415,6 +391,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
      
@@ -425,7 +402,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
   class="submenu collapse" 
   data-bs-parent="#home-topics"> 
@@ -434,6 +410,11 @@
   
   
   
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../econometrics/0_prerequest.html" data-bs-toggle="tooltip" title="0 前置準備">0 前置準備</a></li>
+    
   
         <li class="nav-item">
           
@@ -460,15 +441,8 @@
           <a class="nav-link" href="../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/statatest.html" data-bs-toggle="tooltip" title="statatest">statatest</a></li>
-    
-  
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -478,6 +452,7 @@
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="專題">
      
@@ -488,7 +463,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
   class="submenu collapse" 
   data-bs-parent="#home-topics"> 
@@ -499,19 +473,11 @@
   
   
     
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/interesting.html" data-bs-toggle="tooltip" title="interesting">interesting</a></li>
-    
-  
-    
-  
-    
   <li>
 
  
 
+ 
 
 <li class="nav-item" data-bs-toggle="tooltip" title="實驗">
      
@@ -522,7 +488,6 @@
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
-   
   <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
   class="submenu collapse" 
   data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
@@ -534,22 +499,22 @@
   
         <li class="nav-item">
           
-          <a class="nav-link" href="../topic/simulation/bays1.html" data-bs-toggle="tooltip" title="bays1">bays1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/simulation_1.html" data-bs-toggle="tooltip" title="simulation_1">simulation_1</a></li>
-    
-  
-        <li class="nav-item">
-          
           <a class="nav-link" href="../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
     
   
         <li class="nav-item">
           
           <a class="nav-link" href="../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" title="4.1 模擬基本 1">4.1 模擬基本 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" title="4.2 模擬基本 2">4.2 模擬基本 2</a></li>
     
   
         <li class="nav-item">
@@ -566,18 +531,14 @@
           
           <a class="nav-link" href="../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
     </ul>
-  
-
-</li>   
+</li>
      
   
 </li>
     
   
     </ul>
-  
-
-</li>   
+</li>
      
   
 
@@ -590,7 +551,7 @@
 
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/4_7_type_more.html"> <i class="far fa-clock" ></i>4.7 data.frame, table, data,table[2021-10-28 PM 01:29]</a></li><li><a href="../rlang/4_6_topic_dataframe.html"> <i class="far fa-clock" ></i>4.6 資料集 data frame[2021-10-28 PM 12:41]</a></li><li><a href="../rlang/2_3_data_explorer.html"> <i class="far fa-clock" ></i>2.3 data explorer[2021-10-28 PM 12:30]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-04 PM 01:00]</a></li><li><a href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-04 PM 12:37]</a></li><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -598,9 +559,22 @@
 <ul>
 <li><a href="https://www.statmethods.net/graphs/creating.html">Quick R</a></li>
 </ul>
-<p>一般視窗作業系統的繪圖，會有一個抽象物件<code>device</code>在這個device上，有一個抽象物件<code>canvas</code>，和繪圖工具例如，水彩筆之類的抽象物件可以指定顏色，線條粗細等等。 在R中,對應上述作業系統的關鍵字<code>.Devices</code>(paired list)、<code>.Device</code>(長度為1)、<code>dev.cur</code>(目前的裝置active device)。這裡說的Device指的是視窗。在視窗裡面的畫布,就是R提供的繪圖函數輸出所在,例如<code>plot()</code>,<code>hist()</code>等等。</p>
-<p>所以dev.new() 指的是開啟新視窗，dev.cur是目前視窗號碼,dev.prev()前一個視窗號碼。
-而plot.new() 則是新增畫布。<a href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html#背景練習">見練習</a></p>
+<ol>
+<li>基本
+<ul>
+<li>plot()</li>
+<li>lines()</li>
+<li>curves()</li>
+</ul>
+</li>
+<li>統計
+<ul>
+<li>boxplot()</li>
+<li>pair()</li>
+<li>hist()</li>
+</ul>
+</li>
+</ol>
 <p>💡 怎樣快速查詢？</p>
 <ul>
 <li>??draw</li>
@@ -676,6 +650,15 @@
 </table>
 
 </div><!--/html_preserve-->
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
 <h3 id="pch-資料點-符號">pch 資料點 符號</h3>
 <p>設定樣本點的符號,可以用 <code>pch</code> (<strong>point character</strong>).</p>
 <p>pch 的值除了從 0 到 24 共25個符號外，還有 &quot;*&quot;, &quot;+&quot;, &quot;o&quot;, &quot;@&quot;, &quot;#&quot; 可以用。</p>
@@ -727,94 +710,353 @@ lty = 4     or    lty = &quot;dotdash&quot;
 lty = 5     or    lty = &quot;longdash&quot;
 lty = 6     or    lty = &quot;twodash&quot;
 </code></pre>
-<p><a href="#線條類型">參考後節</a></p>
 <h3 id="顏色-col">顏色 col</h3>
 <p>col = &quot;blue<br>
 col = &quot;red&quot;</p>
-<div class="notices m-auto w-75">
+<div class="notices ms-5 w-75">
     <div class="info">
-        <p>col 後的值,可用colors() 來查詢顏色,會傳回 657 代表顏色的參數。或者也可以直接用16進位數字，例如</p>
-<p>col = &quot;#A9F3BB&quot;   ------&gt;  colour corresponding to  Red=A9, Green=F3, Blue=BB in hexadecimal representation.</p>
+        <p>col 後的值,可用函數<code>colors()</code> 來查詢顏色,會傳回 657 個代表顏色的參數。或者也可以直接用16進位數字，例如</p>
+<p>col = &quot;#A9F3BB&quot;   ------&gt;  分別對應  Red=A9, Green=F3, Blue=BB 16進位數字.</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">colors() #看看有甚麼顏色&lt;!--html_preserve--&gt;&lt;div  class=&quot;expand ms-0 &quot;&gt;
+&lt;div  class=&quot;expand-label&quot; onclick=&quot;vexpand(this)&quot;&gt;
+&lt;i  style=&quot;font-size:x-small;color:yellow&quot; class=&quot;fa fa-chevron-right&quot;&gt;&lt;/i&gt;
+&lt;span  &gt;展開&lt;/span&gt;
+&lt;/div&gt;&lt;div  class=&quot;expand-content incode&quot; style=&quot;overflow-x:auto&quot;&gt;&lt;!--/html_preserve--&gt;#&gt;   [1] &quot;white&quot;                &quot;aliceblue&quot;            &quot;antiquewhite&quot;        
+#&gt;   [4] &quot;antiquewhite1&quot;        &quot;antiquewhite2&quot;        &quot;antiquewhite3&quot;       
+#&gt;   [7] &quot;antiquewhite4&quot;        &quot;aquamarine&quot;           &quot;aquamarine1&quot;         
+#&gt;  [10] &quot;aquamarine2&quot;          &quot;aquamarine3&quot;          &quot;aquamarine4&quot;         
+#&gt;  [13] &quot;azure&quot;                &quot;azure1&quot;               &quot;azure2&quot;              
+#&gt;  [16] &quot;azure3&quot;               &quot;azure4&quot;               &quot;beige&quot;               
+#&gt;  [19] &quot;bisque&quot;               &quot;bisque1&quot;              &quot;bisque2&quot;             
+#&gt;  [22] &quot;bisque3&quot;              &quot;bisque4&quot;              &quot;black&quot;               
+#&gt;  [25] &quot;blanchedalmond&quot;       &quot;blue&quot;                 &quot;blue1&quot;               
+#&gt;  [28] &quot;blue2&quot;                &quot;blue3&quot;                &quot;blue4&quot;               
+#&gt;  [31] &quot;blueviolet&quot;           &quot;brown&quot;                &quot;brown1&quot;              
+#&gt;  [34] &quot;brown2&quot;               &quot;brown3&quot;               &quot;brown4&quot;              
+#&gt;  [37] &quot;burlywood&quot;            &quot;burlywood1&quot;           &quot;burlywood2&quot;          
+#&gt;  [40] &quot;burlywood3&quot;           &quot;burlywood4&quot;           &quot;cadetblue&quot;           
+#&gt;  [43] &quot;cadetblue1&quot;           &quot;cadetblue2&quot;           &quot;cadetblue3&quot;          
+#&gt;  [46] &quot;cadetblue4&quot;           &quot;chartreuse&quot;           &quot;chartreuse1&quot;         
+#&gt;  [49] &quot;chartreuse2&quot;          &quot;chartreuse3&quot;          &quot;chartreuse4&quot;         
+#&gt;  [52] &quot;chocolate&quot;            &quot;chocolate1&quot;           &quot;chocolate2&quot;          
+#&gt;  [55] &quot;chocolate3&quot;           &quot;chocolate4&quot;           &quot;coral&quot;               
+#&gt;  [58] &quot;coral1&quot;               &quot;coral2&quot;               &quot;coral3&quot;              
+#&gt;  [61] &quot;coral4&quot;               &quot;cornflowerblue&quot;       &quot;cornsilk&quot;            
+#&gt;  [64] &quot;cornsilk1&quot;            &quot;cornsilk2&quot;            &quot;cornsilk3&quot;           
+#&gt;  [67] &quot;cornsilk4&quot;            &quot;cyan&quot;                 &quot;cyan1&quot;               
+#&gt;  [70] &quot;cyan2&quot;                &quot;cyan3&quot;                &quot;cyan4&quot;               
+#&gt;  [73] &quot;darkblue&quot;             &quot;darkcyan&quot;             &quot;darkgoldenrod&quot;       
+#&gt;  [76] &quot;darkgoldenrod1&quot;       &quot;darkgoldenrod2&quot;       &quot;darkgoldenrod3&quot;      
+#&gt;  [79] &quot;darkgoldenrod4&quot;       &quot;darkgray&quot;             &quot;darkgreen&quot;           
+#&gt;  [82] &quot;darkgrey&quot;             &quot;darkkhaki&quot;            &quot;darkmagenta&quot;         
+#&gt;  [85] &quot;darkolivegreen&quot;       &quot;darkolivegreen1&quot;      &quot;darkolivegreen2&quot;     
+#&gt;  [88] &quot;darkolivegreen3&quot;      &quot;darkolivegreen4&quot;      &quot;darkorange&quot;          
+#&gt;  [91] &quot;darkorange1&quot;          &quot;darkorange2&quot;          &quot;darkorange3&quot;         
+#&gt;  [94] &quot;darkorange4&quot;          &quot;darkorchid&quot;           &quot;darkorchid1&quot;         
+#&gt;  [97] &quot;darkorchid2&quot;          &quot;darkorchid3&quot;          &quot;darkorchid4&quot;         
+#&gt; [100] &quot;darkred&quot;              &quot;darksalmon&quot;           &quot;darkseagreen&quot;        
+#&gt; [103] &quot;darkseagreen1&quot;        &quot;darkseagreen2&quot;        &quot;darkseagreen3&quot;       
+#&gt; [106] &quot;darkseagreen4&quot;        &quot;darkslateblue&quot;        &quot;darkslategray&quot;       
+#&gt; [109] &quot;darkslategray1&quot;       &quot;darkslategray2&quot;       &quot;darkslategray3&quot;      
+#&gt; [112] &quot;darkslategray4&quot;       &quot;darkslategrey&quot;        &quot;darkturquoise&quot;       
+#&gt; [115] &quot;darkviolet&quot;           &quot;deeppink&quot;             &quot;deeppink1&quot;           
+#&gt; [118] &quot;deeppink2&quot;            &quot;deeppink3&quot;            &quot;deeppink4&quot;           
+#&gt; [121] &quot;deepskyblue&quot;          &quot;deepskyblue1&quot;         &quot;deepskyblue2&quot;        
+#&gt; [124] &quot;deepskyblue3&quot;         &quot;deepskyblue4&quot;         &quot;dimgray&quot;             
+#&gt; [127] &quot;dimgrey&quot;              &quot;dodgerblue&quot;           &quot;dodgerblue1&quot;         
+#&gt; [130] &quot;dodgerblue2&quot;          &quot;dodgerblue3&quot;          &quot;dodgerblue4&quot;         
+#&gt; [133] &quot;firebrick&quot;            &quot;firebrick1&quot;           &quot;firebrick2&quot;          
+#&gt; [136] &quot;firebrick3&quot;           &quot;firebrick4&quot;           &quot;floralwhite&quot;         
+#&gt; [139] &quot;forestgreen&quot;          &quot;gainsboro&quot;            &quot;ghostwhite&quot;          
+#&gt; [142] &quot;gold&quot;                 &quot;gold1&quot;                &quot;gold2&quot;               
+#&gt; [145] &quot;gold3&quot;                &quot;gold4&quot;                &quot;goldenrod&quot;           
+#&gt; [148] &quot;goldenrod1&quot;           &quot;goldenrod2&quot;           &quot;goldenrod3&quot;          
+#&gt; [151] &quot;goldenrod4&quot;           &quot;gray&quot;                 &quot;gray0&quot;               
+#&gt; [154] &quot;gray1&quot;                &quot;gray2&quot;                &quot;gray3&quot;               
+#&gt; [157] &quot;gray4&quot;                &quot;gray5&quot;                &quot;gray6&quot;               
+#&gt; [160] &quot;gray7&quot;                &quot;gray8&quot;                &quot;gray9&quot;               
+#&gt; [163] &quot;gray10&quot;               &quot;gray11&quot;               &quot;gray12&quot;              
+#&gt; [166] &quot;gray13&quot;               &quot;gray14&quot;               &quot;gray15&quot;              
+#&gt; [169] &quot;gray16&quot;               &quot;gray17&quot;               &quot;gray18&quot;              
+#&gt; [172] &quot;gray19&quot;               &quot;gray20&quot;               &quot;gray21&quot;              
+#&gt; [175] &quot;gray22&quot;               &quot;gray23&quot;               &quot;gray24&quot;              
+#&gt; [178] &quot;gray25&quot;               &quot;gray26&quot;               &quot;gray27&quot;              
+#&gt; [181] &quot;gray28&quot;               &quot;gray29&quot;               &quot;gray30&quot;              
+#&gt; [184] &quot;gray31&quot;               &quot;gray32&quot;               &quot;gray33&quot;              
+#&gt; [187] &quot;gray34&quot;               &quot;gray35&quot;               &quot;gray36&quot;              
+#&gt; [190] &quot;gray37&quot;               &quot;gray38&quot;               &quot;gray39&quot;              
+#&gt; [193] &quot;gray40&quot;               &quot;gray41&quot;               &quot;gray42&quot;              
+#&gt; [196] &quot;gray43&quot;               &quot;gray44&quot;               &quot;gray45&quot;              
+#&gt; [199] &quot;gray46&quot;               &quot;gray47&quot;               &quot;gray48&quot;              
+#&gt; [202] &quot;gray49&quot;               &quot;gray50&quot;               &quot;gray51&quot;              
+#&gt; [205] &quot;gray52&quot;               &quot;gray53&quot;               &quot;gray54&quot;              
+#&gt; [208] &quot;gray55&quot;               &quot;gray56&quot;               &quot;gray57&quot;              
+#&gt; [211] &quot;gray58&quot;               &quot;gray59&quot;               &quot;gray60&quot;              
+#&gt; [214] &quot;gray61&quot;               &quot;gray62&quot;               &quot;gray63&quot;              
+#&gt; [217] &quot;gray64&quot;               &quot;gray65&quot;               &quot;gray66&quot;              
+#&gt; [220] &quot;gray67&quot;               &quot;gray68&quot;               &quot;gray69&quot;              
+#&gt; [223] &quot;gray70&quot;               &quot;gray71&quot;               &quot;gray72&quot;              
+#&gt; [226] &quot;gray73&quot;               &quot;gray74&quot;               &quot;gray75&quot;              
+#&gt; [229] &quot;gray76&quot;               &quot;gray77&quot;               &quot;gray78&quot;              
+#&gt; [232] &quot;gray79&quot;               &quot;gray80&quot;               &quot;gray81&quot;              
+#&gt; [235] &quot;gray82&quot;               &quot;gray83&quot;               &quot;gray84&quot;              
+#&gt; [238] &quot;gray85&quot;               &quot;gray86&quot;               &quot;gray87&quot;              
+#&gt; [241] &quot;gray88&quot;               &quot;gray89&quot;               &quot;gray90&quot;              
+#&gt; [244] &quot;gray91&quot;               &quot;gray92&quot;               &quot;gray93&quot;              
+#&gt; [247] &quot;gray94&quot;               &quot;gray95&quot;               &quot;gray96&quot;              
+#&gt; [250] &quot;gray97&quot;               &quot;gray98&quot;               &quot;gray99&quot;              
+#&gt; [253] &quot;gray100&quot;              &quot;green&quot;                &quot;green1&quot;              
+#&gt; [256] &quot;green2&quot;               &quot;green3&quot;               &quot;green4&quot;              
+#&gt; [259] &quot;greenyellow&quot;          &quot;grey&quot;                 &quot;grey0&quot;               
+#&gt; [262] &quot;grey1&quot;                &quot;grey2&quot;                &quot;grey3&quot;               
+#&gt; [265] &quot;grey4&quot;                &quot;grey5&quot;                &quot;grey6&quot;               
+#&gt; [268] &quot;grey7&quot;                &quot;grey8&quot;                &quot;grey9&quot;               
+#&gt; [271] &quot;grey10&quot;               &quot;grey11&quot;               &quot;grey12&quot;              
+#&gt; [274] &quot;grey13&quot;               &quot;grey14&quot;               &quot;grey15&quot;              
+#&gt; [277] &quot;grey16&quot;               &quot;grey17&quot;               &quot;grey18&quot;              
+#&gt; [280] &quot;grey19&quot;               &quot;grey20&quot;               &quot;grey21&quot;              
+#&gt; [283] &quot;grey22&quot;               &quot;grey23&quot;               &quot;grey24&quot;              
+#&gt; [286] &quot;grey25&quot;               &quot;grey26&quot;               &quot;grey27&quot;              
+#&gt; [289] &quot;grey28&quot;               &quot;grey29&quot;               &quot;grey30&quot;              
+#&gt; [292] &quot;grey31&quot;               &quot;grey32&quot;               &quot;grey33&quot;              
+#&gt; [295] &quot;grey34&quot;               &quot;grey35&quot;               &quot;grey36&quot;              
+#&gt; [298] &quot;grey37&quot;               &quot;grey38&quot;               &quot;grey39&quot;              
+#&gt; [301] &quot;grey40&quot;               &quot;grey41&quot;               &quot;grey42&quot;              
+#&gt; [304] &quot;grey43&quot;               &quot;grey44&quot;               &quot;grey45&quot;              
+#&gt; [307] &quot;grey46&quot;               &quot;grey47&quot;               &quot;grey48&quot;              
+#&gt; [310] &quot;grey49&quot;               &quot;grey50&quot;               &quot;grey51&quot;              
+#&gt; [313] &quot;grey52&quot;               &quot;grey53&quot;               &quot;grey54&quot;              
+#&gt; [316] &quot;grey55&quot;               &quot;grey56&quot;               &quot;grey57&quot;              
+#&gt; [319] &quot;grey58&quot;               &quot;grey59&quot;               &quot;grey60&quot;              
+#&gt; [322] &quot;grey61&quot;               &quot;grey62&quot;               &quot;grey63&quot;              
+#&gt; [325] &quot;grey64&quot;               &quot;grey65&quot;               &quot;grey66&quot;              
+#&gt; [328] &quot;grey67&quot;               &quot;grey68&quot;               &quot;grey69&quot;              
+#&gt; [331] &quot;grey70&quot;               &quot;grey71&quot;               &quot;grey72&quot;              
+#&gt; [334] &quot;grey73&quot;               &quot;grey74&quot;               &quot;grey75&quot;              
+#&gt; [337] &quot;grey76&quot;               &quot;grey77&quot;               &quot;grey78&quot;              
+#&gt; [340] &quot;grey79&quot;               &quot;grey80&quot;               &quot;grey81&quot;              
+#&gt; [343] &quot;grey82&quot;               &quot;grey83&quot;               &quot;grey84&quot;              
+#&gt; [346] &quot;grey85&quot;               &quot;grey86&quot;               &quot;grey87&quot;              
+#&gt; [349] &quot;grey88&quot;               &quot;grey89&quot;               &quot;grey90&quot;              
+#&gt; [352] &quot;grey91&quot;               &quot;grey92&quot;               &quot;grey93&quot;              
+#&gt; [355] &quot;grey94&quot;               &quot;grey95&quot;               &quot;grey96&quot;              
+#&gt; [358] &quot;grey97&quot;               &quot;grey98&quot;               &quot;grey99&quot;              
+#&gt; [361] &quot;grey100&quot;              &quot;honeydew&quot;             &quot;honeydew1&quot;           
+#&gt; [364] &quot;honeydew2&quot;            &quot;honeydew3&quot;            &quot;honeydew4&quot;           
+#&gt; [367] &quot;hotpink&quot;              &quot;hotpink1&quot;             &quot;hotpink2&quot;            
+#&gt; [370] &quot;hotpink3&quot;             &quot;hotpink4&quot;             &quot;indianred&quot;           
+#&gt; [373] &quot;indianred1&quot;           &quot;indianred2&quot;           &quot;indianred3&quot;          
+#&gt; [376] &quot;indianred4&quot;           &quot;ivory&quot;                &quot;ivory1&quot;              
+#&gt; [379] &quot;ivory2&quot;               &quot;ivory3&quot;               &quot;ivory4&quot;              
+#&gt; [382] &quot;khaki&quot;                &quot;khaki1&quot;               &quot;khaki2&quot;              
+#&gt; [385] &quot;khaki3&quot;               &quot;khaki4&quot;               &quot;lavender&quot;            
+#&gt; [388] &quot;lavenderblush&quot;        &quot;lavenderblush1&quot;       &quot;lavenderblush2&quot;      
+#&gt; [391] &quot;lavenderblush3&quot;       &quot;lavenderblush4&quot;       &quot;lawngreen&quot;           
+#&gt; [394] &quot;lemonchiffon&quot;         &quot;lemonchiffon1&quot;        &quot;lemonchiffon2&quot;       
+#&gt; [397] &quot;lemonchiffon3&quot;        &quot;lemonchiffon4&quot;        &quot;lightblue&quot;           
+#&gt; [400] &quot;lightblue1&quot;           &quot;lightblue2&quot;           &quot;lightblue3&quot;          
+#&gt; [403] &quot;lightblue4&quot;           &quot;lightcoral&quot;           &quot;lightcyan&quot;           
+#&gt; [406] &quot;lightcyan1&quot;           &quot;lightcyan2&quot;           &quot;lightcyan3&quot;          
+#&gt; [409] &quot;lightcyan4&quot;           &quot;lightgoldenrod&quot;       &quot;lightgoldenrod1&quot;     
+#&gt; [412] &quot;lightgoldenrod2&quot;      &quot;lightgoldenrod3&quot;      &quot;lightgoldenrod4&quot;     
+#&gt; [415] &quot;lightgoldenrodyellow&quot; &quot;lightgray&quot;            &quot;lightgreen&quot;          
+#&gt; [418] &quot;lightgrey&quot;            &quot;lightpink&quot;            &quot;lightpink1&quot;          
+#&gt; [421] &quot;lightpink2&quot;           &quot;lightpink3&quot;           &quot;lightpink4&quot;          
+#&gt; [424] &quot;lightsalmon&quot;          &quot;lightsalmon1&quot;         &quot;lightsalmon2&quot;        
+#&gt; [427] &quot;lightsalmon3&quot;         &quot;lightsalmon4&quot;         &quot;lightseagreen&quot;       
+#&gt; [430] &quot;lightskyblue&quot;         &quot;lightskyblue1&quot;        &quot;lightskyblue2&quot;       
+#&gt; [433] &quot;lightskyblue3&quot;        &quot;lightskyblue4&quot;        &quot;lightslateblue&quot;      
+#&gt; [436] &quot;lightslategray&quot;       &quot;lightslategrey&quot;       &quot;lightsteelblue&quot;      
+#&gt; [439] &quot;lightsteelblue1&quot;      &quot;lightsteelblue2&quot;      &quot;lightsteelblue3&quot;     
+#&gt; [442] &quot;lightsteelblue4&quot;      &quot;lightyellow&quot;          &quot;lightyellow1&quot;        
+#&gt; [445] &quot;lightyellow2&quot;         &quot;lightyellow3&quot;         &quot;lightyellow4&quot;        
+#&gt; [448] &quot;limegreen&quot;            &quot;linen&quot;                &quot;magenta&quot;             
+#&gt; [451] &quot;magenta1&quot;             &quot;magenta2&quot;             &quot;magenta3&quot;            
+#&gt; [454] &quot;magenta4&quot;             &quot;maroon&quot;               &quot;maroon1&quot;             
+#&gt; [457] &quot;maroon2&quot;              &quot;maroon3&quot;              &quot;maroon4&quot;             
+#&gt; [460] &quot;mediumaquamarine&quot;     &quot;mediumblue&quot;           &quot;mediumorchid&quot;        
+#&gt; [463] &quot;mediumorchid1&quot;        &quot;mediumorchid2&quot;        &quot;mediumorchid3&quot;       
+#&gt; [466] &quot;mediumorchid4&quot;        &quot;mediumpurple&quot;         &quot;mediumpurple1&quot;       
+#&gt; [469] &quot;mediumpurple2&quot;        &quot;mediumpurple3&quot;        &quot;mediumpurple4&quot;       
+#&gt; [472] &quot;mediumseagreen&quot;       &quot;mediumslateblue&quot;      &quot;mediumspringgreen&quot;   
+#&gt; [475] &quot;mediumturquoise&quot;      &quot;mediumvioletred&quot;      &quot;midnightblue&quot;        
+#&gt; [478] &quot;mintcream&quot;            &quot;mistyrose&quot;            &quot;mistyrose1&quot;          
+#&gt; [481] &quot;mistyrose2&quot;           &quot;mistyrose3&quot;           &quot;mistyrose4&quot;          
+#&gt; [484] &quot;moccasin&quot;             &quot;navajowhite&quot;          &quot;navajowhite1&quot;        
+#&gt; [487] &quot;navajowhite2&quot;         &quot;navajowhite3&quot;         &quot;navajowhite4&quot;        
+#&gt; [490] &quot;navy&quot;                 &quot;navyblue&quot;             &quot;oldlace&quot;             
+#&gt; [493] &quot;olivedrab&quot;            &quot;olivedrab1&quot;           &quot;olivedrab2&quot;          
+#&gt; [496] &quot;olivedrab3&quot;           &quot;olivedrab4&quot;           &quot;orange&quot;              
+#&gt; [499] &quot;orange1&quot;              &quot;orange2&quot;              &quot;orange3&quot;             
+#&gt; [502] &quot;orange4&quot;              &quot;orangered&quot;            &quot;orangered1&quot;          
+#&gt; [505] &quot;orangered2&quot;           &quot;orangered3&quot;           &quot;orangered4&quot;          
+#&gt; [508] &quot;orchid&quot;               &quot;orchid1&quot;              &quot;orchid2&quot;             
+#&gt; [511] &quot;orchid3&quot;              &quot;orchid4&quot;              &quot;palegoldenrod&quot;       
+#&gt; [514] &quot;palegreen&quot;            &quot;palegreen1&quot;           &quot;palegreen2&quot;          
+#&gt; [517] &quot;palegreen3&quot;           &quot;palegreen4&quot;           &quot;paleturquoise&quot;       
+#&gt; [520] &quot;paleturquoise1&quot;       &quot;paleturquoise2&quot;       &quot;paleturquoise3&quot;      
+#&gt; [523] &quot;paleturquoise4&quot;       &quot;palevioletred&quot;        &quot;palevioletred1&quot;      
+#&gt; [526] &quot;palevioletred2&quot;       &quot;palevioletred3&quot;       &quot;palevioletred4&quot;      
+#&gt; [529] &quot;papayawhip&quot;           &quot;peachpuff&quot;            &quot;peachpuff1&quot;          
+#&gt; [532] &quot;peachpuff2&quot;           &quot;peachpuff3&quot;           &quot;peachpuff4&quot;          
+#&gt; [535] &quot;peru&quot;                 &quot;pink&quot;                 &quot;pink1&quot;               
+#&gt; [538] &quot;pink2&quot;                &quot;pink3&quot;                &quot;pink4&quot;               
+#&gt; [541] &quot;plum&quot;                 &quot;plum1&quot;                &quot;plum2&quot;               
+#&gt; [544] &quot;plum3&quot;                &quot;plum4&quot;                &quot;powderblue&quot;          
+#&gt; [547] &quot;purple&quot;               &quot;purple1&quot;              &quot;purple2&quot;             
+#&gt; [550] &quot;purple3&quot;              &quot;purple4&quot;              &quot;red&quot;                 
+#&gt; [553] &quot;red1&quot;                 &quot;red2&quot;                 &quot;red3&quot;                
+#&gt; [556] &quot;red4&quot;                 &quot;rosybrown&quot;            &quot;rosybrown1&quot;          
+#&gt; [559] &quot;rosybrown2&quot;           &quot;rosybrown3&quot;           &quot;rosybrown4&quot;          
+#&gt; [562] &quot;royalblue&quot;            &quot;royalblue1&quot;           &quot;royalblue2&quot;          
+#&gt; [565] &quot;royalblue3&quot;           &quot;royalblue4&quot;           &quot;saddlebrown&quot;         
+#&gt; [568] &quot;salmon&quot;               &quot;salmon1&quot;              &quot;salmon2&quot;             
+#&gt; [571] &quot;salmon3&quot;              &quot;salmon4&quot;              &quot;sandybrown&quot;          
+#&gt; [574] &quot;seagreen&quot;             &quot;seagreen1&quot;            &quot;seagreen2&quot;           
+#&gt; [577] &quot;seagreen3&quot;            &quot;seagreen4&quot;            &quot;seashell&quot;            
+#&gt; [580] &quot;seashell1&quot;            &quot;seashell2&quot;            &quot;seashell3&quot;           
+#&gt; [583] &quot;seashell4&quot;            &quot;sienna&quot;               &quot;sienna1&quot;             
+#&gt; [586] &quot;sienna2&quot;              &quot;sienna3&quot;              &quot;sienna4&quot;             
+#&gt; [589] &quot;skyblue&quot;              &quot;skyblue1&quot;             &quot;skyblue2&quot;            
+#&gt; [592] &quot;skyblue3&quot;             &quot;skyblue4&quot;             &quot;slateblue&quot;           
+#&gt; [595] &quot;slateblue1&quot;           &quot;slateblue2&quot;           &quot;slateblue3&quot;          
+#&gt; [598] &quot;slateblue4&quot;           &quot;slategray&quot;            &quot;slategray1&quot;          
+#&gt; [601] &quot;slategray2&quot;           &quot;slategray3&quot;           &quot;slategray4&quot;          
+#&gt; [604] &quot;slategrey&quot;            &quot;snow&quot;                 &quot;snow1&quot;               
+#&gt; [607] &quot;snow2&quot;                &quot;snow3&quot;                &quot;snow4&quot;               
+#&gt; [610] &quot;springgreen&quot;          &quot;springgreen1&quot;         &quot;springgreen2&quot;        
+#&gt; [613] &quot;springgreen3&quot;         &quot;springgreen4&quot;         &quot;steelblue&quot;           
+#&gt; [616] &quot;steelblue1&quot;           &quot;steelblue2&quot;           &quot;steelblue3&quot;          
+#&gt; [619] &quot;steelblue4&quot;           &quot;tan&quot;                  &quot;tan1&quot;                
+#&gt; [622] &quot;tan2&quot;                 &quot;tan3&quot;                 &quot;tan4&quot;                
+#&gt; [625] &quot;thistle&quot;              &quot;thistle1&quot;             &quot;thistle2&quot;            
+#&gt; [628] &quot;thistle3&quot;             &quot;thistle4&quot;             &quot;tomato&quot;              
+#&gt; [631] &quot;tomato1&quot;              &quot;tomato2&quot;              &quot;tomato3&quot;             
+#&gt; [634] &quot;tomato4&quot;              &quot;turquoise&quot;            &quot;turquoise1&quot;          
+#&gt; [637] &quot;turquoise2&quot;           &quot;turquoise3&quot;           &quot;turquoise4&quot;          
+#&gt; [640] &quot;violet&quot;               &quot;violetred&quot;            &quot;violetred1&quot;          
+#&gt; [643] &quot;violetred2&quot;           &quot;violetred3&quot;           &quot;violetred4&quot;          
+#&gt; [646] &quot;wheat&quot;                &quot;wheat1&quot;               &quot;wheat2&quot;              
+#&gt; [649] &quot;wheat3&quot;               &quot;wheat4&quot;               &quot;whitesmoke&quot;          
+#&gt; [652] &quot;yellow&quot;               &quot;yellow1&quot;              &quot;yellow2&quot;             
+#&gt; [655] &quot;yellow3&quot;              &quot;yellow4&quot;              &quot;yellowgreen&quot;&lt;!--html_preserve--&gt;&lt;/div&gt;&lt;/div&gt;&lt;!--/html_preserve--&gt;
+</code></pre>
 
     </div>
 </div>
 
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-
-<p>繪製向量 中的資料</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x &lt;- c(1,3,4,7,8,9)
+<p>繪製向量中的資料</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- c(1,3,4,7,8,9)
 y &lt;- c(0,3,6,9,7,8)
 plot(x,y,main='plot(x,y)')
 </code></pre>
-<p>繪製data.frame 中的資料</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">
-plot(mtcars$wt, mtcars$mpg) 
-plot(mpg~wt,data=mtcars) # <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏和上面的圖沒什麼不同</span></span><!--/html_preserve-->
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
-abline(lm(mtcars$mpg~mtcars$wt)) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      👏這兩行疊在上面的圖形上</span></span><!--/html_preserve-->
-title(&quot;Regression of MPG on Weight&quot;)
+
+
+
+
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-6-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<p>繪製data.frame 中的資料</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">attach(mtcars)
+plot(mtcars$wt, mtcars$mpg) 
+plot(mpg~wt,data=mtcars) # <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏和上面的圖沒什麼不同</span></span><!--/html_preserve-->
 </code></pre>
-<p><img src="9_1_Plot_files/figure-html/unnamed-chunk-6-1.png" width="200px" /><img src="9_1_Plot_files/figure-html/unnamed-chunk-6-2.png" width="200px" /></p>
+<p><img src="9_1_Plot_files/figure-html/unnamed-chunk-7-1.png" width="200px" /><img src="9_1_Plot_files/figure-html/unnamed-chunk-7-2.png" width="200px" /></p>
 <ul>
 <li><code>plot()</code>函數，新建視窗然後畫出 weight vs. miles per gallon.</li>
 <li><code>abline()</code> 不會開啟新視窗做圖，abline()的語法如下:
 <pre><code class="language-r">abline(a = NULL, b = NULL, h = NULL, v = NULL, reg = NULL,coef = NULL, untf = FALSE, …)  
 </code></pre>
 <ul>
-<li>代表的意思是畫出一條直線<code>a+bx</code> ，其中a代表截距常數，b則是斜率常數。例如
+<li>
+<p>代表的意思是畫出一條直線<code>a+bx</code> ，其中a代表截距常數，b則是斜率常數。例如</p>
 <ul>
 <li><code>Y=2X+1</code>，則對應的函數為 <code>abline(a=1,b=2)</code> 。</li>
 <li>abline(h=3),水平線</li>
 <li>abline(v=2) 垂直</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<!--html_preserve--><div data-nopre class="expand">
-    <div data-nopre class="expand-label" onclick="vexpand(this)">
-        <i data-nopre style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
-        <span data-nopre >看一下attach()的用法</span>
-    </div><!--html_preserve--><div data-nopre class="expand-content" style="overflow-x:auto"><!--html_preserve--><p>如果不想要打$字號,則用<code>attach()</code></p>
-<pre><code class="language-r">attach(mtcars)
-plot(wt, mpg) 
-abline(lm(mpg~wt))
+<pre><code class="language-r?lang=r?class=.source?preclass=">plot(mpg~wt,data=mtcars) # <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏只會有資料點,同上</span></span><!--/html_preserve-->
+
+# 👏下面3行疊在上面的圖形上
+abline(lm(mtcars$mpg~mtcars$wt)) #<!--html_preserve--><span  class="codenote nopre">🏷<a   href="#ablineerror">註解</a><span   class="tooltiptext" >👏❌ abline(mtcars$mpg~mtcars$wt)</span></span><!--/html_preserve-->
 title(&quot;Regression of MPG on Weight&quot;)
 </code></pre>
-<!--html_preserve--></div><!--/html_preserve--><!--html_preserve--></div><!--/html_preserve-->
-<h2 id="函數畫圖">函數畫圖</h2>
-<p>x: -pi ~ 2*pi
-y: sin(x)</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">plot(sin, -pi, 2*pi) 
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-8-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+</li>
+</ul>
+</li>
+</ul>
+<p>❓ 畫出下面的圖,驗證回歸線經過x,y的平均值。</p>
+<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="unnamed-chunk-9"><!--/html_preserve--><pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">plot(mpg~wt,data=mtcars) 
+
+abline(lm(mtcars$mpg~mtcars$wt)) 
+title(&quot;Regression of MPG on Weight&quot;)
+abline(h=mean(mpg),col=&quot;red&quot;) #&lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;👏表示DV(mpg)平均的水平線&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
+abline(v=mean(wt),col=&quot;red&quot;) #&lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;👏表示IV(wt)平均的垂直線&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
 </code></pre>
+<!--html_preserve--></div><!--/html_preserve-->
+<!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve--><!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+<p><img src="9_1_Plot_files/figure-html/unnamed-chunk-9-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></p>
+</figure><!--/html_preserve-->
+<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#unnamed-chunk-9">提示</button>
+</div><!--/html_preserve-->
+<h2 id="paired">paired</h2>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">pairs(~wt+mpg+disp+cyl,data = mtcars,   main = &quot;Scatterplot Matrix&quot;)
+</code></pre>
+<p><!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
-<figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-10-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+如果是資料集</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">plot(mtcars)
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-7-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-11-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<h2 id="函數畫圖">函數畫圖</h2>
+<p>sin</p>
+<ul>
+<li>x: -pi ~ 2*pi</li>
+<li>y: sin(x)</li>
+</ul>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">plot(sin, -pi, 2*pi) 
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
+
+
+
+
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-12-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
 <h3 id="line-範例">line() 範例</h3>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">require(stats) # for lowess, rpois, rnorm
+<p><a href="../rlang/9_3_plot.html#函數畫圖">另外參考<code>curve()</code></a></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">require(stats) # for lowess, rpois, rnorm
 summary(cars)
 #&gt;      speed           dist       
 #&gt;  Min.   : 4.0   Min.   :  2.00  
@@ -823,170 +1065,118 @@ summary(cars)
 #&gt;  Mean   :15.4   Mean   : 42.98  
 #&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  
 #&gt;  Max.   :25.0   Max.   :120.00
-plot(cars)
-lines(lowess(cars)) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      疊上額外的線條</span></span><!--/html_preserve-->
+#plot(cars) # 因為只有兩個欄位,直接丟進去,不分別放x,y
+plot(cars$dist~cars$speed)
+abline(lm(cars$dist~cars$speed),col=&quot;red&quot;) #沒有data這個參數,所以要加上cars
+
+lines(lowess(cars),col=&quot;blue&quot;) #<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >疊上額外的線條</span></span><!--/html_preserve-->
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<p><!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-8-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
 
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-13-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<div class="notices  ms-5 w-75 ">
+    <div class="warning">
+        <!--html_preserve--><span id='ablineerror'>⛳  錯誤例 </span><!--/html_preserve-->
+<ul>
+<li>❌abline(cars$dist ~ cars$speed) 👏要有lm,因為要找a,b</li>
+<li>❌abline(lowness(cars)) 👏也是沒有a,b :因為lowness是非參數估計,傳回來的是樣本點</li>
+</ul>
+
+    </div>
+</div>
+</p>
 <ul>
 <li><a href="https://www.ime.unicamp.br/~dias/loess.pdf">LOWESS</a>, locally weighted scatter plot smoothing。</li>
-<li><a href="https://biotoolbox.binghamton.edu/Graphics%20in%20R/scatter%20plots/scatter%20plots%20A/Scatterplots.pdf">相關閱讀</a></li>
-</ul>
-<pre><code class="language-r?preclass=.ms-5.w-75">attach(cars)
+<li><a href="https://biotoolbox.binghamton.edu/Graphics%20in%20R/scatter%20plots/scatter%20plots%20A/Scatterplots.pdf">相關閱讀</a> 
+lowess範例
+<pre><code class="language-r">attach(cars)
 plot(speed,dist,main=&quot;Stopping Distance&quot;, xlab=&quot;Speed&quot;, ylab=&quot;Distance&quot;, pch=21, bg=2, col=2)
 lines(lowess(cars, f=.3),col =1)
 lines(lowess(cars, f=.5),col =4)
 lines(lowess(cars, f=.1),col =7)
 </code></pre>
-<h3 id="scatterplot-範例">scatterplot() 範例</h3>
-<p>範例 (<a href="https://stackoverflow.com/questions/40771825/multi-panel-scatterplot-in-cars-package">參考</a>)</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">if(!require(&quot;car&quot;))
-  install.packages(&quot;car&quot;,repos=&quot;http://cran.us.r-project.org&quot;) # <!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      scatterplot 在這個套件中</span></span><!--/html_preserve--> 
-#&gt; 載入需要的套件：car
-#&gt; 載入需要的套件：carData
-library(car)
-scatterplot(wt ~ mpg, data = mtcars)
-lines(lowess(mtcars$mpg,mtcars$wt),col =&quot;red&quot;,lwd=3)
-</code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-9-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-
-<ul>
-<li>綠線: 回歸線</li>
-<li>紅色虛線:the smoothed conditional spread</li>
-<li>紅色實線:the non-parametric regression smooth</li>
+</li>
 </ul>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">scatterplot(wt ~ mpg, data = mtcars, 
-            smooth = FALSE, grid = FALSE, frame = FALSE)
-</code></pre>
-<p>
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-10-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-
-另一個例子:不同群組</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">library(car)
-
-scatterplot(Sepal.Length~Sepal.Width|Species,data=iris,grid=&quot;FALSE&quot;,
-            boxplots=&quot;&quot;,  pch=c(0,1,2))
-scatterplot(Petal.Width~Sepal.Width|Species,data=iris,grid=&quot;FALSE&quot;, 
-            boxplots=&quot;&quot;,  pch=c(0,1,2))
-</code></pre>
-<p><img src="9_1_Plot_files/figure-html/unnamed-chunk-11-1.png" width="350px" /><img src="9_1_Plot_files/figure-html/unnamed-chunk-11-2.png" width="350px" /></p>
 <h3 id="histograms">Histograms</h3>
 <p>函數<code>hist(x)</code>：其中x是一個數字向量，</p>
 <ul>
 <li>選項<code>freq=FALSE</code> 用來畫出 probability densities 而不是次數 frequencies.</li>
 <li>選項：<code>breaks= ##</code> 則是控制分成幾份。</li>
 </ul>
-<p><strong>Simple Histogram</strong></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">hist(mtcars$mpg)
+<ol>
+<li>
+<p>Simple Histogram</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">hist(mtcars$mpg)
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-12-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
 
-<p><strong>分成12份，顏色紅色。</strong></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">hist(mtcars$mpg, breaks=12, col=&quot;red&quot;)
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-14-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+</li>
+<li>
+<p>分成12份，顏色紅色。</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=">hist(mtcars$mpg, breaks=12, col=&quot;red&quot;)
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-13-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
 
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-15-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+</li>
+<li>
 <p>自行給定分割點</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">hist(mtcars$mpg, breaks=c(4,5,12,50), col=&quot;red&quot;)
+<pre><code class="language-r?lang=r?class=.source?preclass=">hist(mtcars$mpg, breaks=c(4,5,12,50), col=&quot;red&quot;)
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-14-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
 
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-16-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+</li>
+</ol>
 <h4 id="add-a-normal-curve">Add a Normal Curve</h4>
 <p>Histograms can be a poor method for determining the shape of a distribution because it is so strongly affected by the number of bins used.</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">x &lt;- mtcars$mpg 
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- mtcars$mpg 
 h&lt;-hist(x, breaks=10, col=&quot;red&quot;, xlab=&quot;Miles Per Gallon&quot;, main=&quot;Histogram with Normal Curve&quot;) 
 xfit&lt;-seq(min(x),max(x),length=40) 
 yfit&lt;-dnorm(xfit,mean=mean(x),sd=sd(x)) 
-yfit &lt;- yfit*diff(h$mids[1:2])*length(x) #<!--html_preserve--><span data-nopre class="codenote nopre">🏷<span data-nopre  class="tooltiptext" >
-      length(X)是個數,不是長度</span></span><!--/html_preserve-->
+yfit &lt;- yfit*diff(h$mids[1:2])*length(x) #<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >length(X)是個數,不是長度</span></span><!--/html_preserve-->
 lines(xfit, yfit, col=&quot;blue&quot;, lwd=2)
 </code></pre>
-<p>
-<figure  class="figure text-center d-block w-50 m-auto   ">
+<p><!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-15-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
-
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-17-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
 hint:
 h: 次數分配圖,又</p>
 <p>$$ pdf  = \frac{機率}{長度} =\frac{\frac{n}{N}}{bin \quad width} $$</p>
 <p>所以</p>
 <p>$$ n=pdf\times N \times (bin \quad width) $$</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">h
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">h
 #&gt; $breaks
 #&gt;  [1] 10 12 14 16 18 20 22 24 26 28 30 32 34
 #&gt; 
@@ -1011,39 +1201,54 @@ h: 次數分配圖,又</p>
 </code></pre>
 <h3 id="kernel-density-plot">Kernel Density Plot</h3>
 <p>核密度畫圖(Kernal density plots) 用來觀察一個變量，比較有有效率，指令如：<code>plot(density(x))</code> 其中<code>x</code> 是一個數字向量。</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">d &lt;- density(mtcars$mpg) # returns the density data 
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">d &lt;- density(mtcars$mpg) # returns the density data 
 plot(d) # plots the results
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-17-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
 
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-19-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
 <h4 id="filled-density-plot">Filled Density Plot</h4>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">d &lt;- density(mtcars$mpg)
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">d &lt;- density(mtcars$mpg)
 plot(d, main=&quot;Kernel Density of Miles Per Gallon&quot;)
 polygon(d, col=&quot;red&quot;, border=&quot;blue&quot;)
 </code></pre>
-
-<figure  class="figure text-center d-block w-50 m-auto   ">
-
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
 
 
 
 
-    <img src="9_1_Plot_files/figure-html/unnamed-chunk-18-1.png" class="figure-img w-100 "
-         alt="figure"/> <figcaption class="figure-caption">
-            figure
-        </figcaption>
-</figure>
+
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-20-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
+<h2 id="其他">其他</h2>
+<p>plot(mpg): plot(~mpg)
+plot(mpg ~ cyl ): plot(cyl,mpg)
+plot(mpg ~ cyl | gear)</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">data&lt;-mtcars
+attach(data)
+names(data)
+#&gt;  [1] &quot;mpg&quot;  &quot;cyl&quot;  &quot;disp&quot; &quot;hp&quot;   &quot;drat&quot; &quot;wt&quot;   &quot;qsec&quot; &quot;vs&quot;   &quot;am&quot;   &quot;gear&quot;
+#&gt; [11] &quot;carb&quot;
+#gear&lt;-factor(gear)
+#am&lt;-factor(am)
+plot(mpg ~ cyl | gear)
+</code></pre>
+<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
+
+
+
+
+
+<img src="9_1_Plot_files/figure-html/unnamed-chunk-21-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption>
+</figure><!--/html_preserve-->
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -1071,16 +1276,16 @@ polygon(d, col=&quot;red&quot;, border=&quot;blue&quot;)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1635398991" rel="stylesheet">
-<script src="../js/quicknote.js?1635398991"></script>
+<link href="../css/quicknote.css?1636003356" rel="stylesheet">
+<script src="../js/quicknote.js?1636003356"></script>
 <div id="page-guide" class="bg-dark">  
   
     
           
-          <a href="../rlang/8_1_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html" 
+          <a href="../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=8.1.&#32;自製套件>前</a>
+                   data-bs-placement="left" title=7.9&#32;物件導向S3>前</a>
                    
           
             <a href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" 
@@ -1090,7 +1295,7 @@ polygon(d, col=&quot;red&quot;, border=&quot;blue&quot;)
           
 
   
-<script src="../js/packhtml.js?1635398991"></script>    
+<script src="../js/packhtml.js?1636003356"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1100,25 +1305,25 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1635398991"></script>
-  <script src="../js/featherlight.gallery.min.js?1635398991"></script>
-  <link href="../css/featherlight.min.css?1635398991" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1635398991" rel="stylesheet">
+  <script src="../js/featherlight.min.js?1636003356"></script>
+  <script src="../js/featherlight.gallery.min.js?1636003356"></script>
+  <link href="../css/featherlight.min.css?1636003356" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1636003356" rel="stylesheet">
 
-  <script src="../js/highlight.pack.js?1635398991"></script>
+  <script src="../js/highlight.pack.js?1636003356"></script>
   
-  <script src="../js/hugohelper.js?1635398991"></script>
+  <script src="../js/hugohelper.js?1636003356"></script>
 
-  <link href="../css/rmd.css?1635398991" rel="stylesheet">
-  <link href="../css/mystyle.css?1635398991" rel="stylesheet">    
-  <script src='../js/variant.js?1635398991'></script>
+  <link href="../css/rmd.css?1636003356" rel="stylesheet">
+  <link href="../css/mystyle.css?1636003356" rel="stylesheet">    
+  <script src='../js/variant.js?1636003356'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1635398991'></script>
+<script src='../js/localsearch.js?1636003356'></script>
     
 
 

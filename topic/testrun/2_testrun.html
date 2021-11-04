@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html><head>
+  <title>2 總體變數</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='../../images/favicon.ico'/>
+      
+    <link href="../../css/atom-one-dark-reasonable.css?1636003356" rel="stylesheet">
+    <link href="../../css/syntax.css?1636003356" rel="stylesheet">
+    <script src="../../js/jquery-3.3.1.min.js?1636003356"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    <script src='../../js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="../../css/fontawesome-all.min.css?1636003356" rel="stylesheet">
+    
+    <link href="../../css/theme-mine.css?1636003356" rel="stylesheet">
+    
+    <link href="../../css/theme.css?1636003356" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
+
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='../../' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents"></nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改October 24, 2021'>2 總體變數</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+
+  
+
+    
+    
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎R">
+     
+
+  <a class="nav-link" 
+    href="../../rlang.html"><i class="far fa-folder"></i>基礎R  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_92db98bffe2d6697b3536cbbf7b00074" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" title="1.4 R Package">1.4 R Package</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" title="2.0 基本輸出輸入">2.0 基本輸出輸入</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 資料探索">2.2 資料探索</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 資料探索">2.3 資料探索</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="4.1 基本">4.1 基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2 練習">4.1.2 練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" title="4.2 向量">4.2 向量</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 矩陣">4.3 矩陣</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 串列 list">4.4 串列 list</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串處理函數">4.5 字串處理函數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" title="4.7 因子">4.7 因子</a></li>
+    
+  
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/4_15_json.html" data-bs-toggle="tooltip" title="4.15 json">4.15 json</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
+    
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_1_function.html" data-bs-toggle="tooltip" title="7.1 R 函數的基本撰寫">7.1 R 函數的基本撰寫</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_2_function.html" data-bs-toggle="tooltip" title="7.2 更多R函數">7.2 更多R函數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" title="7.8 R的物件相關概念">7.8 R的物件相關概念</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="7.9 物件導向S3">7.9 物件導向S3</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_1_plot.html" data-bs-toggle="tooltip" title="9.1 基本繪圖">9.1 基本繪圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" title="9.2 多圖疊圖">9.2 多圖疊圖</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 畫圖練習">9.3 畫圖練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" title="10. tidyr, dplyr basic">10. tidyr, dplyr basic</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
+    
+  
+    
+  
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
+    
+
+  
+  
+  
+  
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="../../rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="../../econometrics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_c59a6b16a979dae063e00e4a916e3284" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/0_prerequest.html" data-bs-toggle="tooltip" title="0 前置準備">0 前置準備</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/1_t%E6%AA%A2%E5%AE%9A.html" data-bs-toggle="tooltip" title="1.0 t檢定">1.0 t檢定</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/2_anova.html" data-bs-toggle="tooltip" title="2. ANOVA">2. ANOVA</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html" data-bs-toggle="tooltip" title="A.a 資料處理">A.a 資料處理</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" title="A.b mpg為例的ggplot">A.b mpg為例的ggplot</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
+    
+  
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+     
+
+  <a class="nav-link" 
+    href="../../topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics"> 
+    
+
+  
+  
+  
+  
+    
+  <li>
+
+ 
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="../../topic/simulation.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_e617bdc52da54290f99855ac9d5037aa" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
+    
+
+  
+  
+  
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" title="4.1 模擬基本 1">4.1 模擬基本 1</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" title="4.2 模擬基本 2">4.2 模擬基本 2</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
+    
+  
+        <li class="nav-item">
+          
+          <a class="nav-link" href="../../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+    
+  
+    </ul>
+</li>
+     
+  
+
+          
+        
+  </ul> 
+
+    
+    
+
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="../../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-04 PM 01:00]</a></li><li><a href="../../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-04 PM 12:37]</a></li><li><a href="../../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <script src="2_TestRun_files/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="2_TestRun_files/jquery-1.11.1/jquery.min.js"></script>
+<link href="2_TestRun_files/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="2_TestRun_files/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="2_TestRun_files/dygraphs-1.1.1/shapes.js"></script>
+<script src="2_TestRun_files/moment-2.8.4/moment.js"></script>
+<script src="2_TestRun_files/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="2_TestRun_files/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="2_TestRun_files/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
+<script src="2_TestRun_files/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="2_TestRun_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="2_TestRun_files/datatables-binding-0.19/datatables.js"></script>
+<script src="2_TestRun_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="2_TestRun_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="2_TestRun_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="2_TestRun_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="2_TestRun_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="2_TestRun_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">
+rm(list=ls()) # (🐞會刪掉我自己的單頁編譯變數) 
+ls() # <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏工作區是空的,沒有x變數</span></span><!--/html_preserve-->
+#&gt; character(0)
+mean(x&lt;-1:10) 
+#&gt; [1] 5.5
+#&gt; [1] 5.5
+ls() # <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏在工作區會出現x變數</span></span><!--/html_preserve-->
+#&gt; [1] &quot;x&quot;
+rm(x)　# <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏從工作區移除變數x</span></span><!--/html_preserve-->
+
+mean(x=1:10) 
+#&gt; [1] 5.5
+#&gt; [1] 5.5
+ls() # <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏工作區沒有x變數，這裡只是參數指定，在主控台敲入？mean可以看到參數有x</span></span><!--/html_preserve-->
+#&gt; character(0)
+</code></pre>
+<p>First test a dygraph</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">if(!require(&quot;dygraphs&quot;)){
+  install.packages(&quot;dygraphs&quot;)
+}
+#&gt; 載入需要的套件：dygraphs
+library(dygraphs)
+dygraph(nhtemp, main = &quot;New Haven Temperatures&quot;) %&gt;% 
+  dyRangeSelector(dateWindow = c(&quot;1920-01-01&quot;, &quot;1960-01-01&quot;))
+</code></pre>
+<!--html_preserve--><div id="htmlwidget-d78812c5c2f1deacbdfb" style="width:504px;height:504px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d78812c5c2f1deacbdfb">{"x":{"attrs":{"title":"New Haven Temperatures","labels":["year","V1"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}},"showRangeSelector":true,"dateWindow":["1920-01-01T00:00:00.000Z","1960-01-01T00:00:00.000Z"],"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"yearly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["1912-01-01T00:00:00.000Z","1913-01-01T00:00:00.000Z","1914-01-01T00:00:00.000Z","1915-01-01T00:00:00.000Z","1916-01-01T00:00:00.000Z","1917-01-01T00:00:00.000Z","1918-01-01T00:00:00.000Z","1919-01-01T00:00:00.000Z","1920-01-01T00:00:00.000Z","1921-01-01T00:00:00.000Z","1922-01-01T00:00:00.000Z","1923-01-01T00:00:00.000Z","1924-01-01T00:00:00.000Z","1925-01-01T00:00:00.000Z","1926-01-01T00:00:00.000Z","1927-01-01T00:00:00.000Z","1928-01-01T00:00:00.000Z","1929-01-01T00:00:00.000Z","1930-01-01T00:00:00.000Z","1931-01-01T00:00:00.000Z","1932-01-01T00:00:00.000Z","1933-01-01T00:00:00.000Z","1934-01-01T00:00:00.000Z","1935-01-01T00:00:00.000Z","1936-01-01T00:00:00.000Z","1937-01-01T00:00:00.000Z","1938-01-01T00:00:00.000Z","1939-01-01T00:00:00.000Z","1940-01-01T00:00:00.000Z","1941-01-01T00:00:00.000Z","1942-01-01T00:00:00.000Z","1943-01-01T00:00:00.000Z","1944-01-01T00:00:00.000Z","1945-01-01T00:00:00.000Z","1946-01-01T00:00:00.000Z","1947-01-01T00:00:00.000Z","1948-01-01T00:00:00.000Z","1949-01-01T00:00:00.000Z","1950-01-01T00:00:00.000Z","1951-01-01T00:00:00.000Z","1952-01-01T00:00:00.000Z","1953-01-01T00:00:00.000Z","1954-01-01T00:00:00.000Z","1955-01-01T00:00:00.000Z","1956-01-01T00:00:00.000Z","1957-01-01T00:00:00.000Z","1958-01-01T00:00:00.000Z","1959-01-01T00:00:00.000Z","1960-01-01T00:00:00.000Z","1961-01-01T00:00:00.000Z","1962-01-01T00:00:00.000Z","1963-01-01T00:00:00.000Z","1964-01-01T00:00:00.000Z","1965-01-01T00:00:00.000Z","1966-01-01T00:00:00.000Z","1967-01-01T00:00:00.000Z","1968-01-01T00:00:00.000Z","1969-01-01T00:00:00.000Z","1970-01-01T00:00:00.000Z","1971-01-01T00:00:00.000Z"],[49.9,52.3,49.4,51.1,49.4,47.9,49.8,50.9,49.3,51.9,50.8,49.6,49.3,50.6,48.4,50.7,50.9,50.6,51.5,52.8,51.8,51.1,49.8,50.2,50.4,51.6,51.8,50.9,48.8,51.7,51,50.6,51.7,51.5,52.1,51.3,51,54,51.4,52.7,53.1,54.6,52,52,50.9,52.6,50.2,52.6,51.6,51.9,50.5,50.9,51.7,51.4,51.7,50.8,51.9,51.8,51.9,53]]},"evals":["attrs.interactionModel"],"jsHooks":[]}</script><!--/html_preserve-->
+<p>Now a datatable</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">library(DT)
+datatable(iris, options = list(pageLength = 5))
+</code></pre>
+<!--html_preserve--><div id="htmlwidget-1b7fe1c295f58653e71a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b7fe1c295f58653e71a">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5,7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7,6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3,3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8,3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5,1.5,1.6,1.4,1.1,1.2,1.5,1.3,1.4,1.7,1.5,1.7,1.5,1,1.7,1.9,1.6,1.6,1.5,1.4,1.6,1.6,1.5,1.5,1.4,1.5,1.2,1.3,1.4,1.3,1.5,1.3,1.3,1.3,1.6,1.9,1.4,1.6,1.4,1.5,1.4,4.7,4.5,4.9,4,4.6,4.5,4.7,3.3,4.6,3.9,3.5,4.2,4,4.7,3.6,4.4,4.5,4.1,4.5,3.9,4.8,4,4.9,4.7,4.3,4.4,4.8,5,4.5,3.5,3.8,3.7,3.9,5.1,4.5,4.5,4.7,4.4,4.1,4,4.4,4.6,4,3.3,4.2,4.2,4.2,4.3,3,4.1,6,5.1,5.9,5.6,5.8,6.6,4.5,6.3,5.8,6.1,5.1,5.3,5.5,5,5.1,5.3,5.5,6.7,6.9,5,5.7,4.9,6.7,4.9,5.7,6,4.8,4.9,5.6,5.8,6.1,6.4,5.6,5.1,5.6,6.1,5.6,5.5,4.8,5.4,5.6,5.1,5.1,5.9,5.7,5.2,5,5.2,5.4,5.1],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.2,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2,1.4,1.5,1.5,1.3,1.5,1.3,1.6,1,1.3,1.4,1,1.5,1,1.4,1.3,1.4,1.5,1,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1,1.1,1,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1,1.3,1.2,1.3,1.3,1.1,1.3,2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2,1.9,2.1,2,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2,2,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2,2.3,1.8],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="../../css/quicknote.css?1636003356" rel="stylesheet">
+<script src="../../js/quicknote.js?1636003356"></script>
+<div id="page-guide" class="bg-dark">  
+  
+    
+          
+          <a href="../../topic/testrun/1_testrun_chunk.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=1&#32;Test&#32;Run&#32;-&#32;chunk>前</a>
+                   
+          
+            <a href="../../topic/testrun/3_testrun_htmlpreserve.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=3&#32;htmlpreserve>後</a>            
+          
+          
+
+  
+<script src="../../js/packhtml.js?1636003356"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+  </div>
+
+
+  <script src="../../js/featherlight.min.js?1636003356"></script>
+  <script src="../../js/featherlight.gallery.min.js?1636003356"></script>
+  <link href="../../css/featherlight.min.css?1636003356" rel="stylesheet">
+  <link href="../../css/featherlight.gallery.min.css?1636003356" rel="stylesheet">
+
+  <script src="../../js/highlight.pack.js?1636003356"></script>
+  
+  <script src="../../js/hugohelper.js?1636003356"></script>
+
+  <link href="../../css/rmd.css?1636003356" rel="stylesheet">
+  <link href="../../css/mystyle.css?1636003356" rel="stylesheet">    
+  <script src='../../js/variant.js?1636003356'></script>
+
+<script>
+  
+    let idxfile = "\/blogR\/index.json"  
+  
+</script>
+<script src='../../js/localsearch.js?1636003356'></script>
+    
+
+
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+    
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']  , ['\\[','\\]']] 
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      
+      
+    
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>
