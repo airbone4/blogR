@@ -54,8 +54,8 @@ font-size:60%;
 content: "✔";
 font-size:60%;
 }
-
-#body-inner a:not([class]) {
+/*https://stackoverflow.com/questions/25676053/css-selector-to-check-that-attribute-does-not-contain-both-values*/
+#body-inner a:not([class]):not([data-role-posix]){
 text-decoration: none;
 color: inherit;
 border-bottom: 1px solid var(--theme-border-color);
@@ -97,40 +97,23 @@ border: none;
 background: #f106d2;
 }
 
-a[href$=".docx"]:before,a[href$=".doc"]:before,a[href$=".rtf"]:before {
-content:url(../images/doc.png);
-}
-
-a[href$=".ppt"],a[href$=".pptx"]:before {
-content:url(../images/ppt.png);
-}
-
-a[href$=".xlsx"]:before, a[href$=".xls"]:before {
-content:url(../images/xls.png);
-}
-
-a[href$=".pdf"]:before {
-content:url(../images/pdf.gif);
-}
-a[data-role-posix]:after{
-  content: "👍"
-}
 
 .codenote {
 position: relative;
-display: inline-block;
-visibility: visible;
+/*display: inline-block;
+visibility: visible;*/
 opacity: 100;
 /*width:400px;*/
 
 }
 
 .tooltiptext {
-visibility: hidden;
-max-width: 100%;
-/*min-width: 250px; 
+/*visibility: hidden;*/
+display:none;
+/*max-width: 100%;
+min-width: 250px; 
 width: max-content; */
-
+width:250px;
 color: #fff !important;
 background-color: #dc3545 !important;
 text-align: left;
@@ -162,12 +145,9 @@ padding:0.5rem;
   
 }
 
-.codenote:hover{
-  width: 400px;
-  
-}
 .codenote:hover .tooltiptext, .tooltiptext:focus {
-visibility: visible;
+
+display:block;
 
 }
 
@@ -178,13 +158,14 @@ box-shadow: none;
 }
 
 /* 短碼 expand.html */
+/*
 .nopre{
-white-space:normal;
-}
+  white-space:normal;
+  }
+*/  
 div.expand {
 white-space:normal;
-/* margin-left: 10px;
-width: 100%; */
+
 }
 .expand-label {
 background: var(--theme-transparent-color);
@@ -428,4 +409,82 @@ div.sidebar, div.base {
 figure a{
   background-color: #8ce9e400 !important;
   border: none!important;
+}
+
+
+
+	
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: #dc3545;
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: #dc3545;
+}
+
+.tooltip.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: #dc3545;
+}
+
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: #dc3545;
+}	
+.tooltip.show {
+opacity: 1;
+}
+.tooltip-inner {
+background-color: #dc3545;
+box-shadow: 0px 0px 4px black;
+
+opacity: 1 !important;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+border-right-color: #dc3545 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+border-left-color: #dc3545 !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+border-bottom-color: #dc3545 !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+border-top-color: #dc3545 !important;
+}
+
+
+a[data-role-posix]{
+  display:block;
+  margin:0.5rem 1.5rem;
+  /*text-align:center;*/
+  text-decoration: none;;
+}
+ 
+
+a[data-role-posix]:before{
+  margin-left:-16px;
+}
+ 
+
+a[href$=".docx"]:before,a[href$=".doc"]:before,a[href$=".rtf"]:before {
+content:url(../images/doc.png);
+}
+
+a[href$=".ppt"],a[href$=".pptx"]:before {
+content:url(../images/ppt.png);
+}
+
+a[href$=".xlsx"]:before, a[href$=".xls"]:before {
+content:url(../images/xls.png);
+}
+
+a[href$=".pdf"]:before {
+content:url(../images/pdf.gif);
+}
+
+.tooltip-inner{
+  max-width:400px;
 }

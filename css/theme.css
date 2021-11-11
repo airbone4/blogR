@@ -12,6 +12,7 @@
     transform: translateY(-50%);
 }
 */
+/*
 @font-face {
     font-family: 'Novacento Sans Wide';
     src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot");
@@ -32,14 +33,6 @@
     src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype");
 }
 
-/*
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-@font-face {
-    font-family: 'Noto Sans TC';
-    font-style: thin;
-    src: url("https://fonts.googleapis.com/css?family=Noto+Sans+TC") format("oft");
-}
-*/
 
 @font-face {
     font-family: 'Noto Sans TC';
@@ -50,11 +43,11 @@
          url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
    font-display: fallback;
   }
-
+*/
 :root {
     --Font-Family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif,"Segoe UI Emoji"
 }  
-/*我把 "Noto Sans TC", 暫時移出--Font-Family不好看阿*/
+
 body {
 /*    background: #fff;
     color: #777; */
@@ -187,7 +180,7 @@ ol.attachments-files{
     overflow-y: auto;  /*左側欄位捲動*/
     height: calc(100vh - 100px) ; /*左側欄位捲動*/
     flex:10 1 55rem;
-    padding: 0px 3rem;
+    padding: 0px 12rem;
 } 
 #body-inner p{
   margin-top: 1rem;
@@ -430,7 +423,8 @@ pre code{
     white-space: inherit; 
     margin: 0;
     display:block;
-    overflow:inherit;
+    /* overflow:inherit; quote v1 */
+    overflow: auto;
     width:100%;
     color: #abb2bf;
   } 
@@ -441,17 +435,17 @@ pre  code.hljs {
       /* border: none; mytag:1 warning 在前面,會蓋過去*/
       margin: 0;
       display:block;
-      overflow:inherit;
+      /* overflow:inherit; quote v1 */
       width:100%;
 }
-
+/* quote v1
 pre:hover, pre:focus { 
     overflow:visible;
     min-width: 100%;
     width: max-content!important; 
     box-shadow: 11px 7px 8px 2px #dc3545;
 }
-
+*/
 
 table:not(.lntable) {
     border: 1px solid #1C6EA4;
@@ -550,3 +544,4 @@ margin: 6px 0 0;
 
 
 } 
+

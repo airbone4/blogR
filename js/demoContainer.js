@@ -16,14 +16,42 @@ function findAncestor (el, cls) {
     while ((el = el.parentElement) && !el.classList.contains(cls));
     return el;
 }
-function execArea(e){
+
+function execArea(e,basedir){
   //var p = e.parentNode;
-  var p=findAncestor(e,"demoContainer");
+  //var p=findAncestor(e,"demoContainer");
+  let p=e.closest(".demoContainer")
   areanode=p.getElementsByTagName("textarea")[0]
   //重新載入到iframe
   fm=p.getElementsByTagName("iframe")[0]
   fm.srcdoc=areanode.value;
+
 }
+
+/*
+本來用這個來解決載入不同子目錄的時候,可以有不一樣的base,可是好像不行
+function execArea(e,basedir){
+  //var p = e.parentNode;
+  //var p=findAncestor(e,"demoContainer");
+  
+
+  let p=e.closest(".demoContainer")
+  areanode=p.getElementsByTagName("textarea")[0]
+  //重新載入到iframe
+  fm=p.getElementsByTagName("iframe")[0]
+  fm.srcdoc= areanode.value;
+  fm.addEventListener("load", (evt) => {
+    if (basedir!=""){
+      var bt = fm.contentDocument.createElement("base");
+      bt.setAttribute("href",basedir);
+      bt.setAttribute("href",basedir);
+      fm.contentDocument.getElementsByTagName("head")[0].appendChild(bt);  
+     }
+  }, { once: true })
+   
+
+}
+*/
 function switchEdit(e){
   //var p = e.parentNode;
   var p=findAncestor(e,"demoContainer");

@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href='../images/favicon.ico'/>
       
-    <link href="../css/atom-one-dark-reasonable.css?1636009621" rel="stylesheet">
-    <link href="../css/syntax.css?1636009621" rel="stylesheet">
-    <script src="../js/jquery-3.3.1.min.js?1636009621"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/atom-one-dark-reasonable.css">
+    
+    <link href="../css/syntax.css?1636607466" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js?1636607466"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='../js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="../css/fontawesome-all.min.css?1636009621" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1636607466" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1636009621" rel="stylesheet">
+    <link href="../css/theme-mine.css?1636607466" rel="stylesheet">
     
-    <link href="../css/theme.css?1636009621" rel="stylesheet">
+    <link href="../css/theme.css?1636607466" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="../scss/notice.9533fa19b2db5be8a6e0b7e9e8e77f6ec4639fd599c204f25dfd15dca5c9e22c.css" integrity="sha256-lTP6GbLbW&#43;im4Lfp6Od/bsRjn9WZwgTyXf0V3KXJ4iw=">
+    <link rel="stylesheet" href="../scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
 
     
   </head><body><div id="top-pane" class="navbar  fixed-top ">
@@ -41,9 +42,14 @@
       <ul>
         <li><a href="#多視窗">多視窗</a></li>
         <li><a href="#組合圖">組合圖</a></li>
-        <li><a href="#rmd-中的圖">RMD 中的圖</a></li>
+        <li><a href="#有關畫布">有關畫布</a></li>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
+    <li><a href="#練習">練習</a>
+      <ul>
         <li><a href="#疊圖">疊圖</a></li>
-        <li><a href="#練習">練習</a></li>
+        <li><a href="#練習-1">練習</a></li>
         <li><a href="#layout"><code>layout()</code></a></li>
       </ul>
     </li>
@@ -56,7 +62,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改November 4, 2021'>9.2 多圖疊圖</span>
+      title='最後修改November 11, 2021'>9.2 多圖疊圖</span>
         
     
 
@@ -78,22 +84,17 @@
 
 
 <div id="content-wrapper"><nav id="sidebar">
-
   
-
-    
-    
     <ul class="nav flex-column topics" id="home-topics">
       
         
           
           
 
- 
 
  
 
-<li class="nav-item" data-bs-toggle="tooltip" title="基礎R">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="基礎R">
      
 
   <a class="nav-link" 
@@ -104,194 +105,128 @@
     </span>
   <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
   class="submenu collapse show" 
-  data-bs-parent="#home-topics"> 
-    
+  data-bs-parent="#home-topics">
 
-  
-  
-  
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" title="1 Requirement">1 Requirement</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" title="1.1 運作環境">1.1 運作環境</a></li>
-    
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" title="1.2 檔案系統">1.2 檔案系統</a></li>
+   
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/1_0_requirement.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1 Requirement</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1 運作環境</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/1_2_filesystem.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.2 檔案系統</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.3 執行</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.4 R Package</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.5 編碼</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0 基本輸出輸入</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1 讀檔寫檔</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.2 資料探索</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.3 資料探索</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3. Quick view 1</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1 基本</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1.2 練習</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.2 向量</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.3 矩陣</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_4_type_list.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.4 串列 list</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.5 字串處理函數</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.6 資料集 data frame</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.7 因子</a></li>
+     
+   
+     
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/4_15_json.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.15 json</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.1 Programming basic</a></li>
+     
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.3 function - apply family</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/7_1_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.1 R 函數的基本撰寫</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/7_2_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.2 更多R函數</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/7_3_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.3 R 函數定義的幾種分類</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.8 R的物件相關概念</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.9 物件導向S3</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/9_1_plot.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">9.1 基本繪圖</a></li>
+     
     
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" title="1.3 執行">1.3 執行</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/1_4_rpackages.html" data-bs-toggle="tooltip" title="1.4 R Package">1.4 R Package</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" title="1.5 編碼">1.5 編碼</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" title="2.0 基本輸出輸入">2.0 基本輸出輸入</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" title="2.1 讀檔寫檔">2.1 讀檔寫檔</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" title="2.2 資料探索">2.2 資料探索</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" title="2.3 資料探索">2.3 資料探索</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/3_quickview1.html" data-bs-toggle="tooltip" title="3. Quick view 1">3. Quick view 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="4.1 基本">4.1 基本</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="4.1.2 練習">4.1.2 練習</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_2_type_vector.html" data-bs-toggle="tooltip" title="4.2 向量">4.2 向量</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" title="4.3 矩陣">4.3 矩陣</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_4_type_list.html" data-bs-toggle="tooltip" title="4.4 串列 list">4.4 串列 list</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" title="4.5 字串處理函數">4.5 字串處理函數</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" title="4.6 資料集 data frame">4.6 資料集 data frame</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_7_type_factor.html" data-bs-toggle="tooltip" title="4.7 因子">4.7 因子</a></li>
-    
-  
-    
-  
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/4_15_json.html" data-bs-toggle="tooltip" title="4.15 json">4.15 json</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/6_1_programming.html" data-bs-toggle="tooltip" title="6.1 Programming basic">6.1 Programming basic</a></li>
-    
-  
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/6_3_apply_family.html" data-bs-toggle="tooltip" title="6.3 function - apply family">6.3 function - apply family</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/7_1_function.html" data-bs-toggle="tooltip" title="7.1 R 函數的基本撰寫">7.1 R 函數的基本撰寫</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/7_2_function.html" data-bs-toggle="tooltip" title="7.2 更多R函數">7.2 更多R函數</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/7_3_function.html" data-bs-toggle="tooltip" title="7.3 R 函數定義的幾種分類">7.3 R 函數定義的幾種分類</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" title="7.8 R的物件相關概念">7.8 R的物件相關概念</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" title="7.9 物件導向S3">7.9 物件導向S3</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/9_1_plot.html" data-bs-toggle="tooltip" title="9.1 基本繪圖">9.1 基本繪圖</a></li>
-    
-  
-        <li class="nav-item active">
-          
-          <a class="nav-link" href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" title="9.2 多圖疊圖">9.2 多圖疊圖</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" title="9.3 畫圖練習">9.3 畫圖練習</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" title="10. tidyr, dplyr basic">10. tidyr, dplyr basic</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" title="11. sampling">11. sampling</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" title="11 Environments">11 Environments</a></li>
-    
-  
-    
-  
-    
-  <li>
+        <li class="nav-item active"><a class="nav-link" href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">9.2 多圖疊圖</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/9_3_plot.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">9.3 畫圖練習</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">10. tidyr, dplyr basic</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/11_00_sampling.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">11. sampling</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/11_environments.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">11 Environments</a></li>
+     
+   
+     
+   
+     
+   
+        <li>
+
 
  
 
- 
-
-<li class="nav-item" data-bs-toggle="tooltip" title="暫時">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="暫時">
      
 
   <a class="nav-link" 
@@ -302,31 +237,29 @@
     </span>
   <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
-    
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074">
 
-  
-  
-  
-  
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" title="引用">引用</a></li>
+  
+   
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/demo/citation.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">引用</a></li>
     </ul>
 </li>
      
   
 </li>
-    
-  <li>
+     
+   
+        <li>
+
 
  
 
- 
-
-<li class="nav-item" data-bs-toggle="tooltip" title="練習用">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="練習用">
      
 
   <a class="nav-link" 
@@ -337,41 +270,31 @@
     </span>
   <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074"> 
-    
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074">
 
-  
-  
-  
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" title="assignment-1">assignment-1</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" title="regexpr">regexpr</a></li>
-    
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" title="檔案系統">檔案系統</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" title="資料集">資料集</a></li>
+   
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/hw/hw_basic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">assignment-1</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">regexpr</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">檔案系統</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/hw/dataset_class.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">資料集</a></li>
     </ul>
 </li>
      
   
 </li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" title="練習相關檔案">練習相關檔案</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../rlang/resources.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">練習相關檔案</a></li>
     </ul>
 </li>
      
@@ -381,11 +304,10 @@
           
           
 
- 
 
  
 
-<li class="nav-item" data-bs-toggle="tooltip" title="基礎計量">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="基礎計量">
      
 
   <a class="nav-link" 
@@ -396,43 +318,31 @@
     </span>
   <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
   class="submenu collapse" 
-  data-bs-parent="#home-topics"> 
-    
+  data-bs-parent="#home-topics">
 
-  
-  
-  
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/0_prerequest.html" data-bs-toggle="tooltip" title="0 前置準備">0 前置準備</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/1_t%E6%AA%A2%E5%AE%9A.html" data-bs-toggle="tooltip" title="1.0 t檢定">1.0 t檢定</a></li>
-    
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/2_anova.html" data-bs-toggle="tooltip" title="2. ANOVA">2. ANOVA</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html" data-bs-toggle="tooltip" title="A.a 資料處理">A.a 資料處理</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" title="A.b mpg為例的ggplot">A.b mpg為例的ggplot</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../econometrics/lmm.html" data-bs-toggle="tooltip" title="lmm">lmm</a></li>
-    
-  
+   
+   
+        <li class="nav-item"><a class="nav-link" href="../econometrics/0_prerequest.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0 前置準備</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../econometrics/1_t%E6%AA%A2%E5%AE%9A.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0 t檢定</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../econometrics/2_anova.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. ANOVA</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">A.a 資料處理</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">A.b mpg為例的ggplot</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../econometrics/lmm.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">lmm</a></li>
+     
+   
     </ul>
 </li>
      
@@ -442,11 +352,10 @@
           
           
 
- 
 
  
 
-<li class="nav-item" data-bs-toggle="tooltip" title="專題">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="專題">
      
 
   <a class="nav-link" 
@@ -457,21 +366,21 @@
     </span>
   <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
   class="submenu collapse" 
-  data-bs-parent="#home-topics"> 
-    
+  data-bs-parent="#home-topics">
 
-  
-  
-  
-  
     
-  <li>
+  
+  
+   
+   
+     
+   
+        <li>
+
 
  
 
- 
-
-<li class="nav-item" data-bs-toggle="tooltip" title="實驗">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="實驗">
      
 
   <a class="nav-link" 
@@ -482,53 +391,39 @@
     </span>
   <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
   class="submenu collapse" 
-  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817"> 
-    
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817">
 
-  
-  
-  
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" title="2.1 隨機變數">2.1 隨機變數</a></li>
     
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" title="2.1.1 亂數函數練習">2.1.1 亂數函數練習</a></li>
-    
   
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" title="4.1 模擬基本 1">4.1 模擬基本 1</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" title="4.2 模擬基本 2">4.2 模擬基本 2</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" title="MC_基本">MC_基本</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" title="Poisson分配">Poisson分配</a></li>
-    
-  
-        <li class="nav-item">
-          
-          <a class="nav-link" href="../topic/simulation/central.html" data-bs-toggle="tooltip" title="中央">中央</a></li>
+   
+   
+        <li class="nav-item"><a class="nav-link" href="../topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1 隨機變數</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1.1 亂數函數練習</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1 模擬基本 1</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.2 模擬基本 2</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">MC_基本</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">Poisson分配</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="../topic/simulation/central.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">中央</a></li>
     </ul>
 </li>
      
   
 </li>
-    
-  
+     
+   
     </ul>
 </li>
      
@@ -537,13 +432,10 @@
           
         
   </ul> 
-
     
-    
-
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-04 PM 03:06]</a></li><li><a href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-04 PM 12:37]</a></li><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
+      最近3篇<br/><ul><li><a href="../rlang/9_1_plot.html"> <i class="far fa-clock" ></i>9.1 基本繪圖[2021-11-11 PM 01:10]</a></li><li><a href="../rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html"> <i class="far fa-clock" ></i>9.2 多圖疊圖[2021-11-11 PM 01:10]</a></li><li><a href="../rlang/1_1_%E7%B3%BB%E7%B5%B1.html"> <i class="far fa-clock" ></i>1.1 運作環境[2021-11-04 AM 10:11]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -557,9 +449,9 @@ mosaicplot, stripchart, contour,這些指令大體上有兩個動作:
 <li>畫圖</li>
 </ol>
 </li>
-<li>低階指令則是增添到目前的畫布上。例如， abline, lines, segments, points,polygon, grid 。還有增添文字的函數,例如t: legend, text, mtext,而座標軸相關函數,則有: axis, box, rug</li>
+<li>低階指令則只有畫圖,添到目前的畫布上而不新增畫布。例如， abline, lines, segments, points,polygon, grid 。還有增添文字的函數,例如t: legend, text, mtext,而座標軸相關函數,則有: axis, box, rug</li>
 </ol>
-<p>高階和低階函數的關係,例如指令 plot, hist, boxplot, 等等,會在<code>目前</code>的視窗上新增畫布，然後畫圖,而line(),scatterplot()則是疊圖。這裡另外看看幾種自行控制的方法：</p>
+<p>高階和低階函數的關係,例如指令 plot, hist, boxplot, scatterplot()等等,會在<code>目前</code>的視窗上新增畫布，然後畫圖,而低階指令例如line()則是疊圖。這裡另外看看幾種自行控制的方法：</p>
 <ul>
 <li>多視窗(multiple windows)、</li>
 <li>組合圖(combining figure) 畫布分割</li>
@@ -569,7 +461,8 @@ mosaicplot, stripchart, contour,這些指令大體上有兩個動作:
 <p>在R中,對應上述作業系統的關鍵字<code>.Devices</code>(paired list)、<code>.Device</code>(長度為1)、<code>dev.cur()</code>(目前的裝置active device)。這裡說的Device指的是視窗。在視窗裡面的畫布,就是R提供的繪圖函數輸出所在,例如<code>plot()</code>,<code>hist()</code>等等。</p>
 <p>所以</p>
 <ul>
-<li><code>dev.new()</code> 指的是開啟新視窗，<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >👏在Rstudio中的內定視窗名是<code>RStudioGD</code></span></span><!--/html_preserve--></li>
+<li><code>dev.new()</code> 指的是開啟新視窗，<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true"
+title="👏在Rstudio中的內定視窗名是&lt;code&gt;RStudioGD&lt;/code&gt;&lt;br/&gt;&lt;img src=&#34;9_2_多圖疊圖.files/rstudiogd.png&#34; width=&#34;400px&#34;&gt;">🏷</span><!--/html_preserve--></li>
 <li><code>dev.cur()</code>是目前視窗號碼,</li>
 <li><code>dev.prev()</code>前一個視窗號碼。</li>
 <li>而<code>plot.new()</code> 則是新增畫布(我猜應該是透明,所以也可以用將兩個高階指令圖疊在一起)。<a href="#背景練習">見練習</a></li>
@@ -599,14 +492,11 @@ mosaicplot, stripchart, contour,這些指令大體上有兩個動作:
 </tbody>
 </table>
 <p>要關閉視窗，可以用函數<code>dev.off()</code><br>
-如果要知道目前的視窗是那一個，可以參考 <code>dev.cur()</code>。
-Note:
-如果目前有多個圖窗，則一直呼叫這個函數<code>dev.off()</code>，會依次關閉視窗，直到函數傳回NULL。</p>
-<!--html_preserve--><div  class="expand ms-5 w-75 ">
-<div  class="expand-label" onclick="vexpand(this)">
-<i  style="font-size:x-small;color:yellow" class="fa fa-chevron-right"></i>
-<span  >驗證上面的說法可以利用</span>
-</div><div  class="expand-content" style="overflow-x:auto"><!--/html_preserve--><pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">dev.cur()
+如果要知道目前的視窗是那一個，可以參考 <code>dev.cur()</code>。</p>
+<p>Note:</p>
+<p>如果目前有多個圖窗，則一直呼叫這個函數<code>dev.off()</code>，會依次關閉視窗，直到函數傳回NULL。</p>
+<!--html_preserve--><div class="message">驗證上面的說法可以利用<button class='btn-primary p-0 fs-6' data-bs-toggle="collapse" data-bs-target="#n695713248">
+展/縮</button><div  id="n695713248" class="collapse" style="overflow-x:auto"><!--/html_preserve--><pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">dev.cur()
 #&gt; png 
 #&gt;   2
 hist(mtcars$mpg) #在目前的裝置(視窗)上,開新的畫布,然後畫圖
@@ -615,10 +505,8 @@ dev.cur()
 #&gt;   2
 hist(mtcars$mpg) #重複上面的動作,但是仍然在同一個裝置上,所以結果只看到一個直方圖
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-<p><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-2-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption></p>
-</figure><!--/html_preserve-->
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-2-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+<p>figure</figcaption></figure><!--/html_preserve--></p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">dev.cur()
 #&gt; png 
 #&gt;   2
@@ -628,33 +516,37 @@ dev.off()
 </code></pre>
 <p>❓上面的範例，可以看到圖裝置的編號都是2，也就是hist畫在同一個視窗上。最後也只顯示一個圖(疊在最後面的那個)。如果在Rstudio上測試,可以利用按鈕清除目前的圖形知道,另外一張圖在下面。</p>
 <!--html_preserve--></div></div><!--/html_preserve-->
-<p>討論下面的輸出結果，：</p>
-<p><!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve--><p>比較程式碼在rmarkdown和console中執行的結果？目的只是在說,在Rmarkdown中<code>windows()</code>沒作用。</p>
+<p>討論下面的輸出結果：
+<!--html_preserve--><div class="position-relative warning"><!--/html_preserve--><p>比較程式碼在rmarkdown和console中執行的結果？<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true"
+title="👏目的只是在說,在Rmarkdown中&lt;code&gt;windows()&lt;/code&gt;沒作用。">🏷</span><!--/html_preserve--></p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">if(.Platform$OS.type==&quot;windows&quot;) windows() else X11()
 hist(mtcars$mpg) 
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-<p><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption></p>
-</figure><!--/html_preserve-->
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">dev.cur()  # &lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;如果不在Rmarkdown中，應該是2&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+<p>figure</figcaption></figure><!--/html_preserve--></p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">dev.cur()  # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;如果不在Rmarkdown中，應該是2&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
 #&gt; windows 
 #&gt;       3
 # 重複上面3行
 if(.Platform$OS.type==&quot;windows&quot;) windows() else X11()
 hist(mtcars$mpg)
-dev.cur() # &lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;視窗編號正常顯示增加,但是圖形不出來。&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
+dev.cur() # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;視窗編號正常顯示增加,但是圖形不出來。&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
 #&gt; windows 
 #&gt;       4
 </code></pre>
 <!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-07301">提示</button>
 </div><!--/html_preserve-->
-<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-07301"><!--/html_preserve-->在rscript✔中執行正常(會有兩個視窗)。但是在RMD中只有一個圖。函數<code>windows()</code>好像第二次沒作用。<!--html_preserve--></div><!--/html_preserve--></p>
+<!--html_preserve--><div class="collapse info" id="quiz-07301"><!--/html_preserve--><p>在rscript✔中執行正常(會有兩個視窗)。但是在RMD中只有一個圖。函數<code>windows()</code>好像第二次沒作用。</p>
+<p>大致上結論是在RMD中不要用<code>dev</code>相關指令。</p>
+<!--html_preserve--></div><!--/html_preserve--></p>
 <!--html_preserve--><span id='背景練習'>⛳  測試,練習 </span><!--/html_preserve-->
 <pre><code class="language-r">plot.new() # 同一個視窗，新增圖層
 dev.new() #新視窗
-plot(1:1)
+plot(2:2) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true"
+title="👏只有指定座標點Y,X座標依次為1,2,3...">🏷</span><!--/html_preserve-->
 dev.new()
 plot(2,2)
 # 圖形化完以後,才想到要補上title
@@ -668,11 +560,11 @@ title(main=&quot;test dev 2&quot;)
 <p>組合圖的一個重要函數是<code>par()</code>,可以<a href="https://thepracticalr.wordpress.com/tag/plotting/">參考</a> 。</p>
 <p>同時顯示多個<code>plot</code>的結果，可以利用函數<code>par()</code> 或 <code>layout( )</code>。函數<code>par( )</code>的選項有：</p>
 <ul>
-<li><code>mfrow=c(nrows, ncols)</code> 填plot的方向為橫行(matrix flow by row)。</li>
-<li><code>mfcol=c(nrows, ncols)</code> 填入的方向為直行。</li>
+<li><code>mfrow=c(nrows, ncols)</code> : 填plot的方向為橫行(matrix flow by row)。(matrix form by row)</li>
+<li><code>mfcol=c(nrows, ncols)</code> 填入的方向為直行。(matrix form by column)</li>
 </ul>
-<p>例如想要把不同線條的plot放在同一畫布上做比較,可以利用下面的指令
-<!--html_preserve--><span id='線條類型'>⛳  線條形式<code>type</code>的幾種基本類型 </span><!--/html_preserve--></p>
+<!--html_preserve--><span id='線條類型'>⛳  線條形式<code>type</code>的幾種基本類型 </span><!--/html_preserve-->
+<p>例如想要把不同線條的plot放在同一畫布上做比較,可以利用下面的指令</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- c(1,3,4,7,8,9)
 y &lt;- c(0,3,6,9,7,8)
 
@@ -684,15 +576,8 @@ plot(x,y,type=&quot;o&quot;,main=&quot;plot(x,y,type='o')&quot;)
 plot(x,y,type=&quot;s&quot;,main=&quot;plot(x,y,type='s')&quot;)
 plot(x,y,type=&quot;h&quot;,main=&quot;plot(x,y,type='h')&quot;)
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-<img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-4-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption>
-</figure><!--/html_preserve-->
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-4-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></figure><!--/html_preserve-->
 <p>範例2x2</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">
 attach(mtcars)
@@ -703,15 +588,8 @@ plot(wt,disp, main=&quot;Scatterplot of wt vs disp&quot;)
 hist(wt, main=&quot;Histogram of wt&quot;)
 boxplot(wt, main=&quot;Boxplot of wt&quot;)
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-<img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-5-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption>
-</figure><!--/html_preserve-->
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-5-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></figure><!--/html_preserve-->
 <p>分成三格</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># attach(mtcars)
 par(mfrow=c(1,3)) 
@@ -719,47 +597,48 @@ hist(wt)
 hist(mpg)
 hist(disp)
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-<img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-6-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption>
-</figure><!--/html_preserve-->
-<div class="notices ms-5 w-75">
+<p><!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-6-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></figure><!--/html_preserve-->
+🐞</p>
+<div class="notices ms-5">
     <div class="info">
         <p>在console執行(課堂執行)</p>
 <ul>
-<li>執行
-<pre><code class="language-r">par() # 顯示目前的設定
-def.par&lt;-par() # &lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;將目前的參數存到def.par&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
+<li>執行  <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true"
+title="👏說明用,沒有順序關係">🏷</span><!--/html_preserve--></li>
+</ul>
+<pre><code class="language-r,block.pre.class=&quot;ms-5&quot;">par() # 顯示目前的設定
+def.par&lt;-par() # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;將目前畫布的參數指派到def.par&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
 def.par$mfrow
-def.par2&lt;-par(mfrow=c(1,3)) # &lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;將還沒更改之前的參數存到def.par,在本例中和之前的def.par是一樣的，因為之前都沒動到參數。&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
+def.par2&lt;-par(mfrow=c(1,3)) # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;將還沒更改之前的參數存到def.par,在本例中和之前的def.par是一樣的，因為之前都沒動到參數。&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
 def.par$mfrow
 par()$mfrow # 目前的設定
-par(def.par) # 還原&lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;a   href=&quot;#restore_par&quot;&gt;註解&lt;/a&gt;&lt;span   class=&quot;tooltiptext&quot; &gt;👏&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt; 
-
+par(def.par) # 還原&lt;!--html_preserve--&gt;&lt;a   href=&quot;#restore_par&quot;&gt;註解&lt;/a&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;👏&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt; 
 </code></pre>
-</li>
-<li>上面的程式碼，x&lt;-par() 會把目前的參數拿出存到變數x。  如果par() 放了參數,會在設定完新參數以後，傳回舊紀錄(一個原因是,便於以後再還原)。</li>
+<ul>
+<li>上面的程式碼，<code>def.par&lt;-par()</code> 如果par() 放了參數,會在設定完新參數以後，傳回舊紀錄(一個原因是,便於以後再還原)。</li>
 <li>
 <!--html_preserve--><span id='restore_par'>⛳ </span><!--/html_preserve--> 但是在這個過程中，有些參數是無法修改的，因此
-<pre><code class="language-r">par()              # 沒有重設功能,只是顯示目前的設定
-op &lt;- par(no.readonly = TRUE) # &lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;op現在放的是所有可以修改的參數和參數值。 &lt;code&gt;no.readonly=T&lt;/code&gt;是說不要唯讀參數&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt; 
-par(col.lab=&quot;red&quot;) # 設定 x and y labels   為紅色
-hist(mtcars$mpg)   # 畫圖
-par(op) # &lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;回復原來的設定&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
-</code></pre>
 </li>
 </ul>
+<pre><code class="language-r,block.pre.class=&quot;ms-5&quot;">par()              # 沒有重設功能,只是顯示目前的設定
+op &lt;- par(no.readonly = TRUE) # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;op現在放的是所有可以修改的參數和參數值。 &lt;code&gt;no.readonly=T&lt;/code&gt;是說不要唯讀參數&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt; 
+par(col.lab=&quot;red&quot;) # 設定 x and y labels   為紅色
+hist(mtcars$mpg)   # 畫圖
+par(op) # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;回復原來的設定&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+</code></pre>
 
     </div>
 </div>
 
-<p><img src="9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.files/canvas.png" alt="">
-note:</p>
+<h3 id="有關畫布">有關畫布</h3>
+<img src="9_2_多圖疊圖.files/canvas.png" width="500px">
+note:
 <ul>
 <li>mar: the margin size
 <ul>
@@ -782,81 +661,97 @@ name
 <li>mfrow: number of plots per row, column (plots are filled row-wise)</li>
 <li>mfcol: number of plots per row, column (plots are filled column-wise)</li>
 </ul>
-<div class="notices ms-5 w-75">
+<h3 id="其他">其他</h3>
+<div class="notices ms-5">
     <div class="info">
-        <p>是不是有需要寫個新函數，用來重設裝置參數？
-下面這個函數<code>resetPar()</code>只是練習用(假設沒有<code>par()</code>重新設定的功能)，用來將device回復成原先的設定值:</p>
+        <p>下面這個函數<code>resetPar()</code>，用來將device回復成原先的設定值:</p>
 <p>主要看這一行:<code>par(no.readonly = TRUE)</code>。
-意思是說，不要傳回 readonly的設定。</p>
+意思是說，不要傳回 readonly的設定。否則會有訊息。</p>
 <pre><code class="language-r">resetPar &lt;- function() {
     dev.new() #重新開始一個裝置
     op &lt;- par(no.readonly = TRUE)#因為是新的裝置，所以裡面的設定都是預設值✔️
     dev.off()# 只是把之前的新裝置關掉
-    op # 傳回預設值
+    par(op) # 目前的畫布,用之前紀錄的預設值替換
 }
 # 使用方法
 par(resetPar)
 </code></pre>
-<div class="notices ms-5 w-75">
-    <div class="info">
-        <p>plot.new()常發生的錯誤 : figure margins too large</p>
-<p>有兩個原因：1 是畫布過小 2，當前畫布的上下左右距離過大
-這裡看看如何解第二個發生原因</p>
-<p>默認的畫布的邊款距離(margin)的預設為：</p>
-<p>c(5, 4, 4, 2) + 0.1.</p>
-<p>對應 c(bottom, left, top, right)，也就是順時針，由下到右結束一圈。</p>
-<pre><code class="language-r?preclass=.ms-5.w-75">op <- par(mar = rep(0, 4))   # 設置為0，同時將目前的設定存在op 就是預設的margin = 5.1 4.1 4.1 2.1  
-plot.new() # 畫圖   
-par(op) # 改回原先的margin  
-</code></pre>
-<pre><code>&lt;/div&gt;
-</code></pre>
-</div>
 
     </div>
 </div>
 
-<p>更多的圖形控制: 在散佈圖中加入boxplot</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># windows圖的座標，左下角(0,0)右上角(1,1)
-par(mar=rep(2,4)) #設定margin
-par(fig=c(0,0.8,0,0.8)) #<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >X軸從0到0.8,Y軸也是。因此，左下(0,0)右上(0.8,0.8)</span></span><!--/html_preserve--> 
-# <!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >左下(x1,y1)右上(x2,y2) =&gt; c(x1,x2,y1,y2)</span></span><!--/html_preserve--> 
-plot(mtcars$wt, mtcars$mpg, xlab=&quot;Car Weight&quot;,ylab=&quot;Miles Per Gallon&quot;)
-par(fig=c(0,0.8,0.55,1), new=TRUE) #<!--html_preserve--><span  class="codenote nopre">🏷<span   class="tooltiptext" >同一個圖,因為沒有設定dev.new</span></span><!--/html_preserve-->
-boxplot(mtcars$wt, horizontal=TRUE, axes=FALSE)
-par(fig=c(0.65,1,0,0.8),new=TRUE)
-boxplot(mtcars$mpg, axes=FALSE)
-mtext(&quot;Enhanced Scatterplot&quot;, side=3, outer=TRUE, line=-3)
-</code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-<img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-7-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption>
-</figure><!--/html_preserve-->
-<p><!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve-->❓上例中的<code>boxplot</code>改為<code>hist()</code> ?<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
-    data-bs-toggle="collapse" data-bs-target="#quiz-31243">提示</button>
-</div><!--/html_preserve-->
-<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-31243"><!--/html_preserve-->no hint<!--html_preserve--></div><!--/html_preserve--></p>
-<h3 id="rmd-中的圖">RMD 中的圖</h3>
+<p>😜RMD 中的圖</p>
 <p>並排顯示圖形(<a href="https://holtzy.github.io/Pimp-my-rmd/">參考</a>):</p>
 <pre><code class="language-md">```{r out.width=c('50%', '50%') , fig.show='hold'}
 boxplot(1:10)
 plot(rnorm(10))
 ```
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto text-center d-block border border-primary ">
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto text-center d-block border border-primary "><img src="9_Plot01.files/%e4%b8%a6%e6%8e%92.png" class="figure-img w-100 " width="100%"/> <figcaption class="figure-caption">
+執行結果</figcaption></figure><!--/html_preserve-->
+<div class="notices ms-5">
+    <div class="warning">
+        <p>plot.new()常發生的錯誤 : figure margins too large</p>
+<p>有兩個原因：1 是畫布過小 2，當前畫布的上下左右距離過大
+這裡看看如何解第二個發生原因</p>
+<p>默認的畫布的邊款距離(margin)的預設為：</p>
+<p>c(5, 4, 4, 2) + 0.1.</p>
+<p>對應 c(bottom, left, top, right)，也就是順時針，由下到右結束一圈。</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">op &lt;- par(mar = rep(0, 4))   # 設置為0，同時將目前的設定存在op 就是預設的margin = 5.1 4.1 4.1 2.1  
+plot.new() # 畫圖   
+par(op) # 改回原先的margin  
+</code></pre>
 
+    </div>
+</div>
 
+<h2 id="練習">練習</h2>
+<p>更多的圖形控制: 在散佈圖中加入boxplot</p>
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75"># windows圖的座標，左下角(0,0)右上角(1,1)
+par(mar=rep(2,4)) #設定margin
+par(fig=c(0,0.8,0,0.8)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true"
+title="X軸從0到0.8,Y軸也是。因此，左下(0,0)右上(0.8,0.8)">🏷</span><!--/html_preserve--> 
+# <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true"
+title="左下(x1,y1)右上(x2,y2) =&amp;gt; c(x1,x2,y1,y2)">🏷</span><!--/html_preserve--> 
+plot(mtcars$wt, mtcars$mpg, xlab=&quot;Car Weight&quot;,ylab=&quot;Miles Per Gallon&quot;)
+par(fig=c(0,0.8,0.55,1), new=TRUE) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true"
+title="同一個圖,因為沒有設定dev.new">🏷</span><!--/html_preserve-->
+boxplot(mtcars$wt, horizontal=TRUE, axes=FALSE)
+par(fig=c(0.65,1,0,0.8),new=TRUE)
+boxplot(mtcars$mpg, axes=FALSE)
+mtext(&quot;Enhanced Scatterplot&quot;, side=3, outer=TRUE, line=-3)
+</code></pre>
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-7-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></figure><!--/html_preserve-->
+<p><!--html_preserve--><div class="position-relative warning"><!--/html_preserve-->❓上例中的<code>boxplot</code>改為<code>hist()</code> ?<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-31243">提示</button>
+</div><!--/html_preserve-->
+<!--html_preserve--><div class="collapse info" id="quiz-31243"><!--/html_preserve--><p>也可以用後面提到的函數<code>layout()</code></p>
+<pre><code class="language-r">##-- Create a scatterplot with marginal histograms -----
+def.par&lt;-par(no.readonly=T)
+x &lt;- pmin(3, pmax(-3, stats::rnorm(50))) #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;👏只要小於標準差3的樣本點&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+y &lt;- pmin(3, pmax(-3, stats::rnorm(50)))
+xhist &lt;- hist(x, breaks = seq(-3,3,0.5), plot = FALSE)
+yhist &lt;- hist(y, breaks = seq(-3,3,0.5), plot = FALSE)
+top &lt;- max(c(xhist$counts, yhist$counts))
+xrange &lt;- c(-3, 3)
+yrange &lt;- c(-3, 3)
+nf &lt;- layout(matrix(c(2,0,1,3),2,2,byrow = TRUE), c(3,1), c(1,3), TRUE)
+layout.show(nf)
 
+par(mar = c(3,3,1,1))
+plot(x, y, xlim = xrange, ylim = yrange, xlab = &quot;&quot;, ylab = &quot;&quot;)
+par(mar = c(0,3,1,1))
+barplot(xhist$counts, axes = FALSE, ylim = c(0, top), space = 0)
+par(mar = c(3,0,1,1))
+barplot(yhist$counts, axes = FALSE, xlim = c(0, top), space = 0, horiz = TRUE)
 
-
-<img src="9_Plot01.files/%e4%b8%a6%e6%8e%92.png" class="figure-img w-100 " width="100%"/> <figcaption class="figure-caption">
-執行結果</figcaption>
-</figure><!--/html_preserve-->
+par(def.par)  #- reset to default
+</code></pre>
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-9-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+<p>figure</figcaption></figure><!--/html_preserve--></p>
+<!--html_preserve--></div><!--/html_preserve--></p>
 <h3 id="疊圖">疊圖</h3>
 <p>有些繪圖指令的選項，可以利用<code>add=T</code>。</p>
 <p>💥 plot指令不支援<code>add=T</code></p>
@@ -866,46 +761,38 @@ curve( dnorm(x,0,3) , add=TRUE, lwd=3, lty=3)
 # Add the legend
 legend( &quot;topright&quot;,c(&quot;sigma=1&quot;,&quot;sigma=2&quot;,&quot;sigma=3&quot;) , lwd=1:3, lty=1:3)
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-<img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-9-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption>
-</figure><!--/html_preserve-->
-<h3 id="練習">練習</h3>
-<p><!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve--><p>❓練習1  讓下面兩個圖重疊</p>
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-10-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></figure><!--/html_preserve-->
+<h3 id="練習-1">練習</h3>
+<p><!--html_preserve--><div class="position-relative warning"><!--/html_preserve--><p>❓練習1  讓下面兩個圖重疊</p>
 <pre><code class="language-r">boxplot(mtcars$wt,  axes=FALSE)
 boxplot(mtcars$mpg, axes=FALSE)
 </code></pre>
 <!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-31266">提示</button>
 </div><!--/html_preserve-->
-<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-31266"><!--/html_preserve--><pre><code class="language-r">boxplot(mtcars$wt,  axes=FALSE)
-par(new=TRUE) #&lt;!--html_preserve--&gt;&lt;span  class=&quot;codenote nopre&quot;&gt;🏷&lt;span   class=&quot;tooltiptext&quot; &gt;👏在同一個視窗,開新畫布&lt;/span&gt;&lt;/span&gt;&lt;!--/html_preserve--&gt;
+<!--html_preserve--><div class="collapse info" id="quiz-31266"><!--/html_preserve--><pre><code class="language-r">boxplot(mtcars$wt,  axes=FALSE)
+par(new=TRUE) #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot;
+title=&quot;👏在同一個視窗,開新畫布&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
 boxplot(mtcars$mpg, axes=FALSE)
 </code></pre>
 <!--html_preserve--></div><!--/html_preserve--></p>
-<p><!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve--><p>❓練習2 讓disp,mpg 的histogram 疊在一起:  利用<code>add=T</code></p>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-<p><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-11-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption></p>
-</figure><!--/html_preserve-->
+<p><!--html_preserve--><div class="position-relative warning"><!--/html_preserve--><p>❓練習2 讓disp,mpg 的histogram 疊在一起:  利用<code>add=T</code></p>
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-12-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+<p>figure</figcaption></figure><!--/html_preserve--></p>
 <!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-31280">提示</button>
 </div><!--/html_preserve-->
-<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-31280"><!--/html_preserve--><pre><code class="language-r">xmax=max(c(disp,mpg))
+<!--html_preserve--><div class="collapse info" id="quiz-31280"><!--/html_preserve--><pre><code class="language-r">xmax=max(c(disp,mpg))
 xmin=min(c(disp,mpg))
 hist(disp,xlim=c(xmin,xmax))
 hist(mpg,xlim=c(xmin,xmax),add=T)
 </code></pre>
 <!--html_preserve--></div><!--/html_preserve--></p>
-<p><!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve-->❓練習 <a href="http://www.programmingr.com/content/positioning-charts-fig-and-fin/">測試這篇文章</a><!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+<p><!--html_preserve--><div class="position-relative warning"><!--/html_preserve-->❓練習 <a href="http://www.programmingr.com/content/positioning-charts-fig-and-fin/">測試這篇文章</a><!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-31293">提示</button>
 </div><!--/html_preserve-->
-<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-31293"><!--/html_preserve-->😜<!--html_preserve--></div><!--/html_preserve--></p>
+<!--html_preserve--><div class="collapse info" id="quiz-31293"><!--/html_preserve-->😜<!--html_preserve--></div><!--/html_preserve--></p>
 <h3 id="layout"><code>layout()</code></h3>
 <p>函數 layout( ) 的使用方法為	layout(mat) 其中 
 mat 的元素用來指定圖形號碼。</p>
@@ -933,22 +820,22 @@ mat 的元素用來指定圖形號碼。</p>
 
 
 
-<!--html_preserve--><div  data-nopre class="table-responsive kable">
-<table data-nopre class="w-25 ms-5">
-<thead data-nopre class="">
-<tr data-nopre>
-<th data-nopre></th>
-<th data-nopre></th>
+<!--html_preserve--><div   class="table-responsive kable">
+<table  class="w-25 ms-5">
+<thead  class="">
+<tr >
+<th ></th>
+<th ></th>
 </tr>
 </thead>
-<tbody data-nopre>
-<tr data-nopre>
-<td data-nopre>1</td>
-<td data-nopre>1</td>
+<tbody >
+<tr >
+<td >1</td>
+<td >1</td>
 </tr>
-<tr data-nopre>
-<td data-nopre>2</td>
-<td data-nopre>3</td>
+<tr >
+<td >2</td>
+<td >3</td>
 </tr>
 </tbody>
 </table>
@@ -963,20 +850,13 @@ hist(wt)
 hist(mpg)
 hist(disp)
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-<img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-13-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption>
-</figure><!--/html_preserve-->
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">#dev.off()
-</code></pre>
-<p>在<code>layout()</code>函數中，也可以更改圖形大小，其參數 為：
-widths= 數字向量，用來代表column 寬度
-heights= 數字向量，用來代表row 高度</p>
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-14-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></figure><!--/html_preserve-->
+<p>在<code>layout()</code>函數中，也可以更改圖形大小，其參數 為：</p>
+<ul>
+<li>widths= 數字向量，用來代表column 寬度</li>
+<li>heights= 數字向量，用來代表row 高度</li>
+</ul>
 <p>note:Relative widths are specified with numeric values. Absolute widths (in centimetres) are specified with the lcm() function.</p>
 <h2 id="練習分組畫圖">練習:分組畫圖</h2>
 <p><code>sm.density.compare( )</code> 可以讓我們分組畫 kernal density ,例如 <code>sm.density.compare(x, factor)</code>如下:</p>
@@ -996,20 +876,13 @@ colfill&lt;-c(2:(2+length(levels(cyl.f))))
 legend(locator(1), levels(cyl.f), fill=colfill)
 #&gt; Error in legend(locator(1), levels(cyl.f), fill = colfill): invalid coordinate lengths
 </code></pre>
-<!--html_preserve--><figure  class="figure text-center d-block w-50 m-auto   ">
-
-
-
-
-
-<img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-14-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
-figure</figcaption>
-</figure><!--/html_preserve-->
-<p><!--html_preserve--><div class="position-relative nopre warning ms-5 w-75"><!--/html_preserve-->不用套件畫上圖
+<!--html_preserve--><figure  class="figure nopre text-center d-block w-50 m-auto   "><img src="9_2_%e5%a4%9a%e5%9c%96%e7%96%8a%e5%9c%96_files/figure-html/unnamed-chunk-15-1.png" class="figure-img w-100 "/> <figcaption class="figure-caption">
+figure</figcaption></figure><!--/html_preserve-->
+<p><!--html_preserve--><div class="position-relative warning"><!--/html_preserve-->不用套件畫上圖
 hint: kernel density 函數:<code>density()</code><!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-04399">提示</button>
 </div><!--/html_preserve-->
-<!--html_preserve--><div class="collapse nopre info ms-5 w-75" id="quiz-04399"><!--/html_preserve--><pre><code class="language-r">
+<!--html_preserve--><div class="collapse info" id="quiz-04399"><!--/html_preserve--><pre><code class="language-r">
 cy.wk&lt;-factor(mtcars$cy)
 by4&lt;-mtcars[cy.wk==&quot;4&quot;,&quot;mpg&quot;]
 by6&lt;-mtcars[cy.wk==&quot;6&quot;,&quot;mpg&quot;]
@@ -1019,7 +892,7 @@ lines(density(by6))
 lines(density(by8))
 
 </code></pre>
-<p>我測了一下</p>
+<p>測了一下平滑度<code>adjust</code></p>
 <pre><code class="language-r">plot(density(by4,adjust=1),ylim=c(0,0.2),xlim=c(0,40),col=&quot;red&quot;)
 lines(density(by6,adjust=2),col=&quot;green&quot;)
 lines(density(by8,adjust=2),col=&quot;blue&quot;)
@@ -1052,8 +925,8 @@ lines(density(by8,adjust=2),col=&quot;blue&quot;)
     </div>
 </div>
 
-<link href="../css/quicknote.css?1636009621" rel="stylesheet">
-<script src="../js/quicknote.js?1636009621"></script>
+<link href="../css/quicknote.css?1636607466" rel="stylesheet">
+<script src="../js/quicknote.js?1636607466"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1071,7 +944,7 @@ lines(density(by8,adjust=2),col=&quot;blue&quot;)
           
 
   
-<script src="../js/packhtml.js?1636009621"></script>    
+<script src="../js/packhtml.js?1636607466"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1081,28 +954,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="../js/featherlight.min.js?1636009621"></script>
-  <script src="../js/featherlight.gallery.min.js?1636009621"></script>
-  <link href="../css/featherlight.min.css?1636009621" rel="stylesheet">
-  <link href="../css/featherlight.gallery.min.css?1636009621" rel="stylesheet">
-
-  <script src="../js/highlight.pack.js?1636009621"></script>
+  <script src="../js/featherlight.min.js?1636607466"></script>
+  <script src="../js/featherlight.gallery.min.js?1636607466"></script>
+  <link href="../css/featherlight.min.css?1636607466" rel="stylesheet">
+  <link href="../css/featherlight.gallery.min.css?1636607466" rel="stylesheet">
   
-  <script src="../js/hugohelper.js?1636009621"></script>
-
-  <link href="../css/rmd.css?1636009621" rel="stylesheet">
-  <link href="../css/mystyle.css?1636009621" rel="stylesheet">    
-  <script src='../js/variant.js?1636009621'></script>
+  <script src="../js/highlight.min.js"></script>
+  
+  <script src="../js/hugohelper.js?1636607466"></script>
+  <link href="../css/rmd.css?1636607466" rel="stylesheet">
+  <link href="../css/mystyle.css?1636607466" rel="stylesheet">    
+  <script src='../js/variant.js?1636607466'></script>
 
 <script>
   
     let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='../js/localsearch.js?1636009621'></script>
-    
-
-
+<script src='../js/localsearch.js?1636607466'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
@@ -1113,7 +982,6 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   
 
   <script>
-    
       MathJax = {
         tex: {
           inlineMath: [['\($', '$\)'], ['\\(', '\\)']],

@@ -14,7 +14,7 @@
       <guid>/rlang/hw/dataset_class.html</guid>
       <description>❓
  要知道目前有哪些資料集   📝data()可以列出目前有甚麼資料可以用,也可以放入參數,只列出某個package的資料集。   寫個函數,判斷目前我們要的資料集是不是存在  ❓
- 要知道資料集cars的欄位 列出前10筆資料   normal pretty: 📝 安裝DT: install.pacakges(“DT”),參考 💣 會缺失各種程式庫  hint  data() names(cars)  List of 4 #🏷👍跟我們說這是list ,有4個元素$ title : chr &amp;quot;Data sets&amp;quot;$ header : NULL$ results: chr [1:104, 1:4] # 🏷(這是一個字串矩陣,可以大致資料在這裡) &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; .....- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 ## 🏷(2維度的名稱,這裡可以看到沒有ROW名稱,但是有欄位名稱) .. ..$ : NULL .</description>
+ 要知道資料集cars的欄位 列出前10筆資料   normal pretty: 📝 安裝DT: install.pacakges(“DT”),參考 💣 會缺失各種程式庫  hint  data() names(cars)  List of 4 #🏷$ title : chr &amp;quot;Data sets&amp;quot;$ header : NULL$ results: chr [1:104, 1:4] # 🏷 &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; .....- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 ## 🏷 .. ..$ : NULL .</description>
     </item>
     
     <item>
