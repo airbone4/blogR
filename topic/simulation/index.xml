@@ -2,70 +2,70 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>實驗 on R in Class</title>
-    <link>https://airbone4.github.io/classweb/topic/simulation.html</link>
+    <link>/topic/simulation.html</link>
     <description>Recent content in 實驗 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/classweb/topic/simulation/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/topic/simulation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.1 隨機變數</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</link>
+      <link>/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</guid>
+      <guid>/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2.1.1 亂數函數練習</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</link>
+      <link>/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</guid>
+      <guid>/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.1 模擬基本 1</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/4_01_sim.html</link>
+      <link>/topic/simulation/4_01_sim.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/4_01_sim.html</guid>
+      <guid>/topic/simulation/4_01_sim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.2 模擬基本 2</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/4_02_sim.html</link>
+      <link>/topic/simulation/4_02_sim.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/4_02_sim.html</guid>
+      <guid>/topic/simulation/4_02_sim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>MC_基本</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</link>
+      <link>/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</guid>
+      <guid>/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poisson分配</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/poisson%E5%88%86%E9%85%8D.html</link>
+      <link>/topic/simulation/poisson%E5%88%86%E9%85%8D.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/poisson%E5%88%86%E9%85%8D.html</guid>
+      <guid>/topic/simulation/poisson%E5%88%86%E9%85%8D.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>中央</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/central.html</link>
+      <link>/topic/simulation/central.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/central.html</guid>
+      <guid>/topic/simulation/central.html</guid>
       <description></description>
     </item>
     

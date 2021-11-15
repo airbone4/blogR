@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>class log on R in Class</title>
-    <link>https://airbone4.github.io/classweb/</link>
+    <link>/</link>
     <description>Recent content in class log on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/classweb/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 Rmd basic</title>
-      <link>https://airbone4.github.io/classweb/topic/rmd/01_rmd_basic.html</link>
+      <link>/topic/rmd/01_rmd_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/rmd/01_rmd_basic.html</guid>
+      <guid>/topic/rmd/01_rmd_basic.html</guid>
       <description>rmd 提要 Chunk Options opts_chunk 這個函數控制整張RMD的chunk選項， e.g. opts_chunk$set(tidy = FALSE)
 選項 描述   include 是否在輸出中顯示結果和源碼  eval 執行R  echo 顯示源碼  results &#39;markup&#39;, &#39;asis&#39;, &#39;hold&#39;, &#39;hide&#39;  tidy 是否重新排列R code  cache 是否緩衝結果  g.width, g.height, out.width, out.height   child 子文件的名稱  engine 引擎名稱(R,python,...)     更多選項可以參考//yihui.org/knitr/options/
 markdown 可以使用用一般的文字編輯器,透過乘用的符號扞格式,透過MD翻譯器,翻譯成HTML,PDF,WORD等文件格式。
@@ -24,28 +24,28 @@ The script is converted to Rmd through knitr::spin(); then rmarkdown::render() w
     
     <item>
       <title>1 Requirement</title>
-      <link>https://airbone4.github.io/classweb/rlang/1_0_requirement.html</link>
+      <link>/rlang/1_0_requirement.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/1_0_requirement.html</guid>
+      <guid>/rlang/1_0_requirement.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>04 Rmd hook✔</title>
-      <link>https://airbone4.github.io/classweb/topic/rmd/04_rmd_hook.html</link>
+      <link>/topic/rmd/04_rmd_hook.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/rmd/04_rmd_hook.html</guid>
+      <guid>/topic/rmd/04_rmd_hook.html</guid>
       <description>快遞 knitr::opts_chunk$set(echo = FALSE, collapse = TRUE,comment = &amp;quot;#&amp;gt;&amp;quot;,fig.path = &amp;quot;graphics/knitr-&amp;quot;,fig.retina = 2, # Control using dpifig.width = 6, # generated imagesfig.pos = &amp;quot;t&amp;quot;, # pdf modefig.align = &amp;quot;center&amp;quot;,dpi = if (knitr::is_latex_output()) 72 else 300, out.width = &amp;quot;100%&amp;quot;,dev = &amp;quot;svg&amp;quot;,dev.args = list(png = list(type = &amp;quot;cairo-png&amp;quot;)), #註解🏷optipng = &amp;quot;-o1 -quiet&amp;quot;) ⛳ Graphics Device  The graphics device is the default device for used to create and provide graphics.</description>
     </item>
     
     <item>
       <title>4.2 向量</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_2_type_vector.html</link>
+      <link>/rlang/4_2_type_vector.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_2_type_vector.html</guid>
+      <guid>/rlang/4_2_type_vector.html</guid>
       <description>vector 函數範例 cbind,rbind x&amp;lt;-runif(5)y&amp;lt;-runif(6)cbind(x,y)#&amp;gt; Warning in cbind(x, y): number of rows of result is not a multiple of vector#&amp;gt; length (arg 1)#&amp;gt; x y#&amp;gt; [1,] 0.05555426 0.81078837#&amp;gt; [2,] 0.39638526 0.83144706#&amp;gt; [3,] 0.26659782 0.42948876#&amp;gt; [4,] 0.14729596 0.21873952#&amp;gt; [5,] 0.50746265 0.03657459#&amp;gt; [6,] 0.05555426 0.50790482 函數diff 可以用在差分計算
 Arguments
  x: a numeric vector or matrix containing the values to be differenced. lag: an integer indicating which lag to use.</description>
@@ -53,10 +53,10 @@ Arguments
     
     <item>
       <title>1.2 檔案系統</title>
-      <link>https://airbone4.github.io/classweb/rlang/1_2_filesystem.html</link>
+      <link>/rlang/1_2_filesystem.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/1_2_filesystem.html</guid>
+      <guid>/rlang/1_2_filesystem.html</guid>
       <description>分解、合成檔案路徑 合成路徑 workingdir &amp;lt;- &amp;quot;work&amp;quot;projectdir &amp;lt;- &amp;quot;demo&amp;quot;datadir &amp;lt;- &amp;quot;data&amp;quot;y&amp;lt;-file.path(workingdir, projectdir, datadir)y#&amp;gt; [1] &amp;quot;work/demo/data&amp;quot;typeof(y)#&amp;gt; [1] &amp;quot;character&amp;quot; 上面是windows 10系統上的結果,在 Linux-based 的作業系統執行結果一樣,注意斜線都一樣。
 利用函數 file.path()合成檔案路徑，其分隔是斜線,而不是反斜線 (例如for example C:/Program Files/R/R-3.5.1)?
 路徑分解  dirname() :分解路徑用，例如＂c:/temp/text.txt&amp;quot; 得到&amp;quot;c:/temp&amp;quot;，但是&amp;quot;c:/temp/&amp;quot;,&amp;quot;c:/temp&amp;quot;, &amp;quot;c:/temp.txt&amp;quot;都得到&amp;quot;c:/&amp;quot;。😒🏷 basename()  dirname(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;c:/temp&amp;quot;basename(&amp;quot;c:\\temp\\demo.txt&amp;quot;)#&amp;gt; [1] &amp;quot;demo.txt&amp;quot;dirname(&amp;quot;c:/temp/&amp;quot;) #🏷#&amp;gt; [1] &amp;quot;c:/&amp;quot;dirname(&amp;quot;c:/temp&amp;quot;) #🏷#&amp;gt; [1] &amp;quot;c:/&amp;quot; 檔案系統相關操作  dir():包括資料夾、檔案名稱 list.files() : 僅檔案 list.dirs():僅資料夾  判別是否目標檔案或資料夾已經存在(我們不希望刪除或更動已經存在的檔案):
@@ -65,10 +65,10 @@ Arguments
     
     <item>
       <title>03 Rmd pdf</title>
-      <link>https://airbone4.github.io/classweb/topic/rmd/03_rmd_pdf.html</link>
+      <link>/topic/rmd/03_rmd_pdf.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/rmd/03_rmd_pdf.html</guid>
+      <guid>/topic/rmd/03_rmd_pdf.html</guid>
       <description>產生PDF 文件 ** 中文字型問題 ** 參考
 update.packages(ask = FALSE, checkBuilt = TRUE) tinytex::tlmgr_update() 中文： 不要管那麼多網路上講的，就
 devtools::install_github(c(&#39;rstudio/rmarkdown&#39;, &#39;yihui/tinytex&#39;))tinytex::install_tinytex() 大部分問題都是中文自行沒有安裝或指定錯誤的問題： 在RMD檔案開頭指定
@@ -79,10 +79,10 @@ meta data 上的pdf 設定,常見版本 ---title: &amp;quot;Habits&amp;quot;au
     
     <item>
       <title>02 git book note</title>
-      <link>https://airbone4.github.io/classweb/topic/rmd/02_git-book-note.html</link>
+      <link>/topic/rmd/02_git-book-note.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/rmd/02_git-book-note.html</guid>
+      <guid>/topic/rmd/02_git-book-note.html</guid>
       <description>gitbook introduction 3個地方需要注意: _output.yml _bookdown.yml index.rmd
 _output.yml: bookdown::gitbook:css: style.csssplit_by: chapterconfig:toc:collapse: subsectionbefore: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./&amp;quot;&amp;gt;A Minimal Bookdown Book&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;after: |&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/rstudio/bookdown&amp;quot; target=&amp;quot;blank&amp;quot;&amp;gt;Published with bookdown&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;bookdown::pdf_book:includes:in_header: preamble.texlatex_engine: xelatexcitation_package: natbibbookdown::epub_book:stylesheet: style.css 上面要修改的部分只有書名(title of book)
 _bookdown.yml: book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp;quot;Chapter &amp;quot;repo: https://github.com/seankross/bookdown-startoutput_dir: docsrmd_files: [&amp;quot;index.Rmd&amp;quot;, &amp;quot;01-Introduction.Rmd&amp;quot;, &amp;quot;02-Diving-In.Rmd&amp;quot;]clean: [packages.bib, bookdown.bbl]new_session: yes  欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.pdf。 欄位 chapter_name:每個章節的前綴,例如 01-Introduction.</description>
@@ -90,10 +90,10 @@ _bookdown.yml: book_filename: &amp;quot;bookdown-xx&amp;quot;chapter_name: &amp
     
     <item>
       <title>11. sampling</title>
-      <link>https://airbone4.github.io/classweb/rlang/11_00_sampling.html</link>
+      <link>/rlang/11_00_sampling.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/11_00_sampling.html</guid>
+      <guid>/rlang/11_00_sampling.html</guid>
       <description>Sample and Distribution 01 N&amp;lt;-100pop&amp;lt;-rnorm(N,5,2)rndno&amp;lt;-as.integer(runif(N)*N)+1smp&amp;lt;-pop[rndno]ss&amp;lt;-summary(smp)s1&amp;lt;-hist(smp)rug(quantile(smp), col=2, lwd=2.5)plot(s1$mids,s1$density,type=&amp;quot;s&amp;quot;) #quiz:barplot??s2&amp;lt;-hist(pop)plot(s1,col=&amp;quot;red&amp;quot;)lines(s2,col=&amp;quot;blue&amp;quot;)  內建隨機抽樣 函數sample(x,n,replace=FALSE ). 其中x為要抽取的向量, n為樣本容量. replace 預設為false
  no replacement, 等機率:  例如從52張撲克牌中抽取5張:
 sample(1:52, 5)#&amp;gt; [1] 15 7 10 12 23 replacement: 例如拋一枚均勻的硬幣10次  sample(c(&amp;quot;H&amp;quot;, &amp;quot;T&amp;quot;), 10, replace=T)#&amp;gt; [1] &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; &amp;quot;T&amp;quot; &amp;quot;T&amp;quot; &amp;quot;H&amp;quot; 練習:一棵骰子擲10次可表示為:
@@ -102,19 +102,19 @@ sample(1:52, 5)#&amp;gt; [1] 15 7 10 12 23 replacement: 例如拋一枚均勻�
     
     <item>
       <title>hugo shortcode log</title>
-      <link>https://airbone4.github.io/classweb/hugo_shortcode.html</link>
+      <link>/hugo_shortcode.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/hugo_shortcode.html</guid>
+      <guid>/hugo_shortcode.html</guid>
       <description>句點  shortcode:attach 短碼的程式,利用with 配合逗點.  {{with .Get &amp;quot;folder&amp;quot; }} xx{{. }}xx {{ end }}  在md上的呼叫  {{&amp;lt; attach folder=&amp;quot;./resources/&amp;quot; &amp;gt;}}  結果(html):  xx./resources/xx </description>
     </item>
     
     <item>
       <title>資料集</title>
-      <link>https://airbone4.github.io/classweb/rlang/hw/dataset_class.html</link>
+      <link>/rlang/hw/dataset_class.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/hw/dataset_class.html</guid>
+      <guid>/rlang/hw/dataset_class.html</guid>
       <description>❓
  要知道目前有哪些資料集   📝data()可以列出目前有甚麼資料可以用,也可以放入參數,只列出某個package的資料集。   寫個函數,判斷目前我們要的資料集是不是存在  ❓
  要知道資料集cars的欄位 列出前10筆資料   normal pretty: 📝 安裝DT: install.pacakges(“DT”),參考 💣 會缺失各種程式庫  hint  data() names(cars)  List of 4 #🏷$ title : chr &amp;quot;Data sets&amp;quot;$ header : NULL$ results: chr [1:104, 1:4] # 🏷 &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; .....- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 ## 🏷 .. ..$ : NULL .</description>
@@ -122,10 +122,10 @@ sample(1:52, 5)#&amp;gt; [1] 15 7 10 12 23 replacement: 例如拋一枚均勻�
     
     <item>
       <title>predict</title>
-      <link>https://airbone4.github.io/classweb/rlang/demo/car.html</link>
+      <link>/rlang/demo/car.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/demo/car.html</guid>
+      <guid>/rlang/demo/car.html</guid>
       <description>Build a linear regression data(&amp;quot;cars&amp;quot;, package = &amp;quot;datasets&amp;quot;)model &amp;lt;- lm(dist ~ speed, data = cars)model#&amp;gt; #&amp;gt; Call:#&amp;gt; lm(formula = dist ~ speed, data = cars)#&amp;gt; #&amp;gt; Coefficients:#&amp;gt; (Intercept) speed #&amp;gt; -17.579 3.932 回歸式可以寫成: dist = -17.579 + 3.932*speed.
 新資料的預測:distance 分別是:12,19,24
 new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) )predict(model, newdata = new.speeds)#&amp;gt; 1 2 3 #&amp;gt; 29.60981 57.13667 76.79872 ❓ 不寫newdata ?</description>
@@ -133,10 +133,10 @@ new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) )predict(model, newdata 
     
     <item>
       <title>引用</title>
-      <link>https://airbone4.github.io/classweb/rlang/demo/citation.html</link>
+      <link>/rlang/demo/citation.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/demo/citation.html</guid>
+      <guid>/rlang/demo/citation.html</guid>
       <description>introduction Goal: Estimate the effect of the price per citation on the number of library subscriptions
 Journals.csvJournals.csvinitial options(prompt = &amp;quot;R&amp;gt; &amp;quot;, continue = &amp;quot;+ &amp;quot;, width = 64, digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE) library(&amp;quot;AER&amp;quot;) set.seed(1071)
 library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt; 載入需要的套件：carData#&amp;gt; 載入需要的套件：lmtest#&amp;gt; 載入需要的套件：zoo#&amp;gt; #&amp;gt; 載入套件：&#39;zoo&#39;#&amp;gt; 下列物件被遮斷自 &#39;package:base&#39;:#&amp;gt; #&amp;gt; as.Date, as.Date.numeric#&amp;gt; 載入需要的套件：sandwich#&amp;gt; 載入需要的套件：survivaldata(&amp;quot;Journals&amp;quot;, package = &amp;quot;AER&amp;quot;)#View(Journals)journals &amp;lt;- Journals[, c(&amp;quot;subs&amp;quot;, &amp;quot;price&amp;quot;)]journals$citeprice &amp;lt;- Journals$price/Journals$citationssummary(journals)#&amp;gt; subs price citeprice #&amp;gt; Min.</description>
@@ -144,82 +144,82 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
     
     <item>
       <title>0 前置準備</title>
-      <link>https://airbone4.github.io/classweb/econometrics/0_prerequest.html</link>
+      <link>/econometrics/0_prerequest.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/econometrics/0_prerequest.html</guid>
+      <guid>/econometrics/0_prerequest.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>0. 測試工具</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</link>
+      <link>/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</guid>
+      <guid>/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1 Test Run - chunk</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/1_testrun_chunk.html</link>
+      <link>/topic/testrun/1_testrun_chunk.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/1_testrun_chunk.html</guid>
+      <guid>/topic/testrun/1_testrun_chunk.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1.0 t檢定</title>
-      <link>https://airbone4.github.io/classweb/econometrics/1_t%E6%AA%A2%E5%AE%9A.html</link>
+      <link>/econometrics/1_t%E6%AA%A2%E5%AE%9A.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/econometrics/1_t%E6%AA%A2%E5%AE%9A.html</guid>
+      <guid>/econometrics/1_t%E6%AA%A2%E5%AE%9A.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1.1 運作環境</title>
-      <link>https://airbone4.github.io/classweb/rlang/1_1_%E7%B3%BB%E7%B5%B1.html</link>
+      <link>/rlang/1_1_%E7%B3%BB%E7%B5%B1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/1_1_%E7%B3%BB%E7%B5%B1.html</guid>
+      <guid>/rlang/1_1_%E7%B3%BB%E7%B5%B1.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1.3 執行</title>
-      <link>https://airbone4.github.io/classweb/rlang/1_3_%E5%9F%B7%E8%A1%8C.html</link>
+      <link>/rlang/1_3_%E5%9F%B7%E8%A1%8C.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/1_3_%E5%9F%B7%E8%A1%8C.html</guid>
+      <guid>/rlang/1_3_%E5%9F%B7%E8%A1%8C.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1.4 R Package</title>
-      <link>https://airbone4.github.io/classweb/rlang/1_4_rpackages.html</link>
+      <link>/rlang/1_4_rpackages.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/1_4_rpackages.html</guid>
+      <guid>/rlang/1_4_rpackages.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1.5 編碼</title>
-      <link>https://airbone4.github.io/classweb/rlang/1_5_%E7%B7%A8%E7%A2%BC.html</link>
+      <link>/rlang/1_5_%E7%B7%A8%E7%A2%BC.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/1_5_%E7%B7%A8%E7%A2%BC.html</guid>
+      <guid>/rlang/1_5_%E7%B7%A8%E7%A2%BC.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>10. tidyr, dplyr basic</title>
-      <link>https://airbone4.github.io/classweb/rlang/10_00_dplyrbasic01.html</link>
+      <link>/rlang/10_00_dplyrbasic01.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/10_00_dplyrbasic01.html</guid>
+      <guid>/rlang/10_00_dplyrbasic01.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf&#34;&gt;cheat sheet&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -227,19 +227,19 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
     
     <item>
       <title>11 Environments</title>
-      <link>https://airbone4.github.io/classweb/rlang/11_environments.html</link>
+      <link>/rlang/11_environments.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/11_environments.html</guid>
+      <guid>/rlang/11_environments.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2 總體變數</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/2_testrun.html</link>
+      <link>/topic/testrun/2_testrun.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/2_testrun.html</guid>
+      <guid>/topic/testrun/2_testrun.html</guid>
       <description>&lt;script src=&#34;2_TestRun_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;2_TestRun_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;2_TestRun_files/dygraphs-1.1.1/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
@@ -262,406 +262,406 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
     
     <item>
       <title>2. ANOVA</title>
-      <link>https://airbone4.github.io/classweb/econometrics/2_anova.html</link>
+      <link>/econometrics/2_anova.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/econometrics/2_anova.html</guid>
+      <guid>/econometrics/2_anova.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2.0 基本輸出輸入</title>
-      <link>https://airbone4.github.io/classweb/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</link>
+      <link>/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</guid>
+      <guid>/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2.1 讀檔寫檔</title>
-      <link>https://airbone4.github.io/classweb/rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html</link>
+      <link>/rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html</guid>
+      <guid>/rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2.1 隨機變數</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</link>
+      <link>/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</guid>
+      <guid>/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2.1.1 亂數函數練習</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</link>
+      <link>/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</guid>
+      <guid>/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2.2 資料探索</title>
-      <link>https://airbone4.github.io/classweb/rlang/2_2_data_explorer.html</link>
+      <link>/rlang/2_2_data_explorer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/2_2_data_explorer.html</guid>
+      <guid>/rlang/2_2_data_explorer.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2.3 資料探索</title>
-      <link>https://airbone4.github.io/classweb/rlang/2_3_data_explorer.html</link>
+      <link>/rlang/2_3_data_explorer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/2_3_data_explorer.html</guid>
+      <guid>/rlang/2_3_data_explorer.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>20 自製套件</title>
-      <link>https://airbone4.github.io/classweb/topic/rmd/20_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</link>
+      <link>/topic/rmd/20_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/rmd/20_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</guid>
+      <guid>/topic/rmd/20_%E8%87%AA%E8%A3%BD%E5%A5%97%E4%BB%B6.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>21_roxygen</title>
-      <link>https://airbone4.github.io/classweb/topic/rmd/21_roxygen.html</link>
+      <link>/topic/rmd/21_roxygen.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/rmd/21_roxygen.html</guid>
+      <guid>/topic/rmd/21_roxygen.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>3 htmlpreserve</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/3_testrun_htmlpreserve.html</link>
+      <link>/topic/testrun/3_testrun_htmlpreserve.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/3_testrun_htmlpreserve.html</guid>
+      <guid>/topic/testrun/3_testrun_htmlpreserve.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>3. Quick view 1</title>
-      <link>https://airbone4.github.io/classweb/rlang/3_quickview1.html</link>
+      <link>/rlang/3_quickview1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/3_quickview1.html</guid>
+      <guid>/rlang/3_quickview1.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4 Tibble Table Test</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/4_tibbletable.html</link>
+      <link>/topic/testrun/4_tibbletable.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/4_tibbletable.html</guid>
+      <guid>/topic/testrun/4_tibbletable.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.1 基本</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html</link>
+      <link>/rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html</guid>
+      <guid>/rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.1 模擬基本 1</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/4_01_sim.html</link>
+      <link>/topic/simulation/4_01_sim.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/4_01_sim.html</guid>
+      <guid>/topic/simulation/4_01_sim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.1.2 練習</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</link>
+      <link>/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</guid>
+      <guid>/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.10 常用指令和複習</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_10_type_%E5%B8%B8%E8%A6%8B%E5%92%8C%E8%A4%87%E7%BF%92.html</link>
+      <link>/rlang/4_10_type_%E5%B8%B8%E8%A6%8B%E5%92%8C%E8%A4%87%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_10_type_%E5%B8%B8%E8%A6%8B%E5%92%8C%E8%A4%87%E7%BF%92.html</guid>
+      <guid>/rlang/4_10_type_%E5%B8%B8%E8%A6%8B%E5%92%8C%E8%A4%87%E7%BF%92.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.12 regular練習</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</link>
+      <link>/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</guid>
+      <guid>/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.15 json</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_15_json.html</link>
+      <link>/rlang/4_15_json.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_15_json.html</guid>
+      <guid>/rlang/4_15_json.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.2 模擬基本 2</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/4_02_sim.html</link>
+      <link>/topic/simulation/4_02_sim.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/4_02_sim.html</guid>
+      <guid>/topic/simulation/4_02_sim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.3 矩陣</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_3_type_matrix.html</link>
+      <link>/rlang/4_3_type_matrix.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_3_type_matrix.html</guid>
+      <guid>/rlang/4_3_type_matrix.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.4 串列 list</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_4_type_list.html</link>
+      <link>/rlang/4_4_type_list.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_4_type_list.html</guid>
+      <guid>/rlang/4_4_type_list.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.5 字串處理函數</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_5_type_string_function.html</link>
+      <link>/rlang/4_5_type_string_function.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_5_type_string_function.html</guid>
+      <guid>/rlang/4_5_type_string_function.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.6 資料集 data frame</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_6_type_dataframe.html</link>
+      <link>/rlang/4_6_type_dataframe.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_6_type_dataframe.html</guid>
+      <guid>/rlang/4_6_type_dataframe.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.7 因子</title>
-      <link>https://airbone4.github.io/classweb/rlang/4_7_type_factor.html</link>
+      <link>/rlang/4_7_type_factor.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/4_7_type_factor.html</guid>
+      <guid>/rlang/4_7_type_factor.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>5 rmd topic 1</title>
-      <link>https://airbone4.github.io/classweb/topic/rmd/05_rmd_topic_1.html</link>
+      <link>/topic/rmd/05_rmd_topic_1.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/rmd/05_rmd_topic_1.html</guid>
+      <guid>/topic/rmd/05_rmd_topic_1.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>5. statatest</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/5_statatest.html</link>
+      <link>/topic/testrun/5_statatest.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/5_statatest.html</guid>
+      <guid>/topic/testrun/5_statatest.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>6.1 Programming basic</title>
-      <link>https://airbone4.github.io/classweb/rlang/6_1_programming.html</link>
+      <link>/rlang/6_1_programming.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/6_1_programming.html</guid>
+      <guid>/rlang/6_1_programming.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>6.2 Programming</title>
-      <link>https://airbone4.github.io/classweb/rlang/6_2_programming.html</link>
+      <link>/rlang/6_2_programming.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/6_2_programming.html</guid>
+      <guid>/rlang/6_2_programming.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>6.3 function - apply family</title>
-      <link>https://airbone4.github.io/classweb/rlang/6_3_apply_family.html</link>
+      <link>/rlang/6_3_apply_family.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/6_3_apply_family.html</guid>
+      <guid>/rlang/6_3_apply_family.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>7.1 R 函數的基本撰寫</title>
-      <link>https://airbone4.github.io/classweb/rlang/7_1_function.html</link>
+      <link>/rlang/7_1_function.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/7_1_function.html</guid>
+      <guid>/rlang/7_1_function.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>7.2 R函數進階</title>
-      <link>https://airbone4.github.io/classweb/rlang/7_2_function.html</link>
+      <link>/rlang/7_2_function.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/7_2_function.html</guid>
+      <guid>/rlang/7_2_function.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>7.3 R 函數定義的幾種分類</title>
-      <link>https://airbone4.github.io/classweb/rlang/7_3_function.html</link>
+      <link>/rlang/7_3_function.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/7_3_function.html</guid>
+      <guid>/rlang/7_3_function.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>7.8 R的物件相關概念</title>
-      <link>https://airbone4.github.io/classweb/rlang/7_8_objectbasic.html</link>
+      <link>/rlang/7_8_objectbasic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/7_8_objectbasic.html</guid>
+      <guid>/rlang/7_8_objectbasic.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>7.9 物件導向S3</title>
-      <link>https://airbone4.github.io/classweb/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</link>
+      <link>/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</guid>
+      <guid>/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>9.1 基本繪圖</title>
-      <link>https://airbone4.github.io/classweb/rlang/9_1_plot.html</link>
+      <link>/rlang/9_1_plot.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/9_1_plot.html</guid>
+      <guid>/rlang/9_1_plot.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>9.2 多圖疊圖</title>
-      <link>https://airbone4.github.io/classweb/rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html</link>
+      <link>/rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html</guid>
+      <guid>/rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>9.3 畫圖練習</title>
-      <link>https://airbone4.github.io/classweb/rlang/9_3_plot.html</link>
+      <link>/rlang/9_3_plot.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/9_3_plot.html</guid>
+      <guid>/rlang/9_3_plot.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>A.a 資料處理</title>
-      <link>https://airbone4.github.io/classweb/econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</link>
+      <link>/econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</guid>
+      <guid>/econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>A.b mpg為例的ggplot</title>
-      <link>https://airbone4.github.io/classweb/econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html</link>
+      <link>/econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html</guid>
+      <guid>/econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>assignment-1</title>
-      <link>https://airbone4.github.io/classweb/rlang/hw/hw_basic.html</link>
+      <link>/rlang/hw/hw_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/hw/hw_basic.html</guid>
+      <guid>/rlang/hw/hw_basic.html</guid>
       <description>part 1 basic  參考程式碼,數學上,e既然是純量,那就是1X1的矩陣。在R中,如果 e&amp;lt;-3那麼在R中判斷e是不是相量,是不是矩陣?  e&amp;lt;-3length(e)#&amp;gt; [1] 1is.vector(e) # q1: true or false#&amp;gt; [1] TRUEis.matrix(e) # q2: true or false#&amp;gt; [1] FALSE# 指定沒有任何資料的向量e1&amp;lt;-numeric(0)length(e1)#&amp;gt; [1] 0is.vector(e) # q3: true or false#&amp;gt; [1] TRUE 建立向量e21,e22,e23 解釋出現的訊息  e21&amp;lt;-1:3 # 向量,內容為[1,2,3] 也可以e2&amp;lt;-seq(1,3),e2&amp;lt;-c(1,2,3)e22&amp;lt;-1:4e23&amp;lt;-1:6e21==e23#&amp;gt; [1] TRUE TRUE TRUE FALSE FALSE FALSEe21==e22#&amp;gt; Warning in e21 == e22: 較長的物件長度並非較短物件長度的倍數#&amp;gt; [1] TRUE TRUE TRUE FALSE &amp;gt; e21==e23[1] TRUE TRUE TRUE FALSE FALSE FALSE&amp;gt; e21==e22[1] TRUE TRUE TRUE FALSEWarning message:In e21 == e22 : 較長的物件長度並非較短物件長度的倍數 3.</description>
     </item>
     
     <item>
       <title>debug blogdown</title>
-      <link>https://airbone4.github.io/classweb/rlang/blogdown_debug.html</link>
+      <link>/rlang/blogdown_debug.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/blogdown_debug.html</guid>
+      <guid>/rlang/blogdown_debug.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>lmm</title>
-      <link>https://airbone4.github.io/classweb/econometrics/lmm.html</link>
+      <link>/econometrics/lmm.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/econometrics/lmm.html</guid>
+      <guid>/econometrics/lmm.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>MC_基本</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</link>
+      <link>/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</guid>
+      <guid>/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poisson分配</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/poisson%E5%88%86%E9%85%8D.html</link>
+      <link>/topic/simulation/poisson%E5%88%86%E9%85%8D.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/poisson%E5%88%86%E9%85%8D.html</guid>
+      <guid>/topic/simulation/poisson%E5%88%86%E9%85%8D.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>regexpr</title>
-      <link>https://airbone4.github.io/classweb/rlang/hw/hw_regexp.html</link>
+      <link>/rlang/hw/hw_regexp.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/hw/hw_regexp.html</guid>
+      <guid>/rlang/hw/hw_regexp.html</guid>
       <description>reference cheatsheet
 抽取字組 看看是不是#開頭的字串,如果是的話要置換,例如 &amp;quot;# hello&amp;quot; -&amp;gt;&amp;quot;# hello &amp;quot;
 str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)) {x&amp;lt;-sub(&amp;quot;(^[#]* )(.*$)&amp;quot;,&amp;quot;\\1 &amp;lt;font color=&#39;red&#39;&amp;gt; \\2 &amp;lt;/font&amp;gt;&amp;quot;,str, perl=TRUE)print(x)}#&amp;gt; [1] &amp;quot;# &amp;lt;font color=&#39;red&#39;&amp;gt; hello &amp;lt;/font&amp;gt;&amp;quot; 類似上題 divtitle&amp;lt;-function (str){if(grepl(&amp;quot;^[#]* &amp;quot;,str)) {rst&amp;lt;-sub(&amp;quot;(^[#]* )(.*$)&amp;quot;,&amp;quot;\\1 &amp;lt;div class=&#39;outposix&#39;&amp;gt; \\2 &amp;lt;/div&amp;gt;&amp;quot;,str, perl=TRUE)}else{rst&amp;lt;-paste0(&amp;quot;&amp;lt;div class=&#39;outposix&#39;&amp;gt;&amp;quot;,str,&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;)}} 測試what1 pattern&amp;lt;-&amp;quot;out&amp;quot;ext&amp;lt;-&amp;quot;oo&amp;quot;list&amp;lt;-list(&amp;quot;out_中文_1.oo&amp;quot;,&amp;quot;out_1.oo&amp;quot;,&amp;quot;out_xx_1.oo&amp;quot;)what&amp;lt;-paste0(&amp;quot;(?&amp;lt;=&amp;quot;,pattern,&amp;quot;_).*&amp;quot;,&amp;quot;(?=\\.&amp;quot;,ext,&amp;quot;)&amp;quot;);idxlist&amp;lt;-as.integer(stringr::str_extract(list,what));#&amp;gt; Warning: 強制變更過程中產生了 NAidxlist#&amp;gt; [1] NA 1 NA 執行結果
@@ -670,37 +670,37 @@ str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)
     
     <item>
       <title>Viewer</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/viewer.html</link>
+      <link>/topic/testrun/viewer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/viewer.html</guid>
+      <guid>/topic/testrun/viewer.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>中央</title>
-      <link>https://airbone4.github.io/classweb/topic/simulation/central.html</link>
+      <link>/topic/simulation/central.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/simulation/central.html</guid>
+      <guid>/topic/simulation/central.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>備忘錄</title>
-      <link>https://airbone4.github.io/classweb/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</link>
+      <link>/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</guid>
+      <guid>/econometrics/data/%E5%82%99%E5%BF%98%E9%8C%84.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>檔案系統</title>
-      <link>https://airbone4.github.io/classweb/rlang/hw/hw_filesystem.html</link>
+      <link>/rlang/hw/hw_filesystem.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/hw/hw_filesystem.html</guid>
+      <guid>/rlang/hw/hw_filesystem.html</guid>
       <description>&lt;script src=&#34;hw_filesystem_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;hw_filesystem_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;hw_filesystem_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;
@@ -732,19 +732,19 @@ str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)
     
     <item>
       <title>資料處理</title>
-      <link>https://airbone4.github.io/classweb/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</link>
+      <link>/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</guid>
+      <guid>/rlang/%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>顯示求助檔案</title>
-      <link>https://airbone4.github.io/classweb/topic/testrun/beta_show_help.html</link>
+      <link>/topic/testrun/beta_show_help.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/topic/testrun/beta_show_help.html</guid>
+      <guid>/topic/testrun/beta_show_help.html</guid>
       <description></description>
     </item>
     

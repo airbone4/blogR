@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>暫時 on R in Class</title>
-    <link>https://airbone4.github.io/classweb/rlang/demo.html</link>
+    <link>/rlang/demo.html</link>
     <description>Recent content in 暫時 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/classweb/rlang/demo/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/rlang/demo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>predict</title>
-      <link>https://airbone4.github.io/classweb/rlang/demo/car.html</link>
+      <link>/rlang/demo/car.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/demo/car.html</guid>
+      <guid>/rlang/demo/car.html</guid>
       <description>Build a linear regression data(&amp;quot;cars&amp;quot;, package = &amp;quot;datasets&amp;quot;)model &amp;lt;- lm(dist ~ speed, data = cars)model#&amp;gt; #&amp;gt; Call:#&amp;gt; lm(formula = dist ~ speed, data = cars)#&amp;gt; #&amp;gt; Coefficients:#&amp;gt; (Intercept) speed #&amp;gt; -17.579 3.932 回歸式可以寫成: dist = -17.579 + 3.932*speed.
 新資料的預測:distance 分別是:12,19,24
 new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) )predict(model, newdata = new.speeds)#&amp;gt; 1 2 3 #&amp;gt; 29.60981 57.13667 76.79872 ❓ 不寫newdata ?</description>
@@ -19,10 +19,10 @@ new.speeds &amp;lt;- data.frame( speed = c(12, 19, 24) )predict(model, newdata 
     
     <item>
       <title>引用</title>
-      <link>https://airbone4.github.io/classweb/rlang/demo/citation.html</link>
+      <link>/rlang/demo/citation.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://airbone4.github.io/classweb/rlang/demo/citation.html</guid>
+      <guid>/rlang/demo/citation.html</guid>
       <description>introduction Goal: Estimate the effect of the price per citation on the number of library subscriptions
 Journals.csvJournals.csvinitial options(prompt = &amp;quot;R&amp;gt; &amp;quot;, continue = &amp;quot;+ &amp;quot;, width = 64, digits = 4, show.signif.stars = FALSE, useFancyQuotes = FALSE) library(&amp;quot;AER&amp;quot;) set.seed(1071)
 library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt; 載入需要的套件：carData#&amp;gt; 載入需要的套件：lmtest#&amp;gt; 載入需要的套件：zoo#&amp;gt; #&amp;gt; 載入套件：&#39;zoo&#39;#&amp;gt; 下列物件被遮斷自 &#39;package:base&#39;:#&amp;gt; #&amp;gt; as.Date, as.Date.numeric#&amp;gt; 載入需要的套件：sandwich#&amp;gt; 載入需要的套件：survivaldata(&amp;quot;Journals&amp;quot;, package = &amp;quot;AER&amp;quot;)#View(Journals)journals &amp;lt;- Journals[, c(&amp;quot;subs&amp;quot;, &amp;quot;price&amp;quot;)]journals$citeprice &amp;lt;- Journals$price/Journals$citationssummary(journals)#&amp;gt; subs price citeprice #&amp;gt; Min.</description>

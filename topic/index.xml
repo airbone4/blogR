@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>專題 on R in Class</title>
-    <link>https://airbone4.github.io/classweb/topic.html</link>
+    <link>/topic.html</link>
     <description>Recent content in 專題 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://airbone4.github.io/classweb/topic/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/topic/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
