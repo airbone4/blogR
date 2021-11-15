@@ -183,14 +183,31 @@ white-space:pre;
 /*font-family: monospace;*/
 display:none;
 }
-/*
-div.expand *:not(span) {
-all: initial;
-* {
-all: unset;
+
+button[data-bs-toggle="collapse"]:after
+{
+    font-family: 'Glyphicons Halflings';
+    content: "展"; 
+    float: left;   
+    line-height: 0.8;
+    font-size: 0.8rem;
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(180deg);
+    -moz-transform:    rotate(180deg);
+    -ms-transform:     rotate(180deg);
+    -o-transform:      rotate(180deg);
+    transform:         rotate(180deg);
 }
+button[data-bs-toggle="collapse"].collapsed:after
+{
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -ms-transform:     rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg);
 }
-*/
+
 
 h2,h3,h4,h5,h6 {
     /* font-size: 1.5rem; */
@@ -252,7 +269,7 @@ min-width: 160px;
 
 #body-inner ol:not([class]) {
 list-style: none;
-margin: 1rem 0;
+margin: 0.25rem 0 0.75rem 0 ;
 
 padding-left: 32px;
 counter-reset: ol-step-counter;
@@ -435,7 +452,7 @@ opacity: 1;
 .tooltip-inner {
 background-color: #dc3545;
 box-shadow: 0px 0px 4px black;
-
+text-align:left;
 opacity: 1 !important;
 }
 

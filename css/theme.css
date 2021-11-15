@@ -180,8 +180,40 @@ ol.attachments-files{
     overflow-y: auto;  /*左側欄位捲動*/
     height: calc(100vh - 100px) ; /*左側欄位捲動*/
     flex:10 1 55rem;
-    padding: 0px 12rem;
+    padding: 0px 1rem;
 } 
+ 
+@media (max-width: 767px) {
+  #body-inner{
+    width: 100%;
+  }
+
+}
+@media (max-width: 480px) {
+  #body-inner{
+    padding:1rem 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  #body-inner{
+    padding:1rem 1rem;
+  }
+
+}
+@media (min-width: 980px) {
+  #body-inner{
+    padding:1rem 6rem;
+  }
+
+}
+@media (min-width: 1200px) {
+  #body-inner{
+    padding:1rem 6rem;
+  }
+
+}
+
+
 #body-inner p{
   margin-top: 1rem;
   margin-bottom: 0;
@@ -325,7 +357,7 @@ ol.attachments-files{
 #sidebar #footer ul li a{
     margin-left: 1rem;
 }
-
+/*
 #footer.up {
     position: absolute;
     top : 100px;
@@ -338,6 +370,7 @@ ol.attachments-files{
     opacity: 1;
  
  }
+*/ 
 #footer ul{
     padding: 0 0 0 0.4rem;
 }
@@ -438,14 +471,14 @@ pre  code.hljs {
       /* overflow:inherit; quote v1 */
       width:100%;
 }
-/* quote v1
+/* quote v1 */
 pre:hover, pre:focus { 
-    overflow:visible;
+/*    overflow:visible;
     min-width: 100%;
-    width: max-content!important; 
+    width: max-content!important; */
     box-shadow: 11px 7px 8px 2px #dc3545;
 }
-*/
+
 
 table:not(.lntable) {
     border: 1px solid #1C6EA4;

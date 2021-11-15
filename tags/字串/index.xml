@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>字串 on R in Class</title>
-    <link>/tags/%E5%AD%97%E4%B8%B2.html</link>
+    <link>https://airbone4.github.io/classweb/tags/%E5%AD%97%E4%B8%B2.html</link>
     <description>Recent content in 字串 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/%E5%AD%97%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://airbone4.github.io/classweb/tags/%E5%AD%97%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2.0 基本輸出輸入</title>
-      <link>/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</link>
+      <link>https://airbone4.github.io/classweb/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</guid>
+      <guid>https://airbone4.github.io/classweb/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4.5 字串處理函數</title>
-      <link>/rlang/4_5_type_string_function.html</link>
+      <link>https://airbone4.github.io/classweb/rlang/4_5_type_string_function.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/4_5_type_string_function.html</guid>
+      <guid>https://airbone4.github.io/classweb/rlang/4_5_type_string_function.html</guid>
       <description></description>
     </item>
     
