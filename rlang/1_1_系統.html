@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1637068238" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1637068238"></script>
+    <link href="/blogR/css/syntax.css?1637068519" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1637068519"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1637068238" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1637068519" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1637068238" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1637068519" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1637068238" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1637068519" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -477,7 +477,7 @@ else
 <p>指令開頭是<code>Sys</code></p>
 <pre><code class="language-r?lang=r?class=.source">hugocmd(&quot;expand&quot; ,'title=&quot;&quot; incode=true')
 #&gt; <!--html_preserve--><div class="message">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n621943587"></button><div  id="n621943587" class="collapse" style="overflow-x:visbile"><!--/html_preserve-->Sys.getenv()
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n458391267"></button><div  id="n458391267" class="collapse" style="overflow-x:visbile"><!--/html_preserve-->Sys.getenv()
 #&gt; ALLUSERSPROFILE         C:\ProgramData
 #&gt; APPDATA                 C:\Users\linchao\AppData\Roaming
 #&gt; CHROME_CRASHPAD_PIPE_NAME
@@ -585,7 +585,7 @@ Sys.getenv(&quot;R_TEST&quot;, unset = NA)
 </li>
 <li>.Rprofile - which contains R code to be run in each session.
 <!--html_preserve--><div class="message">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n716392458"></button>範例 ~/.Renviron on Unix<div  id="n716392458" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">## 範例 ~/.Renviron on Unix
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n247589316"></button>範例 ~/.Renviron on Unix<div  id="n247589316" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">## 範例 ~/.Renviron on Unix
 R_LIBS=~/R/library
 PAGER=/usr/local/bin/less
 
@@ -603,7 +603,7 @@ R_DEFAULT_PACKAGES='utils,grDevices,graphics,stats'
 <ul>
 <li>
 <!--html_preserve--><div class="message">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n235891467"></button>範例 .Rprofile .First .Last<div  id="n235891467" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">options(width=65, digits=5)
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n964152378"></button>範例 .Rprofile .First .Last<div  id="n964152378" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">options(width=65, digits=5)
 options(show.signif.stars=FALSE)
 setHook(packageEvent(&quot;grDevices&quot;, &quot;onLoad&quot;),
         function(...) grDevices::ps.options(horizontal=FALSE))
@@ -615,7 +615,7 @@ set.seed(1234)
 </li>
 <li>
 <!--html_preserve--><div class="message">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n349817526"></button>範例 Rprofile.site<div  id="n349817526" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">local({
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n145289376"></button>範例 Rprofile.site<div  id="n145289376" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">local({
   # add MASS to the default packages, set a CRAN mirror
   old &lt;- getOption(&quot;defaultPackages&quot;); r &lt;- getOption(&quot;repos&quot;)
   r[&quot;CRAN&quot;] &lt;- &quot;http://my.local.cran&quot;
@@ -648,7 +648,7 @@ FOOBAR=&quot;coo\bar&quot;doh\ex&quot;abc\&quot;def'&quot;
 getOption(&quot;windowsTimeouts&quot;)
 </code></pre>
 <!--html_preserve--><div class="message ms-5 ">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n718469325"></button>options()的執行結果<div  id="n718469325" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">#&gt; $add.smooth
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n546217839"></button>options()的執行結果<div  id="n546217839" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">#&gt; $add.smooth
 #&gt; [1] TRUE
 #&gt; 
 #&gt; $blogdown.method
@@ -941,8 +941,8 @@ names(.GlobalEnv)
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1637068238" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1637068238"></script>
+<link href="/blogR/css/quicknote.css?1637068519" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637068519"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -960,7 +960,7 @@ names(.GlobalEnv)
           
 
   
-<script src="/blogR/js/packhtml.js?1637068238"></script>    
+<script src="/blogR/js/packhtml.js?1637068519"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -970,24 +970,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1637068238"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1637068238"></script>
-  <link href="/blogR/css/featherlight.min.css?1637068238" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1637068238" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1637068519"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1637068519"></script>
+  <link href="/blogR/css/featherlight.min.css?1637068519" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1637068519" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1637068238"></script>
-  <link href="/blogR/css/rmd.css?1637068238" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1637068238" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1637068238'></script>
+  <script src="/blogR/js/hugohelper.js?1637068519"></script>
+  <link href="/blogR/css/rmd.css?1637068519" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1637068519" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1637068519'></script>
 
 <script>
   
-    let idxfile = "\/blogR\/blogR\/index.json"  
+   let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1637068238'></script>
+<script src='/blogR/js/localsearch.js?1637068519'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

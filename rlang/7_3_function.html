@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1637068238" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1637068238"></script>
+    <link href="/blogR/css/syntax.css?1637068519" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1637068519"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1637068238" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1637068519" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1637068238" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1637068519" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1637068238" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1637068519" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -456,7 +456,7 @@ for(i in 1:10) print(i) #<!--html_preserve--><span  data-bs-toggle="tooltip" dat
 `for`(i, 1:10, print(i))
 </code></pre>
 <!--html_preserve--><div class="message d-none ">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n628947153"></button>補充<div  id="n628947153" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>😜Knowing the function name of a non-prefix function allows you to override its behaviour. For example, if you're ever feeling particularly evil, run the following code while a friend is away from their computer. It will introduce a fun bug: 10% of the time, 1 will be added to any numeric calculation inside of parentheses.</p>
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n456897231"></button>補充<div  id="n456897231" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>😜Knowing the function name of a non-prefix function allows you to override its behaviour. For example, if you're ever feeling particularly evil, run the following code while a friend is away from their computer. It will introduce a fun bug: 10% of the time, 1 will be added to any numeric calculation inside of parentheses.</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`(` &lt;- function(e1) {
   if (is.numeric(e1) &amp;&amp; runif(1) &lt; 0.1) {
     e1 + 1
@@ -568,7 +568,7 @@ x # 新值為5L
 #&gt;  [1]  1  5  3  4  5  6  7  8  9 10
 </code></pre>
 <p><!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n429368517"></button><div  id="n429368517" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>利用 <code>tracemem()</code>追蹤:</p>
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n641952873"></button><div  id="n641952873" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>利用 <code>tracemem()</code>追蹤:</p>
 <pre><code class="language-r?preclass=.ms-5.w-75">x &lt;- 1:10
 tracemem(x)
 #&gt; &lt;0x7ffae71bd880&gt; #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏1&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
@@ -588,14 +588,14 @@ x
 #&gt;  [1] 10  5  3  4  5  6  7  8  9 10
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n846729135"></button><div  id="n846729135" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">modify(x, 1) &lt;- 10
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n852169437"></button><div  id="n852169437" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">modify(x, 1) &lt;- 10
 </code></pre>
 <p>其實在R的幕後解譯中被轉為</p>
 <pre><code class="language-r">x &lt;- `modify&lt;-`(x, 1, 10)
 </code></pre>
 <!--html_preserve--></div></div><!--/html_preserve-->
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n562783914"></button>更複雜的翻譯<div  id="n562783914" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r?preclass=.ms-5.w-75">x &lt;- c(a = 1, b = 2, c = 3)
+<button class='btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n689217345"></button>更複雜的翻譯<div  id="n689217345" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r?preclass=.ms-5.w-75">x &lt;- c(a = 1, b = 2, c = 3)
 names(x)
 #&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
 
@@ -781,8 +781,8 @@ so it's never evaluated.</p>
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1637068238" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1637068238"></script>
+<link href="/blogR/css/quicknote.css?1637068519" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637068519"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -800,7 +800,7 @@ so it's never evaluated.</p>
           
 
   
-<script src="/blogR/js/packhtml.js?1637068238"></script>    
+<script src="/blogR/js/packhtml.js?1637068519"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -810,24 +810,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1637068238"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1637068238"></script>
-  <link href="/blogR/css/featherlight.min.css?1637068238" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1637068238" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1637068519"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1637068519"></script>
+  <link href="/blogR/css/featherlight.min.css?1637068519" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1637068519" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1637068238"></script>
-  <link href="/blogR/css/rmd.css?1637068238" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1637068238" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1637068238'></script>
+  <script src="/blogR/js/hugohelper.js?1637068519"></script>
+  <link href="/blogR/css/rmd.css?1637068519" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1637068519" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1637068519'></script>
 
 <script>
   
-    let idxfile = "\/blogR\/blogR\/index.json"  
+   let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1637068238'></script>
+<script src='/blogR/js/localsearch.js?1637068519'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
