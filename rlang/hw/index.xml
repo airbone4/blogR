@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>練習用 on R in Class</title>
-    <link>/rlang/hw.html</link>
+    <link>https://airbone4.github.io/blogR/rlang/hw.html</link>
     <description>Recent content in 練習用 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/rlang/hw/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/rlang/hw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>資料集</title>
-      <link>/rlang/hw/dataset_class.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/hw/dataset_class.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/hw/dataset_class.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/hw/dataset_class.html</guid>
       <description>❓
  要知道目前有哪些資料集   📝data()可以列出目前有甚麼資料可以用,也可以放入參數,只列出某個package的資料集。   寫個函數,判斷目前我們要的資料集是不是存在  ❓
  要知道資料集cars的欄位 列出前10筆資料   normal pretty: 📝 安裝DT: install.pacakges(“DT”),參考 💣 會缺失各種程式庫  hint  data() names(cars)  List of 4 #🏷$ title : chr &amp;quot;Data sets&amp;quot;$ header : NULL$ results: chr [1:104, 1:4] # 🏷 &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; &amp;quot;datasets&amp;quot; .....- attr(*, &amp;quot;dimnames&amp;quot;)=List of 2 ## 🏷 .. ..$ : NULL .</description>
@@ -19,19 +19,19 @@
     
     <item>
       <title>assignment-1</title>
-      <link>/rlang/hw/hw_basic.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/hw/hw_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/hw/hw_basic.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/hw/hw_basic.html</guid>
       <description>part 1 basic  參考程式碼,數學上,e既然是純量,那就是1X1的矩陣。在R中,如果 e&amp;lt;-3那麼在R中判斷e是不是相量,是不是矩陣?  e&amp;lt;-3length(e)#&amp;gt; [1] 1is.vector(e) # q1: true or false#&amp;gt; [1] TRUEis.matrix(e) # q2: true or false#&amp;gt; [1] FALSE# 指定沒有任何資料的向量e1&amp;lt;-numeric(0)length(e1)#&amp;gt; [1] 0is.vector(e) # q3: true or false#&amp;gt; [1] TRUE 建立向量e21,e22,e23 解釋出現的訊息  e21&amp;lt;-1:3 # 向量,內容為[1,2,3] 也可以e2&amp;lt;-seq(1,3),e2&amp;lt;-c(1,2,3)e22&amp;lt;-1:4e23&amp;lt;-1:6e21==e23#&amp;gt; [1] TRUE TRUE TRUE FALSE FALSE FALSEe21==e22#&amp;gt; Warning in e21 == e22: 較長的物件長度並非較短物件長度的倍數#&amp;gt; [1] TRUE TRUE TRUE FALSE &amp;gt; e21==e23[1] TRUE TRUE TRUE FALSE FALSE FALSE&amp;gt; e21==e22[1] TRUE TRUE TRUE FALSEWarning message:In e21 == e22 : 較長的物件長度並非較短物件長度的倍數 3.</description>
     </item>
     
     <item>
       <title>regexpr</title>
-      <link>/rlang/hw/hw_regexp.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/hw/hw_regexp.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/hw/hw_regexp.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/hw/hw_regexp.html</guid>
       <description>reference cheatsheet
 抽取字組 看看是不是#開頭的字串,如果是的話要置換,例如 &amp;quot;# hello&amp;quot; -&amp;gt;&amp;quot;# hello &amp;quot;
 str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)) {x&amp;lt;-sub(&amp;quot;(^[#]* )(.*$)&amp;quot;,&amp;quot;\\1 &amp;lt;font color=&#39;red&#39;&amp;gt; \\2 &amp;lt;/font&amp;gt;&amp;quot;,str, perl=TRUE)print(x)}#&amp;gt; [1] &amp;quot;# &amp;lt;font color=&#39;red&#39;&amp;gt; hello &amp;lt;/font&amp;gt;&amp;quot; 類似上題 divtitle&amp;lt;-function (str){if(grepl(&amp;quot;^[#]* &amp;quot;,str)) {rst&amp;lt;-sub(&amp;quot;(^[#]* )(.*$)&amp;quot;,&amp;quot;\\1 &amp;lt;div class=&#39;outposix&#39;&amp;gt; \\2 &amp;lt;/div&amp;gt;&amp;quot;,str, perl=TRUE)}else{rst&amp;lt;-paste0(&amp;quot;&amp;lt;div class=&#39;outposix&#39;&amp;gt;&amp;quot;,str,&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;)}} 測試what1 pattern&amp;lt;-&amp;quot;out&amp;quot;ext&amp;lt;-&amp;quot;oo&amp;quot;list&amp;lt;-list(&amp;quot;out_中文_1.oo&amp;quot;,&amp;quot;out_1.oo&amp;quot;,&amp;quot;out_xx_1.oo&amp;quot;)what&amp;lt;-paste0(&amp;quot;(?&amp;lt;=&amp;quot;,pattern,&amp;quot;_).*&amp;quot;,&amp;quot;(?=\\.&amp;quot;,ext,&amp;quot;)&amp;quot;);idxlist&amp;lt;-as.integer(stringr::str_extract(list,what));#&amp;gt; Warning: 強制變更過程中產生了 NAidxlist#&amp;gt; [1] NA 1 NA 執行結果
@@ -40,10 +40,10 @@ str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)
     
     <item>
       <title>檔案系統</title>
-      <link>/rlang/hw/hw_filesystem.html</link>
+      <link>https://airbone4.github.io/blogR/rlang/hw/hw_filesystem.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rlang/hw/hw_filesystem.html</guid>
+      <guid>https://airbone4.github.io/blogR/rlang/hw/hw_filesystem.html</guid>
       <description>&lt;script src=&#34;hw_filesystem_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;hw_filesystem_files/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;hw_filesystem_files/datatables-binding-0.19/datatables.js&#34;&gt;&lt;/script&gt;

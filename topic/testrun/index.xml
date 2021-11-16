@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>網頁測試 on R in Class</title>
-    <link>/topic/testrun.html</link>
+    <link>https://airbone4.github.io/blogR/topic/testrun.html</link>
     <description>Recent content in 網頁測試 on R in Class</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/topic/testrun/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/topic/testrun/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>0. 測試工具</title>
-      <link>/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/0_1_%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>1 Test Run - chunk</title>
-      <link>/topic/testrun/1_testrun_chunk.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/1_testrun_chunk.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/1_testrun_chunk.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/1_testrun_chunk.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>2 總體變數</title>
-      <link>/topic/testrun/2_testrun.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/2_testrun.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/2_testrun.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/2_testrun.html</guid>
       <description>&lt;script src=&#34;2_TestRun_files/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;2_TestRun_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;2_TestRun_files/dygraphs-1.1.1/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;
@@ -52,46 +52,46 @@
     
     <item>
       <title>3 htmlpreserve</title>
-      <link>/topic/testrun/3_testrun_htmlpreserve.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/3_testrun_htmlpreserve.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/3_testrun_htmlpreserve.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/3_testrun_htmlpreserve.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>4 Tibble Table Test</title>
-      <link>/topic/testrun/4_tibbletable.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/4_tibbletable.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/4_tibbletable.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/4_tibbletable.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>5. statatest</title>
-      <link>/topic/testrun/5_statatest.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/5_statatest.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/5_statatest.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/5_statatest.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Viewer</title>
-      <link>/topic/testrun/viewer.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/viewer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/viewer.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/viewer.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>顯示求助檔案</title>
-      <link>/topic/testrun/beta_show_help.html</link>
+      <link>https://airbone4.github.io/blogR/topic/testrun/beta_show_help.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/topic/testrun/beta_show_help.html</guid>
+      <guid>https://airbone4.github.io/blogR/topic/testrun/beta_show_help.html</guid>
       <description></description>
     </item>
     
