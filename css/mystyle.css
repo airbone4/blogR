@@ -184,7 +184,7 @@ white-space:pre;
 display:none;
 }
 
-button[data-bs-toggle="collapse"]:after
+button[data-bs-toggle="collapse"].expand:after
 {
     font-family: 'Glyphicons Halflings';
     content: "展"; 
@@ -198,7 +198,7 @@ button[data-bs-toggle="collapse"]:after
     -o-transform:      rotate(180deg);
     transform:         rotate(180deg);
 }
-button[data-bs-toggle="collapse"].collapsed:after
+button[data-bs-toggle="collapse"].expand.collapsed:after
 {
     /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
     -webkit-transform: rotate(0deg);
@@ -504,4 +504,11 @@ content:url(../images/pdf.gif);
 
 .tooltip-inner{
   max-width:400px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+      transition-property: height, visibility;
+      transition-duration: .35s;
+  }
 }

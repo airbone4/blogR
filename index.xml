@@ -405,6 +405,15 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
     </item>
     
     <item>
+      <title>4.11 正規表達語法</title>
+      <link>https://airbone4.github.io/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>4.12 regular練習</title>
       <link>https://airbone4.github.io/blogR/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -621,6 +630,15 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
     </item>
     
     <item>
+      <title>bootstrap</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/bootstrap.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/bootstrap.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>debug blogdown</title>
       <link>https://airbone4.github.io/blogR/rlang/blogdown_debug.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -666,6 +684,15 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
 抽取字組 看看是不是#開頭的字串,如果是的話要置換,例如 &amp;quot;# hello&amp;quot; -&amp;gt;&amp;quot;# hello &amp;quot;
 str&amp;lt;-&amp;quot;# hello&amp;quot;if(grepl(&amp;quot;^[#]* &amp;quot;,str)) {x&amp;lt;-sub(&amp;quot;(^[#]* )(.*$)&amp;quot;,&amp;quot;\\1 &amp;lt;font color=&#39;red&#39;&amp;gt; \\2 &amp;lt;/font&amp;gt;&amp;quot;,str, perl=TRUE)print(x)}#&amp;gt; [1] &amp;quot;# &amp;lt;font color=&#39;red&#39;&amp;gt; hello &amp;lt;/font&amp;gt;&amp;quot; 類似上題 divtitle&amp;lt;-function (str){if(grepl(&amp;quot;^[#]* &amp;quot;,str)) {rst&amp;lt;-sub(&amp;quot;(^[#]* )(.*$)&amp;quot;,&amp;quot;\\1 &amp;lt;div class=&#39;outposix&#39;&amp;gt; \\2 &amp;lt;/div&amp;gt;&amp;quot;,str, perl=TRUE)}else{rst&amp;lt;-paste0(&amp;quot;&amp;lt;div class=&#39;outposix&#39;&amp;gt;&amp;quot;,str,&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;)}} 測試what1 pattern&amp;lt;-&amp;quot;out&amp;quot;ext&amp;lt;-&amp;quot;oo&amp;quot;list&amp;lt;-list(&amp;quot;out_中文_1.oo&amp;quot;,&amp;quot;out_1.oo&amp;quot;,&amp;quot;out_xx_1.oo&amp;quot;)what&amp;lt;-paste0(&amp;quot;(?&amp;lt;=&amp;quot;,pattern,&amp;quot;_).*&amp;quot;,&amp;quot;(?=\\.&amp;quot;,ext,&amp;quot;)&amp;quot;);idxlist&amp;lt;-as.integer(stringr::str_extract(list,what));#&amp;gt; Warning: 強制變更過程中產生了 NAidxlist#&amp;gt; [1] NA 1 NA 執行結果
 #&amp;gt; Warning: 強制變更過程中產生了 NAidxlist#&amp;gt; [1] NA 1 NA  解釋 NA, 和 為甚麼?</description>
+    </item>
+    
+    <item>
+      <title>sinytest</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/sinytest.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/sinytest.html</guid>
+      <description></description>
     </item>
     
     <item>

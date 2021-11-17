@@ -179,6 +179,15 @@ sample(1:52, 5)#&amp;gt; [1] 15 7 10 12 23 replacement: 例如拋一枚均勻�
     </item>
     
     <item>
+      <title>4.11 正規表達語法</title>
+      <link>https://airbone4.github.io/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>4.12 regular練習</title>
       <link>https://airbone4.github.io/blogR/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-  <title>練習用</title>  
+  <title>4.11 正規表達語法</title>  
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,6 @@
     
     <link href="/blogR/css/fontawesome-all.min.css?1637107339" rel="stylesheet">
     
-    
     <link href="/blogR/css/theme-mine.css?1637107339" rel="stylesheet">
     
     <link href="/blogR/css/theme.css?1637107339" rel="stylesheet">
@@ -32,8 +31,32 @@
   <span >
     <a  href='/blogR/' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
     <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
-  </span><span ><span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 4, 2021'>練習用</span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#和樣式pattern搜尋有關的函數">和樣式（pattern)搜尋有關的函數</a>
+      <ul>
+        <li><a href="#grep-grepl">grep, grepl</a></li>
+        <li><a href="#regexpr-gregexpr">regexpr, gregexpr</a></li>
+        <li><a href="#數量修飾詞quantifiers">數量修飾詞Quantifiers</a></li>
+        <li><a href="#position-of-pattern-within-the-string">Position of pattern within the string</a></li>
+        <li><a href="#operators">Operators</a></li>
+        <li><a href="#character-classes">Character classes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改November 16, 2021'>4.11 正規表達語法</span>
         
     
 
@@ -53,8 +76,8 @@
 </div> 
 </div>
 
-<div id="content-wrapper">
-  <nav id="sidebar">
+
+<div id="content-wrapper"><nav id="sidebar">
   
     <ul class="nav flex-column topics" id="home-topics">
       
@@ -141,8 +164,8 @@
      
    
      
-   
-        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.11 正規表達語法</a></li>
+    
+        <li class="nav-item active"><a class="nav-link" href="/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.11 正規表達語法</a></li>
      
    
      
@@ -233,17 +256,17 @@
 
  
 
-<li class="nav-item active" data-bs-toggle="tooltip" data-bs-placement="right" title="練習用">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="練習用">
      
 
   <a class="nav-link" 
     href="/blogR/rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
-    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="true"> 
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
   <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
-  class="submenu collapse show" 
+  class="submenu collapse" 
   data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074">
 
     
@@ -417,68 +440,338 @@
       最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-16 PM 11:21]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/bootstrap.html"> <i class="far fa-clock" ></i>bootstrap[2021-11-16 PM 09:17]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html"> <i class="far fa-clock" ></i>4.11 正規表達語法[2021-11-16 PM 09:17]</a></li></ul>
     </section>
   
-</nav>
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <p>這裡只是正規表達式(Regular expressions)簡短的介紹:總之就是利用一些特殊字元，例如 <code>$ * + . ? [ ] ^ { } | ( ) \</code>，用來在文字中表達某些搜尋樣式(pattern)
+的語法。</p>
+<!--more-->
+<h2 id="和樣式pattern搜尋有關的函數">和樣式（pattern)搜尋有關的函數</h2>
+<ul>
+<li>strsplit: 在regexp找到的地方分割字串</li>
+<li>grep, grepl: 在字串中利用regular expression 尋找</li>
+<li>sub: 搜尋並取代正規表達式找到的第一個符合者。</li>
+<li>gsub: 類似上面,但是式所有符合的都取代。</li>
+</ul>
+<h3 id="grep-grepl">grep, grepl</h3>
+<p>grep,grepl的差別在於grepl的答案是給出logical，且比對的結果和搜尋內容的個數相同。而grep只找符合的位置或值(由參數value指定)
+下面的例子是找出<code>a.c</code>這個字串。</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">grep(&quot;a\\.c&quot;, c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;),value=TRUE) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="找出&lt;code&gt;a.c&lt;/code&gt;這個字串">🏷</span><!--/html_preserve-->
+#&gt; [1] &quot;a.c&quot;
 
-<div class="container" id="body-inner">
-  <p class="text-center h2">
-    Rlang
-  </p>
+grep(&quot;a\\.c&quot;, c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="位置為2">🏷</span><!--/html_preserve-->
+#&gt; [1] 2
+
+grepl(&quot;a\\.c&quot;, c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="grep,grepl的差別在於grepl的答案是給出logical">🏷</span><!--/html_preserve-->
+#&gt; [1] FALSE  TRUE FALSE
+</code></pre>
+<p>又另一個例子,是在字串中尋找單引號,假定要在國家中找尋是否有名稱包含單引號的名字,可以使用<code>'\''</code>
+問題:為甚麼不是<code>'\\''</code></p>
+<div class="notices ms-5">
+<div class="info"><h2 id="escape-sequences">Escape sequences</h2>
+<p>正規表達式中<code>.</code>代表任意字元,但是如果我們要在字串中查找"."(例如,檔案名稱中的點) 的時候要怎樣表示?答案是使用逃逸字元<code>\</code>。但是在R語言中,正規表達式，也是使用字串，可是在字串中,<code>\</code>本身就逃逸字元，因此需要<code>\\.</code>。</p>
+<pre><code class="language-r">dot <- "\\."
+writeLines(dot)
+## \.
+
+x <- "a\\b"
+writeLines(x)
+## a\b
+</code></pre>
+<p>這裡的逃逸字元只是字串的標準用法,<code>'</code>不是正規表達式的特殊字元。電腦語言認字串的方法是成對的引號,這個時候如果寫<code>'''</code>那是甚麼意思?所以<code>'\''</code>就是字串<code>'</code>的意思。所以為甚麼之前是"a\.c"中,第二個<code>\</code>是解脫正規表達中<code>.</code>的意義。而第一個是<code>\</code>是逃逸字串解讀。</p>
+<pre><code class="language-r">country<-read.delim('resources/country.txt',header=FALSE)
+names(country)<-"Name" 
+cname <-levels(country$Name)
+grep('\'', cname, value = TRUE)
+## character(0)
+</code></pre>
+<p>note:</p>
+<ul>
+<li>不是country.names<-"Name"</li>
+</ul>
+<p>問題:下面兩行有甚麼差別?</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">grep('\'', country$Name, value = TRUE)
+grep('\'', levels(country$Name), value = TRUE)
+
+</code></pre>
+<p>Hint: levels 傳回唯一值</p>
+<pre><code class="language-r">levels(factor(c("a","b","a")))
+## [1] "a" "b"
+factor(c("a","b","a"))
+## [1] a b a
+## Levels: a b
+</code></pre>
+</div>
+</div>
+<h4 id="練習">練習</h4>
+<p>產生3個檔案,檔案名稱含有cat</p>
+<pre><code class="language-r?preclass=.ms-5.w-75">file.create(c(&quot;xcat1.rmd&quot;, &quot;ycat2.txt&quot;, &quot;zcat3.rmd&quot;))
+</code></pre>
+<pre><code class="language-r?preclass=.ms-5.w-75">files&lt;-list.files(&quot;.&quot;)
+grep(&quot;cat&quot;, files, value = TRUE)
+grep(&quot;cat&quot;, files, value = FALSE)
+grepl(&quot;cat&quot;, files)
+</code></pre>
+<h3 id="regexpr-gregexpr">regexpr, gregexpr</h3>
+<p><code>regexpr</code> 函數的使用方式類似<code>grepl</code>。傳回整數向量(表示符合位置，如果找不到,則傳回-1),個數和比對字串串列相同。這個向量同時有屬性<code>match.length</code>(參考範例) .</p>
+<pre><code class="language-r">s&lt;-&quot;a.b.c.9&quot;
+regexpr('b',s )
+## [1] 3
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+regexpr('.',s ) # 要定位符號「.」,這是錯的,\.也錯
+## [1] 1
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+regexpr('\\.',s ) # 正確
+## [1] 2
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+regexpr('[.]',s ) # 正確 ,不需要regexpr('[\\.]',s )
+## [1] 2
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+regexpr('\\d',s ) # 正確
+## [1] 7
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+x&lt;-regexpr('[0-9]',s ) # 正確
+attr(x,&quot;match.length&quot;)
+## [1] 1
+</code></pre>
+<pre><code class="language-r">
+s&lt;-&quot;a.b.c.9 6 8&quot;
+x&lt;-regexpr('[0-9]',s ) 
+x
+## [1] 7
+## attr(,&quot;match.length&quot;)
+## [1] 1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+attr(x,&quot;match.length&quot;)
+## [1] 1
+</code></pre>
+<p><code>gregexpr()</code> 和 <code>regexpr()</code>一樣,不同的是會在目標字串中搜尋所有符合的位置而不是只找第一個(g:全局)。 因此傳回的結果個數雖然和查找的串列元素個數一樣,但是每個元素都是一個向量。如果都沒找到,只有一個-1。</p>
+<pre><code class="language-r">
+s&lt;-&quot;a.b.c.9 6 8&quot;
+ gregexpr('[0-9]',s ) 
+## [[1]]
+## [1]  7  9 11
+## attr(,&quot;match.length&quot;)
+## [1] 1 1 1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+</code></pre>
+<h3 id="數量修飾詞quantifiers">數量修飾詞Quantifiers</h3>
+<p>指定重複次數.</p>
+<ul>
+<li><code>*</code>: 至少0個。</li>
+<li><code>+</code>: 至少一個.</li>
+<li><code>?</code>: 最多一個.</li>
+<li><code>{n}</code>: 剛好n個.</li>
+<li><code>{n,}</code>: 至少n個.</li>
+<li><code>{n,m}</code>: 次數在 n 到 m 之間(包括n,m).</li>
+</ul>
+<pre><code class="language-r">(strings &lt;- c(&quot;a&quot;, &quot;ab&quot;, &quot;acb&quot;, &quot;accb&quot;, &quot;acccb&quot;, &quot;accccb&quot;))
+## [1] &quot;a&quot;      &quot;ab&quot;     &quot;acb&quot;    &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+grep(&quot;ac*b&quot;, strings, value = TRUE)
+## [1] &quot;ab&quot;     &quot;acb&quot;    &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+grep(&quot;ac+b&quot;, strings, value = TRUE)
+## [1] &quot;acb&quot;    &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+grep(&quot;ac?b&quot;, strings, value = TRUE)
+## [1] &quot;ab&quot;  &quot;acb&quot;
+grep(&quot;ac{2}b&quot;, strings, value = TRUE)
+## [1] &quot;accb&quot;
+grep(&quot;ac{2,}b&quot;, strings, value = TRUE)
+## [1] &quot;accb&quot;   &quot;acccb&quot;  &quot;accccb&quot;
+grep(&quot;ac{2,3}b&quot;, strings, value = TRUE)
+## [1] &quot;accb&quot;  &quot;acccb&quot;
+</code></pre>
+<div class="notices ms-5">
+<div class="info"><p>練習:Find all countries with <code>ee</code> in Gapminder using quantifiers.</p>
+<pre><code>## character(0)
+</code></pre>
+</div>
+</div>
+<h3 id="position-of-pattern-within-the-string">Position of pattern within the string</h3>
+<ul>
+<li><code>^</code>: 字串開頭.</li>
+<li><code>$</code>: 字串結尾.</li>
+<li><code>\b</code>: 左右都空白的 <em>word</em>.</li>
+<li><code>\B</code>: 左右不是空白 <em>word</em>.</li>
+</ul>
+<pre><code class="language-r">(strings &lt;- c(&quot;abcd&quot;, &quot;cdab&quot;, &quot;cabd&quot;, &quot;c abd&quot;))
+## [1] &quot;abcd&quot;  &quot;cdab&quot;  &quot;cabd&quot;  &quot;c abd&quot;
+grep(&quot;ab&quot;, strings, value = TRUE)
+## [1] &quot;abcd&quot;  &quot;cdab&quot;  &quot;cabd&quot;  &quot;c abd&quot;
+grep(&quot;^ab&quot;, strings, value = TRUE)
+## [1] &quot;abcd&quot;
+grep(&quot;ab$&quot;, strings, value = TRUE)
+## [1] &quot;cdab&quot;
+grep(&quot;\\bab&quot;, strings, value = TRUE)
+## [1] &quot;abcd&quot;  &quot;c abd&quot;
+</code></pre>
+<pre><code class="language-r">regexpr(&quot;\\bab&quot;, strings)
+## [1]  1 -1 -1  3
+## attr(,&quot;match.length&quot;)
+## [1]  2 -1 -1  2
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+</code></pre>
+<pre><code class="language-r">regexpr(&quot;\\Bab&quot;, strings)
+## [1] -1  3  2 -1
+## attr(,&quot;match.length&quot;)
+## [1] -1  2  2 -1
+## attr(,&quot;index.type&quot;)
+## [1] &quot;chars&quot;
+## attr(,&quot;useBytes&quot;)
+## [1] TRUE
+</code></pre>
+<h4 id="exercise">Exercise</h4>
+<p>Find all <code>.txt</code> files in the repository.</p>
+<pre><code class="language-md">```{r ex_pos, echo = FALSE}
+grep(&quot;\\.txt$&quot;, files, value = TRUE)
+grep(&quot;[.]txt$&quot;, files, value = TRUE)
+```
+</code></pre>
+<h3 id="operators">Operators</h3>
+<ul>
+<li><code>.</code>: 任意字元。</li>
+<li><code>[...]</code>: 例如,[ade] 3個字元其中一個。[a-e],a到e.</li>
+<li><code>[^...]</code>: 除了[]指定的字元，非[...]的意思。.</li>
+<li><code>\</code>: 抑制下列字元在字串,<code>&quot;&quot;</code>,中的特殊意思 <code>$ * + . ? [ ] ^ { } | ( ) \</code>, 只是在R中,因為<code>\</code>又有特殊意義 ,因此必須雙<code>\</code>例如 <code>\\$</code>。</li>
+<li><code>|</code>: 或.</li>
+<li><code>(...)</code>: 字元組,根據出現的順序,可以用 <code>\\N</code>識別( <strong>backreference</strong>).</li>
+</ul>
+<pre><code class="language-r">(strings &lt;- c(&quot;^ab&quot;, &quot;ab&quot;, &quot;abc&quot;, &quot;abd&quot;, &quot;abe&quot;, &quot;ab 12&quot;))
+## [1] &quot;^ab&quot;   &quot;ab&quot;    &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+grep(&quot;ab.&quot;, strings, value = TRUE) 
+## [1] &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+grep(&quot;ab[c-e]&quot;, strings, value = TRUE)
+## [1] &quot;abc&quot; &quot;abd&quot; &quot;abe&quot;
+grep(&quot;ab[^c]&quot;, strings, value = TRUE)
+## [1] &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+grep(&quot;^ab&quot;, strings, value = TRUE) 
+## [1] &quot;ab&quot;    &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 12&quot;
+grep(&quot;\\^ab&quot;, strings, value = TRUE) 
+## [1] &quot;^ab&quot;
+grep(&quot;abc|abd&quot;, strings, value = TRUE) 
+## [1] &quot;abc&quot; &quot;abd&quot;
+gsub(&quot;(ab) 12&quot;, &quot;\\1 34&quot;, strings) 
+## [1] &quot;^ab&quot;   &quot;ab&quot;    &quot;abc&quot;   &quot;abd&quot;   &quot;abe&quot;   &quot;ab 34&quot;
+</code></pre>
+<p>note: 
+要讓<code>.</code>(任意字元)失效，可以<code>[.]</code>或 <code>\\.</code> 表示。</p>
+<h4 id="excercise">Excercise</h4>
+<p>找出國名中間有字元<code>i</code> <code>t</code> 並且將<code>land</code>結尾的字串改為大寫。例如,Finland-&gt;FinLAND</p>
+<pre><code>## character(0)
+</code></pre>
+<h3 id="character-classes">Character classes</h3>
+<p>預設字元分類例如 numbers, letters, 分類。
+開頭<code>[:</code> 結尾 <code>:]</code> ，另一種簡寫方式為利用 <code>\</code> 。</p>
+<ul>
+<li><code>[:digit:]</code> or <code>\d</code>: 數字,等同  <code>[0-9]</code>.</li>
+<li><code>\D</code>: 非數字,等同  <code>[^0-9]</code>.</li>
+<li><code>[:lower:]</code>: 小寫,等同 <code>[a-z]</code>.</li>
+<li><code>[:upper:]</code>: 大寫,等同 <code>[A-Z]</code>.</li>
+<li><code>[:alpha:]</code>: 字母,等同 <code>[[:lower:][:upper:]]</code> or <code>[A-z]</code>.</li>
+<li><code>[:alnum:]</code>: 等同  <code>[[:alpha:][:digit:]]</code> 或 <code>[A-z0-9]</code>.</li>
+<li><code>\w</code>: word characters, equivalent to <code>[[:alnum:]_]</code> or <code>[A-z0-9_]</code>.</li>
+<li><code>\W</code>: not word, equivalent to <code>[^A-z0-9_]</code>.</li>
+<li><code>[:xdigit:]</code>: hexadecimal digits (base 16), 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f, equivalent to <code>[0-9A-Fa-f]</code>.</li>
+<li><code>[:blank:]</code>: blank characters, i.e. space and tab.</li>
+<li><code>[:space:]</code>: space characters: tab, newline, vertical tab, form feed, carriage return, space.</li>
+<li><code>\s</code>: space, <code> </code>.</li>
+<li><code>\S</code>: not space.</li>
+<li><code>[:punct:]</code>: punctuation characters, ! &quot; # $ % &amp; ' ( ) * + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ ` { | } ~.</li>
+<li><code>[:graph:]</code>: graphical (human readable) characters: equivalent to <code>[[:alnum:][:punct:]]</code>.</li>
+<li><code>[:print:]</code>: printable characters, equivalent to <code>[[:alnum:][:punct:]\\s]</code>.</li>
+<li><code>[:cntrl:]</code>: control characters, like <code>\n</code> or <code>\r</code>, <code>[\x00-\x1F\x7F]</code>.</li>
+</ul>
+<p>Note:</p>
+<ul>
+<li><code>[:...:]</code> 必須寫在中括號中, 例如 <code>[[:digit:]]</code>.</li>
+<li><code>\</code> 注意 <code>\\d</code>. 和 <code>\t</code>的區別。</li>
+</ul>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="/blogR/css/quicknote.css?1637107339" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637107339"></script>
+<div id="page-guide" class="bg-dark">  
+  
     
+          
+          <a href="/blogR/rlang/4_10_type_%E5%B8%B8%E8%A6%8B%E5%92%8C%E8%A4%87%E7%BF%92.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=4.10&#32;常用指令和複習>前</a>
+                   
+          
+            <a href="/blogR/rlang/4_12_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E7%B7%B4%E7%BF%92.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=4.12&#32;regular練習>後</a>            
+          
+          
 
-  <table class="compact" id="section-pages">
-    <thead><td style="width:12rem" class="text-end">最後修改日期</td><td>標題</td></thead>
-    <tbody>
-  <tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-09-16T13:12:07&#43;08:00">2021/09/16</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/hw_basic.html">assignment-1</a>
-     </td>
-  </tr><tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-09-16T13:12:20&#43;08:00">2021/09/16</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/hw_regexp.html">regexpr</a>
-     </td>
-  </tr><tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-10-25T14:49:32&#43;08:00">2021/10/25</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/hw_filesystem.html">檔案系統</a>
-     </td>
-  </tr><tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-09-16T13:12:03&#43;08:00">2021/09/16</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/dataset_class.html">資料集</a>
-     </td>
-  </tr>
-</tbody>
-</table>
-
+  
+<script src="/blogR/js/packhtml.js?1637107339"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
 </div>
-</div>
-<script>
-$(document).ready( function () {
-  $('#section-pages').DataTable({
-    paging: false,
-    autoWidth: false,
-    searching: false
-});
-} );
-</script>
-<style>
+  </div>
 
-.dataTables_wrapper{
-  margin: 0 auto;
-  width: 70%;
-}  
-
-</style>
 
   <script src="/blogR/js/featherlight.min.js?1637107339"></script>
   <script src="/blogR/js/featherlight.gallery.min.js?1637107339"></script>

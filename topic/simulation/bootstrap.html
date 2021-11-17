@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-  <title>練習用</title>  
+  <title>bootstrap</title>  
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,6 @@
     
     <link href="/blogR/css/fontawesome-all.min.css?1637107339" rel="stylesheet">
     
-    
     <link href="/blogR/css/theme-mine.css?1637107339" rel="stylesheet">
     
     <link href="/blogR/css/theme.css?1637107339" rel="stylesheet">
@@ -32,8 +31,23 @@
   <span >
     <a  href='/blogR/' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
     <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
-  </span><span ><span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改September 4, 2021'>練習用</span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#bootstrap-method-for-mixed-model">Bootstrap method for mixed-model</a></li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改November 16, 2021'>bootstrap</span>
         
     
 
@@ -53,8 +67,8 @@
 </div> 
 </div>
 
-<div id="content-wrapper">
-  <nav id="sidebar">
+
+<div id="content-wrapper"><nav id="sidebar">
   
     <ul class="nav flex-column topics" id="home-topics">
       
@@ -75,7 +89,7 @@
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
   <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
-  class="submenu collapse show" 
+  class="submenu collapse" 
   data-bs-parent="#home-topics">
 
     
@@ -233,17 +247,17 @@
 
  
 
-<li class="nav-item active" data-bs-toggle="tooltip" data-bs-placement="right" title="練習用">
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="練習用">
      
 
   <a class="nav-link" 
     href="/blogR/rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
-    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="true"> 
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
       <i class="fas fa-caret-up pairicon-open"></i>
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
   <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
-  class="submenu collapse show" 
+  class="submenu collapse" 
   data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074">
 
     
@@ -339,7 +353,7 @@
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
   <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
-  class="submenu collapse" 
+  class="submenu collapse show" 
   data-bs-parent="#home-topics">
 
     
@@ -364,7 +378,7 @@
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
   <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
-  class="submenu collapse" 
+  class="submenu collapse show" 
   data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817">
 
     
@@ -417,68 +431,85 @@
       最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-16 PM 11:21]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/bootstrap.html"> <i class="far fa-clock" ></i>bootstrap[2021-11-16 PM 09:17]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html"> <i class="far fa-clock" ></i>4.11 正規表達語法[2021-11-16 PM 09:17]</a></li></ul>
     </section>
   
-</nav>
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <h2 id="bootstrap-method-for-mixed-model">Bootstrap method for mixed-model</h2>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">data.table</a></li>
+</ul>
+<p><a href="https://www.r-bloggers.com/2016/09/linear-mixed-effects-model-with-bootstrapping/">來源</a></p>
+<pre><code class="language-r?preclass=.ms-5.w-75">b.coef &lt;- list()
+for (i in 1:1000){  # 1:1000 = 執行1000次
+  # 隨機取樣
+  boot.data &lt;-
+    dataset[, .SD[sample(.N, min(.N,200), replace = FALSE)],
+            by = list(ZONE8, Year)] #.SD 是根據by分組而來的sub data,然後在這個子集中,重複抽樣
+  
+  # 用boot.data來跑GLMM
+  boot.logit &lt;-
+    glmer(Count.F ~ Year.s + (0 + Year.s|ZONE8),
+          data = boot.data,
+          family = poisson)
+  
+  # 輸出斜率與截距，輸出到 b.coef 裡面
+  b.coef[[i]] &lt;- fixef(boot.logit)
+}
+b.coef &lt;- do.call(rbind, b.coef) %&gt;% data.table
+</code></pre>
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
 
-<div class="container" id="body-inner">
-  <p class="text-center h2">
-    Rlang
-  </p>
+    </div>
+</div>
+
+<link href="/blogR/css/quicknote.css?1637107339" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637107339"></script>
+<div id="page-guide" class="bg-dark">  
+  
     
+          
+          <a href="/blogR/topic/simulation/4_02_sim.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=4.2&#32;模擬基本&#32;2>前</a>
+                   
+          
+            <a href="/blogR/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=MC_基本>後</a>            
+          
+          
 
-  <table class="compact" id="section-pages">
-    <thead><td style="width:12rem" class="text-end">最後修改日期</td><td>標題</td></thead>
-    <tbody>
-  <tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-09-16T13:12:07&#43;08:00">2021/09/16</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/hw_basic.html">assignment-1</a>
-     </td>
-  </tr><tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-09-16T13:12:20&#43;08:00">2021/09/16</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/hw_regexp.html">regexpr</a>
-     </td>
-  </tr><tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-10-25T14:49:32&#43;08:00">2021/10/25</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/hw_filesystem.html">檔案系統</a>
-     </td>
-  </tr><tr>
-      <td class="text-end">
-        <time class="post-date" datetime="2021-09-16T13:12:03&#43;08:00">2021/09/16</time>
-      </td>
-    <td>
-        <a class="text-body" href="/blogR/rlang/hw/dataset_class.html">資料集</a>
-     </td>
-  </tr>
-</tbody>
-</table>
-
+  
+<script src="/blogR/js/packhtml.js?1637107339"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
 </div>
-</div>
-<script>
-$(document).ready( function () {
-  $('#section-pages').DataTable({
-    paging: false,
-    autoWidth: false,
-    searching: false
-});
-} );
-</script>
-<style>
+  </div>
 
-.dataTables_wrapper{
-  margin: 0 auto;
-  width: 70%;
-}  
-
-</style>
 
   <script src="/blogR/js/featherlight.min.js?1637107339"></script>
   <script src="/blogR/js/featherlight.gallery.min.js?1637107339"></script>
