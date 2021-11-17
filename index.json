@@ -206,7 +206,7 @@
 {"uri": "https://airbone4.github.io/blogR/topic/simulation/sinytest.html","title": "sinytest",
 	"tags": [],
 	"description": "sinytest",
-	"content": "...\r..."},
+	"content": "host app\n...\r...\r❌只能在互動模式跑\nlibrary(shiny)\rrunGitHub( \u0026quot;shinyapp\u0026quot;, \u0026quot;airbone5\u0026quot;,subdir=\u0026quot;random\u0026quot;,ref=\u0026quot;main\u0026quot;)\r"},
 {"uri": "https://airbone4.github.io/blogR/topic/simulation/central.html","title": "中央",
 	"tags": [],
 	"description": "包括中央極限",
