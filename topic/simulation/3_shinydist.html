@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-  <title>5 rmd topic 1</title>  
+  <title>3. shinyDist</title>  
       
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,19 +38,13 @@
     <div class="wrapper">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#討論">討論</a>
+    <li><a href="#random">random</a>
       <ul>
-        <li><a href="#publish-to-github">publish to github</a></li>
-        <li><a href="#在chunk中顯示rmd語法">在chunk中，顯示RMD語法</a></li>
-        <li><a href="#有意思的程式片段">有意思的程式片段</a></li>
+        <li><a href="#demo">demo</a></li>
+        <li><a href="#source">source</a></li>
       </ul>
     </li>
-    <li><a href="#emoji">emoji</a></li>
-    <li><a href="#html">html</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#heading"></a></li>
   </ul>
 </nav>
     </div>
@@ -59,7 +53,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 20, 2021'>5 rmd topic 1</span>
+      title='最後修改November 18, 2021'>3. shinyDist</span>
         
     
 
@@ -390,7 +384,7 @@
       <i class="fas fa-caret-down pairicon-close"></i>
     </span>
   <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
-  class="submenu collapse" 
+  class="submenu collapse show" 
   data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817">
 
     
@@ -406,8 +400,8 @@
    
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1.1 亂數函數練習</a></li>
      
-   
-        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/3_shinydist.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3. shinyDist</a></li>
+    
+        <li class="nav-item active"><a class="nav-link" href="/blogR/topic/simulation/3_shinydist.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3. shinyDist</a></li>
      
    
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1 模擬基本 1</a></li>
@@ -450,150 +444,130 @@
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
-    <ul>
-<li>我真的用到的參考</li>
-<li><a href="https://stackoverflow.com/questions/30237310/setting-work-directory-in-knitr-using-opts-chunksetroot-dir-doesnt-wor">參考root.dir</a></li>
-<li><a href="http://www.randigriffin.com/2017/04/25/how-to-knit-for-mysite.html">另一個</a></li>
-</ul>
-<h2 id="討論">討論</h2>
-<ul>
-<li>
-<p><a href="https://cran.r-project.org/web/packages/knitr/vignettes/knit_print.html">customize output ✔</a></p>
-</li>
-<li>
-<p><a href="https://slides.yihui.org/2019-rstudio-conf-rmarkdown-workshop.htm#15">rmd debug</a></p>
-</li>
-<li>
-<p><a href="https://github.com/lmmx/devnotes/wiki/Rmarkdown-custom-knit-hook-to-compile-a-multi-part-document">hook</a></p>
-</li>
-<li>
-<p><a href="https://rmarkdown.rstudio.com/articles_verbatim2.html">Verbatim Chunks in R Markdow</a></p>
-</li>
-<li>
-<p><a href="https://github.com/rstudio/rmarkdown-book/blob/master/16-widgets.Rmd">HTML widgets</a></p>
-</li>
-<li>
-<p><a href="https://rmarkdown.rstudio.com/r_notebook_format.html">R Notebook HTML FOrmat</a></p>
-</li>
-<li>
-<p><a href="http://brooksandrew.github.io/simpleblog/articles/render-reports-directly-from-R-scripts/">Render option</a></p>
-</li>
-<li>
-<p><a href="https://selbydavid.com/2017/06/18/rmarkdown-alerts/">hook example</a></p>
-</li>
-<li>
-<p><a href="https://gist.github.com/yihui/2629886">more</a></p>
-</li>
-<li>
-<p><a href="https://stackoverflow.com/questions/31645528/knit-dtdatatable-without-pandoc">render example</a></p>
-</li>
-<li>
-<p><a href="https://github.com/yihui/knitr-book">dynamic book</a></p>
-</li>
-<li>
-<p><a href="https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/">TOC 問題</a></p>
-</li>
-</ul>
-<h3 id="publish-to-github">publish to github</h3>
-<p><a href="http://jmcglone.com/guides/github-pages/">tutorial</a></p>
-<h3 id="在chunk中顯示rmd語法">在chunk中，顯示RMD語法</h3>
-<h4 id="讓inline-code-不作用">讓inline code 不作用</h4>
-<p>inline 讓內籤R程式碼不作用:方法是兩邊打上&quot;``空白&quot;。例如:</p>
-<div class="notices ms-5">
-<div class="tip"><pre><code class="language-r?lang=r?class=.warning.source?preclass=ms-5.w-75">inline("dd")
-===>  `` `r dd` ``
-</code></pre>
-</div>
-</div>
-<p><strong>測試</strong>
-執行下面的程式,無法阻止hugo shortcode,但是仍然會列表</p>
-<pre><code class="language-md">```{r,  comment = &quot;&quot;,result=&quot;asis&quot;}
-cat(readr::read_file(&quot;rmd_topic_1.Rmd&quot;))
-# 我想要前後加上```,但是顯示的結果不換行
-# txt&lt;-readr::read_file(&quot;rmd_topic_1.Rmd&quot;)
-# cat(paste0(c(&quot;```rmd&quot;,txt,&quot;```&quot;,collapse=&quot;\n&quot;)))
-
-```
-</code></pre>
-<p>留著測試</p>
-<hr>
-<h3 id="有意思的程式片段">有意思的程式片段</h3>
-<h4 id="只編譯一個rmd文件">只編譯一個RMD文件</h4>
-<p>使用套件中的內部函數,為<code>:::</code>,例如 <code>blogdown:::build_rmds()</code>。
-所以如果要編譯單一的RMD文件,可以
-<code>blogdown:::build_rmds('content/foo.Rmd')</code>
-產生 content/foo.html 以後,如果我們已經啟動 <code>blogdown::serve_site()</code>,則會自動更新網站，否則可以手動 <code>blogdown::hugo_build()</code>。</p>
-<h4 id="兩個rmd變成一個">😄兩個RMD變成一個</h4>
+    <h2 id="random">random</h2>
+<h3 id="demo">demo</h3>
+<iframe   src="https://rmilab.nkust.edu.tw/randomshow" style='height: 100%; width: 100%;' frameborder="0" scrolling="no">...</iframe>
+<h3 id="source">source</h3>
 <pre><code class="language-r">
-Rmd_bind &lt;- 
-    function(dir = &quot;.&quot;,
-    book_header = readLines(textConnection(&quot;---\ntitle: 'Title'\n---&quot;)))
-{
-    old &lt;- setwd(dir)
-    if(length(grep(&quot;book.Rmd&quot;, list.files())) &gt; 0){
-    warning(&quot;book.Rmd already exists&quot;)
-    }
-    write(book_header, file = &quot;book.Rmd&quot;, )
-    cfiles &lt;- list.files(pattern = &quot;*.Rmd&quot;, )
-    ttext &lt;- NULL
-    for(i in 1:length(cfiles)){
-    text &lt;- readLines(cfiles[i])
-    hspan &lt;- grep(&quot;---&quot;, text)
-    text &lt;- text[-c(hspan[1]:hspan[2])]
-    write(text, sep = &quot;\n&quot;, file = &quot;book.Rmd&quot;, append = T)
-    }
-    render(&quot;book.Rmd&quot;, output_format = &quot;pdf_document&quot;)
-    setwd(old)
-    }
-    
-</code></pre>
-<h4 id="有助了解rmd-的相關函數">有助了解rmd 的相關函數</h4>
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/knitr/vignettes/knit_print.html">knit_print</a></li>
-</ul>
-<h2 id="emoji">emoji</h2>
-<p>檔案<code>config.toml</code> 中:</p>
-<div class="notices ms-5">
-<div class="tip"><code>enableEmoji = true</code></div>
-</div>
-😄  
-<p>🔑 google emoji cheat sheet</p>
-<h2 id="html">html</h2>
-<p><a href="https://bookdown.org/yihui/rmarkdown-cookbook/raw-content.html">ref</a></p>
-<pre><code class="language-md">```{=html}
-&lt;p&gt;Any &lt;strong&gt;raw&lt;/strong&gt; HTML content works here.
-For example, here is a Youtube video:&lt;/p&gt;
 
-&lt;iframe width=&quot;100%&quot; height=&quot;400&quot;
-  src=&quot;https://www.youtube.com/embed/s3JldKoA0zw?rel=0&quot;
-  frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot;
-  allowfullscreen&gt;&lt;/iframe&gt;
-```  
-</code></pre>
-<p>$$
-\Sigma
-$$</p>
-<h4 id="javascript">javascript</h4>
-<ul>
-<li><a href="https://www.aliciaschep.com/blog/js-rmarkdown/">Making a javascript chunk</a></li>
-<li><a href="https://bookdown.org/yihui/rmarkdown/language-engines.html#javascript-and-css">ref</a></li>
-</ul>
-<pre><code class="language-js?lang=js?class=.source?preclass=ms-5.w-75">$('.title').css('color', 'red')
-</code></pre>
-<script type="text/javascript">
-$('.title').css('color', 'red')
-</script>
-<pre><code class="language-js?lang=js?class=.source?preclass=ms-5.w-75">Math.PI
-</code></pre>
-<script type="text/javascript">
-Math.PI
-</script>
-<h4 id="css-範例">css 範例</h4>
-<style type="text/css">
-body {
-  color: red;
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+  
+  # Application title
+  titlePanel(&quot;常態分配亂數&quot;),
+  fluidRow( # 第一行,兩個column各佔3個格子
+    column(3, 
+           sliderInput(&quot;bins&quot;,
+                       &quot;Number of bins:&quot;,
+                       min = 1,
+                       max = 50,
+                       value = 30)
+    ),
+    column(3, 
+           numericInput(&quot;num&quot;, 
+                        &quot;亂數個數&quot;, 
+                        value = 1000))         
+    
+  ),
+  fluidRow( # 第一行,分配用
+    selectInput(&quot;distType&quot;, &quot;分配&quot;,
+                c(normal = &quot;rnorm&quot;, t = &quot;rt&quot;,unif=&quot;runif&quot;) # 參數名稱,參數標題,選項 
+    ),
+    conditionalPanel(
+      condition = &quot;input.distType == 'rnorm'&quot;,
+      numericInput(&quot;mean&quot;,&quot;平均&quot;, value = 0),
+      numericInput(&quot;std&quot;,&quot;標準差&quot;, value = 1)
+      
+    ),
+    conditionalPanel(
+      condition = &quot;input.distType == 'rt'&quot;,
+      numericInput(&quot;degree&quot;,&quot;自由度&quot;, value = 10),
+    ),
+    conditionalPanel(
+      condition = &quot;input.distType == 'runif'&quot;,
+      numericInput(&quot;min&quot;,&quot;最小&quot;, value = 0),
+      numericInput(&quot;max&quot;,&quot;最大&quot;, value = 1)
+    )
+    
+    
+  ),
+  fluidRow(column(12,plotOutput(&quot;distPlot&quot;)))
+)    
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+  
+  output$distPlot &lt;- renderPlot({
+    # generate bins based on input$bins from ui.R
+    num&lt;-input$num
+    switch(input$distType,
+           &quot;rnorm&quot;={x&lt;-rnorm(num,input$mean,input$std)  },
+           &quot;rt&quot;={x&lt;-rt(num,input$degree)},
+           &quot;runif&quot;={x&lt;-runif(num,input$min,input$max)}
+    )
+
+    bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)
+    
+    # draw the histogram with the specified number of bins
+    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+  })
 }
-</style>
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
+</code></pre>
+<h2 id="heading"></h2>
+<iframe   src="https://rmilab.nkust.edu.tw/conditionalpanel" style='height: 100%; width: 100%;' frameborder="0" scrolling="no">...</iframe>
+<pre><code class="language-r">## Only run this example in interactive R sessions
+library(shiny)
+  ui &lt;- fluidPage(
+    sidebarPanel(
+      selectInput(&quot;plotType&quot;, &quot;Plot Type&quot;,
+                  c(Scatter = &quot;scatter&quot;, Histogram = &quot;hist&quot;) # 參數名稱,參數標題,選項 
+      ),
+      # Only show this panel if the plot type is a histogram
+      conditionalPanel(
+        condition = &quot;input.plotType == 'hist'&quot;,
+        selectInput(
+          &quot;breaks&quot;, &quot;Breaks&quot;,
+          c(&quot;Sturges&quot;, &quot;Scott&quot;, &quot;Freedman-Diaconis&quot;, &quot;[Custom]&quot; = &quot;custom&quot;)
+        ),
+        # Only show this panel if Custom is selected
+        conditionalPanel(
+          condition = &quot;input.breaks == 'custom'&quot;,
+          sliderInput(&quot;breakCount&quot;, &quot;Break Count&quot;, min = 1, max = 50, value = 10)
+        )
+      )
+    ),
+    mainPanel(
+      plotOutput(&quot;plot&quot;)
+    )
+  )
+  
+  server &lt;- function(input, output) {
+    x &lt;- rnorm(100)
+    y &lt;- rnorm(100)
+    
+    output$plot &lt;- renderPlot({
+      if (input$plotType == &quot;scatter&quot;) {
+        plot(x, y)
+      } else {
+        breaks &lt;- input$breaks
+        if (breaks == &quot;custom&quot;) {
+          breaks &lt;- input$breakCount
+        }
+        
+        hist(x, breaks = breaks)
+      }
+    })
+  }
+  
+  shinyApp(ui, server)
+ 
+</code></pre>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -627,11 +601,15 @@ body {
   
     
           
-          <a href="/blogR/topic/rmd/21_roxygen.html" 
+          <a href="/blogR/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=21_roxygen>前</a>
+                   data-bs-placement="left" title=2.1.1&#32;亂數函數練習>前</a>
                    
+          
+            <a href="/blogR/topic/simulation/4_01_sim.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=4.1&#32;模擬基本&#32;1>後</a>            
           
           
 

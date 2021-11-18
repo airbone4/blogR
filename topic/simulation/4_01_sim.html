@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1637155877" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1637155877"></script>
+    <link href="/blogR/css/syntax.css?1637212587" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1637212587"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1637155877" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1637212587" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1637155877" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1637212587" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1637155877" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1637212587" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -440,10 +440,16 @@
   
    
    
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/navarpage.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. navarPage</a></li>
+     
+   
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1 隨機變數</a></li>
      
    
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1.1 亂數函數練習</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/3_shinydist.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3. shinyDist</a></li>
      
     
         <li class="nav-item active"><a class="nav-link" href="/blogR/topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1 模擬基本 1</a></li>
@@ -482,7 +488,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-17 PM 09:31]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/bootstrap.html"> <i class="far fa-clock" ></i>bootstrap[2021-11-16 PM 09:17]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html"> <i class="far fa-clock" ></i>4.11 正規表達語法[2021-11-16 PM 09:17]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/3_shinydist.html"> <i class="far fa-clock" ></i>3. shinyDist[2021-11-18 PM 01:15]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/navarpage.html"> <i class="far fa-clock" ></i>2. navarPage[2021-11-18 PM 01:06]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-18 AM 11:49]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -598,7 +604,7 @@ t.test(day1, day2, var.equal=TRUE, paired=TRUE)
 跑ANOVA利用的函數是<code>aov()</code>。這個函數需要資料整理成long-format的型態(在R中,使用data farme)
 )</p>
 <!--html_preserve--><div class="message d-none ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n671943582"></button><div  id="n671943582" class="collapse" style="overflow-x:visible"><!--/html_preserve-->🎶Experimental designs involve manipulations and measurements. The manipulations are described by independent variables, and the measurements refer to dependent variables. Every independent variable has at least two levels, and possibly many more. In balanced designs there is one measurement (DV) for each of the levels of the independent variables. Thus, in order to represent the results of an experiment, it is necessary to organize the data so that the measurement for each level of each independent variable can be identified. Data is typically organized either in wide or long-format.
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n469287135"></button><div  id="n469287135" class="collapse" style="overflow-x:visible"><!--/html_preserve-->🎶Experimental designs involve manipulations and measurements. The manipulations are described by independent variables, and the measurements refer to dependent variables. Every independent variable has at least two levels, and possibly many more. In balanced designs there is one measurement (DV) for each of the levels of the independent variables. Thus, in order to represent the results of an experiment, it is necessary to organize the data so that the measurement for each level of each independent variable can be identified. Data is typically organized either in wide or long-format.
 實驗設計包含處理和測量(manipulations and measurements)。處理就是IV,測量就是DV。每個IV可能至少有2個到多個level。在balanced designs 中,IV中的每個LEVEL有一個測量(DV)。
 配合上述的實驗結果,資料紀錄的方式有寬(wide)和長(long)兩種格式。<!--html_preserve--></div></div><!--/html_preserve-->
 <p>寬資料
@@ -820,7 +826,7 @@ Subjects&lt;-factor(Subjects) #<!--html_preserve--><span  data-bs-toggle="toolti
 AllData #
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n139576824"></button><div  id="n139576824" class="collapse" style="overflow-x:visible"><!--/html_preserve--><!--html_preserve--><div   class="table-responsive kable">
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n432685179"></button><div  id="n432685179" class="collapse" style="overflow-x:visible"><!--/html_preserve--><!--html_preserve--><div   class="table-responsive kable">
 <table  class="">
 <thead  class="">
 <tr >
@@ -1171,7 +1177,7 @@ model.tables(ANOVAresults,&quot;means&quot;)
 </li>
 </ol>
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n832415796"></button>全部程式碼<div  id="n832415796" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">day1&lt;-rnorm(20, mean = 20, sd = 5)
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n351762489"></button>全部程式碼<div  id="n351762489" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">day1&lt;-rnorm(20, mean = 20, sd = 5)
 day2&lt;-rnorm(20, mean = 30, sd = 5)
 day3&lt;-rnorm(20, mean = 40, sd = 5)
 day1[day1&lt;0]&lt;-0
@@ -2019,16 +2025,16 @@ model.tables(ANOVAresults,&quot;means&quot;)
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1637155877" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1637155877"></script>
+<link href="/blogR/css/quicknote.css?1637212587" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637212587"></script>
 <div id="page-guide" class="bg-dark">  
   
     
           
-          <a href="/blogR/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" 
+          <a href="/blogR/topic/simulation/3_shinydist.html" 
                    class="btn btn-primary" 
                    data-bs-toggle="tooltip" 
-                   data-bs-placement="left" title=2.1.1&#32;亂數函數練習>前</a>
+                   data-bs-placement="left" title=3.&#32;shinyDist>前</a>
                    
           
             <a href="/blogR/topic/simulation/4_02_sim.html" 
@@ -2038,7 +2044,7 @@ model.tables(ANOVAresults,&quot;means&quot;)
           
 
   
-<script src="/blogR/js/packhtml.js?1637155877"></script>    
+<script src="/blogR/js/packhtml.js?1637212587"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -2048,24 +2054,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1637155877"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1637155877"></script>
-  <link href="/blogR/css/featherlight.min.css?1637155877" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1637155877" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1637212587"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1637212587"></script>
+  <link href="/blogR/css/featherlight.min.css?1637212587" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1637212587" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1637155877"></script>
-  <link href="/blogR/css/rmd.css?1637155877" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1637155877" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1637155877'></script>
+  <script src="/blogR/js/hugohelper.js?1637212587"></script>
+  <link href="/blogR/css/rmd.css?1637212587" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1637212587" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1637212587'></script>
 
 <script>
   
    let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1637155877'></script>
+<script src='/blogR/js/localsearch.js?1637212587'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

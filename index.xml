@@ -270,6 +270,15 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
     </item>
     
     <item>
+      <title>2. navarPage</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/navarpage.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/navarpage.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>2.0 基本輸出輸入</title>
       <link>https://airbone4.github.io/blogR/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -356,6 +365,15 @@ library(&amp;quot;AER&amp;quot;)#&amp;gt; 載入需要的套件：car#&amp;gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://airbone4.github.io/blogR/rlang/3_quickview1.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3. shinyDist</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/3_shinydist.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/3_shinydist.html</guid>
       <description></description>
     </item>
     
