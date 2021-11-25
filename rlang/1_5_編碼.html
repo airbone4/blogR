@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1637212587" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1637212587"></script>
+    <link href="/blogR/css/syntax.css?1637817303" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1637817303"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1637817303" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1637817303" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1637817303" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -392,6 +392,9 @@
   
    
    
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/01_shiny_basic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">01_shiny_basic</a></li>
+     
+   
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/navarpage.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. navarPage</a></li>
      
    
@@ -440,7 +443,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/3_shinydist.html"> <i class="far fa-clock" ></i>3. shinyDist[2021-11-18 PM 01:15]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/navarpage.html"> <i class="far fa-clock" ></i>2. navarPage[2021-11-18 PM 01:06]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-18 AM 11:49]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-25 PM 01:14]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html"> <i class="far fa-clock" ></i>01_shiny_basic[2021-11-21 PM 10:35]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_1_function.html"> <i class="far fa-clock" ></i>7.1 R 函數的基本撰寫[2021-11-21 PM 02:45]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -546,7 +549,7 @@ data <- iconv(data, "big5", "utf8") # 將資料轉成 UTF-8
 <li><code>Sys.getlocale(category = &quot;LC_ALL&quot;)</code>，
 <ul>
 <li><!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n235697148"></button>我的系統上顯示的是<div  id="n235697148" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">Sys.getlocale()
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n687145932"></button>我的系統上顯示的是<div  id="n687145932" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">Sys.getlocale()
 
 # &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
 # 😒有些系統是用/分隔，例如
@@ -569,7 +572,7 @@ data <- iconv(data, "big5", "utf8") # 將資料轉成 UTF-8
 <li>或<code>Sys.setlocale(&quot;LC_ALL&quot;,&quot;cht&quot;)</code>
 <ul>
 <li><!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n317648295"></button>執行結果<div  id="n317648295" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>😒設定的結果,就是預設的安裝環境,如下所示</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n187645293"></button>執行結果<div  id="n187645293" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>😒設定的結果,就是預設的安裝環境,如下所示</p>
 <pre><code class="language-r">Sys.setlocale(category = &quot;LC_ALL&quot;, locale = &quot;cht&quot;) # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏 等同於Sys.setlocale(&amp;amp;quot;LC_ALL&amp;amp;quot;,&amp;amp;quot;Chinese (Traditional)_Taiwan.950&amp;amp;quot;)&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
 #&gt; [1] &quot;LC_COLLATE=Chinese (Traditional)_Taiwan.950;LC_CTYPE=Chinese (Traditional)_Taiwan.950;LC_MONETARY=Chinese (Traditional)_Taiwan.950;LC_NUMERIC=C;LC_TIME=Chinese (Traditional)_Taiwan.950&quot;
 </code></pre>
@@ -681,7 +684,7 @@ knitr::kable(df)
 <h2 id="輔助">輔助</h2>
 <pre><code class="language-r?lang=r?class=.source">hugocmd(&quot;expand&quot; ,'title=&quot;&quot; incode=true')
 #&gt; <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n971256348"></button><div  id="n971256348" class="collapse" style="overflow-x:visbile"><!--/html_preserve-->iconvlist()
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n234178659"></button><div  id="n234178659" class="collapse" style="overflow-x:visbile"><!--/html_preserve-->iconvlist()
 #&gt;   [1] &#34;437&#34;                     &#34;850&#34;                    
 #&gt;   [3] &#34;852&#34;                     &#34;855&#34;                    
 #&gt;   [5] &#34;857&#34;                     &#34;860&#34;                    
@@ -948,8 +951,8 @@ details(y)
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1637212587" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1637212587"></script>
+<link href="/blogR/css/quicknote.css?1637817303" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637817303"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -967,7 +970,7 @@ details(y)
           
 
   
-<script src="/blogR/js/packhtml.js?1637212587"></script>    
+<script src="/blogR/js/packhtml.js?1637817303"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -977,24 +980,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1637212587"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1637212587"></script>
-  <link href="/blogR/css/featherlight.min.css?1637212587" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1637212587" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1637817303"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1637817303"></script>
+  <link href="/blogR/css/featherlight.min.css?1637817303" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1637817303" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1637212587"></script>
-  <link href="/blogR/css/rmd.css?1637212587" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1637212587" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1637212587'></script>
+  <script src="/blogR/js/hugohelper.js?1637817303"></script>
+  <link href="/blogR/css/rmd.css?1637817303" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1637817303" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1637817303'></script>
 
 <script>
   
    let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1637212587'></script>
+<script src='/blogR/js/localsearch.js?1637817303'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1637212587" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1637212587"></script>
+    <link href="/blogR/css/syntax.css?1637817303" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1637817303"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1637817303" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1637817303" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1637817303" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -42,10 +42,10 @@
     <li><a href="#demo">demo</a>
       <ul>
         <li><a href="#02_textr">02_text.R</a></li>
+        <li><a href="#03_reactivity">03_reactivity</a></li>
       </ul>
     </li>
     <li><a href="#小結">小結</a></li>
-    <li><a href="#03_reactivity">03_reactivity</a></li>
   </ul>
 </nav>
     </div>
@@ -54,7 +54,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改November 18, 2021'>sinytest</span>
+      title='最後修改November 25, 2021'>sinytest</span>
         
     
 
@@ -393,6 +393,9 @@
   
    
    
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/01_shiny_basic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">01_shiny_basic</a></li>
+     
+   
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/navarpage.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. navarPage</a></li>
      
    
@@ -441,14 +444,46 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/3_shinydist.html"> <i class="far fa-clock" ></i>3. shinyDist[2021-11-18 PM 01:15]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/navarpage.html"> <i class="far fa-clock" ></i>2. navarPage[2021-11-18 PM 01:06]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-18 AM 11:49]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-25 PM 01:14]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html"> <i class="far fa-clock" ></i>01_shiny_basic[2021-11-21 PM 10:35]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_1_function.html"> <i class="far fa-clock" ></i>7.1 R 函數的基本撰寫[2021-11-21 PM 02:45]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
     <h2 id="參考">參考</h2>
+<div class="row">
+    <div class="col-5 galleryimgs" ><a class="gallery-5d87e5ff8e569d73b19855b0eb400c42 p0" href="sinytest.files/cheatPage1.png"><img class="galleryimg" src="sinytest.files/cheatPage1.png"/>more</a></div>
+    <div class="col-5 galleryimgs" ><a class="gallery-5d87e5ff8e569d73b19855b0eb400c42 p0" style="display:none" href="sinytest.files/cheatPage2.png"><img class="galleryimg" src="sinytest.files/cheatPage2.png"/></a></div>
+</div>
+<style>
+    div.galleryimgs+a{
+        display:block;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        $('.gallery-5d87e5ff8e569d73b19855b0eb400c42').featherlightGallery({
+					gallery: {
+						next: '<<',
+						previous: '>>'
+					}
+					
+				});
+    });
+</script>        
+
+ 
 <ul>
 <li><a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson7/">host app</a></li>
 <li><a href="https://www.r-bloggers.com/2021/06/shiny-apps-with-docker-compose-part-1-development/">shiny server+ caddy</a></li>
+<li><a href="https://yjtseng.info/shinybook/server">reactive</a></li>
+<li><a href="https://shiny.rstudio.com/tutorial/">基本範例官方</a></li>
+<li><a href="https://rstudio.github.io/shiny/tutorial/#reactivity-overview">💡</a></li>
+<li><a href="https://shiny.rstudio.com/articles/html-ui.html">自建UI</a>
+<ul>
+<li><a href="https://deanattali.com/shinyjs/advanced">配合sinyJs</a></li>
+</ul>
+</li>
+<li><a href="https://stackoverflow.com/questions/33662033/shiny-how-to-make-reactive-value-initialize-with-default-value">💡</a></li>
 </ul>
 <ol>
 <li>從github上跑shiny，
@@ -461,7 +496,7 @@ runGitHub( &quot;shinyapp&quot;, &quot;airbone5&quot;,subdir=&quot;random&quot;,
 <pre><code class="language-html">&lt;iframe   src=&quot;我們的URL&quot; style='height: 100%; width: 100%;' frameborder=&quot;0&quot; scrolling=&quot;no&quot; &gt;&lt;/iframe&gt;
 </code></pre>
 <p>例如</p>
- <iframe   src="https://rmilab.nkust.edu.tw/random/" style='height: 400px; width: 100%;' frameborder="1" scrolling="yes" id="iframe"></iframe>
+ <iframe   src="https://rmilab.nkust.edu.tw/shiny/tutorial/random/" style='height: 400px; width: 100%;' frameborder="1" scrolling="yes" id="iframe"></iframe>
 </li>
 </ol>
 <h2 id="demo">demo</h2>
@@ -607,19 +642,7 @@ server &lt;- function(input, output) {
 # Create Shiny app ----
 shinyApp(ui = ui, server = server)
 </code></pre>
-<h2 id="小結">小結</h2>
-<ol>
-<li>輸出</li>
-</ol>
-<ul>
-<li>UI &lt;-&gt; server</li>
-<li><code>verbatimTextOutput(id)</code> &lt;-&gt; <code>output$id&lt;-renderPrint()</code></li>
-<li><code>textOutput(id)</code> &lt;-&gt;<code>output$id&lt;-renderText()</code> #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="renderText只把函數內最後一個表達式的值轉成字元串進行輸出，如果不能轉就出錯&lt;br/&gt;
-renderPrint把函數內所有語句的輸出捕獲成一個字元串返回">🏷</span><!--/html_preserve--></li>
-<li><code>tableOutput(id)</code> &lt;-&gt;<code>output$id&lt;-renderTable()</code></li>
-<li><code>plotOutput(id)</code> &lt;-&gt;<code>output$id&lt;-plot()</code></li>
-</ul>
-<h2 id="03_reactivity">03_reactivity</h2>
+<h3 id="03_reactivity">03_reactivity</h3>
 <pre><code class="language-r">#printshiny(&quot;03_reactivity&quot;) 
 library(shiny)
 
@@ -680,7 +703,7 @@ server &lt;- function(input, output) {
   # 1. It is only called when the inputs it depends on changes
   # 2. The computation and result are shared by all the callers,
   #    i.e. it only executes a single time
-  datasetInput &lt;- reactive({
+  datasetInput &lt;- reactive({ #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏只有改變的時候,才會執行,其他參數改變不會導致這裡執行">🏷</span><!--/html_preserve-->
     switch(input$dataset,
            &quot;rock&quot; = rock,
            &quot;pressure&quot; = pressure,
@@ -725,6 +748,23 @@ server &lt;- function(input, output) {
 shinyApp(ui, server)
 
 </code></pre>
+<h2 id="小結">小結</h2>
+<ol>
+<li>輸出</li>
+</ol>
+<ul>
+<li>UI &lt;-&gt; server</li>
+<li><code>verbatimTextOutput(id)</code> &lt;-&gt; <code>output$id&lt;-renderPrint()</code></li>
+<li><code>textOutput(id)</code> &lt;-&gt;<code>output$id&lt;-renderText()</code> #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="renderText只把函數內最後一個表達式的值轉成字元串進行輸出，如果不能轉就出錯&lt;br/&gt; renderPrint把函數內所有語句的輸出捕獲成一個字元串返回">🏷</span><!--/html_preserve--></li>
+<li><code>tableOutput(id)</code> &lt;-&gt;<code>output$id&lt;-renderTable()</code></li>
+<li><code>plotOutput(id)</code> &lt;-&gt;<code>output$id&lt;-plot()</code></li>
+<li>?? &lt;-&gt; <code>output$id&lt;-renderUI()</code> #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏和HTML輸出也可以加入js,style">🏷</span><!--/html_preserve--></li>
+<li><code>actionButton(id)</code> &lt;-&gt; <code>observeEvent(id,{})</code>
+<ul>
+<li>在server的流程中,<code>observeEvent()</code>會停下來等待這個事件,後面的程式碼不會執行(除了第一次)。</li>
+</ul>
+</li>
+</ul>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -752,8 +792,8 @@ shinyApp(ui, server)
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1637212587" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1637212587"></script>
+<link href="/blogR/css/quicknote.css?1637817303" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637817303"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -771,7 +811,7 @@ shinyApp(ui, server)
           
 
   
-<script src="/blogR/js/packhtml.js?1637212587"></script>    
+<script src="/blogR/js/packhtml.js?1637817303"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -781,24 +821,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1637212587"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1637212587"></script>
-  <link href="/blogR/css/featherlight.min.css?1637212587" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1637212587" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1637817303"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1637817303"></script>
+  <link href="/blogR/css/featherlight.min.css?1637817303" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1637817303" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1637212587"></script>
-  <link href="/blogR/css/rmd.css?1637212587" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1637212587" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1637212587'></script>
+  <script src="/blogR/js/hugohelper.js?1637817303"></script>
+  <link href="/blogR/css/rmd.css?1637817303" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1637817303" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1637817303'></script>
 
 <script>
   
    let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1637212587'></script>
+<script src='/blogR/js/localsearch.js?1637817303'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/topic/simulation/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>01_shiny_basic</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>2. navarPage</title>
       <link>https://airbone4.github.io/blogR/topic/simulation/navarpage.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

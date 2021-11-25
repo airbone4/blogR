@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1637212587" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1637212587"></script>
+    <link href="/blogR/css/syntax.css?1637817303" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1637817303"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1637817303" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1637817303" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1637212587" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1637817303" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -399,6 +399,9 @@
   
    
    
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/01_shiny_basic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">01_shiny_basic</a></li>
+     
+   
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/navarpage.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. navarPage</a></li>
      
     
@@ -447,7 +450,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/3_shinydist.html"> <i class="far fa-clock" ></i>3. shinyDist[2021-11-18 PM 01:15]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/navarpage.html"> <i class="far fa-clock" ></i>2. navarPage[2021-11-18 PM 01:06]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-18 AM 11:49]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-25 PM 01:14]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html"> <i class="far fa-clock" ></i>01_shiny_basic[2021-11-21 PM 10:35]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_1_function.html"> <i class="far fa-clock" ></i>7.1 R 函數的基本撰寫[2021-11-21 PM 02:45]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -464,7 +467,7 @@
 <blockquote>
 <p><strong>Theorem</strong>: If X is a continuous r.v. with CDF \( F_X(x) \), then \( U = F_X(X) \sim U(0,1) \).
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n637125498"></button>【inverse method的證明】<div  id="n637125498" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>X是隨機變數U的函數，F是連續的CDF，\(F^{-1}\)是逆函數，且U是均勻分配的RV，則\(F^{-1}(U)\)遵循F分配</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n865329714"></button>【inverse method的證明】<div  id="n865329714" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>X是隨機變數U的函數，F是連續的CDF，\(F^{-1}\)是逆函數，且U是均勻分配的RV，則\(F^{-1}(U)\)遵循F分配</p>
 <p>Proof:
 $$ P(X&lt;x)=P(F^{-1}(U)&lt;x)=P(U&lt;F(x))=F_X(x) $$</p>
 <!--html_preserve--></div></div><!--/html_preserve--></p>
@@ -503,7 +506,7 @@ discrete.inv.transform.sample &lt;- function( p.vec ) {
 <h2 id="poisson離散分配">【Poisson】離散分配</h2>
 <p>\( f_X (k;λ)=P({X=k})=\frac{λ^k}{k!} e^{-λ}  \)　</p>
 <p class="w-50.m-auto"><!--html_preserve--><div class="message w-50 m-auto ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n185493726"></button>poisson案例<div  id="n185493726" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>一公司之電話通數大約每小時 20 通，求在 5 分鐘內一通電話也沒有的機率？</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n935672418"></button>poisson案例<div  id="n935672418" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>一公司之電話通數大約每小時 20 通，求在 5 分鐘內一通電話也沒有的機率？</p>
 <p>每小時 20 通, 表示每分鐘平均 \(\lambda =\frac{1}{3}\) 通/分。 因此在 5 分鐘的時間區間中, 平均的電話通數為 \( m=\lambda T=\frac{1}{3}\times 5=\frac{5}{3}\)。</p>
 <p>所以\(P(k);\equiv;P(k,5);=;\frac{(\frac{5}{3})^k}{k!} e^{-\frac{5}{3}},\quad k=0,1,2,\cdots\)</p>
 <p>因此沒有一通電話的機率 \(P(0)= e^{-\frac{5}{3}};\approx; 0.19 \)</p>
@@ -548,7 +551,7 @@ cat(x,&quot;\n&quot;) # <!--html_preserve--><span  data-bs-toggle="tooltip" data
 End Function
 </code></pre>
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n427135698"></button>解說上面的演算法<div  id="n427135698" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p><code>dpois()</code>,<code>ppois()</code>,<code>rpois()</code></p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n569342871"></button>解說上面的演算法<div  id="n569342871" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p><code>dpois()</code>,<code>ppois()</code>,<code>rpois()</code></p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># compare with rpois(1,2.3)
 
 x1&lt;-0:6
@@ -679,8 +682,8 @@ figure</figcaption></figure><!--/html_preserve-->
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1637212587" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1637212587"></script>
+<link href="/blogR/css/quicknote.css?1637817303" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1637817303"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -698,7 +701,7 @@ figure</figcaption></figure><!--/html_preserve-->
           
 
   
-<script src="/blogR/js/packhtml.js?1637212587"></script>    
+<script src="/blogR/js/packhtml.js?1637817303"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -708,24 +711,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1637212587"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1637212587"></script>
-  <link href="/blogR/css/featherlight.min.css?1637212587" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1637212587" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1637817303"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1637817303"></script>
+  <link href="/blogR/css/featherlight.min.css?1637817303" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1637817303" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1637212587"></script>
-  <link href="/blogR/css/rmd.css?1637212587" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1637212587" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1637212587'></script>
+  <script src="/blogR/js/hugohelper.js?1637817303"></script>
+  <link href="/blogR/css/rmd.css?1637817303" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1637817303" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1637817303'></script>
 
 <script>
   
    let idxfile = "\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1637212587'></script>
+<script src='/blogR/js/localsearch.js?1637817303'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
