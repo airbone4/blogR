@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1637817525" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1637817525"></script>
+    <link href="/blogR/css/syntax.css?1638422034" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1638422034"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1637817525" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1638422034" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1637817525" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1638422034" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1637817525" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1638422034" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -60,7 +60,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 30, 2021'>2.1 隨機變數</span>
+      title='最後修改December 2, 2021'>2.1 隨機變數</span>
         
     
 
@@ -450,7 +450,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/3_shinydist.html"> <i class="far fa-clock" ></i>3. shinyDist[2021-11-25 PM 01:17]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-11-25 PM 01:14]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html"> <i class="far fa-clock" ></i>01_shiny_basic[2021-11-21 PM 10:35]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html"> <i class="far fa-clock" ></i>2.1 隨機變數[2021-12-02 PM 01:07]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_3_%E5%9F%B7%E8%A1%8C.html"> <i class="far fa-clock" ></i>1.3 執行[2021-11-25 PM 10:37]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-11-25 PM 09:58]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -467,7 +467,7 @@
 <blockquote>
 <p><strong>Theorem</strong>: If X is a continuous r.v. with CDF \( F_X(x) \), then \( U = F_X(X) \sim U(0,1) \).
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n314897526"></button>【inverse method的證明】<div  id="n314897526" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>X是隨機變數U的函數，F是連續的CDF，\(F^{-1}\)是逆函數，且U是均勻分配的RV，則\(F^{-1}(U)\)遵循F分配</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n317594682"></button>【inverse method的證明】<div  id="n317594682" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>X是隨機變數U的函數，F是連續的CDF，\(F^{-1}\)是逆函數，且U是均勻分配的RV，則\(F^{-1}(U)\)遵循F分配</p>
 <p>Proof:
 $$ P(X&lt;x)=P(F^{-1}(U)&lt;x)=P(U&lt;F(x))=F_X(x) $$</p>
 <!--html_preserve--></div></div><!--/html_preserve--></p>
@@ -480,7 +480,7 @@ $$ P(X&lt;x)=P(F^{-1}(U)&lt;x)=P(U&lt;F(x))=F_X(x) $$</p>
 <li>Let \(X = F_X^{-1}(U)\).</li>
 </ol>
 <p>上面的 \(X\) 遵循 \(F_X\)的分配。</p>
-<p>這個演算法在 \(X\) 是exponential 隨機變數的時候，\(U \sim \text{Unif}(0,1)\) 取逆是很容易，但如果 \(X\)是隨機變數，則取逆不實際。</p>
+<p>這個演算法在隨機變數 \(X\) 是exponential 家族的時候，\(U \sim \text{Unif}(0,1)\) 取逆是很容易，但如果不是，則取逆不實際。</p>
 <h3 id="discrete-distributions">Discrete Distributions</h3>
 <p>若 \(X\) 離散亂數則 \(P(X = x_i) = p_i\).</p>
 <ol>
@@ -489,7 +489,7 @@ $$ P(X&lt;x)=P(F^{-1}(U)&lt;x)=P(U&lt;F(x))=F_X(x) $$</p>
 </ol>
 <p>Notice that the second step requires a <em>search</em>.</p>
 <p>Assume our random variable \(X\) can take on any one of \(K\) values with probabilities \({p_1, \ldots, p_K}\). We implement the algorithm below, assuming these probabilities are stored in a vector called <code>p.vec.</code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># note: this inefficient implementation is for pedagogical purposes
+<pre><code class="language-r?lang=r?class=.source"># note: this inefficient implementation is for pedagogical purposes
 # in general, consider using the rmultinom() function
 discrete.inv.transform.sample &lt;- function( p.vec ) {
   U  &lt;- runif(1)
@@ -505,14 +505,20 @@ discrete.inv.transform.sample &lt;- function( p.vec ) {
 </code></pre>
 <h2 id="poisson離散分配">【Poisson】離散分配</h2>
 <p>\( f_X (k;λ)=P({X=k})=\frac{λ^k}{k!} e^{-λ}  \)　</p>
-<p class="w-50.m-auto"><!--html_preserve--><div class="message w-50 m-auto ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n683752914"></button>poisson案例<div  id="n683752914" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>一公司之電話通數大約每小時 20 通，求在 5 分鐘內一通電話也沒有的機率？</p>
+<!--html_preserve--><div class="message w-50 m-auto ">
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n795184263"></button>poisson案例<div  id="n795184263" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>一公司之電話通數大約每小時 20 通，求在 5 分鐘內一通電話也沒有的機率？</p>
 <p>每小時 20 通, 表示每分鐘平均 \(\lambda =\frac{1}{3}\) 通/分。 因此在 5 分鐘的時間區間中, 平均的電話通數為 \( m=\lambda T=\frac{1}{3}\times 5=\frac{5}{3}\)。</p>
 <p>所以\(P(k);\equiv;P(k,5);=;\frac{(\frac{5}{3})^k}{k!} e^{-\frac{5}{3}},\quad k=0,1,2,\cdots\)</p>
 <p>因此沒有一通電話的機率 \(P(0)= e^{-\frac{5}{3}};\approx; 0.19 \)</p>
-<!--html_preserve--></div></div><!--/html_preserve--></p>
+<pre><code class="language-r?lang=r?class=.source">success &lt;- 0:8
+plot(success, dpois(success, lambda=5/3), type='h')
+</code></pre>
+<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-3-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
+<p>figure</figcaption></figure><!--/html_preserve--></p>
+<!--html_preserve--></div></div><!--/html_preserve-->
 <p>poisson random number演算法
-因為 \( P_{i+1}=P(X=i+1)=\frac{λ^{i+1}}{(i+1)!} e^{-λ}=\frac{λ}{i+1}\frac{λ^i}{i!}e^{-λ}=\frac{λ}{i+1} p_i  \)</p>
+因為 \( P_{i+1}=P(X=i+1)=\frac{λ^{i+1}}{(i+1)!} e^{-λ}=\frac{λ}{i+1}\frac{λ^i}{i!}e^{-λ}=\frac{λ}{i+1} P_i  \)
+所以可以利用上面的公式，從i=0到 \( \infty \)選一個出來<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="下面的演算法，每次只產生一個亂數">🏷️</span><!--/html_preserve--></p>
 <ol>
 <li>\( i=0,p=e^{-λ},F=p  \) <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏此時的F是事件不發生的機率,在步驟3用來決定是否0要輸出">🏷</span><!--/html_preserve--></li>
 <li>\( U \sim U(0,1)  \) 產生隨機變數Ｕ</li>
@@ -521,7 +527,7 @@ discrete.inv.transform.sample &lt;- function( p.vec ) {
 <li>到步驟 3</li>
 </ol>
 <p>language R:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">lambda &lt;-2.3
+<pre><code class="language-r?lang=r?class=.source">lambda &lt;-2.3
 u&lt;-runif(1)
 i=0
 p=exp(-lambda)
@@ -551,26 +557,43 @@ cat(x,&quot;\n&quot;) # <!--html_preserve--><span  data-bs-toggle="tooltip" data
 End Function
 </code></pre>
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n746123859"></button>解說上面的演算法<div  id="n746123859" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p><code>dpois()</code>,<code>ppois()</code>,<code>rpois()</code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># compare with rpois(1,2.3)
-
-x1&lt;-0:6
-lambda&lt;-2.3
-p=exp(-lambda)
-F[1]=p
-for(i in x1[-1]){
-  p=lambda*p/(i)
-  F[i+1]=F[i]+p
-
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n169348257"></button>測試上面的演算法<div  id="n169348257" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p><code>dpois()</code>,<code>ppois()</code>,<code>rpois()</code></p>
+<pre><code class="language-r?lang=r?class=.source">myp&lt;-function (lambda){
+  u&lt;-runif(1)
+  i=0
+  p=exp(-lambda)
+  F=p
+  while (F&lt;=u){
+    p=lambda*p/(i+1)
+    F=F+p
+    i=i+1
+  }
+  return(i)
 }
+num&lt;-100
 
-
-y&lt;-ppois(x1,lambda)
-plot(x1,y,type=&quot;p&quot;)
-lines(x1,F)
+lambda&lt;-2.3
+tmp&lt;-rep(lambda,num)
+y2&lt;-sapply(tmp,myp)
+y1&lt;-rpois(num,lambda)
+ks.test(y1,y2)$p.value
+#&gt; Warning in ks.test(y1, y2): p-value will be approximate in the presence of ties
+#&gt; [1] 0.8127483
+require(Matching)
+#&gt; 載入需要的套件：Matching
+#&gt; Warning: 套件 'Matching' 是用 R 版本 4.1.2 來建造的
+#&gt; 載入需要的套件：MASS
+#&gt; ## 
+#&gt; ##  Matching (Version 4.9-11, Build Date: 2021-10-18)
+#&gt; ##  See http://sekhon.berkeley.edu/matching for additional documentation.
+#&gt; ##  Please cite software as:
+#&gt; ##   Jasjeet S. Sekhon. 2011. ``Multivariate and Propensity Score Matching
+#&gt; ##   Software with Automated Balance Optimization: The Matching package for R.''
+#&gt; ##   Journal of Statistical Software, 42(7): 1-52. 
+#&gt; ##
+ks.boot(y1,y2,nboots=10000)$ks.boot.pvalue
+#&gt; [1] 0.4201
 </code></pre>
-<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-4-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
-<p>figure</figcaption></figure><!--/html_preserve--></p>
 <!--html_preserve--></div></div><!--/html_preserve-->
 <h2 id="指數分佈亂數這是逆方法">【指數分佈亂數】這是逆方法</h2>
 <p>\( PDF:  f(x)=λ e^{-λx} \)</p>
@@ -593,23 +616,18 @@ $$ P(W>t)=P(在[0,t]無事件發生 ) \ =e^{-\lambda t},  t>0 $$
 $$F_Y(x) = P(Y\leq x) = \int_0^x 2e^{-2y} dy = 1 - e^{-2x}$$</p>
 <p>解得CDF逆函數
 $$F_Y^{-1}(y) = -\frac{\ln(1-y)}{2}$$</p>
-<p>Using our algorithm above, we first generate \(U \sim \text{Unif}(0,1)\), then set \(X = F_Y^{-1}(U) =  -\frac{\ln(1-U)}{2}\). We do this in the R code below and compare the histogram of our samples with the true density of \(Y\).</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5"># inverse transform sampling
+<p>如上述,先產生 \(U \sim \text{Unif}(0,1)\), 然後 \(X = F_Y^{-1}(U) =  -\frac{\ln(1-U)}{2}\). 如下:</p>
+<pre><code class="language-r?lang=r?class=.source"># inverse transform sampling
 num.samples &lt;-  1000
 U           &lt;-  runif(num.samples)
-X           &lt;- -log(1-U)/2
+X           &lt;- -log(1-U)/2 #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="討論&lt;code&gt;X1&amp;lt;-qexp(U,2),qqplot(X,X1)&lt;/code&gt;">🏷️</span><!--/html_preserve-->
 
 # plot
-hist(X, freq=F, xlab='X', main='Generating Exponential R.V.')
-#&gt; Warning in if (freq) x$counts else x$density: 條件的長度 &gt; 1，因此只能用其第一元
-#&gt; 素
-#&gt; Warning in if (!freq) &quot;Density&quot; else &quot;Frequency&quot;: 條件的長度 &gt; 1，因此只能用其第
-#&gt; 一元素
-curve(dexp(x, rate=2) , 0, 3, lwd=2, xlab = &quot;&quot;, ylab = &quot;&quot;, add = T)
+hist(X, freq=FALSE, xlab='X', main='Generating Exponential R.V.')
+curve(dexp(x, rate=2) , min(X), max(X), lwd=2, xlab = &quot;&quot;, ylab = &quot;&quot;, add = T)
 </code></pre>
-<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-5-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
+<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-6-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
 figure</figcaption></figure><!--/html_preserve-->
-<p>Indeed, the plot indicates that our random variables are following the intended distribution.</p>
 <h3 id="discrete-example">Discrete Example</h3>
 <p>Let's assume we want to simulate a discrete random variable \(X\) that follows the following distribution:</p>
 <table>
@@ -639,7 +657,7 @@ figure</figcaption></figure><!--/html_preserve-->
 </tbody>
 </table>
 <p>Below we simulate from this distribution using the discrete.inv.transform.sample() function above, and plot both the true probability vector, and the empirical proportions from our simulation.</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">num.samples &lt;- 1000
+<pre><code class="language-r?lang=r?class=.source">num.samples &lt;- 1000
 p.vec        &lt;- c(0.1, 0.4, 0.2, 0.3)
 names(p.vec) &lt;- 1:4
 samples     &lt;- numeric(num.samples)
@@ -648,11 +666,11 @@ for(i in seq_len(num.samples) ) {
 }
 barplot(p.vec, main='True Probability Mass Function')
 </code></pre>
-<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-6-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
+<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-7-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
 figure</figcaption></figure><!--/html_preserve-->
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5">barplot(table(samples), main='Empirical Probability Mass Function')
+<pre><code class="language-r?lang=r?class=.source">barplot(table(samples), main='Empirical Probability Mass Function')
 </code></pre>
-<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-6-2.png" class="figure-img w-100 "/><figcaption class="figure-caption">
+<!--html_preserve--><figure  class="figure nopre    "><img src="2_1_%e9%9a%a8%e6%a9%9f%e8%ae%8a%e6%95%b8_files/figure-html/unnamed-chunk-7-2.png" class="figure-img w-100 "/><figcaption class="figure-caption">
 figure</figcaption></figure><!--/html_preserve-->
 <p>Again, the plot supports our claim that we are drawing from the true probability distribution</p>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
@@ -682,8 +700,8 @@ figure</figcaption></figure><!--/html_preserve-->
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1637817525" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1637817525"></script>
+<link href="/blogR/css/quicknote.css?1638422034" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1638422034"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -701,7 +719,7 @@ figure</figcaption></figure><!--/html_preserve-->
           
 
   
-<script src="/blogR/js/packhtml.js?1637817525"></script>    
+<script src="/blogR/js/packhtml.js?1638422034"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -711,24 +729,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1637817525"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1637817525"></script>
-  <link href="/blogR/css/featherlight.min.css?1637817525" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1637817525" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1638422034"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1638422034"></script>
+  <link href="/blogR/css/featherlight.min.css?1638422034" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1638422034" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1637817525"></script>
-  <link href="/blogR/css/rmd.css?1637817525" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1637817525" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1637817525'></script>
+  <script src="/blogR/js/hugohelper.js?1638422034"></script>
+  <link href="/blogR/css/rmd.css?1638422034" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1638422034" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1638422034'></script>
 
 <script>
   
-   let idxfile = "\/blogR\/index.json"  
+   let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1637817525'></script>
+<script src='/blogR/js/localsearch.js?1638422034'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

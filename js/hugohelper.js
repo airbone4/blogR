@@ -108,7 +108,11 @@ function htmlUnescape(str){
     //re = /(<!--html_preserve-->)((\s|\S)*?)(?:^\1|<!--\/html_preserve-->)/g;
     //re = /(&lt;!--html_preserve--&gt;)((\s|\S)*?)(?:^\1|&lt;!--\/html_preserve--&gt;)/g
     //上面兩個都要
-    re = /((&lt;|<)!--html_preserve--(&gt;|>))((\s|\S)*?)(?:^\1|(&lt;|<)!--\/html_preserve--(&gt;|>))/g; 
+    
+    //re = /((&lt;|<)!--html_preserve--(&gt;|>))((\s|\S)*?)(?:^\1|(&lt;|<)!--\/html_preserve--(&gt;|>))/g; 
+    //因為shiny不知道為甚麼&lt;會被翻譯成&amp;lt;，改成
+    re = /((&(amp;)?lt;|<)!--html_preserve--(&(amp;)?gt;|>))((\s|\S)*?)(?:^\1|(&(amp;)?lt;|<)!--\/html_preserve--(&(amp;)?gt;|>))/g; 
+    str=str.replace(/&amp;/g,"&")    
     str=str.replace(re,(m)=>unescapeHtmlChunk(m))
     return( str);
     
@@ -217,6 +221,8 @@ function hugo_unescape(str){
  return(rst)
  
 }
+//shiny 的完成是這個
+//$( document ).on("shiny:sessioninitialized", function(event) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   //這個函數的功能有2
@@ -230,7 +236,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     codenode = list[i].querySelector("code")
     
     let mm= /(.*?)(\?.*?=.*)/ 
-    if(!parent || !mm.test(codenode.className))
+    //if(!parent || !mm.test(codenode.className))
+    if(!parent || !codenode ||  !mm.test(codenode.className))
       continue;
     
     
@@ -294,10 +301,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     {
       precode = apre.querySelector("code")
       //s=hugo_unescape(precode.innerHTML) //v1 pair 
-      s=htmlUnescape(precode.innerHTML)
-      s=s.replace(RegExp("\\n?hugocmd.*?\\n\#(>|&gt;)","gm"),"") //殺掉指令hugocmd,有需要這個嗎?stata不需要,因為hugocmd不會出現
-      
-      precode.innerHTML=s
+      if(precode){
+        s=htmlUnescape(precode.innerHTML)
+        s=s.replace(RegExp("\\n?hugocmd.*?\\n\#(>|&gt;)","gm"),"") //殺掉指令hugocmd,有需要這個嗎?stata不需要,因為hugocmd不會出現
+        precode.innerHTML=s
+      }
     }    
   });
   
