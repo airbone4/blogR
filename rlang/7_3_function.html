@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1638422034" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1638422034"></script>
+    <link href="/blogR/css/syntax.css?1639627411" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1639627411"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1639627411" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -56,7 +56,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改October 22, 2021'>7.3 R 函數定義的幾種分類</span>
+      title='最後修改December 16, 2021'>7.3 R 函數定義的幾種分類</span>
         
     
 
@@ -446,7 +446,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html"> <i class="far fa-clock" ></i>2.1 隨機變數[2021-12-02 PM 01:07]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_3_%E5%9F%B7%E8%A1%8C.html"> <i class="far fa-clock" ></i>1.3 執行[2021-11-25 PM 10:37]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-11-25 PM 09:58]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_2_function.html"> <i class="far fa-clock" ></i>7.2 R函數進階[2021-12-16 AM 10:59]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -457,23 +457,23 @@
 </ul>
 <p>函數的型態</p>
 <ul>
-<li><strong>prefix</strong>: 大部分都是這種形式,例如 <code>foo(a, b, c)</code>.</li>
-<li><strong>infix</strong> : 例如 <code>x + y</code>.另外像是<code>%*%</code></li>
-<li><strong>replacement</strong>: 例如 <code>names(df) &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</code>.</li>
-<li><strong>Special forms</strong>: 例如 <code>[[</code>, <code>if</code>, <code>for</code>.</li>
+<li>prefix: 大部分都是這種形式,例如 <code>foo(a, b, c)</code>.</li>
+<li>infix: 例如 <code>x + y</code>.另外像是<code>`%*%`</code></li>
+<li>replacement: 例如 <code>names(df) &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</code>.</li>
+<li>Special forms: 例如 <code>`[[`</code>, <code>`if`</code>, <code>`for`</code>.</li>
 </ul>
 <p>後3種形式,都可以翻譯成<code>prefix form</code>,例如</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x + y #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏infix form">🏷</span><!--/html_preserve-->
+<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x + y #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="infix form">🏷️</span><!--/html_preserve-->
 `+`(x, y)
 
-names(df) &lt;- c(&quot;x&quot;, &quot;y&quot;, &quot;z&quot;) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏replacement form">🏷</span><!--/html_preserve-->
+names(df) &lt;- c(&quot;x&quot;, &quot;y&quot;, &quot;z&quot;) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="replacement form">🏷️</span><!--/html_preserve-->
 `names&lt;-`(df, c(&quot;x&quot;, &quot;y&quot;, &quot;z&quot;))
 
-for(i in 1:10) print(i) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏special form">🏷</span><!--/html_preserve-->
+for(i in 1:10) print(i) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="special form">🏷️</span><!--/html_preserve-->
 `for`(i, 1:10, print(i))
 </code></pre>
 <!--html_preserve--><div class="message d-none ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n457128963"></button>補充<div  id="n457128963" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>😜Knowing the function name of a non-prefix function allows you to override its behaviour. For example, if you're ever feeling particularly evil, run the following code while a friend is away from their computer. It will introduce a fun bug: 10% of the time, 1 will be added to any numeric calculation inside of parentheses.</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n756913284"></button>補充<div  id="n756913284" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>😜Knowing the function name of a non-prefix function allows you to override its behaviour. For example, if you're ever feeling particularly evil, run the following code while a friend is away from their computer. It will introduce a fun bug: 10% of the time, 1 will be added to any numeric calculation inside of parentheses.</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`(` &lt;- function(e1) {
   if (is.numeric(e1) &amp;&amp; runif(1) &lt; 0.1) {
     e1 + 1
@@ -482,8 +482,8 @@ for(i in 1:10) print(i) #<!--html_preserve--><span  data-bs-toggle="tooltip" dat
   }
 }
 replicate(50, (1 + 2))
-#&gt;  [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 4 3
-#&gt; [39] 3 3 3 3 3 3 3 3 3 3 3 3
+#&gt;  [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 3 3 3 3 3 4 3 3 3 4 3 3 3 3 3 3 3 3 3 3
+#&gt; [39] 3 4 4 3 3 3 3 3 3 4 3 3
 rm(&quot;(&quot;)
 </code></pre>
 <!--html_preserve--></div></div><!--/html_preserve-->
@@ -520,29 +520,29 @@ sapply(1:10, add, 3)
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">k01 &lt;- function(abcdef, bcde1, bcde2) {
   list(a = abcdef, b1 = bcde1, b2 = bcde2)
 }
-str(k01(1, 2, 3)) # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏位置">🏷</span><!--/html_preserve-->
+str(k01(1, 2, 3)) # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="位置">🏷️</span><!--/html_preserve-->
 #&gt; List of 3
 #&gt;  $ a : num 1
 #&gt;  $ b1: num 2
 #&gt;  $ b2: num 3
-str(k01(2, 3, abcdef = 1)) # # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏先名稱,然後位置">🏷</span><!--/html_preserve-->
-#&gt; List of 3
-#&gt;  $ a : num 1
-#&gt;  $ b1: num 2
-#&gt;  $ b2: num 3
-
-str(k01(2, 3, a = 1)) # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏部分符合">🏷</span><!--/html_preserve-->
+str(k01(2, 3, abcdef = 1)) # # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="先名稱,然後位置">🏷️</span><!--/html_preserve-->
 #&gt; List of 3
 #&gt;  $ a : num 1
 #&gt;  $ b1: num 2
 #&gt;  $ b2: num 3
 
-str(k01(1, 3, b = 1)) # ❌<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏混淆,兩個參數有b開頭">🏷</span><!--/html_preserve-->
+str(k01(2, 3, a = 1)) # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="部分符合">🏷️</span><!--/html_preserve-->
+#&gt; List of 3
+#&gt;  $ a : num 1
+#&gt;  $ b1: num 2
+#&gt;  $ b2: num 3
+
+str(k01(1, 3, b = 1)) # ❌<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="混淆,兩個參數有b開頭">🏷️</span><!--/html_preserve-->
 #&gt; Error in k01(1, 3, b = 1): 引數 3 有多個與之相對應的形式引數
 </code></pre>
 <h3 id="infix-functions">Infix functions</h3>
-<p>R的內建 infix operators: <code>:</code>, <code>::</code>, <code>:::</code>, <code>$</code>, <code>@</code>, <code>^</code>, <code>*</code>, <code>/</code>, <code>+</code>, <code>-</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>!=</code>, <code>!</code>, <code>&amp;</code>, <code>&amp;&amp;</code>, <code>|</code>, <code>||</code>, <code>~</code>, <code>&lt;-</code>, and <code>&lt;&lt;-</code>.</p>
-<p>建立infix函數,1)兩個參數,2)函數名稱兩邊有<code>%</code>, base R 也額外定義了 <code>%%</code>, <code>%*%</code>, <code>%/%</code>, <code>%in%</code>, <code>%o%</code>, and <code>%x%</code>.</p>
+<p>R的內建 infix operators: <code>`:`</code>, <code>`::`</code>, <code>`:::`</code>, <code>`$`</code>, <code>`@`</code>, <code>`^`</code>, <code>`*`</code>, <code>`/`</code>, <code>`+`</code>, <code>`-`</code>, <code>`&gt;`</code>, <code>`&gt;=`</code>, <code>`&lt;`</code>, <code>`&lt;=`</code>, <code>`==`</code>, <code>`!=`</code>, <code>`!`</code>, <code>`&amp;`</code>, <code>`&amp;&amp;`</code>, <code>`|`</code>, <code>`||`</code>, <code>`~`</code>, <code>`&lt;-`</code>, and <code>`&lt;&lt;-`</code> .</p>
+<p>建立infix函數,1)兩個參數,2)函數名稱兩邊有<code>`%`</code>, base R 也額外定義了 <code>`%%`</code>, <code>`%*%`</code>, <code>`%/%`</code>, <code>`%in%`</code>, <code>`%o%`</code>, and <code>`%x%`</code>.</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">`%+%` &lt;- function(a, b) paste0(a, b)
 &quot;new &quot; %+% &quot;string&quot;
 #&gt; [1] &quot;new string&quot;
@@ -585,14 +585,14 @@ x # 新值為5L
 #&gt;  [1]  1  5  3  4  5  6  7  8  9 10
 </code></pre>
 <p><!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n678345921"></button><div  id="n678345921" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>利用 <code>tracemem()</code>追蹤:</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n674129853"></button><div  id="n674129853" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>利用 <code>tracemem()</code>追蹤:</p>
 <pre><code class="language-r?preclass=.ms-5.w-75">x &lt;- 1:10
 tracemem(x)
-#&gt; &lt;0x7ffae71bd880&gt; #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏1&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+#&gt; &lt;0x7ffae71bd880&gt; #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;1&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt;
 
 second(x) &lt;- 6L
-#&gt; tracemem[0x7ffae71bd880 &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏1&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt; -&gt; 0x7ffae61b5480]: &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏2&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt; 
-#&gt; tracemem[0x7ffae61b5480 &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏2&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt; -&gt; 0x7ffae73f0408]&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏2&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt; : second&lt;- 
+#&gt; tracemem[0x7ffae71bd880 &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;1&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt; -&gt; 0x7ffae61b5480]: &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;2&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt; 
+#&gt; tracemem[0x7ffae61b5480 &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;2&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt; -&gt; 0x7ffae73f0408]&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;2&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt; : second&lt;- 
 </code></pre>
 <!--html_preserve--></div></div><!--/html_preserve-->
 上面的函數,只能指派第2個元素,如果要讓使用者能指定其他元素,就要另外新增一個參數,這時候這個參數,要放在變數 <code>x</code>,和值<code>value</code>的中間 :</p>
@@ -605,14 +605,14 @@ x
 #&gt;  [1] 10  5  3  4  5  6  7  8  9 10
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n143528976"></button><div  id="n143528976" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">modify(x, 1) &lt;- 10
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n265479381"></button><div  id="n265479381" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">modify(x, 1) &lt;- 10
 </code></pre>
 <p>其實在R的幕後解譯中被轉為</p>
 <pre><code class="language-r">x &lt;- `modify&lt;-`(x, 1, 10)
 </code></pre>
 <!--html_preserve--></div></div><!--/html_preserve-->
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n549863172"></button>更複雜的翻譯<div  id="n549863172" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r?preclass=.ms-5.w-75">x &lt;- c(a = 1, b = 2, c = 3)
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n978432615"></button>更複雜的翻譯<div  id="n978432615" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r?preclass=.ms-5.w-75">x &lt;- c(a = 1, b = 2, c = 3)
 names(x)
 #&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
 
@@ -621,7 +621,7 @@ names(x)
 #&gt; [1] &quot;a&quot;   &quot;two&quot; &quot;c&quot;
 </code></pre>
 <p>會被解譯為</p>
-<pre><code class="language-r?preclass=.ms-5.w-75">`*tmp*` &lt;- x #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏R就是用這個變數&amp;lt;code&amp;gt;*tmp*&amp;lt;/code&amp;gt;&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+<pre><code class="language-r?preclass=.ms-5.w-75">`*tmp*` &lt;- x #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;R就是用這個變數&amp;lt;code&amp;gt;*tmp*&amp;lt;/code&amp;gt;&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt;
 x &lt;- `names&lt;-`(`*tmp*`, `[&lt;-`(names(`*tmp*`), 2, &quot;two&quot;))
 rm(`*tmp*`)
 </code></pre>
@@ -798,8 +798,8 @@ so it's never evaluated.</p>
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1638422034" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1638422034"></script>
+<link href="/blogR/css/quicknote.css?1639627411" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1639627411"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -817,7 +817,7 @@ so it's never evaluated.</p>
           
 
   
-<script src="/blogR/js/packhtml.js?1638422034"></script>    
+<script src="/blogR/js/packhtml.js?1639627411"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -827,24 +827,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1638422034"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1638422034"></script>
-  <link href="/blogR/css/featherlight.min.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1638422034" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1639627411"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1639627411"></script>
+  <link href="/blogR/css/featherlight.min.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1639627411" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1638422034"></script>
-  <link href="/blogR/css/rmd.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1638422034" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1638422034'></script>
+  <script src="/blogR/js/hugohelper.js?1639627411"></script>
+  <link href="/blogR/css/rmd.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1639627411" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1639627411'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1638422034'></script>
+<script src='/blogR/js/localsearch.js?1639627411'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1638422034" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1638422034"></script>
+    <link href="/blogR/css/syntax.css?1639627411" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1639627411"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1639627411" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -55,7 +55,7 @@
     <li><a href="#參數">參數</a>
       <ul>
         <li><a href="#lazy-evaluation">Lazy evaluation</a></li>
-        <li><a href="#forcing-evaluation">Forcing evaluation</a></li>
+        <li><a href="#強迫估值">強迫估值</a></li>
         <li><a href="#預設參數值">預設參數值</a></li>
         <li><a href="#缺失參數值missing-arguments">缺失參數值Missing arguments</a></li>
       </ul>
@@ -76,7 +76,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改November 12, 2021'>7.2 R函數進階</span>
+      title='最後修改December 16, 2021'>7.2 R函數進階</span>
         
     
 
@@ -466,7 +466,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html"> <i class="far fa-clock" ></i>2.1 隨機變數[2021-12-02 PM 01:07]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_3_%E5%9F%B7%E8%A1%8C.html"> <i class="far fa-clock" ></i>1.3 執行[2021-11-25 PM 10:37]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-11-25 PM 09:58]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_2_function.html"> <i class="far fa-clock" ></i>7.2 R函數進階[2021-12-16 AM 10:59]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -478,8 +478,8 @@
 </ul>
 <p>但是規則都會被打破,例外大概都利用C寫成的 &quot;primitive&quot; base functions。</p>
 <h3 id="first-class-functions">First-class functions</h3>
-<p>在R中,函數也是物件,這種特性也叫做 &quot;first-class functions&quot;.</p>
-<p>例如在list中,也可以放入函數:</p>
+<p>在R中,函數也是類別(或物件,白話文就是可以當成變數),這種特性也叫做 &quot;first-class functions&quot;.</p>
+<p>例如在list中,元素也可以是函數:</p>
 <pre><code class="language-r?lang=r?class=.source">funs &lt;- list(
   half = function(x) x / 2,
   double = function(x) x * 2
@@ -490,16 +490,16 @@ funs$double(10)
 </code></pre>
 <p>匿名函數:</p>
 <pre><code class="language-r?lang=r?class=.source">lapply(mtcars, function(x) length(unique(x)))
-Filter(function(x) !is.numeric(x), mtcars)
+Filter(function(e)e&gt;=0.5,runif(20)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="在向量(第二個參數)中找出&amp;gt;=0.5的元素">🏷️</span><!--/html_preserve-->
 integrate(function(x) sin(x) ^ 2, 0, pi)
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n728415693"></button>調用匿名函數<div  id="n728415693" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>如果要調用匿名函數,參考下面的方式</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n561428937"></button>調用匿名函數<div  id="n561428937" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>如果要調用匿名函數,參考下面的方式</p>
 <pre><code class="language-r">(function(x) 3)()
 </code></pre>
 <!--html_preserve--></div></div><!--/html_preserve-->
 <p>在R語言中,函數有時叫做closure因為,因為R函數包含(enclose)它們的環境 environments.</p>
-<pre><code class="language-r">01&lt;-function() {3}
+<pre><code class="language-r">f01&lt;-function() {3}
 typeof(f01)
 #&gt; [1] &quot;closure&quot; #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏對照後面class的結果">🏷</span><!--/html_preserve-->
 str(f01)
@@ -511,6 +511,95 @@ class(f01)
 #&gt; [1] &quot;closure&quot;  
 
 </code></pre>
+<p><!--html_preserve--><div class="position-relative warning p-3"><!--/html_preserve--><p>給定資料集(例如CO2),找出欄位是數字,然後分別給summary</p>
+<pre><code class="language-r?lang=r?class=.source">head(CO2)
+#&gt; [1] &quot;處理表格&quot;
+</code></pre>
+<!--html_preserve--><div   class="table-responsive kable">
+<table  class="w-50 ms-5">
+<thead  class="">
+<tr >
+<th  style="text-align:right">Plant</th>
+<th  style="text-align:right">Type</th>
+<th  style="text-align:right">Treatment</th>
+<th  style="text-align:right">conc</th>
+<th  style="text-align:right">uptake</th>
+</tr>
+</thead>
+<tbody >
+<tr >
+<td  style="text-align:right">Qn1</td>
+<td  style="text-align:right">Quebec</td>
+<td  style="text-align:right">nonchilled</td>
+<td  style="text-align:right">95</td>
+<td  style="text-align:right">16.0</td>
+</tr>
+<tr >
+<td  style="text-align:right">Qn1</td>
+<td  style="text-align:right">Quebec</td>
+<td  style="text-align:right">nonchilled</td>
+<td  style="text-align:right">175</td>
+<td  style="text-align:right">30.4</td>
+</tr>
+<tr >
+<td  style="text-align:right">Qn1</td>
+<td  style="text-align:right">Quebec</td>
+<td  style="text-align:right">nonchilled</td>
+<td  style="text-align:right">250</td>
+<td  style="text-align:right">34.8</td>
+</tr>
+<tr >
+<td  style="text-align:right">Qn1</td>
+<td  style="text-align:right">Quebec</td>
+<td  style="text-align:right">nonchilled</td>
+<td  style="text-align:right">350</td>
+<td  style="text-align:right">37.2</td>
+</tr>
+<tr >
+<td  style="text-align:right">Qn1</td>
+<td  style="text-align:right">Quebec</td>
+<td  style="text-align:right">nonchilled</td>
+<td  style="text-align:right">500</td>
+<td  style="text-align:right">35.3</td>
+</tr>
+<tr >
+<td  style="text-align:right">Qn1</td>
+<td  style="text-align:right">Quebec</td>
+<td  style="text-align:right">nonchilled</td>
+<td  style="text-align:right">675</td>
+<td  style="text-align:right">39.2</td>
+</tr>
+</tbody>
+</table>
+</div><!--/html_preserve-->
+<pre><code class="language-r?lang=r?class=.source">#❌❓set&lt;-Filter(function(x) !is.numeric(x), CO2)
+# summary(set)
+</code></pre>
+<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-1672">提示</button>
+</div><!--/html_preserve-->
+<!--html_preserve--><div class="collapse info p-3" id="quiz-1672"><!--/html_preserve--><ol>
+<li>
+<p>解</p>
+<pre><code class="language-r?lang=r?class=.source">set&lt;-Filter(function(e)e==T,lapply(CO2,function(e)is.numeric(e))) #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;lapply找出list,然後過濾&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt;
+summary(CO2[,names(set)]) #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;names(set)的內容: [1] &amp;amp;quot;conc&amp;amp;quot;   &amp;amp;quot;uptake&amp;amp;quot;&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt;
+#&gt;       conc          uptake     
+#&gt;  Min.   :  95   Min.   : 7.70  
+#&gt;  1st Qu.: 175   1st Qu.:17.90  
+#&gt;  Median : 350   Median :28.30  
+#&gt;  Mean   : 435   Mean   :27.21  
+#&gt;  3rd Qu.: 675   3rd Qu.:37.12  
+#&gt;  Max.   :1000   Max.   :45.50
+</code></pre>
+</li>
+<li>
+<p>解</p>
+<pre><code class="language-r">set&lt;-sapply(CO2,function(e)is.numeric(e)) # set&lt;- F,F,F,T,T
+summary(CO2[,set])
+</code></pre>
+</li>
+</ol>
+<!--html_preserve--></div><!--/html_preserve--></p>
 <h3 id="函數的組成">函數的組成</h3>
 <p>1個函數有3個部分:</p>
 <ul>
@@ -532,7 +621,7 @@ body(f02)
 #&gt; }
 
 environment(f02) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏本函數&lt;code&gt;f(02)&lt;/code&gt;會去搜尋的變數空間">🏷</span><!--/html_preserve-->
-#&gt; &lt;environment: 0x0000000019cda5b8&gt;
+#&gt; &lt;environment: 0x0000000019cdb908&gt;
 </code></pre>
 <p>👍就像所以其他R的物件,函數也有很多 <code>attributes()</code>. 其中一個 &quot;srcref&quot;, 是 source reference的縮寫。 　</p>
 <pre><code class="language-r?lang=r?class=.source">attr(f02, &quot;srcref&quot;)
@@ -541,7 +630,7 @@ environment(f02) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-ht
 #&gt; }
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n948351276"></button>例外<div  id="n948351276" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>但是有些函數像是 <code>sum()</code> and <code>[</code>，這些所謂的原始函數(Primitive functions)，無法利用上面的三個函數顯示其內容,因為這些函數存在於基本套件(base packages) 而且通常用Ｃ語言寫成。</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n976542318"></button>例外<div  id="n976542318" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>但是有些函數像是 <code>sum()</code> and <code>[</code>，這些所謂的原始函數(Primitive functions)，無法利用上面的三個函數顯示其內容,因為這些函數存在於基本套件(base packages) 而且通常用Ｃ語言寫成。</p>
 <pre><code class="language-r?lang=r?class=.source">sum
 #&gt; function (..., na.rm = FALSE)  .Primitive(&quot;sum&quot;)
 `[` # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏這也是函數&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
@@ -568,15 +657,14 @@ attr(sum, &quot;srcref&quot;) # &lt;!--html_preserve--&gt;&lt;span  data-bs-togg
 <p>練習</p>
 <ol>
 <li>
-<p>This code makes a list of all functions in the base package.</p>
-<pre><code class="language-r?lang=r?class=.source">objs &lt;- mget(ls(&quot;package:base&quot;), inherits = TRUE)
-funs &lt;- Filter(is.function, objs)
+<p>列出目前在base 套件中的所有函數</p>
+<pre><code class="language-r?lang=r?class=.source">objs &lt;- mget(ls(&quot;package:base&quot;), inherits = TRUE) # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="&lt;code&gt;get(x)&lt;/code&gt;在工作區中找出某個字串對應的值,而&lt;code&gt;mget(x)&lt;/code&gt;中的x,可以是多個字串">🏷️</span><!--/html_preserve-->
+funs &lt;- Filter(is.function, objs) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="把變數中是函數的找出來">🏷️</span><!--/html_preserve-->
 </code></pre>
-<p>Use it to answer the following questions:</p>
+<p>可以練習的問題</p>
 <ol>
-<li>Which base function has the most arguments?</li>
-<li>How many base functions have no arguments? What's special about those functions?</li>
-<li>How could you adapt the code to find all primitive functions?</li>
+<li>上述哪個函數有最多的參數?</li>
+<li>哪些函數沒有參數?</li>
 </ol>
 </li>
 </ol>
@@ -669,9 +757,8 @@ g10()
 <p>一般來講,上面的用法在語法上是沒問題,但是最好避免。</p>
 <h3 id="a-fresh-start">A fresh start</h3>
 <p>問題:下例中的函數<code>g11()</code>第一次執行和第二次執行有甚麼不同?</p>
-<pre><code class="language-r?lang=r?class=.source">
-g11 &lt;- function() {
-  if (!exists(&quot;a&quot;)) {
+<pre><code class="language-r">g11 &lt;- function() {
+  if (!exists(&quot;a&quot;)) { #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="exists的說明在後面">🏷️</span><!--/html_preserve-->
     a &lt;- 1
   } else {
     a &lt;- a + 1
@@ -679,34 +766,34 @@ g11 &lt;- function() {
   a
 }
 
-g11()
-g11() 
+g11() <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="1">🏷️</span><!--/html_preserve-->
+g11() <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="1">🏷️</span><!--/html_preserve-->
 </code></pre>
 <p><!--html_preserve--><div class="position-relative warning p-3"><!--/html_preserve-->❓<code>g11()</code> 每次被調用都是傳回 <code>1</code>。為甚麼?<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-22281">提示</button>
 </div><!--/html_preserve-->
 <!--html_preserve--><div class="collapse info p-3" id="quiz-22281"><!--/html_preserve-->每次執行g11()的時候,一個新的environment會被建立,也就是這個函數的<code>局部空間</code>。 而這個局部空間會在函數結束的時候✔️消失。<!--html_preserve--></div><!--/html_preserve--></p>
 <div class="notices  ms-5 w-75 ">
-<div class="info">函數 <code>exists(x)</code> :會尋找變數名稱x是否存在,存在則無回 <code>TRUE</code>,否則傳回 <code>FALSE</code>. 
-而<code>exists(x)</code>的搜尋路徑,可以用<code>search()</code>✔️知道。</div>
+<div class="info"><p>R語言存在很多利用字串找變數的功能(在script語言中常見),例如,<code>get(x)</code>,<code>exist(x)</code></p>
+<p>函數 <code>exists(x)</code> :會尋找變數名稱x是否存在,存在則回 <code>TRUE</code>,否則傳回 <code>FALSE</code>.</p>
+<p>而<code>exists(x)</code>的搜尋路徑,可以用<code>search()</code>✔️知道。</p>
+</div>
 </div>
 <h3 id="dynamic-lookup">Dynamic lookup</h3>
 <p>但是如果函數執行的時候在局部環境找不到的變數的時候,會於目前的總體環境(也就是函數所在的環境)找變數值。</p>
-<pre><code class="language-r?lang=r?class=.source">g12 &lt;- function() x + 1 #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏g12()定義在總體環境中">🏷</span><!--/html_preserve-->
-x &lt;- 15 #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏x定義在總體環境中">🏷</span><!--/html_preserve-->
-g12()
-#&gt; [1] 16
+<pre><code class="language-r">g12 &lt;- function() x + 1 #<!--html_preserve--><a   href="#%f0%9f%91%89">註解</a><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="g12()定義在總體環境中">🏷</span><!--/html_preserve-->
+x &lt;- 15 #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="x定義在總體環境中">🏷</span><!--/html_preserve-->
+g12() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="16">🅰️</span><!--/html_preserve-->
 
-x &lt;- 20
-g12()
-#&gt; [1] 21
+x &lt;- 20 
+g12() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="21">🅰️</span><!--/html_preserve-->
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n597481263"></button><div  id="n597481263" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>上面的函數g12()用到變數x，因此需要在搜尋路徑中,有變數x的存在。因此在第二行中,定義了x,這個x存在於外部總體環境中。</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n935267841"></button><div  id="n935267841" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>上面的函數g12()用到變數x，因此需要在搜尋路徑中,有變數x的存在。因此在第二行中,定義了x,這個x存在於外部總體環境中。</p>
 <p>類似這種情況,如果是故意的,那就不需檢查。但如果不是特意的,有可能會出錯。這種變數稱為unbound symbols(簡單講,就是<code>是不宣告而使用</code>)。
 如果要檢查函數中有沒有這種變數，可以使用工具 <code>codetools::findGlobals()</code>. 這個函數可以列出函數中是否有unbound symbols :</p>
 <pre><code class="language-r?lang=r?class=.source">codetools::findGlobals(g12)
-#&gt; [1] &quot;+&quot; &quot;x&quot;
+#&gt; Error in makeUsageCollector(fun, ...): 找不到物件 'g12'
 </code></pre>
 <p>也可以不依賴套件,而利用函數 <code>emptyenv()</code> :</p>
 <pre><code class="language-r?lang=r?class=.source">g12 &lt;- function() x + 1 #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏此時,environment(g12) 為 &amp;amp;lt;environment: R_GlobalEnv&amp;amp;gt;&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
@@ -756,7 +843,7 @@ f(10)
     h01(x=runif(10))
 </code></pre>
 </li>
-<li>另一個例子,這裡的<code>stop()</code>不會被執行。因為沒用到參數<code>x</code>
+<li>另一個例子,這裡的<a href="#errors"><code>stop()</code></a>不會被執行。因為沒用到參數<code>x</code>
 <pre><code class="language-r">h01 &lt;- function(x) {
   10
 }
@@ -764,7 +851,7 @@ h01(stop(&quot;This is an error!&quot;))
 </code></pre>
 </li>
 </ul>
-<h3 id="forcing-evaluation">Forcing evaluation</h3>
+<h3 id="強迫估值">強迫估值</h3>
 <p>強迫參數計算並取值可以利用函數 <code>force()</code>:</p>
 <pre><code>h02 &lt;- function(x) {
   force(x)
@@ -774,7 +861,7 @@ h02(stop(&quot;This is an error!&quot;))
 </code></pre>
 <ol>
 <li>
-<p>看一下為甚麼需要<code>force()</code></p>
+<p>看一下為甚麼需要<code>force()</code> <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="之前提過,函數包括3個,其中一個是環境,所以在裡面的函數,會把參數中的值記下來,在這裡程式員預期的是以後都會傳回固定值,例如f&amp;lt;-capture1(5),則f()每次都傳回5">🏷️</span><!--/html_preserve--></p>
 <pre><code class="language-r?lang=r?class=.source">capture1 &lt;- function(x) {
   function() {
     x
@@ -785,13 +872,14 @@ h02(stop(&quot;This is an error!&quot;))
 <li>
 <p>由於lazy evaluation ,在調用capture1()的時候,x不會被執行</p>
 <pre><code class="language-r">x &lt;- 10
-h03 &lt;- capture1(x) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏 x沒有被執行">🏷</span><!--/html_preserve-->
-h04 &lt;- capture1(x) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏 x沒有被執行">🏷</span><!--/html_preserve-->
 
-h03() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏 x在這裡evaluated">🏷</span><!--/html_preserve-->
+h03 &lt;- capture1(x) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="h03是一個函數 因為x沒有參與計算,所以capture1沒有被執行">🏷</span><!--/html_preserve-->
+h04 &lt;- capture1(x) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="同上也是一個函數">🏷</span><!--/html_preserve-->
+
+h03() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏 x之前設定為10">🏷</span><!--/html_preserve-->
 #&gt; [1] 10
 x &lt;- 20
-h04() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏 x在這裡evaluated">🏷</span><!--/html_preserve-->
+h04() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏 x是20">🏷</span><!--/html_preserve-->
 #&gt; [1] 20    
 </code></pre>
 </li>
@@ -807,19 +895,21 @@ h04()
 <li>
 <p>上面是因為lazy evaluation. 在第一次執行以後,就被cached。因此我們需要 forcing <code>x</code>:</p>
 <pre><code class="language-r?lang=r?class=.source">capture2 &lt;- function(x) {
-  force(x)
+  force(x) #強迫從環境中取值
 
   function() {
     x
   }
 }
 
-x &lt;- 10
 h05 &lt;- capture2(x)
 
+x &lt;- 10
+h05()
+#&gt; [1] 4
 x &lt;- 20
 h05()
-#&gt; [1] 10
+#&gt; [1] 4
 </code></pre>
 </li>
 </ol>
@@ -905,6 +995,7 @@ f()
 <p>但是也可以不用顯示:利用函數 <code>invisible()</code>。</p>
 <pre><code class="language-r?lang=r?class=.source">j04 &lt;- function() invisible(1)
 j04()
+x&lt;-j04() # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="仍然有傳回值1">✍️</span><!--/html_preserve-->
 </code></pre>
 <p>這種不會顯示傳回值的函數,可以用下面的方法驗證:</p>
 <pre><code class="language-r?lang=r?class=.source">print(j04())
@@ -917,7 +1008,7 @@ str(withVisible(j04()))
 #&gt;  $ value  : num 1
 #&gt;  $ visible: logi FALSE
 </code></pre>
-<p>✔️在R語言中,傳回值是不可見的函數是 <code>&lt;-</code>:</p>
+<p>✔️前面提到R語言是first-class 語言,甚至連符號都是類別,其中例如 <code>&lt;-</code>也是屬於傳回值是不可見的函數:</p>
 <pre><code class="language-r?lang=r?class=.source">a &lt;- 2
 (a &lt;- 2)
 #&gt; [1] 2
@@ -1001,7 +1092,7 @@ f()
 #&gt; a
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n784596123"></button>跳過<div  id="n784596123" class="collapse" style="overflow-x:visible"><!--/html_preserve--><ol>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n135796482"></button>跳過<div  id="n135796482" class="collapse" style="overflow-x:visible"><!--/html_preserve--><ol>
 <li>
 <p>What does <code>load()</code> return? Why don't you normally see these values?</p>
 </li>
@@ -1031,7 +1122,7 @@ code worked).</p>
 }
 capture.output2(cat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, sep = &quot;\n&quot;))
 #&gt; Warning in file.remove(temp): 無法移除檔案 'C:
-#&gt; \Users\linchao\AppData\Local\Temp\Rtmp4gET09\file255c7c56af' ，原因是
+#&gt; \Users\linchao\AppData\Local\Temp\RtmpMZretJ\file2a343ff44f9f' ，原因是
 #&gt; 'Permission denied'
 #&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot;
 </code></pre>
@@ -1067,8 +1158,8 @@ capture.output2(cat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, sep = &quot;\n&
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1638422034" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1638422034"></script>
+<link href="/blogR/css/quicknote.css?1639627411" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1639627411"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -1086,7 +1177,7 @@ capture.output2(cat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, sep = &quot;\n&
           
 
   
-<script src="/blogR/js/packhtml.js?1638422034"></script>    
+<script src="/blogR/js/packhtml.js?1639627411"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -1096,24 +1187,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1638422034"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1638422034"></script>
-  <link href="/blogR/css/featherlight.min.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1638422034" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1639627411"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1639627411"></script>
+  <link href="/blogR/css/featherlight.min.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1639627411" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1638422034"></script>
-  <link href="/blogR/css/rmd.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1638422034" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1638422034'></script>
+  <script src="/blogR/js/hugohelper.js?1639627411"></script>
+  <link href="/blogR/css/rmd.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1639627411" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1639627411'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1638422034'></script>
+<script src='/blogR/js/localsearch.js?1639627411'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1638422034" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1638422034"></script>
+    <link href="/blogR/css/syntax.css?1639627411" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1639627411"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1639627411" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -450,7 +450,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html"> <i class="far fa-clock" ></i>2.1 隨機變數[2021-12-02 PM 01:07]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_3_%E5%9F%B7%E8%A1%8C.html"> <i class="far fa-clock" ></i>1.3 執行[2021-11-25 PM 10:37]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-11-25 PM 09:58]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_2_function.html"> <i class="far fa-clock" ></i>7.2 R函數進階[2021-12-16 AM 10:59]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -467,7 +467,7 @@
 <blockquote>
 <p><strong>Theorem</strong>: If X is a continuous r.v. with CDF \( F_X(x) \), then \( U = F_X(X) \sim U(0,1) \).
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n317594682"></button>【inverse method的證明】<div  id="n317594682" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>X是隨機變數U的函數，F是連續的CDF，\(F^{-1}\)是逆函數，且U是均勻分配的RV，則\(F^{-1}(U)\)遵循F分配</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n625478139"></button>【inverse method的證明】<div  id="n625478139" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>X是隨機變數U的函數，F是連續的CDF，\(F^{-1}\)是逆函數，且U是均勻分配的RV，則\(F^{-1}(U)\)遵循F分配</p>
 <p>Proof:
 $$ P(X&lt;x)=P(F^{-1}(U)&lt;x)=P(U&lt;F(x))=F_X(x) $$</p>
 <!--html_preserve--></div></div><!--/html_preserve--></p>
@@ -506,7 +506,7 @@ discrete.inv.transform.sample &lt;- function( p.vec ) {
 <h2 id="poisson離散分配">【Poisson】離散分配</h2>
 <p>\( f_X (k;λ)=P({X=k})=\frac{λ^k}{k!} e^{-λ}  \)　</p>
 <!--html_preserve--><div class="message w-50 m-auto ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n795184263"></button>poisson案例<div  id="n795184263" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>一公司之電話通數大約每小時 20 通，求在 5 分鐘內一通電話也沒有的機率？</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n826195374"></button>poisson案例<div  id="n826195374" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>一公司之電話通數大約每小時 20 通，求在 5 分鐘內一通電話也沒有的機率？</p>
 <p>每小時 20 通, 表示每分鐘平均 \(\lambda =\frac{1}{3}\) 通/分。 因此在 5 分鐘的時間區間中, 平均的電話通數為 \( m=\lambda T=\frac{1}{3}\times 5=\frac{5}{3}\)。</p>
 <p>所以\(P(k);\equiv;P(k,5);=;\frac{(\frac{5}{3})^k}{k!} e^{-\frac{5}{3}},\quad k=0,1,2,\cdots\)</p>
 <p>因此沒有一通電話的機率 \(P(0)= e^{-\frac{5}{3}};\approx; 0.19 \)</p>
@@ -557,7 +557,7 @@ cat(x,&quot;\n&quot;) # <!--html_preserve--><span  data-bs-toggle="tooltip" data
 End Function
 </code></pre>
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n169348257"></button>測試上面的演算法<div  id="n169348257" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p><code>dpois()</code>,<code>ppois()</code>,<code>rpois()</code></p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n128974356"></button>測試上面的演算法<div  id="n128974356" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p><code>dpois()</code>,<code>ppois()</code>,<code>rpois()</code></p>
 <pre><code class="language-r?lang=r?class=.source">myp&lt;-function (lambda){
   u&lt;-runif(1)
   i=0
@@ -700,8 +700,8 @@ figure</figcaption></figure><!--/html_preserve-->
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1638422034" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1638422034"></script>
+<link href="/blogR/css/quicknote.css?1639627411" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1639627411"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -719,7 +719,7 @@ figure</figcaption></figure><!--/html_preserve-->
           
 
   
-<script src="/blogR/js/packhtml.js?1638422034"></script>    
+<script src="/blogR/js/packhtml.js?1639627411"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -729,24 +729,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1638422034"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1638422034"></script>
-  <link href="/blogR/css/featherlight.min.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1638422034" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1639627411"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1639627411"></script>
+  <link href="/blogR/css/featherlight.min.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1639627411" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1638422034"></script>
-  <link href="/blogR/css/rmd.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1638422034" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1638422034'></script>
+  <script src="/blogR/js/hugohelper.js?1639627411"></script>
+  <link href="/blogR/css/rmd.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1639627411" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1639627411'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1638422034'></script>
+<script src='/blogR/js/localsearch.js?1639627411'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

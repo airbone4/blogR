@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1638422034" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1638422034"></script>
+    <link href="/blogR/css/syntax.css?1639627411" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1639627411"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1639627411" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1638422034" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1639627411" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -433,7 +433,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html"> <i class="far fa-clock" ></i>2.1 隨機變數[2021-12-02 PM 01:07]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_3_%E5%9F%B7%E8%A1%8C.html"> <i class="far fa-clock" ></i>1.3 執行[2021-11-25 PM 10:37]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/1_5_%E7%B7%A8%E7%A2%BC.html"> <i class="far fa-clock" ></i>1.5 編碼[2021-11-25 PM 09:58]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_2_function.html"> <i class="far fa-clock" ></i>7.2 R函數進階[2021-12-16 AM 10:59]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -487,7 +487,111 @@ function showhide(aevent){
            aevent.preventDefault();
          }
 </script>
-<div class="hframe  w-100 ">
+<div class="hframe  {map[src: uclass:w-100] 
+&lt;!--html_preserve--&gt;&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;&lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34;&gt;&lt;head&gt;&lt;title&gt;R: Pairwise t tests&lt;/title&gt;
+&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34; /&gt;
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, user-scalable=yes&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;R.css&#34; /&gt;
+&lt;/head&gt;&lt;body&gt;&lt;div class=&#34;container&#34;&gt;
+
+&lt;table width=&#34;100%&#34; summary=&#34;page for pairwise.t.test&#34;&gt;&lt;tr&gt;&lt;td&gt;pairwise.t.test&lt;/td&gt;&lt;td style=&#34;text-align: right;&#34;&gt;R Documentation&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h2&gt; Pairwise t tests&lt;/h2&gt;
+
+&lt;h3&gt;Description&lt;/h3&gt;
+
+&lt;p&gt;Calculate pairwise comparisons between group levels with corrections
+for multiple testing
+&lt;/p&gt;
+
+
+&lt;h3&gt;Usage&lt;/h3&gt;
+
+&lt;pre&gt;
+pairwise.t.test(x, g, p.adjust.method = p.adjust.methods,
+                pool.sd = !paired, paired = FALSE,
+                alternative = c(&#34;two.sided&#34;, &#34;less&#34;, &#34;greater&#34;),
+                ...)
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Arguments&lt;/h3&gt;
+
+&lt;table summary=&#34;R argblock&#34;&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; response vector. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;g&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; grouping vector or factor. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;p.adjust.method&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; Method for adjusting p values (see &lt;code&gt;p.adjust&lt;/code&gt;). &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;pool.sd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; switch to allow/disallow the use of a pooled SD &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;paired&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; a logical indicating whether you want paired
+t-tests. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;alternative&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; a character string specifying the alternative
+hypothesis, must be one of &lt;code&gt;&#34;two.sided&#34;&lt;/code&gt; (default),
+&lt;code&gt;&#34;greater&#34;&lt;/code&gt; or &lt;code&gt;&#34;less&#34;&lt;/code&gt;.  Can be abbreviated.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; additional arguments to pass to &lt;code&gt;t.test&lt;/code&gt;. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;Details&lt;/h3&gt;
+
+&lt;p&gt; The &lt;code&gt;pool.sd&lt;/code&gt; switch calculates a common SD for all
+groups and uses that for all comparisons (this can be useful if some
+groups are small). This method does not actually call &lt;code&gt;t.test&lt;/code&gt;,
+so extra arguments are ignored. Pooling does not generalize to paired tests
+so &lt;code&gt;pool.sd&lt;/code&gt; and &lt;code&gt;paired&lt;/code&gt; cannot both be &lt;code&gt;TRUE&lt;/code&gt;.
+&lt;/p&gt;
+&lt;p&gt;Only the lower triangle of the matrix of possible comparisons is being
+calculated, so setting &lt;code&gt;alternative&lt;/code&gt; to anything other than
+&lt;code&gt;&#34;two.sided&#34;&lt;/code&gt; requires that the levels of &lt;code&gt;g&lt;/code&gt; are ordered
+sensibly.
+&lt;/p&gt;
+
+
+&lt;h3&gt;Value&lt;/h3&gt;
+
+&lt;p&gt;Object of class &lt;code&gt;&#34;pairwise.htest&#34;&lt;/code&gt;
+&lt;/p&gt;
+
+
+&lt;h3&gt;See Also&lt;/h3&gt;
+
+ &lt;p&gt;&lt;code&gt;t.test&lt;/code&gt;, &lt;code&gt;p.adjust&lt;/code&gt;&lt;/p&gt;
+
+
+&lt;h3&gt;Examples&lt;/h3&gt;
+
+&lt;pre&gt;
+attach(airquality)
+Month &amp;lt;- factor(Month, labels = month.abb[5:9])
+pairwise.t.test(Ozone, Month)
+pairwise.t.test(Ozone, Month, p.adjust.method = &#34;bonf&#34;)
+pairwise.t.test(Ozone, Month, pool.sd = FALSE)
+detach()
+&lt;/pre&gt;
+
+
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&lt;!--/html_preserve--&gt;
+ 0xc00702a000 &lt;nil&gt; hframe true 0 {0 {0 0}} 141 { 0 0 0} &lt;nil&gt;} ">
   <div class="infobar">
     
   <a href="#" onclick="showhide(event)">看內容</a>
@@ -662,7 +766,115 @@ function showhide(aevent){
            aevent.preventDefault();
          }
 </script>
-<div class="hframe  w-100 ">
+<div class="hframe  {map[src: uclass:w-100] 
+
+
+&lt;!--html_preserve--&gt;&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;&lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34;&gt;&lt;head&gt;&lt;title&gt;R: Pairwise t tests&lt;/title&gt;
+&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34; /&gt;
+&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, user-scalable=yes&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;R.css&#34; /&gt;
+&lt;/head&gt;&lt;body&gt;&lt;div class=&#34;container&#34;&gt;
+
+&lt;table width=&#34;100%&#34; summary=&#34;page for pairwise.t.test&#34;&gt;&lt;tr&gt;&lt;td&gt;pairwise.t.test&lt;/td&gt;&lt;td style=&#34;text-align: right;&#34;&gt;R Documentation&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h2&gt; Pairwise t tests&lt;/h2&gt;
+
+&lt;h3&gt;Description&lt;/h3&gt;
+
+&lt;p&gt;Calculate pairwise comparisons between group levels with corrections
+for multiple testing
+&lt;/p&gt;
+
+
+&lt;h3&gt;Usage&lt;/h3&gt;
+
+&lt;pre&gt;
+pairwise.t.test(x, g, p.adjust.method = p.adjust.methods,
+                pool.sd = !paired, paired = FALSE,
+                alternative = c(&#34;two.sided&#34;, &#34;less&#34;, &#34;greater&#34;),
+                ...)
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Arguments&lt;/h3&gt;
+
+&lt;table summary=&#34;R argblock&#34;&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; response vector. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;g&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; grouping vector or factor. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;p.adjust.method&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; Method for adjusting p values (see &lt;code&gt;p.adjust&lt;/code&gt;). &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;pool.sd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; switch to allow/disallow the use of a pooled SD &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;paired&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; a logical indicating whether you want paired
+t-tests. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;alternative&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; a character string specifying the alternative
+hypothesis, must be one of &lt;code&gt;&#34;two.sided&#34;&lt;/code&gt; (default),
+&lt;code&gt;&#34;greater&#34;&lt;/code&gt; or &lt;code&gt;&#34;less&#34;&lt;/code&gt;.  Can be abbreviated.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr valign=&#34;top&#34;&gt;&lt;td&gt;&lt;code&gt;...&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt; additional arguments to pass to &lt;code&gt;t.test&lt;/code&gt;. &lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;h3&gt;Details&lt;/h3&gt;
+
+&lt;p&gt; The &lt;code&gt;pool.sd&lt;/code&gt; switch calculates a common SD for all
+groups and uses that for all comparisons (this can be useful if some
+groups are small). This method does not actually call &lt;code&gt;t.test&lt;/code&gt;,
+so extra arguments are ignored. Pooling does not generalize to paired tests
+so &lt;code&gt;pool.sd&lt;/code&gt; and &lt;code&gt;paired&lt;/code&gt; cannot both be &lt;code&gt;TRUE&lt;/code&gt;.
+&lt;/p&gt;
+&lt;p&gt;Only the lower triangle of the matrix of possible comparisons is being
+calculated, so setting &lt;code&gt;alternative&lt;/code&gt; to anything other than
+&lt;code&gt;&#34;two.sided&#34;&lt;/code&gt; requires that the levels of &lt;code&gt;g&lt;/code&gt; are ordered
+sensibly.
+&lt;/p&gt;
+
+
+&lt;h3&gt;Value&lt;/h3&gt;
+
+&lt;p&gt;Object of class &lt;code&gt;&#34;pairwise.htest&#34;&lt;/code&gt;
+&lt;/p&gt;
+
+
+&lt;h3&gt;See Also&lt;/h3&gt;
+
+ &lt;p&gt;&lt;code&gt;t.test&lt;/code&gt;, &lt;code&gt;p.adjust&lt;/code&gt;&lt;/p&gt;
+
+
+&lt;h3&gt;Examples&lt;/h3&gt;
+
+&lt;pre&gt;
+attach(airquality)
+Month &amp;lt;- factor(Month, labels = month.abb[5:9])
+pairwise.t.test(Ozone, Month)
+pairwise.t.test(Ozone, Month, p.adjust.method = &#34;bonf&#34;)
+pairwise.t.test(Ozone, Month, pool.sd = FALSE)
+detach()
+&lt;/pre&gt;
+
+
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&lt;!--/html_preserve--&gt;
+
+
+#  0xc00702a0c0 &lt;nil&gt; hframe true 1 {0 {0 0}} 3437 { 0 0 0} &lt;nil&gt;} ">
   <div class="infobar">
     
   <a href="#" onclick="showhide(event)">看內容</a>
@@ -814,8 +1026,8 @@ detach()
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1638422034" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1638422034"></script>
+<link href="/blogR/css/quicknote.css?1639627411" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1639627411"></script>
 <div id="page-guide" class="bg-dark">  
   
     
@@ -829,7 +1041,7 @@ detach()
           
 
   
-<script src="/blogR/js/packhtml.js?1638422034"></script>    
+<script src="/blogR/js/packhtml.js?1639627411"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -839,24 +1051,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
   </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1638422034"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1638422034"></script>
-  <link href="/blogR/css/featherlight.min.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1638422034" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1639627411"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1639627411"></script>
+  <link href="/blogR/css/featherlight.min.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1639627411" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1638422034"></script>
-  <link href="/blogR/css/rmd.css?1638422034" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1638422034" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1638422034'></script>
+  <script src="/blogR/js/hugohelper.js?1639627411"></script>
+  <link href="/blogR/css/rmd.css?1639627411" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1639627411" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1639627411'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1638422034'></script>
+<script src='/blogR/js/localsearch.js?1639627411'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
