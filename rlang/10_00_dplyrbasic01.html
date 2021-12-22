@@ -8,23 +8,23 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1639627411" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1639627411"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link href="/blogR/css/syntax.css?1640190398" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1640190398"></script>
+    <link href='/blogR/css/bootstrap.min.css' rel="stylesheet" crossorigin="anonymous">
+    <script src='/blogR/js/bootstrap.bundle.min.js' crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1639627411" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1640190398" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1639627411" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1640190398" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1639627411" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1640190398" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
-
+    <script src='/blogR/js/class.js'></script>    
     
   </head><body><div id="top-pane" class="navbar  fixed-top ">
   <div class="container-fluid">
@@ -61,7 +61,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改November 3, 2021'>10. tidyr, dplyr basic</span>
+      title='最後修改December 23, 2021'>10. tidyr, dplyr basic</span>
         
     
 
@@ -451,33 +451,34 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_2_function.html"> <i class="far fa-clock" ></i>7.2 R函數進階[2021-12-16 AM 10:59]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/10_00_dplyrbasic01.html"> <i class="far fa-clock" ></i>10. tidyr, dplyr basic[2021-12-23 AM 12:26]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
     <ul>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">cheat sheet</a></li>
 </ul>
-<pre><code class="language-r?preclass=.ms-5.w-75">需要安裝babynames,ggplot2
-</code></pre>
+<div class="notices ms-5">
+<div class="info">需要安裝babynames,ggplot2</div>
+</div>
 <p><img src="10_00_dplyrBasic01.files/reshape.png" alt=""></p>
 <h2 id="long-and-wide-data">long and wide data</h2>
 <h3 id="寬變長">寬變長</h3>
 <p>函數<code>gather()</code>: 寬變長
 From <a href="http://stackoverflow.com/questions/1181060">http://stackoverflow.com/questions/1181060</a></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">require(tidyr)
+<pre><code class="language-r?lang=r?class=.source">require(tidyr)
 require(dplyr) # tibble
 # 每個時間點(共10個),產生3個股票,X,Y,Z
  stocks &lt;- tibble( #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏也可以用data.frame">🏷</span><!--/html_preserve-->
-  time = as.Date('2009-01-01') + 0:9,
+  time = as.Date('2011-01-01') + 0:9,
   X = rnorm(10, 0, 1),
   Y = rnorm(10, 0, 2),
   Z = rnorm(10, 0, 4)
-)
-kable(head(stocks)) #
+) 
+
+kable(head(stocks))  
 </code></pre>
-<!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n467592138"></button><div  id="n467592138" class="collapse" style="overflow-x:visible"><!--/html_preserve--><table>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">time</th>
@@ -488,50 +489,47 @@ kable(head(stocks)) #
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">2009-01-01</td>
-<td style="text-align:right">0.6778663</td>
-<td style="text-align:right">0.7513016</td>
-<td style="text-align:right">-9.9708545</td>
+<td style="text-align:left">2011-01-01</td>
+<td style="text-align:right">0.5809880</td>
+<td style="text-align:right">1.5677627</td>
+<td style="text-align:right">-2.0968534</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-02</td>
-<td style="text-align:right">-0.2238161</td>
-<td style="text-align:right">-2.1862983</td>
-<td style="text-align:right">0.6832973</td>
+<td style="text-align:left">2011-01-02</td>
+<td style="text-align:right">-0.0098641</td>
+<td style="text-align:right">-0.1116476</td>
+<td style="text-align:right">-1.6598882</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-03</td>
-<td style="text-align:right">-0.1217276</td>
-<td style="text-align:right">-0.0860699</td>
-<td style="text-align:right">-0.1664718</td>
+<td style="text-align:left">2011-01-03</td>
+<td style="text-align:right">0.6860624</td>
+<td style="text-align:right">-2.6588452</td>
+<td style="text-align:right">5.5132379</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-04</td>
-<td style="text-align:right">-0.3546435</td>
-<td style="text-align:right">0.2440224</td>
-<td style="text-align:right">7.4886484</td>
+<td style="text-align:left">2011-01-04</td>
+<td style="text-align:right">-0.7594502</td>
+<td style="text-align:right">1.8254579</td>
+<td style="text-align:right">-0.0976793</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-05</td>
-<td style="text-align:right">0.3119788</td>
-<td style="text-align:right">-1.5312788</td>
-<td style="text-align:right">-3.7477823</td>
+<td style="text-align:left">2011-01-05</td>
+<td style="text-align:right">-0.0614846</td>
+<td style="text-align:right">-1.0578723</td>
+<td style="text-align:right">1.3037204</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-06</td>
-<td style="text-align:right">-0.5437336</td>
-<td style="text-align:right">-1.1486502</td>
-<td style="text-align:right">4.7369778</td>
+<td style="text-align:left">2011-01-06</td>
+<td style="text-align:right">-0.0949446</td>
+<td style="text-align:right">-0.0736560</td>
+<td style="text-align:right">2.0693562</td>
 </tr>
 </tbody>
 </table>
-<!--html_preserve--></div></div><!--/html_preserve-->
-<pre><code class="language-r?lang=r?class=.output?preclass=ms-5.w-75">
-
-kable(gather(stocks, stock, price, -time)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏除了時間欄位以外,其餘欄位依序填到兩個新欄位,分別是1)分組欄位(stock)和2)數值欄位(price)">🏷</span><!--/html_preserve--> 
+<pre><code class="language-r?lang=r?class=.source">rst&lt;-gather(stocks, stock, price, -time) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="除了時間欄位以外,其餘欄位依序填到兩個新欄位,分別是1)&lt;code&gt;KEY&lt;/code&gt;(stock)和2)&lt;code&gt;VALUE&lt;/code&gt;(price) &lt;br/&gt; 這裡只有3個欄位,扣掉以後剩下XYZ三個欄位,然後欄位名稱填到&lt;code&gt;KEY&lt;/code&gt;對應的數值填到&lt;code&gt;VALUE&lt;/code&gt;&lt;br/&gt;也可以用管道寫法 &lt;code&gt;stocks %&amp;gt;% gather(stock, price, -time)&lt;/code&gt;">🏷️</span><!--/html_preserve--> 
+kable(rst) 
 </code></pre>
-<!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n796284135"></button><div  id="n796284135" class="collapse" style="overflow-x:visible"><!--/html_preserve--><table>
+<table>
 <thead>
 <tr>
 <th style="text-align:left">time</th>
@@ -541,175 +539,157 @@ kable(gather(stocks, stock, price, -time)) #<!--html_preserve--><span  data-bs-t
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">2009-01-01</td>
+<td style="text-align:left">2011-01-01</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">0.6778663</td>
+<td style="text-align:right">0.5809880</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-02</td>
+<td style="text-align:left">2011-01-02</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">-0.2238161</td>
+<td style="text-align:right">-0.0098641</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-03</td>
+<td style="text-align:left">2011-01-03</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">-0.1217276</td>
+<td style="text-align:right">0.6860624</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-04</td>
+<td style="text-align:left">2011-01-04</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">-0.3546435</td>
+<td style="text-align:right">-0.7594502</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-05</td>
+<td style="text-align:left">2011-01-05</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">0.3119788</td>
+<td style="text-align:right">-0.0614846</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-06</td>
+<td style="text-align:left">2011-01-06</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">-0.5437336</td>
+<td style="text-align:right">-0.0949446</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-07</td>
+<td style="text-align:left">2011-01-07</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">0.1571257</td>
+<td style="text-align:right">-0.6436006</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-08</td>
+<td style="text-align:left">2011-01-08</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">-1.4585921</td>
+<td style="text-align:right">0.0139740</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-09</td>
+<td style="text-align:left">2011-01-09</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">1.1313788</td>
+<td style="text-align:right">-0.3794848</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-10</td>
+<td style="text-align:left">2011-01-10</td>
 <td style="text-align:left">X</td>
-<td style="text-align:right">-1.1935117</td>
+<td style="text-align:right">1.3905566</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-01</td>
+<td style="text-align:left">2011-01-01</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">0.7513016</td>
+<td style="text-align:right">1.5677627</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-02</td>
+<td style="text-align:left">2011-01-02</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">-2.1862983</td>
+<td style="text-align:right">-0.1116476</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-03</td>
+<td style="text-align:left">2011-01-03</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">-0.0860699</td>
+<td style="text-align:right">-2.6588452</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-04</td>
+<td style="text-align:left">2011-01-04</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">0.2440224</td>
+<td style="text-align:right">1.8254579</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-05</td>
+<td style="text-align:left">2011-01-05</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">-1.5312788</td>
+<td style="text-align:right">-1.0578723</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-06</td>
+<td style="text-align:left">2011-01-06</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">-1.1486502</td>
+<td style="text-align:right">-0.0736560</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-07</td>
+<td style="text-align:left">2011-01-07</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">1.6882895</td>
+<td style="text-align:right">4.8767117</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-08</td>
+<td style="text-align:left">2011-01-08</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">-4.4474627</td>
+<td style="text-align:right">0.6615530</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-09</td>
+<td style="text-align:left">2011-01-09</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">1.1243285</td>
+<td style="text-align:right">-0.8495659</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-10</td>
+<td style="text-align:left">2011-01-10</td>
 <td style="text-align:left">Y</td>
-<td style="text-align:right">-2.4531855</td>
+<td style="text-align:right">-1.8523956</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-01</td>
+<td style="text-align:left">2011-01-01</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">-9.9708545</td>
+<td style="text-align:right">-2.0968534</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-02</td>
+<td style="text-align:left">2011-01-02</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">0.6832973</td>
+<td style="text-align:right">-1.6598882</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-03</td>
+<td style="text-align:left">2011-01-03</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">-0.1664718</td>
+<td style="text-align:right">5.5132379</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-04</td>
+<td style="text-align:left">2011-01-04</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">7.4886484</td>
+<td style="text-align:right">-0.0976793</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-05</td>
+<td style="text-align:left">2011-01-05</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">-3.7477823</td>
+<td style="text-align:right">1.3037204</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-06</td>
+<td style="text-align:left">2011-01-06</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">4.7369778</td>
+<td style="text-align:right">2.0693562</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-07</td>
+<td style="text-align:left">2011-01-07</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">5.3013235</td>
+<td style="text-align:right">1.7608734</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-08</td>
+<td style="text-align:left">2011-01-08</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">-0.6878305</td>
+<td style="text-align:right">0.2977582</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-09</td>
+<td style="text-align:left">2011-01-09</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">4.0872611</td>
+<td style="text-align:right">9.8361292</td>
 </tr>
 <tr>
-<td style="text-align:left">2009-01-10</td>
+<td style="text-align:left">2011-01-10</td>
 <td style="text-align:left">Z</td>
-<td style="text-align:right">-6.7961287</td>
+<td style="text-align:right">-4.0950475</td>
 </tr>
 </tbody>
 </table>
-<!--html_preserve--></div></div><!--/html_preserve-->
-<pre><code class="language-r?lang=r?class=.output?preclass=ms-5.w-75">
-stocks %&gt;% gather(stock, price, -time) # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏也可以用管道寫法 &lt;code&gt;stocks %&amp;gt;% gather(stock, price, -time)&lt;/code&gt;">🏷</span><!--/html_preserve--> <!--html_preserve--><div class="message ms-0 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n753469821"></button><div  id="n753469821" class="collapse" style="overflow-x:visbile"><!--/html_preserve-->#&gt; # A tibble: 30 x 3
-#&gt;    time       stock  price
-#&gt;    &lt;date&gt;     &lt;chr&gt;  &lt;dbl&gt;
-#&gt;  1 2009-01-01 X      0.678
-#&gt;  2 2009-01-02 X     -0.224
-#&gt;  3 2009-01-03 X     -0.122
-#&gt;  4 2009-01-04 X     -0.355
-#&gt;  5 2009-01-05 X      0.312
-#&gt;  6 2009-01-06 X     -0.544
-#&gt;  7 2009-01-07 X      0.157
-#&gt;  8 2009-01-08 X     -1.46 
-#&gt;  9 2009-01-09 X      1.13 
-#&gt; 10 2009-01-10 X     -1.19 
-#&gt; # ... with 20 more rows<!--html_preserve--></div></div><!--/html_preserve-->
-</code></pre>
 <div class="notices  d-none ">
 <div class="info"><p>🐱‍👤直接寫出html : 利用<code>writeLines()</code>,例如設定css
 設定css</p>
@@ -718,70 +698,196 @@ kable(head(mtcars))
 </code></pre>
 </div>
 </div>
+<p><!--html_preserve--><div class="position-relative warning p-3"><!--/html_preserve--><p>每個時間點(共5個),產生3個股票,X,Y,Z共兩組,測試長寬轉換</p>
+<pre><code class="language-r?lang=r?class=.source"> stocks1 &lt;- tibble( #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏也可以用data.frame&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+  group=rep(1,5),
+  time = as.Date('2011-01-01') + 0:4,
+  X = rnorm(5, 0, 1),
+  Y = rnorm(5, 0, 2),
+  Z = rnorm(5, 0, 4)
+) 
+ stocks2 &lt;- tibble( #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏也可以用data.frame&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+  group=rep(2,5),
+  time = as.Date('2011-01-01') + 0:4,
+  X = rnorm(5, 0, 1),
+  Y = rnorm(5, 0, 2),
+  Z = rnorm(5, 0, 4)
+)
+stocks&lt;- bind_rows(stocks1,stocks2)
+kable(stocks)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">group</th>
+<th style="text-align:left">time</th>
+<th style="text-align:right">X</th>
+<th style="text-align:right">Y</th>
+<th style="text-align:right">Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2011-01-01</td>
+<td style="text-align:right">0.2379382</td>
+<td style="text-align:right">-1.4769400</td>
+<td style="text-align:right">5.1098570</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2011-01-02</td>
+<td style="text-align:right">-0.1579551</td>
+<td style="text-align:right">-0.2810863</td>
+<td style="text-align:right">7.9387294</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2011-01-03</td>
+<td style="text-align:right">0.2868259</td>
+<td style="text-align:right">-1.5837312</td>
+<td style="text-align:right">9.8294281</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2011-01-04</td>
+<td style="text-align:right">0.0760063</td>
+<td style="text-align:right">-0.5269315</td>
+<td style="text-align:right">0.8675916</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2011-01-05</td>
+<td style="text-align:right">-0.2323477</td>
+<td style="text-align:right">-0.7172991</td>
+<td style="text-align:right">1.4852934</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:left">2011-01-01</td>
+<td style="text-align:right">1.1645191</td>
+<td style="text-align:right">-1.2592966</td>
+<td style="text-align:right">-3.4174565</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:left">2011-01-02</td>
+<td style="text-align:right">-0.1894457</td>
+<td style="text-align:right">-1.5759197</td>
+<td style="text-align:right">1.8410168</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:left">2011-01-03</td>
+<td style="text-align:right">0.2316267</td>
+<td style="text-align:right">-1.6620923</td>
+<td style="text-align:right">-3.8215735</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:left">2011-01-04</td>
+<td style="text-align:right">-0.4225455</td>
+<td style="text-align:right">-2.8074974</td>
+<td style="text-align:right">6.1690483</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:left">2011-01-05</td>
+<td style="text-align:right">-0.6428280</td>
+<td style="text-align:right">0.0479795</td>
+<td style="text-align:right">2.6454802</td>
+</tr>
+</tbody>
+</table>
+<!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
+    data-bs-toggle="collapse" data-bs-target="#quiz-2270">提示</button>
+</div><!--/html_preserve-->
+<!--html_preserve--><div class="collapse info p-3" id="quiz-2270"><!--/html_preserve--><p>寬轉長:以下寫法都一樣</p>
+<pre><code class="language-r">stocks %&gt;% gather(stock,price,-group,-time)
+stocks %&gt;% gather(stock,price,X:Z)
+stocks %&gt;% gather(stock,price,3:5)
+stocks %&gt;% gather(stock,price,X,Y,Z)
+stocks %&gt;% gather(stock,price,X,Y,Z,-group,-time)
+</code></pre>
+<p>長轉寬:參考後面段落</p>
+<!--html_preserve--></div><!--/html_preserve--></p>
 <h3 id="長到寬資料">長到寬資料</h3>
 <p>利用函數<code>spread()</code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">long&lt;-gather(stocks, stock, price, -time) #轉成長資料
+<pre><code class="language-r?lang=r?class=.source">long&lt;-gather(stocks, stock, price, -time) #轉成長資料
 str(long)
-#&gt; tibble [30 x 3] (S3: tbl_df/tbl/data.frame)
-#&gt;  $ time : Date[1:30], format: &quot;2009-01-01&quot; &quot;2009-01-02&quot; ...
-#&gt;  $ stock: chr [1:30] &quot;X&quot; &quot;X&quot; &quot;X&quot; &quot;X&quot; ...
-#&gt;  $ price: num [1:30] 0.678 -0.224 -0.122 -0.355 0.312 ...
-wide &lt;-spread(long,stock,price) #轉成寬資料
+#&gt; tibble [40 x 3] (S3: tbl_df/tbl/data.frame)
+#&gt;  $ time : Date[1:40], format: &quot;2011-01-01&quot; &quot;2011-01-02&quot; ...
+#&gt;  $ stock: chr [1:40] &quot;group&quot; &quot;group&quot; &quot;group&quot; &quot;group&quot; ...
+#&gt;  $ price: num [1:40] 1 1 1 1 1 2 2 2 2 2 ...
+wide &lt;-spread(long,stock,price) #轉成寬資料 或 <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="wide&amp;lt;-long %&amp;gt;% spread(stock,price)">🏷️</span><!--/html_preserve-->
+#&gt; Error: Each row of output must be identified by a unique combination of keys.
+#&gt; Keys are shared for 40 rows:
+#&gt; * 1, 6
+#&gt; * 2, 7
+#&gt; * 3, 8
+#&gt; * 4, 9
+#&gt; * 5, 10
+#&gt; * 11, 16
+#&gt; * 12, 17
+#&gt; * 13, 18
+#&gt; * 14, 19
+#&gt; * 15, 20
+#&gt; * 21, 26
+#&gt; * 22, 27
+#&gt; * 23, 28
+#&gt; * 24, 29
+#&gt; * 25, 30
+#&gt; * 31, 36
+#&gt; * 32, 37
+#&gt; * 33, 38
+#&gt; * 34, 39
+#&gt; * 35, 40
 str(wide)
-#&gt; tibble [10 x 4] (S3: tbl_df/tbl/data.frame)
-#&gt;  $ time: Date[1:10], format: &quot;2009-01-01&quot; &quot;2009-01-02&quot; ...
-#&gt;  $ X   : num [1:10] 0.678 -0.224 -0.122 -0.355 0.312 ...
-#&gt;  $ Y   : num [1:10] 0.7513 -2.1863 -0.0861 0.244 -1.5313 ...
-#&gt;  $ Z   : num [1:10] -9.971 0.683 -0.166 7.489 -3.748 ...
+#&gt; Error in str(wide): 找不到物件 'wide'
 head(wide)
-#&gt; # A tibble: 6 x 4
-#&gt;   time            X       Y      Z
-#&gt;   &lt;date&gt;      &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
-#&gt; 1 2009-01-01  0.678  0.751  -9.97 
-#&gt; 2 2009-01-02 -0.224 -2.19    0.683
-#&gt; 3 2009-01-03 -0.122 -0.0861 -0.166
-#&gt; 4 2009-01-04 -0.355  0.244   7.49 
-#&gt; 5 2009-01-05  0.312 -1.53   -3.75 
-#&gt; 6 2009-01-06 -0.544 -1.15    4.74
+#&gt; Error in head(wide): 找不到物件 'wide'
 </code></pre>
 <p>更多參考:
 <a href="http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/">cookbook for R</a></p>
 <h2 id="dplyr-的向量函數">dplyr 的向量函數</h2>
 <p>函數名 功能</p>
 <ul>
-<li>
-<p><code>row_number()</code> 排序(😒不是紀錄號碼),如果數值一樣,則靠前出現的元素排名在前,例如(3,3) 則 1,2</p>
-</li>
-<li>
-<p><code>min_rank()</code> 排序,如果數值一樣,則都是同一等級，但是，佔用下一名次。例如</p>
+<li><code>row_number()</code> 排序(😒不是紀錄號碼),如果數值一樣,則靠前出現的元素排名在前,例如(3,3) 則 1,2</li>
+<li><code>min_rank()</code> 排序,如果數值一樣,則都是同一等級，但是，佔用下一名次。例如
 <pre><code class="language-r">data&lt;-c(3,3,4)  
 min_rank(data)
 #&gt; [1] 1 1 3 #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏沒有2">🏷</span><!--/html_preserve-->
 </code></pre>
 </li>
-<li>
-<p><code>dense_rank()</code> 排序,如果數值一樣,則都是同一等級，但是，<code>不</code>佔用下一名次</p>
+<li><code>dense_rank()</code> 排序,如果數值一樣,則都是同一等級，但是，<code>不</code>佔用下一名次
 <pre><code class="language-r">data&lt;-c(3,3,4)  
 dense_rank(data)
 #&gt; [1] 1 1 2
 </code></pre>
 </li>
-<li>
-<p><code>percent_rank()</code> 按百分比的排名</p>
+<li><code>percent_rank()</code> 按百分比的排名
 <pre><code class="language-r">percent_rank = (min_rank(x) - 1)/(sum(!is.na(x)) - 1)   
 </code></pre>
 </li>
-<li>
-<p><code>cume_dist()</code> 累計分佈</p>
+<li><code>cume_dist()</code> 累計分佈</li>
+<li><code>ntile()</code> : <code>floor(n * (row_number(x) - 1)/len + 1) </code>
+<pre><code class="language-r">x &lt;- c(5, 1, 3, 2, 2)
+ntile(x, 2) #分成2部分
+#&gt; [1]  2  1  2  1  1 
+ntile(1:8, 3) # 分成3部分
+#&gt; [1] 1 1 1 2 2 2 3 3
+</code></pre>
 </li>
-<li>
-<p><code>ntile()</code> : <code>floor(n * (row_number(x) - 1)/len + 1) </code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">data&lt;-round(runif(10)*10)
+</ul>
+<p>範例</p>
+<pre><code class="language-r?lang=r?class=.source">data&lt;-round(runif(10)*10)
 pr&lt;-percent_rank(data)
 cd&lt;-cume_dist(data)
 mr&lt;-min_rank(data)
+#彙整上面資料成表格
 df&lt;-data.frame(data,pr,mr,cd)
 arrange(df,data)
+#&gt; [1] &quot;處理表格&quot;
 </code></pre>
 
   
@@ -802,7 +908,7 @@ arrange(df,data)
 
 
 <!--html_preserve--><div   class="table-responsive kable">
-<table  class="ms-5 w-75">
+<table  class="w-50 ms-5">
 <thead  class="">
 <tr >
 <th  style="text-align:right">data</th>
@@ -813,13 +919,13 @@ arrange(df,data)
 </thead>
 <tbody >
 <tr >
-<td  style="text-align:right">0</td>
+<td  style="text-align:right">1</td>
 <td  style="text-align:right">0.0000000</td>
 <td  style="text-align:right">1</td>
 <td  style="text-align:right">0.1</td>
 </tr>
 <tr >
-<td  style="text-align:right">1</td>
+<td  style="text-align:right">2</td>
 <td  style="text-align:right">0.1111111</td>
 <td  style="text-align:right">2</td>
 <td  style="text-align:right">0.2</td>
@@ -828,46 +934,46 @@ arrange(df,data)
 <td  style="text-align:right">3</td>
 <td  style="text-align:right">0.2222222</td>
 <td  style="text-align:right">3</td>
-<td  style="text-align:right">0.4</td>
+<td  style="text-align:right">0.6</td>
 </tr>
 <tr >
 <td  style="text-align:right">3</td>
 <td  style="text-align:right">0.2222222</td>
 <td  style="text-align:right">3</td>
-<td  style="text-align:right">0.4</td>
-</tr>
-<tr >
-<td  style="text-align:right">4</td>
-<td  style="text-align:right">0.4444444</td>
-<td  style="text-align:right">5</td>
-<td  style="text-align:right">0.5</td>
-</tr>
-<tr >
-<td  style="text-align:right">6</td>
-<td  style="text-align:right">0.5555556</td>
-<td  style="text-align:right">6</td>
 <td  style="text-align:right">0.6</td>
 </tr>
 <tr >
-<td  style="text-align:right">7</td>
-<td  style="text-align:right">0.6666667</td>
-<td  style="text-align:right">7</td>
-<td  style="text-align:right">0.8</td>
+<td  style="text-align:right">3</td>
+<td  style="text-align:right">0.2222222</td>
+<td  style="text-align:right">3</td>
+<td  style="text-align:right">0.6</td>
 </tr>
 <tr >
-<td  style="text-align:right">7</td>
-<td  style="text-align:right">0.6666667</td>
-<td  style="text-align:right">7</td>
-<td  style="text-align:right">0.8</td>
+<td  style="text-align:right">3</td>
+<td  style="text-align:right">0.2222222</td>
+<td  style="text-align:right">3</td>
+<td  style="text-align:right">0.6</td>
 </tr>
 <tr >
+<td  style="text-align:right">5</td>
+<td  style="text-align:right">0.6666667</td>
+<td  style="text-align:right">7</td>
+<td  style="text-align:right">0.7</td>
+</tr>
+<tr >
+<td  style="text-align:right">6</td>
+<td  style="text-align:right">0.7777778</td>
 <td  style="text-align:right">8</td>
-<td  style="text-align:right">0.8888889</td>
-<td  style="text-align:right">9</td>
 <td  style="text-align:right">0.9</td>
 </tr>
 <tr >
-<td  style="text-align:right">10</td>
+<td  style="text-align:right">6</td>
+<td  style="text-align:right">0.7777778</td>
+<td  style="text-align:right">8</td>
+<td  style="text-align:right">0.9</td>
+</tr>
+<tr >
+<td  style="text-align:right">8</td>
 <td  style="text-align:right">1.0000000</td>
 <td  style="text-align:right">10</td>
 <td  style="text-align:right">1.0</td>
@@ -876,10 +982,8 @@ arrange(df,data)
 </table>
 
 </div><!--/html_preserve-->
-</li>
-</ul>
-<p>其他範例</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">x &lt;- c(5, 1, 3, 2, 2, NA)
+<p>更多範例</p>
+<pre><code class="language-r?lang=r?class=.source">x &lt;- c(5, 1, 3, 2, 2, NA)
 row_number(x)
 #&gt; [1]  5  1  4  2  3 NA
 min_rank(x)
@@ -936,39 +1040,47 @@ with(dataframe, dataframe[order(col1, col2, col3), ])
 </div>
 </div>
 <p><!--html_preserve--><div class="position-relative warning p-3"><!--/html_preserve--><p>rank等級想要由大到小可以像下面這樣</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">data
-#&gt;  [1]  1  8 10  0  7  6  3  3  4  7
-row_number(desc(data))
-#&gt;  [1]  9  2  1 10  3  5  7  8  6  4
+<pre><code class="language-r?lang=r?class=.source">data
+#&gt;  [1] 3 5 2 3 6 8 3 6 3 1
+row_number(desc(data)) #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;&amp;lt;code&amp;gt;row_number()&amp;lt;/code&amp;gt; 不是橫行號碼💀,而是&amp;lt;code&amp;gt;rank()&amp;lt;/code&amp;gt;&quot;&gt;🏷️&lt;/span&gt;&lt;!--/html_preserve--&gt;
+#&gt;  [1]  5  4  9  6  2  1  7  3  8 10
 </code></pre>
 <p>❓探討為甚麼?</p>
 <!--html_preserve--><button type="button" class="btn btn-primary position-absolute top-0 end-0 p-0" 
     data-bs-toggle="collapse" data-bs-target="#quiz-02135">提示</button>
 </div><!--/html_preserve-->
-<!--html_preserve--><div class="collapse info p-3" id="quiz-02135"><!--/html_preserve--><pre><code class="language-r">desc(data)
-#&gt;  [1] -7 -4 -1 -6 -4 -8 -9 -3 -1 -2 #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏原來的資料變成負數&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+<!--html_preserve--><div class="collapse info p-3" id="quiz-02135"><!--/html_preserve--><pre><code class="language-r?lang=r?class=.source">desc(data) #&lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏原來的資料變成負數&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
+#&gt;  [1] -3 -5 -2 -3 -6 -8 -3 -6 -3 -1
 row_number(data)
-#&gt;  [1]  8  5  1  7  6  9 10  4  2  3
+#&gt;  [1]  3  7  2  4  8 10  5  9  6  1
 </code></pre>
 <!--html_preserve--></div><!--/html_preserve--></p>
 <div class="notices ms-5">
 <div class="info"><p>複習一下Percentile</p>
 <p>❓Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">data<-runif(200) 
+<pre><code class="language-r?lang=r?class=.source">data<-runif(200) 
 quantile(data, c(.32, .57, .98)) 
 #>       32%       57%       98% 
-#> 0.2398605 0.5510189 0.9456776
+#> 0.3270967 0.5239496 0.9705282
 </code></pre>
 </div>
 </div>
+<p>將欄位改名稱,如原來的股票X改成nx</p>
+<pre><code>rename(stocks, nx=X)
+</code></pre>
+<p>如果不用rename</p>
+<pre><code class="language-r">stocks$nx&lt;-stocks$X
+stocks$X&lt;-NULL
+</code></pre>
 <h3 id="subset">subset</h3>
 <p><img src="10_00_dplyrBasic01.files/subset.png" alt=""></p>
 <ul>
 <li>select()選欄位</li>
 <li>filter()選紀錄</li>
 </ul>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">library(babynames)
+<pre><code class="language-r?lang=r?class=.source">library(babynames)
 babynames 
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 1,924,665 x 5
 #&gt;     year sex   name          n   prop
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;
@@ -985,6 +1097,7 @@ babynames
 #&gt; # ... with 1,924,655 more rows
 
 babynames %&gt;% select(-prop) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏一個有五個欄位,扣掉欄位prop">🏷</span><!--/html_preserve-->
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 1,924,665 x 4
 #&gt;     year sex   name          n
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;
@@ -1000,6 +1113,7 @@ babynames %&gt;% select(-prop) #<!--html_preserve--><span  data-bs-toggle="toolt
 #&gt; 10  1880 F     Sarah      1288
 #&gt; # ... with 1,924,655 more rows
 babynames %&gt;% select(year:n)
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 1,924,665 x 4
 #&gt;     year sex   name          n
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;
@@ -1017,6 +1131,7 @@ babynames %&gt;% select(year:n)
 # starts_with(), ends_with(), contains()
 
 babynames %&gt;% filter(name == &quot;Hadley&quot;)
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 163 x 5
 #&gt;     year sex   name       n      prop
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;     &lt;dbl&gt;
@@ -1032,6 +1147,7 @@ babynames %&gt;% filter(name == &quot;Hadley&quot;)
 #&gt; 10  1916 M     Hadley    14 0.0000152
 #&gt; # ... with 153 more rows
 babynames %&gt;% filter(year == 1900, sex == &quot;F&quot;)
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 2,224 x 5
 #&gt;     year sex   name          n   prop
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;
@@ -1047,6 +1163,7 @@ babynames %&gt;% filter(year == 1900, sex == &quot;F&quot;)
 #&gt; 10  1900 F     Lillian    3414 0.0107
 #&gt; # ... with 2,214 more rows
 babynames %&gt;% filter(year == 2013, sex == &quot;F&quot;)
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 19,231 x 5
 #&gt;     year sex   name          n    prop
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;
@@ -1063,11 +1180,12 @@ babynames %&gt;% filter(year == 2013, sex == &quot;F&quot;)
 #&gt; # ... with 19,221 more rows
 </code></pre>
 <p>函數<code>mutate()</code></p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">babynames %&gt;%
+<pre><code class="language-r?lang=r?class=.source">babynames %&gt;%
   mutate(
     first = tolower(substr(name, 1, 1)),
     last = substr(name, nchar(name), nchar(name))
   )
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 1,924,665 x 7
 #&gt;     year sex   name          n   prop first last 
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
@@ -1085,6 +1203,7 @@ babynames %&gt;% filter(year == 2013, sex == &quot;F&quot;)
 
 babynames %&gt;%
   arrange(desc(prop))
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 1,924,665 x 5
 #&gt;     year sex   name        n   prop
 #&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;int&gt;  &lt;dbl&gt;
@@ -1102,6 +1221,7 @@ babynames %&gt;%
 
 babynames %&gt;%
   summarise(n = sum(n)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏對n欄位加總">🏷</span><!--/html_preserve-->
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 1 x 1
 #&gt;           n
 #&gt;       &lt;int&gt;
@@ -1112,7 +1232,8 @@ babynames %&gt;%
 <li>函數<code>group_by()</code> 用來分組，不會影響到原來的資料,只是添加資訊</li>
 <li>取消分組的函數為<code>ungroup()</code></li>
 </ul>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">head(mtcars)
+<pre><code class="language-r?lang=r?class=.source">head(mtcars)
+#&gt; [1] &quot;處理表格&quot;
 </code></pre>
 
   
@@ -1133,7 +1254,7 @@ babynames %&gt;%
 
 
 <!--html_preserve--><div   class="table-responsive kable">
-<table  class="ms-5 w-75">
+<table  class="w-50 ms-5">
 <thead  class="">
 <tr >
 <th  style="text-align:left"></th>
@@ -1239,7 +1360,7 @@ babynames %&gt;%
 </table>
 
 </div><!--/html_preserve-->
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">str(mtcars)
+<pre><code class="language-r?lang=r?class=.source">str(mtcars)
 #&gt; 'data.frame':	32 obs. of  11 variables:
 #&gt;  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
 #&gt;  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
@@ -1254,6 +1375,7 @@ babynames %&gt;%
 #&gt;  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
 by_cyl &lt;- mtcars %&gt;% group_by(cyl)
 head(by_cyl) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏可以看到只是添加資訊,原來的資料欄位沒變">🏷</span><!--/html_preserve-->
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 6 x 11
 #&gt; # Groups:   cyl [3]
 #&gt;     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
@@ -1287,7 +1409,8 @@ str(by_cyl)
 #&gt;   ..- attr(*, &quot;.drop&quot;)= logi TRUE
 </code></pre>
 <p>但是分組結果會影響其他dplyr指令的計算結果:</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">by_cyl %&gt;% summarise( disp = mean(disp),  hp = mean(hp) )
+<pre><code class="language-r?lang=r?class=.source">by_cyl %&gt;% summarise( disp = mean(disp),  hp = mean(hp) )
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 3 x 3
 #&gt;     cyl  disp    hp
 #&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -1295,6 +1418,7 @@ str(by_cyl)
 #&gt; 2     6  183. 122. 
 #&gt; 3     8  353. 209.
 by_cyl %&gt;% filter(disp == max(disp))
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 3 x 11
 #&gt; # Groups:   cyl [3]
 #&gt;     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
@@ -1303,7 +1427,8 @@ by_cyl %&gt;% filter(disp == max(disp))
 #&gt; 2  24.4     4  147.    62  3.69  3.19  20       1     0     4     2
 #&gt; 3  10.4     8  472    205  2.93  5.25  18.0     0     0     3     4
 </code></pre>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">dplyr::group_by(iris, Species)
+<pre><code class="language-r?lang=r?class=.source">dplyr::group_by(iris, Species)
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 150 x 5
 #&gt; # Groups:   Species [3]
 #&gt;    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -1323,6 +1448,7 @@ by_cyl %&gt;% filter(disp == max(disp))
 #dplyr::ungroup(iris) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏僅僅移除分組資訊">🏷</span><!--/html_preserve-->
 
 iris %&gt;% group_by(Species) %&gt;% summarise(mean=mean(Sepal.Length))
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 3 x 2
 #&gt;   Species     mean
 #&gt;   &lt;fct&gt;      &lt;dbl&gt;
@@ -1369,6 +1495,7 @@ sex=c(&quot;f&quot;,	&quot;f&quot;,	&quot;f&quot;,	&quot;f&quot;,	&quot;f&quot;,
 value=c(1,	2,	3,	4,	5,	6,	7,	8,	9,	10)
 odf&lt;-data.frame(sex,year,value)
 head(odf)
+#&gt; [1] &quot;處理表格&quot;
 </code></pre>
 
   
@@ -1438,6 +1565,7 @@ head(odf)
 <pre><code class="language-r?lang=r?class=.source?preclass=">df&lt;-group_by(odf,sex)
 ndf&lt;-mutate(df,rank=min_rank(value)) # <!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏增加新欄位">🏷</span><!--/html_preserve-->
 arrange(ndf,sex) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏根據sex由低到高排序">🏷</span><!--/html_preserve-->
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 10 x 4
 #&gt; # Groups:   sex [2]
 #&gt;    sex    year value  rank
@@ -1461,6 +1589,7 @@ arrange(ndf,sex) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-ht
   mutate(rank = min_rank(value)) 
 
 arrange(ndf,sex)
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 10 x 4
 #&gt; # Groups:   sex [2]
 #&gt;    sex    year value  rank
@@ -1479,7 +1608,7 @@ arrange(ndf,sex)
 </li>
 </ol>
 <p>看看其他範例</p>
-<pre><code class="language-r?lang=r?class=.source?preclass=ms-5.w-75">df %&gt;% group_by(sex) %&gt;%str() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏分組以後放到非dyplr套件的函數&lt;code&gt;str()&lt;/code&gt;要看結構,結果並沒有產生兩個分組結構，也就是說&lt;code&gt;str()&lt;/code&gt;不認識分組結構">🏷</span><!--/html_preserve-->
+<pre><code class="language-r?lang=r?class=.source">df %&gt;% group_by(sex) %&gt;%str() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏分組以後放到非dyplr套件的函數&lt;code&gt;str()&lt;/code&gt;要看結構,結果並沒有產生兩個分組結構，也就是說&lt;code&gt;str()&lt;/code&gt;不認識分組結構">🏷</span><!--/html_preserve-->
 #&gt; grouped_df [10 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
 #&gt;  $ sex  : chr [1:10] &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; ...
 #&gt;  $ year : num [1:10] 1990 1991 1990 1991 1990 ...
@@ -1495,6 +1624,7 @@ arrange(ndf,sex)
 babynames %&gt;%
   group_by(name) %&gt;%
   summarise(n = sum(n)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏n 是欄位名稱">🏷</span><!--/html_preserve-->
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 97,310 x 2
 #&gt;    name          n
 #&gt;    &lt;chr&gt;     &lt;int&gt;
@@ -1514,6 +1644,7 @@ babynames %&gt;%
   filter(name %in% c(&quot;John&quot;, &quot;Mary&quot;, &quot;William&quot;)) %&gt;%
   group_by(name, sex) %&gt;%
   summarise(n = sum(n))
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 6 x 3
 #&gt; # Groups:   name [3]
 #&gt;   name    sex         n
@@ -1529,6 +1660,7 @@ babynames %&gt;%
   group_by(year, sex) %&gt;%
   mutate(rank = min_rank(desc(n))) %&gt;%
   tail() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏只看後幾筆">🏷</span><!--/html_preserve-->
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 6 x 6
 #&gt; # Groups:   year, sex [1]
 #&gt;    year sex   name       n       prop  rank
@@ -1549,6 +1681,7 @@ babynames %&gt;%
   filter(name == &quot;Hadley&quot;) %&gt;%
   group_by(sex) %&gt;%
   summarise(n = sum(n))
+#&gt; [1] &quot;處理表格&quot;
 #&gt; # A tibble: 2 x 2
 #&gt;   sex       n
 #&gt;   &lt;chr&gt; &lt;int&gt;
@@ -1559,15 +1692,25 @@ babynames %&gt;%
 <li>
 <p>The travesty延續上題，各年的的男女Hadley數目?</p>
 <pre><code class="language-r?lang=r?class=.source?preclass=">library(ggplot2)
+#<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏過濾出來,然後按照年度(x),出生數(y)作圖">🏷</span><!--/html_preserve-->
 babynames %&gt;%
   filter(name == &quot;Hadley&quot;) %&gt;%
-  ggplot(aes(year, n)) + 
-    geom_line(aes(colour = sex)) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="👏過濾出來,然後按照年度(x),出生數(y)作圖">🏷</span><!--/html_preserve-->
+  ggplot(aes(year, n,color=sex)) + 
+  geom_line() 
 </code></pre>
-<!--html_preserve--><figure  class="figure nopre    "><img src="10_00_dplyrBasic01_files/figure-html/unnamed-chunk-18-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
+<!--html_preserve--><figure  class="figure nopre    "><img src="10_00_dplyrBasic01_files/figure-html/unnamed-chunk-20-1.png" class="figure-img w-100 "/><figcaption class="figure-caption">
 figure</figcaption></figure><!--/html_preserve-->
 </li>
 </ol>
+<p>也可以</p>
+<pre><code>
+    babynames %&gt;%
+      filter(name == &quot;Hadley&quot;) %&gt;%
+      ggplot(aes(year, n)) + 
+        geom_line(aes(colour = sex)) 
+
+
+</code></pre>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -1595,9 +1738,12 @@ figure</figcaption></figure><!--/html_preserve-->
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1639627411" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1639627411"></script>
+<link href="/blogR/css/quicknote.css?1640190398" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1640190398"></script>
 <div id="page-guide" class="bg-dark">  
+  <a id="avator" href="/api/list" 
+  class="btn btn-primary d-none"  data-bs-toggle="tooltip"  data-bs-placement="left" title=""><img style="padding:0px"class="img-fluid "></a>
+
   
     
           
@@ -1614,34 +1760,34 @@ figure</figcaption></figure><!--/html_preserve-->
           
 
   
-<script src="/blogR/js/packhtml.js?1639627411"></script>    
+<script src="/blogR/js/packhtml.js?1640190398"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
   <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
  
 </div>
-  </div>
+</div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1639627411"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1639627411"></script>
-  <link href="/blogR/css/featherlight.min.css?1639627411" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1639627411" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1640190398"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1640190398"></script>
+  <link href="/blogR/css/featherlight.min.css?1640190398" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1640190398" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1639627411"></script>
-  <link href="/blogR/css/rmd.css?1639627411" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1639627411" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1639627411'></script>
+  <script src="/blogR/js/hugohelper.js?1640190398"></script>
+  <link href="/blogR/css/rmd.css?1640190398" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1640190398" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1640190398'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1639627411'></script>
+<script src='/blogR/js/localsearch.js?1640190398'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
@@ -1665,9 +1811,9 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
       
     
       </script>
+
       <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      src='/blogR/js/tex-svg.js'>
       </script>
 
 

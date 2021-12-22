@@ -8,23 +8,23 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1639627411" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1639627411"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link href="/blogR/css/syntax.css?1640190398" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1640190398"></script>
+    <link href='/blogR/css/bootstrap.min.css' rel="stylesheet" crossorigin="anonymous">
+    <script src='/blogR/js/bootstrap.bundle.min.js' crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1639627411" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1640190398" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1639627411" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1640190398" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1639627411" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1640190398" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
-
+    <script src='/blogR/js/class.js'></script>    
     
   </head><body><div id="top-pane" class="navbar  fixed-top ">
   <div class="container-fluid">
@@ -466,7 +466,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_2_function.html"> <i class="far fa-clock" ></i>7.2 R函數進階[2021-12-16 AM 10:59]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/10_00_dplyrbasic01.html"> <i class="far fa-clock" ></i>10. tidyr, dplyr basic[2021-12-23 AM 12:26]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -494,7 +494,7 @@ Filter(function(e)e&gt;=0.5,runif(20)) #<!--html_preserve--><span  data-bs-toggl
 integrate(function(x) sin(x) ^ 2, 0, pi)
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n561428937"></button>調用匿名函數<div  id="n561428937" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>如果要調用匿名函數,參考下面的方式</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n793846125"></button>調用匿名函數<div  id="n793846125" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>如果要調用匿名函數,參考下面的方式</p>
 <pre><code class="language-r">(function(x) 3)()
 </code></pre>
 <!--html_preserve--></div></div><!--/html_preserve-->
@@ -630,7 +630,7 @@ environment(f02) #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-ht
 #&gt; }
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n976542318"></button>例外<div  id="n976542318" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>但是有些函數像是 <code>sum()</code> and <code>[</code>，這些所謂的原始函數(Primitive functions)，無法利用上面的三個函數顯示其內容,因為這些函數存在於基本套件(base packages) 而且通常用Ｃ語言寫成。</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n529641873"></button>例外<div  id="n529641873" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>但是有些函數像是 <code>sum()</code> and <code>[</code>，這些所謂的原始函數(Primitive functions)，無法利用上面的三個函數顯示其內容,因為這些函數存在於基本套件(base packages) 而且通常用Ｃ語言寫成。</p>
 <pre><code class="language-r?lang=r?class=.source">sum
 #&gt; function (..., na.rm = FALSE)  .Primitive(&quot;sum&quot;)
 `[` # &lt;!--html_preserve--&gt;&lt;span  data-bs-toggle=&quot;tooltip&quot; data-bs-html=&quot;true&quot; data-bs-placement=&quot;bottom&quot; title=&quot;👏這也是函數&quot;&gt;🏷&lt;/span&gt;&lt;!--/html_preserve--&gt;
@@ -789,7 +789,7 @@ x &lt;- 20
 g12() #<!--html_preserve--><span  data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom" title="21">🅰️</span><!--/html_preserve-->
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n935267841"></button><div  id="n935267841" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>上面的函數g12()用到變數x，因此需要在搜尋路徑中,有變數x的存在。因此在第二行中,定義了x,這個x存在於外部總體環境中。</p>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n542163897"></button><div  id="n542163897" class="collapse" style="overflow-x:visible"><!--/html_preserve--><p>上面的函數g12()用到變數x，因此需要在搜尋路徑中,有變數x的存在。因此在第二行中,定義了x,這個x存在於外部總體環境中。</p>
 <p>類似這種情況,如果是故意的,那就不需檢查。但如果不是特意的,有可能會出錯。這種變數稱為unbound symbols(簡單講,就是<code>是不宣告而使用</code>)。
 如果要檢查函數中有沒有這種變數，可以使用工具 <code>codetools::findGlobals()</code>. 這個函數可以列出函數中是否有unbound symbols :</p>
 <pre><code class="language-r?lang=r?class=.source">codetools::findGlobals(g12)
@@ -1092,7 +1092,7 @@ f()
 #&gt; a
 </code></pre>
 <!--html_preserve--><div class="message ms-5 w-75 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n135796482"></button>跳過<div  id="n135796482" class="collapse" style="overflow-x:visible"><!--/html_preserve--><ol>
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n936472158"></button>跳過<div  id="n936472158" class="collapse" style="overflow-x:visible"><!--/html_preserve--><ol>
 <li>
 <p>What does <code>load()</code> return? Why don't you normally see these values?</p>
 </li>
@@ -1158,9 +1158,12 @@ capture.output2(cat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, sep = &quot;\n&
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1639627411" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1639627411"></script>
+<link href="/blogR/css/quicknote.css?1640190398" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1640190398"></script>
 <div id="page-guide" class="bg-dark">  
+  <a id="avator" href="/api/list" 
+  class="btn btn-primary d-none"  data-bs-toggle="tooltip"  data-bs-placement="left" title=""><img style="padding:0px"class="img-fluid "></a>
+
   
     
           
@@ -1177,34 +1180,34 @@ capture.output2(cat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, sep = &quot;\n&
           
 
   
-<script src="/blogR/js/packhtml.js?1639627411"></script>    
+<script src="/blogR/js/packhtml.js?1640190398"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
   <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
  
 </div>
-  </div>
+</div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1639627411"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1639627411"></script>
-  <link href="/blogR/css/featherlight.min.css?1639627411" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1639627411" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1640190398"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1640190398"></script>
+  <link href="/blogR/css/featherlight.min.css?1640190398" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1640190398" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1639627411"></script>
-  <link href="/blogR/css/rmd.css?1639627411" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1639627411" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1639627411'></script>
+  <script src="/blogR/js/hugohelper.js?1640190398"></script>
+  <link href="/blogR/css/rmd.css?1640190398" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1640190398" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1640190398'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1639627411'></script>
+<script src='/blogR/js/localsearch.js?1640190398'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
@@ -1228,9 +1231,9 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
       
     
       </script>
+
       <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-        src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
+      src='/blogR/js/tex-svg.js'>
       </script>
 
 
