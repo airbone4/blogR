@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1640190398" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1640190398"></script>
+    <link href="/blogR/css/syntax.css?1640237038" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1640237038"></script>
     <link href='/blogR/css/bootstrap.min.css' rel="stylesheet" crossorigin="anonymous">
     <script src='/blogR/js/bootstrap.bundle.min.js' crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1640190398" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1640237038" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1640190398" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1640237038" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1640190398" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1640237038" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -451,7 +451,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/10_00_dplyrbasic01.html"> <i class="far fa-clock" ></i>10. tidyr, dplyr basic[2021-12-23 AM 12:26]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-12-23 PM 01:10]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html"> <i class="far fa-clock" ></i>01_shiny_basic[2021-12-23 PM 12:49]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/10_00_dplyrbasic01.html"> <i class="far fa-clock" ></i>10. tidyr, dplyr basic[2021-12-23 AM 12:26]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -494,7 +494,7 @@ else
 <p>指令開頭是<code>Sys</code></p>
 <pre><code class="language-r?lang=r?class=.source">hugocmd(&quot;expand&quot; ,'title=&quot;&quot; incode=true')
 #&gt; <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n793124856"></button><div  id="n793124856" class="collapse" style="overflow-x:visbile"><!--/html_preserve-->Sys.getenv()
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n459213678"></button><div  id="n459213678" class="collapse" style="overflow-x:visbile"><!--/html_preserve-->Sys.getenv()
 #&gt; ALLUSERSPROFILE         C:\ProgramData
 #&gt; APPDATA                 C:\Users\linchao\AppData\Roaming
 #&gt; CHROME_CRASHPAD_PIPE_NAME
@@ -602,7 +602,7 @@ Sys.getenv(&quot;R_TEST&quot;, unset = NA)
 </li>
 <li>.Rprofile - which contains R code to be run in each session.
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n631879425"></button>範例 ~/.Renviron on Unix<div  id="n631879425" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">## 範例 ~/.Renviron on Unix
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n758129634"></button>範例 ~/.Renviron on Unix<div  id="n758129634" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">## 範例 ~/.Renviron on Unix
 R_LIBS=~/R/library
 PAGER=/usr/local/bin/less
 
@@ -620,7 +620,7 @@ R_DEFAULT_PACKAGES='utils,grDevices,graphics,stats'
 <ul>
 <li>
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n458962371"></button>範例 .Rprofile .First .Last<div  id="n458962371" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">options(width=65, digits=5)
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n156384729"></button>範例 .Rprofile .First .Last<div  id="n156384729" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">options(width=65, digits=5)
 options(show.signif.stars=FALSE)
 setHook(packageEvent(&quot;grDevices&quot;, &quot;onLoad&quot;),
         function(...) grDevices::ps.options(horizontal=FALSE))
@@ -632,7 +632,7 @@ set.seed(1234)
 </li>
 <li>
 <!--html_preserve--><div class="message">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n873546912"></button>範例 Rprofile.site<div  id="n873546912" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">local({
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n963824715"></button>範例 Rprofile.site<div  id="n963824715" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">local({
   # add MASS to the default packages, set a CRAN mirror
   old &lt;- getOption(&quot;defaultPackages&quot;); r &lt;- getOption(&quot;repos&quot;)
   r[&quot;CRAN&quot;] &lt;- &quot;http://my.local.cran&quot;
@@ -665,7 +665,7 @@ FOOBAR=&quot;coo\bar&quot;doh\ex&quot;abc\&quot;def'&quot;
 getOption(&quot;windowsTimeouts&quot;)
 </code></pre>
 <!--html_preserve--><div class="message ms-5 ">
-<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n425617983"></button>options()的執行結果<div  id="n425617983" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">#&gt; $add.smooth
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n386429751"></button>options()的執行結果<div  id="n386429751" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">#&gt; $add.smooth
 #&gt; [1] TRUE
 #&gt; 
 #&gt; $blogdown.method
@@ -958,8 +958,8 @@ names(.GlobalEnv)
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1640190398" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1640190398"></script>
+<link href="/blogR/css/quicknote.css?1640237038" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1640237038"></script>
 <div id="page-guide" class="bg-dark">  
   <a id="avator" href="/api/list" 
   class="btn btn-primary d-none"  data-bs-toggle="tooltip"  data-bs-placement="left" title=""><img style="padding:0px"class="img-fluid "></a>
@@ -980,7 +980,7 @@ names(.GlobalEnv)
           
 
   
-<script src="/blogR/js/packhtml.js?1640190398"></script>    
+<script src="/blogR/js/packhtml.js?1640237038"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -990,24 +990,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
 </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1640190398"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1640190398"></script>
-  <link href="/blogR/css/featherlight.min.css?1640190398" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1640190398" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1640237038"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1640237038"></script>
+  <link href="/blogR/css/featherlight.min.css?1640237038" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1640237038" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1640190398"></script>
-  <link href="/blogR/css/rmd.css?1640190398" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1640190398" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1640190398'></script>
+  <script src="/blogR/js/hugohelper.js?1640237038"></script>
+  <link href="/blogR/css/rmd.css?1640237038" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1640237038" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1640237038'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1640190398'></script>
+<script src='/blogR/js/localsearch.js?1640237038'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -8,19 +8,19 @@
       
     <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
     
-    <link href="/blogR/css/syntax.css?1640190398" rel="stylesheet">
-    <script src="/blogR/js/jquery-3.3.1.min.js?1640190398"></script>
+    <link href="/blogR/css/syntax.css?1640237038" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1640237038"></script>
     <link href='/blogR/css/bootstrap.min.css' rel="stylesheet" crossorigin="anonymous">
     <script src='/blogR/js/bootstrap.bundle.min.js' crossorigin="anonymous"></script>
     
     <script src='/blogR/js/datatables.min.js'></script>    
     <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
     
-    <link href="/blogR/css/fontawesome-all.min.css?1640190398" rel="stylesheet">
+    <link href="/blogR/css/fontawesome-all.min.css?1640237038" rel="stylesheet">
     
-    <link href="/blogR/css/theme-mine.css?1640190398" rel="stylesheet">
+    <link href="/blogR/css/theme-mine.css?1640237038" rel="stylesheet">
     
-    <link href="/blogR/css/theme.css?1640190398" rel="stylesheet">
+    <link href="/blogR/css/theme.css?1640237038" rel="stylesheet">
     
     
     <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
@@ -45,7 +45,11 @@
         <li><a href="#03_reactivity">03_reactivity</a></li>
       </ul>
     </li>
-    <li><a href="#小結">小結</a></li>
+    <li><a href="#小結">小結</a>
+      <ul>
+        <li><a href="#比較">比較</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -54,7 +58,7 @@
 </div>
 </span>
 <span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
-      title='最後修改November 25, 2021'>sinytest</span>
+      title='最後修改December 23, 2021'>sinytest</span>
         
     
 
@@ -395,8 +399,8 @@
    
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/01_shiny_basic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">01_shiny_basic</a></li>
      
-    
-        <li class="nav-item active"><a class="nav-link" href="/blogR/topic/simulation/navarpage.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. navarPage</a></li>
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/navarpage.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. navarPage</a></li>
      
    
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1 隨機變數</a></li>
@@ -421,8 +425,8 @@
    
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">Poisson分配</a></li>
      
-   
-        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/sinytest.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">sinytest</a></li>
+    
+        <li class="nav-item active"><a class="nav-link" href="/blogR/topic/simulation/sinytest.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">sinytest</a></li>
      
    
         <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/central.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">中央</a></li>
@@ -444,7 +448,7 @@
     
     <hr/>
     <section id="footer">
-      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/rlang/10_00_dplyrbasic01.html"> <i class="far fa-clock" ></i>10. tidyr, dplyr basic[2021-12-23 AM 12:26]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/6_3_apply_family.html"> <i class="far fa-clock" ></i>6.3 function - apply family[2021-12-16 AM 11:54]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/7_3_function.html"> <i class="far fa-clock" ></i>7.3 R 函數定義的幾種分類[2021-12-16 AM 11:25]</a></li></ul>
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/sinytest.html"> <i class="far fa-clock" ></i>sinytest[2021-12-23 PM 01:10]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html"> <i class="far fa-clock" ></i>01_shiny_basic[2021-12-23 PM 12:49]</a></li><li><a href="https://airbone4.github.io/blogR/rlang/10_00_dplyrbasic01.html"> <i class="far fa-clock" ></i>10. tidyr, dplyr basic[2021-12-23 AM 12:26]</a></li></ul>
     </section>
   
 </nav><article class="article mx-2 mt-3" id="body-inner">
@@ -473,6 +477,7 @@
 
  
 <ul>
+<li><a href="https://shiny.rstudio.com/images/shiny-cheatsheet.pdf">快速指令</a></li>
 <li><a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson7/">host app</a></li>
 <li><a href="https://www.r-bloggers.com/2021/06/shiny-apps-with-docker-compose-part-1-development/">shiny server+ caddy</a></li>
 <li><a href="https://yjtseng.info/shinybook/server">reactive</a></li>
@@ -765,6 +770,27 @@ shinyApp(ui, server)
 </ul>
 </li>
 </ul>
+<h3 id="比較">比較</h3>
+<ul>
+<li>eventReactive vs observeEvent: 基本上差異只是前者會產生reactive 的結果,後者只有計算。
+<pre><code>  # reactive expression
+    text_reactive &lt;- eventReactive( input$submit, { # actionButton(submit),只有這個CLICK事件發生,才會觸動BLOCK的計算
+        input$user_text # user_text(textInput(user_text))改變不會重新計算
+    })    
+</code></pre>
+<p>如果改為observeEvent(),上面不會重新計算的仍然不計算,所以只有是不是傳回值的差異。</p>
+</li>
+<li>reactive,observe
+<ol>
+<li>reactive 會回傳值,observe不會</li>
+<li>reactive是lazy function(白話文就是只有被調用的時候,有需要計算才計算),但是observe不是,而是馬上立刻現在計算。</li>
+</ol>
+</li>
+</ul>
+<p>其他</p>
+<ul>
+<li><a href="https://community.rstudio.com/t/reactivevalues-vs-reactive-and-eventreactive-a-general-question/27449/2">invalidateLater(1000, session)</a></li>
+</ul>
   </article><div class="collapse fs-6 pt-2" id="qnote-list">
     <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
         <span >
@@ -792,8 +818,8 @@ shinyApp(ui, server)
     </div>
 </div>
 
-<link href="/blogR/css/quicknote.css?1640190398" rel="stylesheet">
-<script src="/blogR/js/quicknote.js?1640190398"></script>
+<link href="/blogR/css/quicknote.css?1640237038" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1640237038"></script>
 <div id="page-guide" class="bg-dark">  
   <a id="avator" href="/api/list" 
   class="btn btn-primary d-none"  data-bs-toggle="tooltip"  data-bs-placement="left" title=""><img style="padding:0px"class="img-fluid "></a>
@@ -814,7 +840,7 @@ shinyApp(ui, server)
           
 
   
-<script src="/blogR/js/packhtml.js?1640190398"></script>    
+<script src="/blogR/js/packhtml.js?1640237038"></script>    
 <button class="btn btn-primary " onclick="packthis(this)"
 data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
 <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
@@ -824,24 +850,24 @@ data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">
 </div>
 
 
-  <script src="/blogR/js/featherlight.min.js?1640190398"></script>
-  <script src="/blogR/js/featherlight.gallery.min.js?1640190398"></script>
-  <link href="/blogR/css/featherlight.min.css?1640190398" rel="stylesheet">
-  <link href="/blogR/css/featherlight.gallery.min.css?1640190398" rel="stylesheet">
+  <script src="/blogR/js/featherlight.min.js?1640237038"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1640237038"></script>
+  <link href="/blogR/css/featherlight.min.css?1640237038" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1640237038" rel="stylesheet">
   
   <script src="/blogR/js/highlight.min.js"></script>
   
-  <script src="/blogR/js/hugohelper.js?1640190398"></script>
-  <link href="/blogR/css/rmd.css?1640190398" rel="stylesheet">
-  <link href="/blogR/css/mystyle.css?1640190398" rel="stylesheet">    
-  <script src='/blogR/js/variant.js?1640190398'></script>
+  <script src="/blogR/js/hugohelper.js?1640237038"></script>
+  <link href="/blogR/css/rmd.css?1640237038" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1640237038" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1640237038'></script>
 
 <script>
   
    let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
   
 </script>
-<script src='/blogR/js/localsearch.js?1640190398'></script>
+<script src='/blogR/js/localsearch.js?1640237038'></script>
   
       
           <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
