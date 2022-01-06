@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://airbone4.github.io/blogR/topic/simulation/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/shinyapps/tutorial/01_hello/readme.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/shinyapps/tutorial/01_hello/readme.html</guid>
+      <description>This small Shiny application demonstrates Shiny&#39;s automatic UI updates.
+Move the Number of bins slider and notice how the renderPlot expression is automatically re-evaluated when its dependant, input$bins, changes, causing a histogram with a new number of bins to be rendered.</description>
+    </item>
+    
+    <item>
       <title>01_shiny_basic</title>
       <link>https://airbone4.github.io/blogR/topic/simulation/01_shiny_basic.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -70,6 +80,34 @@
     </item>
     
     <item>
+      <title>50.1 練習</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/50_1_%E7%B7%B4%E7%BF%92.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/50_1_%E7%B7%B4%E7%BF%92.html</guid>
+      <description>mtcars要根據品牌分析,而不是型號
+head(mtcars)#&amp;gt; [1] &amp;quot;處理表格&amp;quot;  mpg cyl disp hp drat wt qsec vs am gear carb   Mazda RX4 21.0 6 160 110 3.90 2.620 16.46 0 1 4 4  Mazda RX4 Wag 21.0 6 160 110 3.90 2.875 17.02 0 1 4 4  Datsun 710 22.8 4 108 93 3.85 2.320 18.61 1 1 4 1  Hornet 4 Drive 21.4 6 258 110 3.</description>
+    </item>
+    
+    <item>
+      <title>50_1_解答</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/50_2_%E8%A7%A3%E7%AD%94.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/50_2_%E8%A7%A3%E7%AD%94.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>50_2_半成品</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/50_3_%E5%8D%8A%E6%88%90%E5%93%81.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/50_3_%E5%8D%8A%E6%88%90%E5%93%81.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>bootstrap</title>
       <link>https://airbone4.github.io/blogR/topic/simulation/bootstrap.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -93,6 +131,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://airbone4.github.io/blogR/topic/simulation/poisson%E5%88%86%E9%85%8D.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Readme</title>
+      <link>https://airbone4.github.io/blogR/topic/simulation/shinyapps/tutorial/tagsdemo/readme.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://airbone4.github.io/blogR/topic/simulation/shinyapps/tutorial/tagsdemo/readme.html</guid>
       <description></description>
     </item>
     

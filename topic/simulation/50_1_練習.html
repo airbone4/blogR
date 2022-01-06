@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html><head>
+  <title>50.1 練習</title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href='/blogR/images/favicon.ico'/>
+      
+    <link rel="stylesheet" href="/blogR/css/atom-one-dark-reasonable.css">
+    
+    <link href="/blogR/css/syntax.css?1641445339" rel="stylesheet">
+    <script src="/blogR/js/jquery-3.3.1.min.js?1641445339"></script>
+    <link href='/blogR/css/bootstrap.min.css' rel="stylesheet" crossorigin="anonymous">
+    <script src='/blogR/js/bootstrap.bundle.min.js' crossorigin="anonymous"></script>
+    
+    <script src='/blogR/js/datatables.min.js'></script>    
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">    
+    
+    <link href="/blogR/css/fontawesome-all.min.css?1641445339" rel="stylesheet">
+    
+    <link href="/blogR/css/theme-mine.css?1641445339" rel="stylesheet">
+    
+    <link href="/blogR/css/theme.css?1641445339" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://airbone4.github.io/blogR/scss/notice.7158afc7a24ea3d0073077b3699dbfad7f3df2be8d4e19956e934587413013ee.css" integrity="sha256-cVivx6JOo9AHMHezaZ2/rX898r6NThmVbpNFh0EwE&#43;4=">
+    <script src='/blogR/js/class.js'></script>    
+    
+  </head><body><div id="top-pane" class="navbar  fixed-top ">
+  <div class="container-fluid">
+  <span >
+    <a  href='/blogR/' class="fs-5 accessory"><i class="fas fa-home"></i>R in Class</a>
+    <span id="sidebar-toggle-span" class="fs-5"><i class="fas fa-align-justify"></i></span>
+  </span><span >
+      <span id="toc-menu">
+    <label><i class="fas fa-list-alt" ></i> </label>    
+<div id="variant-toc-content" >
+    <div class="wrapper">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#要增加factor">要增加factor</a></li>
+  </ul>
+</nav>
+    </div>
+    <hr class="p-0 m-0" />
+    <div class="toa"></div>
+</div>
+</span>
+<span class="fs-5 accessory" data-bs-toggle="tooltip" data-bs-placement="bottom" 
+      title='最後修改January 5, 2022'>50.1 練習</span>
+        
+    
+
+    </span>
+  
+  <span></span><span >
+    <span >
+    <label for="search-query" id="search-button"><i class="fas fa-search"></i></label>
+    <input id="search-query" type="search" placeholder="搜尋" autocomplete="off">
+</span>    
+ 
+<div id="search-pane">
+ <ol id="search-results"></ul>
+</div>
+
+    </span>
+</div> 
+</div>
+
+
+<div id="content-wrapper"><nav id="sidebar">
+  
+    <ul class="nav flex-column topics" id="home-topics">
+      
+        
+          
+          
+
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="基礎R">
+     
+
+  <a class="nav-link" 
+    href="/blogR/rlang.html"><i class="far fa-folder"></i>基礎R  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_92db98bffe2d6697b3536cbbf7b00074" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_92db98bffe2d6697b3536cbbf7b00074"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics">
+
+    
+  
+  
+   
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/1_0_requirement.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1 Requirement</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/1_1_%E7%B3%BB%E7%B5%B1.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1 運作環境</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/1_2_filesystem.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.2 檔案系統</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/1_3_%E5%9F%B7%E8%A1%8C.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.3 執行</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/1_4_rpackages.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.4 R Package</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/1_5_%E7%B7%A8%E7%A2%BC.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.5 編碼</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/2_0_%E8%BC%B8%E5%87%BA%E8%BC%B8%E5%85%A5.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0 基本輸出輸入</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/2_1_%E8%AE%80%E6%AA%94%E5%AF%AB%E6%AA%94.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1 讀檔寫檔</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/2_2_data_explorer.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.2 資料探索</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/2_3_data_explorer.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.3 資料探索</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/3_quickview1.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3. Quick view 1</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_1_1_type_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1 基本</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_1_2_type%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1.2 練習</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_2_type_vector.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.2 向量</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_3_type_matrix.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.3 矩陣</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_4_type_list.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.4 串列 list</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_5_type_string_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.5 字串處理函數</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_6_type_dataframe.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.6 資料集 data frame</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_7_type_factor.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.7 因子</a></li>
+     
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_11_%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E8%AA%9E%E6%B3%95.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.11 正規表達語法</a></li>
+     
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/4_15_json.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.15 json</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/6_1_programming.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.1 Programming basic</a></li>
+     
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/6_3_apply_family.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">6.3 function - apply family</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/7_1_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.1 R 函數的基本撰寫</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/7_2_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.2 R函數進階</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/7_3_function.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.3 R 函數定義的幾種分類</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/7_8_objectbasic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.8 R的物件相關概念</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/7_9_%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91s3.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">7.9 物件導向S3</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/9_1_plot.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">9.1 基本繪圖</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/9_2_%E5%A4%9A%E5%9C%96%E7%96%8A%E5%9C%96.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">9.2 多圖疊圖</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/9_3_plot.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">9.3 畫圖練習</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/10_00_dplyrbasic01.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">10. tidyr, dplyr basic</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/11_00_sampling.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">11. sampling</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/11_environments.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">11 Environments</a></li>
+     
+   
+     
+   
+     
+   
+        <li>
+
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="暫時">
+     
+
+  <a class="nav-link" 
+    href="/blogR/rlang/demo.html"><i class="far fa-folder"></i>暫時  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f03d3d24b564dd9c39af6eb86300021f" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f03d3d24b564dd9c39af6eb86300021f"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074">
+
+    
+  
+  
+   
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/demo/citation.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">引用</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+     
+   
+        <li>
+
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="練習用">
+     
+
+  <a class="nav-link" 
+    href="/blogR/rlang/hw.html"><i class="far fa-folder"></i>練習用  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_b4809f6375b9dda8660e4938c2644e82" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_b4809f6375b9dda8660e4938c2644e82"  
+  class="submenu collapse" 
+  data-bs-parent="#menu_item_92db98bffe2d6697b3536cbbf7b00074">
+
+    
+  
+  
+   
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/hw/hw_basic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">assignment-1</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/hw/hw_regexp.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">regexpr</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/hw/hw_filesystem.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">檔案系統</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/hw/dataset_class.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">資料集</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/rlang/resources.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">練習相關檔案</a></li>
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="基礎計量">
+     
+
+  <a class="nav-link" 
+    href="/blogR/econometrics.html"><i class="far fa-folder"></i>基礎計量  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_c59a6b16a979dae063e00e4a916e3284" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_c59a6b16a979dae063e00e4a916e3284"  
+  class="submenu collapse" 
+  data-bs-parent="#home-topics">
+
+    
+  
+  
+   
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/econometrics/0_prerequest.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0 前置準備</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/econometrics/1_t%E6%AA%A2%E5%AE%9A.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0 t檢定</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/econometrics/2_anova.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. ANOVA</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/econometrics/a_a_%E8%B3%87%E6%96%99%E8%99%95%E7%90%86.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">A.a 資料處理</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/econometrics/a_b_mpg%E7%82%BA%E4%BE%8B%E7%9A%84ggplot.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">A.b mpg為例的ggplot</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/econometrics/lmm.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">lmm</a></li>
+     
+   
+    </ul>
+</li>
+     
+  
+
+        
+          
+          
+
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="專題">
+     
+
+  <a class="nav-link" 
+    href="/blogR/topic.html"><i class="far fa-folder"></i>專題  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_f7b6d4231ab239a316b7f2d9edf32817" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_f7b6d4231ab239a316b7f2d9edf32817"  
+  class="submenu collapse show" 
+  data-bs-parent="#home-topics">
+
+    
+  
+  
+   
+   
+     
+   
+        <li>
+
+
+ 
+
+<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="實驗">
+     
+
+  <a class="nav-link" 
+    href="/blogR/topic/simulation.html"><i class="far fa-folder"></i>實驗  </a>
+    <span class="ps-1" data-bs-toggle="collapse" data-bs-target="#menu_item_e617bdc52da54290f99855ac9d5037aa" aria-expanded="false">
+      <i class="fas fa-caret-up pairicon-open"></i>
+      <i class="fas fa-caret-down pairicon-close"></i>
+    </span>
+  <ul id="menu_item_e617bdc52da54290f99855ac9d5037aa"  
+  class="submenu collapse show" 
+  data-bs-parent="#menu_item_f7b6d4231ab239a316b7f2d9edf32817">
+
+    
+  
+  
+   
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/shinyapps/tutorial/01_hello/readme.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title=""></a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/01_shiny_basic.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">01_shiny_basic</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/navarpage.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2. navarPage</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/2_1_%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1 隨機變數</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/2_1_%E4%BA%82%E6%95%B8%E5%87%BD%E6%95%B8%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.1.1 亂數函數練習</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/3_shinydist.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3. shinyDist</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/4_01_sim.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.1 模擬基本 1</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/4_02_sim.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.2 模擬基本 2</a></li>
+     
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/50_2_%E8%A7%A3%E7%AD%94.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">50_1_解答</a></li>
+     
+    
+        <li class="nav-item active"><a class="nav-link" href="/blogR/topic/simulation/50_1_%E7%B7%B4%E7%BF%92.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">50.1 練習</a></li>
+     
+   
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/mc_%E5%9F%BA%E6%9C%AC.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">MC_基本</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/poisson%E5%88%86%E9%85%8D.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">Poisson分配</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/shinyapps/tutorial/tagsdemo/readme.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">Readme</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/sinytest.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">sinytest</a></li>
+     
+   
+        <li class="nav-item"><a class="nav-link" href="/blogR/topic/simulation/central.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">中央</a></li>
+    </ul>
+</li>
+     
+  
+</li>
+     
+   
+    </ul>
+</li>
+     
+  
+
+          
+        
+  </ul> 
+    
+    <hr/>
+    <section id="footer">
+      最近3篇<br/><ul><li><a href="https://airbone4.github.io/blogR/topic/simulation/50_3_%E5%8D%8A%E6%88%90%E5%93%81.html"> <i class="far fa-clock" ></i>50_2_半成品[2022-01-06 PM 01:01]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/50_2_%E8%A7%A3%E7%AD%94.html"> <i class="far fa-clock" ></i>50_1_解答[2022-01-06 PM 12:23]</a></li><li><a href="https://airbone4.github.io/blogR/topic/simulation/50_1_%E7%B7%B4%E7%BF%92.html"> <i class="far fa-clock" ></i>50.1 練習[2022-01-05 PM 10:45]</a></li></ul>
+    </section>
+  
+</nav><article class="article mx-2 mt-3" id="body-inner">
+    <p>mtcars要根據品牌分析,而不是型號</p>
+<pre><code class="language-r?lang=r?class=.source">head(mtcars)
+#&gt; [1] &quot;處理表格&quot;
+</code></pre>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--html_preserve--><div   class="table-responsive kable">
+<table  class="w-50 ms-5">
+<thead  class="">
+<tr >
+<th  style="text-align:left"></th>
+<th  style="text-align:right">mpg</th>
+<th  style="text-align:right">cyl</th>
+<th  style="text-align:right">disp</th>
+<th  style="text-align:right">hp</th>
+<th  style="text-align:right">drat</th>
+<th  style="text-align:right">wt</th>
+<th  style="text-align:right">qsec</th>
+<th  style="text-align:right">vs</th>
+<th  style="text-align:right">am</th>
+<th  style="text-align:right">gear</th>
+<th  style="text-align:right">carb</th>
+</tr>
+</thead>
+<tbody >
+<tr >
+<td  style="text-align:left">Mazda RX4</td>
+<td  style="text-align:right">21.0</td>
+<td  style="text-align:right">6</td>
+<td  style="text-align:right">160</td>
+<td  style="text-align:right">110</td>
+<td  style="text-align:right">3.90</td>
+<td  style="text-align:right">2.620</td>
+<td  style="text-align:right">16.46</td>
+<td  style="text-align:right">0</td>
+<td  style="text-align:right">1</td>
+<td  style="text-align:right">4</td>
+<td  style="text-align:right">4</td>
+</tr>
+<tr >
+<td  style="text-align:left">Mazda RX4 Wag</td>
+<td  style="text-align:right">21.0</td>
+<td  style="text-align:right">6</td>
+<td  style="text-align:right">160</td>
+<td  style="text-align:right">110</td>
+<td  style="text-align:right">3.90</td>
+<td  style="text-align:right">2.875</td>
+<td  style="text-align:right">17.02</td>
+<td  style="text-align:right">0</td>
+<td  style="text-align:right">1</td>
+<td  style="text-align:right">4</td>
+<td  style="text-align:right">4</td>
+</tr>
+<tr >
+<td  style="text-align:left">Datsun 710</td>
+<td  style="text-align:right">22.8</td>
+<td  style="text-align:right">4</td>
+<td  style="text-align:right">108</td>
+<td  style="text-align:right">93</td>
+<td  style="text-align:right">3.85</td>
+<td  style="text-align:right">2.320</td>
+<td  style="text-align:right">18.61</td>
+<td  style="text-align:right">1</td>
+<td  style="text-align:right">1</td>
+<td  style="text-align:right">4</td>
+<td  style="text-align:right">1</td>
+</tr>
+<tr >
+<td  style="text-align:left">Hornet 4 Drive</td>
+<td  style="text-align:right">21.4</td>
+<td  style="text-align:right">6</td>
+<td  style="text-align:right">258</td>
+<td  style="text-align:right">110</td>
+<td  style="text-align:right">3.08</td>
+<td  style="text-align:right">3.215</td>
+<td  style="text-align:right">19.44</td>
+<td  style="text-align:right">1</td>
+<td  style="text-align:right">0</td>
+<td  style="text-align:right">3</td>
+<td  style="text-align:right">1</td>
+</tr>
+<tr >
+<td  style="text-align:left">Hornet Sportabout</td>
+<td  style="text-align:right">18.7</td>
+<td  style="text-align:right">8</td>
+<td  style="text-align:right">360</td>
+<td  style="text-align:right">175</td>
+<td  style="text-align:right">3.15</td>
+<td  style="text-align:right">3.440</td>
+<td  style="text-align:right">17.02</td>
+<td  style="text-align:right">0</td>
+<td  style="text-align:right">0</td>
+<td  style="text-align:right">3</td>
+<td  style="text-align:right">2</td>
+</tr>
+<tr >
+<td  style="text-align:left">Valiant</td>
+<td  style="text-align:right">18.1</td>
+<td  style="text-align:right">6</td>
+<td  style="text-align:right">225</td>
+<td  style="text-align:right">105</td>
+<td  style="text-align:right">2.76</td>
+<td  style="text-align:right">3.460</td>
+<td  style="text-align:right">20.22</td>
+<td  style="text-align:right">1</td>
+<td  style="text-align:right">0</td>
+<td  style="text-align:right">3</td>
+<td  style="text-align:right">1</td>
+</tr>
+</tbody>
+</table>
+
+</div><!--/html_preserve-->
+<pre><code class="language-r?lang=r?class=.source">rownames(mtcars)
+#&gt;  [1] &quot;Mazda RX4&quot;           &quot;Mazda RX4 Wag&quot;       &quot;Datsun 710&quot;         
+#&gt;  [4] &quot;Hornet 4 Drive&quot;      &quot;Hornet Sportabout&quot;   &quot;Valiant&quot;            
+#&gt;  [7] &quot;Duster 360&quot;          &quot;Merc 240D&quot;           &quot;Merc 230&quot;           
+#&gt; [10] &quot;Merc 280&quot;            &quot;Merc 280C&quot;           &quot;Merc 450SE&quot;         
+#&gt; [13] &quot;Merc 450SL&quot;          &quot;Merc 450SLC&quot;         &quot;Cadillac Fleetwood&quot; 
+#&gt; [16] &quot;Lincoln Continental&quot; &quot;Chrysler Imperial&quot;   &quot;Fiat 128&quot;           
+#&gt; [19] &quot;Honda Civic&quot;         &quot;Toyota Corolla&quot;      &quot;Toyota Corona&quot;      
+#&gt; [22] &quot;Dodge Challenger&quot;    &quot;AMC Javelin&quot;         &quot;Camaro Z28&quot;         
+#&gt; [25] &quot;Pontiac Firebird&quot;    &quot;Fiat X1-9&quot;           &quot;Porsche 914-2&quot;      
+#&gt; [28] &quot;Lotus Europa&quot;        &quot;Ford Pantera L&quot;      &quot;Ferrari Dino&quot;       
+#&gt; [31] &quot;Maserati Bora&quot;       &quot;Volvo 142E&quot;
+</code></pre>
+<p>利用空格萃取公司名稱</p>
+<pre><code class="language-r?lang=r?class=.source">strsplit(rownames(mtcars),&quot; &quot;)
+#&gt; [[1]]
+#&gt; [1] &quot;Mazda&quot; &quot;RX4&quot;  
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] &quot;Mazda&quot; &quot;RX4&quot;   &quot;Wag&quot;  
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] &quot;Datsun&quot; &quot;710&quot;   
+#&gt; 
+#&gt; [[4]]
+#&gt; [1] &quot;Hornet&quot; &quot;4&quot;      &quot;Drive&quot; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [1] &quot;Hornet&quot;     &quot;Sportabout&quot;
+#&gt; 
+#&gt; [[6]]
+#&gt; [1] &quot;Valiant&quot;
+#&gt; 
+#&gt; [[7]]
+#&gt; [1] &quot;Duster&quot; &quot;360&quot;   
+#&gt; 
+#&gt; [[8]]
+#&gt; [1] &quot;Merc&quot; &quot;240D&quot;
+#&gt; 
+#&gt; [[9]]
+#&gt; [1] &quot;Merc&quot; &quot;230&quot; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [1] &quot;Merc&quot; &quot;280&quot; 
+#&gt; 
+#&gt; [[11]]
+#&gt; [1] &quot;Merc&quot; &quot;280C&quot;
+#&gt; 
+#&gt; [[12]]
+#&gt; [1] &quot;Merc&quot;  &quot;450SE&quot;
+#&gt; 
+#&gt; [[13]]
+#&gt; [1] &quot;Merc&quot;  &quot;450SL&quot;
+#&gt; 
+#&gt; [[14]]
+#&gt; [1] &quot;Merc&quot;   &quot;450SLC&quot;
+#&gt; 
+#&gt; [[15]]
+#&gt; [1] &quot;Cadillac&quot;  &quot;Fleetwood&quot;
+#&gt; 
+#&gt; [[16]]
+#&gt; [1] &quot;Lincoln&quot;     &quot;Continental&quot;
+#&gt; 
+#&gt; [[17]]
+#&gt; [1] &quot;Chrysler&quot; &quot;Imperial&quot;
+#&gt; 
+#&gt; [[18]]
+#&gt; [1] &quot;Fiat&quot; &quot;128&quot; 
+#&gt; 
+#&gt; [[19]]
+#&gt; [1] &quot;Honda&quot; &quot;Civic&quot;
+#&gt; 
+#&gt; [[20]]
+#&gt; [1] &quot;Toyota&quot;  &quot;Corolla&quot;
+#&gt; 
+#&gt; [[21]]
+#&gt; [1] &quot;Toyota&quot; &quot;Corona&quot;
+#&gt; 
+#&gt; [[22]]
+#&gt; [1] &quot;Dodge&quot;      &quot;Challenger&quot;
+#&gt; 
+#&gt; [[23]]
+#&gt; [1] &quot;AMC&quot;     &quot;Javelin&quot;
+#&gt; 
+#&gt; [[24]]
+#&gt; [1] &quot;Camaro&quot; &quot;Z28&quot;   
+#&gt; 
+#&gt; [[25]]
+#&gt; [1] &quot;Pontiac&quot;  &quot;Firebird&quot;
+#&gt; 
+#&gt; [[26]]
+#&gt; [1] &quot;Fiat&quot; &quot;X1-9&quot;
+#&gt; 
+#&gt; [[27]]
+#&gt; [1] &quot;Porsche&quot; &quot;914-2&quot;  
+#&gt; 
+#&gt; [[28]]
+#&gt; [1] &quot;Lotus&quot;  &quot;Europa&quot;
+#&gt; 
+#&gt; [[29]]
+#&gt; [1] &quot;Ford&quot;    &quot;Pantera&quot; &quot;L&quot;      
+#&gt; 
+#&gt; [[30]]
+#&gt; [1] &quot;Ferrari&quot; &quot;Dino&quot;   
+#&gt; 
+#&gt; [[31]]
+#&gt; [1] &quot;Maserati&quot; &quot;Bora&quot;    
+#&gt; 
+#&gt; [[32]]
+#&gt; [1] &quot;Volvo&quot; &quot;142E&quot;
+unlist(strsplit(rownames(mtcars),&quot; &quot;))
+#&gt;  [1] &quot;Mazda&quot;       &quot;RX4&quot;         &quot;Mazda&quot;       &quot;RX4&quot;         &quot;Wag&quot;        
+#&gt;  [6] &quot;Datsun&quot;      &quot;710&quot;         &quot;Hornet&quot;      &quot;4&quot;           &quot;Drive&quot;      
+#&gt; [11] &quot;Hornet&quot;      &quot;Sportabout&quot;  &quot;Valiant&quot;     &quot;Duster&quot;      &quot;360&quot;        
+#&gt; [16] &quot;Merc&quot;        &quot;240D&quot;        &quot;Merc&quot;        &quot;230&quot;         &quot;Merc&quot;       
+#&gt; [21] &quot;280&quot;         &quot;Merc&quot;        &quot;280C&quot;        &quot;Merc&quot;        &quot;450SE&quot;      
+#&gt; [26] &quot;Merc&quot;        &quot;450SL&quot;       &quot;Merc&quot;        &quot;450SLC&quot;      &quot;Cadillac&quot;   
+#&gt; [31] &quot;Fleetwood&quot;   &quot;Lincoln&quot;     &quot;Continental&quot; &quot;Chrysler&quot;    &quot;Imperial&quot;   
+#&gt; [36] &quot;Fiat&quot;        &quot;128&quot;         &quot;Honda&quot;       &quot;Civic&quot;       &quot;Toyota&quot;     
+#&gt; [41] &quot;Corolla&quot;     &quot;Toyota&quot;      &quot;Corona&quot;      &quot;Dodge&quot;       &quot;Challenger&quot; 
+#&gt; [46] &quot;AMC&quot;         &quot;Javelin&quot;     &quot;Camaro&quot;      &quot;Z28&quot;         &quot;Pontiac&quot;    
+#&gt; [51] &quot;Firebird&quot;    &quot;Fiat&quot;        &quot;X1-9&quot;        &quot;Porsche&quot;     &quot;914-2&quot;      
+#&gt; [56] &quot;Lotus&quot;       &quot;Europa&quot;      &quot;Ford&quot;        &quot;Pantera&quot;     &quot;L&quot;          
+#&gt; [61] &quot;Ferrari&quot;     &quot;Dino&quot;        &quot;Maserati&quot;    &quot;Bora&quot;        &quot;Volvo&quot;      
+#&gt; [66] &quot;142E&quot;
+
+rst=strsplit(rownames(mtcars),&quot; &quot;)
+m=sapply(rst,function(el){el[1]})
+m
+#&gt;  [1] &quot;Mazda&quot;    &quot;Mazda&quot;    &quot;Datsun&quot;   &quot;Hornet&quot;   &quot;Hornet&quot;   &quot;Valiant&quot; 
+#&gt;  [7] &quot;Duster&quot;   &quot;Merc&quot;     &quot;Merc&quot;     &quot;Merc&quot;     &quot;Merc&quot;     &quot;Merc&quot;    
+#&gt; [13] &quot;Merc&quot;     &quot;Merc&quot;     &quot;Cadillac&quot; &quot;Lincoln&quot;  &quot;Chrysler&quot; &quot;Fiat&quot;    
+#&gt; [19] &quot;Honda&quot;    &quot;Toyota&quot;   &quot;Toyota&quot;   &quot;Dodge&quot;    &quot;AMC&quot;      &quot;Camaro&quot;  
+#&gt; [25] &quot;Pontiac&quot;  &quot;Fiat&quot;     &quot;Porsche&quot;  &quot;Lotus&quot;    &quot;Ford&quot;     &quot;Ferrari&quot; 
+#&gt; [31] &quot;Maserati&quot; &quot;Volvo&quot;
+</code></pre>
+<h2 id="要增加factor">要增加factor</h2>
+<pre><code class="language-r?lang=r?class=.source">library(dplyr)
+ds&lt;-mutate(mtcars,company=sapply(strsplit(rownames(mtcars),&quot; &quot;),function(el){el[1]}))
+write.csv(ds,file=&quot;temp/mtcars.csv&quot;)
+</code></pre>
+<p><a href="temp/mtcars.csv">mtcars.csv</a></p>
+<!--html_preserve--><div class="message">
+<button class='expand btn-primary p-1 collapsed' data-bs-toggle="collapse" data-bs-target="#n176952348"></button><div  id="n176952348" class="collapse" style="overflow-x:visible"><!--/html_preserve--><pre><code class="language-r">library(shiny)
+
+library(data.table)
+library(ggplot2)
+
+not_sel &lt;- &quot;Not Selected&quot;
+
+about_page &lt;- tabPanel(
+  title = &quot;About&quot;,
+  titlePanel(&quot;About&quot;),
+  &quot;Created with R Shiny&quot;,
+  br(),
+  &quot;2021 April&quot;
+)
+
+main_page &lt;- tabPanel(
+  title = &quot;Analysis&quot;,
+  titlePanel(&quot;Analysis&quot;),
+  sidebarLayout(
+    sidebarPanel(
+      title = &quot;Inputs&quot;,
+      fileInput(&quot;csv_input&quot;, &quot;Select CSV File to Import&quot;, accept = &quot;.csv&quot;),
+      selectInput(&quot;num_var_1&quot;, &quot;Numerical Variable 1&quot;, choices = c(not_sel)),
+      selectInput(&quot;num_var_2&quot;, &quot;Numerical Variable 2&quot;, choices = c(not_sel)),
+      selectInput(&quot;fact_var&quot;, &quot;Factor Variable&quot;, choices = c(not_sel)),
+      br(),
+      actionButton(&quot;run_button&quot;, &quot;Run Analysis&quot;, icon = icon(&quot;play&quot;))
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel(
+          title = &quot;Plot&quot;,
+          plotOutput(&quot;plot_1&quot;)
+        ),
+        tabPanel(
+          title = &quot;Statistics&quot;,
+          fluidRow(
+            column(width = 4, strong(textOutput(&quot;num_var_1_title&quot;))),
+            column(width = 4, strong(textOutput(&quot;num_var_2_title&quot;))),
+            column(width = 4, strong(textOutput(&quot;fact_var_title&quot;)))
+          ),
+          fluidRow(
+            column(width = 4, tableOutput(&quot;num_var_1_summary_table&quot;)),
+            column(width = 4, tableOutput(&quot;num_var_2_summary_table&quot;)),
+            column(width = 4, tableOutput(&quot;fact_var_summary_table&quot;))
+          ),
+          fluidRow(
+            column(width = 12, strong(&quot;Combined Statistics&quot;))
+          ),
+          fluidRow(
+            column(width = 12, tableOutput(&quot;combined_summary_table&quot;))
+          )
+          
+        )
+      )
+    )
+  )
+)
+
+draw_plot_1 &lt;- function(data_input, num_var_1, num_var_2, fact_var){
+  if(fact_var!=not_sel){
+    data_input[,(fact_var):= as.factor(data_input[,get(fact_var)])]
+  }
+  if(num_var_1 != not_sel &amp; num_var_2 != not_sel &amp; fact_var != not_sel){
+    ggplot(data = data_input,
+           aes_string(x = num_var_1, y = num_var_2, color = fact_var)) +
+      geom_point()
+  }
+  else if(num_var_1 != not_sel &amp; num_var_2 != not_sel &amp; fact_var == not_sel){
+    ggplot(data = data_input,
+           aes_string(x = num_var_1, y = num_var_2)) +
+      geom_point()
+  }
+  else if(num_var_1 != not_sel &amp; num_var_2 == not_sel &amp; fact_var != not_sel){
+    ggplot(data = data_input,
+           aes_string(x = fact_var, y = num_var_1)) +
+      geom_violin()
+  }
+  else if(num_var_1 == not_sel &amp; num_var_2 != not_sel &amp; fact_var != not_sel){
+    ggplot(data = data_input,
+           aes_string(x = fact_var, y = num_var_2)) +
+      geom_violin()
+  }
+  else if(num_var_1 != not_sel &amp; num_var_2 == not_sel &amp; fact_var == not_sel){
+    ggplot(data = data_input,
+           aes_string(x = num_var_1)) +
+      geom_histogram()
+  }
+  else if(num_var_1 == not_sel &amp; num_var_2 != not_sel &amp; fact_var == not_sel){
+    ggplot(data = data_input,
+           aes_string(x = num_var_2)) +
+      geom_histogram()
+  }
+  else if(num_var_1 == not_sel &amp; num_var_2 == not_sel &amp; fact_var != not_sel){
+    ggplot(data = data_input,
+           aes_string(x = fact_var)) +
+      geom_bar()
+  }
+}
+
+create_num_var_table &lt;- function(data_input, num_var){
+  if(num_var != not_sel){
+    col &lt;- data_input[,get(num_var)]
+    if (length(col)&gt;5000) col_norm &lt;- sample(col,5000) else col_norm &lt;- col
+    norm_test &lt;- shapiro.test(col_norm)
+    statistic &lt;- c(&quot;mean&quot;, &quot;median&quot;, &quot;5th percentile&quot;, &quot;95th percentile&quot;,
+                   &quot;Shapiro statistic&quot;, &quot;Shapiro p-value&quot;)
+    value &lt;- c(round(mean(col),2), round(median(col),2),
+               round(quantile(col, 0.05),2), round(quantile(col, 0.95),2),
+               norm_test$statistic, norm_test$p.value)
+    data.table(statistic, value)
+  }
+}
+
+create_fact_var_table &lt;- function(data_input, fact_var){
+  if(fact_var != not_sel){
+    freq_tbl &lt;- data_input[,.N, by = get(fact_var)]
+    freq_tbl &lt;- setnames(freq_tbl,c(&quot;factor_value&quot;, &quot;count&quot;))
+    freq_tbl
+  }
+}
+
+create_combined_table &lt;- function(data_input, num_var_1, num_var_2, fact_var){
+  if(fact_var != not_sel){
+    if(num_var_1 != not_sel &amp; num_var_2 != not_sel){
+      res_tbl &lt;- data_input[,.(correlation = cor(get(num_var_1), get(num_var_2))), by = fact_var]
+    }
+    else if(num_var_1 != not_sel &amp; num_var_2 == not_sel){
+      res_tbl &lt;- data_input[,.(mean = mean(get(num_var_1))), by = fact_var]
+    }
+    else if(num_var_1 == not_sel &amp; num_var_2 != not_sel){
+      res_tbl &lt;- data_input[,.(mean = mean(get(num_var_2))), by = fact_var]
+    }
+  }
+  else if(num_var_1 != not_sel &amp; num_var_2 != not_sel){
+    res_tbl &lt;- data.table(
+      statistic = c(&quot;correlation&quot;),
+      value = c(cor(
+        data_input[,get(num_var_1)],
+        data_input[,get(num_var_2)])))
+  }
+  return(res_tbl)
+}
+
+ui &lt;- navbarPage(
+  title = &quot;Data Analyser&quot;,
+  main_page,
+  about_page
+)
+
+server &lt;- function(input, output){
+  
+  options(shiny.maxRequestSize=10*1024^2) 
+  
+  data_input &lt;- reactive({
+    req(input$csv_input) 
+    fread(input$csv_input$datapath)
+  })
+  
+  observeEvent(data_input(),{
+    choices &lt;- c(not_sel,names(data_input()))
+    updateSelectInput(inputId = &quot;num_var_1&quot;, choices = choices)
+    updateSelectInput(inputId = &quot;num_var_2&quot;, choices = choices)
+    updateSelectInput(inputId = &quot;fact_var&quot;, choices = choices)
+  })
+  
+  num_var_1 &lt;- eventReactive(input$run_button,input$num_var_1)
+  num_var_2 &lt;- eventReactive(input$run_button,input$num_var_2)
+  fact_var &lt;- eventReactive(input$run_button,input$fact_var)
+  
+  # plot
+  
+  plot_1 &lt;- eventReactive(input$run_button,{
+    draw_plot_1(data_input(), num_var_1(), num_var_2(), fact_var())
+  })
+  
+  output$plot_1 &lt;- renderPlot(plot_1())
+  
+  # 1-d summary tables
+  
+  output$num_var_1_title &lt;- renderText(paste(&quot;Num Var 1:&quot;,num_var_1()))
+  
+  num_var_1_summary_table &lt;- eventReactive(input$run_button,{
+    create_num_var_table(data_input(), num_var_1())
+  })
+  
+  output$num_var_1_summary_table &lt;- renderTable(num_var_1_summary_table(),colnames = FALSE)
+  
+  output$num_var_2_title &lt;- renderText(paste(&quot;Num Var 2:&quot;,num_var_2()))
+  
+  num_var_2_summary_table &lt;- eventReactive(input$run_button,{
+    create_num_var_table(data_input(), num_var_2())
+  })
+  
+  output$num_var_2_summary_table &lt;- renderTable(num_var_2_summary_table(),colnames = FALSE)
+  
+  output$fact_var_title &lt;- renderText(paste(&quot;Factor Var:&quot;,fact_var()))
+  
+  fact_var_summary_table &lt;- eventReactive(input$run_button,{
+    create_fact_var_table(data_input(), fact_var())
+  })
+  
+  output$fact_var_summary_table &lt;- renderTable(fact_var_summary_table(),colnames = FALSE)
+  
+  # multi-d summary table
+  
+  combined_summary_table &lt;- eventReactive(input$run_button,{
+    create_combined_table(data_input(), num_var_1(), num_var_2(), fact_var())
+  })
+  
+  output$combined_summary_table &lt;- renderTable(combined_summary_table())
+  
+}
+
+shinyApp(ui = ui, server = server)
+
+#runApp(&quot;/Users/flatiron/Documents/R_Work/RShiny_Apps/data_analyser&quot;, display.mode = &quot;showcase&quot;)
+</code></pre>
+<!--html_preserve--></div></div><!--/html_preserve-->
+
+  </article><div class="collapse fs-6 pt-2" id="qnote-list">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white ">
+        <span >
+            
+            <span class="fw-semibold">
+                <button  class="btn btn-primary btn-inline" 
+                   data-bs-toggle="collapse" data-bs-target="#qnote-edit"><span data-bs-toggle="tooltip" title="加入速記">加</span></button>
+                <button id="qnote-gsave" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="存到硬碟"
+                   onclick="qnSaveGoogle()">存</button>
+                <label for="qnote-load" class="btn btn-primary btn-inline"  data-bs-toggle="tooltip" data-bs-placement="left" title="從檔案載入">載</label>   
+                <input style="display:none" type="file" id="qnote-load" onchange="qnLoadGoogle(this)" />
+                <button id="qnote-clear" class="btn btn-primary btn-inline" 
+                   data-bs-toggle="tooltip" data-bs-placement="left" title="清除全部速記"
+                   onclick="cleanNotes()">清</button>
+            </span>
+        </span>
+        <span class="fw-semibold collapse" id="qnote-edit"> 
+            <input type="text" class="txtitle d-block w-100 h-25 " placeholder="抬頭" />
+            <textarea class="txtBox  d-block w-100 h-75 " placeholder="本文"></textarea>
+            
+            <button id="qnote-add-item" onclick="addNote()" class="btn btn-primary">存</button> 
+        </span>
+
+    </div>
+</div>
+
+<link href="/blogR/css/quicknote.css?1641445339" rel="stylesheet">
+<script src="/blogR/js/quicknote.js?1641445339"></script>
+<div id="page-guide" class="bg-dark">  
+  <a id="avator" href="/api/list" 
+  class="btn btn-primary d-none"  data-bs-toggle="tooltip"  data-bs-placement="left" title=""><img style="padding:0px"class="img-fluid "></a>
+
+  
+    
+          
+          <a href="/blogR/topic/simulation/4_02_sim.html" 
+                   class="btn btn-primary" 
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="left" title=4.2&#32;模擬基本&#32;2>前</a>
+                   
+          
+            <a href="/blogR/topic/simulation/50_2_%E8%A7%A3%E7%AD%94.html" 
+               class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" 
+               title=50_1_解答>後</a>            
+          
+          
+
+  
+<script src="/blogR/js/packhtml.js?1641445339"></script>    
+<button class="btn btn-primary " onclick="packthis(this)"
+data-bs-toggle="tooltip" data-bs-placement="left" title="打包成單一檔案">包</button>
+<button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="div#qnote-list">
+  <span data-bs-toggle="tooltip" data-bs-placement="left" title="快速註記">速</span></button>
+ 
+</div>
+</div>
+
+
+  <script src="/blogR/js/featherlight.min.js?1641445339"></script>
+  <script src="/blogR/js/featherlight.gallery.min.js?1641445339"></script>
+  <link href="/blogR/css/featherlight.min.css?1641445339" rel="stylesheet">
+  <link href="/blogR/css/featherlight.gallery.min.css?1641445339" rel="stylesheet">
+  
+  <script src="/blogR/js/highlight.min.js"></script>
+  
+  <script src="/blogR/js/hugohelper.js?1641445339"></script>
+  <link href="/blogR/css/rmd.css?1641445339" rel="stylesheet">
+  <link href="/blogR/css/mystyle.css?1641445339" rel="stylesheet">    
+  <script src='/blogR/js/variant.js?1641445339'></script>
+
+<script>
+  
+   let idxfile = "https:\/\/airbone4.github.io\/blogR\/index.json"  
+  
+</script>
+<script src='/blogR/js/localsearch.js?1641445339'></script>
+  
+      
+          <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+      
+      <script>
+          mermaid.initialize({ startOnLoad: true });
+      </script>
+  
+
+  <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['\($', '$\)'], ['\\(', '\\)']],
+          displayMath: [['$$','$$']  , ['\\[','\\]']] 
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      
+      
+    
+      </script>
+
+      <script type="text/javascript" id="MathJax-script" async
+      src='/blogR/js/tex-svg.js'>
+      </script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    jumpto = document.querySelector("#sidebar .active");
+     if (jumpto!=null) jumpto.scrollIntoViewIfNeeded(true);
+  
+  });    
+  
+  </script>
+</body>
+</html>
